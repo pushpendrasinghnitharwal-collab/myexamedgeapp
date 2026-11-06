@@ -13,12 +13,9 @@ export function Brand({ compact = false }) {
   return (
     <button className="ee-brand" onClick={() => navigate('/')} aria-label={compact ? 'ExamEdge home' : undefined}>
       <span className="ee-brand-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" fill="none">
-          <path d="M7 8.5h14.8M7 15.9h10.6M7 23.3h8.2" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-          <path d="m19 22.8 3.7-4 3.8 4M22.7 19v6.2" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
+        <img src="/icon.svg?v=2" alt="" />
       </span>
-      {!compact && <span className="ee-brand-copy"><strong>exam<span>edge</span></strong><small>YOUR PREP PARTNER</small></span>}
+      {!compact && <span className="ee-brand-copy"><strong>Exam<span>Edge</span></strong><small>YOUR AMBITION, FORWARD</small></span>}
     </button>
   )
 }

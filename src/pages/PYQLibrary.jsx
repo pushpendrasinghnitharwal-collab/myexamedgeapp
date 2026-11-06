@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ArrowRight, BookOpenCheck, Check, ChevronDown, Clock3, FileClock, Files, SearchCheck, ShieldCheck, Sparkles } from 'lucide-react'
+import { ArrowRight, BookOpenCheck, ChevronDown, Clock3, FileClock, Files, SearchCheck, ShieldCheck } from 'lucide-react'
 import { CATEGORIES, EXAMS, examById } from '../data/exams'
 import { useStore } from '../lib/store'
 import { useL } from '../lib/i18n'
@@ -29,7 +29,6 @@ export default function PYQLibrary({ selectedExam }) {
     <div className="pyq-page page-shell">
       <div className="pyq-hero">
         <div><div className="hero-overline"><FileClock size={15} /> {L({ en: 'THE PAPER LIBRARY', hi: 'पेपर लाइब्रेरी' })}</div><h1>{L({ en: 'Learn from the past.', hi: 'पुराने पेपर से सीखें।' })}<br /><span>{L({ en: 'Prepare for what’s next.', hi: 'आने वाली परीक्षा की तैयारी करें।' })}</span></h1><p>{L({ en: 'A separate space for previous year papers, organised exam by exam.', hi: 'हर परीक्षा के पिछले वर्ष के पेपर के लिए एक अलग जगह।' })}</p></div>
-        <div className="pyq-hero-art" aria-hidden="true"><div className="paper-shape paper-back" /><div className="paper-shape paper-front"><FileClock size={34} /><i /><i /><i /></div><Sparkles size={23} className="pyq-spark" /></div>
       </div>
 
       <div className="pyq-layout">

@@ -34,7 +34,8 @@ export default function Home() {
   const stats = useAttemptStats()
   const streak = useCurrentStreak()
   const target = examById(state.profile?.examId) || examById('ssc-cgl')
-  const name = state.profile?.name?.split(' ')[0] || 'Aspirant'
+  const firstName = state.profile?.name?.split(' ')[0] || 'Aspirant'
+  const name = firstName === 'Aspirant' && state.profile?.isGuest ? L({ en: 'Aspirant', hi: 'अभ्यर्थी' }) : firstName
   const today = new Date()
   const todayAttempts = state.attempts.filter((attempt) => new Date(attempt.date).toDateString() === today.toDateString())
   const todayQuestions = todayAttempts.reduce((sum, attempt) => sum + Math.max(0, (attempt.totalQuestions || 0) - (attempt.unattempted || 0)), 0)
@@ -56,7 +57,7 @@ export default function Home() {
     { icon: ClipboardMetric, color: 'purple', value: stats.attempts, label: L({ en: 'Tests completed', hi: 'पूरे किए टेस्ट' }), note: L({ en: 'Every step counts', hi: 'हर कदम मायने रखता है' }) },
     { icon: CheckCircle2, color: 'blue', value: answeredTotal, label: L({ en: 'Questions attempted', hi: 'प्रयास किए प्रश्न' }), note: L({ en: 'Keep practising', hi: 'अभ्यास जारी रखें' }) },
     { icon: Target, color: 'peach', value: answeredTotal ? `${Math.round(stats.accuracy * 100)}%` : '—', label: L({ en: 'Overall accuracy', hi: 'कुल सटीकता' }), note: L({ en: 'Across your tests', hi: 'आपके टेस्ट में' }) },
-    { icon: Flame, color: 'mint', value: `${streak} ${streak === 1 ? 'day' : 'days'}`, label: L({ en: 'Current streak', hi: 'वर्तमान स्ट्रीक' }), note: L({ en: 'Build a habit', hi: 'आदत बनाएँ' }) },
+    { icon: Flame, color: 'mint', value: L({ en: `${streak} ${streak === 1 ? 'day' : 'days'}`, hi: `${streak} दिन` }), label: L({ en: 'Current streak', hi: 'वर्तमान स्ट्रीक' }), note: L({ en: 'Build a habit', hi: 'आदत बनाएँ' }) },
   ]
 
   return (
@@ -73,14 +74,19 @@ export default function Home() {
       <section className="dashboard-hero" aria-label="Preparation dashboard">
         <div className="dashboard-hero-art" aria-hidden="true" />
         <div className="dashboard-hero-content">
-          <div className="hero-overline"><Sparkles size={14} /> {L({ en: 'YOUR JOURNEY STARTS HERE', hi: 'आपकी यात्रा यहाँ से शुरू होती है' })}</div>
-          <h2>{L({ en: 'Big dreams. Small steps.', hi: 'बड़े सपने। छोटे कदम।' })}<br /><span>{L({ en: 'Better every day.', hi: 'हर दिन बेहतर।' })}</span></h2>
-          <p>{L({ en: 'A calmer, smarter way to prepare for the exam that matters to you.', hi: 'अपनी पसंदीदा परीक्षा की तैयारी करें, सरल और समझदारी से।' })}</p>
+          <div className="hero-overline"><Sparkles size={14} /> {L({ en: 'YOUR NEXT CHAPTER STARTS HERE', hi: 'आपका अगला कदम यहाँ से' })}</div>
+          <h2>{L({ en: 'Your ambition.', hi: 'आपके सपने।' })}<br /><span>{L({ en: 'Your edge.', hi: 'आपकी पहचान।' })}</span></h2>
+          <p>{L({ en: 'A little focus today. A future full of possibility.', hi: 'आज थोड़ी एकाग्रता। कल अपार संभावनाएँ।' })}</p>
           <div className="hero-actions">
-            <button className="hero-primary" onClick={() => navigate(`/exam/${target.id}`)}><Play size={15} fill="currentColor" /> {L({ en: 'Explore test series', hi: 'टेस्ट सीरीज़ देखें' })}<ArrowRight size={16} /></button>
+            <button className="hero-primary" onClick={() => navigate(`/exam/${target.id}`)}><Play size={15} fill="currentColor" /> {L({ en: 'Start practising', hi: 'अभ्यास शुरू करें' })}<ArrowRight size={16} /></button>
             <button className="hero-secondary" onClick={() => navigate(`/pyq?exam=${target.id}`)}>{L({ en: 'View PYQ library', hi: 'PYQ लाइब्रेरी देखें' })}<ArrowUpRight size={16} /></button>
           </div>
         </div>
+        <button className="hero-goal" onClick={() => navigate(`/exam/${target.id}`)}>
+          <span className="hero-goal-icon"><Target size={18} /></span>
+          <span><small>{L({ en: 'YOUR TARGET', hi: 'आपका लक्ष्य' })}</small><strong>{target.name}</strong></span>
+          <ArrowUpRight size={16} />
+        </button>
       </section>
 
       <div className="dashboard-metrics" aria-label="Your progress">

@@ -1,0 +1,237 @@
+/* ExamEdge visual identity: deep ink, warm paper and a hopeful pop of saffron. */
+:root,
+html[data-theme='light'] {
+  --font: 'DM Sans', 'Noto Sans Devanagari Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --bg: #f8f7f4;
+  --bg-2: #fff;
+  --surface: #fff;
+  --surface-2: #f7f6f4;
+  --surface-3: #eeedf2;
+  --line: #eceaf0;
+  --line-strong: #dcd9e5;
+  --text: #22213e;
+  --text-2: #54576c;
+  --muted: #66697c;
+  --brand: #6650d7;
+  --brand-2: #8672e9;
+  --accent: #6650d7;
+  --ee-link: #5741b7;
+  --ee-label: #66697c;
+  --ee-purple-light: #f0edff;
+  --ee-blue-light: #edf5fc;
+  --ee-orange-light: #fff1e7;
+  --ee-green-light: #eaf7ef;
+  --grad: linear-gradient(135deg, #6751d9, #4d3cad);
+  --shadow-sm: 0 7px 22px rgba(37, 31, 64, .045);
+}
+html[data-theme='dark'] {
+  --bg: #121322;
+  --surface: #1d1e30;
+  --surface-2: #242539;
+  --surface-3: #303147;
+  --line: #343348;
+  --line-strong: #45455e;
+  --text: #f5f1fb;
+  --text-2: #cbc9d9;
+  --muted: #b9b6cb;
+  --ee-label: #b9b6cb;
+  --ee-link: #d2c7ff;
+}
+
+/* The same book-and-star mark appears in the sidebar, mobile bar and app icon. */
+.ee-sidebar, html[data-theme='light'] .ee-sidebar {
+  background: linear-gradient(165deg, #171b39 0%, #1c1b40 62%, #29204d 100%);
+  border-right-color: #282847;
+  box-shadow: 6px 0 30px rgba(26, 23, 55, .06);
+}
+.ee-brand-mark {
+  width: 44px; height: 44px; flex-basis: 44px;
+  border: 1px solid rgba(255,255,255,.2); border-radius: 14px;
+  background: linear-gradient(145deg, #8574f2, #5041b9);
+  box-shadow: 0 5px 16px rgba(63, 47, 155, .3);
+}
+.ee-brand-mark img { display: block; width: 100%; height: 100%; border-radius: inherit; }
+.ee-sidebar .ee-brand { color: #fff; }
+.ee-brand-copy strong { font-size: 23px; letter-spacing: -.05em; }
+.ee-sidebar .ee-brand-copy strong span { color: #ffd090; }
+.ee-brand-copy small { margin-top: 6px; font-size: 7.5px; letter-spacing: .14em; }
+.ee-sidebar .ee-brand-copy small { color: #c3c5dd; }
+.ee-sidebar .ee-nav-label { color: #b2b7d0; }
+.ee-sidebar .ee-nav-item { min-height: 42px; color: #d4d7e8; border-radius: 10px; }
+.ee-sidebar .ee-nav-item:hover { background: rgba(255,255,255,.09); color: #fff; }
+.ee-sidebar .ee-nav-item.active { background: rgba(143,126,239,.24); color: #fff; }
+.ee-sidebar .ee-nav-item.active svg { color: #ffd08c; }
+.ee-sidebar .ee-nav-item.active::before { background: #ffc784; }
+.ee-sidebar .ee-nav-count { background: rgba(255,255,255,.15); color: #fff; }
+.ee-sidebar-target { border-color: rgba(255,255,255,.12); background: rgba(255,255,255,.07); }
+.ee-sidebar-target .ee-target-icon { background: rgba(255,208,140,.15); color: #ffcf91; }
+.ee-sidebar-target .ee-target-copy span, .ee-sidebar-foot { color: #c2c4db; }
+.ee-sidebar-target .ee-target-copy strong { color: #fff; }
+.ee-sidebar-target button, .ee-sidebar-foot svg { color: #ffd08c; }
+.ee-topbar { box-shadow: 0 3px 20px rgba(28,24,52,.025); }
+.ee-search { border-radius: 11px; background: var(--surface-2); }
+.ee-avatar { border-radius: 12px; background: #eee9ff; color: #5741b7; }
+.ee-bottom-item.active { color: var(--ee-link); }
+
+/* Devanagari needs a little more vertical room than Latin display type. */
+html[lang='hi'] .section-kicker, html[lang='hi'] .hero-overline,
+html[lang='hi'] .toolkit-tag { letter-spacing: 0; line-height: 1.5; }
+html[lang='hi'] .dashboard-hero h2, html[lang='hi'] .page-intro h1,
+html[lang='hi'] .pyq-hero h1 { line-height: 1.28; }
+
+/* Dashboard hero and real progress. */
+.dashboard-welcome h1 { font-weight: 650; letter-spacing: -.035em; }
+.dashboard-welcome p { font-size: 13px; }
+.hello-spark { color: #da9359; }
+.dashboard-hero {
+  min-height: 304px; border-radius: 22px; background: #171b35;
+  box-shadow: 0 15px 35px rgba(34, 28, 67, .16);
+}
+.dashboard-hero-art {
+  background-image: linear-gradient(90deg, #171b35 0%, rgba(23,27,53,.98) 29%, rgba(23,27,53,.78) 48%, rgba(23,27,53,.08) 77%), url('/images/dashboard-new.webp');
+  background-position: center 48%;
+}
+.dashboard-hero-content { padding: 38px 42px; max-width: 600px; }
+.hero-overline { color: #ffce91; font-size: 10px; letter-spacing: .15em; }
+.dashboard-hero h2 { margin: 15px 0 11px; font-size: clamp(34px, 3.6vw, 48px); font-weight: 650; line-height: 1.02; }
+.dashboard-hero h2 span { color: #ffd08c; }
+.dashboard-hero p { max-width: 330px; color: #e2e0ef; font-size: 13px; }
+.hero-actions { margin-top: 22px; }
+.hero-actions button { min-height: 43px; padding: 0 16px; border-radius: 10px; font-size: 12px; }
+.hero-primary { color: #282244; background: #ffcf90; }
+.hero-primary:hover { background: #ffdda9; }
+.hero-secondary { background: rgba(24,25,48,.48); border-color: rgba(255,255,255,.45); }
+.hero-secondary:hover { background: rgba(255,255,255,.14); }
+.hero-goal {
+  position: absolute; z-index: 2; right: 24px; bottom: 22px;
+  display: flex; align-items: center; gap: 10px; min-width: 195px; max-width: 240px;
+  padding: 10px 12px; border: 1px solid rgba(255,255,255,.7); border-radius: 13px;
+  background: rgba(255,255,255,.94); color: #26213e; text-align: left;
+  box-shadow: 0 8px 25px rgba(19, 17, 39, .2); cursor: pointer;
+}
+.hero-goal:hover { background: #fff; }
+.hero-goal-icon { display: grid; place-items: center; width: 36px; height: 36px; flex: 0 0 auto; border-radius: 10px; color: #5d47bf; background: #eeeaff; }
+.hero-goal > span:nth-child(2) { display: flex; flex: 1; flex-direction: column; min-width: 0; }
+.hero-goal small { color: #666277; font-size: 9px; font-weight: 700; letter-spacing: .09em; }
+.hero-goal strong { overflow: hidden; font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.hero-goal > svg { color: #6d5ec0; flex: 0 0 auto; }
+.dashboard-metrics { gap: 14px; margin-top: 17px; }
+.dash-metric { min-height: 111px; padding: 18px; border-radius: 15px; }
+.metric-icon, .directory-icon, .test-row-icon { border-radius: 12px; }
+.dash-metric-copy > span { font-size: 11.5px; }
+.dash-metric-copy strong { margin-top: 5px; font-size: 25px; }
+.dash-metric-copy small { margin-top: 5px; }
+.dashboard-columns { margin-top: 35px; }
+.dash-section-head h2, .browse-toolbar h2, .test-section-heading h2 { letter-spacing: -.03em; }
+.dash-section-head p, .browse-toolbar p, .test-section-heading p { font-size: 12.5px; }
+.toolkit-grid { gap: 13px; }
+.toolkit-card { min-height: 210px; padding: 19px; border-radius: 16px; }
+.toolkit-card > strong { font-size: 17px; }
+.toolkit-tag { font-size: 9px; }
+.toolkit-desc { font-size: 12px; }
+.toolkit-link { font-size: 11.5px; }
+html[data-theme='light'] .toolkit-tests { background: linear-gradient(145deg, #f3f0ff, #fff 82%); border-color: #e8e1fa; }
+html[data-theme='light'] .toolkit-pyq { background: linear-gradient(145deg, #fff3e9, #fff 82%); border-color: #f4e6d9; }
+.toolkit-material {
+  border-color: #302941;
+  background: linear-gradient(90deg, rgba(27,25,46,.98), rgba(27,25,46,.84) 68%, rgba(27,25,46,.64)), url('/images/library-new.webp') center / cover;
+  color: #fff;
+}
+.toolkit-material .toolkit-icon { background: rgba(255,255,255,.16); color: #ffcf90; }
+.toolkit-material .toolkit-tag, .toolkit-material .toolkit-desc { color: #e0dce9; }
+.toolkit-material .toolkit-link, .toolkit-material .toolkit-top > svg { color: #ffcf90; }
+.popular-card, .focus-card, .week-card, .target-card { border-radius: 15px; }
+.popular-card { padding: 15px; }
+.focus-card, .week-card { padding: 20px; }
+.focus-card h3, .week-card h3 { font-size: 17px; }
+.focus-action, .exam-summary > button { min-height: 41px; border-radius: 10px; }
+.target-card { border-color: #e2dcf5; }
+html[data-theme='dark'] .target-card { border-color: var(--line); }
+
+/* Editorial photo-led page headers. All photographs are decorative. */
+.page-intro, .pyq-hero { min-height: 235px; border-radius: 20px; }
+.page-intro .intro-copy, .pyq-hero > div:first-child { position: relative; z-index: 1; max-width: 540px; }
+.page-intro h1, .pyq-hero h1 { font-size: clamp(29px, 3.3vw, 41px); }
+.page-intro p, .pyq-hero p { font-size: 13px; line-height: 1.6; }
+.directory-intro, html[data-theme='light'] .directory-intro {
+  border-color: #e7ddf3;
+  background: linear-gradient(90deg, #f2e9f6 0%, rgba(242,233,246,.97) 35%, rgba(242,233,246,.54) 58%, rgba(242,233,246,0) 82%), url('/images/exams-new.webp') center / cover;
+}
+.directory-intro h1 span { color: #5e48bd; }
+.intro-badge { display: inline-flex; align-items: center; gap: 7px; margin-top: 16px; padding: 7px 10px; border: 1px solid #e2d6ee; border-radius: 9px; background: rgba(255,255,255,.72); color: #59477d; font-size: 11px; font-weight: 700; }
+html[data-theme='dark'] .directory-intro {
+  border-color: var(--line);
+  background: linear-gradient(90deg, #272238 0%, rgba(39,34,56,.98) 37%, rgba(39,34,56,.68) 62%, rgba(39,34,56,.16) 100%), url('/images/exams-new.webp') center / cover;
+}
+html[data-theme='dark'] .directory-intro h1 span { color: #d6c9ff; }
+html[data-theme='dark'] .intro-badge { border-color: #584d6f; background: rgba(36,31,52,.8); color: #e1d5f4; }
+.library-intro, html[data-theme='light'] .library-intro, html[data-theme='dark'] .library-intro {
+  border-color: #2c2942;
+  background: linear-gradient(90deg, #1b1b34 0%, rgba(27,27,52,.98) 35%, rgba(27,27,52,.70) 58%, rgba(27,27,52,.2) 100%), url('/images/library-new.webp') center 55% / cover;
+  color: #fff;
+}
+.library-intro .section-kicker, html[data-theme='dark'] .library-intro .section-kicker { color: #ffce91; }
+.library-intro .kicker-dot { background: #ffce91; box-shadow: 0 0 0 3px rgba(255,206,145,.16); }
+.library-intro h1, html[data-theme='dark'] .library-intro h1 { color: #fff; }
+.library-intro h1 span, html[data-theme='dark'] .library-intro h1 span { color: #ffcf90; }
+.library-intro p, html[data-theme='dark'] .library-intro p { color: #e2dfeb; }
+.pyq-hero {
+  background: linear-gradient(90deg, #1b1b34 0%, rgba(27,27,52,.98) 35%, rgba(27,27,52,.72) 58%, rgba(27,27,52,.22) 100%), url('/images/library-new.webp') center 55% / cover;
+}
+.pyq-hero .hero-overline, .pyq-hero h1 span { color: #ffcf90; }
+.pyq-hero p { color: #e2dfeb; }
+.exam-directory, .material-grid { gap: 16px; }
+.directory-card, .material-tile { border-radius: 16px; box-shadow: var(--shadow-sm); }
+.directory-card { padding: 21px; }
+.directory-card > strong { font-size: 17px; }
+.directory-subtitle, .material-subject-name { font-size: 12px; }
+.category-tabs button { border-radius: 10px; }
+.category-tabs button.selected { background: #5944c1; border-color: #5944c1; }
+.exam-hero { border-radius: 20px; }
+html[data-theme='light'] .exam-hero { border-color: #e8e1f1; background: linear-gradient(110deg, #eee8fa, #faf6f2 65%, #ffefe4); }
+html[data-theme='dark'] .exam-hero { background: linear-gradient(110deg, #302943, #272638 65%, #39312e); }
+
+@media (max-width: 1200px) {
+  .dash-metric { padding: 15px 12px; }
+  .toolkit-card { padding: 17px 14px; }
+}
+@media (max-width: 860px) {
+  .ee-mobile-brand .ee-brand-mark { width: 39px; height: 39px; flex-basis: 39px; }
+  .dashboard-hero { min-height: 285px; }
+  .dashboard-hero-content { padding: 32px; }
+  .hero-goal { right: 18px; bottom: 18px; }
+  .page-intro, .pyq-hero { min-height: 220px; }
+}
+@media (max-width: 680px) {
+  .dashboard-hero { min-height: 290px; }
+  .dashboard-hero-art {
+    background-image: linear-gradient(90deg, rgba(23,27,53,.99) 0%, rgba(23,27,53,.94) 38%, rgba(23,27,53,.56) 72%, rgba(23,27,53,.2)), url('/images/dashboard-new.webp');
+    background-position: 70% center;
+  }
+  .dashboard-hero-content { padding: 28px 24px; }
+  .dashboard-hero h2 { font-size: 36px; }
+  .dashboard-hero p { max-width: 260px; font-size: 12.5px; }
+  .hero-goal { display: none; }
+  .toolkit-card { min-height: 190px; }
+  .page-intro, .pyq-hero { min-height: 210px; padding: 26px; }
+  .directory-intro, html[data-theme='light'] .directory-intro { background-image: linear-gradient(90deg, #f2e9f6 0%, rgba(242,233,246,.98) 48%, rgba(242,233,246,.88) 80%, rgba(242,233,246,.48)), url('/images/exams-new.webp'); background-position: 62% center; }
+  html[data-theme='dark'] .directory-intro { background-image: linear-gradient(90deg, #272238 0%, rgba(39,34,56,.98) 48%, rgba(39,34,56,.84) 80%, rgba(39,34,56,.45)), url('/images/exams-new.webp'); background-position: 62% center; }
+  .library-intro, html[data-theme='light'] .library-intro, html[data-theme='dark'] .library-intro, .pyq-hero { background-image: linear-gradient(90deg, #1b1b34 0%, rgba(27,27,52,.96) 48%, rgba(27,27,52,.84) 80%, rgba(27,27,52,.45)), url('/images/library-new.webp'); background-position: 65% center; }
+}
+@media (max-width: 480px) {
+  .dashboard-welcome p { font-size: 12px; }
+  .dashboard-hero { min-height: 278px; border-radius: 18px; }
+  .dashboard-hero-content { padding: 26px 21px; }
+  .dashboard-hero h2 { font-size: 34px; }
+  .hero-overline { font-size: 9px; }
+  .hero-actions { gap: 8px; }
+  .hero-actions button { min-height: 40px; padding: 0 11px; font-size: 11px; }
+  .dash-metric { min-height: 100px; padding: 13px 10px; }
+  .dash-metric-copy strong { font-size: 22px; }
+  .dash-metric-copy > span { overflow: visible; white-space: normal; font-size: 10px; line-height: 1.3; }
+  .toolkit-card { min-height: 165px; padding: 17px; }
+  .page-intro h1, .pyq-hero h1 { font-size: 27px; }
+  .page-intro p, .pyq-hero p { max-width: 275px; font-size: 12px; }
+  .page-intro, .pyq-hero { min-height: 220px; padding: 23px; }
+  .intro-badge { margin-top: 12px; }
+}

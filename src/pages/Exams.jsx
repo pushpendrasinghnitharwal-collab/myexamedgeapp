@@ -35,9 +35,8 @@ export default function Exams({ initialCategory = 'all', initialQuery = '' }) {
 
   return (
     <div className="browse-page page-shell">
-      <div className="page-intro">
-        <div><div className="section-kicker"><span className="kicker-dot" /> {L({ en: 'FIND YOUR DIRECTION', hi: 'अपना लक्ष्य चुनें' })}</div><h1>{L({ en: 'Find your exam.', hi: 'अपनी परीक्षा खोजें।' })}<br /><span>{L({ en: 'Own your preparation.', hi: 'अपनी तैयारी को दिशा दें।' })}</span></h1><p>{L({ en: 'From your first practice set to the final stretch, start here.', hi: 'पहले अभ्यास से लेकर परीक्षा तक, शुरुआत यहाँ से करें।' })}</p></div>
-        <div className="browse-intro-art" aria-hidden="true"><div><GraduationCap size={34} /><span>✦</span></div></div>
+      <div className="page-intro directory-intro">
+        <div className="intro-copy"><div className="section-kicker"><span className="kicker-dot" /> {L({ en: 'FIND YOUR DIRECTION', hi: 'अपना लक्ष्य चुनें' })}</div><h1>{L({ en: 'Find your exam.', hi: 'अपनी परीक्षा खोजें।' })}<br /><span>{L({ en: 'Own your preparation.', hi: 'अपनी तैयारी को दिशा दें।' })}</span></h1><p>{L({ en: 'From your first practice set to the final stretch, start here.', hi: 'पहले अभ्यास से लेकर परीक्षा तक, शुरुआत यहाँ से करें।' })}</p><div className="intro-badge"><BookOpen size={15} /> {EXAMS.length} {L({ en: 'exam pathways to explore', hi: 'परीक्षा विकल्प' })}</div></div>
       </div>
 
       <div className="browse-toolbar">
