@@ -1,118 +1,62 @@
 import React, { useMemo, useState } from 'react'
+import { ArrowRight, BookOpen, FileText, Info, LibraryBig, NotebookText, Search, X } from 'lucide-react'
 import { MATERIALS, MATERIAL_TYPES } from '../data/materials'
 import { SUBJECTS } from '../data/exams'
 import { navigate } from '../lib/router'
 import { useL } from '../lib/i18n'
-import { useStore } from '../lib/store'
-import { Card, CardHead, Pill, Button, EmptyState } from '../components/ui'
 
 export default function Materials() {
   const L = useL()
-  const { state } = useStore()
   const [type, setType] = useState('all')
-  const [subj, setSubj] = useState('all')
-  const [q, setQ] = useState('')
-
-  const subs = useMemo(() => {
-    const set = new Set(MATERIALS.map((m) => m.subject))
-    return [...set]
-  }, [])
-
-  const list = useMemo(
-    () =>
-      MATERIALS.filter((m) => {
-        const okT = type === 'all' || m.type === type
-        const okS = subj === 'all' || m.subject === subj
-        const okQ = !q || m.title.en.toLowerCase().includes(q.toLowerCase()) || m.title.hi.includes(q)
-        return okT && okS && okQ
-      }),
-    [type, subj, q]
-  )
-
-  const free = MATERIALS.filter((m) => m.free).length
+  const [subject, setSubject] = useState('all')
+  const [query, setQuery] = useState('')
+  const subjects = useMemo(() => [...new Set(MATERIALS.map((item) => item.subject))], [])
+  const list = useMemo(() => {
+    const term = query.trim().toLowerCase()
+    return MATERIALS.filter((item) => (type === 'all' || item.type === type)
+      && (subject === 'all' || item.subject === subject)
+      && (!term || item.title.en.toLowerCase().includes(term) || item.title.hi.toLowerCase().includes(term)))
+  }, [type, subject, query])
 
   return (
-    <div className="stack" style={{ gap: 18 }}>
-      <div className="page-head">
+    <div className="materials-page page-shell">
+      <div className="page-intro">
         <div>
-          <div className="page-title">{L({ en: 'Study Material', hi: 'अध्ययन सामग्री' })}</div>
-          <div className="page-sub">
-            {L({
-              en: `${MATERIALS.length} titles · ${free} free forever · notes, formula sheets, PYQ bundles and monthly magazines.`,
-              hi: `${MATERIALS.length} शीर्षक · ${free} सदा के लिए निःशुल्क · नोट्स, सूत्र पत्रक, PYQ बंडल और मासिक पत्रिकाएँ।`,
-            })}
-          </div>
+          <div className="section-kicker"><span className="kicker-dot" /> {L({ en: 'YOUR STUDY LIBRARY', hi: 'आपकी अध्ययन लाइब्रेरी' })}</div>
+          <h1>{L({ en: 'A little knowledge.', hi: 'थोड़ा ज्ञान।' })}<br /><span>{L({ en: 'A lot of possibility.', hi: 'बहुत सारी संभावनाएँ।' })}</span></h1>
+          <p>{L({ en: 'Explore the sample resources already in your library.', hi: 'अपनी लाइब्रेरी में मौजूद नमूना सामग्री देखें।' })}</p>
         </div>
-        <input
-          className="input"
-          style={{ maxWidth: 250 }}
-          placeholder={L({ en: 'Search material…', hi: 'सामग्री खोजें…' })}
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-        />
+        <div className="browse-intro-art" aria-hidden="true"><div><LibraryBig size={34} /><span>✦</span></div></div>
       </div>
 
-      <div className="row wrap" style={{ gap: 14 }}>
-        <div className="chip-row">
-          {MATERIAL_TYPES.map((t) => (
-            <button key={t.id} className={`chip ${type === t.id ? 'on' : ''}`} onClick={() => setType(t.id)}>
-              {t.icon} {L(t.label)}
-            </button>
-          ))}
+      <div className="materials-notice"><Info size={17} /><span>{L({ en: 'These existing sample resources have not yet been reviewed for accuracy.', hi: 'इन मौजूदा नमूना संसाधनों की सटीकता की अभी समीक्षा नहीं हुई है।' })}</span></div>
+
+      <div className="browse-toolbar">
+        <div><div className="section-kicker">{L({ en: 'EXPLORE AND REVISE', hi: 'पढ़ें और दोहराएँ' })}</div><h2>{L({ en: 'Study material', hi: 'अध्ययन सामग्री' })} <span>{MATERIALS.length}</span></h2><p>{L({ en: 'Find a resource for your next study session.', hi: 'अपने अगले अध्ययन सत्र के लिए सामग्री खोजें।' })}</p></div>
+        <label className="browse-search"><Search size={18} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={L({ en: 'Search materials', hi: 'सामग्री खोजें' })} aria-label={L({ en: 'Search materials', hi: 'सामग्री खोजें' })} />{query && <button type="button" aria-label="Clear search" onClick={() => setQuery('')}><X size={16} /></button>}</label>
+      </div>
+
+      <div className="material-filters">
+        <div className="category-tabs" aria-label="Resource type">
+          {MATERIAL_TYPES.map((item) => <button key={item.id} className={type === item.id ? 'selected' : ''} aria-pressed={type === item.id} onClick={() => setType(item.id)}>{L(item.label)}</button>)}
         </div>
-        <div className="chip-row">
-          <button className={`chip ${subj === 'all' ? 'on' : ''}`} onClick={() => setSubj('all')}>
-            {L({ en: 'All subjects', hi: 'सभी विषय' })}
+        <label className="material-subject"><span className="sr-only">{L({ en: 'Filter by subject', hi: 'विषय के अनुसार फ़िल्टर करें' })}</span><select value={subject} onChange={(event) => setSubject(event.target.value)}><option value="all">{L({ en: 'All subjects', hi: 'सभी विषय' })}</option>{subjects.map((id) => <option key={id} value={id}>{L({ en: SUBJECTS[id]?.name || id, hi: SUBJECTS[id]?.hi || id })}</option>)}</select></label>
+      </div>
+
+      <div className="exam-result-count">{list.length} {L({ en: list.length === 1 ? 'resource' : 'resources', hi: 'संसाधन' })} <span>{L({ en: 'to explore', hi: 'उपलब्ध हैं' })}</span></div>
+      {list.length ? <div className="material-grid">
+        {list.map((item) => {
+          const Icon = item.type === 'pdf' ? FileText : item.type === 'ebook' ? BookOpen : NotebookText
+          const subjectName = L({ en: SUBJECTS[item.subject]?.name || item.subject, hi: SUBJECTS[item.subject]?.hi || item.subject })
+          return <button className="material-tile" key={item.id} onClick={() => navigate(`/material/${item.id}`)}>
+            <span className="material-tile-top"><span className="material-icon"><Icon size={21} /></span><span className="material-status">{item.free ? L({ en: 'SAMPLE RESOURCE', hi: 'नमूना सामग्री' }) : L({ en: 'GUEST PREVIEW', hi: 'अतिथि पूर्वावलोकन' })}</span></span>
+            <span className="material-subject-name">{subjectName}</span>
+            <strong>{L(item.title)}</strong>
+            <span className="material-tags">{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</span>
+            <span className="material-tile-bottom"><span>{item.free ? L({ en: 'Open resource', hi: 'सामग्री खोलें' }) : L({ en: 'View details', hi: 'विवरण देखें' })}</span><ArrowRight size={16} /></span>
           </button>
-          {subs.map((s) => (
-            <button key={s} className={`chip ${subj === s ? 'on' : ''}`} onClick={() => setSubj(s)}>
-              {SUBJECTS[s]?.icon} {L({ en: SUBJECTS[s]?.name || s, hi: SUBJECTS[s]?.hi || s })}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {list.length === 0 ? (
-        <Card>
-          <EmptyState icon="🔍" title="Nothing found" sub="Try a different filter or keyword." />
-        </Card>
-      ) : (
-        <div className="grid g3">
-          {list.map((m) => (
-            <Card key={m.id} className="exam-card" onClick={() => navigate(`/material/${m.id}`)}>
-              <div className="spread" style={{ alignItems: 'flex-start' }}>
-                <div className="exam-icon" style={{ background: 'var(--grad-soft)', borderColor: 'rgba(99,102,241,0.35)' }}>
-                  {m.type === 'pdf' ? '📄' : m.type === 'ebook' ? '📖' : '📝'}
-                </div>
-                <div className="row" style={{ gap: 6 }}>
-                  {m.free ? <Pill tone="success">FREE</Pill> : <Pill tone="gold">PRO</Pill>}
-                </div>
-              </div>
-              <div className="bold" style={{ marginTop: 12, fontSize: 15.5, lineHeight: 1.4 }}>{L(m.title)}</div>
-              <div className="row wrap tiny muted" style={{ gap: 10, marginTop: 8 }}>
-                <span>📄 {m.pages} {L({ en: 'pages', hi: 'पृष्ठ' })}</span>
-                <span>💾 {m.size}</span>
-                <span>⭐ {m.rating}</span>
-                <span>⬇ {(m.downloads / 1000).toFixed(1)}k</span>
-              </div>
-              <div className="row wrap" style={{ gap: 6, marginTop: 10 }}>
-                {m.tags.map((t) => (
-                  <span key={t} className="pill">
-                    {t}
-                  </span>
-                ))}
-              </div>
-              <div className="sep" />
-              <div className="spread">
-                <span className="tiny muted">{L({ en: 'Updated', hi: 'अपडेट' })} {m.updated}</span>
-                <span className="tiny bold" style={{ color: 'var(--accent)' }}>
-                  {L({ en: 'Open →', hi: 'खोलें →' })}
-                </span>
-              </div>
-            </Card>
-          ))}
-        </div>
-      )}
+        })}
+      </div> : <div className="directory-empty"><span><Search size={24} /></span><h3>{L({ en: 'No resources found', hi: 'कोई सामग्री नहीं मिली' })}</h3><p>{L({ en: 'Try another search or filter.', hi: 'दूसरा खोज शब्द या फ़िल्टर आज़माएँ।' })}</p><button className="btn primary" onClick={() => { setQuery(''); setType('all'); setSubject('all') }}>{L({ en: 'Clear filters', hi: 'फ़िल्टर हटाएँ' })}</button></div>}
     </div>
   )
 }

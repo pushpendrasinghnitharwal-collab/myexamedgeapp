@@ -1,99 +1,73 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
+import { ArrowRight, BookOpen, BriefcaseBusiness, Building2, GraduationCap, Landmark, Map, Search, Shield, TrainFront, X } from 'lucide-react'
 import { CATEGORIES, EXAMS } from '../data/exams'
+import { TEST_CATALOGUE } from '../lib/tests'
 import { navigate } from '../lib/router'
 import { useL } from '../lib/i18n'
-import { Card, Pill, Button, EmptyState } from '../components/ui'
 
-export default function Exams() {
+const visuals = {
+  ssc: { icon: Landmark, tone: 'purple', initials: 'SSC' },
+  banking: { icon: Building2, tone: 'blue', initials: 'BANK' },
+  railway: { icon: TrainFront, tone: 'orange', initials: 'RRB' },
+  upsc: { icon: Landmark, tone: 'pink', initials: 'UPSC' },
+  state: { icon: Map, tone: 'green', initials: 'PSC' },
+  teaching: { icon: GraduationCap, tone: 'purple', initials: 'TET' },
+  defence: { icon: Shield, tone: 'blue', initials: 'DEF' },
+  other: { icon: BriefcaseBusiness, tone: 'orange', initials: 'EXAM' },
+}
+
+export default function Exams({ initialCategory = 'all', initialQuery = '' }) {
   const L = useL()
-  const [cat, setCat] = useState('all')
-  const [q, setQ] = useState('')
+  const [category, setCategory] = useState(initialCategory || 'all')
+  const [query, setQuery] = useState(initialQuery || '')
+
+  useEffect(() => { setCategory(initialCategory || 'all') }, [initialCategory])
+  useEffect(() => { setQuery(initialQuery || '') }, [initialQuery])
 
   const list = useMemo(() => {
-    return EXAMS.filter((e) => {
-      const okCat = cat === 'all' || e.category === cat
-      const okQ =
-        !q ||
-        e.name.toLowerCase().includes(q.toLowerCase()) ||
-        e.subtitle.toLowerCase().includes(q.toLowerCase()) ||
-        e.hi.includes(q)
-      return okCat && okQ
+    const search = query.trim().toLowerCase()
+    return EXAMS.filter((exam) => {
+      const matchesCategory = category === 'all' || exam.category === category
+      const matchesSearch = !search || `${exam.name} ${exam.subtitle} ${exam.hi}`.toLowerCase().includes(search)
+      return matchesCategory && matchesSearch
     })
-  }, [cat, q])
+  }, [category, query])
 
   return (
-    <div className="stack" style={{ gap: 18 }}>
-      <div className="page-head">
-        <div>
-          <div className="page-title">{L({ en: 'All Exams', hi: 'सभी परीक्षाएँ' })}</div>
-          <div className="page-sub">
-            {L({
-              en: 'Pick your target — every exam has full mocks, sectionals, topic drills and daily quizzes.',
-              hi: 'अपना लक्ष्य चुनें — हर परीक्षा में फुल मॉक, सेक्शनल, टॉपिक ड्रिल और डेली क्विज़ हैं।',
-            })}
-          </div>
-        </div>
-        <input
-          className="input"
-          style={{ maxWidth: 260 }}
-          placeholder={L({ en: 'Search exams…', hi: 'परीक्षा खोजें…' })}
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-        />
+    <div className="browse-page page-shell">
+      <div className="page-intro">
+        <div><div className="section-kicker"><span className="kicker-dot" /> {L({ en: 'FIND YOUR DIRECTION', hi: 'अपना लक्ष्य चुनें' })}</div><h1>{L({ en: 'Find your exam.', hi: 'अपनी परीक्षा खोजें।' })}<br /><span>{L({ en: 'Own your preparation.', hi: 'अपनी तैयारी को दिशा दें।' })}</span></h1><p>{L({ en: 'From your first practice set to the final stretch, start here.', hi: 'पहले अभ्यास से लेकर परीक्षा तक, शुरुआत यहाँ से करें।' })}</p></div>
+        <div className="browse-intro-art" aria-hidden="true"><div><GraduationCap size={34} /><span>✦</span></div></div>
       </div>
 
-      <div className="chip-row">
-        <button className={`chip ${cat === 'all' ? 'on' : ''}`} onClick={() => setCat('all')}>
-          🌍 {L({ en: 'All', hi: 'सभी' })} ({EXAMS.length})
-        </button>
-        {CATEGORIES.map((c) => {
-          const n = EXAMS.filter((e) => e.category === c.id).length
-          if (!n) return null
-          return (
-            <button key={c.id} className={`chip ${cat === c.id ? 'on' : ''}`} onClick={() => setCat(c.id)}>
-              {c.icon} {L({ en: c.name, hi: c.hi })} ({n})
-            </button>
-          )
+      <div className="browse-toolbar">
+        <div><div className="section-kicker">{L({ en: 'THE EXAM DIRECTORY', hi: 'परीक्षा डायरेक्टरी' })}</div><h2>{L({ en: 'Explore exams', hi: 'परीक्षाएँ देखें' })} <span>{EXAMS.length}</span></h2><p>{L({ en: 'Choose your goal to explore its preparation space.', hi: 'तैयारी शुरू करने के लिए अपना लक्ष्य चुनें।' })}</p></div>
+        <label className="browse-search"><Search size={18} /><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder={L({ en: 'Search by exam name', hi: 'परीक्षा का नाम खोजें' })} aria-label="Search by exam name" />{query && <button type="button" aria-label="Clear search" onClick={() => setQuery('')}><X size={16} /></button>}</label>
+      </div>
+
+      <div className="category-tabs" aria-label="Exam categories">
+        <button className={category === 'all' ? 'selected' : ''} onClick={() => setCategory('all')}>{L({ en: 'All exams', hi: 'सभी परीक्षाएँ' })} <span>{EXAMS.length}</span></button>
+        {CATEGORIES.map((item) => {
+          const count = EXAMS.filter((exam) => exam.category === item.id).length
+          return count ? <button key={item.id} className={category === item.id ? 'selected' : ''} onClick={() => setCategory(item.id)}>{L({ en: item.name, hi: item.hi })}<span>{count}</span></button> : null
         })}
       </div>
 
-      {list.length === 0 ? (
-        <Card>
-          <EmptyState icon="🔍" title="No exams found" sub="Try a different keyword or category." />
-        </Card>
-      ) : (
-        <div className="grid g3">
-          {list.map((e) => {
-            const c = CATEGORIES.find((x) => x.id === e.category)
-            return (
-              <Card key={e.id} className="exam-card" onClick={() => navigate(`/exam/${e.id}`)}>
-                <div className="spread" style={{ alignItems: 'flex-start' }}>
-                  <div className="exam-icon" style={{ background: `${c.color}22`, borderColor: `${c.color}55` }}>
-                    {c.icon}
-                  </div>
-                  <Pill tone="brand">{c.name}</Pill>
-                </div>
-                <div style={{ marginTop: 13 }}>
-                  <div className="bold" style={{ fontSize: 17 }}>{e.name}</div>
-                  <div className="tiny muted" style={{ marginBottom: 8 }}>{e.subtitle}</div>
-                </div>
-                <div className="row wrap" style={{ gap: 7 }}>
-                  <span className="pill">⏱ {e.duration} min</span>
-                  <span className="pill">📝 {e.questions} Q</span>
-                  <span className="pill">🎯 {e.marks} marks</span>
-                </div>
-                <div className="sep" />
-                <div className="spread">
-                  <span className="tiny muted">{e.tier}</span>
-                  <span className="tiny bold" style={{ color: 'var(--accent)' }}>
-                    {L({ en: 'View tests →', hi: 'टेस्ट देखें →' })}
-                  </span>
-                </div>
-              </Card>
-            )
-          })}
-        </div>
-      )}
+      <div className="exam-result-count">{list.length} {L({ en: list.length === 1 ? 'exam' : 'exams', hi: 'परीक्षाएँ' })} <span>{L({ en: 'to explore', hi: 'उपलब्ध हैं' })}</span></div>
+      {list.length ? <div className="exam-directory">
+        {list.map((exam) => {
+          const cat = CATEGORIES.find((item) => item.id === exam.category)
+          const visual = visuals[exam.category]
+          const Icon = visual.icon
+          const sets = (TEST_CATALOGUE[exam.id] || []).filter((test) => ['preview', 'sectional', 'topic'].includes(test.type)).length
+          return <button className="directory-card" key={exam.id} onClick={() => navigate(`/exam/${exam.id}`)}>
+            <span className="directory-top"><span className={`directory-icon ${visual.tone}`}><Icon size={22} strokeWidth={1.8} /></span><span className="directory-category">{L({ en: cat.name, hi: cat.hi })}</span></span>
+            <strong>{exam.name}</strong><span className="directory-subtitle">{exam.subtitle}</span>
+            <span className="directory-meta"><span><BookOpen size={14} /> {sets} {L({ en: 'practice sets', hi: 'अभ्यास सेट' })}</span><span className="directory-dot" />{exam.tier}</span>
+            <span className="directory-bottom"><span>{L({ en: 'Explore preparation', hi: 'तैयारी देखें' })}</span><span className="directory-arrow"><ArrowRight size={16} /></span></span>
+          </button>
+        })}
+      </div> : <div className="directory-empty"><span><Search size={24} /></span><h3>{L({ en: 'No exams found', hi: 'कोई परीक्षा नहीं मिली' })}</h3><p>{L({ en: 'Try a different search or choose another category.', hi: 'दूसरा नाम या श्रेणी चुनें।' })}</p><button className="btn primary" onClick={() => { setCategory('all'); setQuery('') }}>{L({ en: 'Clear filters', hi: 'फ़िल्टर हटाएँ' })}</button></div>}
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { useStore, useAttemptStats } from '../lib/store'
+import { useStore, useAttemptStats, currentStreak } from '../lib/store'
 import { navigate } from '../lib/router'
 import { useL } from '../lib/i18n'
 import { examById, SUBJECTS, TOPICS } from '../data/exams'
@@ -9,15 +9,15 @@ import { shortDate, formatTime } from '../lib/utils'
 
 const BADGES = [
   { id: 'first-test', icon: '🎯', name: { en: 'First Steps', hi: 'पहला कदम' }, desc: { en: 'Complete your first test', hi: 'पहला टेस्ट पूरा करें' }, need: (s) => s.attempts >= 1 },
-  { id: 'streak-7', icon: '🔥', name: { en: '7-Day Streak', hi: '7-दिन स्ट्रीक' }, desc: { en: 'Practise 7 days in a row', hi: 'लगातार 7 दिन अभ्यास' }, need: (s, st) => st.streak.count >= 7 },
+  { id: 'streak-7', icon: '🔥', name: { en: '7-Day Streak', hi: '7-दिन स्ट्रीक' }, desc: { en: 'Practise 7 days in a row', hi: 'लगातार 7 दिन अभ्यास' }, need: (s, st) => currentStreak(st.streak) >= 7 },
   { id: 'tests-10', icon: '🏆', name: { en: 'Test Warrior', hi: 'टेस्ट योद्धा' }, desc: { en: 'Attempt 10 tests', hi: '10 टेस्ट दें' }, need: (s) => s.attempts >= 10 },
   { id: 'accuracy-80', icon: '🎯', name: { en: 'Sharpshooter', hi: 'निशानेबाज' }, desc: { en: 'Cross 80% overall accuracy', hi: '80% सटीकता पार करें' }, need: (s) => s.accuracy >= 0.8 },
   { id: 'quant-90', icon: '🧮', name: { en: 'Quant Ace', hi: 'क्वांट एस' }, desc: { en: '90%+ in any subject', hi: 'किसी भी विषय में 90%+' }, need: (s) => s.topics.some((t) => t.accuracy >= 0.9 && t.attempted >= 4) },
-  { id: 'night-owl', icon: '🦉', name: { en: 'Night Owl', hi: 'रात का जागरूक' }, desc: { en: 'Study after 11 PM', hi: 'रात 11 बजे के बाद पढ़ाई' }, need: () => true },
+  { id: 'night-owl', icon: '🦉', name: { en: 'Night Owl', hi: 'रात का जागरूक' }, desc: { en: 'Study after 11 PM', hi: 'रात 11 बजे के बाद पढ़ाई' }, need: (s, st) => st.attempts.some((attempt) => new Date(attempt.date).getHours() >= 23) },
 ]
 
 export default function Analytics() {
-  const { state } = useStore()
+  const { state, claimAchievement } = useStore()
   const L = useL()
   const stats = useAttemptStats()
 
@@ -36,16 +36,15 @@ export default function Analytics() {
     stats.topics.forEach((t) => {
       const s = t.subject
       if (!s) return
-      bySub[s] = bySub[s] || { sum: 0, n: 0, correct: 0 }
-      bySub[s].sum += t.accuracy
-      bySub[s].n++
+      bySub[s] = bySub[s] || { attempted: 0, correct: 0 }
+      bySub[s].attempted += t.attempted
       bySub[s].correct += t.correct
     })
     return Object.entries(bySub)
       .map(([id, v]) => ({
         label: SUBJECTS[id]?.short || id,
-        value: Math.max(0.05, Math.min(1, v.correct / Math.max(1, v.sum * v.n))),
-        raw: v.correct / Math.max(1, v.n),
+        value: v.correct / Math.max(1, v.attempted),
+        raw: v.correct / Math.max(1, v.attempted),
       }))
       .slice(0, 7)
   }, [stats.topics])
@@ -54,7 +53,7 @@ export default function Analytics() {
     const days = new Array(105).fill(0)
     state.attempts.forEach((a) => {
       const idx = Math.floor((Date.now() - a.date) / 86400000)
-      if (idx >= 0 && idx < 105) days[104 - idx] += a.totalQuestions || 0
+      if (idx >= 0 && idx < 105) days[104 - idx] += (a.correct || 0) + (a.wrong || 0)
     })
     return days
   }, [state.attempts])
@@ -178,9 +177,9 @@ export default function Analytics() {
                         <td style={{ minWidth: 130 }}>
                           <div className="row" style={{ gap: 8 }}>
                             <div style={{ width: 70 }}>
-                              <Bar value={e.correct / Math.max(1, e.total)} thin />
+                              <Bar value={e.correct / Math.max(1, e.answered)} thin />
                             </div>
-                            <span className="tiny num">{Math.round((e.correct / Math.max(1, e.total)) * 100)}%</span>
+                            <span className="tiny num">{Math.round((e.correct / Math.max(1, e.answered)) * 100)}%</span>
                           </div>
                         </td>
                         <td className="num muted small">{formatTime(e.time)}</td>
@@ -253,7 +252,7 @@ export default function Analytics() {
                       claimed ? (
                         <Pill tone="success">✓</Pill>
                       ) : (
-                        <Pill tone="gold">+25 🪙</Pill>
+                        <button className="pill gold" onClick={() => claimAchievement(b.id)} aria-label={`Claim ${L(b.name)} reward`}>+25 🪙</button>
                       )
                     ) : (
                       <Pill>🔒</Pill>

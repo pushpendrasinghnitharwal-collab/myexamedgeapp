@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from 'react'
-import { CA_ITEMS, CA_QUIZ, daysAgo } from '../data/currentAffairs'
+import { CA_ITEMS, CA_QUIZ } from '../data/currentAffairs'
 import { useL } from '../lib/i18n'
-import { useStore } from '../lib/store'
 import { navigate } from '../lib/router'
 import { Card, CardHead, Pill, Button, SegmentedTabs, EmptyState } from '../components/ui'
 import { useToast as useT } from '../components/ui'
@@ -10,24 +9,17 @@ const KEYS = ['A', 'B', 'C', 'D']
 
 export default function CurrentAffairs() {
   const L = useL()
-  const { state, submitAttempt } = useStore()
   const toast = useT()
   const [tab, setTab] = useState('daily')
   const [quiz, setQuiz] = useState(null)
   const [answers, setAnswers] = useState({})
   const [finished, setFinished] = useState(false)
 
-  const dated = useMemo(
-    () =>
-      CA_ITEMS.map((item, i) => ({
-        ...item,
-        date: daysAgo(i === 0 ? 0 : i),
-      })),
-    []
-  )
+  const dated = useMemo(() => CA_ITEMS, [])
 
   const startQuiz = () => {
     setQuiz(CA_QUIZ)
+    setTab('quiz')
     setAnswers({})
     setFinished(false)
   }
@@ -35,23 +27,6 @@ export default function CurrentAffairs() {
   const submitQuiz = () => {
     setFinished(true)
     const correct = CA_QUIZ.filter((q) => answers[q.id] === q.a).length
-    addAttempt({
-      id: `ca-${Date.now()}`,
-      examId: 'ssc-cgl',
-      testId: 'ca-daily',
-      title: 'Current Affairs Daily Quiz',
-      mode: 'practice',
-      date: Date.now(),
-      score: correct,
-      maxScore: CA_QUIZ.length,
-      correct,
-      wrong: CA_QUIZ.length - correct,
-      unattempted: CA_QUIZ.filter((q) => answers[q.id] === undefined).length,
-      accuracy: correct / CA_QUIZ.length,
-      timeSpent: 90,
-      perQuestion: CA_QUIZ.map((q) => ({ qid: q.id, chosen: answers[q.id] ?? -1, time: 18 })),
-      totalQuestions: CA_QUIZ.length,
-    })
     toast(`Scored ${correct}/${CA_QUIZ.length} in the CA quiz`, '📰')
   }
 
@@ -59,19 +34,20 @@ export default function CurrentAffairs() {
     <div className="stack" style={{ gap: 18 }}>
       <div className="page-head">
         <div>
-          <div className="page-title">{L({ en: 'Current Affairs', hi: 'समसामयिक घटनाक्रम' })}</div>
+          <h1 className="page-title">{L({ en: 'Current Affairs', hi: 'समसामयिक घटनाक्रम' })}</h1>
           <div className="page-sub">
             {L({
-              en: 'Daily 6-minute capsules, a monthly magazine and a free quiz — all exam-filtered.',
-              hi: 'रोज़ 6 मिनट के कैप्सूल, मासिक पत्रिका और एक निःशुल्क क्विज़ — सभी परीक्षा-फ़िल्टर के साथ।',
+              en: 'Preview the current-affairs interface and its existing sample content.',
+              hi: 'करेंट अफेयर्स इंटरफेस और मौजूदा नमूना सामग्री का प्रीव्यू देखें।',
             })}
           </div>
         </div>
         <Button variant="primary" onClick={startQuiz}>
           🧠 {L({ en: 'Take CA quiz', hi: 'सीए क्विज़ दें' })}
-          {state.streak.count > 0 && <span className="pill brand">+10 XP</span>}
         </Button>
       </div>
+
+      <div className="sample-content-notice">{L({ en: 'Interface preview: the existing items and quiz have not been verified as current news. Please check reliable sources before using them for preparation.', hi: 'इंटरफेस प्रीव्यू: मौजूदा सामग्री और क्विज़ का वर्तमान समाचार के रूप में सत्यापन नहीं हुआ है। तैयारी के लिए भरोसेमंद स्रोत देखें।' })}</div>
 
       <SegmentedTabs
         tabs={[
@@ -91,12 +67,11 @@ export default function CurrentAffairs() {
                 <div className="spread" style={{ marginBottom: 10 }}>
                   <div className="row wrap" style={{ gap: 8 }}>
                     <Pill tone={i === 0 ? 'brand' : ''}>
-                      {i === 0 ? L({ en: 'Today', hi: 'आज' }) : item.date.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' })}
+                      {L({ en: 'Sample', hi: 'नमूना' })}
                     </Pill>
                     <Pill>{L(item.tag)}</Pill>
-                    <Pill tone="success">{L({ en: 'Exam-relevant', hi: 'परीक्षा-संबंधी' })}</Pill>
+
                   </div>
-                  <span className="tiny muted">{L({ en: '6 min read', hi: '6 मिनट पढ़ें' })}</span>
                 </div>
                 <div className="bold" style={{ fontSize: 16.5, lineHeight: 1.45, marginBottom: 9 }}>{L(item.title)}</div>
                 <p className="small muted" style={{ margin: '0 0 12px', lineHeight: 1.7 }}>{L(item.body)}</p>
@@ -110,12 +85,12 @@ export default function CurrentAffairs() {
 
           <div className="stack" style={{ gap: 18 }}>
             <Card>
-              <CardHead icon="📅" title={L({ en: '7-day recap', hi: '7-दिन का सारांश' })} />
+              <CardHead icon="📅" title={L({ en: 'Sample topics', hi: 'नमूना विषय' })} />
               <div className="stack sm">
                 {dated.slice(0, 7).map((d) => (
                   <div key={d.id} className="row" style={{ gap: 10, alignItems: 'flex-start' }}>
                     <div className="tiny muted num" style={{ width: 52, paddingTop: 2 }}>
-                      {d.date.toLocaleDateString('en-IN', { day: '2-digit', month: 'short' })}
+                      {L({ en: 'Sample', hi: 'नमूना' })}
                     </div>
                     <div className="small" style={{ flex: 1 }}>{L(d.title)}</div>
                   </div>
@@ -124,11 +99,11 @@ export default function CurrentAffairs() {
             </Card>
 
             <Card>
-              <CardHead icon="🔖" title={L({ en: 'Save for revision', hi: 'दोहराव के लिए सहेजें' })} />
+              <CardHead icon="🔖" title={L({ en: 'Your saved questions', hi: 'आपके सहेजे गए प्रश्न' })} />
               <div className="small muted" style={{ lineHeight: 1.7 }}>
                 {L({
-                  en: 'Tap the bookmark on any capsule to build a personal revision list. We keep it on your device.',
-                  hi: 'किसी भी कैप्सूल पर बुकमार्क दबाकर अपनी दोहराव सूची बनाएँ। यह आपके डिवाइस पर रहता है।',
+                  en: 'Questions bookmarked in practice sessions are kept on this device for revision.',
+                  hi: 'अभ्यास सत्रों में बुकमार्क किए गए प्रश्न दोहराव के लिए इस डिवाइस पर सहेजे जाते हैं।',
                 })}
               </div>
               <Button size="sm" className="block" style={{ marginTop: 12 }} onClick={() => navigate('/bookmarks')}>
@@ -144,8 +119,8 @@ export default function CurrentAffairs() {
           <Card>
             <CardHead
               icon="📰"
-              title={L({ en: 'EXAMEDGE Monthly — November 2026', hi: 'EXAMEDGE मासिक — नवंबर 2026' })}
-              sub={L({ en: '64 pages · 8 sections · 30 MCQs with answer key', hi: '64 पृष्ठ · 8 अनुभाग · उत्तर-कुंजी के साथ 30 MCQ' })}
+              title={L({ en: 'Monthly magazine preview', hi: 'मासिक पत्रिका प्रीव्यू' })}
+              sub={L({ en: 'A preview of the planned magazine layout', hi: 'प्रस्तावित पत्रिका लेआउट का प्रीव्यू' })}
             />
             <div className="grid g2" style={{ gap: 12 }}>
               {[
@@ -168,10 +143,10 @@ export default function CurrentAffairs() {
               ))}
             </div>
             <div className="row wrap" style={{ gap: 10, marginTop: 16 }}>
-              <Button variant="primary" onClick={() => toast('Magazine opened in reader', '📰')}>
+              <Button variant="primary" disabled>
                 📖 {L({ en: 'Open magazine', hi: 'पत्रिका खोलें' })}
               </Button>
-              <Button onClick={() => toast('PDF download started', '⬇')}>⬇ {L({ en: 'Download PDF', hi: 'PDF डाउनलोड' })}</Button>
+              <Button disabled>⬇ {L({ en: 'Download PDF', hi: 'PDF डाउनलोड' })}</Button>
             </div>
           </Card>
 
@@ -202,14 +177,14 @@ export default function CurrentAffairs() {
         <Card>
           <CardHead
             icon="🧠"
-            title={L({ en: 'Current Affairs Daily Quiz', hi: 'सीए डेली क्विज़' })}
-            sub={L({ en: '5 questions · 2 minutes · instant explanations', hi: '5 प्रश्न · 2 मिनट · तुरंत व्याख्या' })}
+            title={L({ en: 'Sample Current Affairs Quiz', hi: 'नमूना करेंट अफेयर्स क्विज़' })}
+            sub={L({ en: `${CA_QUIZ.length} sample questions · results are not saved`, hi: `${CA_QUIZ.length} नमूना प्रश्न · परिणाम सहेजे नहीं जाते` })}
           />
           {!quiz ? (
             <EmptyState
               icon="🧠"
               title="Ready for a quick CA quiz?"
-              sub="Test today's capsule and earn XP."
+              sub="Try the existing sample quiz."
               action={<Button variant="primary" onClick={startQuiz}>Start quiz</Button>}
             />
           ) : (
@@ -229,10 +204,10 @@ export default function CurrentAffairs() {
                         else if (sel === oi) cls = 'wrong'
                       } else if (sel === oi) cls = 'sel'
                       return (
-                        <div key={oi} className={`option ${cls}`} onClick={() => !finished && setAnswers((a) => ({ ...a, [q.id]: oi }))}>
-                          <div className="opt-key">{KEYS[oi]}</div>
-                          <div style={{ flex: 1 }}>{L(o)}</div>
-                        </div>
+                        <button type="button" key={oi} className={`option ${cls}`} onClick={() => !finished && setAnswers((a) => ({ ...a, [q.id]: oi }))} aria-pressed={sel === oi} disabled={finished}>
+                          <span className="opt-key">{KEYS[oi]}</span>
+                          <span style={{ flex: 1 }}>{L(o)}</span>
+                        </button>
                       )
                     })}
                     {finished && (
@@ -258,7 +233,7 @@ export default function CurrentAffairs() {
                     })}
                   </div>
                   <div className="small muted" style={{ marginTop: 6 }}>
-                    {L({ en: 'Keep reading today’s capsule to hit 5/5 tomorrow.', hi: 'कल 5/5 करने के लिए आज का कैप्सूल पढ़ते रहें।' })}
+                    {L({ en: 'Review the explanations and verify the sample facts independently.', hi: 'समाधान देखें और नमूना तथ्यों की स्वतंत्र रूप से जाँच करें।' })}
                   </div>
                 </div>
               )}

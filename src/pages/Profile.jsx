@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useStore, useAttemptStats } from '../lib/store'
+import { useStore, useAttemptStats, useCurrentStreak } from '../lib/store'
 import { api, isLoggedIn } from '../lib/api'
 import { EXAMS, examById, CATEGORIES } from '../data/exams'
 import { navigate } from '../lib/router'
@@ -20,7 +20,7 @@ function AccountCard() {
     setBusy(true); setMsg(null)
     try {
       const u = await login(email.trim(), password)
-      setMsg({ ok: true, text: `Logged in as ${u.name} — attempts now sync to the server` })
+      setMsg({ ok: true, text: `Signed in as ${u.name} — future attempts are sent when the backend is available` })
     } catch (e) {
       setMsg({ ok: false, text: e.message })
     } finally { setBusy(false) }
@@ -28,7 +28,7 @@ function AccountCard() {
 
   return (
     <Card style={{ padding: 18 }}>
-      <CardHead title={L({ en: 'Account & Cloud Sync', hi: 'खाता और क्लाउड sync' })} sub={L({ en: 'Sign in so attempts, streaks and leaderboard work across devices', hi: 'साइन इन करें ताकिbezeichnung, streak और leaderboard सभी devices पर sync हों' })} />
+      <CardHead title={L({ en: 'Account', hi: 'खाता' })} sub={L({ en: 'Sign in to send future attempts to an available backend', hi: 'नए प्रयास उपलब्ध बैकएंड पर भेजने के लिए साइन इन करें' })} />
       {loggedIn ? (
         <div className="row wrap" style={{ gap: 10, alignItems: 'center' }}>
           <Pill tone="ok">{state.auth.user.email}</Pill>
@@ -46,7 +46,7 @@ function AccountCard() {
           </div>
           {msg && <div style={{ fontSize: 13, color: msg.ok ? 'var(--ok)' : 'var(--bad)' }}>{msg.text}</div>}
           <div className="muted" style={{ fontSize: 12 }}>
-            {L({ en: 'Tip: your onboarding phone number is your password. New here? Register from the welcome screen and your account is created automatically.', hi: 'टिप: आपका onboarding phone number ही आपका पासवर्ड है।' })}
+            {L({ en: 'Your progress is saved on this device. Sign in with an existing account to use the connected backend.', hi: 'आपकी प्रगति इस डिवाइस पर सहेजी जाती है। मौजूदा खाते से साइन इन कर सकते हैं।' })}
           </div>
         </div>
       )}
@@ -58,6 +58,7 @@ export default function Profile() {
   const { state, updateProfile } = useStore()
   const L = useL()
   const stats = useAttemptStats()
+  const streak = useCurrentStreak()
   const [editing, setEditing] = useState(false)
   const [name, setName] = useState(state.profile?.name || '')
   const [examId, setExamId] = useState(state.profile?.examId || 'ssc-cgl')
@@ -94,7 +95,7 @@ export default function Profile() {
               <div className="row wrap" style={{ gap: 8 }}>
                 <Pill tone="brand">🎯 {target?.name || 'No target exam'}</Pill>
                 <Pill tone={p?.plan === 'pro' ? 'gold' : ''}>{p?.plan === 'pro' ? '💎 Premium' : L({ en: 'Free plan', hi: 'निःशुल्क योजना' })}</Pill>
-                <Pill>🔥 {state.streak.count}</Pill>
+                <Pill>🔥 {streak}</Pill>
                 <Pill>🪙 {state.coins}</Pill>
               </div>
             </div>
@@ -209,10 +210,9 @@ export default function Profile() {
             <div className="stack sm">
               {[
                 ['📊', L({ en: 'Full analytics', hi: 'पूर्ण विश्लेषण' }), '/analytics'],
-                ['🏆', L({ en: 'Leaderboard', hi: 'लीडरबोर्ड' }), '/leaderboard'],
+                ['📄', L({ en: 'Previous year papers', hi: 'पिछले वर्ष के पेपर' }), '/pyq'],
                 ['📰', L({ en: 'Current affairs', hi: 'समसामयिक घटनाक्रम' }), '/current-affairs'],
                 ['📚', L({ en: 'Study material', hi: 'अध्ययन सामग्री' }), '/materials'],
-                ['💎', L({ en: 'Upgrade plan', hi: 'प्लान अपग्रेड करें' }), '/pricing'],
               ].map(([i, l, path]) => (
                 <div key={path} className="nav-item" onClick={() => navigate(path)}>
                   <span className="ico">{i}</span>

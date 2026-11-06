@@ -1,12 +1,12 @@
 import React, { createContext, useContext, useEffect, useMemo, useReducer, useCallback } from 'react'
-import { QUESTIONS, buildPaper, mulberry32, hashString } from '../data/questions'
-import { EXAMS, examById } from '../data/exams'
+import { QUESTIONS } from '../data/questions'
+import { EXAMS, TOPICS } from '../data/exams'
 import { api, getToken, getApiUser, setSession } from './api'
 
 const KEY = 'examedge.state.v1'
 
 const initialState = {
-  profile: null,
+  profile: { name: 'Aspirant', examId: 'ssc-cgl', plan: 'free', isGuest: true },
   auth: { token: getToken(), user: getApiUser() },
   attempts: [],
   bookmarks: [],
@@ -16,12 +16,11 @@ const initialState = {
   coins: 40,
   achievements: [],
   dailyGoal: 25,
-  settings: { lang: 'en', theme: 'dark', sound: true, autoSubmit: true },
-  seeded: false,
+  settings: { lang: 'en', theme: 'light', sound: true, autoSubmit: true },
 }
 
 function todayKey(d = new Date()) {
-  return d.toISOString().slice(0, 10)
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
 }
 
 function reducer(state, action) {
@@ -29,7 +28,11 @@ function reducer(state, action) {
     case 'hydrate':
       return { ...state, ...action.payload }
     case 'register':
-      return { ...state, profile: { ...action.payload, joinedAt: Date.now(), plan: 'free' } }
+      return { ...state, profile: { ...action.payload, joinedAt: Date.now(), plan: 'free' }, dailyGoal: action.payload.goal || state.dailyGoal }
+    case 'session':
+      return { ...state, auth: { token: getToken(), user: action.payload } }
+    case 'logout':
+      return { ...state, auth: { token: null, user: null } }
     case 'updateProfile':
       return { ...state, profile: { ...state.profile, ...action.payload } }
     case 'updateSettings':
@@ -46,8 +49,8 @@ function reducer(state, action) {
       return {
         ...state,
         attempts: [a, ...state.attempts],
-        streak: { count: Math.max(count, state.streak.count), last: todayKey(), days },
-        xp: state.xp + Math.round(a.score * 2 + a.correct * 3),
+        streak: { count, last: todayKey(), days },
+        xp: Math.max(0, state.xp + Math.round(a.score * 2 + a.correct * 3)),
         coins: state.coins + Math.round(a.correct * 0.6),
       }
     }
@@ -80,70 +83,27 @@ function reducer(state, action) {
 
 const Ctx = createContext(null)
 
-// Builds believable history so analytics screens are meaningful from day one.
-function seedAttempts() {
-  const out = []
-  const plan = [
-    { examId: 'ssc-cgl', mode: 'mock', q: 25, daysAgo: 6 },
-    { examId: 'ssc-cgl', mode: 'practice', q: 20, daysAgo: 5 },
-    { examId: 'ibps-po', mode: 'mock', q: 25, daysAgo: 4 },
-    { examId: 'ibps-po', mode: 'practice', q: 20, daysAgo: 3 },
-    { examId: 'ssc-cgl', mode: 'mock', q: 25, daysAgo: 1 },
-  ]
-  plan.forEach((p, idx) => {
-    const exam = examById(p.examId)
-    const paper = buildPaper(exam, { count: p.q, seed: 900 + idx })
-    const rand = mulberry32(hashString(p.examId + idx))
-    const perQuestion = []
-    let correct = 0
-    let timeSpent = 0
-    paper.forEach((q) => {
-      const ability = 0.45 + idx * 0.07 + rand() * 0.22
-      const pickCorrect = rand() < ability
-      const chosen = pickCorrect ? q.a : (q.a + 1 + Math.floor(rand() * 3)) % 4
-      if (chosen === q.a) correct++
-      const t = Math.round(25 + rand() * 55)
-      timeSpent += t
-      perQuestion.push({ qid: q.id, chosen, time: t })
-    })
-    const wrong = paper.length - correct
-    const score = correct * exam.marksPerQ - wrong * exam.negative
-    out.push({
-      id: `seed-${idx}`,
-      examId: p.examId,
-      mode: p.mode,
-      title: p.mode === 'mock' ? 'Full-Length Mock Test' : 'Topic Practice — Mixed',
-      date: Date.now() - p.daysAgo * 86400000,
-      score: Math.round(score * 10) / 10,
-      maxScore: paper.length * exam.marksPerQ,
-      correct,
-      wrong,
-      unattempted: 0,
-      accuracy: correct / paper.length,
-      timeSpent,
-      perQuestion,
-      totalQuestions: paper.length,
-      seed: 900 + idx,
-    })
-  })
-  return out
+// Restore a learner's own progress. New visitors start with a clean, local profile;
+// the interface never invents test history to fill the dashboard.
+function loadState() {
+  try {
+    const raw = localStorage.getItem(KEY)
+    if (!raw) return initialState
+    const saved = JSON.parse(raw)
+    return {
+      ...initialState,
+      ...saved,
+      profile: saved.profile || initialState.profile,
+      settings: { ...initialState.settings, ...saved.settings },
+      streak: { ...initialState.streak, ...saved.streak },
+    }
+  } catch {
+    return initialState
+  }
 }
 
 export function StoreProvider({ children }) {
-  const [state, dispatch] = useReducer(reducer, initialState)
-
-  useEffect(() => {
-    try {
-      const raw = localStorage.getItem(KEY)
-      if (raw) {
-        dispatch({ type: 'hydrate', payload: JSON.parse(raw) })
-      } else {
-        dispatch({ type: 'hydrate', payload: { ...initialState, seeded: true, attempts: seedAttempts(), streak: { count: 5, last: todayKey(), days: [] } } })
-      }
-    } catch (e) {
-      dispatch({ type: 'hydrate', payload: initialState })
-    }
-  }, [])
+  const [state, dispatch] = useReducer(reducer, undefined, loadState)
 
   useEffect(() => {
     try {
@@ -155,18 +115,9 @@ export function StoreProvider({ children }) {
 
   const actions = useMemo(
     () => ({
-      // Registers locally AND on the backend (email derived from phone/name).
+      // Onboarding creates a local profile. Never generate credentials on the learner's behalf.
       register: async (p) => {
         dispatch({ type: 'register', payload: p })
-        try {
-          const email = (p.phone && p.phone.trim()) ? `${p.phone.trim()}@examedge.in` : `${p.name.trim().toLowerCase().replace(/\s+/g, '.')}@examedge.in`
-          const password = p.phone?.trim() || 'examedge123'
-          const { token, user } = await api.register(p.name, email, password, p.examId)
-          setSession(token, user)
-          dispatch({ type: 'session', payload: user })
-        } catch (e) {
-          console.warn('Backend register failed, staying local:', e.message)
-        }
       },
       login: async (email, password) => {
         const { token, user } = await api.login(email, password)
@@ -233,6 +184,7 @@ export function computeStats(attempts) {
   })
   let totalQ = 0
   let totalCorrect = 0
+  let totalAnswered = 0
   let totalTime = 0
   let best = null
   let scoreSum = 0
@@ -241,6 +193,7 @@ export function computeStats(attempts) {
   attempts.forEach((a) => {
     totalQ += a.totalQuestions || a.perQuestion.length
     totalCorrect += a.correct
+    totalAnswered += (a.correct || 0) + (a.wrong || 0)
     totalTime += a.timeSpent
     scoreSum += a.score
     scoreCount++
@@ -248,7 +201,8 @@ export function computeStats(attempts) {
     a.perQuestion.forEach((pq) => {
       const q = qmap[pq.qid]
       if (!q) return
-      const t = topicMap[q.topic] || (topicMap[q.topic] = { attempted: 0, correct: 0, wrong: 0, time: 0 })
+      if (pq.chosen == null || pq.chosen < 0) return
+      const t = topicMap[q.topic] || (topicMap[q.topic] = { subject: TOPICS[q.topic]?.subject, attempted: 0, correct: 0, wrong: 0, time: 0 })
       t.attempted++
       t.time += pq.time
       if (pq.chosen === q.a) t.correct++
@@ -266,10 +220,11 @@ export function computeStats(attempts) {
 
   const byExam = {}
   attempts.forEach((a) => {
-    const e = (byExam[a.examId] = byExam[a.examId] || { examId: a.examId, count: 0, score: 0, correct: 0, total: 0, time: 0 })
+    const e = (byExam[a.examId] = byExam[a.examId] || { examId: a.examId, count: 0, score: 0, correct: 0, total: 0, answered: 0, time: 0 })
     e.count++
     e.score += a.score
     e.correct += a.correct
+    e.answered += (a.correct || 0) + (a.wrong || 0)
     e.total += a.totalQuestions || a.perQuestion.length
     e.time += a.timeSpent
   })
@@ -279,7 +234,7 @@ export function computeStats(attempts) {
     totalQ,
     totalCorrect,
     totalTime,
-    accuracy: totalQ ? totalCorrect / totalQ : 0,
+    accuracy: totalAnswered ? totalCorrect / totalAnswered : 0,
     avgScore: scoreCount ? scoreSum / scoreCount : 0,
     best,
     topics,
@@ -289,9 +244,15 @@ export function computeStats(attempts) {
   }
 }
 
+export function currentStreak(streak, date = new Date()) {
+  const yesterday = new Date(date)
+  yesterday.setDate(yesterday.getDate() - 1)
+  return streak?.last === todayKey(date) || streak?.last === todayKey(yesterday) ? (streak.count || 0) : 0
+}
+
 export function useCurrentStreak() {
   const { state } = useStore()
-  return state.streak.count || 0
+  return currentStreak(state.streak)
 }
 
 export const ALL_EXAMS = EXAMS

@@ -1,7 +1,7 @@
-import { CORE_QUESTIONS } from './questionBank.core'
-import { GA_QUESTIONS } from './questionBank.ga'
-import { EXPANDED_QUESTIONS } from './questionBank.expanded'
-import { TOPICS, SUBJECTS } from './exams'
+import { CORE_QUESTIONS } from './questionBank.core.js'
+import { GA_QUESTIONS } from './questionBank.ga.js'
+import { EXPANDED_QUESTIONS } from './questionBank.expanded.js'
+import { TOPICS, SUBJECTS } from './exams.js'
 
 export const QUESTIONS = [...CORE_QUESTIONS, ...GA_QUESTIONS, ...EXPANDED_QUESTIONS]
 
@@ -37,14 +37,17 @@ export function shuffleWith(list, rand) {
   return arr
 }
 
-// Build a paper for an exam, honouring subject weights and the exam's blueprint.
+// Only use questions already tagged for the exam and its configured subjects.
+export function questionsForExam(exam) {
+  const subjects = new Set(exam.subjects.map((id) => SUBJECTS[id] ? id : TOPICS[id]?.subject).filter(Boolean))
+  return QUESTIONS.filter((q) => q.exams.includes(exam.id) && subjects.has(TOPICS[q.topic]?.subject))
+}
+
+// Assemble a short practice set from the existing question bank.
 export function buildPaper(exam, { count = 25, seed = 1, topicIds = null } = {}) {
   const rand = mulberry32(hashString(exam.id + ':' + seed))
-  const pool = QUESTIONS.filter((q) => {
-    if (topicIds && topicIds.length) return topicIds.includes(q.topic)
-    return exam.exams.includes(q.id) || q.exams.includes(exam.id)
-  })
-  const usable = pool.length ? pool : QUESTIONS.filter((q) => q.exams.includes(exam.id))
+  const pool = questionsForExam(exam).filter((q) => !topicIds || topicIds.includes(q.topic))
+  const usable = pool
 
   // distribute across the exam's subjects as evenly as the paper allows
   const bySubject = {}
@@ -75,7 +78,7 @@ export function buildPaper(exam, { count = 25, seed = 1, topicIds = null } = {})
 
 export function topicsForExam(exam) {
   const set = new Set()
-  QUESTIONS.filter((q) => q.exams.includes(exam.id)).forEach((q) => set.add(q.topic))
+  questionsForExam(exam).forEach((q) => set.add(q.topic))
   return [...set]
 }
 
