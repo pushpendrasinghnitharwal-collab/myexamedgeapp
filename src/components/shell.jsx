@@ -4,7 +4,7 @@ import {
   ClipboardList, FileClock, Flame, GraduationCap, Languages, LayoutGrid, LayoutDashboard,
   LibraryBig, Moon, Search, Settings2, Sparkles, Sun, UserRound,
 } from 'lucide-react'
-import { useStore } from '../lib/store'
+import { useStore, useCurrentStreak } from '../lib/store'
 import { navigate } from '../lib/router'
 import { examById } from '../data/exams'
 import { useL } from '../lib/i18n'
@@ -90,6 +90,7 @@ export function TopBar({ route }) {
   const [search, setSearch] = useState('')
   const searchRef = useRef(null)
   const lang = state.settings.lang
+  const streak = useCurrentStreak()
   const key = route.path.split('?')[0].split('/').filter(Boolean)[0] || 'home'
   const titles = {
     home: ['Dashboard', 'डैशबोर्ड'], exams: ['Explore exams', 'परीक्षाएँ देखें'], exam: ['Test series', 'टेस्ट सीरीज़'],
@@ -130,6 +131,9 @@ export function TopBar({ route }) {
       <div className="ee-mobile-brand"><Brand compact /></div>
       <div className="ee-breadcrumb"><span>{L({ en: 'Workspace', hi: 'वर्कस्पेस' })}</span><ChevronRight size={14} /><strong>{lang === 'hi' ? title[1] : title[0]}</strong></div>
       <div className="ee-topbar-spacer" />
+      <button className="ee-streak" onClick={() => navigate('/analytics')} aria-label={L({ en: `${streak} ${streak === 1 ? 'day' : 'days'} streak. View progress`, hi: `${streak} दिन स्ट्रीक। प्रगति देखें` })}>
+        <Flame size={16} /><span>{L({ en: `${streak} ${streak === 1 ? 'day' : 'days'}`, hi: `${streak} दिन` })}</span>{' '}<small>{L({ en: 'streak', hi: 'स्ट्रीक' })}</small>
+      </button>
       <form className="ee-search" role="search" onSubmit={submitSearch}>
         <Search size={17} />
         <input ref={searchRef} value={search} onChange={(e) => setSearch(e.target.value)} placeholder={L({ en: 'Search for your exam...', hi: 'अपनी परीक्षा खोजें...' })} aria-label="Search exams" />

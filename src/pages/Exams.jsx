@@ -59,7 +59,7 @@ export default function Exams({ initialCategory = 'all', initialQuery = '' }) {
           const visual = visuals[exam.category]
           const Icon = visual.icon
           const sets = (TEST_CATALOGUE[exam.id] || []).filter((test) => ['preview', 'sectional', 'topic'].includes(test.type)).length
-          return <button className="directory-card" key={exam.id} onClick={() => navigate(`/exam/${exam.id}`)}>
+          return <button className={`directory-card tone-${visual.tone}`} key={exam.id} onClick={() => navigate(`/exam/${exam.id}`)}>
             <span className="directory-top"><span className={`directory-icon ${visual.tone}`}><Icon size={22} strokeWidth={1.8} /></span><span className="directory-category">{L({ en: cat.name, hi: cat.hi })}</span></span>
             <strong>{exam.name}</strong><span className="directory-subtitle">{exam.subtitle}</span>
             <span className="directory-meta"><span><BookOpen size={14} /> {sets} {L({ en: 'practice sets', hi: 'अभ्यास सेट' })}</span><span className="directory-dot" />{exam.tier}</span>
