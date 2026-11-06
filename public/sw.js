@@ -1,4 +1,4 @@
-const CACHE = 'examedge-v1'
+const CACHE = 'examedge-v4'
 const CORE = ['/', '/index.html', '/manifest.webmanifest', '/icon.svg']
 
 self.addEventListener('install', (e) => {
@@ -9,10 +9,9 @@ self.addEventListener('install', (e) => {
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE).map((k) => caches.delete(k)))
-    )
+      Promise.all(keys.filter((k) => k.startsWith('examedge-') && k !== CACHE).map((k) => caches.delete(k)))
+    ).then(() => self.clients.claim())
   )
-  self.clients.claim()
 })
 
 // Cache-first for assets, network-first for navigation (so updates ship fast).
@@ -20,7 +19,7 @@ self.addEventListener('fetch', (e) => {
   const req = e.request
   if (req.method !== 'GET') return
   const url = new URL(req.url)
-  if (url.origin !== self.location.origin) return
+  if (url.origin !== self.location.origin || url.pathname.startsWith('/api/')) return
 
   if (req.mode === 'navigate') {
     e.respondWith(
@@ -30,22 +29,21 @@ self.addEventListener('fetch', (e) => {
           caches.open(CACHE).then((c) => c.put('/index.html', copy))
           return res
         })
-        .catch(() => caches.match('/index.html'))
+        .catch(() => caches.open(CACHE).then((cache) => cache.match('/index.html')))
     )
     return
   }
 
   e.respondWith(
-    caches.match(req).then(
-      (hit) =>
-        hit ||
-        fetch(req).then((res) => {
+    caches.open(CACHE).then((cache) =>
+      cache.match(req).then((hit) =>
+        hit || fetch(req).then((res) => {
           if (res && res.status === 200 && res.type === 'basic') {
-            const copy = res.clone()
-            caches.open(CACHE).then((c) => c.put(req, copy))
+            cache.put(req, res.clone())
           }
           return res
         })
+      )
     )
   )
 })

@@ -1,169 +1,64 @@
-import React, { useMemo, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
+import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Check, ChevronRight, CircleHelp, ClipboardList, Clock3, FileClock, FileText, Layers3, ListChecks, Play, Sparkles, Target } from 'lucide-react'
 import { examById, CATEGORIES, SUBJECTS } from '../data/exams'
-import { TEST_CATALOGUE, TEST_TYPE_LABEL } from '../lib/tests'
+import { TEST_CATALOGUE } from '../lib/tests'
 import { navigate } from '../lib/router'
 import { useL } from '../lib/i18n'
-import { Card, CardHead, Pill, Button, SegmentedTabs, Bar } from '../components/ui'
+import { useStore } from '../lib/store'
 
-export default function ExamDetail({ examId }) {
+export default function ExamDetail({ examId, initialTab = 'overview' }) {
   const L = useL()
+  const { state, updateProfile } = useStore()
   const exam = examById(examId)
-  const [tab, setTab] = useState('all')
-  const [mode, setMode] = useState('mock')
-
+  const [tab, setTab] = useState(initialTab)
+  const [mode, setMode] = useState('practice')
+  useEffect(() => { setTab(initialTab) }, [initialTab, examId])
   const tests = useMemo(() => TEST_CATALOGUE[examId] || [], [examId])
 
-  const filtered = useMemo(() => {
-    if (tab === 'all') return tests
-    return tests.filter((t) => t.type === tab)
-  }, [tests, tab])
-
-  if (!exam) return <div className="empty">Exam not found</div>
-  const cat = CATEGORIES.find((c) => c.id === exam.category)
-
+  if (!exam) return <div className="directory-empty"><h3>{L({ en: 'Exam not found', hi: 'परीक्षा नहीं मिली' })}</h3><button className="btn primary" onClick={() => navigate('/exams')}>Explore exams</button></div>
+  const category = CATEGORIES.find((item) => item.id === exam.category)
+  const preview = tests.find((test) => test.type === 'preview')
+  const sectionals = tests.filter((test) => test.type === 'sectional')
+  const topics = tests.filter((test) => test.type === 'topic')
+  const selectedTests = tab === 'overview' ? [preview, ...sectionals.slice(0, 3)].filter(Boolean) : tab === 'sectional' ? sectionals : tab === 'topic' ? topics : []
+  const target = state.profile?.examId === exam.id
   const tabs = [
-    { value: 'all', label: `All (${tests.length})` },
-    { value: 'full', label: L({ en: 'Full Mocks', hi: 'फुल मॉक' }) },
-    { value: 'sectional', label: L({ en: 'Sectional', hi: 'सेक्शनल' }) },
-    { value: 'topic', label: L({ en: 'Topic Drills', hi: 'टॉपिक ड्रिल' }) },
-    { value: 'live', label: L({ en: 'Live', hi: 'लाइव' }) },
+    ['overview', L({ en: 'Overview', hi: 'अवलोकन' })],
+    ['full', L({ en: 'Full mocks', hi: 'फुल मॉक' })],
+    ['sectional', L({ en: 'Subject-wise', hi: 'विषयवार' })],
+    ['topic', L({ en: 'Topic practice', hi: 'टॉपिक अभ्यास' })],
+    ['pyq', L({ en: 'PYQ papers', hi: 'PYQ पेपर' })],
   ]
 
+  const start = (test) => navigate(`/test/${exam.id}/${test.id}?mode=${mode}`)
   return (
-    <div className="stack" style={{ gap: 18 }}>
-      <section className="hero">
-        <div className="spread" style={{ flexWrap: 'wrap', gap: 18 }}>
-          <div style={{ flex: '1 1 320px' }}>
-            <div className="eyebrow">
-              <span className="dot" /> {cat.icon} {L({ en: cat.name, hi: cat.hi })} · {exam.tier}
-            </div>
-            <h1>{exam.name}</h1>
-            <p>{L({ en: exam.subtitle, hi: exam.subtitle })}</p>
-            <div className="row wrap" style={{ gap: 8 }}>
-              <span className="pill">⏱ {exam.duration} {L({ en: 'minutes', hi: 'मिनट' })}</span>
-              <span className="pill">📝 {exam.questions} {L({ en: 'questions', hi: 'प्रश्न' })}</span>
-              <span className="pill">🎯 {exam.marks} {L({ en: 'marks', hi: 'अंक' })}</span>
-              <span className="pill">➖ {exam.negative} {L({ en: 'negative', hi: 'नेगेटिव' })}</span>
-              <span className="pill success">📈 {exam.popularity}% {L({ en: 'popularity', hi: 'लोकप्रियता' })}</span>
-            </div>
-          </div>
-          <div className="row wrap" style={{ gap: 10 }}>
-            <Button variant="primary" onClick={() => navigate(`/test/${exam.id}/${tests.find((t) => t.type === 'full')?.id}`)}>
-              ▶ {L({ en: 'Start mock test', hi: 'मॉक टेस्ट शुरू करें' })}
-            </Button>
-            <Button variant="ghost" onClick={() => navigate('/leaderboard')}>
-              🏆 {L({ en: 'Rankings', hi: 'रैंकिंग' })}
-            </Button>
-          </div>
-        </div>
+    <div className="exam-page page-shell">
+      <div className="exam-breadcrumb"><button onClick={() => navigate('/exams')}><ArrowLeft size={14} /> {L({ en: 'All exams', hi: 'सभी परीक्षाएँ' })}</button><ChevronRight size={14} /><span>{exam.name}</span></div>
+      <section className="exam-hero">
+        <div className="exam-hero-main"><div className="section-kicker"><span className="kicker-dot" /> {L({ en: category.name, hi: category.hi })} {L({ en: 'PREPARATION HUB', hi: 'तैयारी केंद्र' })}</div><h1>{exam.name}</h1><p>{exam.subtitle}</p><div className="exam-hero-tags"><span><Layers3 size={14} /> {exam.tier}</span><span><ListChecks size={14} /> {sectionals.length} {L({ en: 'subject sets', hi: 'विषय सेट' })}</span><span><FileClock size={14} /> {L({ en: 'PYQ space', hi: 'PYQ सेक्शन' })}</span></div></div>
+        <div className="exam-hero-actions"><button className={`target-button ${target ? 'is-target' : ''}`} onClick={() => updateProfile({ examId: exam.id })}>{target ? <Check size={16} /> : <Target size={16} />}{target ? L({ en: 'Your target exam', hi: 'आपकी लक्ष्य परीक्षा' }) : L({ en: 'Set as my target', hi: 'लक्ष्य बनाएँ' })}</button><button className="exam-primary" onClick={() => preview ? start(preview) : setTab('sectional')}><Play size={14} fill="currentColor" /> {L({ en: 'Start practising', hi: 'अभ्यास शुरू करें' })} <ArrowRight size={15} /></button></div>
       </section>
 
-      <div className="grid g-main">
-        <Card>
-          <SegmentedTabs tabs={tabs} value={tab} onChange={setTab} />
-          <div className="spread" style={{ marginBottom: 14 }}>
-            <div className="small bold">
-              {L({ en: 'Test mode', hi: 'टेस्ट मोड' })}
-              <span className="tiny muted" style={{ fontWeight: 400 }}>
-                {' '}
-                — {L({ en: 'Mock = strict timer, no going back. Practice = instant feedback.', hi: 'मॉक = सख्त टाइमर, वापस नहीं। प्रैक्टिस = तुरंत फीडबैक।' })}
-              </span>
-            </div>
-            <div className="seg">
-              <button className={mode === 'mock' ? 'on' : ''} onClick={() => setMode('mock')}>
-                {L({ en: 'Mock', hi: 'मॉक' })}
-              </button>
-              <button className={mode === 'practice' ? 'on' : ''} onClick={() => setMode('practice')}>
-                {L({ en: 'Practice', hi: 'प्रैक्टिस' })}
-              </button>
-            </div>
-          </div>
-
-          <div className="stack sm">
-            {filtered.map((t) => (
-              <div
-                key={t.id}
-                className="list-row"
-                style={{ cursor: 'pointer', borderRadius: 12, padding: '13px 12px', border: '1px solid var(--line)' }}
-                onClick={() => navigate(`/test/${exam.id}/${t.id}?mode=${mode}`)}
-              >
-                <div
-                  className="exam-icon"
-                  style={{
-                    fontSize: 17,
-                    background: t.type === 'live' ? 'rgba(244,63,94,0.16)' : 'var(--surface-2)',
-                    borderColor: t.type === 'live' ? 'rgba(244,63,94,0.4)' : undefined,
-                  }}
-                >
-                  {t.type === 'full' ? '📋' : t.type === 'sectional' ? '🧩' : t.type === 'topic' ? '🎯' : t.type === 'live' ? '🔴' : '⚡'}
-                </div>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div className="row" style={{ gap: 8 }}>
-                    <span className="small bold">{L({ en: t.title, hi: t.hi })}</span>
-                    {t.tag === 'LIVE' && <span className="pill danger">LIVE</span>}
-                    {t.premium && <span className="pill gold">PRO</span>}
-                  </div>
-                  <div className="tiny muted" style={{ marginTop: 2 }}>
-                    {L({ en: t.desc, hi: t.hiDesc })}
-                  </div>
-                  <div className="row wrap tiny muted" style={{ gap: 10, marginTop: 6 }}>
-                    <span>📝 {t.questions} Q</span>
-                    <span>⏱ {t.duration} min</span>
-                    <span>👥 {(t.attempts / 1000).toFixed(1)}k {L({ en: 'attempts', hi: 'प्रयास' })}</span>
-                    <span>📊 {L({ en: 'avg', hi: 'औसत' })} {t.avg}</span>
-                    <span>⭐ {t.rating}</span>
-                  </div>
-                </div>
-                <Button size="sm" variant={t.premium ? 'default' : 'primary'}>
-                  {L({ en: 'Start', hi: 'शुरू' })}
-                </Button>
-              </div>
-            ))}
-            {!filtered.length && <div className="empty">No tests in this category yet.</div>}
-          </div>
-        </Card>
-
-        <div className="stack" style={{ gap: 18 }}>
-          <Card>
-            <CardHead title={L({ en: 'Paper blueprint', hi: 'पेपर ब्लूप्रिंट' })} sub={L({ en: 'Subject distribution & marking', hi: 'विषय वितरण एवं अंकन' })} />
-            <div className="stack sm">
-              {exam.subjects.map((s) => (
-                <div key={s}>
-                  <div className="spread" style={{ marginBottom: 4 }}>
-                    <span className="small bold">{SUBJECTS[s]?.icon} {L({ en: SUBJECTS[s]?.name || s, hi: SUBJECTS[s]?.hi || s })}</span>
-                    <span className="tiny muted num">{Math.round(100 / exam.subjects.length)}%</span>
-                  </div>
-                  <Bar value={1 / exam.subjects.length} thin />
-                </div>
-              ))}
-            </div>
-            <div className="sep" />
-            <div className="kv"><span className="k">Negative marking</span><span className="bold">− {exam.negative} {L({ en: 'per wrong answer', hi: 'प्रति गलत उत्तर' })}</span></div>
-            <div className="kv"><span className="k">Total duration</span><span className="bold">{exam.duration} min</span></div>
-            <div className="kv"><span className="k">Total questions</span><span className="bold">{exam.questions}</span></div>
-          </Card>
-
-          <Card>
-            <CardHead title={L({ en: 'How EXAMEDGE helps', hi: 'EXAMEDGE कैसे मदद करता है' })} />
-            <div className="stack sm">
-              {[
-                ['🧭', { en: 'Blueprint-accurate papers', hi: 'ब्लूप्रिंट के अनुसार सटीक पेपर' }, { en: 'Every mock mirrors the real paper pattern and marking scheme.', hi: 'हर मॉक असली पेपर पैटर्न और अंकन योजना के अनुसार है।' }],
-                ['🧪', { en: 'Instant solutions', hi: 'तुरंत समाधान' }, { en: 'Step-by-step solutions in English and Hindi after every question.', hi: 'हर प्रश्न के बाद अंग्रेज़ी और हिंदी में चरण-दर-चरण समाधान।' }],
-                ['📊', { en: 'Topic-level analytics', hi: 'टॉपिक-स्तरीय विश्लेषण' }, { en: 'Know exactly which chapter is costing you marks.', hi: 'जानें कि कौनसा अध्याय आपके अंक खा रहा है।' }],
-                ['🏆', { en: 'All-India ranks', hi: 'ऑल-इंडिया रैंक' }, { en: 'Know exactly where you stand among lakhs of peers.', hi: 'जानें कि आप लाखों में कहाँ खड़े हैं।' }],
-              ].map(([i, t, d]) => (
-                <div key={i} className="row" style={{ gap: 12, alignItems: 'flex-start' }}>
-                  <div className="stat-ico" style={{ width: 34, height: 34, fontSize: 15 }}>{i}</div>
-                  <div>
-                    <div className="small bold">{L(t)}</div>
-                    <div className="tiny muted">{L(d)}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </Card>
+      <div className="exam-tabs" role="tablist" aria-label="Exam preparation sections">{tabs.map(([id, label]) => <button key={id} role="tab" aria-selected={tab === id} className={tab === id ? 'selected' : ''} onClick={() => id === 'pyq' ? navigate(`/pyq?exam=${exam.id}`) : setTab(id)}>{label}{id === 'pyq' && <ArrowUpRight size={13} />}</button>)}</div>
+      <div className="exam-content-grid">
+        <div>
+          {tab === 'full' ? <div className="full-mock-empty"><span><ClipboardList size={26} /></span><div className="section-kicker">{L({ en: 'COMING SOON', hi: 'जल्द आ रहा है' })}</div><h2>{L({ en: 'Full-length mocks are on the way.', hi: 'फुल-लेंथ मॉक जल्द आ रहे हैं।' })}</h2><p>{L({ en: 'This interface is ready for exam-specific full mocks. In the meantime, explore the existing short practice sets.', hi: 'यह इंटरफेस परीक्षा-विशेष फुल मॉक के लिए तैयार है। तब तक मौजूदा छोटे अभ्यास सेट देखें।' })}</p>{preview && <button className="exam-primary" onClick={() => start(preview)}>{L({ en: 'Try a practice set', hi: 'अभ्यास सेट करें' })} <ArrowRight size={16} /></button>}</div> : <>
+            <div className="test-section-heading"><div><div className="section-kicker">{tab === 'overview' ? L({ en: 'A PLACE TO START', hi: 'शुरुआत यहाँ से' }) : tab === 'sectional' ? L({ en: 'FOCUS YOUR PRACTICE', hi: 'विषय पर ध्यान दें' }) : L({ en: 'ONE TOPIC AT A TIME', hi: 'एक समय में एक टॉपिक' })}</div><h2>{tab === 'overview' ? L({ en: 'Explore practice sets', hi: 'अभ्यास सेट देखें' }) : tab === 'sectional' ? L({ en: 'Subject-wise practice', hi: 'विषयवार अभ्यास' }) : L({ en: 'Topic practice', hi: 'टॉपिक अभ्यास' })}</h2><p>{L({ en: 'Short sets using questions already in the app.', hi: 'ऐप में पहले से मौजूद प्रश्नों के छोटे अभ्यास सेट।' })}</p></div><div className="mode-select" aria-label="Test mode"><button className={mode === 'practice' ? 'selected' : ''} aria-pressed={mode === 'practice'} onClick={() => setMode('practice')}>{L({ en: 'Practice', hi: 'अभ्यास' })}</button><button className={mode === 'mock' ? 'selected' : ''} aria-pressed={mode === 'mock'} onClick={() => setMode('mock')}>{L({ en: 'Timed', hi: 'समयबद्ध' })}</button></div></div>
+            <div className="test-list">{selectedTests.map((test) => <TestRow key={test.id} test={test} L={L} onStart={() => start(test)} />)}{!selectedTests.length && <div className="test-empty">{L({ en: 'No practice sets are available in this section yet.', hi: 'इस सेक्शन में अभी अभ्यास सेट उपलब्ध नहीं हैं।' })}</div>}</div>
+            {tab === 'overview' && sectionals.length > 3 && <button className="text-link test-more" onClick={() => setTab('sectional')}>{L({ en: 'See all subject practice', hi: 'सभी विषय अभ्यास देखें' })} <ArrowRight size={15} /></button>}
+          </>}
+          <div className="content-disclaimer"><CircleHelp size={16} /><span>{L({ en: 'Practice content is from the existing question bank. PYQ papers and research-backed full mocks have not been added yet.', hi: 'अभ्यास सामग्री मौजूदा प्रश्न बैंक से है। PYQ पेपर और शोध-आधारित फुल मॉक अभी नहीं जोड़े गए हैं।' })}</span></div>
         </div>
+        <aside className="exam-aside" aria-label="Exam overview">
+          <div className="exam-summary"><div className="section-kicker">{L({ en: 'YOUR PREP, AT A GLANCE', hi: 'तैयारी एक नज़र में' })}</div><h3>{L({ en: 'What’s inside', hi: 'क्या उपलब्ध है' })}</h3><p>{L({ en: `Your ${exam.name} preparation space.`, hi: `${exam.name} के लिए आपकी तैयारी की जगह।` })}</p><div className="summary-rows"><div><span><Layers3 size={17} /> {L({ en: 'Subject practice', hi: 'विषय अभ्यास' })}</span><strong>{sectionals.length} {L({ en: 'sets', hi: 'सेट' })}</strong></div><div><span><Target size={17} /> {L({ en: 'Topic practice', hi: 'टॉपिक अभ्यास' })}</span><strong>{topics.length} {L({ en: 'sets', hi: 'सेट' })}</strong></div><div><span><FileClock size={17} /> {L({ en: 'Previous year papers', hi: 'पिछले वर्ष के पेपर' })}</span><strong className="summary-soon">{L({ en: 'Coming soon', hi: 'जल्द' })}</strong></div></div><button onClick={() => navigate(`/pyq?exam=${exam.id}`)}>{L({ en: 'Open PYQ library', hi: 'PYQ लाइब्रेरी खोलें' })}<ArrowRight size={15} /></button></div>
+          <div className="exam-tip"><span><Sparkles size={18} /></span><div><strong>{L({ en: 'One step at a time.', hi: 'एक बार में एक कदम।' })}</strong><p>{L({ en: 'Consistent practice is a great place to begin.', hi: 'नियमित अभ्यास एक अच्छी शुरुआत है।' })}</p></div></div>
+        </aside>
       </div>
     </div>
   )
+}
+
+function TestRow({ test, L, onStart }) {
+  const Icon = test.type === 'preview' ? ClipboardList : test.type === 'sectional' ? Layers3 : Target
+  return <div className="test-row"><span className={`test-row-icon ${test.type === 'preview' ? 'purple' : test.type === 'sectional' ? 'blue' : 'orange'}`}><Icon size={20} /></span><div className="test-row-info"><span className="test-row-type">{test.type === 'preview' ? L({ en: 'MIXED PRACTICE', hi: 'मिक्स्ड अभ्यास' }) : test.type === 'sectional' ? L({ en: 'SUBJECT PRACTICE', hi: 'विषय अभ्यास' }) : L({ en: 'TOPIC PRACTICE', hi: 'टॉपिक अभ्यास' })}</span><strong>{L({ en: test.title, hi: test.hi })}</strong><span className="test-meta"><span><FileText size={13} /> {test.questions} {L({ en: 'questions', hi: 'प्रश्न' })}</span><span><Clock3 size={13} /> {test.duration} {L({ en: 'min', hi: 'मिनट' })}</span></span></div><button className="test-start" onClick={onStart}>{L({ en: 'Start', hi: 'शुरू' })}<ArrowRight size={15} /></button></div>
 }

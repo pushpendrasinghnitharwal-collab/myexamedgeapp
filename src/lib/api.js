@@ -1,6 +1,7 @@
 // EXAMEDGE API client — talks to the Express + PostgreSQL backend via the Vite proxy (/api).
 // Falls back gracefully when the backend is unreachable (offline / demo mode).
 
+const BASE = (import.meta.env.VITE_API_URL || '').replace(/\/$/, '')
 const TOKEN_KEY = 'examedge.token.v1'
 const USER_KEY = 'examedge.apiuser.v1'
 

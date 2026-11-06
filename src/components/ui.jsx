@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useCallback, useMemo } from 'react'
+import React, { createContext, useContext, useState, useCallback, useMemo, useEffect, useId, useRef } from 'react'
 
 export function Button({ variant = 'default', size, className = '', children, ...rest }) {
   const cls = ['btn', variant !== 'default' ? variant : '', size || '', className].filter(Boolean).join(' ')
@@ -85,13 +85,45 @@ export function EmptyState({ icon = '📭', title, sub, action }) {
 }
 
 export function Modal({ open, onClose, children, title, width }) {
+  const dialogRef = useRef(null)
+  const onCloseRef = useRef(onClose)
+  const titleId = useId()
+  onCloseRef.current = onClose
+
+  useEffect(() => {
+    if (!open) return
+    const previousFocus = document.activeElement
+    const dialog = dialogRef.current
+    const selector = 'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    const focusable = () => [...dialog.querySelectorAll(selector)].filter((element) => element.getClientRects().length > 0)
+    ;(focusable()[0] || dialog).focus()
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') { event.preventDefault(); onCloseRef.current(); return }
+      if (event.key !== 'Tab') return
+      const items = focusable()
+      if (!items.length) { event.preventDefault(); dialog.focus(); return }
+      const first = items[0]
+      const last = items[items.length - 1]
+      if (event.shiftKey && (document.activeElement === first || !dialog.contains(document.activeElement))) {
+        event.preventDefault(); last.focus()
+      } else if (!event.shiftKey && (document.activeElement === last || !dialog.contains(document.activeElement))) {
+        event.preventDefault(); first.focus()
+      }
+    }
+    document.addEventListener('keydown', onKeyDown)
+    return () => {
+      document.removeEventListener('keydown', onKeyDown)
+      if (previousFocus?.isConnected) previousFocus.focus()
+    }
+  }, [open])
+
   if (!open) return null
   return (
     <div className="modal-back" onClick={onClose}>
-      <div className="modal" style={width ? { maxWidth: width } : undefined} onClick={(e) => e.stopPropagation()}>
+      <div ref={dialogRef} className="modal" role="dialog" aria-modal="true" aria-labelledby={title ? titleId : undefined} tabIndex={-1} style={width ? { maxWidth: width } : undefined} onClick={(e) => e.stopPropagation()}>
         {title && (
           <div className="spread" style={{ marginBottom: 18 }}>
-            <h3 style={{ fontSize: 19 }}>{title}</h3>
+            <h2 id={titleId} style={{ fontSize: 19 }}>{title}</h2>
             <button className="icon-btn" onClick={onClose} aria-label="Close">
               ✕
             </button>

@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useStore } from '../lib/store'
+import { EXAMS } from '../data/exams'
+import { QUESTIONS } from '../data/questions'
 import { useL } from '../lib/i18n'
 import { Card, CardHead, Pill, Button, Segmented, useToast, Modal } from '../components/ui'
 
@@ -13,11 +15,11 @@ export default function Settings() {
     <div className="stack" style={{ gap: 18 }}>
       <div className="page-head">
         <div>
-          <div className="page-title">{L({ en: 'Settings', hi: 'सेटिंग्स' })}</div>
+          <h1 className="page-title">{L({ en: 'Settings', hi: 'सेटिंग्स' })}</h1>
           <div className="page-sub">
             {L({
-              en: 'Everything is stored locally on your device — your data stays yours.',
-              hi: 'सब कुछ आपके डिवाइस पर स locally सेव है — आपका डेटा आपका ही रहता है।',
+              en: 'Guest progress stays on this device. Signed-in attempts may be sent to the backend.',
+              hi: 'अतिथि प्रगति इस डिवाइस पर रहती है। साइन इन करने पर प्रयास बैकएंड को भेजे जा सकते हैं।',
             })}
           </div>
         </div>
@@ -37,14 +39,14 @@ export default function Settings() {
           <div className="sep" />
           <div className="tiny muted">
             {L({
-              en: 'Question papers, solutions, notes and the magazine all have both versions.',
-              hi: 'प्रश्नपत्र, समाधान, नोट्स और पत्रिका — दोनों भाषाओं में उपलब्ध।',
+              en: 'The interface supports both languages; some existing sample content may only be available in English.',
+              hi: 'इंटरफेस दोनों भाषाओं में है; कुछ नमूना सामग्री केवल अंग्रेज़ी में हो सकती है।',
             })}
           </div>
         </Card>
 
         <Card>
-          <CardHead icon="🎨" title={L({ en: 'Appearance', hi: 'रूप-रंग' })} sub={L({ en: 'Dark mode is easier on the eyes at night', hi: 'रात में डार्क मोड आँखों के लिए बेहतर है' })} />
+          <CardHead icon="🎨" title={L({ en: 'Appearance', hi: 'रूप-रंग' })} sub={L({ en: 'Choose a theme for your workspace', hi: 'अपने कार्यक्षेत्र की थीम चुनें' })} />
           <Segmented
             options={[
               { value: 'dark', label: '🌙 Dark' },
@@ -53,21 +55,7 @@ export default function Settings() {
             value={state.settings.theme}
             onChange={(v) => updateSettings({ theme: v })}
           />
-          <div className="sep" />
-          <div className="spread">
-            <div>
-              <div className="small bold">{L({ en: 'Sound effects', hi: 'ध्वनि प्रभाव' })}</div>
-              <div className="tiny muted">{L({ en: 'Tick sound while answering', hi: 'उत्तर देते समय टिक ध्वनि' })}</div>
-            </div>
-            <Segmented
-              options={[
-                { value: 'on', label: 'On' },
-                { value: 'off', label: 'Off' },
-              ]}
-              value={state.settings.sound ? 'on' : 'off'}
-              onChange={(v) => updateSettings({ sound: v === 'on' })}
-            />
-          </div>
+
         </Card>
 
         <Card>
@@ -82,10 +70,9 @@ export default function Settings() {
           <div className="sep" />
           <div className="tiny muted">
             {L({
-              en: 'At your current pace you will finish your target exam syllabus in about',
-              hi: 'आपकी मौजूदा गति से आप अपनी लक्ष्य परीक्षा का पाठ्यक्रम लगभग इसमें पूरा करेंगे',
+              en: 'You can adjust your daily goal whenever your routine changes.',
+              hi: 'आप अपनी दिनचर्या के अनुसार दैनिक लक्ष्य कभी भी बदल सकते हैं।',
             })}{' '}
-            <span className="bold">{state.dailyGoal * 45} {L({ en: 'days', hi: 'दिन' })}</span>
           </div>
         </Card>
 
@@ -97,24 +84,18 @@ export default function Settings() {
               <span className="bold">{L({ en: 'Ready to install', hi: 'इंस्टॉल के लिए तैयार' })}</span>
             </div>
             <div className="kv">
-              <span className="k">{L({ en: 'Works offline', hi: 'ऑफ़लाइन काम करता है' })}</span>
-              <span className="bold">✓</span>
-            </div>
-            <div className="kv">
-              <span className="k">{L({ en: 'Size', hi: 'आकार' })}</span>
-              <span className="bold">&lt; 3 MB</span>
+              <span className="k">{L({ en: 'Offline access', hi: 'ऑफ़लाइन एक्सेस' })}</span>
+              <span className="bold">{L({ en: 'Previously cached pages', hi: 'पहले कैश किए पृष्ठ' })}</span>
             </div>
           </div>
           <Button
             className="block"
             style={{ marginTop: 12 }}
             onClick={() => {
-              const evt = new Event('beforeinstallprompt')
-              window.dispatchEvent(evt)
               toast(L({ en: 'Use your browser menu → "Add to Home screen"', hi: 'अपने ब्राउज़र मेन्यू → "होम स्क्रीन में जोड़ें" चुनें' }), '📲')
             }}
           >
-            📲 {L({ en: 'Install EXAMEDGE', hi: 'EXAMEDGE इंस्टॉल करें' })}
+            📲 {L({ en: 'Installation instructions', hi: 'इंस्टॉल करने के निर्देश' })}
           </Button>
         </Card>
 
@@ -124,7 +105,7 @@ export default function Settings() {
             <div className="kv"><span className="k">{L({ en: 'Attempts stored', hi: 'सहेजे गए प्रयास' })}</span><span className="bold">{state.attempts.length}</span></div>
             <div className="kv"><span className="k">{L({ en: 'Saved questions', hi: 'सहेजे गए प्रश्न' })}</span><span className="bold">{state.bookmarks.length}</span></div>
             <div className="kv"><span className="k">{L({ en: 'Notes', hi: 'नोट्स' })}</span><span className="bold">{Object.keys(state.notes).length}</span></div>
-            <div className="kv"><span className="k">{L({ en: 'Server sync', hi: 'सर्वर सिंक' })}</span><span className="bold">{L({ en: 'Not enabled', hi: 'सक्षम नहीं' })}</span></div>
+            <div className="kv"><span className="k">{L({ en: 'Server sync', hi: 'सर्वर सिंक' })}</span><span className="bold">{state.auth?.token ? L({ en: 'Future attempts when available', hi: 'उपलब्ध होने पर नए प्रयास' }) : L({ en: 'Guest: local only', hi: 'अतिथि: केवल स्थानीय' })}</span></div>
           </div>
           <div className="sep" />
           <Button variant="danger" className="block" onClick={() => setConfirmReset(true)}>
@@ -136,8 +117,8 @@ export default function Settings() {
           <CardHead icon="ℹ️" title={L({ en: 'About EXAMEDGE', hi: 'EXAMEDGE के बारे में' })} />
           <div className="stack sm">
             <div className="kv"><span className="k">{L({ en: 'Version', hi: 'संस्करण' })}</span><span className="bold">1.0.0</span></div>
-            <div className="kv"><span className="k">{L({ en: 'Exams covered', hi: 'शामिल परीक्षाएँ' })}</span><span className="bold">19</span></div>
-            <div className="kv"><span className="k">{L({ en: 'Question bank', hi: 'प्रश्न बैंक' })}</span><span className="bold">60+ curated</span></div>
+            <div className="kv"><span className="k">{L({ en: 'Exams covered', hi: 'शामिल परीक्षाएँ' })}</span><span className="bold">{EXAMS.length}</span></div>
+            <div className="kv"><span className="k">{L({ en: 'Question bank', hi: 'प्रश्न बैंक' })}</span><span className="bold">{QUESTIONS.length} {L({ en: 'existing, unverified', hi: 'मौजूदा, असत्यापित' })}</span></div>
             <div className="kv"><span className="k">{L({ en: 'Languages', hi: 'भाषाएँ' })}</span><span className="bold">English · हिंदी</span></div>
           </div>
           <div className="sep" />

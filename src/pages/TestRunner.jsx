@@ -1,17 +1,19 @@
 import React, { useEffect, useMemo, useRef, useState, useCallback } from 'react'
+import { ArrowLeft, ArrowRight, Bookmark, Clock3, Flag, PencilLine } from 'lucide-react'
 import { useStore } from '../lib/store'
 import { navigate } from '../lib/router'
 import { useL } from '../lib/i18n'
 import { examById, TOPICS } from '../data/exams'
-import { buildPaper, QUESTIONS } from '../data/questions'
+import { buildPaper, QUESTIONS, hashString } from '../data/questions'
 import { getTest } from '../lib/tests'
 import { Card, CardHead, Pill, Button, Modal, useToast } from '../components/ui'
 import { formatTime } from '../lib/utils'
+import { sessionTiming } from '../lib/timer.js'
 
 const KEYS = ['A', 'B', 'C', 'D', 'E']
 
 export default function TestRunner({ examId, testId, mode = 'mock' }) {
-  const { state, addAttempt, toggleBookmark, saveNote } = useStore()
+  const { state, submitAttempt, toggleBookmark, saveNote } = useStore()
   const L = useL()
   const toast = useToast()
   const exam = examById(examId)
@@ -22,9 +24,9 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
     let topicIds = null
     if (test.topic) topicIds = [test.topic]
     else if (test.subject) {
-      topicIds = Object.keys(TOPICS).filter((t) => TOPICS[t].subject === test.subject && testId.includes(t))
+      topicIds = Object.keys(TOPICS).filter((t) => TOPICS[t].subject === test.subject)
     }
-    return buildPaper(exam, { count: test.questions, seed: testId.length * 137 + examId.length * 31, topicIds })
+    return buildPaper(exam, { count: test.questions, seed: hashString(testId), topicIds })
   }, [exam, test, testId, examId])
 
   const [idx, setIdx] = useState(0)
@@ -34,33 +36,33 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
   const [elapsed, setElapsed] = useState(0)
   const [showConfirm, setShowConfirm] = useState(false)
   const [showNote, setShowNote] = useState(false)
+  const [showExit, setShowExit] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [revealed, setRevealed] = useState({})
   const qStart = useRef(Date.now())
   const perQ = useRef({})
-  const timerRef = useRef(null)
+  const sessionStart = useRef(Date.now())
+  const submittedOnce = useRef(false)
 
   const isPractice = mode === 'practice'
   const q = paper[idx]
 
-  // ── Timer ─────────────────────────────────────────────
+  // Use wall-clock time so a backgrounded tab cannot extend a timed session.
   useEffect(() => {
     if (submitted) return
-    timerRef.current = setInterval(() => {
-      setElapsed((e) => e + 1)
+    const limit = (test?.duration || 30) * 60
+    const tick = () => {
+      const { elapsed: seconds, remaining: left, expired } = sessionTiming(sessionStart.current, limit)
+      setElapsed(seconds)
       if (!isPractice) {
-        setRemaining((r) => {
-          if (r <= 1) {
-            clearInterval(timerRef.current)
-            setSubmitted(true)
-            return 0
-          }
-          return r - 1
-        })
+        setRemaining(left)
+        if (expired) setSubmitted(true)
       }
-    }, 1000)
-    return () => clearInterval(timerRef.current)
-  }, [isPractice, submitted])
+    }
+    tick()
+    const timer = setInterval(tick, 1000)
+    return () => clearInterval(timer)
+  }, [isPractice, submitted, test?.duration])
 
   // ── Keyboard shortcuts ───────────────────────────────
   const choose = useCallback(
@@ -72,12 +74,12 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
       perQ.current[q.id].chosen = i
       if (isPractice) setRevealed((r) => ({ ...r, [q.id]: true }))
     },
-    [q, isPractice]
+    [q, isPractice, revealed]
   )
 
   useEffect(() => {
     const onKey = (e) => {
-      if (showConfirm || showNote) return
+      if (showConfirm || showNote || showExit) return
       const k = e.key.toUpperCase()
       if (KEYS.includes(k) && k.length === 1) {
         const i = KEYS.indexOf(k)
@@ -90,7 +92,7 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [choose, paper.length, q, showConfirm, showNote])
+  }, [choose, paper.length, q, showConfirm, showNote, showExit])
 
   // track per-question time
   useEffect(() => {
@@ -106,6 +108,14 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
   }, [idx, q])
 
   const submit = useCallback(() => {
+    if (submittedOnce.current) return
+    submittedOnce.current = true
+    if (q) {
+      const rec = perQ.current[q.id] || { qid: q.id, chosen: -1, time: 0 }
+      rec.time += Math.round((Date.now() - qStart.current) / 1000)
+      perQ.current[q.id] = rec
+      qStart.current = Date.now()
+    }
     const perQuestion = paper.map((pq) => {
       const rec = perQ.current[pq.id] || {}
       return { qid: pq.id, chosen: rec.chosen != null ? rec.chosen : -1, time: rec.time || 0 }
@@ -132,7 +142,7 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
       correct,
       wrong,
       unattempted: unattended,
-      accuracy: paper.length ? correct / paper.length : 0,
+      accuracy: answered ? correct / answered : 0,
       timeSpent: isPractice ? elapsed : (test.duration * 60 - remaining),
       perQuestion,
       totalQuestions: paper.length,
@@ -140,15 +150,15 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
     submitAttempt(attempt)
     setShowConfirm(false)
     navigate(`/result/${attempt.id}`)
-  }, [paper, exam, submitAttempt, navigate, elapsed, remaining, isPractice, examId, test])
+  }, [paper, exam, submitAttempt, elapsed, remaining, isPractice, examId, test, testId, q])
 
   useEffect(() => {
-    if (submitted && !showConfirm) {
+    if (submitted && !submittedOnce.current) {
+      setShowConfirm(false)
       toast(L({ en: 'Time up — paper auto-submitted', hi: 'समय समाप्त — पेपर ऑटो-सबमिट' }), '⏱')
-      const t = setTimeout(submit, 900)
-      return () => clearTimeout(t)
+      submit()
     }
-  }, [submitted])
+  }, [submitted, submit, toast, L])
 
   if (!exam || !test || !q) {
     return (
@@ -173,29 +183,14 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
   return (
     <div>
       {/* ── Runner bar ── */}
-      <div className="runner-bar" style={{ position: 'sticky', top: 0, zIndex: 40 }}>
-        <div className="spread" style={{ padding: '11px 26px', flexWrap: 'wrap', gap: 12 }}>
-          <div style={{ minWidth: 0 }}>
-            <div className="bold small nowrap">{L({ en: test.title, hi: test.hi })}</div>
-            <div className="tiny muted">
-              {exam.name} · {isPractice ? L({ en: 'Practice mode', hi: 'प्रैक्टिस मोड' }) : L({ en: 'Mock mode', hi: 'मॉक मोड' })} · Q{idx + 1}/{paper.length}
-            </div>
-          </div>
-          <div className="row" style={{ gap: 14 }}>
-            <div className="center">
-              <div className="tiny muted">{isPractice ? L({ en: 'Elapsed', hi: 'बीता समय' }) : L({ en: 'Time left', hi: 'शेष समय' })}</div>
-              <div className={`timer ${timerClass}`}>{isPractice ? formatTime(elapsed) : formatTime(remaining)}</div>
-            </div>
-            <div className="center hide-sm">
-              <div className="tiny muted">{L({ en: 'Answered', hi: 'उत्तरित' })}</div>
-              <div className="bold num">
-                {answeredCount}/{paper.length}
-              </div>
-            </div>
-            <Button size="sm" variant="success" onClick={() => setShowConfirm(true)}>
-              {L({ en: 'Submit', hi: 'सबमिट' })}
-            </Button>
-          </div>
+      <div className="runner-bar practice-bar">
+        <div className="practice-bar-inner">
+          <button className="runner-exit" onClick={() => setShowExit(true)} aria-label={L({ en: 'Exit practice', hi: 'बाहर निकलें' })}><ArrowLeft size={17} /><span>{L({ en: 'Exit', hi: 'बाहर' })}</span></button>
+          <div className="runner-heading"><span>{isPractice ? L({ en: 'PRACTICE SESSION', hi: 'अभ्यास सत्र' }) : L({ en: 'TIMED SESSION', hi: 'समयबद्ध सत्र' })}</span><h1>{L({ en: test.title, hi: test.hi })}</h1><small>{exam.name} · {L({ en: 'Question', hi: 'प्रश्न' })} {idx + 1}/{paper.length}</small></div>
+          <div className="practice-bar-spacer" />
+          <div className="runner-clock"><Clock3 size={17} /><div><span>{isPractice ? L({ en: 'Elapsed', hi: 'बीता समय' }) : L({ en: 'Time left', hi: 'शेष समय' })}</span><strong className={timerClass}>{isPractice ? formatTime(elapsed) : formatTime(remaining)}</strong></div></div>
+          <div className="runner-answered"><span>{L({ en: 'Answered', hi: 'उत्तरित' })}</span><strong>{answeredCount}/{paper.length}</strong></div>
+          <button className="exam-primary runner-submit" onClick={() => setShowConfirm(true)}>{L({ en: 'Submit', hi: 'सबमिट' })} <ArrowRight size={15} /></button>
         </div>
       </div>
 
@@ -203,7 +198,8 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
         <div className="runner">
           {/* ── Question ── */}
           <div className="stack" style={{ gap: 16 }}>
-            <Card>
+            <div className="runner-progress"><div><strong>{L({ en: 'Your progress', hi: 'आपकी प्रगति' })}</strong><span>{answeredCount} / {paper.length} {L({ en: 'answered', hi: 'उत्तरित' })}</span></div><div className="runner-progress-track"><span style={{ width: `${paper.length ? answeredCount / paper.length * 100 : 0}%` }} /></div></div>
+            <Card className="runner-question-card">
               <div className="spread" style={{ marginBottom: 12 }}>
                 <div className="row wrap" style={{ gap: 8 }}>
                   <Pill tone="brand">Q{idx + 1}</Pill>
@@ -220,10 +216,10 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
                       toast(isBookmarked ? 'Removed from saved' : 'Saved for later', '🔖')
                     }}
                   >
-                    {isBookmarked ? '★' : '☆'}
+                    <Bookmark size={17} fill={isBookmarked ? 'currentColor' : 'none'} />
                   </button>
                   <button className="icon-btn" title="Add note" onClick={() => setShowNote(true)}>
-                    ✎
+                    <PencilLine size={17} />
                   </button>
                   <button
                     className="icon-btn"
@@ -231,7 +227,7 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
                     style={flags[q.id] ? { color: '#fbbf24', borderColor: 'rgba(245,158,11,0.5)' } : undefined}
                     onClick={() => setFlags((f) => ({ ...f, [q.id]: !f[q.id] }))}
                   >
-                    ⚑
+                    <Flag size={17} fill={flags[q.id] ? 'currentColor' : 'none'} />
                   </button>
                 </div>
               </div>
@@ -246,12 +242,12 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
                     else if (selected === i) cls = 'wrong'
                   } else if (selected === i) cls = 'sel'
                   return (
-                    <div key={i} className={`option ${cls}`} onClick={() => choose(i)}>
-                      <div className="opt-key">{KEYS[i]}</div>
-                      <div style={{ flex: 1 }}>{L(o)}</div>
+                    <button type="button" key={i} className={`option ${cls}`} onClick={() => choose(i)} aria-pressed={selected === i}>
+                      <span className="opt-key">{KEYS[i]}</span>
+                      <span style={{ flex: 1 }}>{L(o)}</span>
                       {showSolution && i === q.a && <span className="pill success">✓</span>}
                       {showSolution && selected === i && i !== q.a && <span className="pill danger">✕</span>}
-                    </div>
+                    </button>
                   )
                 })}
               </div>
@@ -282,6 +278,7 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
                         delete n[q.id]
                         return n
                       })
+                      if (perQ.current[q.id]) perQ.current[q.id].chosen = -1
                       setRevealed((r) => ({ ...r, [q.id]: false }))
                     }}
                   >
@@ -353,7 +350,7 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
             <div className="sep" />
             <div className="stack sm">
               <div className="kv">
-                <span className="k">{L({ en: 'Marking scheme', hi: 'अंकन योजना' })}</span>
+                <span className="k">{L({ en: 'Practice scoring', hi: 'अभ्यास स्कोरिंग' })}</span>
                 <span className="bold">+{exam.marksPerQ} / −{exam.negative}</span>
               </div>
               <div className="kv">
@@ -377,6 +374,14 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
           </Card>
         </div>
       </div>
+
+      <Modal open={showExit} onClose={() => setShowExit(false)} title={L({ en: 'Leave this session?', hi: 'यह सत्र छोड़ें?' })}>
+        <p className="small muted">{L({ en: 'Your answers in this session will not be saved unless you submit.', hi: 'सबमिट किए बिना आपके उत्तर सहेजे नहीं जाएँगे।' })}</p>
+        <div className="row" style={{ gap: 10, marginTop: 18 }}>
+          <Button className="block" onClick={() => setShowExit(false)}>{L({ en: 'Keep practising', hi: 'अभ्यास जारी रखें' })}</Button>
+          <Button className="block" variant="primary" onClick={() => navigate(`/exam/${exam.id}`)}>{L({ en: 'Leave session', hi: 'सत्र छोड़ें' })}</Button>
+        </div>
+      </Modal>
 
       {/* ── Submit confirm ── */}
       <Modal open={showConfirm} onClose={() => setShowConfirm(false)} title={L({ en: 'Submit your test?', hi: 'टेस्ट सबमिट करें?' })}>

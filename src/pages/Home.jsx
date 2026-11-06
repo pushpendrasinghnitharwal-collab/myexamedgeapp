@@ -1,360 +1,174 @@
 import React, { useMemo } from 'react'
-import { useStore, useAttemptStats } from '../lib/store'
+import {
+  ArrowDownRight, ArrowRight, ArrowUpRight, BarChart3, BookOpen, CalendarDays,
+  CheckCircle2, ChevronRight, Clock3, FileClock, Flame, GraduationCap, Layers3,
+  Play, Sparkles, Target, TrendingUp,
+} from 'lucide-react'
+import { useStore, useAttemptStats, useCurrentStreak } from '../lib/store'
 import { navigate } from '../lib/router'
 import { useL } from '../lib/i18n'
-import { CATEGORIES, EXAMS, examById } from '../data/exams'
+import { EXAMS, examById } from '../data/exams'
 import { TEST_CATALOGUE } from '../lib/tests'
-import { caForDate, CA_ITEMS } from '../data/currentAffairs'
-import { Button, Card, CardHead, Pill, Bar, Stat, Sparkline } from '../components/ui'
-import { Ring, Heatmap } from '../components/charts'
-import { nextLiveSlot } from '../lib/leaderboard'
-import { shortDate } from '../lib/utils'
+
+const popular = [
+  { id: 'ssc-cgl', initials: 'SSC', color: 'purple', label: 'Staff Selection' },
+  { id: 'ibps-po', initials: 'IBPS', color: 'blue', label: 'Banking' },
+  { id: 'upsc-cse', initials: 'UPSC', color: 'orange', label: 'Civil Services' },
+  { id: 'rrb-ntpc', initials: 'RRB', color: 'green', label: 'Railways' },
+]
 
 function greeting() {
-  const h = new Date().getHours()
-  if (h < 12) return { en: 'Good morning', hi: 'सुप्रभात' }
-  if (h < 17) return { en: 'Good afternoon', hi: 'नमस्कार' }
+  const hour = new Date().getHours()
+  if (hour < 12) return { en: 'Good morning', hi: 'सुप्रभात' }
+  if (hour < 17) return { en: 'Good afternoon', hi: 'नमस्कार' }
   return { en: 'Good evening', hi: 'शुभ संध्या' }
 }
 
+function SectionHead({ eyebrow, title, sub, action, onAction }) {
+  return <div className="dash-section-head"><div>{eyebrow && <div className="section-kicker">{eyebrow}</div>}<h2>{title}</h2>{sub && <p>{sub}</p>}</div>{action && <button className="text-link" onClick={onAction}>{action}<ArrowRight size={15} /></button>}</div>
+}
+
 export default function Home() {
-  const { state } = useStore()
+  const { state, updateProfile } = useStore()
   const L = useL()
   const stats = useAttemptStats()
-  const target = state.profile ? examById(state.profile.examId) : null
-  const todayCA = caForDate()
-  const slot = nextLiveSlot()
+  const streak = useCurrentStreak()
+  const target = examById(state.profile?.examId) || examById('ssc-cgl')
+  const name = state.profile?.name?.split(' ')[0] || 'Aspirant'
+  const today = new Date()
+  const todayAttempts = state.attempts.filter((attempt) => new Date(attempt.date).toDateString() === today.toDateString())
+  const todayQuestions = todayAttempts.reduce((sum, attempt) => sum + Math.max(0, (attempt.totalQuestions || 0) - (attempt.unattempted || 0)), 0)
+  const goal = Math.max(1, state.dailyGoal || 25)
+  const progress = Math.min(100, Math.round((todayQuestions / goal) * 100))
+  const answeredTotal = state.attempts.reduce((sum, attempt) => sum + Math.max(0, (attempt.totalQuestions || 0) - (attempt.unattempted || 0)), 0)
+  const available = (TEST_CATALOGUE[target.id] || []).filter((test) => test.type === 'sectional').length
 
-  const todaysTests = useMemo(() => {
-    const list = []
-    EXAMS.forEach((e) => {
-      const drill = (TEST_CATALOGUE[e.id] || []).find((t) => t.type === 'drill')
-      if (drill) list.push({ exam: e, test: drill })
-    })
-    return list
-  }, [])
+  const week = useMemo(() => Array.from({ length: 7 }, (_, index) => {
+    const date = new Date()
+    date.setDate(date.getDate() - (6 - index))
+    const count = state.attempts.filter((attempt) => new Date(attempt.date).toDateString() === date.toDateString())
+      .reduce((sum, attempt) => sum + Math.max(0, (attempt.totalQuestions || 0) - (attempt.unattempted || 0)), 0)
+    return { label: date.toLocaleDateString('en-IN', { weekday: 'short' }).slice(0, 1), count, isToday: index === 6, date: date.toDateString() }
+  }), [state.attempts])
+  const weekMax = Math.max(1, ...week.map((day) => day.count))
 
-  const weakTopics = stats.weak.slice(0, 3)
-  const recommended = useMemo(() => {
-    const out = []
-    const ids = weakTopics.map((w) => w.id)
-    EXAMS.forEach((e) => {
-      ;(TEST_CATALOGUE[e.id] || []).forEach((t) => {
-        if (t.type === 'topic' && ids.includes(t.topic)) out.push({ exam: e, test: t })
-      })
-    })
-    if (!out.length) {
-      const e = target || EXAMS[0]
-      const t = (TEST_CATALOGUE[e.id] || []).find((x) => x.type === 'full')
-      if (t) out.push({ exam: e, test: t })
-    }
-    return out.slice(0, 3)
-  }, [weakTopics, target])
-
-  const activity = useMemo(() => {
-    const days = new Array(105).fill(0)
-    state.attempts.forEach((a) => {
-      const idx = Math.floor((Date.now() - a.date) / 86400000)
-      if (idx >= 0 && idx < 105) days[104 - idx] += a.totalQuestions || 0
-    })
-    return days
-  }, [state.attempts])
-
-  const scoreTrend = useMemo(
-    () => [...state.attempts].reverse().map((a) => Math.round((a.score / Math.max(1, a.maxScore)) * 100)),
-    [state.attempts]
-  )
-
-  const dailyDone = state.attempts.filter((a) => new Date(a.date).toDateString() === new Date().toDateString())
-  const dailyQuestions = dailyDone.reduce((s, a) => s + (a.totalQuestions || 0), 0)
-  const goalPct = Math.min(1, dailyQuestions / state.dailyGoal)
-
-  const tasks = [
-    { id: 'ca', label: { en: 'Read today’s Current Affairs capsule', hi: 'आज का करेंट अफेयर्स कैप्सूल पढ़ें' }, done: !!dailyDone.length || false, link: '/current-affairs', xp: 10 },
-    { id: 'drill', label: { en: 'Complete a 10-question daily drill', hi: '10 प्रश्नों का डेली ड्रिल पूरा करें' }, done: dailyQuestions >= 10, link: '/exams', xp: 20 },
-    { id: 'weak', label: { en: 'Revise your weakest topic', hi: 'अपना सबसे कमज़ोर टॉपिक दोहराएँ' }, done: dailyQuestions >= state.dailyGoal, link: '/analytics', xp: 30 },
+  const metrics = [
+    { icon: ClipboardMetric, color: 'purple', value: stats.attempts, label: L({ en: 'Tests completed', hi: 'पूरे किए टेस्ट' }), note: L({ en: 'Every step counts', hi: 'हर कदम मायने रखता है' }) },
+    { icon: CheckCircle2, color: 'blue', value: answeredTotal, label: L({ en: 'Questions attempted', hi: 'प्रयास किए प्रश्न' }), note: L({ en: 'Keep practising', hi: 'अभ्यास जारी रखें' }) },
+    { icon: Target, color: 'peach', value: answeredTotal ? `${Math.round(stats.accuracy * 100)}%` : '—', label: L({ en: 'Overall accuracy', hi: 'कुल सटीकता' }), note: L({ en: 'Across your tests', hi: 'आपके टेस्ट में' }) },
+    { icon: Flame, color: 'mint', value: `${streak} ${streak === 1 ? 'day' : 'days'}`, label: L({ en: 'Current streak', hi: 'वर्तमान स्ट्रीक' }), note: L({ en: 'Build a habit', hi: 'आदत बनाएँ' }) },
   ]
 
   return (
-    <div className="stack" style={{ gap: 20 }}>
-      {/* ── Hero ── */}
-      <section className="hero">
-        <div className="spread" style={{ alignItems: 'flex-start', flexWrap: 'wrap', gap: 18 }}>
-          <div style={{ minWidth: 260, flex: '1 1 380px' }}>
-            <div className="eyebrow">
-              <span className="dot" />
-              {target ? `${target.name} · ${target.tier}` : L({ en: 'Welcome to EXAMEDGE', hi: 'EXAMEDGE में आपका स्वागत है' })}
-            </div>
-            <h1>
-              {L(greeting())}, {state.profile?.name?.split(' ')[0] || 'Aspirant'} 👋
-            </h1>
-            <p>
-              {L({
-                en: 'You are in the top 18% of all EXAMEDGE aspirants for your exam. Two focused sessions today will push you past 92%.',
-                hi: 'आप अपनी परीक्षा के सभी EXAMEDGE अभ्यर्थियों में शीर्ष 18% में हैं। आज दो केंद्रित सत्र आपको 92% से आगे ले जाएँगे।',
-              })}
-            </p>
-            <div className="row wrap" style={{ gap: 10 }}>
-              <Button variant="primary" size="lg" onClick={() => navigate('/exams')}>
-                🚀 {L({ en: 'Start a test', hi: 'टेस्ट शुरू करें' })}
-              </Button>
-              <Button size="lg" variant="ghost" onClick={() => navigate('/analytics')}>
-                📊 {L({ en: 'My analytics', hi: 'मेरे आँकड़े' })}
-              </Button>
-            </div>
-          </div>
+    <div className="dashboard">
+      <div className="dashboard-welcome">
+        <div>
+          <div className="section-kicker"><span className="kicker-dot" /> {L({ en: 'YOUR LEARNING SPACE', hi: 'आपकी अध्ययन की जगह' })}</div>
+          <h1>{L(greeting())}, {name}<span className="hello-spark"> ✦</span></h1>
+          <p>{L({ en: 'A little progress every day adds up. Let’s get started.', hi: 'हर दिन की छोटी प्रगति आपको आगे ले जाती है। चलिए शुरू करें।' })}</p>
+        </div>
+        <div className="welcome-date"><CalendarDays size={16} /> {today.toLocaleDateString(langFor(state.settings.lang), { weekday: 'short', day: 'numeric', month: 'short' })}</div>
+      </div>
 
-          <div className="row" style={{ gap: 18, alignItems: 'center' }}>
-            <Ring value={goalPct * 100} size={142} stroke={13} label={`${dailyQuestions}/${state.dailyGoal}`} sub={L({ en: 'daily goal', hi: 'दैनिक लक्ष्य' })} />
-            <div className="stack sm">
-              <div className="row" style={{ gap: 8 }}>
-                <span style={{ fontSize: 22 }}>🔥</span>
-                <div>
-                  <div className="bold" style={{ fontSize: 17 }}>{state.streak.count} {L({ en: 'day streak', hi: 'दिन की स्ट्रीक' })}</div>
-                  <div className="tiny muted">{L({ en: 'Personal best: 12 days', hi: 'निजी सर्वश्रेष्ठ: 12 दिन' })}</div>
-                </div>
-              </div>
-              <div className="row" style={{ gap: 8 }}>
-                <span style={{ fontSize: 22 }}>⚡</span>
-                <div>
-                  <div className="bold" style={{ fontSize: 17 }}>{state.xp} XP</div>
-                  <div className="tiny muted">{L({ en: `Level ${Math.floor(state.xp / 500) + 1} aspirant`, hi: `स्तर ${Math.floor(state.xp / 500) + 1}` })}</div>
-                </div>
-              </div>
-            </div>
+      <section className="dashboard-hero" aria-label="Preparation dashboard">
+        <div className="dashboard-hero-art" aria-hidden="true" />
+        <div className="dashboard-hero-content">
+          <div className="hero-overline"><Sparkles size={14} /> {L({ en: 'YOUR JOURNEY STARTS HERE', hi: 'आपकी यात्रा यहाँ से शुरू होती है' })}</div>
+          <h2>{L({ en: 'Big dreams. Small steps.', hi: 'बड़े सपने। छोटे कदम।' })}<br /><span>{L({ en: 'Better every day.', hi: 'हर दिन बेहतर।' })}</span></h2>
+          <p>{L({ en: 'A calmer, smarter way to prepare for the exam that matters to you.', hi: 'अपनी पसंदीदा परीक्षा की तैयारी करें, सरल और समझदारी से।' })}</p>
+          <div className="hero-actions">
+            <button className="hero-primary" onClick={() => navigate(`/exam/${target.id}`)}><Play size={15} fill="currentColor" /> {L({ en: 'Explore test series', hi: 'टेस्ट सीरीज़ देखें' })}<ArrowRight size={16} /></button>
+            <button className="hero-secondary" onClick={() => navigate(`/pyq?exam=${target.id}`)}>{L({ en: 'View PYQ library', hi: 'PYQ लाइब्रेरी देखें' })}<ArrowUpRight size={16} /></button>
           </div>
         </div>
       </section>
 
-      {/* ── Stats ── */}
-      <div className="grid g4">
-        <Card>
-          <Stat icon="📝" value={stats.attempts} label={L({ en: 'Tests attempted', hi: 'दिए गए टेस्ट' })} />
-        </Card>
-        <Card>
-          <Stat icon="🎯" value={`${Math.round(stats.accuracy * 100)}%`} label={L({ en: 'Overall accuracy', hi: 'कुल सटीकता' })} />
-        </Card>
-        <Card>
-          <Stat icon="⏱" value={`${Math.round(stats.totalTime / 60)}m`} label={L({ en: 'Time practised', hi: 'अभ्यास का समय' })} />
-        </Card>
-        <Card>
-          <Stat icon="🏅" value={stats.best ? `${stats.best.score}/${stats.best.maxScore}` : '—'} label={L({ en: 'Best score', hi: 'सर्वश्रेष्ठ अंक' })} />
-        </Card>
+      <div className="dashboard-metrics" aria-label="Your progress">
+        {metrics.map(({ icon: Icon, color, value, label, note }) => <div className="dash-metric" key={label}>
+          <div className={`metric-icon ${color}`}><Icon size={20} strokeWidth={1.8} /></div>
+          <div className="dash-metric-copy"><span>{label}</span><strong>{value}</strong><small>{note}</small></div>
+        </div>)}
       </div>
 
-      <div className="grid g-main">
-        <div className="stack" style={{ gap: 18 }}>
-          {/* Today's plan */}
-          <Card>
-            <CardHead
-              icon="🎯"
-              title={L({ en: 'Today’s plan', hi: 'आज का प्लान' })}
-              sub={L({ en: 'Complete these to keep your streak alive', hi: 'स्ट्रीक जारी रखने के लिए ये पूरे करें' })}
-              right={<Pill tone="brand">{dailyQuestions}/{state.dailyGoal} {L({ en: 'Q', hi: 'प्रश्न' })}</Pill>}
-            />
-            <div className="stack sm">
-              {tasks.map((t) => (
-                <div
-                  key={t.id}
-                  className="list-row"
-                  style={{ cursor: 'pointer' }}
-                  onClick={() => navigate(t.link)}
-                >
-                  <div
-                    style={{
-                      width: 24,
-                      height: 24,
-                      borderRadius: 8,
-                      display: 'grid',
-                      placeItems: 'center',
-                      background: t.done ? 'var(--success)' : 'var(--surface-3)',
-                      color: t.done ? '#04231a' : 'var(--muted)',
-                      fontSize: 13,
-                      fontWeight: 800,
-                      flex: '0 0 auto',
-                    }}
-                  >
-                    {t.done ? '✓' : '○'}
-                  </div>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div className="small bold" style={{ opacity: t.done ? 0.6 : 1 }}>
-                      {L(t.label)}
-                    </div>
-                  </div>
-                  <Pill tone="gold">+{t.xp} XP</Pill>
-                </div>
-              ))}
+      <div className="dashboard-columns">
+        <div className="dashboard-primary">
+          <section>
+            <SectionHead eyebrow={L({ en: 'A GOOD PLACE TO BEGIN', hi: 'यहाँ से शुरुआत करें' })} title={L({ en: 'Your preparation toolkit', hi: 'आपकी तैयारी की टूलकिट' })} sub={L({ en: 'Everything you need, all in one place.', hi: 'तैयारी की हर चीज़, एक जगह।' })} action={L({ en: 'Explore all', hi: 'सभी देखें' })} onAction={() => navigate('/exams')} />
+            <div className="toolkit-grid">
+              <button className="toolkit-card toolkit-tests" onClick={() => navigate(`/exam/${target.id}`)}>
+                <span className="toolkit-top"><span className="toolkit-icon"><Layers3 size={21} /></span><ArrowUpRight size={17} /></span>
+                <span className="toolkit-tag">{L({ en: 'PRACTISE', hi: 'अभ्यास' })}</span>
+                <strong>{L({ en: 'Test series', hi: 'टेस्ट सीरीज़' })}</strong>
+                <span className="toolkit-desc">{L({ en: 'Find mixed, subject and topic practice sets.', hi: 'मिक्स्ड, विषय और टॉपिक अभ्यास सेट खोजें।' })}</span>
+                <span className="toolkit-link">{L({ en: 'Explore tests', hi: 'टेस्ट देखें' })} <ArrowRight size={14} /></span>
+              </button>
+              <button className="toolkit-card toolkit-pyq" onClick={() => navigate(`/pyq?exam=${target.id}`)}>
+                <span className="toolkit-top"><span className="toolkit-icon"><FileClock size={21} /></span><ArrowUpRight size={17} /></span>
+                <span className="toolkit-tag">{L({ en: 'COMING SOON', hi: 'जल्द आ रहा है' })}</span>
+                <strong>{L({ en: 'Previous year papers', hi: 'पिछले वर्ष के पेपर' })}</strong>
+                <span className="toolkit-desc">{L({ en: 'A dedicated paper library for every exam.', hi: 'हर परीक्षा के लिए एक अलग पेपर लाइब्रेरी।' })}</span>
+                <span className="toolkit-link">{L({ en: 'Explore library', hi: 'लाइब्रेरी देखें' })} <ArrowRight size={14} /></span>
+              </button>
+              <button className="toolkit-card toolkit-material" onClick={() => navigate('/materials')}>
+                <span className="toolkit-top"><span className="toolkit-icon"><BookOpen size={21} /></span><ArrowUpRight size={17} /></span>
+                <span className="toolkit-tag">{L({ en: 'REVISE', hi: 'दोहराएँ' })}</span>
+                <strong>{L({ en: 'Study material', hi: 'अध्ययन सामग्री' })}</strong>
+                <span className="toolkit-desc">{L({ en: 'Revisit important concepts at your own pace.', hi: 'अपनी गति से महत्वपूर्ण कॉन्सेप्ट दोहराएँ।' })}</span>
+                <span className="toolkit-link">{L({ en: 'Browse resources', hi: 'सामग्री देखें' })} <ArrowRight size={14} /></span>
+              </button>
             </div>
-            <div style={{ marginTop: 14 }}>
-              <Bar value={goalPct} />
-            </div>
-          </Card>
+          </section>
 
-          {/* Recommended */}
-          <Card>
-            <CardHead
-              icon="🧠"
-              title={L({ en: 'Recommended for you', hi: 'आपके लिए सुझाए गए' })}
-              sub={L({ en: 'Built from your weakest topics and recent mistakes', hi: 'आपके सबसे कमज़ोर टॉपिक और हाल की गलतियों से तैयार' })}
-              right={<Button size="sm" variant="ghost" onClick={() => navigate('/exams')}>{L({ en: 'See all', hi: 'सभी देखें' })} →</Button>}
-            />
-            <div className="stack sm">
-              {recommended.map(({ exam, test }) => (
-                <div
-                  key={test.id}
-                  className="list-row"
-                  style={{ cursor: 'pointer' }}
-                  onClick={() => navigate(`/test/${exam.id}/${test.id}`)}
-                >
-                  <div className="exam-icon" style={{ fontSize: 18 }}>📝</div>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div className="small bold">{L({ en: test.title, hi: test.title })}</div>
-                    <div className="tiny muted">
-                      {test.questions} {L({ en: 'Q', hi: 'प्रश्न' })} · {test.duration} min · {L({ en: 'Avg score', hi: 'औसत अंक' })} {test.avg}
-                    </div>
-                  </div>
-                  <Pill tone={test.premium ? 'gold' : 'success'}>{test.premium ? '💎 PRO' : 'FREE'}</Pill>
-                </div>
-              ))}
-            </div>
-          </Card>
-
-          {/* Categories */}
-          <Card>
-            <CardHead
-              title={L({ en: 'Explore exam categories', hi: 'परीक्षा श्रेणियाँ देखें' })}
-              sub={L({ en: '8 categories · 19 exams · updated for 2026 patterns', hi: '8 श्रेणियाँ · 19 परीक्षाएँ · 2026 पैटर्न के अनुसार' })}
-            />
-            <div className="grid g3" style={{ gap: 12 }}>
-              {CATEGORIES.map((c) => {
-                const count = EXAMS.filter((e) => e.category === c.id).length
-                return (
-                  <div
-                    key={c.id}
-                    className="card exam-card"
-                    style={{ padding: 15, cursor: 'pointer' }}
-                    onClick={() => navigate('/exams?c=' + c.id)}
-                  >
-                    <div className="row" style={{ gap: 11 }}>
-                      <div className="exam-icon" style={{ background: `${c.color}22`, borderColor: `${c.color}55`, fontSize: 19 }}>
-                        {c.icon}
-                      </div>
-                      <div>
-                        <div className="bold small">{L({ en: c.name, hi: c.hi })}</div>
-                        <div className="tiny muted">{count} {L({ en: 'exams', hi: 'परीक्षाएँ' })}</div>
-                      </div>
-                    </div>
-                  </div>
-                )
+          <section className="popular-section">
+            <SectionHead eyebrow={L({ en: 'FIND YOUR PATH', hi: 'अपना रास्ता चुनें' })} title={L({ en: 'Explore popular exams', hi: 'लोकप्रिय परीक्षाएँ देखें' })} sub={L({ en: 'Your goal is unique. Your prep should be too.', hi: 'आपका लक्ष्य अनोखा है, तैयारी भी वैसी ही होनी चाहिए।' })} action={L({ en: 'View all exams', hi: 'सभी परीक्षाएँ' })} onAction={() => navigate('/exams')} />
+            <div className="popular-grid">
+              {popular.map((item) => {
+                const exam = examById(item.id)
+                return <button className="popular-card" key={item.id} onClick={() => navigate(`/exam/${item.id}`)}>
+                  <span className={`exam-monogram ${item.color}`}>{item.initials}</span>
+                  <span className="popular-info"><strong>{exam.name}</strong><small>{item.label}</small></span>
+                  <span className="popular-arrow"><ChevronRight size={17} /></span>
+                </button>
               })}
             </div>
-          </Card>
+          </section>
         </div>
 
-        {/* ── Sidebar column ── */}
-        <div className="stack" style={{ gap: 18 }}>
-          {/* Live test */}
-          <Card style={{ background: 'linear-gradient(160deg, rgba(244,63,94,0.16), var(--surface))', borderColor: 'rgba(244,63,94,0.3)' }}>
-            <div className="row" style={{ gap: 8, marginBottom: 8 }}>
-              <span className="pill danger"><span className="dot" style={{ width: 6, height: 6, borderRadius: 99, background: 'currentColor' }} /> LIVE</span>
-              <span className="tiny muted">{slot.label} IST</span>
+        <aside className="dashboard-secondary" aria-label="Daily progress">
+          <div className="focus-card">
+            <div className="focus-card-head"><div><span className="section-kicker">{L({ en: 'YOUR FOCUS', hi: 'आपका लक्ष्य' })}</span><h3>{L({ en: 'Daily progress', hi: 'दैनिक प्रगति' })}</h3></div><span className="focus-icon"><Target size={18} /></span></div>
+            <div className="daily-layout">
+              <div className="daily-ring" style={{ background: `conic-gradient(#6d5ce7 ${progress}%, var(--surface-3) 0)` }}><div><strong>{progress}%</strong><span>{L({ en: 'complete', hi: 'पूरा' })}</span></div></div>
+              <div className="daily-copy"><strong>{todayQuestions}<span> / {goal}</span></strong><small>{L({ en: 'questions today', hi: 'आज के प्रश्न' })}</small><p>{progress >= 100 ? L({ en: 'Goal complete. Great work!', hi: 'लक्ष्य पूरा। बहुत बढ़िया!' }) : L({ en: 'Small steps make a big difference.', hi: 'छोटे कदम बड़ा बदलाव लाते हैं।' })}</p></div>
             </div>
-            <div className="card-title">{L({ en: 'All-India Live Mock', hi: 'ऑल-इंडिया लाइव मॉक' })}</div>
-            <div className="card-sub" style={{ marginBottom: 12 }}>
-              {L({
-                en: '25 questions · 60 minutes · compete with 12,400 aspirants',
-                hi: '25 प्रश्न · 60 मिनट · 12,400 अभ्यर्थियों से मुकाबला',
-              })}
-            </div>
-            <div className="row" style={{ gap: 12, marginBottom: 12 }}>
-              <div>
-                <div className="tiny muted">{L({ en: 'Starts in', hi: 'शुरू होने में' })}</div>
-                <div className="bold num" style={{ fontSize: 20 }}>
-                  {String(Math.floor(slot.startsIn / 3600000)).padStart(2, '0')}h{' '}
-                  {String(Math.floor((slot.startsIn % 3600000) / 60000)).padStart(2, '0')}m
-                </div>
-              </div>
-              <div className="spacer" />
-              <Button variant="primary" size="sm" onClick={() => navigate('/leaderboard')}>
-                {L({ en: 'Notify me', hi: 'सूचना दें' })}
-              </Button>
-            </div>
-          </Card>
+            <button className="focus-action" onClick={() => navigate(`/exam/${target.id}`)}>{L({ en: 'Let’s practise', hi: 'अभ्यास शुरू करें' })}<ArrowRight size={15} /></button>
+          </div>
 
-          {/* Current affairs */}
-          <Card>
-            <CardHead
-              icon="📰"
-              title={L({ en: 'Current Affairs', hi: 'समसामयिक घटनाक्रम' })}
-              right={<Pill tone="brand">{L({ en: 'Today', hi: 'आज' })}</Pill>}
-            />
-            <div className="small bold" style={{ marginBottom: 6 }}>{L(todayCA.title)}</div>
-            <div className="tiny muted" style={{ lineHeight: 1.6 }}>{L(todayCA.body).slice(0, 150)}…</div>
-            <div className="row wrap" style={{ gap: 8, marginTop: 12 }}>
-              {CA_ITEMS.slice(0, 3).map((c) => (
-                <span key={c.id} className="pill">{L(c.tag)}</span>
-              ))}
+          <div className="week-card">
+            <div className="week-card-head"><div><span className="section-kicker">{L({ en: 'KEEP SHOWING UP', hi: 'नियमित बने रहें' })}</span><h3>{L({ en: 'Your week', hi: 'आपका सप्ताह' })}</h3></div><button onClick={() => navigate('/analytics')} aria-label="View analytics"><ArrowUpRight size={17} /></button></div>
+            <p>{L({ en: 'Questions attempted in the last 7 days', hi: 'पिछले 7 दिनों में प्रयास किए प्रश्न' })}</p>
+            <div className="week-chart" aria-label="Questions attempted in the last seven days">
+              {week.map((day) => <div className="week-day" key={day.date} title={`${day.date}: ${day.count} questions`}><div className="week-track"><span className={day.isToday ? 'today' : ''} style={{ height: `${day.count ? Math.max(8, (day.count / weekMax) * 100) : 0}%` }} /></div><small className={day.isToday ? 'today' : ''}>{day.label}</small></div>)}
             </div>
-            <Button variant="primary" size="sm" className="block" style={{ marginTop: 14 }} onClick={() => navigate('/current-affairs')}>
-              {L({ en: 'Read full capsule', hi: 'पूरा कैप्सूल पढ़ें' })}
-            </Button>
-          </Card>
+            {!answeredTotal && <div className="week-empty">{L({ en: 'Your activity will appear here.', hi: 'आपकी गतिविधि यहाँ दिखाई देगी।' })}</div>}
+          </div>
 
-          {/* Score trend */}
-          <Card>
-            <CardHead title={L({ en: 'Score trend', hi: 'अंक का रुझान' })} sub={L({ en: 'Last 5 attempts', hi: 'पिछले 5 प्रयास' })} />
-            {scoreTrend.length > 1 ? (
-              <>
-                <Sparkline points={scoreTrend} height={70} />
-                <div className="spread tiny muted" style={{ marginTop: 6 }}>
-                  <span>{scoreTrend[0]}%</span>
-                  <span className="bold" style={{ color: 'var(--success)' }}>
-                    +{scoreTrend[scoreTrend.length - 1] - scoreTrend[0]}% overall
-                  </span>
-                </div>
-              </>
-            ) : (
-              <div className="tiny muted">Take more tests to unlock your trend.</div>
-            )}
-          </Card>
-
-          {/* Activity */}
-          <Card>
-            <CardHead title={L({ en: 'Activity', hi: 'गतिविधि' })} sub={L({ en: 'Last 15 weeks', hi: 'पिछले 15 सप्ताह' })} />
-            <Heatmap values={activity} />
-            <div className="row tiny muted" style={{ marginTop: 10, gap: 6 }}>
-              <span>{L({ en: 'Less', hi: 'कम' })}</span>
-              {[0, 1, 2, 3, 4].map((l) => (
-                <i key={l} data-l={l} style={{ width: 11, height: 11, borderRadius: 3, background: l === 0 ? 'var(--surface-3)' : undefined }} className={`h${l}`} />
-              ))}
-              <span>{L({ en: 'More', hi: 'अधिक' })}</span>
-            </div>
-          </Card>
-
-          {/* Recent */}
-          <Card>
-            <CardHead
-              title={L({ en: 'Recent attempts', hi: 'हाल के प्रयास' })}
-              right={<Button size="sm" variant="ghost" onClick={() => navigate('/analytics')}>→</Button>}
-            />
-            {state.attempts.slice(0, 5).map((a) => {
-              const e = examById(a.examId)
-              return (
-                <div key={a.id} className="list-row" style={{ cursor: 'pointer' }} onClick={() => navigate(`/result/${a.id}`)}>
-                  <div className="avatar" style={{ background: 'var(--grad)', fontSize: 12 }}>
-                    {e?.name.slice(0, 2)}
-                  </div>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div className="small bold">{e?.name} · {a.mode === 'mock' ? 'Mock' : 'Practice'}</div>
-                    <div className="tiny muted">{shortDate(a.date)} · {a.correct}/{a.totalQuestions} correct</div>
-                  </div>
-                  <div className="bold num small">{a.score}</div>
-                </div>
-              )
-            })}
-          </Card>
-        </div>
+          <div className="target-card">
+            <div className="target-card-icon"><GraduationCap size={20} /></div>
+            <div><span>{L({ en: 'PREPARING FOR', hi: 'तैयारी कर रहे हैं' })}</span><strong>{target.name}</strong><small>{available} {L({ en: 'subject practice sets', hi: 'विषय अभ्यास सेट' })}</small></div>
+            <label className="target-select-label" title="Change target exam"><span className="sr-only">Change target exam</span><select value={target.id} onChange={(event) => updateProfile({ examId: event.target.value })}>{EXAMS.map((exam) => <option value={exam.id} key={exam.id}>{exam.name}</option>)}</select><ChevronRight size={18} /></label>
+          </div>
+        </aside>
       </div>
+      <div className="dashboard-footer"><span>EXAMEDGE <span>✦</span> {L({ en: 'MADE FOR THE JOURNEY', hi: 'आपकी यात्रा के लिए' })}</span><span>{L({ en: 'One day at a time.', hi: 'एक दिन, एक कदम।' })}</span></div>
     </div>
   )
+}
+
+function ClipboardMetric(props) {
+  return <BarChart3 {...props} />
+}
+
+function langFor(lang) {
+  return lang === 'hi' ? 'hi-IN' : 'en-IN'
 }

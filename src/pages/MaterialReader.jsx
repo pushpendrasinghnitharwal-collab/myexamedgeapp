@@ -4,11 +4,11 @@ import { SUBJECTS } from '../data/exams'
 import { navigate } from '../lib/router'
 import { useL } from '../lib/i18n'
 import { useStore } from '../lib/store'
-import { Card, CardHead, Pill, Button, useToast } from '../components/ui'
+import { Card, CardHead, Pill, Button } from '../components/ui'
+import { Info } from 'lucide-react'
 
 export default function MaterialReader({ materialId }) {
   const L = useL()
-  const toast = useToast()
   const { state, updateProfile } = useStore()
   const m = MATERIALS.find((x) => x.id === materialId)
   const [page, setPage] = useState(0)
@@ -26,10 +26,9 @@ export default function MaterialReader({ materialId }) {
     <div className="stack" style={{ gap: 18 }}>
       <div className="page-head">
         <div>
-          <div className="page-title" style={{ fontSize: 22 }}>{L(m.title)}</div>
+          <h1 className="page-title" style={{ fontSize: 22, margin: 0 }}>{L(m.title)}</h1>
           <div className="page-sub">
-            {SUBJECTS[m.subject]?.icon} {L({ en: SUBJECTS[m.subject]?.name || m.subject, hi: SUBJECTS[m.subject]?.hi || m.subject })} · {m.pages}{' '}
-            {L({ en: 'pages', hi: 'पृष्ठ' })} · {m.size}
+            {L({ en: SUBJECTS[m.subject]?.name || m.subject, hi: SUBJECTS[m.subject]?.hi || m.subject })} · {L({ en: 'Sample resource', hi: 'नमूना सामग्री' })}
           </div>
         </div>
         <div className="row wrap" style={{ gap: 8 }}>
@@ -46,6 +45,8 @@ export default function MaterialReader({ materialId }) {
         </div>
       </div>
 
+      <div className="content-disclaimer"><Info size={16} /><span>{L({ en: 'This existing sample resource has not yet been reviewed for accuracy.', hi: 'इस मौजूदा नमूना सामग्री की सटीकता की अभी समीक्षा नहीं हुई है।' })}</span></div>
+
       <div className="grid g-side">
         <div className="stack" style={{ gap: 18 }}>
           <Card>
@@ -59,10 +60,11 @@ export default function MaterialReader({ materialId }) {
             />
             <div className="stack sm">
               {m.sections.map((s, i) => (
-                <div
+                <button
+                  type="button"
                   key={s.h.en}
                   className="row"
-                  style={{ gap: 10, padding: '9px 11px', borderRadius: 11, background: 'var(--surface-2)', cursor: 'pointer', border: '1px solid var(--line)' }}
+                  style={{ gap: 10, width: '100%', padding: '9px 11px', borderRadius: 11, background: 'var(--surface-2)', color: 'var(--text)', font: 'inherit', textAlign: 'left', cursor: 'pointer', border: '1px solid var(--line)' }}
                   onClick={() => setPage(Math.floor(i / perPage))}
                 >
                   <span className="pill brand" style={{ minWidth: 26, justifyContent: 'center' }}>
@@ -70,7 +72,7 @@ export default function MaterialReader({ materialId }) {
                   </span>
                   <span className="small bold" style={{ flex: 1 }}>{L(s.h)}</span>
                   <span className="tiny muted">{s.rows.length} {L({ en: 'formulas', hi: 'सूत्र' })}</span>
-                </div>
+                </button>
               ))}
             </div>
             <div className="sep" />
@@ -85,56 +87,19 @@ export default function MaterialReader({ materialId }) {
           </Card>
 
           <Card>
-            <CardHead title={L({ en: 'Download', hi: 'डाउनलोड' })} />
-            <div className="stack sm">
-              {[
-                ['📄', 'PDF (print-ready)', '2.4 MB'],
-                ['📱', 'Mobile-friendly PDF', '1.8 MB'],
-                ['🖼️', 'Image pages (PNG)', '12 MB'],
-              ].map(([i, t, s]) => (
-                <div key={t} className="row" style={{ gap: 10 }}>
-                  <span>{i}</span>
-                  <div style={{ flex: 1 }}>
-                    <div className="small bold">{L({ en: t, hi: t })}</div>
-                    <div className="tiny muted">{s}</div>
-                  </div>
-                  <Button size="sm" onClick={() => window.print()}>
-                    ⬇
-                  </Button>
-                </div>
-              ))}
-            </div>
-            <div className="sep" />
-            <div className="tiny muted">
-              {L({
-                en: 'Downloads:',
-                hi: 'डाउनलोड:',
-              })}{' '}
-              <span className="bold">{m.downloads.toLocaleString('en-IN')}</span> · ⭐ {m.rating} ·{' '}
-              {L({ en: 'Updated', hi: 'अपडेट' })} {m.updated}
-            </div>
+            <CardHead title={L({ en: 'Print this page', hi: 'यह पृष्ठ प्रिंट करें' })} sub={L({ en: 'Use your browser to print or save this page as a PDF.', hi: 'इस पृष्ठ को प्रिंट या PDF के रूप में सेव करने के लिए ब्राउज़र का उपयोग करें।' })} />
+            <Button size="sm" onClick={() => window.print()}>{L({ en: 'Print or save as PDF', hi: 'प्रिंट या PDF सेव करें' })}</Button>
           </Card>
         </div>
 
         <div className="stack" style={{ gap: 18 }}>
           {locked ? (
             <Card style={{ textAlign: 'center', padding: 40 }}>
-              <div style={{ fontSize: 42 }}>🔒</div>
-              <h3 style={{ fontSize: 20, marginTop: 10 }}>{L({ en: 'Premium document', hi: 'प्रीमियम दस्तावेज़' })}</h3>
+              <h3 style={{ fontSize: 20, marginTop: 10 }}>{L({ en: 'Resource unavailable', hi: 'सामग्री उपलब्ध नहीं है' })}</h3>
               <p className="small muted" style={{ maxWidth: 420, margin: '10px auto 18px' }}>
-                {L({
-                  en: 'Unlock this with EXAMEDGE Premium — unlimited mocks, all premium notes, live tests and deep analytics.',
-                  hi: 'EXAMEDGE प्रीमियम के साथ अनलॉक करें — असीमित मॉक, सभी प्रीमियम नोट्स, लाइव टेस्ट और गहरा विश्लेषण।',
-                })}
+                {L({ en: 'This sample resource is not currently available to open in guest view.', hi: 'यह नमूना सामग्री अभी अतिथि दृश्य में खोलने के लिए उपलब्ध नहीं है।' })}
               </p>
-              <div className="row" style={{ justifyContent: 'center', gap: 10 }}>
-                <Button variant="primary" onClick={() => navigate('/pricing')}>
-                  💎 {L({ en: 'Upgrade', hi: 'अपग्रेड करें' })}
-                </Button>
-                <Button onClick={() => navigate('/materials')}>
-                  {L({ en: 'Browse free material', hi: 'निःशुल्क सामग्री देखें' })}
-                </Button>
-              </div>
+              <Button onClick={() => navigate('/materials')}>{L({ en: 'Back to library', hi: 'लाइब्रेरी पर वापस जाएँ' })}</Button>
             </Card>
           ) : (
             <>
@@ -166,13 +131,8 @@ export default function MaterialReader({ materialId }) {
                   sub={L({ en: 'Turn theory into marks', hi: 'सिद्धांत को अंकों में बदलें' })}
                 />
                 <div className="row wrap" style={{ gap: 10 }}>
-                  <Button variant="primary" onClick={() => navigate(`/test/${state.profile?.examId || 'ssc-cgl'}/${state.profile?.examId || 'ssc-cgl'}-topic-${m.subject}`)}>
-                    🎯 {L({ en: 'Start topic drill', hi: 'टॉपिक ड्रिल शुरू करें' })}
-                  </Button>
-                  <Button onClick={() => {
-                    toast(L({ en: 'Added to your revision list', hi: 'आपकी दोहराव सूची में जोड़ा गया' }), '🔖')
-                  }}>
-                    🔖 {L({ en: 'Save for revision', hi: 'दोहराव के लिए सहेजें' })}
+                  <Button variant="primary" onClick={() => navigate(`/exam/${state.profile?.examId || 'ssc-cgl'}?tab=sectional`)}>
+                    {L({ en: 'Browse practice sets', hi: 'अभ्यास सेट देखें' })}
                   </Button>
                 </div>
               </Card>

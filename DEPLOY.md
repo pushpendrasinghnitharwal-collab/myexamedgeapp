@@ -64,9 +64,10 @@ The app automatically calls `${VITE_API_URL}/api/...` in production and `/api` (
 
 ## Step 4 — Test the deployed app
 
-1. Open `https://examedge.vercel.app` → complete onboarding (creates a real account in Neon).
-2. Take a mock test → it submits to the API → check the **Leaderboard** page → your real server rank appears.
-3. Install as PWA: browser menu → "Install EXAMEDGE" (works on Android/desktop Chrome).
+1. Open `https://examedge.vercel.app` and explore as a guest. Onboarding creates a local profile, not a backend account.
+2. Choose an exam and try an existing practice set. Guest progress stays on that device. With an existing backend account, sign in from Profile to send future attempts to the API when it is available.
+3. The existing practice and sample resources are unverified. Exam-wise PYQ papers, five-year research and full-length mocks have not yet been added; the legacy leaderboard is simulated.
+4. Install as PWA: browser menu → "Install EXAMEDGE" (works on Android/desktop Chrome).
 
 ---
 

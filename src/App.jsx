@@ -7,6 +7,7 @@ import { ToastProvider } from './components/ui'
 import Onboarding from './pages/Onboarding'
 import Home from './pages/Home'
 import Exams from './pages/Exams'
+import PYQLibrary from './pages/PYQLibrary'
 import ExamDetail from './pages/ExamDetail'
 import TestRunner from './pages/TestRunner'
 import Results from './pages/Results'
@@ -30,18 +31,24 @@ function Router() {
   const params = new URLSearchParams(query || '')
 
   useEffect(() => {
-    const on = () => {
-      const s = document.getElementById('sw-register')
-      if (s) return
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js').catch(() => {})
-      }
+    if (!('serviceWorker' in navigator)) return
+    // Vite source modules should never be cached during development.
+    if (import.meta.env.DEV) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => registrations.forEach((registration) => registration.unregister()))
+      return
     }
-    window.addEventListener('load', on)
-    return () => window.removeEventListener('load', on)
+    const register = () => navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' }).then((registration) => registration.update()).catch(() => {})
+    if (document.readyState === 'complete') register()
+    else window.addEventListener('load', register, { once: true })
+    return () => window.removeEventListener('load', register)
   }, [])
 
-  if (!state.profile) return <Onboarding />
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', state.settings.theme)
+    document.documentElement.lang = state.settings.lang === 'hi' ? 'hi' : 'en'
+  }, [state.settings.theme, state.settings.lang])
+
+  if (key === 'onboarding') return <Onboarding />
 
   // Full-bleed test runner (has its own sticky bar)
   if (key === 'test') {
@@ -60,10 +67,13 @@ function Router() {
       page = <Home />
       break
     case 'exams':
-      page = <Exams />
+      page = <Exams initialCategory={params.get('c') || 'all'} initialQuery={params.get('q') || ''} />
       break
     case 'exam':
-      page = <ExamDetail examId={parts[1]} />
+      page = <ExamDetail examId={parts[1]} initialTab={params.get('tab') || 'overview'} />
+      break
+    case 'pyq':
+      page = <PYQLibrary selectedExam={params.get('exam')} />
       break
     case 'result':
       page = <Results attemptId={parts[1]} />
