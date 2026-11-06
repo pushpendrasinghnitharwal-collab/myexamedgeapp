@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react'
-import { ArrowRight, BookOpen, FileText, Info, LibraryBig, NotebookText, Search, X } from 'lucide-react'
+import { ArrowRight, BookOpen, FileText, Info, NotebookText, Search, X } from 'lucide-react'
 import { MATERIALS, MATERIAL_TYPES } from '../data/materials'
 import { SUBJECTS } from '../data/exams'
 import { navigate } from '../lib/router'
@@ -20,13 +20,12 @@ export default function Materials() {
 
   return (
     <div className="materials-page page-shell">
-      <div className="page-intro">
-        <div>
+      <div className="page-intro library-intro">
+        <div className="intro-copy">
           <div className="section-kicker"><span className="kicker-dot" /> {L({ en: 'YOUR STUDY LIBRARY', hi: 'आपकी अध्ययन लाइब्रेरी' })}</div>
           <h1>{L({ en: 'A little knowledge.', hi: 'थोड़ा ज्ञान।' })}<br /><span>{L({ en: 'A lot of possibility.', hi: 'बहुत सारी संभावनाएँ।' })}</span></h1>
           <p>{L({ en: 'Explore the sample resources already in your library.', hi: 'अपनी लाइब्रेरी में मौजूद नमूना सामग्री देखें।' })}</p>
         </div>
-        <div className="browse-intro-art" aria-hidden="true"><div><LibraryBig size={34} /><span>✦</span></div></div>
       </div>
 
       <div className="materials-notice"><Info size={17} /><span>{L({ en: 'These existing sample resources have not yet been reviewed for accuracy.', hi: 'इन मौजूदा नमूना संसाधनों की सटीकता की अभी समीक्षा नहीं हुई है।' })}</span></div>

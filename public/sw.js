@@ -1,9 +1,15 @@
-const CACHE = 'examedge-v4'
-const CORE = ['/', '/index.html', '/manifest.webmanifest', '/icon.svg']
+const CACHE = 'examedge-v5'
+const CORE = [
+  '/', '/index.html', '/manifest.webmanifest', '/icon.svg?v=2',
+  '/icon-192.png', '/icon-512.png', '/icon-maskable-512.png', '/icon-maskable.svg?v=2', '/apple-touch-icon.png',
+  '/images/dashboard-new.webp', '/images/exams-new.webp', '/images/library-new.webp',
+]
+// Replaced with Vite's fingerprinted app shell during production builds.
+const BUILD_ASSETS = /* __BUILD_ASSETS__ */ []
 
 self.addEventListener('install', (e) => {
   self.skipWaiting()
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(CORE)).catch(() => {}))
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll([...CORE, ...BUILD_ASSETS])).catch(() => {}))
 })
 
 self.addEventListener('activate', (e) => {
@@ -36,7 +42,10 @@ self.addEventListener('fetch', (e) => {
 
   e.respondWith(
     caches.open(CACHE).then((cache) =>
-      cache.match(req).then((hit) =>
+      // Fingerprinted build assets are the same regardless of Origin. Some
+      // hosts add `Vary: Origin`, while pre-cache requests have no Origin header;
+      // ignoring Vary here lets module scripts and fonts work offline.
+      cache.match(req, { ignoreVary: url.pathname.startsWith('/assets/') }).then((hit) =>
         hit || fetch(req).then((res) => {
           if (res && res.status === 200 && res.type === 'basic') {
             cache.put(req, res.clone())

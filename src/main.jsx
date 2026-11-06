@@ -9,8 +9,10 @@ import '@fontsource/dm-sans/700.css'
 import '@fontsource/outfit/500.css'
 import '@fontsource/outfit/600.css'
 import '@fontsource/outfit/700.css'
+import '@fontsource-variable/noto-sans-devanagari'
 import './styles.css'
 import './premium.css'
+import './refresh.css'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>

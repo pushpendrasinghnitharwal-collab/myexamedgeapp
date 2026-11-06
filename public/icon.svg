@@ -1,20 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#141C36"/>
-      <stop offset="1" stop-color="#070B18"/>
-    </linearGradient>
-    <linearGradient id="mark" x1="0" y1="1" x2="1" y2="0">
-      <stop offset="0" stop-color="#6366F1"/>
-      <stop offset="0.55" stop-color="#8B5CF6"/>
-      <stop offset="1" stop-color="#22D3EE"/>
-    </linearGradient>
-  </defs>
-  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <rect x="14" y="14" width="484" height="484" rx="100" fill="none" stroke="url(#mark)" stroke-opacity="0.35" stroke-width="6"/>
-  <path d="M112 150 L256 78 L400 150" fill="none" stroke="url(#mark)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
-  <path d="M256 128 V392" stroke="url(#mark)" stroke-width="20" stroke-linecap="round" opacity="0.5"/>
-  <path d="M188 232 H330" stroke="url(#mark)" stroke-width="20" stroke-linecap="round" opacity="0.5"/>
-  <path d="M188 312 H330" stroke="url(#mark)" stroke-width="20" stroke-linecap="round" opacity="0.5"/>
-  <path d="M300 358 L356 302 L400 346" fill="none" stroke="#22D3EE" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="512" height="512">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse"><stop stop-color="#8574f2"/><stop offset="1" stop-color="#5041b9"/></linearGradient></defs>
+  <rect width="48" height="48" rx="13" fill="url(#bg)"/>
+  <path d="M7.5 15.3c5.9-2.2 11.5-1.2 16.5 2.8v16.5c-4.9-3.6-10.4-4.5-16.5-2.4V15.3Z" fill="#fff"/>
+  <path d="M40.5 15.3c-5.9-2.2-11.5-1.2-16.5 2.8v16.5c4.9-3.6 10.4-4.5 16.5-2.4V15.3Z" fill="#fff" fill-opacity=".88"/>
+  <path d="M24 7.4 26.15 12l4.85 2.1-4.85 2.1L24 21l-2.15-4.8L17 14.1l4.85-2.1L24 7.4Z" fill="#ffd08c"/>
+  <path d="M24 21v13.3" stroke="#8272ea" stroke-width="1.5"/>
+  <path d="M12 36c4.8-.8 8.8.1 12 2.2 3.2-2.1 7.2-3 12-2.2" fill="none" stroke="#ffd08c" stroke-width="2" stroke-linecap="round"/>
 </svg>
