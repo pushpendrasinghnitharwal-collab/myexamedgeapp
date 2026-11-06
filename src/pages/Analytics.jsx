@@ -237,10 +237,10 @@ export default function Analytics() {
                 const earned = b.need(stats, state)
                 const claimed = state.achievements.includes(b.id)
                 return (
-                  <div key={b.id} className="row" style={{ gap: 11, opacity: earned ? 1 : 0.55 }}>
+                  <div key={b.id} className="row" style={{ gap: 11 }}>
                     <div
                       className="stat-ico"
-                      style={{ width: 36, height: 36, fontSize: 16, background: earned ? 'var(--grad)' : 'var(--surface-3)' }}
+                      style={{ width: 36, height: 36, fontSize: 16, opacity: earned ? 1 : 0.65, background: earned ? 'var(--grad)' : 'var(--surface-3)' }}
                     >
                       {b.icon}
                     </div>
@@ -252,7 +252,7 @@ export default function Analytics() {
                       claimed ? (
                         <Pill tone="success">✓</Pill>
                       ) : (
-                        <button className="pill gold" onClick={() => claimAchievement(b.id)} aria-label={`Claim ${L(b.name)} reward`}>+25 🪙</button>
+                        <button className="pill gold" onClick={() => claimAchievement(b.id)} aria-label={L({ en: `+25 🪙: Claim ${L(b.name)} reward`, hi: `+25 🪙: ${L(b.name)} का पुरस्कार लें` })}>+25 🪙</button>
                       )
                     ) : (
                       <Pill>🔒</Pill>

@@ -90,7 +90,7 @@ export default function Home() {
       </section>
 
       <div className="dashboard-metrics" aria-label="Your progress">
-        {metrics.map(({ icon: Icon, color, value, label, note }) => <div className="dash-metric" key={label}>
+        {metrics.map(({ icon: Icon, color, value, label, note }) => <div className={`dash-metric metric-${color}`} key={label}>
           <div className={`metric-icon ${color}`}><Icon size={20} strokeWidth={1.8} /></div>
           <div className="dash-metric-copy"><span>{label}</span><strong>{value}</strong><small>{note}</small></div>
         </div>)}
@@ -144,7 +144,7 @@ export default function Home() {
           <div className="focus-card">
             <div className="focus-card-head"><div><span className="section-kicker">{L({ en: 'YOUR FOCUS', hi: 'आपका लक्ष्य' })}</span><h3>{L({ en: 'Daily progress', hi: 'दैनिक प्रगति' })}</h3></div><span className="focus-icon"><Target size={18} /></span></div>
             <div className="daily-layout">
-              <div className="daily-ring" style={{ background: `conic-gradient(#6d5ce7 ${progress}%, var(--surface-3) 0)` }}><div><strong>{progress}%</strong><span>{L({ en: 'complete', hi: 'पूरा' })}</span></div></div>
+              <div className="daily-ring" style={{ background: `conic-gradient(var(--ee-progress) ${progress}%, var(--ee-progress-track) 0)` }}><div><strong>{progress}%</strong><span>{L({ en: 'complete', hi: 'पूरा' })}</span></div></div>
               <div className="daily-copy"><strong>{todayQuestions}<span> / {goal}</span></strong><small>{L({ en: 'questions today', hi: 'आज के प्रश्न' })}</small><p>{progress >= 100 ? L({ en: 'Goal complete. Great work!', hi: 'लक्ष्य पूरा। बहुत बढ़िया!' }) : L({ en: 'Small steps make a big difference.', hi: 'छोटे कदम बड़ा बदलाव लाते हैं।' })}</p></div>
             </div>
             <button className="focus-action" onClick={() => navigate(`/exam/${target.id}`)}>{L({ en: 'Let’s practise', hi: 'अभ्यास शुरू करें' })}<ArrowRight size={15} /></button>
