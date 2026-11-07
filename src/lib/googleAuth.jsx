@@ -14,10 +14,8 @@ export function GoogleAuthProvider({ children }) {
   const [status, setStatus] = useState(config ? 'loading' : 'unconfigured')
   const [user, setUser] = useState(null)
   const [initializationError, setInitializationError] = useState(null)
+  const [retryCount, setRetryCount] = useState(0)
   const client = useRef(null)
-  const guestGeneration = useRef(0)
-  const signInGeneration = useRef(0)
-  const pendingGuestSignOut = useRef(false)
 
   useEffect(() => {
     if (!config) return undefined
@@ -32,12 +30,6 @@ export function GoogleAuthProvider({ children }) {
       const app = appSdk.getApps().find((item) => item.name === name) || appSdk.initializeApp(config, name)
       const auth = authSdk.getAuth(app)
       client.current = { auth, authSdk }
-      // The learner can choose guest before the SDK finishes restoring a
-      // session. Honor that choice once authentication becomes available.
-      if (pendingGuestSignOut.current) {
-        pendingGuestSignOut.current = false
-        authSdk.signOut(auth).catch(() => {})
-      }
       unsubscribe = authSdk.onAuthStateChanged(auth, (firebaseUser) => {
         if (!active) return
         setUser(publicUser(firebaseUser))
@@ -59,6 +51,13 @@ export function GoogleAuthProvider({ children }) {
       if (unsubscribe) unsubscribe()
       client.current = null
     }
+  }, [retryCount])
+
+  const retry = useCallback(() => {
+    if (!config) return
+    setInitializationError(null)
+    setStatus('loading')
+    setRetryCount((count) => count + 1)
   }, [])
 
   const signIn = useCallback(async () => {
@@ -67,27 +66,12 @@ export function GoogleAuthProvider({ children }) {
       throw Object.assign(new Error('Offline'), { code: 'auth/network-request-failed' })
     }
     const { auth, authSdk } = client.current
-    const guestAtStart = guestGeneration.current
-    const attempt = ++signInGeneration.current
     const provider = new authSdk.GoogleAuthProvider()
     provider.setCustomParameters({ prompt: 'select_account' })
     // Popup sign-in is recommended by Firebase for apps hosted outside Firebase
     // when redirect flows encounter browsers that block third-party storage.
     const result = await authSdk.signInWithPopup(auth, provider)
-    if (guestAtStart !== guestGeneration.current) {
-      // The learner chose guest while the popup was open. Do not leave this
-      // late-arriving session signed in, unless a newer sign-in has started.
-      if (attempt === signInGeneration.current) await authSdk.signOut(auth)
-      return null
-    }
     return publicUser(result.user)
-  }, [])
-
-  const continueAsGuest = useCallback(() => {
-    guestGeneration.current += 1
-    const current = client.current
-    if (current) current.authSdk.signOut(current.auth).catch(() => {})
-    else pendingGuestSignOut.current = true
   }, [])
 
   const signOut = useCallback(async () => {
@@ -96,7 +80,7 @@ export function GoogleAuthProvider({ children }) {
     await authSdk.signOut(auth)
   }, [])
 
-  const value = useMemo(() => ({ configured: Boolean(config), status, user, initializationError, signIn, signOut, continueAsGuest }), [status, user, initializationError, signIn, signOut, continueAsGuest])
+  const value = useMemo(() => ({ configured: Boolean(config), status, user, initializationError, signIn, signOut, retry }), [status, user, initializationError, signIn, signOut, retry])
   return <GoogleAuthContext.Provider value={value}>{children}</GoogleAuthContext.Provider>
 }
 

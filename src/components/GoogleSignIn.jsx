@@ -15,7 +15,7 @@ export function GoogleMark() {
 }
 
 export function GoogleSignInButton({ onSuccess, className = '' }) {
-  const { status, signIn, initializationError } = useGoogleAuth()
+  const { status, signIn, initializationError, retry } = useGoogleAuth()
   const L = useL()
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState(null)
@@ -42,6 +42,7 @@ export function GoogleSignInButton({ onSuccess, className = '' }) {
         <span>{busy ? L({ en: 'Opening Google…', hi: 'Google खुल रहा है…' }) : status === 'loading' ? L({ en: 'Getting sign-in ready…', hi: 'साइन इन तैयार हो रहा है…' }) : L({ en: 'Continue with Google', hi: 'Google से आगे बढ़ें' })}</span>
       </button>
       {displayedError && <p className="google-signin-error" role="alert">{L(googleAuthError(displayedError))}</p>}
+      {status === 'error' && <button type="button" className="google-signin-retry" onClick={() => { setError(null); retry() }}>{L({ en: 'Try again', hi: 'फिर कोशिश करें' })}</button>}
     </div>
   )
 }

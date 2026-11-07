@@ -1,5 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
+import { readFile } from 'node:fs/promises'
 import { googleAuthConfig, googleAuthError } from '../src/lib/googleAuthConfig.js'
 import { completeWelcome, savedWelcomeStatus, shouldShowWelcome } from '../src/lib/welcome.js'
 
@@ -36,7 +37,7 @@ test('finishing welcome preserves practice and never overwrites a chosen profile
     attempts: [{ id: 'a1' }], bookmarks: ['q1'], notes: { q1: 'my note' },
     settings: { lang: 'hi', theme: 'dark' },
   }
-  const completed = completeWelcome(state, { displayName: ' Student Name ', email: 'student@example.com' })
+  const completed = completeWelcome(state, { uid: 'student-id', displayName: ' Student Name ', email: 'student@example.com' })
   assert.equal(completed.welcomeComplete, true)
   assert.deepEqual(completed.profile, { name: 'Student Name', isGuest: true, examId: 'rrb-ntpc' })
   for (const key of ['attempts', 'bookmarks', 'notes', 'settings']) assert.strictEqual(completed[key], state[key])
@@ -44,15 +45,24 @@ test('finishing welcome preserves practice and never overwrites a chosen profile
   assert.equal(Object.hasOwn(completed, 'email'), false)
 
   const existing = { ...state, profile: { name: 'Chosen name', isGuest: false, examId: 'upsc-cse' } }
-  assert.strictEqual(completeWelcome(existing, { displayName: 'Another name' }).profile, existing.profile)
-  assert.strictEqual(completeWelcome(state, null).profile, state.profile)
-  assert.strictEqual(completeWelcome({ ...state, welcomeComplete: true }, { displayName: 'Another name' }).profile, state.profile)
+  assert.strictEqual(completeWelcome(existing, { uid: 'student-id', displayName: 'Another name' }).profile, existing.profile)
+  assert.strictEqual(completeWelcome(state, null), state)
+  assert.strictEqual(completeWelcome(state, { displayName: 'No authenticated user' }), state)
+  assert.strictEqual(completeWelcome({ ...state, welcomeComplete: true }, { uid: 'student-id', displayName: 'Another name' }).profile, state.profile)
+})
+
+test('the first-visit screen offers Google sign-in without a guest action', async () => {
+  const welcome = await readFile('src/pages/Welcome.jsx', 'utf8')
+  assert.match(welcome, /<GoogleSignInButton\s+onSuccess=\{completeWelcome\}/)
+  assert.doesNotMatch(welcome, /continueAsGuest|welcome-guest|continue as (?:a )?guest|अतिथि/i)
 })
 
 test('Google auth failures produce understandable English and Hindi messages', () => {
   for (const code of ['auth/popup-closed-by-user', 'auth/popup-blocked', 'auth/network-request-failed', 'auth/unauthorized-domain', 'auth/operation-not-allowed', 'auth/web-storage-unsupported', 'auth/operation-not-supported-in-this-environment', 'auth/account-exists-with-different-credential', 'unknown']) {
     const result = googleAuthError(code)
     assert.ok(result.en && result.hi, `${code} is translated`)
+    assert.doesNotMatch(result.en, /guest/i)
+    assert.doesNotMatch(result.hi, /अतिथि/)
   }
   assert.match(googleAuthError('auth/network-request-failed').en, /internet/i)
   assert.match(googleAuthError('auth/popup-blocked').en, /pop-ups/i)
