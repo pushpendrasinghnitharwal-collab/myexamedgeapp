@@ -1,13 +1,11 @@
 import React from 'react'
-import { ArrowRight, BookOpen, ChartNoAxesCombined, Languages, Sparkles } from 'lucide-react'
+import { BookOpen, ChartNoAxesCombined, Languages, Sparkles } from 'lucide-react'
 import { GoogleSignInButton } from '../components/GoogleSignIn'
 import { useStore } from '../lib/store'
-import { useGoogleAuth } from '../lib/googleAuth'
 import { useL } from '../lib/i18n'
 
 export default function Welcome() {
   const { state, updateSettings, completeWelcome } = useStore()
-  const { continueAsGuest } = useGoogleAuth()
   const L = useL()
   const hindi = state.settings.lang === 'hi'
 
@@ -39,12 +37,8 @@ export default function Welcome() {
           <div className="welcome-card-icon"><Sparkles size={20} aria-hidden="true" /></div>
           <div className="welcome-card-kicker">{L({ en: 'WELCOME TO EXAMEDGE', hi: 'EXAMEDGE में आपका स्वागत है' })}</div>
           <h2 id="welcome-card-title">{L({ en: 'Let’s get started.', hi: 'चलिए शुरुआत करें।' })}</h2>
-          <p className="welcome-card-intro">{L({ en: 'Sign in with your Google account, or explore as a guest.', hi: 'Google खाते से साइन इन करें या अतिथि के रूप में ऐप देखें।' })}</p>
+          <p className="welcome-card-intro">{L({ en: 'Sign in with your Google account to start preparing.', hi: 'तैयारी शुरू करने के लिए अपने Google खाते से साइन इन करें।' })}</p>
           <GoogleSignInButton onSuccess={completeWelcome} />
-          <div className="welcome-divider"><span>{L({ en: 'OR', hi: 'या' })}</span></div>
-          <button type="button" className="welcome-guest" onClick={() => { continueAsGuest(); completeWelcome() }}>
-            {L({ en: 'Continue as guest', hi: 'अतिथि के रूप में आगे बढ़ें' })} <ArrowRight size={17} aria-hidden="true" />
-          </button>
           <div className="welcome-privacy">
             <strong>{L({ en: 'Your progress stays on this device.', hi: 'आपकी प्रगति इसी डिवाइस पर रहती है।' })}</strong>
             <span>{L({ en: 'Google sign-in does not sync your practice to other devices. Google shares your name and email for sign-in.', hi: 'Google साइन इन से अभ्यास दूसरे डिवाइस पर सिंक नहीं होता। साइन इन के लिए Google आपका नाम और ईमेल साझा करता है।' })}</span>

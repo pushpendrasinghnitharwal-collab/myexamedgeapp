@@ -9,7 +9,9 @@ export function shouldShowWelcome(configured, complete) {
 }
 
 export function completeWelcome(state, googleUser) {
-  const name = typeof googleUser?.displayName === 'string' ? googleUser.displayName.trim() : ''
+  // The first-visit screen needs the user supplied by the Google auth flow.
+  if (!googleUser?.uid) return state
+  const name = typeof googleUser.displayName === 'string' ? googleUser.displayName.trim() : ''
   const mayNameFreshProfile = !state.welcomeComplete && state.profile?.isGuest && state.profile.name === 'Aspirant'
   return {
     ...state,

@@ -41,11 +41,8 @@
 .google-signin-button:disabled { cursor: not-allowed; opacity: .72; }
 .google-mark { width: 21px; height: 21px; flex: 0 0 auto; }
 .google-signin-error { margin: 10px 0 0; color: #a42b43; font-size: 12px; line-height: 1.5; }
-.welcome-divider { display: flex; align-items: center; gap: 12px; margin: 18px 0; color: #69748b; font-size: 10px; font-weight: 800; letter-spacing: .1em; }
-.welcome-divider::before, .welcome-divider::after { content: ''; height: 1px; flex: 1; background: #e5e9f2; }
-.welcome-guest { display: flex; justify-content: center; align-items: center; gap: 9px; width: 100%; min-height: 48px; padding: 10px; border: 0; border-radius: 11px; background: #5542bc; color: #fff; font-weight: 700; font-size: 13px; cursor: pointer; }
-.welcome-guest:hover { background: #4634a3; }
-.welcome-language:focus-visible, .google-signin-button:focus-visible, .welcome-guest:focus-visible { outline: 3px solid #af9bff; outline-offset: 3px; }
+.google-signin-retry { min-height: 40px; margin-top: 3px; padding: 5px 2px; border: 0; background: transparent; color: var(--ee-link); font-size: 12px; font-weight: 700; text-decoration: underline; cursor: pointer; }
+.welcome-language:focus-visible, .google-signin-button:focus-visible, .google-signin-retry:focus-visible { outline: 3px solid #af9bff; outline-offset: 3px; }
 .welcome-privacy { display: flex; flex-direction: column; gap: 5px; margin-top: 24px; padding: 15px; border-radius: 12px; background: #f3f6fb; color: #4e5870; font-size: 11px; line-height: 1.55; }
 .welcome-privacy strong { color: #303a57; font-size: 11px; }
 .welcome-footer { padding: 0 0 23px; color: #647088; font-size: 9px; font-weight: 800; letter-spacing: .12em; }
@@ -77,8 +74,6 @@ html[data-theme='dark'] .welcome-card { background: #1c2135; border-color: #3941
 html[data-theme='dark'] .welcome-card-intro { color: #d0d4e4; }
 html[data-theme='dark'] .welcome-privacy { background: #282e45; color: #d0d4e4; }
 html[data-theme='dark'] .welcome-privacy strong { color: #f4f3ff; }
-html[data-theme='dark'] .welcome-divider { color: #c4cbdd; }
-html[data-theme='dark'] .welcome-divider::before, html[data-theme='dark'] .welcome-divider::after { background: #3d465d; }
 html[data-theme='dark'] .google-signin-error { color: #ffb6c6; }
 
 @media (max-width: 760px) {
@@ -99,5 +94,5 @@ html[data-theme='dark'] .google-signin-error { color: #ffb6c6; }
   .welcome-card { padding: 22px; }
   .welcome-brand strong { font-size: 19px; }
   .welcome-story h1 { font-size: 31px; }
-  .welcome-guest, .google-signin-button { font-size: 12px; }
+  .google-signin-button { font-size: 12px; }
 }

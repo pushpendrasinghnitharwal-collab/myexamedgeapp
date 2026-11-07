@@ -128,7 +128,7 @@ export function StoreProvider({ children }) {
       register: async (p) => {
         dispatch({ type: 'register', payload: p })
       },
-      completeWelcome: (user = null) => dispatch({ type: 'completeWelcome', payload: user }),
+      completeWelcome: (user) => dispatch({ type: 'completeWelcome', payload: user }),
       login: async (email, password) => {
         const { token, user } = await api.login(email, password)
         setSession(token, user)
