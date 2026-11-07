@@ -14,6 +14,7 @@ export function GoogleAuthProvider({ children }) {
   const [status, setStatus] = useState(config ? 'loading' : 'unconfigured')
   const [user, setUser] = useState(null)
   const [initializationError, setInitializationError] = useState(null)
+  const [signingOut, setSigningOut] = useState(false)
   const [retryCount, setRetryCount] = useState(0)
   const client = useRef(null)
 
@@ -77,10 +78,17 @@ export function GoogleAuthProvider({ children }) {
   const signOut = useCallback(async () => {
     if (!client.current) throw Object.assign(new Error('Google sign-in is not ready'), { code: 'auth/initialization-failed' })
     const { auth, authSdk } = client.current
-    await authSdk.signOut(auth)
+    setSigningOut(true)
+    try {
+      await authSdk.signOut(auth)
+      // Clear the in-memory view as well as Firebase's persisted session.
+      setUser(null)
+    } finally {
+      setSigningOut(false)
+    }
   }, [])
 
-  const value = useMemo(() => ({ configured: Boolean(config), status, user, initializationError, signIn, signOut, retry }), [status, user, initializationError, signIn, signOut, retry])
+  const value = useMemo(() => ({ configured: Boolean(config), status, user, initializationError, signingOut, signIn, signOut, retry }), [status, user, initializationError, signingOut, signIn, signOut, retry])
   return <GoogleAuthContext.Provider value={value}>{children}</GoogleAuthContext.Provider>
 }
 

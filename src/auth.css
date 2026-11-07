@@ -66,6 +66,13 @@ html[lang='hi'] .welcome-story h1 { line-height: 1.26; }
 .backend-account-content label { display: block; margin-bottom: 4px; color: var(--text-2); font-size: 12px; }
 .backend-account-fields { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; }
 .backend-account-fields > div { flex: 1 1 180px; min-width: 0; }
+.profile-page .profile-logout { color: #9c2946; border-color: #ecc5cf; background: #fff8fa; }
+.profile-page .profile-logout:hover { color: #801f38; border-color: #d898a8; background: #fff0f4; }
+.profile-logout-copy p { margin: 0 0 13px; line-height: 1.6; }
+.profile-logout-note { padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); color: var(--text-2); font-size: 13px; }
+.profile-logout-actions { margin-top: 20px; }
+html[data-theme='dark'] .profile-page .profile-logout { color: #ffb6c6; border-color: #844459; background: #3a2634; }
+html[data-theme='dark'] .profile-page .profile-logout:hover { color: #ffe1e8; background: #4a2d3d; }
 
 html[data-theme='dark'] .welcome-screen { background: radial-gradient(circle at 15% 12%, #292a4f 0, transparent 34%), radial-gradient(circle at 93% 88%, #173b3d 0, transparent 33%), #101425; color: #f4f3ff; }
 html[data-theme='dark'] .welcome-brand strong span, html[data-theme='dark'] .welcome-story h1 span, html[data-theme='dark'] .welcome-card-kicker { color: #c1b3ff; }

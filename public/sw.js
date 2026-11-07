@@ -1,4 +1,4 @@
-const CACHE = 'examedge-v10'
+const CACHE = 'examedge-v11'
 const CORE = [
   '/', '/index.html', '/manifest.webmanifest', '/icon.svg?v=2',
   '/icon-192.png', '/icon-512.png', '/icon-maskable-512.png', '/icon-maskable.svg?v=2', '/apple-touch-icon.png',
@@ -9,15 +9,18 @@ const CORE = [
 const BUILD_ASSETS = /* __BUILD_ASSETS__ */ []
 
 self.addEventListener('install', (e) => {
-  self.skipWaiting()
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll([...CORE, ...BUILD_ASSETS])).catch(() => {}))
+  // Keep the current worker if the new offline shell cannot be downloaded.
+  e.waitUntil(caches.open(CACHE).then((c) => c.addAll([...CORE, ...BUILD_ASSETS])).then(() => self.skipWaiting()))
 })
 
 self.addEventListener('activate', (e) => {
   e.waitUntil(
-    caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k.startsWith('examedge-') && k !== CACHE).map((k) => caches.delete(k)))
-    ).then(() => self.clients.claim())
+    caches.keys().then((keys) => {
+      // An already-open page can still need lazy, fingerprinted files from its
+      // original release. Keep the two previous shells until a later upgrade.
+      const previous = keys.filter((key) => key.startsWith('examedge-') && key !== CACHE).slice(-2)
+      return Promise.all(keys.filter((key) => key.startsWith('examedge-') && key !== CACHE && !previous.includes(key)).map((key) => caches.delete(key)))
+    }).then(() => self.clients.claim())
   )
 })
 
@@ -30,10 +33,12 @@ self.addEventListener('fetch', (e) => {
 
   if (req.mode === 'navigate') {
     e.respondWith(
-      fetch(req)
-        .then((res) => {
-          const copy = res.clone()
-          caches.open(CACHE).then((c) => c.put('/index.html', copy))
+      fetch(req, { cache: 'no-store' })
+        .then(async (res) => {
+          // Do not replace the offline shell with a server error or non-HTML.
+          if (res.ok && (res.headers.get('content-type') || '').includes('text/html')) {
+            try { await (await caches.open(CACHE)).put('/index.html', res.clone()) } catch { /* keep the previous shell */ }
+          }
           return res
         })
         .catch(() => caches.open(CACHE).then((cache) => cache.match('/index.html')))
@@ -42,18 +47,23 @@ self.addEventListener('fetch', (e) => {
   }
 
   e.respondWith(
-    caches.open(CACHE).then((cache) =>
-      // Fingerprinted build assets are the same regardless of Origin. Some
-      // hosts add `Vary: Origin`, while pre-cache requests have no Origin header;
-      // ignoring Vary here lets module scripts and fonts work offline.
-      cache.match(req, { ignoreVary: url.pathname.startsWith('/assets/') }).then((hit) =>
-        hit || fetch(req).then((res) => {
-          if (res && res.status === 200 && res.type === 'basic') {
-            cache.put(req, res.clone())
-          }
-          return res
-        })
-      )
-    )
+    caches.open(CACHE).then(async (cache) => {
+      // Fingerprinted files are identical regardless of Origin. Some hosts add
+      // `Vary: Origin`, so ignore it for these assets to keep offline working.
+      const fingerprinted = url.pathname.startsWith('/assets/')
+      let hit = await cache.match(req, { ignoreVary: fingerprinted })
+      if (!hit && fingerprinted) {
+        // Keep lazy imports in an older open tab working after an upgrade.
+        const previous = (await caches.keys()).filter((key) => key.startsWith('examedge-') && key !== CACHE).reverse()
+        for (const key of previous) {
+          hit = await (await caches.open(key)).match(req, { ignoreVary: true })
+          if (hit) break
+        }
+      }
+      if (hit) return hit
+      const res = await fetch(req)
+      if (res && res.status === 200 && res.type === 'basic') cache.put(req, res.clone())
+      return res
+    })
   )
 })

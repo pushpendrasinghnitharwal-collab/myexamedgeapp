@@ -260,3 +260,16 @@ html[data-theme='dark'] .insight-peach > span { background: #614334; color: #ffd
   .analytics-empty-art { display: none; }
   .analytics-empty-heading { margin-top: 26px; }
 }
+
+/* Updates wait for the learner; never interrupt a running test. */
+.app-update { position: fixed; z-index: 120; right: 20px; bottom: 20px; display: flex; align-items: center; gap: 11px; width: min(440px, calc(100vw - 32px)); padding: 12px 13px; border: 1px solid var(--line-strong); border-radius: 15px; background: var(--surface); color: var(--text); box-shadow: var(--shadow); }
+.app-update-icon { display: grid; place-items: center; flex: 0 0 auto; width: 36px; height: 36px; border-radius: 11px; color: #5044bc; background: #eeebff; }
+.app-update-copy { display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 1px; }
+.app-update-copy strong { font-size: 13px; }
+.app-update-copy span { color: var(--text-2); font-size: 11px; line-height: 1.4; }
+.app-update-action { min-height: 36px; padding: 0 12px; border: 0; border-radius: 9px; background: #4c40b5; color: white; font-size: 12px; font-weight: 700; cursor: pointer; }
+.app-update-action:hover { background: #3a3098; }
+.app-update-close { display: grid; place-items: center; flex: 0 0 auto; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 8px; background: transparent; color: var(--text-2); cursor: pointer; }
+.app-update-close:hover { background: var(--surface-2); }
+.app-update-action:focus-visible, .app-update-close:focus-visible { outline: 3px solid #af9bff; outline-offset: 2px; }
+@media (max-width: 860px) { .app-update { right: 16px; bottom: calc(80px + env(safe-area-inset-bottom)); } }

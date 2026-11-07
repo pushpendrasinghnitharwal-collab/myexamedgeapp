@@ -2,9 +2,10 @@ import React, { useEffect } from 'react'
 import { useRoute } from './lib/router'
 import { useStore } from './lib/store'
 import { useGoogleAuth } from './lib/googleAuth'
-import { shouldShowWelcome } from './lib/welcome'
+import { canRestoreGoogle, shouldShowWelcome } from './lib/welcome'
 import { Sidebar, TopBar, BottomNav } from './components/shell'
 import { ToastProvider } from './components/ui'
+import AppUpdateNotice from './components/AppUpdateNotice'
 
 import Onboarding from './pages/Onboarding'
 import Welcome from './pages/Welcome'
@@ -25,8 +26,7 @@ import Bookmarks from './pages/Bookmarks'
 import Pricing from './pages/Pricing'
 import Settings from './pages/Settings'
 
-function Router() {
-  const route = useRoute()
+function Router({ route }) {
   const { state, completeWelcome } = useStore()
   const google = useGoogleAuth()
   const [path, query] = route.path.split('?')
@@ -35,30 +35,17 @@ function Router() {
   const params = new URLSearchParams(query || '')
 
   useEffect(() => {
-    if (!('serviceWorker' in navigator)) return
-    // Vite source modules should never be cached during development.
-    if (import.meta.env.DEV) {
-      navigator.serviceWorker.getRegistrations().then((registrations) => registrations.forEach((registration) => registration.unregister()))
-      return
-    }
-    const register = () => navigator.serviceWorker.register('/sw.js', { updateViaCache: 'none' }).then((registration) => registration.update()).catch(() => {})
-    if (document.readyState === 'complete') register()
-    else window.addEventListener('load', register, { once: true })
-    return () => window.removeEventListener('load', register)
-  }, [])
-
-  useEffect(() => {
     document.documentElement.setAttribute('data-theme', state.settings.theme)
     document.documentElement.lang = state.settings.lang === 'hi' ? 'hi' : 'en'
   }, [state.settings.theme, state.settings.lang])
 
   // A restored Google session need not see the first-visit screen again.
   useEffect(() => {
-    if (!state.welcomeComplete && google.user) completeWelcome(google.user)
-  }, [state.welcomeComplete, google.user, completeWelcome])
+    if (canRestoreGoogle(state, google.user, google.signingOut)) completeWelcome(google.user)
+  }, [state.welcomeComplete, state.requiresExplicitSignIn, google.user, google.signingOut, completeWelcome])
 
   // Existing saved profiles bypass this screen. If Google is not configured,
-  // the current guest experience remains available without interruption.
+  // the current local experience remains available without interruption.
   if (shouldShowWelcome(google.configured, state.welcomeComplete)) return <Welcome />
 
   if (key === 'onboarding') return <Onboarding />
@@ -138,9 +125,11 @@ function Router() {
 }
 
 export default function App() {
+  const route = useRoute()
   return (
     <ToastProvider>
-      <Router />
+      <Router route={route} />
+      <AppUpdateNotice route={route.path} />
     </ToastProvider>
   )
 }

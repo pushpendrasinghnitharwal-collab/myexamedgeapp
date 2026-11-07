@@ -66,8 +66,8 @@ The app automatically calls `${VITE_API_URL}/api/...` in production and `/api` (
 
 ## Step 4 — Test the deployed app
 
-1. Open `https://examedge.vercel.app` and explore as a guest. Onboarding creates a local profile, not a backend account.
-2. Choose an exam and try an existing practice set. Guest progress stays on that device. With an existing backend account, sign in from Profile to send future attempts to the API when it is available.
+1. Open your deployment URL (the current app is `https://myexamedgeapp-um97.vercel.app/`). With Google configured, a new browser sees Google sign-in only; existing saved profiles remain available. See `docs/google-sign-in.md` for setup.
+2. Choose an exam and try an existing practice set. Progress stays on that device and Google sign-in does not sync it. With an existing backend account, sign in from Profile to send future attempts to the API when it is available.
 3. The existing practice and sample resources are unverified. Exam-wise PYQ papers, five-year research and full-length mocks have not yet been added; the legacy leaderboard is simulated.
 4. Install as PWA: browser menu → "Install EXAMEDGE" (works on Android/desktop Chrome).
 

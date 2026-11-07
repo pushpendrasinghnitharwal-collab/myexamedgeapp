@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, useMemo, useReducer, useCa
 import { QUESTIONS } from '../data/questions'
 import { EXAMS, TOPICS } from '../data/exams'
 import { api, getToken, getApiUser, setSession } from './api'
-import { completeWelcome, savedWelcomeStatus } from './welcome'
+import { completeWelcome, returnToSignIn, savedWelcomeStatus } from './welcome'
 import { googleAuthConfig } from './googleAuthConfig'
 
 const KEY = 'examedge.state.v1'
@@ -11,6 +11,7 @@ const initialState = {
   // If Google is not configured, a new visitor enters directly as before and
   // remains a returning visitor after sign-in is enabled in a later release.
   welcomeComplete: !googleAuthConfig(import.meta.env),
+  requiresExplicitSignIn: false,
   profile: { name: 'Aspirant', examId: 'ssc-cgl', plan: 'free', isGuest: true },
   auth: { token: getToken(), user: getApiUser() },
   attempts: [],
@@ -40,6 +41,8 @@ function reducer(state, action) {
       return { ...state, auth: { token: getToken(), user: action.payload } }
     case 'logout':
       return { ...state, auth: { token: null, user: null } }
+    case 'logoutToSignIn':
+      return returnToSignIn(state)
     case 'updateProfile':
       return { ...state, profile: { ...state.profile, ...action.payload } }
     case 'updateSettings':
@@ -82,7 +85,7 @@ function reducer(state, action) {
     case 'setGoal':
       return { ...state, dailyGoal: action.payload }
     case 'reset':
-      return { ...initialState, settings: state.settings, welcomeComplete: state.welcomeComplete }
+      return { ...initialState, settings: state.settings, welcomeComplete: state.welcomeComplete, requiresExplicitSignIn: state.requiresExplicitSignIn }
     default:
       return state
   }
@@ -138,6 +141,11 @@ export function StoreProvider({ children }) {
       logout: () => {
         setSession(null, null)
         dispatch({ type: 'logout' })
+      },
+      // Sign out on this device without clearing attempts, notes or settings.
+      logoutToSignIn: () => {
+        setSession(null, null)
+        dispatch({ type: 'logoutToSignIn' })
       },
       // Submits the attempt to the backend when logged in; always records locally too.
       submitAttempt: async (a) => {

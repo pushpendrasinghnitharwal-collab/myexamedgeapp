@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BarChart3, BookOpen, Calculator, CheckCircle2, Clock3, ClipboardList, Coins, Diamond, FileClock, Flame, GraduationCap, Newspaper, Pencil, Settings2, Target, Trophy } from 'lucide-react'
+import { BarChart3, BookOpen, Calculator, CheckCircle2, Clock3, ClipboardList, Coins, Diamond, FileClock, Flame, GraduationCap, LogOut, Newspaper, Pencil, Settings2, Target, Trophy } from 'lucide-react'
 import { useStore, useAttemptStats, useCurrentStreak } from '../lib/store'
 import { isLoggedIn } from '../lib/api'
 import { useGoogleAuth } from '../lib/googleAuth'
@@ -11,7 +11,7 @@ import { useL } from '../lib/i18n'
 import { Card, CardHead, Pill, Button, Stat, Bar, Modal } from '../components/ui'
 import { shortDate } from '../lib/utils'
 
-function AccountCard() {
+function AccountCard({ onGoogleSignOut }) {
   const { state, login, logout } = useStore()
   const google = useGoogleAuth()
   const L = useL()
@@ -19,8 +19,6 @@ function AccountCard() {
   const [password, setPassword] = useState('')
   const [msg, setMsg] = useState(null)
   const [busy, setBusy] = useState(false)
-  const [googleBusy, setGoogleBusy] = useState(false)
-  const [googleError, setGoogleError] = useState(null)
   const loggedIn = isLoggedIn() && state.auth?.user
 
   const doLogin = async () => {
@@ -34,30 +32,22 @@ function AccountCard() {
     } finally { setBusy(false) }
   }
 
-  const doGoogleSignOut = async () => {
-    setGoogleBusy(true); setGoogleError(null)
-    try { await google.signOut() }
-    catch { setGoogleError(true) }
-    finally { setGoogleBusy(false) }
-  }
-
   return (
     <Card style={{ padding: 18 }}>
       <CardHead title={L({ en: 'Account', hi: 'खाता' })} sub={L({ en: 'Manage your sign-in on this device', hi: 'इस डिवाइस पर अपना साइन इन प्रबंधित करें' })} />
       <div className="google-account">
         <div className="google-account-heading">
           <span className="google-account-icon"><GoogleMark /></span>
-          <div><strong>{L({ en: 'Google account', hi: 'Google खाता' })}</strong><small>{google.user ? L({ en: 'Signed in', hi: 'साइन इन है' }) : L({ en: 'Optional sign-in', hi: 'वैकल्पिक साइन इन' })}</small></div>
+          <div><strong>{L({ en: 'Google account', hi: 'Google खाता' })}</strong><small>{google.user ? L({ en: 'Signed in', hi: 'साइन इन है' }) : L({ en: 'Not signed in', hi: 'साइन इन नहीं है' })}</small></div>
         </div>
         {!google.configured ? (
           <p className="google-account-note">{L({ en: 'Google sign-in is not available yet.', hi: 'Google साइन इन अभी उपलब्ध नहीं है।' })}</p>
         ) : google.user ? (
           <div className="google-account-session">
             <Pill tone="ok">{google.user.email || google.user.displayName || 'Google'}</Pill>
-            <Button variant="ghost" size="sm" onClick={doGoogleSignOut} disabled={googleBusy}>{googleBusy ? '…' : L({ en: 'Sign out of Google', hi: 'Google से साइन आउट करें' })}</Button>
+            <Button variant="ghost" size="sm" onClick={onGoogleSignOut}>{L({ en: 'Sign out of Google', hi: 'Google से साइन आउट करें' })}</Button>
           </div>
         ) : <GoogleSignInButton />}
-        {googleError && <p className="google-signin-error" role="alert">{L({ en: 'Could not sign out. Please try again.', hi: 'साइन आउट नहीं हो पाया। कृपया फिर कोशिश करें।' })}</p>}
         <p className="google-account-note">{L({ en: 'Google shares your name and email for sign-in. Practice stays on this device after sign-out and does not sync. Anyone using this device can see it.', hi: 'साइन इन के लिए Google आपका नाम और ईमेल साझा करता है। साइन आउट के बाद भी अभ्यास इसी डिवाइस पर रहता है और सिंक नहीं होता। इस डिवाइस का उपयोग करने वाला कोई भी इसे देख सकता है।' })}</p>
       </div>
 
@@ -86,13 +76,39 @@ function AccountCard() {
 }
 
 export default function Profile() {
-  const { state, updateProfile } = useStore()
+  const { state, updateProfile, logout, logoutToSignIn } = useStore()
+  const google = useGoogleAuth()
   const L = useL()
   const stats = useAttemptStats()
   const streak = useCurrentStreak()
   const [editing, setEditing] = useState(false)
   const [name, setName] = useState(state.profile?.name || '')
   const [examId, setExamId] = useState(state.profile?.examId || 'ssc-cgl')
+  const [logoutOpen, setLogoutOpen] = useState(false)
+  const [logoutBusy, setLogoutBusy] = useState(false)
+  const [logoutError, setLogoutError] = useState(false)
+
+  const openLogout = () => { setLogoutError(false); setLogoutOpen(true) }
+  const closeLogout = () => { if (!logoutBusy) setLogoutOpen(false) }
+  const doLogout = async () => {
+    setLogoutBusy(true); setLogoutError(false)
+    try {
+      if (google.configured) {
+        // Do not change the welcome gate unless Firebase actually signs out.
+        await google.signOut()
+        logoutToSignIn()
+        navigate('/')
+      } else {
+        // Without Google, only the separate backend session can be signed out.
+        logout()
+        setLogoutOpen(false)
+      }
+    } catch {
+      setLogoutError(true)
+    } finally {
+      setLogoutBusy(false)
+    }
+  }
 
   const p = state.profile
   const level = Math.floor(state.xp / 500) + 1
@@ -144,6 +160,9 @@ export default function Profile() {
               <Button size="sm" onClick={() => navigate('/settings')}>
                 <Settings2 size={14} aria-hidden="true" /> {L({ en: 'Settings', hi: 'सेटिंग्स' })}
               </Button>
+              {(google.configured || state.auth?.token) && <Button size="sm" className="profile-logout" onClick={openLogout}>
+                <LogOut size={14} aria-hidden="true" /> {L({ en: 'Log out', hi: 'लॉग आउट' })}
+              </Button>}
             </div>
           </div>
         </div>
@@ -158,7 +177,7 @@ export default function Profile() {
 
       <div className="grid g-main">
         <div className="stack" style={{ gap: 18 }}>
-          <AccountCard />
+          <AccountCard onGoogleSignOut={openLogout} />
           <Card>
             <CardHead
               title={L({ en: 'Achievements', hi: 'उपलब्धियाँ' })}
@@ -270,6 +289,23 @@ export default function Profile() {
           </Card>
         </div>
       </div>
+
+      <Modal open={logoutOpen} onClose={closeLogout} title={L({ en: 'Log out?', hi: 'लॉग आउट करें?' })}>
+        <div className="profile-logout-copy">
+          <p>{google.configured
+            ? L({ en: 'You’ll be signed out of Google and any connected email/password account on this device. Sign in with Google again to continue.', hi: 'इस डिवाइस पर आपका Google और जुड़ा हुआ ईमेल/पासवर्ड खाता साइन आउट हो जाएगा। जारी रखने के लिए फिर Google से साइन इन करें।' })
+            : L({ en: 'You’ll sign out of your email/password backend account on this device.', hi: 'इस डिवाइस पर आपका ईमेल/पासवर्ड बैकएंड खाता साइन आउट हो जाएगा।' })}</p>
+          <p className="profile-logout-note">{L({ en: 'Your tests, bookmarks, notes, profile and settings stay on this device. They do not sync, and anyone using this device can see them.', hi: 'आपके टेस्ट, बुकमार्क, नोट्स, प्रोफ़ाइल और सेटिंग्स इसी डिवाइस पर रहेंगे। वे सिंक नहीं होते और इस डिवाइस का उपयोग करने वाला कोई भी उन्हें देख सकता है।' })}</p>
+          {google.configured && <p className="small muted">{L({ en: 'You’ll need an internet connection to sign in again.', hi: 'फिर साइन इन करने के लिए इंटरनेट कनेक्शन चाहिए।' })}</p>}
+          {logoutError && <p className="google-signin-error" role="alert">{L({ en: 'Could not log out. Please wait for Google sign-in to be ready and try again. Your data has not been removed.', hi: 'लॉग आउट नहीं हो पाया। Google साइन इन तैयार होने तक प्रतीक्षा करें और फिर कोशिश करें। आपका डेटा नहीं हटाया गया है।' })}</p>}
+        </div>
+        <div className="row profile-logout-actions" style={{ gap: 10 }}>
+          <Button className="block" onClick={closeLogout} disabled={logoutBusy}>{L({ en: 'Cancel', hi: 'रद्द करें' })}</Button>
+          <Button variant="primary" className="block" onClick={doLogout} disabled={logoutBusy}>
+            {logoutBusy ? L({ en: 'Logging out…', hi: 'लॉग आउट हो रहा है…' }) : L({ en: 'Log out', hi: 'लॉग आउट' })}
+          </Button>
+        </div>
+      </Modal>
 
       <Modal open={editing} onClose={() => setEditing(false)} title={L({ en: 'Edit profile', hi: 'प्रोफ़ाइल संपादित करें' })}>
         <div className="field">

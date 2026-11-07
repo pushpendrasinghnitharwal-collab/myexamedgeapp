@@ -97,7 +97,7 @@ export default function MaterialReader({ materialId }) {
             <Card style={{ textAlign: 'center', padding: 40 }}>
               <h3 style={{ fontSize: 20, marginTop: 10 }}>{L({ en: 'Resource unavailable', hi: 'सामग्री उपलब्ध नहीं है' })}</h3>
               <p className="small muted" style={{ maxWidth: 420, margin: '10px auto 18px' }}>
-                {L({ en: 'This sample resource is not currently available to open in guest view.', hi: 'यह नमूना सामग्री अभी अतिथि दृश्य में खोलने के लिए उपलब्ध नहीं है।' })}
+                {L({ en: 'This sample resource is not currently available to open on the free plan.', hi: 'यह नमूना सामग्री निःशुल्क योजना में अभी खोलने के लिए उपलब्ध नहीं है।' })}
               </p>
               <Button onClick={() => navigate('/materials')}>{L({ en: 'Back to library', hi: 'लाइब्रेरी पर वापस जाएँ' })}</Button>
             </Card>
