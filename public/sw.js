@@ -1,4 +1,4 @@
-const CACHE = 'examedge-v6'
+const CACHE = 'examedge-v7'
 const CORE = [
   '/', '/index.html', '/manifest.webmanifest', '/icon.svg?v=2',
   '/icon-192.png', '/icon-512.png', '/icon-maskable-512.png', '/icon-maskable.svg?v=2', '/apple-touch-icon.png',

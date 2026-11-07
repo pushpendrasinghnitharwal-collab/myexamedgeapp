@@ -13,6 +13,7 @@ import '@fontsource-variable/noto-sans-devanagari'
 import './styles.css'
 import './premium.css'
 import './refresh.css'
+import './catalog.css'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>

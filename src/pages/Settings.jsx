@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useStore } from '../lib/store'
 import { EXAMS } from '../data/exams'
 import { QUESTIONS } from '../data/questions'
+import { practiceExamCount } from '../lib/examCatalog'
 import { useL } from '../lib/i18n'
 import { Card, CardHead, Pill, Button, Segmented, useToast, Modal } from '../components/ui'
 
@@ -117,7 +118,8 @@ export default function Settings() {
           <CardHead icon="ℹ️" title={L({ en: 'About EXAMEDGE', hi: 'EXAMEDGE के बारे में' })} />
           <div className="stack sm">
             <div className="kv"><span className="k">{L({ en: 'Version', hi: 'संस्करण' })}</span><span className="bold">1.0.0</span></div>
-            <div className="kv"><span className="k">{L({ en: 'Exams covered', hi: 'शामिल परीक्षाएँ' })}</span><span className="bold">{EXAMS.length}</span></div>
+            <div className="kv"><span className="k">{L({ en: 'Exams listed', hi: 'सूचीबद्ध परीक्षाएँ' })}</span><span className="bold">{EXAMS.length}</span></div>
+            <div className="kv"><span className="k">{L({ en: 'Exams with practice', hi: 'अभ्यास वाली परीक्षाएँ' })}</span><span className="bold">{practiceExamCount}</span></div>
             <div className="kv"><span className="k">{L({ en: 'Question bank', hi: 'प्रश्न बैंक' })}</span><span className="bold">{QUESTIONS.length} {L({ en: 'existing, unverified', hi: 'मौजूदा, असत्यापित' })}</span></div>
             <div className="kv"><span className="k">{L({ en: 'Languages', hi: 'भाषाएँ' })}</span><span className="bold">English · हिंदी</span></div>
           </div>
