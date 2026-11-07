@@ -130,9 +130,9 @@ Output aana chahiye: `Seeded 399 questions, 19 exams` ✅
 
 ## 📱 Step 4 — App test karo aur phone mein install karo
 
-1. `https://examedge.vercel.app` kholo.
-2. Guest ke roop mein app dekho; onboarding se profile sirf is device par banti hai, Neon account nahi.
-3. Exam chuno aur existing practice set try karo. Guest progress device par rahegi. Agar pehle se backend account hai, Profile se sign in karke naye attempts available API ko bhej sakte ho.
+1. Apni deployment URL kholo (current app: `https://myexamedgeapp-um97.vercel.app/`).
+2. Google configured hone par naye browser mein **Continue with Google** se sign in karo; guest ka option nahi hai. Purane saved profiles waise hi milenge. Google setup ke liye `docs/google-sign-in.md` dekho.
+3. Exam chuno aur existing practice set try karo. Progress isi device par rahegi; Google login ise sync nahi karta. Agar pehle se backend account hai, Profile se sign in karke naye attempts available API ko bhej sakte ho.
 4. Existing practice aur sample resources verify nahi hain. Exam-wise PYQ papers, paanch saal ki research aur full-length mocks abhi add nahi hue; purana leaderboard simulated hai.
 4. **Phone mein install:** Chrome menu (⋮) → **"Install app" / "Add to Home Screen"** → EXAMEDGE ek real app ki tarah install ho jayega! 📲
 

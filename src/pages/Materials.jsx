@@ -48,7 +48,7 @@ export default function Materials() {
           const Icon = item.type === 'pdf' ? FileText : item.type === 'ebook' ? BookOpen : NotebookText
           const subjectName = L({ en: SUBJECTS[item.subject]?.name || item.subject, hi: SUBJECTS[item.subject]?.hi || item.subject })
           return <button className={`material-tile material-${item.type}`} key={item.id} onClick={() => navigate(`/material/${item.id}`)}>
-            <span className="material-tile-top"><span className="material-icon"><Icon size={21} /></span><span className="material-status">{item.free ? L({ en: 'SAMPLE RESOURCE', hi: 'नमूना सामग्री' }) : L({ en: 'GUEST PREVIEW', hi: 'अतिथि पूर्वावलोकन' })}</span></span>
+            <span className="material-tile-top"><span className="material-icon"><Icon size={21} /></span><span className="material-status">{item.free ? L({ en: 'SAMPLE RESOURCE', hi: 'नमूना सामग्री' }) : L({ en: 'RESOURCE DETAILS', hi: 'सामग्री विवरण' })}</span></span>
             <span className="material-subject-name">{subjectName}</span>
             <strong>{L(item.title)}</strong>
             <span className="material-tags">{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</span>
