@@ -30,7 +30,7 @@ test('the app icon set has usable standard and maskable PWA sizes', async () => 
 })
 
 test('decorative backgrounds resolve to optimized WebP assets', async () => {
-  const css = (await Promise.all(['src/premium.css', 'src/refresh.css', 'src/studio.css'].map((path) => readFile(path, 'utf8')))).join('\n')
+  const css = (await Promise.all(['src/premium.css', 'src/refresh.css', 'src/studio.css', 'src/auth.css'].map((path) => readFile(path, 'utf8')))).join('\n')
   const urls = [...css.matchAll(/url\(['"]?(\/images\/[^'")]+)['"]?\)/g)].map((match) => match[1])
   assert.ok(new Set(urls).size >= 3)
   for (const url of new Set(urls)) {
@@ -43,7 +43,7 @@ test('decorative backgrounds resolve to optimized WebP assets', async () => {
 
 test('decorative backgrounds are available on a fresh offline install', async () => {
   const [worker, ...styles] = await Promise.all(
-    ['public/sw.js', 'src/premium.css', 'src/refresh.css', 'src/studio.css'].map((path) => readFile(path, 'utf8'))
+    ['public/sw.js', 'src/premium.css', 'src/refresh.css', 'src/studio.css', 'src/auth.css'].map((path) => readFile(path, 'utf8'))
   )
   const urls = [...styles.join('\n').matchAll(/url\(['"]?(\/images\/[^'")]+)['"]?\)/g)].map((match) => match[1])
   assert.ok(urls.includes('/images/study-orbit.webp'))

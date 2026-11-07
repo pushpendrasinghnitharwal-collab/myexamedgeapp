@@ -2,6 +2,7 @@ import React from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App'
 import { StoreProvider } from './lib/store'
+import { GoogleAuthProvider } from './lib/googleAuth'
 import '@fontsource/dm-sans/400.css'
 import '@fontsource/dm-sans/500.css'
 import '@fontsource/dm-sans/600.css'
@@ -15,11 +16,14 @@ import './premium.css'
 import './refresh.css'
 import './catalog.css'
 import './studio.css'
+import './auth.css'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <StoreProvider>
-      <App />
+      <GoogleAuthProvider>
+        <App />
+      </GoogleAuthProvider>
     </StoreProvider>
   </React.StrictMode>
 )

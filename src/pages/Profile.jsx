@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { BarChart3, BookOpen, Calculator, CheckCircle2, Clock3, ClipboardList, Coins, Diamond, FileClock, Flame, GraduationCap, Newspaper, Pencil, Settings2, Target, Trophy } from 'lucide-react'
 import { useStore, useAttemptStats, useCurrentStreak } from '../lib/store'
-import { api, isLoggedIn } from '../lib/api'
+import { isLoggedIn } from '../lib/api'
+import { useGoogleAuth } from '../lib/googleAuth'
+import { GoogleMark, GoogleSignInButton } from '../components/GoogleSignIn'
 import { EXAMS, examById, CATEGORIES } from '../data/exams'
 import { practiceSetCount } from '../lib/examCatalog'
 import { navigate } from '../lib/router'
@@ -11,47 +13,74 @@ import { shortDate } from '../lib/utils'
 
 function AccountCard() {
   const { state, login, logout } = useStore()
+  const google = useGoogleAuth()
   const L = useL()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [msg, setMsg] = useState(null)
   const [busy, setBusy] = useState(false)
+  const [googleBusy, setGoogleBusy] = useState(false)
+  const [googleError, setGoogleError] = useState(null)
   const loggedIn = isLoggedIn() && state.auth?.user
 
   const doLogin = async () => {
     setBusy(true); setMsg(null)
     try {
       const u = await login(email.trim(), password)
-      setMsg({ ok: true, text: `Signed in as ${u.name} — future attempts are sent when the backend is available` })
+      setPassword('')
+      setMsg({ ok: true, text: L({ en: `Signed in as ${u.name}. Future attempts are sent when the backend is available.`, hi: `${u.name} के रूप में साइन इन हुआ। उपलब्ध होने पर नए प्रयास बैकएंड को भेजे जाएँगे।` }) })
     } catch (e) {
       setMsg({ ok: false, text: e.message })
     } finally { setBusy(false) }
   }
 
+  const doGoogleSignOut = async () => {
+    setGoogleBusy(true); setGoogleError(null)
+    try { await google.signOut() }
+    catch { setGoogleError(true) }
+    finally { setGoogleBusy(false) }
+  }
+
   return (
     <Card style={{ padding: 18 }}>
-      <CardHead title={L({ en: 'Account', hi: 'खाता' })} sub={L({ en: 'Sign in to send future attempts to an available backend', hi: 'नए प्रयास उपलब्ध बैकएंड पर भेजने के लिए साइन इन करें' })} />
-      {loggedIn ? (
-        <div className="row wrap" style={{ gap: 10, alignItems: 'center' }}>
-          <Pill tone="ok">{state.auth.user.email}</Pill>
-          <span className="muted" style={{ fontSize: 13 }}>{L({ en: 'Plan', hi: 'योजना' })}: {state.auth.user.plan} · XP {state.auth.user.xp} · 🔥 {state.auth.user.streak}</span>
-          <Button variant="ghost" onClick={logout}>{L({ en: 'Sign out', hi: 'साइन आउट' })}</Button>
+      <CardHead title={L({ en: 'Account', hi: 'खाता' })} sub={L({ en: 'Manage your sign-in on this device', hi: 'इस डिवाइस पर अपना साइन इन प्रबंधित करें' })} />
+      <div className="google-account">
+        <div className="google-account-heading">
+          <span className="google-account-icon"><GoogleMark /></span>
+          <div><strong>{L({ en: 'Google account', hi: 'Google खाता' })}</strong><small>{google.user ? L({ en: 'Signed in', hi: 'साइन इन है' }) : L({ en: 'Optional sign-in', hi: 'वैकल्पिक साइन इन' })}</small></div>
         </div>
-      ) : (
-        <div className="stack" style={{ gap: 10 }}>
-          <div className="row wrap" style={{ gap: 10 }}>
-            <input className="input" style={{ flex: '1 1 200px' }} placeholder="email — e.g. 9876543210@examedge.in"
-              value={email} onChange={(e) => setEmail(e.target.value)} />
-            <input className="input" type="password" style={{ flex: '1 1 160px' }} placeholder={L({ en: 'password', hi: 'पासवर्ड' })}
-              value={password} onChange={(e) => setPassword(e.target.value)} />
-            <Button onClick={doLogin} disabled={busy || !email || !password}>{busy ? '…' : L({ en: 'Sign in', hi: 'साइन इन' })}</Button>
+        {!google.configured ? (
+          <p className="google-account-note">{L({ en: 'Google sign-in is not available yet.', hi: 'Google साइन इन अभी उपलब्ध नहीं है।' })}</p>
+        ) : google.user ? (
+          <div className="google-account-session">
+            <Pill tone="ok">{google.user.email || google.user.displayName || 'Google'}</Pill>
+            <Button variant="ghost" size="sm" onClick={doGoogleSignOut} disabled={googleBusy}>{googleBusy ? '…' : L({ en: 'Sign out of Google', hi: 'Google से साइन आउट करें' })}</Button>
           </div>
-          {msg && <div style={{ fontSize: 13, color: msg.ok ? 'var(--ok)' : 'var(--bad)' }}>{msg.text}</div>}
-          <div className="muted" style={{ fontSize: 12 }}>
-            {L({ en: 'Your progress is saved on this device. Sign in with an existing account to use the connected backend.', hi: 'आपकी प्रगति इस डिवाइस पर सहेजी जाती है। मौजूदा खाते से साइन इन कर सकते हैं।' })}
-          </div>
+        ) : <GoogleSignInButton />}
+        {googleError && <p className="google-signin-error" role="alert">{L({ en: 'Could not sign out. Please try again.', hi: 'साइन आउट नहीं हो पाया। कृपया फिर कोशिश करें।' })}</p>}
+        <p className="google-account-note">{L({ en: 'Google shares your name and email for sign-in. Practice stays on this device after sign-out and does not sync. Anyone using this device can see it.', hi: 'साइन इन के लिए Google आपका नाम और ईमेल साझा करता है। साइन आउट के बाद भी अभ्यास इसी डिवाइस पर रहता है और सिंक नहीं होता। इस डिवाइस का उपयोग करने वाला कोई भी इसे देख सकता है।' })}</p>
+      </div>
+
+      <details className="backend-account">
+        <summary>{L({ en: 'Existing email/password backend account', hi: 'मौजूदा ईमेल/पासवर्ड बैकएंड खाता' })}{loggedIn ? ` · ${state.auth.user.email}` : ''}</summary>
+        <div className="backend-account-content stack" style={{ gap: 10 }}>
+          <p className="google-account-note">{L({ en: 'This is separate from Google sign-in. A connected backend can receive future attempts.', hi: 'यह Google साइन इन से अलग है। जुड़ा हुआ बैकएंड नए प्रयास प्राप्त कर सकता है।' })}</p>
+          {loggedIn ? (
+            <div className="row wrap" style={{ gap: 10, alignItems: 'center' }}>
+              <Pill tone="ok">{state.auth.user.email}</Pill>
+              <span className="muted" style={{ fontSize: 13 }}>{L({ en: 'Plan', hi: 'योजना' })}: {state.auth.user.plan} · XP {state.auth.user.xp}</span>
+              <Button variant="ghost" onClick={logout}>{L({ en: 'Sign out of backend', hi: 'बैकएंड से साइन आउट करें' })}</Button>
+            </div>
+          ) : (
+            <div className="backend-account-fields">
+              <div><label htmlFor="backend-email">{L({ en: 'Email', hi: 'ईमेल' })}</label><input id="backend-email" className="input" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} /></div>
+              <div><label htmlFor="backend-password">{L({ en: 'Password', hi: 'पासवर्ड' })}</label><input id="backend-password" className="input" type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} /></div>
+              <Button onClick={doLogin} disabled={busy || !email || !password}>{busy ? '…' : L({ en: 'Sign in', hi: 'साइन इन' })}</Button>
+            </div>
+          )}
+          {msg && <div role="status" style={{ fontSize: 13, color: msg.ok ? 'var(--ok)' : 'var(--bad)' }}>{msg.text}</div>}
         </div>
-      )}
+      </details>
     </Card>
   )
 }

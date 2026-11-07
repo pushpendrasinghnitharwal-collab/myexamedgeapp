@@ -1,5 +1,7 @@
 # 🎓 EXAMEDGE ko LIVE kaise kare — Bilkul Beginner Guide (Hinglish)
 
+> Google sign-in aur live Vercel app ke liye: **[Google sign-in setup guide](docs/google-sign-in.md)**. Google login, neeche wale optional email/password backend se alag hai.
+
 > **Chinta mat kar, kuch nahi aata toh bhi chalega.** Ye guide maine aise likhi hai jaise tumhe pehli baar samjhata hoon. Har step mein bataaya hai: **kya karna hai** + **woh kya hai** + **kyun karte hain**.
 
 ---

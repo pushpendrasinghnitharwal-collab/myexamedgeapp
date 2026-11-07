@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react'
 import { useRoute } from './lib/router'
 import { useStore } from './lib/store'
+import { useGoogleAuth } from './lib/googleAuth'
+import { shouldShowWelcome } from './lib/welcome'
 import { Sidebar, TopBar, BottomNav } from './components/shell'
 import { ToastProvider } from './components/ui'
 
 import Onboarding from './pages/Onboarding'
+import Welcome from './pages/Welcome'
 import Home from './pages/Home'
 import Exams from './pages/Exams'
 import PYQLibrary from './pages/PYQLibrary'
@@ -24,7 +27,8 @@ import Settings from './pages/Settings'
 
 function Router() {
   const route = useRoute()
-  const { state } = useStore()
+  const { state, completeWelcome } = useStore()
+  const google = useGoogleAuth()
   const [path, query] = route.path.split('?')
   const parts = path.split('/').filter(Boolean)
   const key = parts[0] || 'home'
@@ -47,6 +51,15 @@ function Router() {
     document.documentElement.setAttribute('data-theme', state.settings.theme)
     document.documentElement.lang = state.settings.lang === 'hi' ? 'hi' : 'en'
   }, [state.settings.theme, state.settings.lang])
+
+  // A restored Google session need not see the first-visit screen again.
+  useEffect(() => {
+    if (!state.welcomeComplete && google.user) completeWelcome(google.user)
+  }, [state.welcomeComplete, google.user, completeWelcome])
+
+  // Existing saved profiles bypass this screen. If Google is not configured,
+  // the current guest experience remains available without interruption.
+  if (shouldShowWelcome(google.configured, state.welcomeComplete)) return <Welcome />
 
   if (key === 'onboarding') return <Onboarding />
 

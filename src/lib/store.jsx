@@ -2,10 +2,15 @@ import React, { createContext, useContext, useEffect, useMemo, useReducer, useCa
 import { QUESTIONS } from '../data/questions'
 import { EXAMS, TOPICS } from '../data/exams'
 import { api, getToken, getApiUser, setSession } from './api'
+import { completeWelcome, savedWelcomeStatus } from './welcome'
+import { googleAuthConfig } from './googleAuthConfig'
 
 const KEY = 'examedge.state.v1'
 
 const initialState = {
+  // If Google is not configured, a new visitor enters directly as before and
+  // remains a returning visitor after sign-in is enabled in a later release.
+  welcomeComplete: !googleAuthConfig(import.meta.env),
   profile: { name: 'Aspirant', examId: 'ssc-cgl', plan: 'free', isGuest: true },
   auth: { token: getToken(), user: getApiUser() },
   attempts: [],
@@ -29,6 +34,8 @@ function reducer(state, action) {
       return { ...state, ...action.payload }
     case 'register':
       return { ...state, profile: { ...action.payload, joinedAt: Date.now(), plan: 'free' }, dailyGoal: action.payload.goal || state.dailyGoal }
+    case 'completeWelcome':
+      return completeWelcome(state, action.payload)
     case 'session':
       return { ...state, auth: { token: getToken(), user: action.payload } }
     case 'logout':
@@ -75,7 +82,7 @@ function reducer(state, action) {
     case 'setGoal':
       return { ...state, dailyGoal: action.payload }
     case 'reset':
-      return { ...initialState, settings: state.settings }
+      return { ...initialState, settings: state.settings, welcomeComplete: state.welcomeComplete }
     default:
       return state
   }
@@ -90,9 +97,11 @@ function loadState() {
     const raw = localStorage.getItem(KEY)
     if (!raw) return initialState
     const saved = JSON.parse(raw)
+    if (!saved || typeof saved !== 'object' || Array.isArray(saved)) return initialState
     return {
       ...initialState,
       ...saved,
+      welcomeComplete: savedWelcomeStatus(saved),
       profile: saved.profile || initialState.profile,
       settings: { ...initialState.settings, ...saved.settings },
       streak: { ...initialState.streak, ...saved.streak },
@@ -119,6 +128,7 @@ export function StoreProvider({ children }) {
       register: async (p) => {
         dispatch({ type: 'register', payload: p })
       },
+      completeWelcome: (user = null) => dispatch({ type: 'completeWelcome', payload: user }),
       login: async (email, password) => {
         const { token, user } = await api.login(email, password)
         setSession(token, user)
