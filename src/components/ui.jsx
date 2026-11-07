@@ -139,7 +139,7 @@ export function Segmented({ options, value, onChange }) {
   return (
     <div className="seg">
       {options.map((o) => (
-        <button key={o.value} className={value === o.value ? 'on' : ''} onClick={() => onChange(o.value)}>
+        <button key={o.value} className={value === o.value ? 'on' : ''} aria-pressed={value === o.value} onClick={() => onChange(o.value)}>
           {o.label}
         </button>
       ))}

@@ -82,30 +82,46 @@ export default function Home() {
         <div className="welcome-date"><CalendarDays size={16} /> {today.toLocaleDateString(langFor(state.settings.lang), { weekday: 'short', day: 'numeric', month: 'short' })}</div>
       </div>
 
-      <section className="dashboard-hero" aria-label="Preparation dashboard">
-        <div className="dashboard-hero-art" aria-hidden="true" />
-        <div className="dashboard-hero-content">
-          <div className="hero-overline"><Sparkles size={14} /> {L({ en: 'YOUR NEXT CHAPTER STARTS HERE', hi: 'आपका अगला कदम यहाँ से' })}</div>
-          <h2>{L({ en: 'Your ambition.', hi: 'आपके सपने।' })}<br /><span>{L({ en: 'Your edge.', hi: 'आपकी पहचान।' })}</span></h2>
-          <p>{L({ en: 'A little focus today. A future full of possibility.', hi: 'आज थोड़ी एकाग्रता। कल अपार संभावनाएँ।' })}</p>
-          <div className="hero-actions">
-            <button className="hero-primary" onClick={() => preview ? beginPractice() : navigate(`/exam/${target.id}`)}>{preview ? <Play size={15} fill="currentColor" /> : <BookOpen size={15} />} {preview ? L({ en: 'Start practising', hi: 'अभ्यास शुरू करें' }) : L({ en: 'View exam details', hi: 'परीक्षा विवरण देखें' })}<ArrowRight size={16} /></button>
-            <button className="hero-secondary" onClick={() => navigate(`/pyq?exam=${target.id}`)}>{L({ en: 'View PYQ library', hi: 'PYQ लाइब्रेरी देखें' })}<ArrowUpRight size={16} /></button>
+      <div className="dashboard-stage">
+        <section className="dashboard-hero" aria-label={L({ en: 'Preparation dashboard', hi: 'तैयारी डैशबोर्ड' })}>
+          <div className="dashboard-hero-art" aria-hidden="true" />
+          <div className="dashboard-hero-content">
+            <div className="hero-overline"><Sparkles size={14} /> {L({ en: 'YOUR NEXT CHAPTER STARTS HERE', hi: 'आपका अगला कदम यहाँ से' })}</div>
+            <h2>{L({ en: 'Your ambition.', hi: 'आपके सपने।' })}<br /><span>{L({ en: 'Your edge.', hi: 'आपकी पहचान।' })}</span></h2>
+            <p>{L({ en: 'A little focus today. A future full of possibility.', hi: 'आज थोड़ी एकाग्रता। कल अपार संभावनाएँ।' })}</p>
+            <div className="hero-actions">
+              <button className="hero-primary" onClick={() => preview ? beginPractice() : navigate(`/exam/${target.id}`)}>{preview ? <Play size={15} fill="currentColor" /> : <BookOpen size={15} />} {preview ? L({ en: 'Start practising', hi: 'अभ्यास शुरू करें' }) : L({ en: 'View exam details', hi: 'परीक्षा विवरण देखें' })}<ArrowRight size={16} /></button>
+              <button className="hero-secondary" onClick={() => navigate(`/pyq?exam=${target.id}`)}>{L({ en: 'View PYQ library', hi: 'PYQ लाइब्रेरी देखें' })}<ArrowUpRight size={16} /></button>
+            </div>
           </div>
-        </div>
-        <button className="hero-goal" onClick={() => navigate(`/exam/${target.id}`)}>
-          <span className="hero-goal-icon"><Target size={18} /></span>
-          <span><small>{L({ en: 'YOUR TARGET', hi: 'आपका लक्ष्य' })}</small><strong>{target.name}</strong></span>
-          <ArrowUpRight size={16} />
-        </button>
-      </section>
-
-      <div className="dashboard-metrics" aria-label="Your progress">
-        {metrics.map(({ icon: Icon, color, value, label, note }) => <div className={`dash-metric metric-${color}`} key={label}>
-          <div className={`metric-icon ${color}`}><Icon size={20} strokeWidth={1.8} /></div>
-          <div className="dash-metric-copy"><span>{label}</span><strong>{value}</strong><small>{note}</small></div>
-        </div>)}
+          <button className="hero-goal" onClick={() => navigate(`/exam/${target.id}`)}>
+            <span className="hero-goal-icon"><Target size={18} /></span>
+            <span><small>{L({ en: 'YOUR TARGET', hi: 'आपका लक्ष्य' })}</small><strong>{target.name}</strong></span>
+            <ArrowUpRight size={16} />
+          </button>
+        </section>
+        <aside className="focus-card" aria-label={L({ en: 'Daily progress', hi: 'दैनिक प्रगति' })}>
+          <div className="focus-card-head"><div><span className="section-kicker">{L({ en: 'YOUR FOCUS', hi: 'आपका लक्ष्य' })}</span><h3>{L({ en: 'Daily progress', hi: 'दैनिक प्रगति' })}</h3></div><span className="focus-icon"><Target size={18} /></span></div>
+          <div className="daily-layout">
+            <div className="daily-ring" style={{ background: `conic-gradient(var(--ee-progress) ${progress}%, var(--ee-progress-track) 0)` }}><div><strong>{progress}%</strong><span>{L({ en: 'complete', hi: 'पूरा' })}</span></div></div>
+            <div className="daily-copy"><strong>{todayQuestions}<span> / {goal}</span></strong><small>{L({ en: 'questions today', hi: 'आज के प्रश्न' })}</small><p>{progress >= 100 ? L({ en: 'Goal complete. Great work!', hi: 'लक्ष्य पूरा। बहुत बढ़िया!' }) : L({ en: 'Small steps make a big difference.', hi: 'छोटे कदम बड़ा बदलाव लाते हैं।' })}</p></div>
+          </div>
+          <button className="focus-action" onClick={() => navigate(preview ? `/exam/${target.id}` : '/exams?availability=practice')}>{preview ? L({ en: 'Let’s practise', hi: 'अभ्यास शुरू करें' }) : L({ en: 'Find available practice', hi: 'उपलब्ध अभ्यास खोजें' })}<ArrowRight size={15} /></button>
+        </aside>
       </div>
+
+      <section className="progress-overview" aria-labelledby="progress-overview-title">
+        <div className="progress-overview-head">
+          <div><div className="section-kicker">{L({ en: 'YOUR JOURNEY SO FAR', hi: 'अब तक की आपकी यात्रा' })}</div><h2 id="progress-overview-title">{L({ en: 'Your progress, at a glance', hi: 'आपकी प्रगति, एक नज़र में' })}</h2></div>
+          <button className="text-link" onClick={() => navigate('/analytics')}>{L({ en: 'View analytics', hi: 'आँकड़े देखें' })}<ArrowRight size={15} /></button>
+        </div>
+        <div className="dashboard-metrics" aria-label={L({ en: 'Your progress', hi: 'आपकी प्रगति' })}>
+          {metrics.map(({ icon: Icon, color, value, label, note }) => <div className={`dash-metric metric-${color}`} key={label}>
+            <div className={`metric-icon ${color}`}><Icon size={20} strokeWidth={1.8} /></div>
+            <div className="dash-metric-copy"><span>{label}</span><strong>{value}</strong><small>{note}</small></div>
+          </div>)}
+        </div>
+      </section>
 
       <section className="next-step-card" aria-label={L({ en: 'Your next step', hi: 'आपका अगला कदम' })}>
         <span className="next-step-icon"><Target size={22} /></span>
@@ -179,16 +195,7 @@ export default function Home() {
           </section>
         </div>
 
-        <aside className="dashboard-secondary" aria-label="Daily progress">
-          <div className="focus-card">
-            <div className="focus-card-head"><div><span className="section-kicker">{L({ en: 'YOUR FOCUS', hi: 'आपका लक्ष्य' })}</span><h3>{L({ en: 'Daily progress', hi: 'दैनिक प्रगति' })}</h3></div><span className="focus-icon"><Target size={18} /></span></div>
-            <div className="daily-layout">
-              <div className="daily-ring" style={{ background: `conic-gradient(var(--ee-progress) ${progress}%, var(--ee-progress-track) 0)` }}><div><strong>{progress}%</strong><span>{L({ en: 'complete', hi: 'पूरा' })}</span></div></div>
-              <div className="daily-copy"><strong>{todayQuestions}<span> / {goal}</span></strong><small>{L({ en: 'questions today', hi: 'आज के प्रश्न' })}</small><p>{progress >= 100 ? L({ en: 'Goal complete. Great work!', hi: 'लक्ष्य पूरा। बहुत बढ़िया!' }) : L({ en: 'Small steps make a big difference.', hi: 'छोटे कदम बड़ा बदलाव लाते हैं।' })}</p></div>
-            </div>
-            <button className="focus-action" onClick={() => navigate(preview ? `/exam/${target.id}` : '/exams?availability=practice')}>{preview ? L({ en: 'Let’s practise', hi: 'अभ्यास शुरू करें' }) : L({ en: 'Find available practice', hi: 'उपलब्ध अभ्यास खोजें' })}<ArrowRight size={15} /></button>
-          </div>
-
+        <aside className="dashboard-secondary" aria-label={L({ en: 'Activity and target', hi: 'गतिविधि और लक्ष्य' })}>
           <div className="week-card">
             <div className="week-card-head"><div><span className="section-kicker">{L({ en: 'KEEP SHOWING UP', hi: 'नियमित बने रहें' })}</span><h3>{L({ en: 'Your week', hi: 'आपका सप्ताह' })}</h3></div><button onClick={() => navigate('/analytics')} aria-label="View analytics"><ArrowUpRight size={17} /></button></div>
             <p>{L({ en: 'Questions attempted in the last 7 days', hi: 'पिछले 7 दिनों में प्रयास किए प्रश्न' })}</p>

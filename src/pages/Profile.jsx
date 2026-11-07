@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { BarChart3, BookOpen, Calculator, CheckCircle2, Clock3, ClipboardList, Coins, Diamond, FileClock, Flame, GraduationCap, Newspaper, Pencil, Settings2, Target, Trophy } from 'lucide-react'
 import { useStore, useAttemptStats, useCurrentStreak } from '../lib/store'
 import { api, isLoggedIn } from '../lib/api'
 import { EXAMS, examById, CATEGORIES } from '../data/exams'
@@ -70,15 +71,15 @@ export default function Profile() {
   const target = examById(p?.examId)
 
   const BADGES = [
-    ['🎯', 'First Steps', 'first-test'],
-    ['🔥', '7-Day Streak', 'streak-7'],
-    ['🏆', 'Test Warrior', 'tests-10'],
-    ['💎', 'Sharpshooter', 'accuracy-80'],
-    ['🧮', 'Quant Ace', 'quant-90'],
+    [Target, { en: 'First Steps', hi: 'पहला कदम' }, 'first-test'],
+    [Flame, { en: '7-Day Streak', hi: '7-दिन स्ट्रीक' }, 'streak-7'],
+    [Trophy, { en: 'Test Warrior', hi: 'टेस्ट योद्धा' }, 'tests-10'],
+    [Diamond, { en: 'Sharpshooter', hi: 'निशानेबाज' }, 'accuracy-80'],
+    [Calculator, { en: 'Quant Ace', hi: 'क्वांट एस' }, 'quant-90'],
   ]
 
   return (
-    <div className="stack" style={{ gap: 18 }}>
+    <div className="profile-page page-shell stack" style={{ gap: 18 }}>
       <section className="hero">
         <div className="spread" style={{ flexWrap: 'wrap', gap: 20 }}>
           <div className="row" style={{ gap: 18 }}>
@@ -94,10 +95,10 @@ export default function Profile() {
               </div>
               <h1 style={{ fontSize: 28, margin: '4px 0 6px' }}>{p?.name || 'Aspirant'}</h1>
               <div className="row wrap" style={{ gap: 8 }}>
-                <Pill tone="brand">🎯 {target?.name || 'No target exam'}</Pill>
-                <Pill tone={p?.plan === 'pro' ? 'gold' : ''}>{p?.plan === 'pro' ? '💎 Premium' : L({ en: 'Free plan', hi: 'निःशुल्क योजना' })}</Pill>
-                <Pill>🔥 {streak}</Pill>
-                <Pill>🪙 {state.coins}</Pill>
+                <Pill tone="brand"><Target size={13} aria-hidden="true" /> {target?.name || L({ en: 'No target exam', hi: 'कोई लक्ष्य परीक्षा नहीं' })}</Pill>
+                <Pill tone={p?.plan === 'pro' ? 'gold' : ''}>{p?.plan === 'pro' ? <><Diamond size={13} aria-hidden="true" /> Premium</> : L({ en: 'Free plan', hi: 'निःशुल्क योजना' })}</Pill>
+                <Pill><Flame size={13} aria-hidden="true" /> {L({ en: `${streak} ${streak === 1 ? 'day' : 'days'} streak`, hi: `${streak} दिन स्ट्रीक` })}</Pill>
+                <Pill><Coins size={13} aria-hidden="true" /> {state.coins} {L({ en: 'coins', hi: 'कॉइन' })}</Pill>
               </div>
             </div>
           </div>
@@ -109,10 +110,10 @@ export default function Profile() {
             <Bar value={levelProgress} />
             <div className="row wrap" style={{ gap: 8, marginTop: 14 }}>
               <Button variant="primary" size="sm" onClick={() => setEditing(true)}>
-                ✎ {L({ en: 'Edit profile', hi: 'प्रोफ़ाइल संपादित करें' })}
+                <Pencil size={14} aria-hidden="true" /> {L({ en: 'Edit profile', hi: 'प्रोफ़ाइल संपादित करें' })}
               </Button>
               <Button size="sm" onClick={() => navigate('/settings')}>
-                ⚙️ {L({ en: 'Settings', hi: 'सेटिंग्स' })}
+                <Settings2 size={14} aria-hidden="true" /> {L({ en: 'Settings', hi: 'सेटिंग्स' })}
               </Button>
             </div>
           </div>
@@ -120,10 +121,10 @@ export default function Profile() {
       </section>
 
       <div className="grid g4">
-        <Card><Stat icon="📝" value={stats.attempts} label={L({ en: 'Tests taken', hi: 'टेस्ट' })} /></Card>
-        <Card><Stat icon="✅" value={stats.totalCorrect} label={L({ en: 'Correct', hi: 'सही' })} /></Card>
-        <Card><Stat icon="🎯" value={`${Math.round(stats.accuracy * 100)}%`} label={L({ en: 'Accuracy', hi: 'सटीकता' })} /></Card>
-        <Card><Stat icon="⏱" value={`${Math.round(stats.totalTime / 3600)}h`} label={L({ en: 'Hours practised', hi: 'अभ्यास घंटे' })} /></Card>
+        <Card><Stat icon={<ClipboardList size={20} aria-hidden="true" />} value={stats.attempts} label={L({ en: 'Tests taken', hi: 'टेस्ट' })} /></Card>
+        <Card><Stat icon={<CheckCircle2 size={20} aria-hidden="true" />} value={stats.totalCorrect} label={L({ en: 'Correct', hi: 'सही' })} /></Card>
+        <Card><Stat icon={<Target size={20} aria-hidden="true" />} value={`${Math.round(stats.accuracy * 100)}%`} label={L({ en: 'Accuracy', hi: 'सटीकता' })} /></Card>
+        <Card><Stat icon={<Clock3 size={20} aria-hidden="true" />} value={`${Math.round(stats.totalTime / 3600)}h`} label={L({ en: 'Hours practised', hi: 'अभ्यास घंटे' })} /></Card>
       </div>
 
       <div className="grid g-main">
@@ -135,7 +136,7 @@ export default function Profile() {
               sub={L({ en: 'Badges you have unlocked', hi: 'आपके अर्जित बैज' })}
             />
             <div className="grid g3" style={{ gap: 12 }}>
-              {BADGES.map(([i, n, id]) => {
+              {BADGES.map(([Icon, name, id]) => {
                 const earned = state.achievements.includes(id)
                 return (
                   <div
@@ -143,8 +144,8 @@ export default function Profile() {
                     className="card center"
                     style={{ padding: 18, background: earned ? 'var(--grad-soft)' : 'var(--surface-2)', borderColor: earned ? 'rgba(99,102,241,0.4)' : 'var(--line)' }}
                   >
-                    <div style={{ fontSize: 28, filter: earned ? 'none' : 'grayscale(1)', opacity: earned ? 1 : 0.45 }}>{i}</div>
-                    <div className="small bold" style={{ marginTop: 6 }}>{n}</div>
+                    <div className={`profile-badge-icon ${earned ? 'earned' : ''}`} aria-hidden="true"><Icon size={24} /></div>
+                    <div className="small bold" style={{ marginTop: 6 }}>{L(name)}</div>
                     <div className="tiny muted">{earned ? L({ en: 'Unlocked', hi: 'अनलॉक' }) : L({ en: 'Locked', hi: 'लॉक' })}</div>
                   </div>
                 )
@@ -154,7 +155,7 @@ export default function Profile() {
 
           <Card>
             <CardHead title={L({ en: 'Test history', hi: 'टेस्ट इतिहास' })} />
-            <div style={{ overflowX: 'auto' }}>
+            <div style={{ overflowX: 'auto' }} tabIndex={0} role="region" aria-label={L({ en: 'Test history', hi: 'टेस्ट इतिहास' })}>
               <table className="table">
                 <thead>
                   <tr>
@@ -190,7 +191,7 @@ export default function Profile() {
               <>
                 <div className="row" style={{ gap: 12 }}>
                   <div className="exam-icon" style={{ background: 'var(--grad-soft)' }}>
-                    {CATEGORIES.find((c) => c.id === target.category)?.icon}
+                    <GraduationCap size={21} aria-hidden="true" />
                   </div>
                   <div>
                     <div className="bold">{target.name}</div>
@@ -210,15 +211,15 @@ export default function Profile() {
             <CardHead title={L({ en: 'Shortcut', hi: 'शॉर्टकट' })} />
             <div className="stack sm">
               {[
-                ['📊', L({ en: 'Full analytics', hi: 'पूर्ण विश्लेषण' }), '/analytics'],
-                ['📄', L({ en: 'Previous year papers', hi: 'पिछले वर्ष के पेपर' }), '/pyq'],
-                ['📰', L({ en: 'Current affairs', hi: 'समसामयिक घटनाक्रम' }), '/current-affairs'],
-                ['📚', L({ en: 'Study material', hi: 'अध्ययन सामग्री' }), '/materials'],
-              ].map(([i, l, path]) => (
-                <div key={path} className="nav-item" onClick={() => navigate(path)}>
-                  <span className="ico">{i}</span>
-                  <span>{l}</span>
-                </div>
+                [BarChart3, L({ en: 'Full analytics', hi: 'पूर्ण विश्लेषण' }), '/analytics'],
+                [FileClock, L({ en: 'Previous year papers', hi: 'पिछले वर्ष के पेपर' }), '/pyq'],
+                [Newspaper, L({ en: 'Current affairs', hi: 'समसामयिक घटनाक्रम' }), '/current-affairs'],
+                [BookOpen, L({ en: 'Study material', hi: 'अध्ययन सामग्री' }), '/materials'],
+              ].map(([Icon, label, path]) => (
+                <button key={path} className="nav-item profile-shortcut" onClick={() => navigate(path)}>
+                  <span className="ico"><Icon size={17} aria-hidden="true" /></span>
+                  <span>{label}</span>
+                </button>
               ))}
             </div>
           </Card>
@@ -230,8 +231,8 @@ export default function Profile() {
               <span className="bold">{p?.joinedAt ? shortDate(p.joinedAt) : '—'}</span>
             </div>
             <div className="kv">
-              <span className="k">{L({ en: 'Device', hi: 'डिवाइस' })}</span>
-              <span className="bold">Web · Android</span>
+              <span className="k">{L({ en: 'Platform', hi: 'प्लेटफ़ॉर्म' })}</span>
+              <span className="bold">{L({ en: 'Web app', hi: 'वेब ऐप' })}</span>
             </div>
             <div className="kv">
               <span className="k">{L({ en: 'Plan', hi: 'योजना' })}</span>
