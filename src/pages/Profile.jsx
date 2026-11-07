@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BarChart3, BookOpen, Calculator, CheckCircle2, Clock3, ClipboardList, Coins, Diamond, FileClock, Flame, GraduationCap, LogOut, Newspaper, Pencil, Settings2, Target, Trophy } from 'lucide-react'
+import { BarChart3, BookOpen, Calculator, CheckCircle2, Clock3, ClipboardList, Coins, Diamond, FileClock, Flame, GraduationCap, LogOut, Newspaper, Pencil, Settings2, Sparkles, Target, Trophy } from 'lucide-react'
 import { useStore, useAttemptStats, useCurrentStreak } from '../lib/store'
 import { isLoggedIn } from '../lib/api'
 import { useGoogleAuth } from '../lib/googleAuth'
@@ -125,7 +125,8 @@ export default function Profile() {
 
   return (
     <div className="profile-page page-shell stack" style={{ gap: 18 }}>
-      <section className="hero">
+      <section className="hero profile-hero">
+        <div className="profile-cover-top"><span><Sparkles size={14} aria-hidden="true" /> {L({ en: 'YOUR LEARNING PROFILE', hi: 'आपकी अध्ययन प्रोफ़ाइल' })}</span><span>{L({ en: 'Made for your journey', hi: 'आपकी तैयारी का साथी' })}</span></div>
         <div className="spread" style={{ flexWrap: 'wrap', gap: 20 }}>
           <div className="row" style={{ gap: 18 }}>
             <div

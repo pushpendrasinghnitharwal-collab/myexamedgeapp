@@ -4,6 +4,10 @@ import { readFile } from 'node:fs/promises'
 import { runInNewContext } from 'node:vm'
 
 const source = await readFile(new URL('../public/sw.js', import.meta.url), 'utf8')
+const versionMatch = source.match(/const CACHE = 'examedge-v(\d+)'/)
+assert.ok(versionMatch, 'worker has a versioned ExamEdge cache')
+const version = Number(versionMatch[1])
+const cacheName = (offset = 0) => `examedge-v${version - offset}`
 
 function worker({ caches, fetch = () => { throw new Error('unexpected fetch') }, onSkip = () => {}, onClaim = () => {} }) {
   const handlers = {}
@@ -45,12 +49,12 @@ test('upgrade keeps two previous ExamEdge shells and other applications’ cache
   const removed = []
   let claimed = false
   const caches = {
-    keys: async () => ['other-app', 'examedge-v8', 'examedge-v9', 'examedge-v10', 'examedge-v11'],
+    keys: async () => ['other-app', cacheName(3), cacheName(2), cacheName(1), cacheName()],
     delete: async (key) => { removed.push(key) },
   }
   const handlers = worker({ caches, onClaim: () => { claimed = true } })
   await lifecycle(handlers.activate)
-  assert.deepEqual(removed, ['examedge-v8'])
+  assert.deepEqual(removed, [cacheName(3)])
   assert.equal(claimed, true)
 })
 
@@ -89,12 +93,12 @@ test('an open older tab can load its fingerprinted lazy assets from the previous
   const oldAsset = { label: 'old lazy chunk' }
   const matched = []
   const stores = {
-    'examedge-v11': { match: async () => undefined },
-    'examedge-v10': { match: async (req, options) => { matched.push([req.url, options.ignoreVary]); return oldAsset } },
+    [cacheName()]: { match: async () => undefined },
+    [cacheName(1)]: { match: async (req, options) => { matched.push([req.url, options.ignoreVary]); return oldAsset } },
   }
   const caches = {
     open: async (name) => stores[name],
-    keys: async () => ['other-app', 'examedge-v10', 'examedge-v11'],
+    keys: async () => ['other-app', cacheName(1), cacheName()],
   }
   const handlers = worker({ caches })
   const asset = { method: 'GET', url: 'https://app.example/assets/auth-old.js', mode: 'cors' }

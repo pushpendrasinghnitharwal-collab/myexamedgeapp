@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react'
 import {
-  ArrowRight, ArrowUpRight, BarChart3, BookOpen, Building2, CalendarDays,
-  CheckCircle2, ChevronRight, FileClock, Flame, GraduationCap, Landmark, Layers3, Map,
+  ArrowRight, ArrowUpRight, BarChart3, Bookmark, BookOpen, Building2, CalendarDays,
+  CheckCircle2, ChevronRight, Compass, FileClock, Flame, GraduationCap, Landmark, Layers3, Map,
   Play, Sparkles, Target, TrainFront,
 } from 'lucide-react'
 import { useStore, useAttemptStats, useCurrentStreak } from '../lib/store'
@@ -64,6 +64,13 @@ export default function Home() {
   }), [state.attempts])
   const weekMax = Math.max(1, ...week.map((day) => day.count))
 
+  const quickLinks = [
+    { icon: Target, tone: 'violet', label: L({ en: 'My target', hi: 'मेरा लक्ष्य' }), detail: target.name, path: `/exam/${target.id}` },
+    { icon: Compass, tone: 'blue', label: L({ en: 'Explore exams', hi: 'परीक्षाएँ देखें' }), detail: `${EXAMS.length} ${L({ en: 'exams listed', hi: 'परीक्षाएँ' })}`, path: '/exams' },
+    { icon: BookOpen, tone: 'mint', label: L({ en: 'Study material', hi: 'अध्ययन सामग्री' }), detail: L({ en: 'Sample resources', hi: 'नमूना सामग्री' }), path: '/materials' },
+    { icon: Bookmark, tone: 'peach', label: L({ en: 'Saved questions', hi: 'सहेजे प्रश्न' }), detail: state.bookmarks.length ? `${state.bookmarks.length} ${L({ en: 'saved', hi: 'सहेजे' })}` : L({ en: 'Keep for later', hi: 'बाद के लिए सहेजें' }), path: '/bookmarks' },
+  ]
+
   const metrics = [
     { icon: ClipboardMetric, color: 'purple', value: stats.attempts, label: L({ en: 'Tests completed', hi: 'पूरे किए टेस्ट' }), note: L({ en: 'Every step counts', hi: 'हर कदम मायने रखता है' }) },
     { icon: CheckCircle2, color: 'blue', value: answeredTotal, label: L({ en: 'Questions attempted', hi: 'प्रयास किए प्रश्न' }), note: L({ en: 'Keep practising', hi: 'अभ्यास जारी रखें' }) },
@@ -86,12 +93,12 @@ export default function Home() {
         <section className="dashboard-hero" aria-label={L({ en: 'Preparation dashboard', hi: 'तैयारी डैशबोर्ड' })}>
           <div className="dashboard-hero-art" aria-hidden="true" />
           <div className="dashboard-hero-content">
-            <div className="hero-overline"><Sparkles size={14} /> {L({ en: 'YOUR NEXT CHAPTER STARTS HERE', hi: 'आपका अगला कदम यहाँ से' })}</div>
-            <h2>{L({ en: 'Your ambition.', hi: 'आपके सपने।' })}<br /><span>{L({ en: 'Your edge.', hi: 'आपकी पहचान।' })}</span></h2>
-            <p>{L({ en: 'A little focus today. A future full of possibility.', hi: 'आज थोड़ी एकाग्रता। कल अपार संभावनाएँ।' })}</p>
+            <div className="hero-overline"><Sparkles size={14} /> {L({ en: 'YOUR SPACE TO MOVE FORWARD', hi: 'आपकी तैयारी का नया मुकाम' })}</div>
+            <h2>{L({ en: 'Dream bigger.', hi: 'सपने बड़े।' })}<br /><span>{L({ en: 'Go further.', hi: 'हौसले और बड़े।' })}</span></h2>
+            <p>{L({ en: 'Every practice session is a step towards your goal.', hi: 'हर अभ्यास सत्र आपको आपके लक्ष्य के करीब लाता है।' })}</p>
             <div className="hero-actions">
               <button className="hero-primary" onClick={() => preview ? beginPractice() : navigate(`/exam/${target.id}`)}>{preview ? <Play size={15} fill="currentColor" /> : <BookOpen size={15} />} {preview ? L({ en: 'Start practising', hi: 'अभ्यास शुरू करें' }) : L({ en: 'View exam details', hi: 'परीक्षा विवरण देखें' })}<ArrowRight size={16} /></button>
-              <button className="hero-secondary" onClick={() => navigate(`/pyq?exam=${target.id}`)}>{L({ en: 'View PYQ library', hi: 'PYQ लाइब्रेरी देखें' })}<ArrowUpRight size={16} /></button>
+              <button className="hero-secondary" onClick={() => navigate('/exams')}>{L({ en: 'Explore exams', hi: 'परीक्षाएँ देखें' })}<ArrowUpRight size={16} /></button>
             </div>
           </div>
           <button className="hero-goal" onClick={() => navigate(`/exam/${target.id}`)}>
@@ -100,6 +107,9 @@ export default function Home() {
             <ArrowUpRight size={16} />
           </button>
         </section>
+      </div>
+
+      <div className="dashboard-control-deck">
         <aside className="focus-card" aria-label={L({ en: 'Daily progress', hi: 'दैनिक प्रगति' })}>
           <div className="focus-card-head"><div><span className="section-kicker">{L({ en: 'YOUR FOCUS', hi: 'आपका लक्ष्य' })}</span><h3>{L({ en: 'Daily progress', hi: 'दैनिक प्रगति' })}</h3></div><span className="focus-icon"><Target size={18} /></span></div>
           <div className="daily-layout">
@@ -108,6 +118,20 @@ export default function Home() {
           </div>
           <button className="focus-action" onClick={() => navigate(preview ? `/exam/${target.id}` : '/exams?availability=practice')}>{preview ? L({ en: 'Let’s practise', hi: 'अभ्यास शुरू करें' }) : L({ en: 'Find available practice', hi: 'उपलब्ध अभ्यास खोजें' })}<ArrowRight size={15} /></button>
         </aside>
+
+        <section className="quick-access" aria-labelledby="quick-access-title">
+          <div className="quick-access-head">
+            <div><span className="section-kicker">{L({ en: 'PICK UP THE PACE', hi: 'तैयारी को रफ़्तार दें' })}</span><h2 id="quick-access-title">{L({ en: 'Your shortcuts', hi: 'आपके शॉर्टकट' })}</h2></div>
+            <span className="quick-access-caption">{L({ en: 'Everything you need, one tap away', hi: 'ज़रूरी चीज़ें, एक टैप पर' })}</span>
+          </div>
+          <div className="quick-access-grid">
+            {quickLinks.map(({ icon: Icon, tone, label, detail, path }) => <button className="quick-access-card" key={path} onClick={() => navigate(path)}>
+              <span className={`quick-access-icon ${tone}`}><Icon size={20} strokeWidth={1.8} aria-hidden="true" /></span>
+              <span className="quick-access-copy"><strong>{label}</strong><small>{detail}</small></span>
+              <ArrowUpRight className="quick-access-arrow" size={16} aria-hidden="true" />
+            </button>)}
+          </div>
+        </section>
       </div>
 
       <section className="progress-overview" aria-labelledby="progress-overview-title">
