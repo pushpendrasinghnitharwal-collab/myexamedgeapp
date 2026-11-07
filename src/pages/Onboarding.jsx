@@ -3,6 +3,8 @@ import { EXAMS, CATEGORIES } from '../data/exams'
 import { useStore } from '../lib/store'
 import { useL } from '../lib/i18n'
 import { Button, Card, Pill } from '../components/ui'
+import { hasPractice, practiceExamCount } from '../lib/examCatalog'
+import { navigate } from '../lib/router'
 
 export default function Onboarding() {
   const L = useL()
@@ -17,6 +19,7 @@ export default function Onboarding() {
 
   const finish = () => {
     register({ name: name.trim(), phone: phone.trim(), examId, goal, avatar: 0 })
+    navigate('/')
   }
 
   return (
@@ -32,12 +35,7 @@ export default function Onboarding() {
         <div className="center" style={{ marginBottom: 22 }}>
           <div className="brand" style={{ justifyContent: 'center' }}>
             <div className="brand-mark" style={{ width: 52, height: 52, borderRadius: 16 }}>
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                <path d="M4 7L12 3L20 7" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M12 5V21" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" opacity="0.65" />
-                <path d="M8 10H16M8 14H16" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" opacity="0.65" />
-                <path d="M14 18L17 15L20 18" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              <img src="/icon.svg?v=2" width="52" height="52" alt="" style={{ borderRadius: 16 }} />
             </div>
             <div>
               <div className="brand-name" style={{ fontSize: 26 }}>EXAMEDGE</div>
@@ -60,7 +58,7 @@ export default function Onboarding() {
                   }}
                 />
                 <div className="tiny muted" style={{ marginTop: 6, textAlign: 'center' }}>
-                  {['Welcome', 'Your goal', 'Daily plan'][i]}
+                  {[L({ en: 'Welcome', hi: 'स्वागत' }), L({ en: 'Your goal', hi: 'आपका लक्ष्य' }), L({ en: 'Daily plan', hi: 'दैनिक योजना' })][i]}
                 </div>
               </div>
             ))}
@@ -69,19 +67,19 @@ export default function Onboarding() {
           {step === 0 && (
             <div>
               <h1 style={{ fontSize: 26, marginBottom: 8 }}>
-                {L({ en: 'India’s exam prep, minus the fee', hi: 'भारत की परीक्षा तैयारी, बिना फीस के' })}
+                {L({ en: 'A better place to begin', hi: 'तैयारी की बेहतर शुरुआत' })}
               </h1>
               <p className="small muted" style={{ marginTop: 0 }}>
                 {L({
-                  en: 'Full-length mocks in the exact official pattern, instant solutions in English and Hindi, topic-level analytics, live all-India rankings and daily current affairs.',
-                  hi: 'आधिकारिक पैटर्न में फुल मॉक, अंग्रेज़ी और हिंदी में तुरंत समाधान, टॉपिक-स्तरीय विश्लेषण, लाइव ऑल-इंडिया रैंकिंग और दैनिक करेंट अफेयर्स।',
+                  en: 'Discover exam goals, try existing practice sets and follow your own progress. Some exam pages contain information only.',
+                  hi: 'परीक्षाएँ खोजें, मौजूदा अभ्यास सेट करें और अपनी प्रगति देखें। कुछ परीक्षाओं में अभी केवल जानकारी है।',
                 })}
               </p>
               <div className="grid g3" style={{ gap: 12, margin: '20px 0' }}>
                 {[
-                  ['📝', '19 exams', 'SSC, Banking, Railways, UPSC, State PSC, Teaching, Defence'],
-                  ['📊', 'Deep analytics', 'Topic accuracy, time per question, strength heatmaps'],
-                  ['🏆', 'Live ranks', 'All-India leaderboards that update in real time'],
+                  ['📝', L({ en: `${EXAMS.length} exams listed`, hi: `${EXAMS.length} परीक्षाएँ सूचीबद्ध` }), L({ en: `${practiceExamCount} currently have practice`, hi: `${practiceExamCount} में अभी अभ्यास है` })],
+                  ['📊', L({ en: 'Your progress', hi: 'आपकी प्रगति' }), L({ en: 'Review your own attempts and accuracy', hi: 'अपने प्रयास और सटीकता देखें' })],
+                  ['📚', L({ en: 'Study tools', hi: 'अध्ययन साधन' }), L({ en: 'Sample notes, bookmarks and practice', hi: 'नमूना नोट्स, बुकमार्क और अभ्यास' })],
                 ].map(([i, t, d]) => (
                   <div key={t} className="card" style={{ padding: 15, background: 'var(--surface-2)' }}>
                     <div style={{ fontSize: 22 }}>{i}</div>
@@ -91,9 +89,9 @@ export default function Onboarding() {
                 ))}
               </div>
               <div className="row wrap" style={{ gap: 10 }}>
-                <Pill tone="success">✓ No credit card needed</Pill>
-                <Pill tone="brand">✓ Bilingual</Pill>
-                <Pill>✓ Installable app</Pill>
+                <Pill tone="success">✓ {L({ en: 'Progress on this device', hi: 'प्रगति इस डिवाइस पर' })}</Pill>
+                <Pill tone="brand">✓ English & हिंदी</Pill>
+                <Pill>✓ {L({ en: 'Installable app', hi: 'इंस्टॉल होने वाला ऐप' })}</Pill>
               </div>
             </div>
           )}
@@ -104,29 +102,30 @@ export default function Onboarding() {
                 {L({ en: 'Tell us about you', hi: 'अपने बारे में बताएँ' })}
               </h1>
               <p className="small muted" style={{ marginTop: 0 }}>
-                {L({ en: 'This personalises your dashboard, tests and study plan.', hi: 'इससे आपका डैशबोर्ड, टेस्ट और स्टडी प्लान बेहतर होता है।' })}
+                {L({ en: 'This sets your target and personalises your dashboard.', hi: 'इससे आपका लक्ष्य तय होता है और डैशबोर्ड आपके अनुसार बनता है।' })}
               </p>
               <div className="field">
-                <label>{L({ en: 'Full name', hi: 'पूरा नाम' })}</label>
-                <input className="input" value={name} onChange={(e) => setName(e.target.value)} placeholder={L({ en: 'e.g. Rahul Sharma', hi: 'जैसे राहुल शर्मा' })} />
+                <label htmlFor="onboarding-name">{L({ en: 'Full name', hi: 'पूरा नाम' })}</label>
+                <input id="onboarding-name" className="input" value={name} onChange={(e) => setName(e.target.value)} placeholder={L({ en: 'e.g. Rahul Sharma', hi: 'जैसे राहुल शर्मा' })} />
               </div>
               <div className="field">
-                <label>{L({ en: 'Mobile number (optional)', hi: 'मोबाइल नंबर (वैकल्पिक)' })}</label>
-                <input className="input" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+91 98765 43210" />
+                <label htmlFor="onboarding-phone">{L({ en: 'Mobile number (optional)', hi: 'मोबाइल नंबर (वैकल्पिक)' })}</label>
+                <input id="onboarding-phone" className="input" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="+91 98765 43210" />
               </div>
               <div className="field">
-                <label>{L({ en: 'Target exam', hi: 'लक्ष्य परीक्षा' })}</label>
-                <select className="input" value={examId} onChange={(e) => setExamId(e.target.value)}>
+                <label htmlFor="onboarding-target">{L({ en: 'Target exam', hi: 'लक्ष्य परीक्षा' })}</label>
+                <select id="onboarding-target" className="input" value={examId} onChange={(e) => setExamId(e.target.value)}>
                   {CATEGORIES.map((c) => (
-                    <optgroup key={c.id} label={`${c.icon} ${c.name}`}>
+                    <optgroup key={c.id} label={`${c.icon} ${L({ en: c.name, hi: c.hi })}`}>
                       {EXAMS.filter((e) => e.category === c.id).map((e) => (
                         <option key={e.id} value={e.id}>
-                          {e.name} — {e.subtitle}
+                          {e.name}{!hasPractice(e.id) ? ` — ${L({ en: 'info only', hi: 'केवल जानकारी' })}` : ''}
                         </option>
                       ))}
                     </optgroup>
                   ))}
                 </select>
+                <div className="tiny muted" style={{ marginTop: 6 }}>{hasPractice(examId) ? L({ en: 'Practice is available for this goal.', hi: 'इस लक्ष्य के लिए अभ्यास उपलब्ध है।' }) : L({ en: 'Practice for this exam has not been added yet.', hi: 'इस परीक्षा के लिए अभ्यास अभी नहीं जोड़ा गया है।' })}</div>
               </div>
             </div>
           )}
@@ -147,6 +146,7 @@ export default function Onboarding() {
                   <button
                     key={n}
                     className={`chip ${goal === n ? 'on' : ''}`}
+                    aria-pressed={goal === n}
                     style={{ padding: '12px 18px', fontSize: 14 }}
                     onClick={() => setGoal(n)}
                   >
@@ -159,11 +159,7 @@ export default function Onboarding() {
                   {L({ en: 'Your plan', hi: 'आपका प्लान' })}
                 </div>
                 <div className="tiny muted" style={{ marginTop: 6, lineHeight: 1.7 }}>
-                  {L({ en: 'Every day:', hi: 'हर दिन:' })} <b>{goal} questions</b> · {L({ en: 'Daily current affairs capsule + quiz', hi: 'दैनिक करेंट अफेयर्स कैप्सूल + क्विज़' })} ·{' '}
-                  {L({ en: 'Weekly full-length mock', hi: 'साप्ताहिक फुल मॉक' })}
-                  <br />
-                  {L({ en: 'Expected syllabus coverage:', hi: 'अपेक्षित पाठ्यक्रम कवरेज:' })}{' '}
-                  <b>~{goal * 45} {L({ en: 'days', hi: 'दिन' })}</b>
+                  {L({ en: 'Aim for', hi: 'लक्ष्य रखें:' })} <b>{goal} {L({ en: 'questions a day', hi: 'प्रश्न प्रतिदिन' })}</b>. {L({ en: 'Your dashboard counts answers from submitted practice sessions. You can change this goal in Settings.', hi: 'डैशबोर्ड सबमिट किए अभ्यासों के उत्तर गिनता है। आप यह लक्ष्य सेटिंग्स में बदल सकते हैं।' })}
                 </div>
               </div>
             </div>

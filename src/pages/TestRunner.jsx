@@ -49,8 +49,8 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
 
   // Use wall-clock time so a backgrounded tab cannot extend a timed session.
   useEffect(() => {
-    if (submitted) return
-    const limit = (test?.duration || 30) * 60
+    if (submitted || !exam || !test || !paper.length) return
+    const limit = test.duration * 60
     const tick = () => {
       const { elapsed: seconds, remaining: left, expired } = sessionTiming(sessionStart.current, limit)
       setElapsed(seconds)
@@ -62,7 +62,7 @@ export default function TestRunner({ examId, testId, mode = 'mock' }) {
     tick()
     const timer = setInterval(tick, 1000)
     return () => clearInterval(timer)
-  }, [isPractice, submitted, test?.duration])
+  }, [isPractice, submitted, exam, test, paper.length])
 
   // ── Keyboard shortcuts ───────────────────────────────
   const choose = useCallback(

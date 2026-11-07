@@ -1,16 +1,28 @@
 // EXAMEDGE — Exam catalogue
-// Each exam declares its paper structure, marking scheme and subject weights.
+// Existing exams retain their local practice configuration. Directory-only entries
+// intentionally have no questions, paper pattern or marking scheme.
 
 export const CATEGORIES = [
   { id: 'ssc', name: 'SSC', hi: 'एसएससी', icon: '🧮', color: '#6366F1' },
   { id: 'banking', name: 'Banking', hi: 'बैंकिंग', icon: '🏦', color: '#22D3EE' },
   { id: 'railway', name: 'Railways', hi: 'रेलवे', icon: '🚆', color: '#F59E0B' },
   { id: 'upsc', name: 'UPSC', hi: 'यूपीएससी', icon: '🏛️', color: '#8B5CF6' },
-  { id: 'state', name: 'State PSC', hi: 'राज्य पीएससी', icon: '🗺️', color: '#10B981' },
+  { id: 'state', name: 'State exams', hi: 'राज्य परीक्षाएँ', icon: '🗺️', color: '#10B981' },
   { id: 'teaching', name: 'Teaching', hi: 'शिक्षण', icon: '📚', color: '#EC4899' },
   { id: 'defence', name: 'Defence', hi: 'रक्षा', icon: '🎖️', color: '#F43F5E' },
   { id: 'other', name: 'Other Exams', hi: 'अन्य', icon: '✨', color: '#38BDF8' },
 ]
+
+// Official starting points for the new directory entries. Dates, eligibility and
+// patterns change, so learners are directed to the current notifications instead.
+export const OFFICIAL_SOURCES = {
+  ssc: { name: 'Staff Selection Commission', hi: 'कर्मचारी चयन आयोग', url: 'https://ssc.gov.in/' },
+  sbi: { name: 'SBI Careers', hi: 'एसबीआई करियर', url: 'https://sbi.co.in/web/careers/current-openings' },
+  ibps: { name: 'IBPS', hi: 'आईबीपीएस', url: 'https://www.ibps.in/' },
+  rrb: { name: 'RRB Chandigarh notices', hi: 'आरआरबी चंडीगढ़ सूचनाएँ', url: 'https://www.rrbcdg.gov.in/employment-notice.php' },
+  rpsc: { name: 'Rajasthan Public Service Commission', hi: 'राजस्थान लोक सेवा आयोग', url: 'https://rpsc.rajasthan.gov.in/' },
+  rssb: { name: 'Rajasthan Staff Selection Board', hi: 'राजस्थान कर्मचारी चयन बोर्ड', url: 'https://rssb.rajasthan.gov.in/' },
+}
 
 // Subject registry: id -> { name, hi, icon }
 export const SUBJECTS = {
@@ -399,8 +411,82 @@ export const EXAMS = [
     freeTests: 3,
     popularity: 83,
   },
+  // Directory-only goals. No questions are assigned to these exams.
+  {
+    id: 'ssc-mts', name: 'SSC MTS & Havaldar', hi: 'एसएससी एमटीएस और हवलदार', category: 'ssc',
+    subtitle: 'Multi-Tasking Staff & Havaldar', source: 'ssc', aliases: ['SSC MTS', 'MTS', 'havaldar'],
+    description: { en: 'SSC recruitment for Multi-Tasking Staff (Non-Technical) and Havaldar posts.', hi: 'एसएससी द्वारा मल्टी टास्किंग स्टाफ (गैर-तकनीकी) और हवलदार पदों पर भर्ती।' },
+    directoryOnly: true, subjects: [],
+  },
+  {
+    id: 'ssc-cpo', name: 'SSC CPO', hi: 'एसएससी सीपीओ', category: 'ssc',
+    subtitle: 'Sub-Inspector in Delhi Police & CAPFs', source: 'ssc', aliases: ['Delhi Police SI', 'CAPF SI'],
+    description: { en: 'SSC recruitment for Sub-Inspectors in Delhi Police and Central Armed Police Forces.', hi: 'दिल्ली पुलिस और केंद्रीय सशस्त्र पुलिस बलों में सब-इंस्पेक्टर पदों के लिए एसएससी भर्ती।' },
+    directoryOnly: true, subjects: [],
+  },
+  {
+    id: 'ssc-stenographer', name: 'SSC Stenographer', hi: 'एसएससी स्टेनोग्राफर', category: 'ssc',
+    subtitle: 'Stenographer Grade C & D', source: 'ssc', aliases: ['SSC Steno', 'steno'],
+    description: { en: 'SSC examination for Stenographer Grade C and D posts.', hi: 'स्टेनोग्राफर ग्रेड सी और डी पदों के लिए एसएससी परीक्षा।' },
+    directoryOnly: true, subjects: [],
+  },
+  {
+    id: 'sbi-clerk', name: 'SBI Clerk', hi: 'एसबीआई क्लर्क', category: 'banking',
+    subtitle: 'Junior Associate — Customer Support & Sales', source: 'sbi', aliases: ['SBI Junior Associate', 'SBI JA'],
+    description: { en: 'SBI recruitment for Junior Associates in Customer Support and Sales.', hi: 'ग्राहक सहायता और बिक्री में जूनियर एसोसिएट पदों के लिए एसबीआई भर्ती।' },
+    directoryOnly: true, subjects: [],
+  },
+  {
+    id: 'ibps-rrb-po', name: 'IBPS RRB PO', hi: 'आईबीपीएस आरआरबी पीओ', category: 'banking',
+    subtitle: 'Regional Rural Banks — Officer Scale I', source: 'ibps', aliases: ['RRB Officer Scale 1', 'RRB Officer Scale I', 'regional rural bank po'],
+    description: { en: 'IBPS recruitment process for Officer Scale I in Regional Rural Banks.', hi: 'क्षेत्रीय ग्रामीण बैंकों में ऑफिसर स्केल I के लिए आईबीपीएस भर्ती प्रक्रिया।' },
+    directoryOnly: true, subjects: [],
+  },
+  {
+    id: 'ibps-rrb-clerk', name: 'IBPS RRB Clerk', hi: 'आईबीपीएस आरआरबी क्लर्क', category: 'banking',
+    subtitle: 'Regional Rural Banks — Office Assistant', source: 'ibps', aliases: ['RRB Office Assistant', 'RRB office assistant multipurpose'],
+    description: { en: 'IBPS recruitment process for Office Assistants (Multipurpose) in Regional Rural Banks.', hi: 'क्षेत्रीय ग्रामीण बैंकों में ऑफिस असिस्टेंट (बहुउद्देशीय) के लिए आईबीपीएस भर्ती प्रक्रिया।' },
+    directoryOnly: true, subjects: [],
+  },
+  {
+    id: 'ibps-so', name: 'IBPS SO', hi: 'आईबीपीएस एसओ', category: 'banking',
+    subtitle: 'Specialist Officers', source: 'ibps', aliases: ['IBPS Specialist Officer', 'CRP SPL'],
+    description: { en: 'IBPS common recruitment process for Specialist Officer posts.', hi: 'स्पेशलिस्ट ऑफिसर पदों के लिए आईबीपीएस की सामान्य भर्ती प्रक्रिया।' },
+    directoryOnly: true, subjects: [],
+  },
+  {
+    id: 'rrb-alp', name: 'RRB ALP', hi: 'आरआरबी एएलपी', category: 'railway',
+    subtitle: 'Assistant Loco Pilot', source: 'rrb', aliases: ['Railway Assistant Loco Pilot', 'loco pilot'],
+    description: { en: 'Railway Recruitment Board recruitment for Assistant Loco Pilot posts.', hi: 'असिस्टेंट लोको पायलट पदों के लिए रेलवे भर्ती बोर्ड की भर्ती।' },
+    directoryOnly: true, subjects: [],
+  },
+  {
+    id: 'rrb-technician', name: 'RRB Technician', hi: 'आरआरबी टेक्नीशियन', category: 'railway',
+    subtitle: 'Railway Technician recruitment', source: 'rrb', aliases: ['Railway Technician', 'RRB Tech'],
+    description: { en: 'Railway Recruitment Board recruitment for Technician posts.', hi: 'टेक्नीशियन पदों के लिए रेलवे भर्ती बोर्ड की भर्ती।' },
+    directoryOnly: true, subjects: [],
+  },
+  {
+    id: 'rpsc-ras', name: 'RPSC RAS', hi: 'आरपीएससी आरएएस', category: 'state',
+    subtitle: 'Rajasthan State & Subordinate Services', source: 'rpsc', aliases: ['Rajasthan Administrative Service', 'Rajasthan RAS', 'RAS'],
+    description: { en: 'RPSC examination for Rajasthan State and Subordinate Services.', hi: 'राजस्थान राज्य एवं अधीनस्थ सेवाओं के लिए आरपीएससी परीक्षा।' },
+    directoryOnly: true, subjects: [],
+  },
+  {
+    id: 'rajasthan-cet-graduation', name: 'Rajasthan CET (Graduation)', hi: 'राजस्थान सीईटी (स्नातक)', category: 'state',
+    subtitle: 'Common Eligibility Test — Graduation Level', source: 'rssb', aliases: ['Rajasthan CET graduate', 'Rajasthan CET graduation level', 'CET स्नातक'],
+    description: { en: 'Rajasthan Common Eligibility Test at Graduation Level, conducted by RSSB.', hi: 'आरएसएसबी द्वारा आयोजित राजस्थान समान पात्रता परीक्षा (स्नातक स्तर)।' },
+    directoryOnly: true, subjects: [],
+  },
+  {
+    id: 'rajasthan-cet-senior-secondary', name: 'Rajasthan CET (12th)', hi: 'राजस्थान सीईटी (12वीं)', category: 'state',
+    subtitle: 'Common Eligibility Test — Senior Secondary Level', source: 'rssb', aliases: ['Rajasthan CET 12th', 'Rajasthan CET senior secondary', 'CET 12वीं'],
+    description: { en: 'Rajasthan Common Eligibility Test at Senior Secondary Level, conducted by RSSB.', hi: 'आरएसएसबी द्वारा आयोजित राजस्थान समान पात्रता परीक्षा (सीनियर सेकेंडरी स्तर)।' },
+    directoryOnly: true, subjects: [],
+  },
 ]
 
+export const officialSourceForExam = (exam) => OFFICIAL_SOURCES[exam?.source]
 export const examById = (id) => EXAMS.find((e) => e.id === id)
 export const categoryById = (id) => CATEGORIES.find((c) => c.id === id)
 export const subjectById = (id) => SUBJECTS[id]

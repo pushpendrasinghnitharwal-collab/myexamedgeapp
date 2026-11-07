@@ -67,7 +67,7 @@ function Router() {
       page = <Home />
       break
     case 'exams':
-      page = <Exams initialCategory={params.get('c') || 'all'} initialQuery={params.get('q') || ''} />
+      page = <Exams key={route.path} initialCategory={params.get('c') || 'all'} initialQuery={params.get('q') || ''} initialAvailability={params.get('availability') || 'all'} />
       break
     case 'exam':
       page = <ExamDetail examId={parts[1]} initialTab={params.get('tab') || 'overview'} />

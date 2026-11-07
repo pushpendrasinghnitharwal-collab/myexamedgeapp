@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useStore, useAttemptStats, useCurrentStreak } from '../lib/store'
 import { api, isLoggedIn } from '../lib/api'
 import { EXAMS, examById, CATEGORIES } from '../data/exams'
+import { practiceSetCount } from '../lib/examCatalog'
 import { navigate } from '../lib/router'
 import { useL } from '../lib/i18n'
 import { Card, CardHead, Pill, Button, Stat, Bar, Modal } from '../components/ui'
@@ -194,7 +195,7 @@ export default function Profile() {
                   <div>
                     <div className="bold">{target.name}</div>
                     <div className="tiny muted">
-                      {target.questions} Q · {target.duration} min · {target.marks} marks
+                      {practiceSetCount(target.id) ? `${practiceSetCount(target.id)} ${L({ en: 'practice sets available', hi: 'अभ्यास सेट उपलब्ध' })}` : L({ en: 'Practice not added yet', hi: 'अभ्यास अभी नहीं जोड़ा गया' })}
                     </div>
                   </div>
                 </div>
@@ -242,18 +243,17 @@ export default function Profile() {
 
       <Modal open={editing} onClose={() => setEditing(false)} title={L({ en: 'Edit profile', hi: 'प्रोफ़ाइल संपादित करें' })}>
         <div className="field">
-          <label>{L({ en: 'Your name', hi: 'आपका नाम' })}</label>
-          <input className="input" value={name} onChange={(e) => setName(e.target.value)} />
+          <label htmlFor="profile-name">{L({ en: 'Your name', hi: 'आपका नाम' })}</label>
+          <input id="profile-name" className="input" value={name} onChange={(e) => setName(e.target.value)} />
         </div>
         <div className="field">
-          <label>{L({ en: 'Target exam', hi: 'लक्ष्य परीक्षा' })}</label>
-          <select className="input" value={examId} onChange={(e) => setExamId(e.target.value)}>
-            {EXAMS.map((e) => (
-              <option key={e.id} value={e.id}>
-                {e.name} — {e.subtitle}
-              </option>
-            ))}
+          <label htmlFor="profile-target">{L({ en: 'Target exam', hi: 'लक्ष्य परीक्षा' })}</label>
+          <select id="profile-target" className="input" value={examId} onChange={(e) => setExamId(e.target.value)}>
+            {CATEGORIES.map((category) => <optgroup key={category.id} label={L({ en: category.name, hi: category.hi })}>
+              {EXAMS.filter((exam) => exam.category === category.id).map((exam) => <option key={exam.id} value={exam.id}>{exam.name}{!practiceSetCount(exam.id) ? ` — ${L({ en: 'info only', hi: 'केवल जानकारी' })}` : ''}</option>)}
+            </optgroup>)}
           </select>
+          <div className="tiny muted" style={{ marginTop: 6 }}>{practiceSetCount(examId) ? L({ en: 'Practice is available for this goal.', hi: 'इस लक्ष्य के लिए अभ्यास उपलब्ध है।' }) : L({ en: 'Practice for this exam has not been added yet.', hi: 'इस परीक्षा के लिए अभ्यास अभी नहीं जोड़ा गया है।' })}</div>
         </div>
         <div className="row" style={{ gap: 10 }}>
           <Button className="block" onClick={() => setEditing(false)}>

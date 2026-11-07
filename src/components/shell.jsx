@@ -24,7 +24,7 @@ const groups = [
   { label: { en: 'WORKSPACE', hi: 'वर्कस्पेस' }, items: [
     { id: 'home', icon: LayoutDashboard, en: 'Dashboard', hi: 'डैशबोर्ड', path: '/' },
     { id: 'exams', icon: LayoutGrid, en: 'Explore exams', hi: 'परीक्षाएँ देखें', path: '/exams' },
-    { id: 'exam', icon: ClipboardList, en: 'Test series', hi: 'टेस्ट सीरीज़', path: 'target' },
+    { id: 'exam', icon: ClipboardList, en: 'My target', hi: 'मेरा लक्ष्य', path: 'target' },
     { id: 'pyq', icon: FileClock, en: 'Previous year papers', hi: 'पिछले वर्ष के पेपर', path: '/pyq' },
   ] },
   { label: { en: 'LEARNING', hi: 'अध्ययन' }, items: [
@@ -93,7 +93,7 @@ export function TopBar({ route }) {
   const streak = useCurrentStreak()
   const key = route.path.split('?')[0].split('/').filter(Boolean)[0] || 'home'
   const titles = {
-    home: ['Dashboard', 'डैशबोर्ड'], exams: ['Explore exams', 'परीक्षाएँ देखें'], exam: ['Test series', 'टेस्ट सीरीज़'],
+    home: ['Dashboard', 'डैशबोर्ड'], exams: ['Explore exams', 'परीक्षाएँ देखें'], exam: ['Exam details', 'परीक्षा विवरण'],
     pyq: ['Previous year papers', 'पिछले वर्ष के पेपर'], result: ['Your result', 'आपका परिणाम'],
     analytics: ['My analytics', 'मेरे आँकड़े'], leaderboard: ['Leaderboard', 'लीडरबोर्ड'],
     'current-affairs': ['Current affairs', 'करेंट अफेयर्स'], materials: ['Study material', 'अध्ययन सामग्री'],
