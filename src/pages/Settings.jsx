@@ -20,8 +20,8 @@ export default function Settings() {
           <h1 className="page-title">{L({ en: 'Settings', hi: 'सेटिंग्स' })}</h1>
           <div className="page-sub">
             {L({
-              en: 'Guest progress stays on this device. Signed-in attempts may be sent to the backend.',
-              hi: 'अतिथि प्रगति इस डिवाइस पर रहती है। साइन इन करने पर प्रयास बैकएंड को भेजे जा सकते हैं।',
+              en: 'Progress stays on this device. A separate backend account may send future attempts to the server.',
+              hi: 'प्रगति इस डिवाइस पर रहती है। अलग बैकएंड खाते से नए प्रयास सर्वर को भेजे जा सकते हैं।',
             })}
           </div>
         </div>
@@ -107,7 +107,7 @@ export default function Settings() {
             <div className="kv"><span className="k">{L({ en: 'Attempts stored', hi: 'सहेजे गए प्रयास' })}</span><span className="bold">{state.attempts.length}</span></div>
             <div className="kv"><span className="k">{L({ en: 'Saved questions', hi: 'सहेजे गए प्रश्न' })}</span><span className="bold">{state.bookmarks.length}</span></div>
             <div className="kv"><span className="k">{L({ en: 'Notes', hi: 'नोट्स' })}</span><span className="bold">{Object.keys(state.notes).length}</span></div>
-            <div className="kv"><span className="k">{L({ en: 'Server sync', hi: 'सर्वर सिंक' })}</span><span className="bold">{state.auth?.token ? L({ en: 'Future attempts when available', hi: 'उपलब्ध होने पर नए प्रयास' }) : L({ en: 'Guest: local only', hi: 'अतिथि: केवल स्थानीय' })}</span></div>
+            <div className="kv"><span className="k">{L({ en: 'Backend attempts', hi: 'बैकएंड प्रयास' })}</span><span className="bold">{state.auth?.token ? L({ en: 'Future attempts when available', hi: 'उपलब्ध होने पर नए प्रयास' }) : L({ en: 'Local only', hi: 'केवल इस डिवाइस पर' })}</span></div>
           </div>
           <div className="sep" />
           <Button variant="danger" className="block" onClick={() => setConfirmReset(true)}>
@@ -136,8 +136,8 @@ export default function Settings() {
       <Modal open={confirmReset} onClose={() => setConfirmReset(false)} title={L({ en: 'Reset all data?', hi: 'सारा डेटा रीसेट करें?' })}>
         <p className="small muted" style={{ marginTop: 0 }}>
           {L({
-            en: 'This deletes every attempt, bookmark and note stored on this device. It cannot be undone.',
-            hi: 'इससे इस डिवाइस पर सहेजा गया हर प्रयास, बुकमार्क और नोट मिट जाएगा। यह वापस नहीं होगा।',
+            en: 'This deletes every attempt, bookmark and note stored on this device. It cannot be undone. It does not sign you out of Google or delete your Google account.',
+            hi: 'इससे इस डिवाइस पर सहेजा गया हर प्रयास, बुकमार्क और नोट मिट जाएगा। यह वापस नहीं होगा। इससे Google साइन आउट नहीं होगा और Google खाता नहीं हटेगा।',
           })}
         </p>
         <div className="row" style={{ gap: 10, marginTop: 16 }}>

@@ -1,5 +1,7 @@
 # 🚀 EXAMEDGE — Free Deployment Guide
 
+For Google sign-in on the existing Vercel app, see [the Firebase setup guide](docs/google-sign-in.md). It is independent of the optional Express backend described below and does not sync local progress.
+
 Deploy the full stack **100% free**: PWA frontend + Express API + PostgreSQL.
 
 ## Stack

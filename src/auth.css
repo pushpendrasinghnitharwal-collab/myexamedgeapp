@@ -1,0 +1,103 @@
+/* Google sign-in and a first-visit welcome that fits the ExamEdge studio. */
+.welcome-screen {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 0 max(24px, calc((100vw - 1180px) / 2));
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at 15% 12%, #e7e9ff 0, transparent 34%), radial-gradient(circle at 93% 88%, #e0f7f1 0, transparent 33%), #f6f8ff;
+  color: #1e2546;
+}
+.welcome-header { min-height: 94px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.welcome-brand { display: flex; align-items: center; gap: 10px; }
+.welcome-brand img { border-radius: 14px; box-shadow: 0 6px 16px rgba(51, 44, 120, .18); }
+.welcome-brand > div { display: flex; flex-direction: column; }
+.welcome-brand strong { font-family: 'Outfit', var(--font); font-size: 21px; letter-spacing: -.05em; line-height: 1; }
+.welcome-brand strong span { color: #5843bb; }
+.welcome-brand small { margin-top: 5px; color: #626c82; font-size: 8px; font-weight: 700; letter-spacing: .11em; }
+.welcome-language { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 40px; padding: 0 13px; border: 1px solid #d9dfed; border-radius: 11px; color: #3f4965; background: rgba(255,255,255,.8); font-weight: 700; font-size: 12px; cursor: pointer; }
+.welcome-language:hover { background: #fff; }
+.welcome-layout { flex: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(330px, 405px); align-items: center; gap: clamp(35px, 7vw, 100px); padding: 28px 0 46px; }
+.welcome-story { min-width: 0; }
+.welcome-kicker { display: inline-flex; align-items: center; gap: 7px; padding: 7px 10px; border-radius: 99px; background: #dff3eb; color: #235d4e; font-size: 10px; font-weight: 800; letter-spacing: .09em; }
+.welcome-story h1 { margin: 19px 0 13px; font-size: clamp(40px, 4.7vw, 60px); line-height: 1.08; letter-spacing: -.045em; font-weight: 650; }
+.welcome-story h1 span { color: #5542ba; }
+.welcome-story > p { max-width: 465px; margin: 0; color: #4e5870; font-size: 15px; line-height: 1.7; }
+.welcome-art { width: 100%; height: clamp(190px, 22vw, 260px); margin-top: 25px; border-radius: 20px; background: #0b142b url('/images/study-orbit.webp') right 52% / cover no-repeat; box-shadow: 0 15px 36px rgba(26, 35, 80, .16); }
+.welcome-features { display: flex; gap: 24px; margin-top: 22px; }
+.welcome-features > div { display: flex; align-items: center; gap: 10px; }
+.welcome-features > div > span { display: grid; place-items: center; width: 38px; height: 38px; flex: 0 0 auto; border-radius: 12px; background: #eae8ff; color: #5542ba; }
+.welcome-features p { display: flex; flex-direction: column; margin: 0; }
+.welcome-features strong { font-size: 12px; }
+.welcome-features small { margin-top: 2px; color: #5b657b; font-size: 11px; }
+.welcome-card { min-width: 0; padding: 36px; border: 1px solid #e4e9f4; border-radius: 24px; background: #fff; box-shadow: 0 22px 65px rgba(40, 52, 100, .11); }
+.welcome-card-icon { display: grid; place-items: center; width: 44px; height: 44px; margin-bottom: 24px; border-radius: 14px; background: #eae8ff; color: #5542ba; }
+.welcome-card-kicker { color: #5744bb; font-size: 10px; font-weight: 800; letter-spacing: .11em; }
+.welcome-card h2 { margin: 9px 0 9px; font-size: 30px; line-height: 1.18; font-weight: 650; }
+.welcome-card-intro { margin: 0 0 26px; color: #58627b; font-size: 13px; line-height: 1.65; }
+.google-signin { min-width: 0; }
+.google-signin-button { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; min-height: 50px; padding: 10px 15px; border: 1px solid #c9cfdd; border-radius: 11px; background: #fff; color: #222b42; font-weight: 700; font-size: 14px; cursor: pointer; transition: background .15s, border-color .15s; }
+.google-signin-button:hover:not(:disabled) { background: #f7f8fd; border-color: #8f98b0; }
+.google-signin-button:disabled { cursor: not-allowed; opacity: .72; }
+.google-mark { width: 21px; height: 21px; flex: 0 0 auto; }
+.google-signin-error { margin: 10px 0 0; color: #a42b43; font-size: 12px; line-height: 1.5; }
+.welcome-divider { display: flex; align-items: center; gap: 12px; margin: 18px 0; color: #69748b; font-size: 10px; font-weight: 800; letter-spacing: .1em; }
+.welcome-divider::before, .welcome-divider::after { content: ''; height: 1px; flex: 1; background: #e5e9f2; }
+.welcome-guest { display: flex; justify-content: center; align-items: center; gap: 9px; width: 100%; min-height: 48px; padding: 10px; border: 0; border-radius: 11px; background: #5542bc; color: #fff; font-weight: 700; font-size: 13px; cursor: pointer; }
+.welcome-guest:hover { background: #4634a3; }
+.welcome-language:focus-visible, .google-signin-button:focus-visible, .welcome-guest:focus-visible { outline: 3px solid #af9bff; outline-offset: 3px; }
+.welcome-privacy { display: flex; flex-direction: column; gap: 5px; margin-top: 24px; padding: 15px; border-radius: 12px; background: #f3f6fb; color: #4e5870; font-size: 11px; line-height: 1.55; }
+.welcome-privacy strong { color: #303a57; font-size: 11px; }
+.welcome-footer { padding: 0 0 23px; color: #647088; font-size: 9px; font-weight: 800; letter-spacing: .12em; }
+.welcome-footer span { margin: 0 5px; color: #8569ce; }
+html[lang='hi'] .welcome-kicker, html[lang='hi'] .welcome-card-kicker { letter-spacing: 0; line-height: 1.5; }
+html[lang='hi'] .welcome-story h1 { line-height: 1.26; }
+
+/* Google and legacy backend accounts are intentionally shown separately. */
+.google-account { display: grid; gap: 12px; }
+.google-account-heading { display: flex; align-items: center; gap: 10px; }
+.google-account-icon { display: grid; place-items: center; width: 38px; height: 38px; flex: 0 0 auto; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.google-account-heading strong { display: block; color: var(--text); font-size: 13px; }
+.google-account-heading small { display: block; color: var(--text-2); font-size: 12px; }
+.google-account .google-signin { width: min(100%, 310px); }
+.google-account-note { margin: 0; color: var(--text-2); font-size: 12px; line-height: 1.55; }
+.google-account-session { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; }
+.google-account-session .pill { overflow-wrap: anywhere; }
+.backend-account { margin-top: 18px; padding-top: 15px; border-top: 1px solid var(--line); }
+.backend-account summary { color: var(--text); font-size: 13px; font-weight: 700; cursor: pointer; }
+.backend-account-content { margin-top: 13px; }
+.backend-account-content label { display: block; margin-bottom: 4px; color: var(--text-2); font-size: 12px; }
+.backend-account-fields { display: flex; flex-wrap: wrap; align-items: end; gap: 10px; }
+.backend-account-fields > div { flex: 1 1 180px; min-width: 0; }
+
+html[data-theme='dark'] .welcome-screen { background: radial-gradient(circle at 15% 12%, #292a4f 0, transparent 34%), radial-gradient(circle at 93% 88%, #173b3d 0, transparent 33%), #101425; color: #f4f3ff; }
+html[data-theme='dark'] .welcome-brand strong span, html[data-theme='dark'] .welcome-story h1 span, html[data-theme='dark'] .welcome-card-kicker { color: #c1b3ff; }
+html[data-theme='dark'] .welcome-brand small, html[data-theme='dark'] .welcome-story > p, html[data-theme='dark'] .welcome-features small, html[data-theme='dark'] .welcome-footer { color: #c0c7db; }
+html[data-theme='dark'] .welcome-card { background: #1c2135; border-color: #39415a; }
+html[data-theme='dark'] .welcome-card-intro { color: #d0d4e4; }
+html[data-theme='dark'] .welcome-privacy { background: #282e45; color: #d0d4e4; }
+html[data-theme='dark'] .welcome-privacy strong { color: #f4f3ff; }
+html[data-theme='dark'] .welcome-divider { color: #c4cbdd; }
+html[data-theme='dark'] .welcome-divider::before, html[data-theme='dark'] .welcome-divider::after { background: #3d465d; }
+html[data-theme='dark'] .google-signin-error { color: #ffb6c6; }
+
+@media (max-width: 760px) {
+  .welcome-screen { padding: 0 20px; }
+  .welcome-header { min-height: 78px; }
+  .welcome-layout { grid-template-columns: 1fr; gap: 24px; padding: 24px 0 32px; }
+  .welcome-story h1 { margin: 14px 0 8px; font-size: clamp(32px, 8vw, 42px); }
+  .welcome-story > p { font-size: 13px; }
+  .welcome-art, .welcome-features { display: none; }
+  .welcome-card { padding: 26px; }
+  .welcome-card-icon { margin-bottom: 16px; }
+  .welcome-card h2 { font-size: 26px; }
+  .welcome-card-intro { margin-bottom: 20px; }
+  .welcome-footer { padding-bottom: 20px; }
+}
+@media (max-width: 360px) {
+  .welcome-screen { padding: 0 15px; }
+  .welcome-card { padding: 22px; }
+  .welcome-brand strong { font-size: 19px; }
+  .welcome-story h1 { font-size: 31px; }
+  .welcome-guest, .google-signin-button { font-size: 12px; }
+}
