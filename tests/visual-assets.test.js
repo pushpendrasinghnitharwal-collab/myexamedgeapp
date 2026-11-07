@@ -29,8 +29,8 @@ test('the app icon set has usable standard and maskable PWA sizes', async () => 
   assert.equal(appleIcon.readUInt32BE(20), 180)
 })
 
-test('photo backgrounds resolve to optimized WebP assets', async () => {
-  const css = (await Promise.all(['src/premium.css', 'src/refresh.css'].map((path) => readFile(path, 'utf8')))).join('\n')
+test('decorative backgrounds resolve to optimized WebP assets', async () => {
+  const css = (await Promise.all(['src/premium.css', 'src/refresh.css', 'src/studio.css'].map((path) => readFile(path, 'utf8')))).join('\n')
   const urls = [...css.matchAll(/url\(['"]?(\/images\/[^'")]+)['"]?\)/g)].map((match) => match[1])
   assert.ok(new Set(urls).size >= 3)
   for (const url of new Set(urls)) {
@@ -39,6 +39,16 @@ test('photo backgrounds resolve to optimized WebP assets', async () => {
     assert.equal(image.subarray(8, 12).toString(), 'WEBP')
     assert.ok(image.length < 250_000, `${url} should remain lightweight`)
   }
+})
+
+test('decorative backgrounds are available on a fresh offline install', async () => {
+  const [worker, ...styles] = await Promise.all(
+    ['public/sw.js', 'src/premium.css', 'src/refresh.css', 'src/studio.css'].map((path) => readFile(path, 'utf8'))
+  )
+  const urls = [...styles.join('\n').matchAll(/url\(['"]?(\/images\/[^'")]+)['"]?\)/g)].map((match) => match[1])
+  assert.ok(urls.includes('/images/study-orbit.webp'))
+  assert.ok(urls.includes('/images/exam-discovery.webp'))
+  for (const url of new Set(urls)) assert.ok(worker.includes(`'${url}'`), `${url} is precached`)
 })
 
 test('production worker precaches the fingerprinted app shell', async () => {

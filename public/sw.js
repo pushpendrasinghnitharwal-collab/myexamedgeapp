@@ -1,8 +1,9 @@
-const CACHE = 'examedge-v7'
+const CACHE = 'examedge-v8'
 const CORE = [
   '/', '/index.html', '/manifest.webmanifest', '/icon.svg?v=2',
   '/icon-192.png', '/icon-512.png', '/icon-maskable-512.png', '/icon-maskable.svg?v=2', '/apple-touch-icon.png',
   '/images/dashboard-new.webp', '/images/exams-new.webp', '/images/library-new.webp',
+  '/images/study-orbit.webp', '/images/exam-discovery.webp',
 ]
 // Replaced with Vite's fingerprinted app shell during production builds.
 const BUILD_ASSETS = /* __BUILD_ASSETS__ */ []

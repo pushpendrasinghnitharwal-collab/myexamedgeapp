@@ -2,7 +2,7 @@
 :root,
 html[data-theme='light'] {
   --font: 'DM Sans', 'Noto Sans Devanagari Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --bg: #f5f7fc;
+  --bg: #f6f8fe;
   --bg-2: #fff;
   --surface: #fff;
   --surface-2: #f4f6fb;
@@ -44,8 +44,8 @@ html[data-theme='dark'] {
 
 /* The same book-and-star mark appears in the sidebar, mobile bar and app icon. */
 .ee-sidebar, html[data-theme='light'] .ee-sidebar {
-  background: linear-gradient(165deg, #261b5b 0%, #222052 58%, #143c54 100%);
-  border-right-color: #29295b;
+  background: linear-gradient(165deg, #111b3b 0%, #1a2550 58%, #103a4c 100%);
+  border-right-color: #1f3054;
   box-shadow: 6px 0 30px rgba(26, 23, 55, .06);
 }
 .ee-brand-mark {

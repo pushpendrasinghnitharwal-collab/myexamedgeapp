@@ -14,6 +14,7 @@ import './styles.css'
 import './premium.css'
 import './refresh.css'
 import './catalog.css'
+import './studio.css'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>

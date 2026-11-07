@@ -1,19 +1,20 @@
 import React, { useMemo } from 'react'
+import { ArrowRight, BarChart3, Calculator, CheckCircle2, ClipboardList, Clock3, Coins, Flame, Lock, Moon, Sparkles, Target, Trophy } from 'lucide-react'
 import { useStore, useAttemptStats, currentStreak } from '../lib/store'
 import { navigate } from '../lib/router'
 import { useL } from '../lib/i18n'
 import { examById, SUBJECTS, TOPICS } from '../data/exams'
-import { Card, CardHead, Pill, Button, Stat, Metric, Bar, EmptyState } from '../components/ui'
+import { Card, CardHead, Pill, Button, Stat, Bar } from '../components/ui'
 import { LineChart, Radar, BarList, Heatmap, Donut } from '../components/charts'
 import { shortDate, formatTime } from '../lib/utils'
 
 const BADGES = [
-  { id: 'first-test', icon: '🎯', name: { en: 'First Steps', hi: 'पहला कदम' }, desc: { en: 'Complete your first test', hi: 'पहला टेस्ट पूरा करें' }, need: (s) => s.attempts >= 1 },
-  { id: 'streak-7', icon: '🔥', name: { en: '7-Day Streak', hi: '7-दिन स्ट्रीक' }, desc: { en: 'Practise 7 days in a row', hi: 'लगातार 7 दिन अभ्यास' }, need: (s, st) => currentStreak(st.streak) >= 7 },
-  { id: 'tests-10', icon: '🏆', name: { en: 'Test Warrior', hi: 'टेस्ट योद्धा' }, desc: { en: 'Attempt 10 tests', hi: '10 टेस्ट दें' }, need: (s) => s.attempts >= 10 },
-  { id: 'accuracy-80', icon: '🎯', name: { en: 'Sharpshooter', hi: 'निशानेबाज' }, desc: { en: 'Cross 80% overall accuracy', hi: '80% सटीकता पार करें' }, need: (s) => s.accuracy >= 0.8 },
-  { id: 'quant-90', icon: '🧮', name: { en: 'Quant Ace', hi: 'क्वांट एस' }, desc: { en: '90%+ in any subject', hi: 'किसी भी विषय में 90%+' }, need: (s) => s.topics.some((t) => t.accuracy >= 0.9 && t.attempted >= 4) },
-  { id: 'night-owl', icon: '🦉', name: { en: 'Night Owl', hi: 'रात का जागरूक' }, desc: { en: 'Study after 11 PM', hi: 'रात 11 बजे के बाद पढ़ाई' }, need: (s, st) => st.attempts.some((attempt) => new Date(attempt.date).getHours() >= 23) },
+  { id: 'first-test', icon: Target, name: { en: 'First Steps', hi: 'पहला कदम' }, desc: { en: 'Complete your first test', hi: 'पहला टेस्ट पूरा करें' }, need: (s) => s.attempts >= 1 },
+  { id: 'streak-7', icon: Flame, name: { en: '7-Day Streak', hi: '7-दिन स्ट्रीक' }, desc: { en: 'Practise 7 days in a row', hi: 'लगातार 7 दिन अभ्यास' }, need: (s, st) => currentStreak(st.streak) >= 7 },
+  { id: 'tests-10', icon: Trophy, name: { en: 'Test Warrior', hi: 'टेस्ट योद्धा' }, desc: { en: 'Attempt 10 tests', hi: '10 टेस्ट दें' }, need: (s) => s.attempts >= 10 },
+  { id: 'accuracy-80', icon: Target, name: { en: 'Sharpshooter', hi: 'निशानेबाज' }, desc: { en: 'Cross 80% overall accuracy', hi: '80% सटीकता पार करें' }, need: (s) => s.accuracy >= 0.8 },
+  { id: 'quant-90', icon: Calculator, name: { en: 'Quant Ace', hi: 'क्वांट एस' }, desc: { en: '90%+ in any subject', hi: 'किसी भी विषय में 90%+' }, need: (s) => s.topics.some((t) => t.accuracy >= 0.9 && t.attempted >= 4) },
+  { id: 'night-owl', icon: Moon, name: { en: 'Night Owl', hi: 'रात का जागरूक' }, desc: { en: 'Study after 11 PM', hi: 'रात 11 बजे के बाद पढ़ाई' }, need: (s, st) => st.attempts.some((attempt) => new Date(attempt.date).getHours() >= 23) },
 ]
 
 export default function Analytics() {
@@ -63,22 +64,31 @@ export default function Analytics() {
 
   if (!state.attempts.length) {
     return (
-      <Card>
-        <EmptyState
-          icon="📊"
-          title="No analytics yet"
-          sub="Take your first test and EXAMEDGE will build your performance graph."
-          action={<Button variant="primary" onClick={() => navigate('/exams')}>Browse tests</Button>}
-        />
-      </Card>
+      <div className="analytics-empty-page page-shell">
+        <section className="analytics-empty-hero">
+          <div className="analytics-empty-copy">
+            <div className="section-kicker"><span className="kicker-dot" /> {L({ en: 'YOUR PROGRESS', hi: 'आपकी प्रगति' })}</div>
+            <h1>{L({ en: 'Every journey starts with a first step.', hi: 'हर यात्रा की शुरुआत एक कदम से होती है।' })}</h1>
+            <p>{L({ en: 'Complete your first practice set and your progress will begin to take shape here.', hi: 'अपना पहला अभ्यास सेट पूरा करें और आपकी प्रगति यहाँ दिखाई देने लगेगी।' })}</p>
+            <button className="exam-primary" onClick={() => navigate('/exams?availability=practice')}>{L({ en: 'Explore available practice', hi: 'उपलब्ध अभ्यास देखें' })}<ArrowRight size={16} /></button>
+          </div>
+          <div className="analytics-empty-art" aria-hidden="true"><span><BarChart3 size={46} strokeWidth={1.5} /></span><i><Sparkles size={20} /></i></div>
+        </section>
+        <div className="analytics-empty-heading"><div className="section-kicker">{L({ en: 'A CLEARER PICTURE', hi: 'एक साफ़ तस्वीर' })}</div><h2>{L({ en: 'Your effort, in focus', hi: 'आपकी मेहनत, एक नज़र में' })}</h2><p>{L({ en: 'These insights use only the practice you complete on this device.', hi: 'ये आँकड़े इसी डिवाइस पर पूरे किए गए अभ्यास से बनते हैं।' })}</p></div>
+        <div className="analytics-empty-grid">
+          <div className="analytics-insight insight-indigo"><span><ClipboardList size={21} /></span><h3>{L({ en: 'Your test history', hi: 'आपका टेस्ट इतिहास' })}</h3><p>{L({ en: 'Review your completed sets and see trends after two tests.', hi: 'पूरे किए सेट देखें और दो टेस्ट के बाद रुझान जानें।' })}</p></div>
+          <div className="analytics-insight insight-teal"><span><CheckCircle2 size={21} /></span><h3>{L({ en: 'Accuracy at a glance', hi: 'सटीकता एक नज़र में' })}</h3><p>{L({ en: 'See how many questions you answered correctly.', hi: 'देखें कि आपने कितने प्रश्न सही किए।' })}</p></div>
+          <div className="analytics-insight insight-peach"><span><Target size={21} /></span><h3>{L({ en: 'Find your focus', hi: 'अपना ध्यान चुनें' })}</h3><p>{L({ en: 'Discover the topics you may want to revisit.', hi: 'उन टॉपिक को पहचानें जिन्हें आप दोहराना चाहें।' })}</p></div>
+        </div>
+      </div>
     )
   }
 
   return (
-    <div className="stack" style={{ gap: 18 }}>
+    <div className="analytics-page page-shell stack" style={{ gap: 18 }}>
       <div className="page-head">
         <div>
-          <div className="page-title">{L({ en: 'Your performance', hi: 'आपका प्रदर्शन' })}</div>
+          <h1 className="page-title">{L({ en: 'Your performance', hi: 'आपका प्रदर्शन' })}</h1>
           <div className="page-sub">
             {L({
               en: 'Every question you solve makes this page sharper. Here is your complete prep intelligence.',
@@ -92,10 +102,10 @@ export default function Analytics() {
       </div>
 
       <div className="grid g4">
-        <Card><Stat icon="📝" value={stats.attempts} label={L({ en: 'Tests taken', hi: 'कुल टेस्ट' })} /></Card>
-        <Card><Stat icon="✅" value={stats.totalCorrect} label={L({ en: 'Correct answers', hi: 'सही उत्तर' })} /></Card>
-        <Card><Stat icon="🎯" value={`${Math.round(stats.accuracy * 100)}%`} label={L({ en: 'Accuracy', hi: 'सटीकता' })} /></Card>
-        <Card><Stat icon="⏱" value={`${Math.round(stats.totalTime / 3600)}h ${Math.round((stats.totalTime % 3600) / 60)}m`} label={L({ en: 'Time invested', hi: 'कुल समय' })} /></Card>
+        <Card><Stat icon={<ClipboardList size={20} aria-hidden="true" />} value={stats.attempts} label={L({ en: 'Tests taken', hi: 'कुल टेस्ट' })} /></Card>
+        <Card><Stat icon={<CheckCircle2 size={20} aria-hidden="true" />} value={stats.totalCorrect} label={L({ en: 'Correct answers', hi: 'सही उत्तर' })} /></Card>
+        <Card><Stat icon={<Target size={20} aria-hidden="true" />} value={`${Math.round(stats.accuracy * 100)}%`} label={L({ en: 'Accuracy', hi: 'सटीकता' })} /></Card>
+        <Card><Stat icon={<Clock3 size={20} aria-hidden="true" />} value={`${Math.round(stats.totalTime / 3600)}h ${Math.round((stats.totalTime % 3600) / 60)}m`} label={L({ en: 'Time invested', hi: 'कुल समय' })} /></Card>
       </div>
 
       <div className="grid g-main">
@@ -114,7 +124,7 @@ export default function Analytics() {
                 ]}
               />
             ) : (
-              <div className="tiny muted">Take at least two tests to see the trend.</div>
+              <div className="tiny muted">{L({ en: 'Take at least two tests to see the trend.', hi: 'रुझान देखने के लिए कम से कम दो टेस्ट दें।' })}</div>
             )}
           </Card>
 
@@ -127,7 +137,7 @@ export default function Analytics() {
               {subjectRadar.length >= 3 ? (
                 <Radar data={subjectRadar} />
               ) : (
-                <div className="tiny muted">Attempt more subjects to unlock the radar map.</div>
+                <div className="tiny muted">{L({ en: 'Attempt more subjects to see the radar map.', hi: 'रडार मैप देखने के लिए और विषयों का अभ्यास करें।' })}</div>
               )}
             </div>
           </Card>
@@ -155,7 +165,7 @@ export default function Analytics() {
 
           <Card>
             <CardHead title={L({ en: 'Per-exam breakdown', hi: 'परीक्षा-वार विश्लेषण' })} />
-            <div style={{ overflowX: 'auto' }}>
+            <div style={{ overflowX: 'auto' }} tabIndex={0} role="region" aria-label={L({ en: 'Per-exam breakdown', hi: 'परीक्षा-वार विश्लेषण' })}>
               <table className="table">
                 <thead>
                   <tr>
@@ -236,13 +246,14 @@ export default function Analytics() {
               {BADGES.map((b) => {
                 const earned = b.need(stats, state)
                 const claimed = state.achievements.includes(b.id)
+                const BadgeIcon = b.icon
                 return (
                   <div key={b.id} className="row" style={{ gap: 11 }}>
                     <div
                       className="stat-ico"
-                      style={{ width: 36, height: 36, fontSize: 16, opacity: earned ? 1 : 0.65, background: earned ? 'var(--grad)' : 'var(--surface-3)' }}
+                      style={{ width: 36, height: 36, opacity: earned ? 1 : 0.7, color: earned ? '#fff' : 'var(--text-2)', background: earned ? 'var(--grad)' : 'var(--surface-3)' }}
                     >
-                      {b.icon}
+                      <BadgeIcon size={18} aria-hidden="true" />
                     </div>
                     <div style={{ flex: 1, minWidth: 0 }}>
                       <div className="small bold">{L(b.name)}</div>
@@ -252,10 +263,10 @@ export default function Analytics() {
                       claimed ? (
                         <Pill tone="success">✓</Pill>
                       ) : (
-                        <button className="pill gold" onClick={() => claimAchievement(b.id)} aria-label={L({ en: `+25 🪙: Claim ${L(b.name)} reward`, hi: `+25 🪙: ${L(b.name)} का पुरस्कार लें` })}>+25 🪙</button>
+                        <button className="pill gold" onClick={() => claimAchievement(b.id)} aria-label={L({ en: `Claim ${L(b.name)} reward: 25 coins`, hi: `${L(b.name)} का पुरस्कार लें: 25 कॉइन` })}>+25 <Coins size={13} aria-hidden="true" /></button>
                       )
                     ) : (
-                      <Pill>🔒</Pill>
+                      <Pill><Lock size={13} aria-hidden="true" />{L({ en: 'Locked', hi: 'लॉक' })}</Pill>
                     )}
                   </div>
                 )
