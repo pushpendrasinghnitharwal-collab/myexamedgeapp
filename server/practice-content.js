@@ -6,6 +6,7 @@ import { checkQuantAnswers, verifyCheckArithmetic } from './practice-answer-chec
 export const PRACTICE_PACKS = {
   'ssc-cgl-2026-tier1-practice-v1': new URL('./data/ssc-cgl-2026-tier1-practice/', import.meta.url),
   'ssc-cgl-2026-tier1-practice-v2': new URL('./data/ssc-cgl-2026-tier1-practice-v2/', import.meta.url),
+  'ssc-cgl-2026-tier1-practice-v3': new URL('./data/ssc-cgl-2026-tier1-practice-v3/', import.meta.url),
 }
 export const PRACTICE_PACK_KEY = 'ssc-cgl-2026-tier1-practice-v1'
 export const PRACTICE_PACK_KEYS = Object.keys(PRACTICE_PACKS)

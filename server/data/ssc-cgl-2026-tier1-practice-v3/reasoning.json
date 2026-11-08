@@ -1,0 +1,980 @@
+{
+  "sets": [],
+  "questions": [
+    {
+      "qid": "reasoning3-01",
+      "subject": "Reasoning",
+      "topic": "Analogy",
+      "sub_topic": "Semantic analogy",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Sculptor : Chisel :: Surgeon : ?",
+      "text_hi": "मूर्तिकार : छेनी :: सर्जन : ?",
+      "options": [
+        {
+          "en": "Scalpel",
+          "hi": "स्केलपेल"
+        },
+        {
+          "en": "Medicine",
+          "hi": "दवा"
+        },
+        {
+          "en": "Hospital",
+          "hi": "अस्पताल"
+        },
+        {
+          "en": "Nurse",
+          "hi": "नर्स"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "A sculptor uses a chisel as a tool; a surgeon uses a scalpel as a tool.",
+      "solution_hi": "मूर्तिकार औजार के रूप में छेनी का उपयोग करता है; सर्जन औजार के रूप में स्केलपेल का उपयोग करता है।",
+      "trick_en": "The relation is worker : characteristic tool.",
+      "trick_hi": "संबंध श्रमिक : विशिष्ट औजार का है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-02",
+      "subject": "Reasoning",
+      "topic": "Analogy",
+      "sub_topic": "Symbolic and number analogy",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "6 : 216 :: 8 : ?",
+      "text_hi": "6 : 216 :: 8 : ?",
+      "options": [
+        {
+          "en": "512",
+          "hi": "512"
+        },
+        {
+          "en": "64",
+          "hi": "64"
+        },
+        {
+          "en": "448",
+          "hi": "448"
+        },
+        {
+          "en": "576",
+          "hi": "576"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "6^3 = 216, so the second term is the cube of the first. 8^3 = 512.",
+      "solution_hi": "6^3 = 216, इसलिए दूसरा पद पहले का घन है। 8^3 = 512।",
+      "trick_en": "Recognise the cube relation; do not square the number.",
+      "trick_hi": "घन का संबंध पहचानें; संख्या का वर्ग न करें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-03",
+      "subject": "Reasoning",
+      "topic": "Analogy",
+      "sub_topic": "Semantic analogy",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Bird : Nest :: Bee : ?",
+      "text_hi": "पक्षी : घोंसला :: मधुमक्खी : ?",
+      "options": [
+        {
+          "en": "Hive",
+          "hi": "छत्ता"
+        },
+        {
+          "en": "Web",
+          "hi": "जाल"
+        },
+        {
+          "en": "Burrow",
+          "hi": "बिल"
+        },
+        {
+          "en": "Den",
+          "hi": "गुफा"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "A bird lives in a nest; a bee lives in a hive.",
+      "solution_hi": "पक्षी घोंसले में रहता है; मधुमक्खी छत्ते में रहती है।",
+      "trick_en": "Name the animal's usual home.",
+      "trick_hi": "जानवर के सामान्य आवास का नाम बताएँ।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-04",
+      "subject": "Reasoning",
+      "topic": "Classification",
+      "sub_topic": "Symbolic and number classification",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which number does not fit the pattern?",
+      "text_hi": "कौन-सी संख्या पैटर्न में फिट नहीं बैठती?",
+      "options": [
+        {
+          "en": "64",
+          "hi": "64"
+        },
+        {
+          "en": "81",
+          "hi": "81"
+        },
+        {
+          "en": "100",
+          "hi": "100"
+        },
+        {
+          "en": "110",
+          "hi": "110"
+        }
+      ],
+      "correct": 3,
+      "solution_en": "64 = 8^2, 81 = 9^2 and 100 = 10^2 are perfect squares. 110 is not a perfect square.",
+      "solution_hi": "64 = 8^2, 81 = 9^2 और 100 = 10^2 पूर्ण वर्ग हैं। 110 पूर्ण वर्ग नहीं है।",
+      "trick_en": "Check the squares between 10^2 = 100 and 11^2 = 121; 110 is not one of them.",
+      "trick_hi": "10^2 = 100 और 11^2 = 121 के बीच के वर्ग देखें; 110 उनमें नहीं है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-05",
+      "subject": "Reasoning",
+      "topic": "Classification",
+      "sub_topic": "Semantic classification",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which one does not belong to the group: Copper, Iron, Silver, Plastic?",
+      "text_hi": "इनमें से कौन समूह से संबंधित नहीं है: Copper, Iron, Silver, Plastic?",
+      "options": [
+        {
+          "en": "Copper",
+          "hi": "तांबा"
+        },
+        {
+          "en": "Iron",
+          "hi": "लोहा"
+        },
+        {
+          "en": "Silver",
+          "hi": "चांदी"
+        },
+        {
+          "en": "Plastic",
+          "hi": "प्लास्टिक"
+        }
+      ],
+      "correct": 3,
+      "solution_en": "Copper, iron and silver are metals; plastic is a non-metal.",
+      "solution_hi": "तांबा, लोहा और चांदी धातुएँ हैं; प्लास्टिक अधातु है।",
+      "trick_en": "Classify by material type: metal versus non-metal.",
+      "trick_hi": "पदार्थ के प्रकार से वर्गीकृत करें: धातु बनाम अधातु।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-06",
+      "subject": "Reasoning",
+      "topic": "Series",
+      "sub_topic": "Number series",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the next term: 2, 5, 10, 17, 26, ?",
+      "text_hi": "अगला पद ज्ञात करें: 2, 5, 10, 17, 26, ?",
+      "options": [
+        {
+          "en": "35",
+          "hi": "35"
+        },
+        {
+          "en": "36",
+          "hi": "36"
+        },
+        {
+          "en": "37",
+          "hi": "37"
+        },
+        {
+          "en": "38",
+          "hi": "38"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The terms are n^2 + 1 for n = 1, 2, 3, 4, 5: 2, 5, 10, 17, 26. The next is 6^2 + 1 = 37.",
+      "solution_hi": "पद n = 1, 2, 3, 4, 5 के लिए n^2 + 1 हैं: 2, 5, 10, 17, 26। अगला पद 6^2 + 1 = 37 है।",
+      "trick_en": "Look at the differences 3, 5, 7, 9 — they increase by 2, so the next difference is 11.",
+      "trick_hi": "अंतर 3, 5, 7, 9 हैं — हर बार 2 बढ़ते हैं, इसलिए अगला अंतर 11 होगा।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-07",
+      "subject": "Reasoning",
+      "topic": "Series",
+      "sub_topic": "Number series",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the next term: 1, 8, 27, 64, ?",
+      "text_hi": "अगला पद ज्ञात करें: 1, 8, 27, 64, ?",
+      "options": [
+        {
+          "en": "81",
+          "hi": "81"
+        },
+        {
+          "en": "100",
+          "hi": "100"
+        },
+        {
+          "en": "125",
+          "hi": "125"
+        },
+        {
+          "en": "144",
+          "hi": "144"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The terms are 1^3, 2^3, 3^3, 4^3. The next is 5^3 = 125.",
+      "solution_hi": "पद 1^3, 2^3, 3^3, 4^3 हैं। अगला पद 5^3 = 125 है।",
+      "trick_en": "Recognise perfect cubes early.",
+      "trick_hi": "पूर्ण घनों को जल्दी पहचानें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-08",
+      "subject": "Reasoning",
+      "topic": "Series",
+      "sub_topic": "Figural series",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the next term: AZ, CX, EV, ?",
+      "text_hi": "अगला पद ज्ञात करें: AZ, CX, EV, ?",
+      "options": [
+        {
+          "en": "GT",
+          "hi": "GT"
+        },
+        {
+          "en": "FT",
+          "hi": "FT"
+        },
+        {
+          "en": "GU",
+          "hi": "GU"
+        },
+        {
+          "en": "HS",
+          "hi": "HS"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The first letters move A → C → E → G (+2) and the second letters move Z → X → V → T (−2). The next pair is GT.",
+      "solution_hi": "पहले अक्षर A → C → E → G (+2) और दूसरे अक्षर Z → X → V → T (−2) चलते हैं। अगली जोड़ी GT है।",
+      "trick_en": "Track the two letter positions separately.",
+      "trick_hi": "दोनों अक्षरों की स्थिति अलग-अलग देखें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-09",
+      "subject": "Reasoning",
+      "topic": "Operations and Coding",
+      "sub_topic": "Coding and decoding",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "If CAT = 24 and DOG = 26 using letter values A = 1, B = 2, ..., Z = 26, then BIRD = ?",
+      "text_hi": "यदि A = 1, B = 2, ..., Z = 26 मानों से CAT = 24 और DOG = 26 है, तो BIRD = ?",
+      "options": [
+        {
+          "en": "33",
+          "hi": "33"
+        },
+        {
+          "en": "34",
+          "hi": "34"
+        },
+        {
+          "en": "35",
+          "hi": "35"
+        },
+        {
+          "en": "36",
+          "hi": "36"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "CAT = 3 + 1 + 20 = 24 and DOG = 4 + 15 + 7 = 26. BIRD = 2 + 9 + 18 + 4 = 33.",
+      "solution_hi": "CAT = 3 + 1 + 20 = 24 और DOG = 4 + 15 + 7 = 26। BIRD = 2 + 9 + 18 + 4 = 33।",
+      "trick_en": "Add the alphabet positions of every letter.",
+      "trick_hi": "हर अक्षर की वर्णमाला स्थिति जोड़ें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-10",
+      "subject": "Reasoning",
+      "topic": "Operations and Coding",
+      "sub_topic": "Coding and decoding",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "In a certain code, MOTHER is written as NPUIFS. How is FATHER written in the same code?",
+      "text_hi": "एक निश्चित कूट में MOTHER को NPUIFS लिखा जाता है। उसी कूट में FATHER कैसे लिखा जाएगा?",
+      "options": [
+        {
+          "en": "GBUIFS",
+          "hi": "GBUIFS"
+        },
+        {
+          "en": "GBUJFS",
+          "hi": "GBUJFS"
+        },
+        {
+          "en": "GATIFS",
+          "hi": "GATIFS"
+        },
+        {
+          "en": "GBTIFS",
+          "hi": "GBTIFS"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Each letter moves one step forward: M→N, O→P, T→U, H→I, E→F, R→S. Applying the same rule to FATHER gives GBUIFS.",
+      "solution_hi": "प्रत्येक अक्षर एक स्थान आगे बढ़ता है: M→N, O→P, T→U, H→I, E→F, R→S। FATHER पर वही नियम लगाने से GBUIFS मिलता है।",
+      "trick_en": "Apply +1 uniformly to every letter.",
+      "trick_hi": "हर अक्षर पर एकसमान +1 लगाएँ।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-11",
+      "subject": "Reasoning",
+      "topic": "Operations and Coding",
+      "sub_topic": "Symbolic operations",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "If 3 * 4 = 25 and 5 * 6 = 61, then 7 * 2 = ?",
+      "text_hi": "यदि 3 * 4 = 25 और 5 * 6 = 61 है, तो 7 * 2 = ?",
+      "options": [
+        {
+          "en": "49",
+          "hi": "49"
+        },
+        {
+          "en": "51",
+          "hi": "51"
+        },
+        {
+          "en": "53",
+          "hi": "53"
+        },
+        {
+          "en": "55",
+          "hi": "55"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The rule is a * b = a^2 + b^2: 3^2 + 4^2 = 25 and 5^2 + 6^2 = 61. Therefore 7 * 2 = 49 + 4 = 53.",
+      "solution_hi": "नियम है a * b = a^2 + b^2: 3^2 + 4^2 = 25 और 5^2 + 6^2 = 61। इसलिए 7 * 2 = 49 + 4 = 53।",
+      "trick_en": "Test squares first; the given results are sums of two squares.",
+      "trick_hi": "पहले वर्गों की जाँच करें; दिए परिणाम दो वर्गों का योग हैं।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-12",
+      "subject": "Reasoning",
+      "topic": "Spatial and Figural Reasoning",
+      "sub_topic": "Space orientation",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "A person facing North turns 90° clockwise and then 180°. Which direction is the person facing now?",
+      "text_hi": "उत्तर की ओर मुख किया व्यक्ति 90° दक्षिणावर्त और फिर 180° घूमता है। अब वह किस दिशा की ओर मुख किए है?",
+      "options": [
+        {
+          "en": "West",
+          "hi": "पश्चिम"
+        },
+        {
+          "en": "East",
+          "hi": "पूर्व"
+        },
+        {
+          "en": "North",
+          "hi": "उत्तर"
+        },
+        {
+          "en": "South",
+          "hi": "दक्षिण"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Facing North, a 90° clockwise turn faces East. A further 180° turn from East faces West.",
+      "solution_hi": "उत्तर की ओर से 90° दक्षिणावर्त घूमने पर पूर्व की ओर मुख होता है। पूर्व से 180° घूमने पर पश्चिम की ओर मुख होता है।",
+      "trick_en": "Clockwise is right: North → East; a 180° turn reverses it.",
+      "trick_hi": "दक्षिणावर्त दाएँ है: उत्तर → पूर्व; 180° घूमने पर उलटी दिशा।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-13",
+      "subject": "Reasoning",
+      "topic": "Spatial and Figural Reasoning",
+      "sub_topic": "Punched hole and pattern folding",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "A 5 × 5 × 5 cube is painted on all faces and cut into 125 unit cubes. How many unit cubes have exactly one face painted?",
+      "text_hi": "5 × 5 × 5 का एक घन सभी फलकों पर रंगा जाता है और 125 इकाई घनों में काटा जाता है। कितने इकाई घनों का ठीक एक फलक रंगा है?",
+      "options": [
+        {
+          "en": "36",
+          "hi": "36"
+        },
+        {
+          "en": "48",
+          "hi": "48"
+        },
+        {
+          "en": "54",
+          "hi": "54"
+        },
+        {
+          "en": "72",
+          "hi": "72"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "On each face, the cubes with exactly one painted face form a 3 × 3 inner square, giving 9 per face. For 6 faces, 6 × 9 = 54.",
+      "solution_hi": "प्रत्येक फलक पर ठीक एक रंगा फलक वाले घन 3 × 3 का आंतरिक वर्ग बनाते हैं, यानी प्रति फलक 9। 6 फलकों के लिए 6 × 9 = 54।",
+      "trick_en": "Exactly one face painted = 6(n − 2)^2. Here 6 × 3^2 = 54.",
+      "trick_hi": "ठीक एक फलक रंगा = 6(n − 2)^2। यहाँ 6 × 3^2 = 54।",
+      "ideal_time_seconds": 60,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-14",
+      "subject": "Reasoning",
+      "topic": "Spatial and Figural Reasoning",
+      "sub_topic": "Space visualization",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "A clock shows 7:20. What time will it appear in a vertical mirror?",
+      "text_hi": "एक घड़ी 7:20 दिखाती है। ऊर्ध्वाधर दर्पण में क्या समय दिखाई देगा?",
+      "options": [
+        {
+          "en": "4:40",
+          "hi": "4:40"
+        },
+        {
+          "en": "5:40",
+          "hi": "5:40"
+        },
+        {
+          "en": "4:20",
+          "hi": "4:20"
+        },
+        {
+          "en": "3:40",
+          "hi": "3:40"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "For a mirror image of a clock, subtract the given time from 11:60. 11:60 − 7:20 = 4:40.",
+      "solution_hi": "घड़ी के दर्पण प्रतिबिंब के लिए दिए समय को 11:60 से घटाएँ। 11:60 − 7:20 = 4:40।",
+      "trick_en": "Borrow 60 minutes from 11, not 12.",
+      "trick_hi": "11 से 60 मिनट उधार लें, 12 से नहीं।",
+      "ideal_time_seconds": 60,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-15",
+      "subject": "Reasoning",
+      "topic": "Logical Reasoning",
+      "sub_topic": "Problem solving",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "In a row of 40 students, A is 15th from the left and B is 20th from the right. How many students sit between A and B?",
+      "text_hi": "40 विद्यार्थियों की पंक्ति में A बाएँ से 15वें और B दाएँ से 20वें स्थान पर है। A और B के बीच कितने विद्यार्थी हैं?",
+      "options": [
+        {
+          "en": "4",
+          "hi": "4"
+        },
+        {
+          "en": "5",
+          "hi": "5"
+        },
+        {
+          "en": "6",
+          "hi": "6"
+        },
+        {
+          "en": "7",
+          "hi": "7"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "B's position from the left is 40 − 20 + 1 = 21. Students between positions 15 and 21 = 21 − 15 − 1 = 5.",
+      "solution_hi": "B का बाएँ से स्थान 40 − 20 + 1 = 21 है। स्थान 15 और 21 के बीच विद्यार्थी = 21 − 15 − 1 = 5।",
+      "trick_en": "Convert both positions to the same side, then subtract 1.",
+      "trick_hi": "दोनों स्थानों को एक ही ओर से गिनें, फिर 1 घटाएँ।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-16",
+      "subject": "Reasoning",
+      "topic": "Logical Reasoning",
+      "sub_topic": "Drawing inferences",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Pointing to a woman, a man says, 'She is the daughter of my grandfather's only son.' How is the woman related to the man?",
+      "text_hi": "एक महिला की ओर इशारा करते हुए एक पुरुष कहता है, 'वह मेरे दादा के इकलौते बेटे की बेटी है।' वह महिला उस पुरुष से किस प्रकार संबंधित है?",
+      "options": [
+        {
+          "en": "Sister",
+          "hi": "बहन"
+        },
+        {
+          "en": "Mother",
+          "hi": "माँ"
+        },
+        {
+          "en": "Aunt",
+          "hi": "बुआ"
+        },
+        {
+          "en": "Cousin",
+          "hi": "चचेरी बहन"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The grandfather's only son is the man's father. His daughter is the man's sister.",
+      "solution_hi": "दादा का इकलौता बेटा उस पुरुष का पिता है। उसकी बेटी उस पुरुष की बहन है।",
+      "trick_en": "Resolve the chain from the inside: grandfather → only son → daughter.",
+      "trick_hi": "श्रृंखला को अंदर से हल करें: दादा → इकलौता बेटा → बेटी।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-17",
+      "subject": "Reasoning",
+      "topic": "Logical Reasoning",
+      "sub_topic": "Problem solving",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "A person walks 5 km north, turns right and walks 3 km, then turns right again and walks 5 km. How far is the person from the starting point?",
+      "text_hi": "एक व्यक्ति 5 किमी उत्तर चलता है, दाएँ मुड़कर 3 किमी चलता है, फिर दाएँ मुड़कर 5 किमी चलता है। वह प्रारंभ बिंदु से कितनी दूरी पर है?",
+      "options": [
+        {
+          "en": "3 km",
+          "hi": "3 किमी"
+        },
+        {
+          "en": "5 km",
+          "hi": "5 किमी"
+        },
+        {
+          "en": "8 km",
+          "hi": "8 किमी"
+        },
+        {
+          "en": "13 km",
+          "hi": "13 किमी"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The north and south movements of 5 km cancel each other, leaving only the 3 km eastward movement. The person is 3 km from the start.",
+      "solution_hi": "5 किमी उत्तर और 5 किमी दक्षिण एक-दूसरे को काट देते हैं, केवल 3 किमी पूर्व की चाल बचती है। व्यक्ति प्रारंभ से 3 किमी दूर है।",
+      "trick_en": "The two 5 km moves are opposite, so only the sideways 3 km remains.",
+      "trick_hi": "दोनों 5 किमी चालें विपरीत हैं, इसलिए केवल 3 किमी की बगल की चाल बचती है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-18",
+      "subject": "Reasoning",
+      "topic": "Intelligence",
+      "sub_topic": "Emotional intelligence",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "A colleague presents your idea as their own in a meeting. What is the most emotionally intelligent response?",
+      "text_hi": "एक सहकर्मी बैठक में आपके विचार को अपना बताकर प्रस्तुत करता है। सबसे भावनात्मक रूप से बुद्धिमान प्रतिक्रिया क्या होगी?",
+      "options": [
+        {
+          "en": "Calmly add the missing context and credit, then focus the discussion on the solution",
+          "hi": "शांत रहकर छूटा संदर्भ और श्रेय जोड़ें, फिर चर्चा को समाधान पर केंद्रित करें"
+        },
+        {
+          "en": "Interrupt and accuse the colleague in front of everyone",
+          "hi": "सबके सामने टोककर सहकर्मी पर आरोप लगाएँ"
+        },
+        {
+          "en": "Say nothing and stop contributing to the project",
+          "hi": "कुछ न कहें और परियोजना में योगदान देना बंद कर दें"
+        },
+        {
+          "en": "Leak the colleague's private messages to the team",
+          "hi": "सहकर्मी के निजी संदेश टीम को दिखा दें"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "A calm, factual clarification protects your contribution without escalating conflict, and refocusing on the solution keeps the team productive.",
+      "solution_hi": "शांत और तथ्यात्मक स्पष्टीकरण आपके योगदान की रक्षा करता है, विवाद नहीं बढ़ाता, और समाधान पर ध्यान केंद्रित रखता है।",
+      "trick_en": "Choose the option that is calm, factual and team-focused.",
+      "trick_hi": "वह विकल्प चुनें जो शांत, तथ्यात्मक और टीम-केंद्रित हो।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-19",
+      "subject": "Reasoning",
+      "topic": "General Intelligence",
+      "sub_topic": "Similarities and differences",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which number is different from the others: 17, 23, 29, 35?",
+      "text_hi": "इनमें से कौन-सी संख्या अन्य से भिन्न है: 17, 23, 29, 35?",
+      "options": [
+        {
+          "en": "17",
+          "hi": "17"
+        },
+        {
+          "en": "23",
+          "hi": "23"
+        },
+        {
+          "en": "29",
+          "hi": "29"
+        },
+        {
+          "en": "35",
+          "hi": "35"
+        }
+      ],
+      "correct": 3,
+      "solution_en": "17, 23 and 29 are prime numbers; 35 = 5 × 7 is composite.",
+      "solution_hi": "17, 23 और 29 अभाज्य संख्याएँ हैं; 35 = 5 × 7 भाज्य है।",
+      "trick_en": "Test divisibility by small primes; 35 is divisible by 5 and 7.",
+      "trick_hi": "छोटी अभाज्य संख्याओं से विभाज्यता जाँचें; 35, 5 और 7 से विभाज्य है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-20",
+      "subject": "Reasoning",
+      "topic": "General Intelligence",
+      "sub_topic": "Analysis and judgment",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Arrange the words in the order in which they appear in a dictionary: Nation, Native, Natural, Nature.",
+      "text_hi": "शब्दों को शब्दकोश के क्रम में व्यवस्थित करें: Nation, Native, Natural, Nature.",
+      "options": [
+        {
+          "en": "Nation, Native, Natural, Nature",
+          "hi": "Nation, Native, Natural, Nature"
+        },
+        {
+          "en": "Native, Nation, Natural, Nature",
+          "hi": "Native, Nation, Natural, Nature"
+        },
+        {
+          "en": "Nation, Natural, Native, Nature",
+          "hi": "Nation, Natural, Native, Nature"
+        },
+        {
+          "en": "Nation, Native, Nature, Natural",
+          "hi": "Nation, Native, Nature, Natural"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Compare letter by letter: Nati-o-n comes before Nati-v-e, and Natur-a-l comes before Natur-e. The order is Nation, Native, Natural, Nature.",
+      "solution_hi": "अक्षर दर अक्षर तुलना करें: Nati-o-n, Nati-v-e से पहले आता है, और Natur-a-l, Natur-e से पहले। क्रम है Nation, Native, Natural, Nature।",
+      "trick_en": "At the first differing letter, compare alphabetically: o < v and a < e.",
+      "trick_hi": "पहले भिन्न अक्षर पर वर्णमाला क्रम देखें: o < v और a < e।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-21",
+      "subject": "Reasoning",
+      "topic": "General Intelligence",
+      "sub_topic": "Arithmetical reasoning",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "A father is four times as old as his son. After 10 years, he will be twice as old as his son. What is the son's present age?",
+      "text_hi": "एक पिता अपने बेटे की आयु का चार गुना है। 10 वर्ष बाद वह अपने बेटे की आयु का दोगुना होगा। बेटे की वर्तमान आयु कितनी है?",
+      "options": [
+        {
+          "en": "5 years",
+          "hi": "5 वर्ष"
+        },
+        {
+          "en": "8 years",
+          "hi": "8 वर्ष"
+        },
+        {
+          "en": "10 years",
+          "hi": "10 वर्ष"
+        },
+        {
+          "en": "12 years",
+          "hi": "12 वर्ष"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Let the son's age be x and the father's 4x. After 10 years: 4x + 10 = 2(x + 10). This gives 4x + 10 = 2x + 20, so x = 5.",
+      "solution_hi": "मानें बेटे की आयु x और पिता की 4x है। 10 वर्ष बाद: 4x + 10 = 2(x + 10)। इससे 4x + 10 = 2x + 20, अर्थात x = 5।",
+      "trick_en": "Apply the 10-year change to both ages; then solve the linear equation.",
+      "trick_hi": "10 वर्ष का परिवर्तन दोनों आयु पर लगाएँ; फिर रैखिक समीकरण हल करें।",
+      "ideal_time_seconds": 60,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-22",
+      "subject": "Reasoning",
+      "topic": "General Intelligence",
+      "sub_topic": "Arithmetical reasoning",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "If 1 January 2024 was a Monday, what day was 1 January 2025?",
+      "text_hi": "यदि 1 जनवरी 2024 को सोमवार था, तो 1 जनवरी 2025 को कौन-सा दिन था?",
+      "options": [
+        {
+          "en": "Tuesday",
+          "hi": "मंगलवार"
+        },
+        {
+          "en": "Wednesday",
+          "hi": "बुधवार"
+        },
+        {
+          "en": "Thursday",
+          "hi": "गुरुवार"
+        },
+        {
+          "en": "Friday",
+          "hi": "शुक्रवार"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "2024 is a leap year, so it has 366 days, which is 52 weeks and 2 extra days. Monday + 2 days = Wednesday.",
+      "solution_hi": "2024 लीप वर्ष है, इसलिए उसमें 366 दिन यानी 52 सप्ताह और 2 अतिरिक्त दिन हैं। सोमवार + 2 दिन = बुधवार।",
+      "trick_en": "Leap year shifts the next year's same date by 2 days; a normal year shifts by 1.",
+      "trick_hi": "लीप वर्ष अगले वर्ष की उसी तारीख को 2 दिन आगे बढ़ाता है; सामान्य वर्ष 1 दिन।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-23",
+      "subject": "Reasoning",
+      "topic": "Matching and Indexing",
+      "sub_topic": "Indexing",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the next term: A, C, F, J, ?",
+      "text_hi": "अगला पद ज्ञात करें: A, C, F, J, ?",
+      "options": [
+        {
+          "en": "M",
+          "hi": "M"
+        },
+        {
+          "en": "N",
+          "hi": "N"
+        },
+        {
+          "en": "O",
+          "hi": "O"
+        },
+        {
+          "en": "P",
+          "hi": "P"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The positions are 1, 3, 6, 10 — differences 2, 3, 4. The next difference is 5, so the next position is 15, which is O.",
+      "solution_hi": "स्थितियाँ 1, 3, 6, 10 हैं — अंतर 2, 3, 4। अगला अंतर 5 है, इसलिए अगली स्थिति 15 यानी O है।",
+      "trick_en": "The differences increase by 1 each time; add 5 to 10.",
+      "trick_hi": "अंतर हर बार 1 बढ़ता है; 10 में 5 जोड़ें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-24",
+      "subject": "Reasoning",
+      "topic": "Matching and Indexing",
+      "sub_topic": "Address matching",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which address refers to the same location as '14, Rose Avenue, Pune 411001'?",
+      "text_hi": "कौन-सा पता '14, Rose Avenue, Pune 411001' के समान स्थान को दर्शाता है?",
+      "options": [
+        {
+          "en": "14, Rose Ave, Pune-411001",
+          "hi": "14, Rose Ave, Pune-411001"
+        },
+        {
+          "en": "41, Rose Avenue, Pune 411001",
+          "hi": "41, Rose Avenue, Pune 411001"
+        },
+        {
+          "en": "14, Rose Avenue, Mumbai 411001",
+          "hi": "14, Rose Avenue, Mumbai 411001"
+        },
+        {
+          "en": "14, Park Avenue, Pune 411001",
+          "hi": "14, Park Avenue, Pune 411001"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Only the first option keeps the same house number (14), road (Rose Avenue), city (Pune) and PIN (411001).",
+      "solution_hi": "केवल पहले विकल्प में वही मकान संख्या (14), सड़क (Rose Avenue), शहर (Pune) और पिन (411001) हैं।",
+      "trick_en": "Match all four fields; one changed field makes the address different.",
+      "trick_hi": "चारों क्षेत्र मिलाएँ; एक बदलने पर पता भिन्न हो जाता है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning3-25",
+      "subject": "Reasoning",
+      "topic": "Matching and Indexing",
+      "sub_topic": "Centre and roll number classification",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Roll numbers 1–60 belong to Section A, 61–120 to Section B and 121–180 to Section C. To which section does roll number 135 belong?",
+      "text_hi": "अंक 1−60 धारा A, 61−120 धारा B और 121−180 धारा C के हैं। अंक 135 किस धारा में है?",
+      "options": [
+        {
+          "en": "Section A",
+          "hi": "धारा A"
+        },
+        {
+          "en": "Section B",
+          "hi": "धारा B"
+        },
+        {
+          "en": "Section C",
+          "hi": "धारा C"
+        },
+        {
+          "en": "Section D",
+          "hi": "धारा D"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "135 lies between 121 and 180, so it belongs to Section C.",
+      "solution_hi": "135, 121 और 180 के बीच है, इसलिए यह धारा C में है।",
+      "trick_en": "Check the upper bound; 135 is greater than 120.",
+      "trick_hi": "ऊपरी सीमा देखें; 135, 120 से अधिक है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ]
+}

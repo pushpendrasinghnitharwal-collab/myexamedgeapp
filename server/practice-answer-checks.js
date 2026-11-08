@@ -95,9 +95,38 @@ export const quantExpectedV2 = {
   'quant2-25': () => (5400 * 120 / 360).toLocaleString('en-IN'),
 }
 
+export const quantExpectedV3 = {
+  'quant3-01': () => String(BigInt(6) ** BigInt(2025) % BigInt(10)),
+  'quant3-02': () => String((3 + 1) * (2 + 1) * (1 + 1)),
+  'quant3-03': () => String(0.15 * 480),
+  'quant3-04': () => (1.25 * 0.8 === 1 ? 'No change' : 'unexpected'),
+  'quant3-05': () => String(5 * (400 / 10)),
+  'quant3-06': () => String((12 * 35 - 46) / 11),
+  'quant3-07': () => inr(12500 * 8 * 2.5 / 100),
+  'quant3-08': () => inr(16000 * (1.1 ** 2 - 1)),
+  'quant3-09': () => `${((552 - 480) / 480) * 100}%`,
+  'quant3-10': () => inr(1500 * 0.8 * 0.9),
+  'quant3-11': () => `${Math.round(1 / (1 / 15 + 1 / 10))} days`,
+  'quant3-12': () => `${(200 + 250) / (90 * 5 / 18)} seconds`,
+  'quant3-13': () => String(6 ** 2 - 2),
+  'quant3-14': () => String(10 ** 2 - 2 * 21),
+  'quant3-15': () => `${(180 / 9) * 4}°`,
+  'quant3-16': () => `${Math.sqrt(5 ** 2 - (8 / 2) ** 2)} cm`,
+  'quant3-17': () => `${Math.sqrt(13 ** 2 - 5 ** 2)} cm`,
+  'quant3-18': () => `${6 * 6 ** 2} cm²`,
+  'quant3-19': () => `${(22 / 7) * 7 ** 2 * 10} cm³`.replace('1540', '1,540'),
+  'quant3-20': () => String(Math.sin(Math.PI / 6) + Math.cos(Math.PI / 3)),
+  'quant3-21': () => String(Math.tan(Math.PI / 4) + 2),
+  'quant3-22': () => `${Math.round(30 * Math.tan(Math.PI / 4))} m`,
+  'quant3-23': () => String(80 + 100 + 120 + 150),
+  'quant3-24': () => ratio(150, 160),
+  'quant3-25': () => (7200 * 90 / 360).toLocaleString('en-IN'),
+}
+
 const quantExpectations = {
   'ssc-cgl-2026-tier1-practice-v1': quantExpected,
   'ssc-cgl-2026-tier1-practice-v2': quantExpectedV2,
+  'ssc-cgl-2026-tier1-practice-v3': quantExpectedV3,
 }
 
 // Sanity checks of the arithmetic used above, so a typo in a check cannot
@@ -119,6 +148,11 @@ export function verifyCheckArithmetic() {
   if (5400 * 120 / 360 !== 1800) problems.push('pie-chart count is not 1800')
   if (Math.abs((Math.sqrt(75) - Math.sqrt(27)) - 2 * Math.sqrt(3)) > 1e-12) problems.push('surd difference is not 2sqrt3')
   if ((4 - 2) ** 3 !== 8) problems.push('unpainted cube count is not 8')
+  if (4 * 3 * 2 !== 24) problems.push('360 factor count is not 24')
+  if (Math.abs(1.25 * 0.8 - 1) > 1e-12) problems.push('25% up then 20% down is not unchanged')
+  if (1500 * 0.8 * 0.9 !== 1080) problems.push('successive-discount total is not 1080')
+  if ((552 - 480) / 480 * 100 !== 15) problems.push('profit percentage is not 15')
+  if (90 * 5 / 18 !== 25) problems.push('90 km/h is not 25 m/s')
   return problems
 }
 

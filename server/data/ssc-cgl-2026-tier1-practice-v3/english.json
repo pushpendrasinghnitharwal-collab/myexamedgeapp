@@ -1,0 +1,998 @@
+{
+  "sets": [
+    {
+      "ref": "cloze-2026-t1-03",
+      "set_type": "Cloze_Test",
+      "subject": "English",
+      "passage_en": "Sleep is essential for good health. During sleep, the body (1) ______ itself and the brain sorts out the day's experiences. People who regularly (2) ______ less than six hours may find it hard to concentrate. Caffeine late in the day can (3) ______ sleep, so experts advise avoiding it in the evening. A regular bedtime routine also (4) ______ the body prepare for rest. Good sleep is not a luxury; it is a (5) ______ part of a healthy life.",
+      "passage_hi": "अच्छे स्वास्थ्य के लिए नींद आवश्यक है। नींद के दौरान शरीर स्वयं की (1) ______ करता है और मस्तिष्क दिन के अनुभवों को व्यवस्थित करता है। जो लोग नियमित रूप से छह घंटे से कम (2) ______ करते हैं, उन्हें ध्यान केंद्रित करने में कठिनाई हो सकती है। दिन में देर से ली गई कैफीन नींद को (3) ______ कर सकती है, इसलिए विशेषज्ञ शाम में इसे न लेने की सलाह देते हैं। नियमित सोने का समय शरीर को आराम के लिए तैयार होने में भी (4) ______ करता है। अच्छी नींद विलासिता नहीं; यह स्वस्थ जीवन का (5) ______ हिस्सा है।",
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze passage for SSC CGL 2026 Tier-I English Comprehension practice. Not a PYQ or an SSC passage. Hindi is an ExamEdge study translation; the official English Comprehension section is English-only.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "qid": "english3-01",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Synonyms and homonyms",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word most similar in meaning to METICULOUS.",
+      "text_hi": "METICULOUS के अर्थ के सबसे निकट शब्द चुनें।",
+      "options": [
+        {
+          "en": "Careful",
+          "hi": "सावधान"
+        },
+        {
+          "en": "Careless",
+          "hi": "लापरवाह"
+        },
+        {
+          "en": "Hurried",
+          "hi": "जल्दबाज"
+        },
+        {
+          "en": "Rude",
+          "hi": "अभद्र"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Meticulous means showing great attention to detail; 'careful' is the closest synonym.",
+      "solution_hi": "Meticulous का अर्थ है विस्तार पर बहुत ध्यान देना; 'careful' सबसे निकट समानार्थी है।",
+      "trick_en": "Link meticulous with 'meticulous detail' — very careful.",
+      "trick_hi": "Meticulous को 'बारीकी से सावधान' से जोड़ें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-02",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Antonyms",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word most nearly opposite in meaning to 'scarce'.",
+      "text_hi": "'scarce' के अर्थ के सबसे निकट विपरीत शब्द चुनें।",
+      "options": [
+        {
+          "en": "Abundant",
+          "hi": "भरपूर"
+        },
+        {
+          "en": "Rare",
+          "hi": "दुर्लभ"
+        },
+        {
+          "en": "Limited",
+          "hi": "सीमित"
+        },
+        {
+          "en": "Few",
+          "hi": "कम"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Scarce means in short supply; its opposite is abundant. The other options are near-synonyms.",
+      "solution_hi": "Scarce का अर्थ है कम उपलब्ध; इसका विपरीत abundant है। अन्य विकल्प निकट समानार्थी हैं।",
+      "trick_en": "Eliminate options that also mean 'not enough'.",
+      "trick_hi": "जो विकल्प भी 'कम' का अर्थ दें उन्हें हटाएँ।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-03",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Spellings and misspelt words",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Select the correctly spelt word.",
+      "text_hi": "सही वर्तनी वाला शब्द चुनें।",
+      "options": [
+        {
+          "en": "Government",
+          "hi": "Government"
+        },
+        {
+          "en": "Goverment",
+          "hi": "Goverment"
+        },
+        {
+          "en": "Governmant",
+          "hi": "Governmant"
+        },
+        {
+          "en": "Governement",
+          "hi": "Governement"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The correct spelling is 'government': govern + ment, with an 'n' before 'ment'.",
+      "solution_hi": "सही वर्तनी 'government' है: govern + ment, 'ment' से पहले 'n'।",
+      "trick_en": "Say the word slowly: gov-ern-ment; do not drop the first 'n'.",
+      "trick_hi": "धीरे बोलें: gov-ern-ment; पहला 'n' न छोड़ें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-04",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Idioms and phrases",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What does the idiom 'break the ice' mean?",
+      "text_hi": "मुहावरे 'break the ice' का अर्थ क्या है?",
+      "options": [
+        {
+          "en": "Start a conversation in an awkward situation",
+          "hi": "असहज स्थिति में बातचीत शुरू करना"
+        },
+        {
+          "en": "Destroy a frozen lake",
+          "hi": "जमी हुई झील तोड़ना"
+        },
+        {
+          "en": "End a friendship",
+          "hi": "मित्रता समाप्त करना"
+        },
+        {
+          "en": "Make a plan secretly",
+          "hi": "चुपचाप योजना बनाना"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "'Break the ice' means to ease initial awkwardness and start a conversation. It is figurative, not literal.",
+      "solution_hi": "'Break the ice' का अर्थ है शुरुआती असहजता दूर करके बातचीत शुरू करना। यह लाक्षणिक है, शाब्दिक नहीं।",
+      "trick_en": "Idioms are figurative; choose the social meaning.",
+      "trick_hi": "मुहावने लाक्षणिक होते हैं; सामाजिक अर्थ चुनें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-05",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "One word substitution",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "One word for 'a person who writes books' is:",
+      "text_hi": "'पुस्तकें लिखने वाला व्यक्ति' के लिए एक शब्द है:",
+      "options": [
+        {
+          "en": "Author",
+          "hi": "लेखक"
+        },
+        {
+          "en": "Publisher",
+          "hi": "प्रकाशक"
+        },
+        {
+          "en": "Editor",
+          "hi": "संपादक"
+        },
+        {
+          "en": "Reader",
+          "hi": "पाठक"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "An author writes books. A publisher produces and distributes them, an editor prepares the text and a reader reads it.",
+      "solution_hi": "Author पुस्तकें लिखता है। Publisher उन्हें प्रकाशित करता है, editor पाठ तैयार करता है और reader पढ़ता है।",
+      "trick_en": "Focus on the act of writing, not printing or selling.",
+      "trick_hi": "लिखने की क्रिया पर ध्यान दें, छापने या बेचने पर नहीं।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-06",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Synonyms and homonyms",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct word: The ______ of the new policy was felt across the country.",
+      "text_hi": "सही शब्द चुनें: The ______ of the new policy was felt across the country.",
+      "options": [
+        {
+          "en": "effect",
+          "hi": "effect"
+        },
+        {
+          "en": "affect",
+          "hi": "affect"
+        },
+        {
+          "en": "affects",
+          "hi": "affects"
+        },
+        {
+          "en": "effected",
+          "hi": "effected"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "'Effect' is a noun meaning a result. 'Affect' is usually a verb meaning to influence. The blank needs the noun.",
+      "solution_hi": "'Effect' संज्ञा है जिसका अर्थ परिणाम है। 'Affect' सामान्यतः क्रिया है जिसका अर्थ प्रभावित करना है। रिक्त स्थान में संज्ञा चाहिए।",
+      "trick_en": "If you can put 'the' before it, use the noun 'effect'.",
+      "trick_hi": "यदि पहले 'the' लग सके, तो संज्ञा 'effect' चुनें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-07",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Idioms and phrases",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What does the phrasal verb 'give up' mean?",
+      "text_hi": "फ्रेज़ल वर्ब 'give up' का अर्थ क्या है?",
+      "options": [
+        {
+          "en": "Quit",
+          "hi": "छोड़ देना"
+        },
+        {
+          "en": "Continue",
+          "hi": "जारी रखना"
+        },
+        {
+          "en": "Delay",
+          "hi": "देरी करना"
+        },
+        {
+          "en": "Accept",
+          "hi": "स्वीकार करना"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "'Give up' means to stop doing something or quit.",
+      "solution_hi": "'Give up' का अर्थ है किसी काम को छोड़ देना या बंद कर देना।",
+      "trick_en": "Contrast give up with give in (surrender) and give away (donate).",
+      "trick_hi": "give up की तुलना give in (हार मानना) और give away (दान करना) से करें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-08",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct article: He is ______ university student.",
+      "text_hi": "सही आर्टिकल चुनें: He is ______ university student.",
+      "options": [
+        {
+          "en": "a",
+          "hi": "a"
+        },
+        {
+          "en": "an",
+          "hi": "an"
+        },
+        {
+          "en": "the",
+          "hi": "the"
+        },
+        {
+          "en": "no article",
+          "hi": "कोई आर्टिकल नहीं"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "'University' begins with the consonant sound /juː/, so the article 'a' is used, not 'an'.",
+      "solution_hi": "'University' का उच्चारण व्यंजन ध्वनि /juː/ से शुरू होता है, इसलिए 'a' आता है, 'an' नहीं।",
+      "trick_en": "Articles depend on sound: a university, an umbrella.",
+      "trick_hi": "आर्टिकल ध्वनि पर निर्भर है: a university, an umbrella.",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-09",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct preposition: She is afraid ______ spiders.",
+      "text_hi": "सही पूर्वसर्ग चुनें: She is afraid ______ spiders.",
+      "options": [
+        {
+          "en": "of",
+          "hi": "of"
+        },
+        {
+          "en": "from",
+          "hi": "from"
+        },
+        {
+          "en": "with",
+          "hi": "with"
+        },
+        {
+          "en": "at",
+          "hi": "at"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The standard collocation is 'afraid of'.",
+      "solution_hi": "मानक संयोजन 'afraid of' है।",
+      "trick_en": "Learn fixed pairs: afraid of, fond of, proud of.",
+      "trick_hi": "स्थिर जोड़ियाँ याद रखें: afraid of, fond of, proud of.",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-10",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct option: The list of items ______ on the table.",
+      "text_hi": "सही विकल्प चुनें: The list of items ______ on the table.",
+      "options": [
+        {
+          "en": "is",
+          "hi": "is"
+        },
+        {
+          "en": "are",
+          "hi": "are"
+        },
+        {
+          "en": "were",
+          "hi": "were"
+        },
+        {
+          "en": "have",
+          "hi": "have"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The subject is 'the list' (singular), not 'items'. A singular subject takes 'is'.",
+      "solution_hi": "कर्ता 'the list' (एकवचन) है, 'items' नहीं। एकवचन कर्ता के साथ 'is' आता है।",
+      "trick_en": "Ignore the prepositional phrase 'of items' when finding the subject.",
+      "trick_hi": "कर्ता खोजते समय 'of items' वाक्यांश को छोड़ दें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-11",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Spot the error",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Identify the part containing the error: He / do not / like coffee. / No error",
+      "text_hi": "त्रुटि वाला भाग पहचानें: He / do not / like coffee. / No error",
+      "options": [
+        {
+          "en": "He",
+          "hi": "He"
+        },
+        {
+          "en": "do not",
+          "hi": "do not"
+        },
+        {
+          "en": "like coffee.",
+          "hi": "like coffee."
+        },
+        {
+          "en": "No error",
+          "hi": "कोई त्रुटि नहीं"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "'He' is third-person singular, so the correct auxiliary is 'does not': He does not like coffee.",
+      "solution_hi": "'He' तृतीय पुरुष एकवचन है, इसलिए सही सहायक क्रिया 'does not' है: He does not like coffee.",
+      "trick_en": "Match the auxiliary to the subject: he/she/it → does.",
+      "trick_hi": "सहायक क्रिया कर्ता से मिलाएँ: he/she/it → does.",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-12",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct option: She ______ here since 2020.",
+      "text_hi": "सही विकल्प चुनें: She ______ here since 2020.",
+      "options": [
+        {
+          "en": "has worked",
+          "hi": "has worked"
+        },
+        {
+          "en": "have worked",
+          "hi": "have worked"
+        },
+        {
+          "en": "works",
+          "hi": "works"
+        },
+        {
+          "en": "worked",
+          "hi": "worked"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "'Since 2020' shows an action continuing from the past to now, so the present perfect 'has worked' is correct.",
+      "solution_hi": "'Since 2020' भूतकाल से अब तक जारी क्रिया दर्शाता है, इसलिए present perfect 'has worked' सही है।",
+      "trick_en": "Since/for with a continuing action → has/have + past participle.",
+      "trick_hi": "जारी क्रिया के साथ since/for → has/have + past participle.",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-13",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct pronoun: The book is ______.",
+      "text_hi": "सही सर्वनाम चुनें: The book is ______.",
+      "options": [
+        {
+          "en": "mine",
+          "hi": "mine"
+        },
+        {
+          "en": "my",
+          "hi": "my"
+        },
+        {
+          "en": "me",
+          "hi": "me"
+        },
+        {
+          "en": "I",
+          "hi": "I"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "'Mine' is the possessive pronoun that stands alone after 'is'. 'My' needs a noun after it.",
+      "solution_hi": "'Mine' स्वतंत्र अधिकारवाचक सर्वनाम है जो 'is' के बाद अकेला आता है। 'My' के बाद संज्ञा चाहिए।",
+      "trick_en": "Use mine/yours/hers when no noun follows.",
+      "trick_hi": "जब बाद में संज्ञा न हो तो mine/yours/hers लगाएँ।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-14",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct modal: You ______ finish the work by tomorrow, or you will fail.",
+      "text_hi": "सही मॉडल चुनें: You ______ finish the work by tomorrow, or you will fail.",
+      "options": [
+        {
+          "en": "must",
+          "hi": "must"
+        },
+        {
+          "en": "might",
+          "hi": "might"
+        },
+        {
+          "en": "could",
+          "hi": "could"
+        },
+        {
+          "en": "would",
+          "hi": "would"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "'Must' expresses strong obligation or necessity, which fits the warning about failing.",
+      "solution_hi": "'Must' तीव्र बाध्यता या आवश्यकता दर्शाता है, जो असफल होने की चेतावनी से मेल खाता है।",
+      "trick_en": "For strong obligation, choose must; might/could show possibility.",
+      "trick_hi": "तीव्र बाध्यता के लिए must चुनें; might/could संभावना दर्शाते हैं।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-15",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct conjunction: ______ it rained, the match continued.",
+      "text_hi": "सही संयोजक चुनें: ______ it rained, the match continued.",
+      "options": [
+        {
+          "en": "Although",
+          "hi": "Although"
+        },
+        {
+          "en": "Because",
+          "hi": "Because"
+        },
+        {
+          "en": "So",
+          "hi": "So"
+        },
+        {
+          "en": "Unless",
+          "hi": "Unless"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The two clauses contrast, so 'Although' is correct: Although it rained, the match continued.",
+      "solution_hi": "दोनों उपवाक्य विरोध दर्शाते हैं, इसलिए 'Although' सही है: Although it rained, the match continued.",
+      "trick_en": "Ask whether the second clause is a contrast, cause, result or condition.",
+      "trick_hi": "देखें कि दूसरा उपवाक्य विरोध, कारण, परिणाम या शर्त है या नहीं।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-16",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Active and passive voice",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct passive form: The chef cooked the meal.",
+      "text_hi": "सही कर्मवाच्य रूप चुनें: The chef cooked the meal.",
+      "options": [
+        {
+          "en": "The meal was cooked by the chef.",
+          "hi": "The meal was cooked by the chef."
+        },
+        {
+          "en": "The meal is cooked by the chef.",
+          "hi": "The meal is cooked by the chef."
+        },
+        {
+          "en": "The meal has cooked by the chef.",
+          "hi": "The meal has cooked by the chef."
+        },
+        {
+          "en": "The meal was cooking by the chef.",
+          "hi": "The meal was cooking by the chef."
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Simple past active 'cooked' becomes 'was/were + cooked' in the passive. The object 'the meal' becomes the subject.",
+      "solution_hi": "सामान्य भूतकाल का 'cooked' कर्मवाच्य में 'was/were + cooked' होता है। कर्म 'the meal' कर्ता बन जाता है।",
+      "trick_en": "Keep the tense: simple past → was/were + past participle.",
+      "trick_hi": "काल न बदलें: simple past → was/were + past participle.",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-17",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentences in a passage",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Arrange the sentences in the correct order: Q. The library was silent. S. A student dropped a book. P. Everyone looked up. R. She apologised softly.",
+      "text_hi": "वाक्यों को सही क्रम में व्यवस्थित करें: Q. The library was silent. S. A student dropped a book. P. Everyone looked up. R. She apologised softly.",
+      "options": [
+        {
+          "en": "Q S P R",
+          "hi": "Q S P R"
+        },
+        {
+          "en": "Q P S R",
+          "hi": "Q P S R"
+        },
+        {
+          "en": "S Q R P",
+          "hi": "S Q R P"
+        },
+        {
+          "en": "Q S R P",
+          "hi": "Q S R P"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Q sets the scene, S introduces the sudden event, P gives the reaction and R gives the resolution. The order is Q S P R.",
+      "solution_hi": "Q दृश्य प्रस्तुत करता है, S अचानक घटना बताता है, P प्रतिक्रिया और R समाधान देता है। क्रम Q S P R है।",
+      "trick_en": "Follow cause and effect: silence → noise → reaction → apology.",
+      "trick_hi": "कारण-प्रभाव क्रम देखें: शांति → आवाज → प्रतिक्रिया → माफी।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-18",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentences in a passage",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Arrange the sentences in the correct order: Q. The team practised daily. R. They won the final match. S. The crowd cheered loudly. P. Their coach was proud.",
+      "text_hi": "वाक्यों को सही क्रम में व्यवस्थित करें: Q. The team practised daily. R. They won the final match. S. The crowd cheered loudly. P. Their coach was proud.",
+      "options": [
+        {
+          "en": "Q R S P",
+          "hi": "Q R S P"
+        },
+        {
+          "en": "Q S R P",
+          "hi": "Q S R P"
+        },
+        {
+          "en": "R Q S P",
+          "hi": "R Q S P"
+        },
+        {
+          "en": "Q R P S",
+          "hi": "Q R P S"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Q describes preparation, R the result, S the crowd's immediate reaction and P the coach's concluding feeling. The order is Q R S P.",
+      "solution_hi": "Q तैयारी, R परिणाम, S भीड़ की तत्काल प्रतिक्रिया और P कोच की भावना बताता है। क्रम Q R S P है।",
+      "trick_en": "Follow the timeline: practice → win → celebration → reflection.",
+      "trick_hi": "समय-क्रम देखें: अभ्यास → जीत → उत्सव → भावना।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-19",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentence parts",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Rearrange the parts to form a meaningful sentence: P. the librarian Q. carefully R. arranged S. the new books",
+      "text_hi": "अर्थपूर्ण वाक्य बनाने के लिए भागों को पुनर्व्यवस्थित करें: P. the librarian Q. carefully R. arranged S. the new books",
+      "options": [
+        {
+          "en": "Q P R S",
+          "hi": "Q P R S"
+        },
+        {
+          "en": "P R Q S",
+          "hi": "P R Q S"
+        },
+        {
+          "en": "P Q R S",
+          "hi": "P Q R S"
+        },
+        {
+          "en": "P Q S R",
+          "hi": "P Q S R"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The subject 'the librarian' comes first, the adverb 'carefully' modifies the verb 'arranged', and the object 'the new books' follows it: P Q R S.",
+      "solution_hi": "कर्ता 'the librarian' पहले आता है, क्रिया विशेषण 'carefully' क्रिया 'arranged' को बताता है और कर्म 'the new books' उसके बाद आता है: P Q R S।",
+      "trick_en": "Place subject → adverb → verb → object; an adverb never splits the verb from its object here.",
+      "trick_hi": "कर्ता → क्रिया विशेषण → क्रिया → कर्म रखें; यहाँ क्रिया विशेषण क्रिया और कर्म को नहीं तोड़ता।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-20",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentence parts",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Rearrange the parts to form a meaningful sentence: P. after the long journey Q. the travellers R. rested S. under a shady tree",
+      "text_hi": "अर्थपूर्ण वाक्य बनाने के लिए भागों को पुनर्व्यवस्थित करें: P. after the long journey Q. the travellers R. rested S. under a shady tree",
+      "options": [
+        {
+          "en": "Q P R S",
+          "hi": "Q P R S"
+        },
+        {
+          "en": "P Q S R",
+          "hi": "P Q S R"
+        },
+        {
+          "en": "R Q P S",
+          "hi": "R Q P S"
+        },
+        {
+          "en": "P Q R S",
+          "hi": "P Q R S"
+        }
+      ],
+      "correct": 3,
+      "solution_en": "The introductory phrase 'after the long journey' comes first, then the subject 'the travellers', the verb 'rested' and the place phrase 'under a shady tree': P Q R S.",
+      "solution_hi": "प्रारंभिक वाक्यांश 'after the long journey' पहले, फिर कर्ता 'the travellers', क्रिया 'rested' और स्थान वाक्यांश 'under a shady tree' आता है: P Q R S।",
+      "trick_en": "Front the time phrase, then keep subject–verb–place together.",
+      "trick_hi": "समय वाक्यांश आगे रखें, फिर कर्ता–क्रिया–स्थान को साथ रखें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I English syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english3-21",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Sleep and health passage: choose the most appropriate word for blank (1).",
+      "text_hi": "नींद और स्वास्थ्य पर आधारित गद्यांश: रिक्त स्थान (1) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "repair",
+          "hi": "repair"
+        },
+        {
+          "en": "repairs",
+          "hi": "repairs"
+        },
+        {
+          "en": "repairing",
+          "hi": "repairing"
+        },
+        {
+          "en": "repaired",
+          "hi": "repaired"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The subject 'the body' is singular, so the present simple verb takes -s: the body repairs itself.",
+      "solution_hi": "कर्ता 'the body' एकवचन है, इसलिए present simple क्रिया में -s लगता है: the body repairs itself।",
+      "trick_en": "Find the subject: 'the body' is singular.",
+      "trick_hi": "कर्ता खोजें: 'the body' एकवचन है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze passage for SSC CGL 2026 Tier-I English Comprehension practice. Not a PYQ or an SSC passage. Hindi is an ExamEdge study translation; the official English Comprehension section is English-only.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-03"
+    },
+    {
+      "qid": "english3-22",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Sleep and health passage: choose the most appropriate word for blank (2).",
+      "text_hi": "नींद और स्वास्थ्य पर आधारित गद्यांश: रिक्त स्थान (2) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "sleep",
+          "hi": "sleep"
+        },
+        {
+          "en": "sleeps",
+          "hi": "sleeps"
+        },
+        {
+          "en": "sleeping",
+          "hi": "sleeping"
+        },
+        {
+          "en": "slept",
+          "hi": "slept"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The subject 'people' is plural, so the base form 'sleep' is correct: people sleep less than six hours.",
+      "solution_hi": "कर्ता 'people' बहुवचन है, इसलिए मूल रूप 'sleep' सही है: people sleep less than six hours।",
+      "trick_en": "After the plural subject 'people', use the base verb.",
+      "trick_hi": "बहुवचन कर्ता 'people' के बाद मूल क्रिया लगाएँ।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze passage for SSC CGL 2026 Tier-I English Comprehension practice. Not a PYQ or an SSC passage. Hindi is an ExamEdge study translation; the official English Comprehension section is English-only.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-03"
+    },
+    {
+      "qid": "english3-23",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Sleep and health passage: choose the most appropriate word for blank (3).",
+      "text_hi": "नींद और स्वास्थ्य पर आधारित गद्यांश: रिक्त स्थान (3) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "disrupt",
+          "hi": "disrupt"
+        },
+        {
+          "en": "disrupts",
+          "hi": "disrupts"
+        },
+        {
+          "en": "disrupting",
+          "hi": "disrupting"
+        },
+        {
+          "en": "disrupted",
+          "hi": "disrupted"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "After the modal 'can', the base form of the verb is used: can disrupt sleep.",
+      "solution_hi": "मॉडल 'can' के बाद क्रिया का मूल रूप आता है: can disrupt sleep।",
+      "trick_en": "Modals can/could/may/must take the base verb.",
+      "trick_hi": "मॉडल can/could/may/must के बाद मूल क्रिया आती है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze passage for SSC CGL 2026 Tier-I English Comprehension practice. Not a PYQ or an SSC passage. Hindi is an ExamEdge study translation; the official English Comprehension section is English-only.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-03"
+    },
+    {
+      "qid": "english3-24",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Sleep and health passage: choose the most appropriate word for blank (4).",
+      "text_hi": "नींद और स्वास्थ्य पर आधारित गद्यांश: रिक्त स्थान (4) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "help",
+          "hi": "help"
+        },
+        {
+          "en": "helps",
+          "hi": "helps"
+        },
+        {
+          "en": "helping",
+          "hi": "helping"
+        },
+        {
+          "en": "helped",
+          "hi": "helped"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The subject 'a regular bedtime routine' is singular, so the verb is 'helps'.",
+      "solution_hi": "कर्ता 'a regular bedtime routine' एकवचन है, इसलिए क्रिया 'helps' है।",
+      "trick_en": "Singular subject in the present simple → verb + s.",
+      "trick_hi": "present simple में एकवचन कर्ता → क्रिया + s।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze passage for SSC CGL 2026 Tier-I English Comprehension practice. Not a PYQ or an SSC passage. Hindi is an ExamEdge study translation; the official English Comprehension section is English-only.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-03"
+    },
+    {
+      "qid": "english3-25",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Sleep and health passage: choose the most appropriate word for blank (5).",
+      "text_hi": "नींद और स्वास्थ्य पर आधारित गद्यांश: रिक्त स्थान (5) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "essential",
+          "hi": "essential"
+        },
+        {
+          "en": "essentially",
+          "hi": "essentially"
+        },
+        {
+          "en": "essence",
+          "hi": "essence"
+        },
+        {
+          "en": "essentiality",
+          "hi": "essentiality"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The blank needs an adjective before 'part': an essential part. 'Essentially' is an adverb, 'essence' and 'essentiality' are nouns.",
+      "solution_hi": "रिक्त स्थान में 'part' से पहले विशेषण चाहिए: an essential part। 'Essentially' क्रिया-विशेषण है, 'essence' और 'essentiality' संज्ञा हैं।",
+      "trick_en": "Check the word class needed before the noun 'part'.",
+      "trick_hi": "संज्ञा 'part' से पहले कौन-सा शब्द वर्ग चाहिए, देखें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze passage for SSC CGL 2026 Tier-I English Comprehension practice. Not a PYQ or an SSC passage. Hindi is an ExamEdge study translation; the official English Comprehension section is English-only.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-03"
+    }
+  ]
+}

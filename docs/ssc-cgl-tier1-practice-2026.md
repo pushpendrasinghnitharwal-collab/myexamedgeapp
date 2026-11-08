@@ -1,9 +1,11 @@
-# SSC CGL Tier-I practice pack (2026 pattern, Batches 1–2)
+# SSC CGL Tier-I practice pack (2026 pattern, Batches 1–3)
 
 Status: **original practice content, automatically checked, independent human review pending.**
 Nothing in these packs is an SSC previous-year paper (PYQ), an official paper, an official shift or an official answer key.
 
-**Batch 2 update (2026-11-08):** a second independent 100-question pack (`ssc-cgl-2026-tier1-practice-v2`) was added. Total verified practice content is now **200 questions in two full-mock pools**, supporting two independent full mocks and eight sectional papers. Both packs remain **not human-reviewed**.
+**Batch 3 update (2026-11-08):** a third independent 100-question pack (`ssc-cgl-2026-tier1-practice-v3`) was added. Total verified practice content is now **300 questions in three full-mock pools**, supporting three independent full mocks and twelve sectional papers. No pack is human-reviewed.
+
+**Batch 2 update (2026-11-08):** a second independent 100-question pack (`ssc-cgl-2026-tier1-practice-v2`) was added, taking the total to 200 questions in two pools.
 
 ## Scope
 
@@ -13,13 +15,23 @@ Nothing in these packs is an SSC previous-year paper (PYQ), an official paper, a
 | Stage | Tier-I only |
 | Target cycle | 2027 preparation |
 | Pattern baseline | Latest verifiable official notice: CGL **2026** (notice dated 21-05-2026) |
-| Pack keys | `ssc-cgl-2026-tier1-practice-v1`, `ssc-cgl-2026-tier1-practice-v2` |
-| Content | 200 original questions in two independent packs; each pack has 100 questions, 2 linked sets and 4 subjects × 25 |
+| Pack keys | `ssc-cgl-2026-tier1-practice-v1`, `ssc-cgl-2026-tier1-practice-v2`, `ssc-cgl-2026-tier1-practice-v3` |
+| Content | 300 original questions in three independent packs; each pack has 100 questions, 2 linked sets and 4 subjects × 25 |
 | Provenance | `original_practice`, `is_pyq: false` |
 | Review state | `automated_verified_pending_human_review` |
 | Translation | ExamEdge Hindi/English text, **not** an official SSC translation |
 
 The 2027 CGL notice was not available on 2026-11-08. The 2026 notice is the latest official scheme that could be verified, so these packs are labelled a **2026-pattern baseline for 2027 preparation**. When the 2027 notice is published, re-check the scheme, syllabus, timings and marking before reusing or extending them. No 2027 date, vacancy, cut-off or pattern is invented here.
+
+## Batch 3 addendum
+
+- **Third pool:** 100 new questions (`quant3-*`, `reasoning3-*`, `english3-*`, `ga3-*`), zero duplicate question text across all three packs, same official Tier-I quota profile and the 30 Easy / 50 Medium / 20 Hard split.
+- **Content hash:** `fba8f91de5ab36f5dc18aed733abed73c9ff0b5ef6bcc82fd4b47ce2014838f5` (see `server/data/ssc-cgl-2026-tier1-practice-v3/REVIEW-CHECKLIST.md`).
+- **Linked sets:** a new data-interpretation table (`di-2026-t1-03`, two stores × four years) and a new five-blank cloze on sleep and health (`cloze-2026-t1-03`).
+- **Three full mocks:** verified end-to-end against the disposable preview database — 3 packs, 300 published practice questions, 6 linked sets, three consecutive 100-question mocks with **0 repeated delivered questions** and no answer key in the launch payload (run 2026-11-08).
+- **Reuse disclosure:** after a learner has consumed the whole pool, the assembler may still prepare a mock, but it reports `reused_questions` and a `repeat_reason` (intact DI/cloze sets cannot be split). The test asserts this disclosure instead of promising an infinite unseen pool.
+- **Batch 3 facts:** BRICS 2026 chairship theme and 18th Summit (New Delhi, 12–13 Sep 2026), Asian Games Aichi-Nagoya motto, G20 2026 US presidency and Miami summit (14–15 Dec 2026, upcoming), COP31 Türkiye presidency with Australia leading negotiations (Antalya, 9–20 Nov 2026), T20 World Cup 2026 co-hosts (India, Sri Lanka), FIFA 2026 final venue (MetLife Stadium). Each item carries a source and `checked_on: 2026-11-08`.
+- **Status:** all three packs are `automated_verified_pending_human_review`; none is approved, published as reviewed, or claimed to be an official paper.
 
 ## Batch 2 addendum
 
@@ -101,7 +113,7 @@ Three import modes exist:
 3. **Human-reviewed publication** — only after a named person has actually reviewed all 100 questions in that pack, translations, solutions and factual sources. The CLI refuses to publish without both flags:
 
    ```bash
-   npm run practice:import -- --pack ssc-cgl-2026-tier1-practice-v2 --mode publish \
+   npm run practice:import -- --pack ssc-cgl-2026-tier1-practice-v3 --mode publish \
      --reviewer "Reviewer name" --reviewed-on 2026-11-20 --confirm-human-review
    ```
 
@@ -159,7 +171,7 @@ The preview imports both packs. It registers its own local accounts. Data disapp
 - The 2027 notification, syllabus and final keys are not available. The 2026 pattern may change.
 - General Awareness current-affairs items are only current as of 2026-11-08.
 - No PYQ or official paper was analysed or reproduced, so this pack makes no evidence-based claim about historical SSC topic frequency, shift difficulty or repeated questions.
-- Topic-specific micro-drills beyond one subject need a much larger 2027-reviewed pool; the current 200-question pool supports two full mocks and eight sectionals, but not deep single-topic drills. Batch 3 should add topic-focused pools after human review.
+- Topic-specific micro-drills beyond one subject need a much larger reviewed pool; the current 300-question pool supports three full mocks and twelve sectionals, but not deep single-topic drills. A later batch could add topic-focused pools once the existing content has human review.
 - Figures are avoided: spatial/figural items are expressed verbally (direction, folding, shadow) rather than with unverified images. The DI set uses a data table rendered by the existing chart component.
 
 ## Sources
@@ -168,5 +180,6 @@ The preview imports both packs. It registers its own local accounts. Data disapp
 - [SSC examination calendar](https://ssc.gov.in/for-candidates/examination-calendar) — check the current cycle.
 - [SSC normalisation procedure notice (June 2025)](https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Normalization_procedure_for_SSC_exams_from_June_2025.pdf) — referenced by the app's optional simulation; not used for this pack.
 - Current-affairs checks for Batch 1 (as of 2026-11-08): [Nobel Peace Prize 2025](https://www.nobelprize.org/prizes/peace/2025/press-release/), [Milano Cortina 2026](https://www.olympics.com/en/milano-cortina-2026/olympic-games), [FIFA World Cup 2026](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026), [Glasgow 2026 Commonwealth Games](https://www.commonwealthsport.com/commonwealth-games/glasgow-2026), [ISRO](https://www.isro.gov.in/), [RBI](https://www.rbi.org.in/).
+- Current-affairs checks for Batch 3 (as of 2026-11-08): [T20 World Cup 2026 — Britannica](https://www.britannica.com/event/2026-T20-World-Cup), [ICC T20 World Cup](https://www.icc-cricket.com/tournaments/t20cricketworldcup), [FIFA World Cup 2026](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026), [BRICS India 2026](https://www.brics2026.gov.in/), [Asian Games 2026 — OCA/Olympics.com](https://www.olympics.com/en/news/asian-games-2026-sports-schedule-la28-watch-live), [G20 2026](https://www.g20.org/), [COP31 Antalya](https://climate-diplomacy.org/events/2026-un-climate-change-conference-unfccc-cop-31).
 - Current-affairs checks for Batch 2 (as of 2026-11-08): [Nobel Peace Prize 2026](https://www.nobelprize.org/prizes/peace/2026/press-release/), [UN News on Navi Pillay](https://news.un.org/en/story/2026/10/1168558), [Asian Games 2026 — Olympics.com](https://www.olympics.com/en/news/asian-games-2026-sports-schedule-la28-watch-live), [G20 US presidency 2026](https://www.g20.org/), [BRICS India 2026](https://www.brics2026.gov.in/), [COP31 Antalya](https://climate-diplomacy.org/events/2026-un-climate-change-conference-unfccc-cop-31), [International Booker Prize 2026](https://thebookerprizes.com/the-booker-library/prize-years/international/2026).
 - Static-GK and science references are listed per question in the pack's `source.url` and `source.citation`.

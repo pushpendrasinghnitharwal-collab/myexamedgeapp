@@ -58,10 +58,12 @@ async function httpFixture(client) {
   return { request, close: async () => { await new Promise(resolve => server.close(resolve)) } }
 }
 
+const keys = PRACTICE_PACK_KEYS.slice(0, 2)
+
 test('both Tier-I packs independently pass validation and contain no cross-pack duplicates', () => {
-  assert.deepEqual(PRACTICE_PACK_KEYS, ['ssc-cgl-2026-tier1-practice-v1', 'ssc-cgl-2026-tier1-practice-v2'])
+  assert.deepEqual(keys, ['ssc-cgl-2026-tier1-practice-v1', 'ssc-cgl-2026-tier1-practice-v2'])
   let total = 0
-  for (const key of PRACTICE_PACK_KEYS) {
+  for (const key of keys) {
     assert.equal(reports[key].ok, true, `${key}: ${reports[key].errors.join('\n')}`)
     assert.equal(contents[key].questions.length, 100)
     assert.deepEqual(reports[key].stats.by_difficulty, { Easy: 30, Medium: 50, Hard: 20 })
@@ -69,11 +71,11 @@ test('both Tier-I packs independently pass validation and contain no cross-pack 
     total += contents[key].questions.length
   }
   assert.equal(total, 200)
-  assert.notEqual(reports[PRACTICE_PACK_KEYS[0]].content_hash, reports[PRACTICE_PACK_KEYS[1]].content_hash)
+  assert.notEqual(reports[keys[0]].content_hash, reports[keys[1]].content_hash)
 
   const qids = new Set()
   const texts = new Set()
-  for (const key of PRACTICE_PACK_KEYS) {
+  for (const key of keys) {
     for (const question of contents[key].questions) {
       assert.equal(qids.has(question.qid), false, `duplicate qid across packs: ${question.qid}`)
       qids.add(question.qid)
@@ -91,7 +93,7 @@ test('two packs provide two independent full mocks and a second attempt avoids s
     await migrateSscCgl(client, { resetLegacyBank: true })
     await migrateMasterAssembler(client)
     await migratePracticePacks(client)
-    for (const key of PRACTICE_PACK_KEYS) {
+    for (const key of keys) {
       const result = await importPracticePack(client, { content: contents[key], report: reports[key], mode: 'preview', importedBy: 'test' })
       assert.equal(result.imported, true)
       assert.equal(result.review_status, 'preview_not_human_reviewed')

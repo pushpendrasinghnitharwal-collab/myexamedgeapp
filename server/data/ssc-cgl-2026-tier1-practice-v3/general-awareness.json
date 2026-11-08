@@ -1,0 +1,980 @@
+{
+  "sets": [],
+  "questions": [
+    {
+      "qid": "ga3-01",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the theme of India's 2026 BRICS chairship?",
+      "text_hi": "भारत की 2026 BRICS अध्यक्षता का विषय क्या है?",
+      "options": [
+        {
+          "en": "Building for Resilience, Innovation, Cooperation and Sustainability",
+          "hi": "Building for Resilience, Innovation, Cooperation and Sustainability"
+        },
+        {
+          "en": "One Earth, One Family, One Future",
+          "hi": "One Earth, One Family, One Future"
+        },
+        {
+          "en": "Vasudhaiva Kutumbakam",
+          "hi": "Vasudhaiva Kutumbakam"
+        },
+        {
+          "en": "Towards a Sustainable Future",
+          "hi": "Towards a Sustainable Future"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "India's 2026 BRICS chairship theme is 'Building for Resilience, Innovation, Cooperation and Sustainability'. The 18th BRICS Summit was held in New Delhi on 12–13 September 2026.",
+      "solution_hi": "भारत की 2026 BRICS अध्यक्षता का विषय 'Building for Resilience, Innovation, Cooperation and Sustainability' है। 18वाँ BRICS शिखर सम्मेलन 12–13 सितंबर 2026 को नई दिल्ली में हुआ।",
+      "trick_en": "Link the theme to the four words: Resilience, Innovation, Cooperation, Sustainability.",
+      "trick_hi": "विषय को चार शब्दों से जोड़ें: Resilience, Innovation, Cooperation, Sustainability।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.brics2026.gov.in/",
+        "citation": "BRICS India 2026 official website (Government of India): 2026 chairship theme and New Delhi summit. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-02",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the official motto of the 2026 Asian Games in Aichi-Nagoya?",
+      "text_hi": "आइची-नागोया में 2026 एशियाई खेलों का आधिकारिक आदर्श वाक्य क्या है?",
+      "options": [
+        {
+          "en": "Imagine One Asia",
+          "hi": "Imagine One Asia"
+        },
+        {
+          "en": "Faster, Higher, Stronger",
+          "hi": "Faster, Higher, Stronger"
+        },
+        {
+          "en": "United by Emotion",
+          "hi": "United by Emotion"
+        },
+        {
+          "en": "One World, One Dream",
+          "hi": "One World, One Dream"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The official motto of the 20th Asian Games, Aichi-Nagoya 2026, is 'Imagine One Asia'. The Games were held from 19 September to 4 October 2026.",
+      "solution_hi": "20वें एशियाई खेल, आइची-नागोया 2026 का आधिकारिक आदर्श वाक्य 'Imagine One Asia' है। खेल 19 सितंबर से 4 अक्टूबर 2026 तक हुए।",
+      "trick_en": "'Imagine One Asia' is the Asian Games 2026 motto.",
+      "trick_hi": "'Imagine One Asia' एशियाई खेल 2026 का आदर्श वाक्य है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.olympics.com/en/news/asian-games-2026-sports-schedule-la28-watch-live",
+        "citation": "Olympics.com, Asian Games 2026 schedule and official motto 'Imagine One Asia', Aichi-Nagoya, 19 September–4 October 2026. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-03",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which country holds the G20 presidency for the 2026 Leaders' Summit?",
+      "text_hi": "2026 G20 नेताओं के शिखर सम्मेलन की अध्यक्षता किस देश के पास है?",
+      "options": [
+        {
+          "en": "United States",
+          "hi": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "en": "Brazil",
+          "hi": "ब्राजील"
+        },
+        {
+          "en": "South Africa",
+          "hi": "दक्षिण अफ्रीका"
+        },
+        {
+          "en": "India",
+          "hi": "भारत"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The United States holds the 2026 G20 presidency and will host the Leaders' Summit in Miami on 14–15 December 2026. Brazil hosted in 2024 and South Africa in 2025.",
+      "solution_hi": "2026 G20 की अध्यक्षता संयुक्त राज्य अमेरिका के पास है और वह 14–15 दिसंबर 2026 को मियामी में नेताओं का शिखर सम्मेलन आयोजित करेगा। 2024 में ब्राजील और 2025 में दक्षिण अफ्रीका मेजबान थे।",
+      "trick_en": "Follow the rotation: 2024 Brazil, 2025 South Africa, 2026 United States.",
+      "trick_hi": "क्रम देखें: 2024 ब्राजील, 2025 दक्षिण अफ्रीका, 2026 अमेरिका।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.g20.org/",
+        "citation": "G20 official website; 2026 US presidency and Miami Leaders' Summit, 14–15 December 2026. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-04",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "At COP31 in Antalya, which country leads the climate negotiations while Türkiye holds the presidency?",
+      "text_hi": "अंताल्या में COP31 में, तुर्किये अध्यक्षता के दौरान जलवायु वार्ता का नेतृत्व कौन-सा देश कर रहा है?",
+      "options": [
+        {
+          "en": "Australia",
+          "hi": "ऑस्ट्रेलिया"
+        },
+        {
+          "en": "Brazil",
+          "hi": "ब्राजील"
+        },
+        {
+          "en": "United States",
+          "hi": "संयुक्त राज्य अमेरिका"
+        },
+        {
+          "en": "India",
+          "hi": "भारत"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Türkiye holds the COP31 presidency, while Australia leads the negotiations. The conference is scheduled in Antalya from 9 to 20 November 2026.",
+      "solution_hi": "COP31 का अध्यक्ष पद तुर्किये के पास है, जबकि वार्ता का नेतृत्व ऑस्ट्रेलिया कर रहा है। सम्मेलन 9 से 20 नवंबर 2026 तक अंताल्या में निर्धारित है।",
+      "trick_en": "Remember the split: Türkiye hosts/presides, Australia leads negotiations.",
+      "trick_hi": "विभाजन याद रखें: तुर्किये मेजबान/अध्यक्ष, ऑस्ट्रेलिया वार्ता का नेतृत्व।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://climate-diplomacy.org/events/2026-un-climate-change-conference-unfccc-cop-31",
+        "citation": "Climate Diplomacy, COP31 Antalya, Türkiye, 9–20 November 2026; Türkiye presidency, Australia leads negotiations. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-05",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which countries co-hosted the ICC Men's T20 World Cup 2026?",
+      "text_hi": "ICC पुरुष T20 विश्व कप 2026 की सह-मेजबानी किन देशों ने की?",
+      "options": [
+        {
+          "en": "India and Sri Lanka",
+          "hi": "भारत और श्रीलंका"
+        },
+        {
+          "en": "Australia and New Zealand",
+          "hi": "ऑस्ट्रेलिया और न्यूजीलैंड"
+        },
+        {
+          "en": "England and Wales",
+          "hi": "इंग्लैंड और वेल्स"
+        },
+        {
+          "en": "South Africa and Namibia",
+          "hi": "दक्षिण अफ्रीका और नामीबिया"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "India and Sri Lanka co-hosted the 2026 ICC Men's T20 World Cup from 7 February to 8 March 2026.",
+      "solution_hi": "भारत और श्रीलंका ने 7 फरवरी से 8 मार्च 2026 तक ICC पुरुष T20 विश्व कप 2026 की सह-मेजबानी की।",
+      "trick_en": "The 2026 T20 World Cup was jointly hosted by India and Sri Lanka.",
+      "trick_hi": "2026 T20 विश्व कप की मेजबानी भारत और श्रीलंका ने संयुक्त रूप से की।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.icc-cricket.com/tournaments/t20cricketworldcup",
+        "citation": "ICC official T20 World Cup page; 2026 edition co-hosted by India and Sri Lanka, 7 February–8 March 2026. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-06",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which stadium hosted the final of the FIFA World Cup 2026?",
+      "text_hi": "FIFA विश्व कप 2026 का फाइनल किस स्टेडियम में खेला गया?",
+      "options": [
+        {
+          "en": "MetLife Stadium, New Jersey",
+          "hi": "मेटलाइफ स्टेडियम, न्यू जर्सी"
+        },
+        {
+          "en": "Estadio Azteca, Mexico City",
+          "hi": "एस्टाडियो अज़्टेका, मेक्सिको सिटी"
+        },
+        {
+          "en": "Wembley Stadium, London",
+          "hi": "वेम्बली स्टेडियम, लंदन"
+        },
+        {
+          "en": "Lusail Stadium, Qatar",
+          "hi": "लुसेल स्टेडियम, कतर"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The FIFA World Cup 2026 final was played at MetLife Stadium in East Rutherford, New Jersey, on 19 July 2026. The opening match was at Estadio Azteca, Mexico City.",
+      "solution_hi": "FIFA विश्व कप 2026 का फाइनल 19 जुलाई 2026 को ईस्ट रदरफोर्ड, न्यू जर्सी के मेटलाइफ स्टेडियम में खेला गया। उद्घाटन मैच मेक्सिको सिटी के एस्टाडियो अज़्टेका में था।",
+      "trick_en": "MetLife hosted the final; Azteca hosted the opening match.",
+      "trick_hi": "मेटलाइफ ने फाइनल और अज़्टेका ने उद्घाटन मैच की मेजबानी की।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
+        "citation": "FIFA official World Cup 2026 page; final at MetLife Stadium, East Rutherford, New Jersey, 19 July 2026. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-07",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which country shares the longest land border with India?",
+      "text_hi": "भारत के साथ सबसे लंबी भूमि सीमा किस देश की है?",
+      "options": [
+        {
+          "en": "Bangladesh",
+          "hi": "बांग्लादेश"
+        },
+        {
+          "en": "China",
+          "hi": "चीन"
+        },
+        {
+          "en": "Pakistan",
+          "hi": "पाकिस्तान"
+        },
+        {
+          "en": "Nepal",
+          "hi": "नेपाल"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Bangladesh shares the longest land border with India, about 4,096 km. The next longest is China (about 3,488 km).",
+      "solution_hi": "भारत के साथ सबसे लंबी भूमि सीमा बांग्लादेश की है, लगभग 4,096 किमी। इसके बाद चीन (लगभग 3,488 किमी) है।",
+      "trick_en": "Remember the order: Bangladesh > China > Pakistan > Nepal.",
+      "trick_hi": "क्रम याद रखें: बांग्लादेश > चीन > पाकिस्तान > नेपाल।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.mea.gov.in/",
+        "citation": "Ministry of External Affairs, India's border reference: Bangladesh has the longest land border with India. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-08",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which country shares the shortest land border with India?",
+      "text_hi": "भारत के साथ सबसे छोटी भूमि सीमा किस देश की है?",
+      "options": [
+        {
+          "en": "Afghanistan",
+          "hi": "अफगानिस्तान"
+        },
+        {
+          "en": "Bhutan",
+          "hi": "भूटान"
+        },
+        {
+          "en": "Myanmar",
+          "hi": "म्यांमार"
+        },
+        {
+          "en": "Nepal",
+          "hi": "नेपाल"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "India's shortest land border is with Afghanistan, about 106 km along the Line of Control in Jammu and Kashmir. Bhutan's border is about 699 km.",
+      "solution_hi": "भारत की सबसे छोटी भूमि सीमा अफगानिस्तान के साथ है, जम्मू-कश्मीर में नियंत्रण रेखा के साथ लगभग 106 किमी। भूटान की सीमा लगभग 699 किमी है।",
+      "trick_en": "Do not confuse the shortest border with the smallest neighbouring country; the border is with Afghanistan.",
+      "trick_hi": "सबसे छोटी सीमा को सबसे छोटे पड़ोसी देश से न मिलाएँ; सीमा अफगानिस्तान के साथ है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.mea.gov.in/",
+        "citation": "Ministry of External Affairs, India's border reference: shortest land border with Afghanistan. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-09",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Duncan Passage separates which two islands?",
+      "text_hi": "डंकन पैसेज किन दो द्वीपों को अलग करता है?",
+      "options": [
+        {
+          "en": "South Andaman and Little Andaman",
+          "hi": "दक्षिण अंडमान और लिटिल अंडमान"
+        },
+        {
+          "en": "Little Andaman and Car Nicobar",
+          "hi": "लिटिल अंडमान और कार निकोबार"
+        },
+        {
+          "en": "North Andaman and Middle Andaman",
+          "hi": "उत्तरी अंडमान और मध्य अंडमान"
+        },
+        {
+          "en": "Minicoy and Maldives",
+          "hi": "मिनिकॉय और मालदीव"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Duncan Passage separates South Andaman from Little Andaman. The Ten Degree Channel separates the Andaman and Nicobar groups.",
+      "solution_hi": "डंकन पैसेज दक्षिण अंडमान को लिटिल अंडमान से अलग करता है। दस डिग्री चैनल अंडमान और निकोबार समूहों को अलग करता है।",
+      "trick_en": "Duncan = South Andaman to Little Andaman; Ten Degree = Andaman to Nicobar.",
+      "trick_hi": "डंकन = दक्षिण अंडमान से लिटिल अंडमान; दस डिग्री = अंडमान से निकोबार।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, Andaman and Nicobar geography reference: Duncan Passage. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-10",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Ten Degree Channel separates which two groups?",
+      "text_hi": "दस डिग्री चैनल किन दो समूहों को अलग करता है?",
+      "options": [
+        {
+          "en": "Andaman and Nicobar",
+          "hi": "अंडमान और निकोबार"
+        },
+        {
+          "en": "Lakshadweep and Maldives",
+          "hi": "लक्षद्वीप और मालदीव"
+        },
+        {
+          "en": "Sri Lanka and India",
+          "hi": "श्रीलंका और भारत"
+        },
+        {
+          "en": "Andaman and Myanmar",
+          "hi": "अंडमान और म्यांमार"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Ten Degree Channel separates the Andaman Islands from the Nicobar Islands.",
+      "solution_hi": "दस डिग्री चैनल अंडमान द्वीपों को निकोबार द्वीपों से अलग करता है।",
+      "trick_en": "Ten Degree Channel lies near 10°N between the Andaman and Nicobar groups.",
+      "trick_hi": "दस डिग्री चैनल 10°उ के पास अंडमान और निकोबार समूहों के बीच है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, Andaman and Nicobar geography reference: Ten Degree Channel. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-11",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Standard Meridian of India, 82°30′E, passes through which town?",
+      "text_hi": "भारत की मानक याम्योत्तर 82°30′पूर्व किस नगर से गुजरती है?",
+      "options": [
+        {
+          "en": "Mirzapur",
+          "hi": "मिर्जापुर"
+        },
+        {
+          "en": "Nagpur",
+          "hi": "नागपुर"
+        },
+        {
+          "en": "Bhopal",
+          "hi": "भोपाल"
+        },
+        {
+          "en": "Allahabad",
+          "hi": "इलाहाबाद"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Standard Meridian 82°30′E passes through Mirzapur in Uttar Pradesh. It is used to set Indian Standard Time.",
+      "solution_hi": "मानक याम्योत्तर 82°30′पूर्व उत्तर प्रदेश के मिर्जापुर से गुजरती है। इससे भारतीय मानक समय निर्धारित होता है।",
+      "trick_en": "82.5°E and Mirzapur are a fixed pair for IST.",
+      "trick_hi": "82.5°पूर्व और मिर्जापुर IST के लिए स्थिर जोड़ी हैं।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, geography reference: Standard Meridian 82°30′E through Mirzapur. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-12",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Indira Point, the southernmost point of India, is located in which island group?",
+      "text_hi": "भारत का दक्षिणतम बिंदु इंदिरा पॉइंट किस द्वीप समूह में है?",
+      "options": [
+        {
+          "en": "Nicobar Islands",
+          "hi": "निकोबार द्वीप समूह"
+        },
+        {
+          "en": "Andaman Islands",
+          "hi": "अंडमान द्वीप समूह"
+        },
+        {
+          "en": "Lakshadweep",
+          "hi": "लक्षद्वीप"
+        },
+        {
+          "en": "Minicoy",
+          "hi": "मिनिकॉय"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Indira Point is on Great Nicobar Island in the Nicobar group. It is the southernmost point of India.",
+      "solution_hi": "इंदिरा पॉइंट निकोबार समूह के ग्रेट निकोबार द्वीप पर है। यह भारत का दक्षिणतम बिंदु है।",
+      "trick_en": "Indira Point = Great Nicobar; Kanyakumari is the southernmost mainland point.",
+      "trick_hi": "इंदिरा पॉइंट = ग्रेट निकोबार; कन्याकुमारी मुख्य भूमि का दक्षिणतम बिंदु है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, Andaman and Nicobar geography reference: Indira Point. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-13",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is the longest river of peninsular India?",
+      "text_hi": "प्रायद्वीपीय भारत की सबसे लंबी नदी कौन-सी है?",
+      "options": [
+        {
+          "en": "Godavari",
+          "hi": "गोदावरी"
+        },
+        {
+          "en": "Krishna",
+          "hi": "कृष्णा"
+        },
+        {
+          "en": "Kaveri",
+          "hi": "कावेरी"
+        },
+        {
+          "en": "Narmada",
+          "hi": "नर्मदा"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Godavari is the longest river of peninsular India, about 1,465 km. It is often called the Dakshin Ganga.",
+      "solution_hi": "गोदावरी प्रायद्वीपीय भारत की सबसे लंबी नदी है, लगभग 1,465 किमी। इसे दक्षिण गंगा भी कहा जाता है।",
+      "trick_en": "Godavari > Krishna > Narmada > Kaveri in peninsular length.",
+      "trick_hi": "प्रायद्वीपीय लंबाई में गोदावरी > कृष्णा > नर्मदा > कावेरी।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, rivers reference: Godavari is the longest peninsular river. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-14",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Chilika Lake, India's largest brackish-water lagoon, is located in which state?",
+      "text_hi": "भारत की सबसे बड़ी खारे पानी की लैगून चिलिका झील किस राज्य में है?",
+      "options": [
+        {
+          "en": "Odisha",
+          "hi": "ओडिशा"
+        },
+        {
+          "en": "Andhra Pradesh",
+          "hi": "आंध्र प्रदेश"
+        },
+        {
+          "en": "West Bengal",
+          "hi": "पश्चिम बंगाल"
+        },
+        {
+          "en": "Tamil Nadu",
+          "hi": "तमिलनाडु"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Chilika Lake is on the Odisha coast and is Asia's largest brackish-water lagoon.",
+      "solution_hi": "चिलिका झील ओडिशा तट पर है और एशिया की सबसे बड़ी खारे पानी की लैगून है।",
+      "trick_en": "Chilika = Odisha; it is also a Ramsar site.",
+      "trick_hi": "चिलिका = ओडिशा; यह रामसर साइट भी है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, wetlands reference: Chilika Lake in Odisha. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-15",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Palk Strait separates India from which country?",
+      "text_hi": "पाक जलसंधि भारत को किस देश से अलग करती है?",
+      "options": [
+        {
+          "en": "Sri Lanka",
+          "hi": "श्रीलंका"
+        },
+        {
+          "en": "Maldives",
+          "hi": "मालदीव"
+        },
+        {
+          "en": "Myanmar",
+          "hi": "म्यांमार"
+        },
+        {
+          "en": "Indonesia",
+          "hi": "इंडोनेशिया"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Palk Strait lies between India and Sri Lanka. The Gulf of Mannar is also part of this separation.",
+      "solution_hi": "पाक जलसंधि भारत और श्रीलंका के बीच है। मन्नार की खाड़ी भी इस पृथक्करण का हिस्सा है।",
+      "trick_en": "Palk Strait = India–Sri Lanka.",
+      "trick_hi": "पाक जलसंधि = भारत–श्रीलंका।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, geography reference: Palk Strait between India and Sri Lanka. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-16",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "General policy",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which Article of the Constitution provides for the Election Commission of India?",
+      "text_hi": "भारत के संविधान का कौन-सा अनुच्छेद भारत निर्वाचन आयोग का प्रावधान करता है?",
+      "options": [
+        {
+          "en": "Article 324",
+          "hi": "अनुच्छेद 324"
+        },
+        {
+          "en": "Article 356",
+          "hi": "अनुच्छेद 356"
+        },
+        {
+          "en": "Article 370",
+          "hi": "अनुच्छेद 370"
+        },
+        {
+          "en": "Article 44",
+          "hi": "अनुच्छेद 44"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Article 324 provides for the superintendence, direction and control of elections by the Election Commission. Article 356 deals with President's rule.",
+      "solution_hi": "अनुच्छेद 324 निर्वाचन आयोग द्वारा चुनावों के अधीक्षण, निर्देशन और नियंत्रण का प्रावधान करता है। अनुच्छेद 356 राष्ट्रपति शासन से संबंधित है।",
+      "trick_en": "Election Commission = Article 324; President's rule = Article 356.",
+      "trick_hi": "निर्वाचन आयोग = अनुच्छेद 324; राष्ट्रपति शासन = अनुच्छेद 356।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://legislative.gov.in/constitution-of-india/",
+        "citation": "Legislative Department, Constitution of India: Article 324 (Election Commission). Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-17",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "General policy",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the maximum sanctioned strength of the Lok Sabha?",
+      "text_hi": "लोकसभा की अधिकतम स्वीकृत सदस्य संख्या कितनी है?",
+      "options": [
+        {
+          "en": "543",
+          "hi": "543"
+        },
+        {
+          "en": "545",
+          "hi": "545"
+        },
+        {
+          "en": "552",
+          "hi": "552"
+        },
+        {
+          "en": "560",
+          "hi": "560"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The Constitution permits a maximum of 552 members in the Lok Sabha: up to 530 from states, 20 from Union Territories and 2 nominated Anglo-Indians. The current elected strength is 543.",
+      "solution_hi": "संविधान लोकसभा में अधिकतम 552 सदस्यों की अनुमति देता है: राज्यों से 530, केंद्र शासित प्रदेशों से 20 और 2 मनोनीत आंग्ल-भारतीय। वर्तमान निर्वाचित संख्या 543 है।",
+      "trick_en": "Distinguish maximum sanctioned strength (552) from current elected seats (543).",
+      "trick_hi": "अधिकतम स्वीकृत संख्या (552) और वर्तमान निर्वाचित सीटें (543) अलग रखें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://sansad.in/ls",
+        "citation": "Lok Sabha official website; maximum sanctioned strength and current composition. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-18",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "General policy",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "NITI Aayog replaced which body in 2015?",
+      "text_hi": "NITI आयोग ने 2015 में किस निकाय का स्थान लिया?",
+      "options": [
+        {
+          "en": "Planning Commission",
+          "hi": "योजना आयोग"
+        },
+        {
+          "en": "Finance Commission",
+          "hi": "वित्त आयोग"
+        },
+        {
+          "en": "Election Commission",
+          "hi": "निर्वाचन आयोग"
+        },
+        {
+          "en": "Law Commission",
+          "hi": "विधि आयोग"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "NITI Aayog was created on 1 January 2015, replacing the Planning Commission.",
+      "solution_hi": "NITI आयोग 1 जनवरी 2015 को बनाया गया और इसने योजना आयोग का स्थान लिया।",
+      "trick_en": "NITI Aayog = policy think tank replacing the Planning Commission.",
+      "trick_hi": "NITI आयोग = योजना आयोग का स्थान लेने वाला नीति थिंक टैंक।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.niti.gov.in/",
+        "citation": "NITI Aayog official website: established 1 January 2015, replacing the Planning Commission. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-19",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the chemical formula of washing soda?",
+      "text_hi": "धोने के सोडा का रासायनिक सूत्र क्या है?",
+      "options": [
+        {
+          "en": "Na2CO3·10H2O",
+          "hi": "Na2CO3·10H2O"
+        },
+        {
+          "en": "NaHCO3",
+          "hi": "NaHCO3"
+        },
+        {
+          "en": "NaOH",
+          "hi": "NaOH"
+        },
+        {
+          "en": "NaCl",
+          "hi": "NaCl"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Washing soda is sodium carbonate decahydrate, Na2CO3·10H2O. NaHCO3 is baking soda.",
+      "solution_hi": "धोने का सोडा सोडियम कार्बोनेट डेकाहाइड्रेट है, Na2CO3·10H2O। NaHCO3 बेकिंग सोडा है।",
+      "trick_en": "Washing soda has 10 water molecules; baking soda does not.",
+      "trick_hi": "धोने के सोडा में 10 जल अणु होते हैं; बेकिंग सोडा में नहीं।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.britannica.com/science/sodium-carbonate",
+        "citation": "Encyclopaedia Britannica, sodium carbonate (washing soda) formula Na2CO3·10H2O. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-20",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which blood group is called the universal donor?",
+      "text_hi": "किस रक्त समूह को सार्वभौमिक दाता कहा जाता है?",
+      "options": [
+        {
+          "en": "O negative",
+          "hi": "O नेगेटिव"
+        },
+        {
+          "en": "AB positive",
+          "hi": "AB पॉजिटिव"
+        },
+        {
+          "en": "A positive",
+          "hi": "A पॉजिटिव"
+        },
+        {
+          "en": "B negative",
+          "hi": "B नेगेटिव"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "O negative red blood cells lack A, B and Rh antigens, so they can be given to patients of any ABO/Rh type in emergencies.",
+      "solution_hi": "O नेगेटिव लाल रक्त कोशिकाओं में A, B और Rh प्रतिजन नहीं होते, इसलिए आपात स्थिति में इन्हें किसी भी ABO/Rh प्रकार के रोगी को दिया जा सकता है।",
+      "trick_en": "Universal donor = O negative; universal recipient = AB positive.",
+      "trick_hi": "सार्वभौमिक दाता = O नेगेटिव; सार्वभौमिक ग्राही = AB पॉजिटिव।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.redcrossblood.org/donate-blood/blood-types.html",
+        "citation": "American Red Cross blood types reference: O negative is the universal donor. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-21",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is the largest gland in the human body?",
+      "text_hi": "मानव शरीर की सबसे बड़ी ग्रंथि कौन-सी है?",
+      "options": [
+        {
+          "en": "Liver",
+          "hi": "यकृत"
+        },
+        {
+          "en": "Pancreas",
+          "hi": "अग्न्याशय"
+        },
+        {
+          "en": "Thyroid",
+          "hi": "थायरॉइड"
+        },
+        {
+          "en": "Pituitary",
+          "hi": "पिट्यूटरी"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The liver is the largest gland in the human body. It produces bile and performs many metabolic functions.",
+      "solution_hi": "यकृत मानव शरीर की सबसे बड़ी ग्रंथि है। यह पित्त बनाता है और कई उपापचयी कार्य करता है।",
+      "trick_en": "Liver is the largest internal organ and gland; skin is the largest organ overall.",
+      "trick_hi": "यकृत सबसे बड़ी आंतरिक ग्रंथि है; त्वचा समग्र रूप से सबसे बड़ा अंग है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK459353/",
+        "citation": "NCBI Bookshelf, liver anatomy reference: largest gland in the human body. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-22",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "A seismograph is used to measure:",
+      "text_hi": "भूकंपमापी का उपयोग किसे मापने के लिए होता है?",
+      "options": [
+        {
+          "en": "Earthquakes",
+          "hi": "भूकंप"
+        },
+        {
+          "en": "Rainfall",
+          "hi": "वर्षा"
+        },
+        {
+          "en": "Wind speed",
+          "hi": "हवा की गति"
+        },
+        {
+          "en": "Humidity",
+          "hi": "आर्द्रता"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "A seismograph records the intensity and duration of earthquake waves.",
+      "solution_hi": "भूकंपमापी भूकंपीय तरंगों की तीव्रता और अवधि रिकॉर्ड करता है।",
+      "trick_en": "Seismo- means earthquake; -graph means recording.",
+      "trick_hi": "Seismo- का अर्थ भूकंप; -graph का अर्थ रिकॉर्ड करना।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.usgs.gov/programs/earthquake-hazards/seismographs",
+        "citation": "USGS earthquake hazards reference: seismographs record earthquake waves. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-23",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The speed of light in vacuum is approximately:",
+      "text_hi": "निर्वात में प्रकाश की गति लगभग कितनी है?",
+      "options": [
+        {
+          "en": "3 × 10^8 m/s",
+          "hi": "3 × 10^8 मीटर/सेकंड"
+        },
+        {
+          "en": "3 × 10^6 m/s",
+          "hi": "3 × 10^6 मीटर/सेकंड"
+        },
+        {
+          "en": "3 × 10^10 m/s",
+          "hi": "3 × 10^10 मीटर/सेकंड"
+        },
+        {
+          "en": "3 × 10^5 m/s",
+          "hi": "3 × 10^5 मीटर/सेकंड"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The speed of light in vacuum is approximately 3 × 10^8 metres per second (299,792,458 m/s).",
+      "solution_hi": "निर्वात में प्रकाश की गति लगभग 3 × 10^8 मीटर प्रति सेकंड है (299,792,458 मीटर/सेकंड)।",
+      "trick_en": "Remember 3 × 10^8 m/s; 3 × 10^5 km/s is the same value in km/s.",
+      "trick_hi": "3 × 10^8 मीटर/सेकंड याद रखें; 3 × 10^5 किमी/सेकंड वही मान है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://physics.nist.gov/cuu/Constants/",
+        "citation": "NIST CODATA constants: speed of light in vacuum 299,792,458 m/s. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-24",
+      "subject": "General_Awareness",
+      "topic": "Environment and Society",
+      "sub_topic": "General awareness of the environment and its application to society",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Project Tiger was launched in which year?",
+      "text_hi": "प्रोजेक्ट टाइगर किस वर्ष शुरू किया गया?",
+      "options": [
+        {
+          "en": "1973",
+          "hi": "1973"
+        },
+        {
+          "en": "1980",
+          "hi": "1980"
+        },
+        {
+          "en": "1992",
+          "hi": "1992"
+        },
+        {
+          "en": "2006",
+          "hi": "2006"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Project Tiger was launched in 1973 to conserve tigers and their habitats. It is administered by the National Tiger Conservation Authority.",
+      "solution_hi": "प्रोजेक्ट टाइगर 1973 में बाघों और उनके आवासों के संरक्षण के लिए शुरू किया गया। इसे राष्ट्रीय बाघ संरक्षण प्राधिकरण संचालित करता है।",
+      "trick_en": "Project Tiger = 1973; Project Elephant = 1992.",
+      "trick_hi": "प्रोजेक्ट टाइगर = 1973; प्रोजेक्ट एलीफेंट = 1992।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ntca.gov.in/",
+        "citation": "National Tiger Conservation Authority, Project Tiger launched in 1973. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga3-25",
+      "subject": "General_Awareness",
+      "topic": "Environment and Society",
+      "sub_topic": "General awareness of the environment and its application to society",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Kyoto Protocol is mainly aimed at controlling:",
+      "text_hi": "क्योटो प्रोटोकॉल मुख्य रूप से किसे नियंत्रित करने के लिए है?",
+      "options": [
+        {
+          "en": "Greenhouse gas emissions",
+          "hi": "ग्रीनहाउस गैस उत्सर्जन"
+        },
+        {
+          "en": "Ozone-depleting substances",
+          "hi": "ओजोन-क्षयकारी पदार्थ"
+        },
+        {
+          "en": "Wetland destruction",
+          "hi": "आर्द्रभूमि विनाश"
+        },
+        {
+          "en": "Desertification",
+          "hi": "मरुस्थलीकरण"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Kyoto Protocol set binding emission-reduction targets for greenhouse gases in developed countries. The Montreal Protocol deals with ozone-depleting substances.",
+      "solution_hi": "क्योटो प्रोटोकॉल ने विकसित देशों के लिए ग्रीनहाउस गैसों के उत्सर्जन में कमी के बाध्यकारी लक्ष्य तय किए। मॉन्ट्रियल प्रोटोकॉल ओजोन-क्षयकारी पदार्थों से संबंधित है।",
+      "trick_en": "Kyoto = greenhouse gases; Montreal = ozone layer; Ramsar = wetlands.",
+      "trick_hi": "क्योटो = ग्रीनहाउस गैसें; मॉन्ट्रियल = ओजोन परत; रामसर = आर्द्रभूमि।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://unfccc.int/kyoto_protocol",
+        "citation": "UNFCCC, Kyoto Protocol: binding greenhouse-gas emission reduction targets. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ]
+}
