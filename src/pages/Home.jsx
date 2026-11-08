@@ -9,7 +9,7 @@ import { navigate } from '../lib/router'
 import { useL } from '../lib/i18n'
 import { CATEGORIES, EXAMS, examById } from '../data/exams'
 import { TEST_CATALOGUE } from '../lib/tests'
-import { hasPractice, latestTargetAttempt } from '../lib/examCatalog'
+import { hasPractice, latestTargetAttempt, practiceExamCount } from '../lib/examCatalog'
 
 const popular = [
   { id: 'ssc-cgl', initials: 'SSC', color: 'purple', label: 'Staff Selection' },
@@ -53,6 +53,7 @@ export default function Home() {
   const available = (TEST_CATALOGUE[target.id] || []).filter((test) => test.type === 'sectional').length
   const preview = (TEST_CATALOGUE[target.id] || []).find((test) => test.type === 'preview')
   const lastAttempt = latestTargetAttempt(state.attempts, target.id)
+  const availablePracticeRoute = practiceExamCount ? '/exams?availability=practice' : '/exams'
   const beginPractice = () => preview && navigate(`/test/${target.id}/${preview.id}?mode=practice`)
 
   const week = useMemo(() => Array.from({ length: 7 }, (_, index) => {
@@ -68,7 +69,7 @@ export default function Home() {
     { icon: Target, tone: 'violet', label: L({ en: 'My target', hi: 'मेरा लक्ष्य' }), detail: target.name, path: `/exam/${target.id}` },
     { icon: Compass, tone: 'blue', label: L({ en: 'Explore exams', hi: 'परीक्षाएँ देखें' }), detail: `${EXAMS.length} ${L({ en: 'exams listed', hi: 'परीक्षाएँ' })}`, path: '/exams' },
     { icon: BookOpen, tone: 'mint', label: L({ en: 'Study material', hi: 'अध्ययन सामग्री' }), detail: L({ en: 'Sample resources', hi: 'नमूना सामग्री' }), path: '/materials' },
-    { icon: Bookmark, tone: 'peach', label: L({ en: 'Saved questions', hi: 'सहेजे प्रश्न' }), detail: state.bookmarks.length ? `${state.bookmarks.length} ${L({ en: 'saved', hi: 'सहेजे' })}` : L({ en: 'Keep for later', hi: 'बाद के लिए सहेजें' }), path: '/bookmarks' },
+    { icon: Bookmark, tone: 'peach', label: L({ en: 'Saved questions', hi: 'सहेजे प्रश्न' }), detail: L({ en: 'Question bank rebuilding', hi: 'नया प्रश्न बैंक तैयार हो रहा है' }), path: '/bookmarks' },
   ]
 
   const metrics = [
@@ -116,7 +117,7 @@ export default function Home() {
             <div className="daily-ring" style={{ background: `conic-gradient(var(--ee-progress) ${progress}%, var(--ee-progress-track) 0)` }}><div><strong>{progress}%</strong><span>{L({ en: 'complete', hi: 'पूरा' })}</span></div></div>
             <div className="daily-copy"><strong>{todayQuestions}<span> / {goal}</span></strong><small>{L({ en: 'questions today', hi: 'आज के प्रश्न' })}</small><p>{progress >= 100 ? L({ en: 'Goal complete. Great work!', hi: 'लक्ष्य पूरा। बहुत बढ़िया!' }) : L({ en: 'Small steps make a big difference.', hi: 'छोटे कदम बड़ा बदलाव लाते हैं।' })}</p></div>
           </div>
-          <button className="focus-action" onClick={() => navigate(preview ? `/exam/${target.id}` : '/exams?availability=practice')}>{preview ? L({ en: 'Let’s practise', hi: 'अभ्यास शुरू करें' }) : L({ en: 'Find available practice', hi: 'उपलब्ध अभ्यास खोजें' })}<ArrowRight size={15} /></button>
+          <button className="focus-action" onClick={() => navigate(preview ? `/exam/${target.id}` : availablePracticeRoute)}>{preview ? L({ en: 'Let’s practise', hi: 'अभ्यास शुरू करें' }) : L({ en: 'Explore exams', hi: 'परीक्षाएँ देखें' })}<ArrowRight size={15} /></button>
         </aside>
 
         <section className="quick-access" aria-labelledby="quick-access-title">
@@ -152,12 +153,12 @@ export default function Home() {
         <div className="next-step-copy">
           <div className="section-kicker">{L({ en: 'YOUR NEXT STEP', hi: 'आपका अगला कदम' })}</div>
           <h2>{preview ? L({ en: `Make progress on ${target.name}`, hi: `${target.name} की तैयारी आगे बढ़ाएँ` }) : L({ en: `${target.name} is your goal`, hi: `आपका लक्ष्य: ${target.name}` })}</h2>
-          <p>{preview ? L({ en: `Mixed practice · ${preview.questions} questions · suggested ${preview.duration} min`, hi: `मिश्रित अभ्यास · ${preview.questions} प्रश्न · सुझाया समय ${preview.duration} मिनट` }) : L({ en: 'Practice is not added for this exam yet. Explore another goal in the meantime.', hi: 'इस परीक्षा का अभ्यास अभी नहीं जोड़ा गया है। तब तक अन्य परीक्षा देखें।' })}</p>
+          <p>{preview ? L({ en: `Mixed practice · ${preview.questions} questions · suggested ${preview.duration} min`, hi: `मिश्रित अभ्यास · ${preview.questions} प्रश्न · सुझाया समय ${preview.duration} मिनट` }) : L({ en: 'The question bank is being rebuilt. Your past results remain on this device.', hi: 'नया प्रश्न बैंक तैयार हो रहा है। पुराने परिणाम इस डिवाइस पर सुरक्षित हैं।' })}</p>
           {lastAttempt && <span className="next-step-history">{L({ en: 'Last result', hi: 'पिछला परिणाम' })} · {Math.round((lastAttempt.accuracy || 0) * 100)}% {L({ en: 'accuracy', hi: 'सटीकता' })}</span>}
         </div>
         <div className="next-step-actions">
           <button className="next-step-primary" onClick={() => preview ? beginPractice() : navigate(`/exam/${target.id}`)}>{preview ? L({ en: 'Start a set', hi: 'सेट शुरू करें' }) : L({ en: 'Exam details', hi: 'परीक्षा विवरण' })}<ArrowRight size={15} /></button>
-          <button className="next-step-secondary" onClick={() => lastAttempt ? navigate(`/result/${lastAttempt.id}`) : navigate(preview ? `/exam/${target.id}` : '/exams?availability=practice')}>{lastAttempt ? L({ en: 'Review last result', hi: 'पिछला परिणाम देखें' }) : preview ? L({ en: 'See all sets', hi: 'सभी सेट देखें' }) : L({ en: 'Practice other exams', hi: 'अन्य परीक्षा अभ्यास' })}</button>
+          <button className="next-step-secondary" onClick={() => lastAttempt ? navigate(`/result/${lastAttempt.id}`) : navigate(preview ? `/exam/${target.id}` : availablePracticeRoute)}>{lastAttempt ? L({ en: 'Review last result', hi: 'पिछला परिणाम देखें' }) : preview ? L({ en: 'See all sets', hi: 'सभी सेट देखें' }) : L({ en: 'Explore exams', hi: 'परीक्षाएँ देखें' })}</button>
         </div>
       </section>
 
@@ -166,7 +167,7 @@ export default function Home() {
           <section>
             <SectionHead eyebrow={L({ en: 'A GOOD PLACE TO BEGIN', hi: 'यहाँ से शुरुआत करें' })} title={L({ en: 'Your preparation toolkit', hi: 'आपकी तैयारी की टूलकिट' })} sub={L({ en: 'Everything you need, all in one place.', hi: 'तैयारी की हर चीज़, एक जगह।' })} action={L({ en: 'Explore all', hi: 'सभी देखें' })} onAction={() => navigate('/exams')} />
             <div className="toolkit-grid">
-              <button className="toolkit-card toolkit-tests" onClick={() => navigate(preview ? `/exam/${target.id}` : '/exams?availability=practice')}>
+              <button className="toolkit-card toolkit-tests" onClick={() => navigate(preview ? `/exam/${target.id}` : availablePracticeRoute)}>
                 <span className="toolkit-top"><span className="toolkit-icon"><Layers3 size={21} /></span><ArrowUpRight size={17} /></span>
                 <span className="toolkit-tag">{L({ en: 'PRACTISE', hi: 'अभ्यास' })}</span>
                 <strong>{L({ en: 'Test series', hi: 'टेस्ट सीरीज़' })}</strong>

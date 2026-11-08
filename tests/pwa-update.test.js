@@ -1,3 +1,4 @@
+import { isTestRoute } from '../src/lib/updateRoute.js'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
@@ -45,16 +46,23 @@ test('a failed offline-shell download does not activate an incomplete update', a
   assert.equal(skipped, true)
 })
 
-test('upgrade keeps two previous ExamEdge shells and other applications’ caches', async () => {
+test('upgrade removes retired bank bundles but keeps other previous assets and app caches', async () => {
   const removed = []
+  const removedAssets = []
   let claimed = false
   const caches = {
     keys: async () => ['other-app', cacheName(3), cacheName(2), cacheName(1), cacheName()],
     delete: async (key) => { removed.push(key) },
+    open: async (name) => ({
+      keys: async () => [{ url: 'https://app.example/assets/main-old.js' }, { url: 'https://app.example/assets/auth-old.js' }],
+      delete: async (req) => { removedAssets.push([name, req.url]) },
+    }),
   }
   const handlers = worker({ caches, onClaim: () => { claimed = true } })
   await lifecycle(handlers.activate)
   assert.deepEqual(removed, [cacheName(3)])
+  const retiredPrevious = [cacheName(2), cacheName(1)].filter((name) => Number(name.match(/v(\d+)$/)[1]) <= 12)
+  assert.deepEqual(removedAssets, retiredPrevious.map((name) => [name, 'https://app.example/assets/main-old.js']))
   assert.equal(claimed, true)
 })
 
@@ -112,4 +120,13 @@ test('published shell and service worker bypass stale HTTP caches', async () => 
     const entry = config.headers.find((header) => header.source === path)
     assert.ok(entry?.headers.some((header) => header.key.toLowerCase() === 'cache-control' && /no-store/.test(header.value)), path)
   }
+})
+
+
+test('update notices avoid suggesting a reload in either test runner', () => {
+  assert.equal(isTestRoute('/session/42'), true)
+  assert.equal(isTestRoute('/session/42?resume=1'), true)
+  assert.equal(isTestRoute('/test/ssc-cgl/1'), true)
+  assert.equal(isTestRoute('/dest?from=mocks'), true)
+  assert.equal(isTestRoute('/mocks'), false)
 })

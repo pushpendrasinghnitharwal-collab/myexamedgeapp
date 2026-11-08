@@ -71,7 +71,7 @@ export default function Onboarding() {
               </h1>
               <p className="small muted" style={{ marginTop: 0 }}>
                 {L({
-                  en: 'Discover exam goals, try existing practice sets and follow your own progress. Some exam pages contain information only.',
+                  en: 'Discover exam goals and follow your saved progress while new SSC CGL practice is prepared.',
                   hi: 'परीक्षाएँ खोजें, मौजूदा अभ्यास सेट करें और अपनी प्रगति देखें। कुछ परीक्षाओं में अभी केवल जानकारी है।',
                 })}
               </p>
@@ -79,7 +79,7 @@ export default function Onboarding() {
                 {[
                   ['📝', L({ en: `${EXAMS.length} exams listed`, hi: `${EXAMS.length} परीक्षाएँ सूचीबद्ध` }), L({ en: `${practiceExamCount} currently have practice`, hi: `${practiceExamCount} में अभी अभ्यास है` })],
                   ['📊', L({ en: 'Your progress', hi: 'आपकी प्रगति' }), L({ en: 'Review your own attempts and accuracy', hi: 'अपने प्रयास और सटीकता देखें' })],
-                  ['📚', L({ en: 'Study tools', hi: 'अध्ययन साधन' }), L({ en: 'Sample notes, bookmarks and practice', hi: 'नमूना नोट्स, बुकमार्क और अभ्यास' })],
+                  ['📚', L({ en: 'Study tools', hi: 'अध्ययन साधन' }), L({ en: 'Sample notes and saved history', hi: 'नमूना नोट्स और सहेजा इतिहास' })],
                 ].map(([i, t, d]) => (
                   <div key={t} className="card" style={{ padding: 15, background: 'var(--surface-2)' }}>
                     <div style={{ fontSize: 22 }}>{i}</div>

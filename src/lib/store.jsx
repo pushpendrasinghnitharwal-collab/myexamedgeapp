@@ -1,9 +1,12 @@
 import React, { createContext, useContext, useEffect, useMemo, useReducer, useCallback } from 'react'
-import { QUESTIONS } from '../data/questions'
-import { EXAMS, TOPICS } from '../data/exams'
+import { EXAMS } from '../data/exams'
 import { api, getToken, getApiUser, setSession } from './api'
 import { completeWelcome, returnToSignIn, savedWelcomeStatus } from './welcome'
 import { googleAuthConfig } from './googleAuthConfig'
+import { clearQuestionTimes } from './cglTelemetry'
+import { clearPlayerData } from './cglPlayerStore'
+import { clearReviewTargets } from './cglReviewModel'
+import { clearDestSessions } from './destStore'
 
 const KEY = 'examedge.state.v1'
 
@@ -22,7 +25,7 @@ const initialState = {
   coins: 40,
   achievements: [],
   dailyGoal: 25,
-  settings: { lang: 'en', theme: 'light', sound: true, autoSubmit: true },
+  settings: { lang: 'en', theme: 'light', sound: true, autoSubmit: true, cglStage: 'Tier_1', cglTiming: 'exam_hall_v1' },
 }
 
 function todayKey(d = new Date()) {
@@ -85,7 +88,7 @@ function reducer(state, action) {
     case 'setGoal':
       return { ...state, dailyGoal: action.payload }
     case 'reset':
-      return { ...initialState, settings: state.settings, welcomeComplete: state.welcomeComplete, requiresExplicitSignIn: state.requiresExplicitSignIn }
+      return { ...initialState, auth: state.auth, settings: state.settings, welcomeComplete: state.welcomeComplete, requiresExplicitSignIn: state.requiresExplicitSignIn }
     default:
       return state
   }
@@ -106,6 +109,9 @@ function loadState() {
       ...saved,
       welcomeComplete: savedWelcomeStatus(saved),
       profile: saved.profile || initialState.profile,
+      // The dedicated session keys are authoritative; an old state snapshot
+      // must not resurrect a signed-out or different backend account.
+      auth: { token: getToken(), user: getApiUser() },
       settings: { ...initialState.settings, ...saved.settings },
       streak: { ...initialState.streak, ...saved.streak },
     }
@@ -132,6 +138,12 @@ export function StoreProvider({ children }) {
         dispatch({ type: 'register', payload: p })
       },
       completeWelcome: (user) => dispatch({ type: 'completeWelcome', payload: user }),
+      registerBackend: async (name, email, password) => {
+        const { token, user } = await api.register(name, email, password, 'ssc-cgl')
+        setSession(token, user)
+        dispatch({ type: 'session', payload: user })
+        return user
+      },
       login: async (email, password) => {
         const { token, user } = await api.login(email, password)
         setSession(token, user)
@@ -147,25 +159,6 @@ export function StoreProvider({ children }) {
         setSession(null, null)
         dispatch({ type: 'logoutToSignIn' })
       },
-      // Submits the attempt to the backend when logged in; always records locally too.
-      submitAttempt: async (a) => {
-        dispatch({ type: 'addAttempt', payload: a })
-        const token = getToken()
-        if (!token) return null
-        try {
-          const res = await api.submitAttempt({
-            examId: a.examId,
-            testId: a.testId || a.title || 'custom',
-            mode: a.mode,
-            timeTaken: a.timeSpent,
-            answers: (a.perQuestion || []).map((pq) => ({ id: pq.qid, choice: pq.chosen })),
-          })
-          return res
-        } catch (e) {
-          console.warn('Backend submit failed, attempt kept locally:', e.message)
-          return null
-        }
-      },
       updateProfile: (p) => dispatch({ type: 'updateProfile', payload: p }),
       updateSettings: (p) => dispatch({ type: 'updateSettings', payload: p }),
       addAttempt: (a) => dispatch({ type: 'addAttempt', payload: a }),
@@ -173,7 +166,7 @@ export function StoreProvider({ children }) {
       saveNote: (id, text) => dispatch({ type: 'saveNote', payload: { id, text } }),
       claimAchievement: (id) => dispatch({ type: 'claimAchievement', payload: id }),
       setGoal: (n) => dispatch({ type: 'setGoal', payload: n }),
-      reset: () => dispatch({ type: 'reset' }),
+      reset: () => { clearQuestionTimes(); clearPlayerData(); clearReviewTargets(); clearDestSessions(); dispatch({ type: 'reset' }) },
     }),
     []
   )
@@ -195,11 +188,6 @@ export function useAttemptStats() {
 }
 
 export function computeStats(attempts) {
-  const topicMap = {}
-  const qmap = {}
-  QUESTIONS.forEach((q) => {
-    qmap[q.id] = q
-  })
   let totalQ = 0
   let totalCorrect = 0
   let totalAnswered = 0
@@ -209,32 +197,18 @@ export function computeStats(attempts) {
   let scoreCount = 0
 
   attempts.forEach((a) => {
-    totalQ += a.totalQuestions || a.perQuestion.length
+    totalQ += a.totalQuestions || a.perQuestion?.length || 0
     totalCorrect += a.correct
     totalAnswered += (a.correct || 0) + (a.wrong || 0)
     totalTime += a.timeSpent
     scoreSum += a.score
     scoreCount++
     if (!best || a.score > best.score) best = a
-    a.perQuestion.forEach((pq) => {
-      const q = qmap[pq.qid]
-      if (!q) return
-      if (pq.chosen == null || pq.chosen < 0) return
-      const t = topicMap[q.topic] || (topicMap[q.topic] = { subject: TOPICS[q.topic]?.subject, attempted: 0, correct: 0, wrong: 0, time: 0 })
-      t.attempted++
-      t.time += pq.time
-      if (pq.chosen === q.a) t.correct++
-      else t.wrong++
-    })
   })
 
-  const topics = Object.entries(topicMap).map(([id, v]) => ({
-    id,
-    ...v,
-    accuracy: v.attempted ? v.correct / v.attempted : 0,
-    avgTime: v.attempted ? v.time / v.attempted : 0,
-  }))
-  topics.sort((a, b) => a.accuracy - b.accuracy)
+  // Old question records were removed, so historical topic-level analysis
+  // cannot be reconstructed from stored IDs alone.
+  const topics = []
 
   const byExam = {}
   attempts.forEach((a) => {
@@ -243,7 +217,7 @@ export function computeStats(attempts) {
     e.score += a.score
     e.correct += a.correct
     e.answered += (a.correct || 0) + (a.wrong || 0)
-    e.total += a.totalQuestions || a.perQuestion.length
+    e.total += a.totalQuestions || a.perQuestion?.length || 0
     e.time += a.timeSpent
   })
 

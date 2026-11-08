@@ -116,11 +116,10 @@ export const EXAMS = [
     tier: 'Tier I + II',
     duration: 60,
     questions: 100,
-    marks: 100,
-    marksPerQ: 1,
-    negative: 0.25,
-    subjects: ['quant', 'reasoning', 'english', 'ga', 'computer'],
-    freeTests: 3,
+    marks: 200,
+    marksPerQ: 2,
+    negative: 0.5,
+    subjects: ['quant', 'reasoning', 'english', 'ga'],
     popularity: 98,
   },
   {
@@ -136,7 +135,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0.25,
     subjects: ['quant', 'reasoning', 'english', 'ga'],
-    freeTests: 4,
     popularity: 92,
   },
   {
@@ -152,7 +150,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0.25,
     subjects: ['quant', 'reasoning', 'english', 'ga', 'science'],
-    freeTests: 5,
     popularity: 90,
   },
   {
@@ -168,7 +165,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0.25,
     subjects: ['quant', 'reasoning', 'english', 'econ', 'ga'],
-    freeTests: 3,
     popularity: 97,
   },
   {
@@ -184,7 +180,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0.25,
     subjects: ['quant', 'reasoning', 'english', 'econ', 'ga'],
-    freeTests: 5,
     popularity: 94,
   },
   {
@@ -200,7 +195,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0.25,
     subjects: ['quant', 'reasoning', 'english', 'econ', 'ga'],
-    freeTests: 2,
     popularity: 91,
   },
   {
@@ -216,7 +210,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0.25,
     subjects: ['quant', 'reasoning', 'english', 'econ', 'ga'],
-    freeTests: 1,
     popularity: 78,
   },
   {
@@ -232,7 +225,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0.25,
     subjects: ['quant', 'reasoning', 'ga', 'computer'],
-    freeTests: 4,
     popularity: 95,
   },
   {
@@ -248,7 +240,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0.25,
     subjects: ['quant', 'reasoning', 'ga', 'science'],
-    freeTests: 6,
     popularity: 93,
   },
   {
@@ -264,7 +255,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0.25,
     subjects: ['quant', 'reasoning', 'science', 'computer', 'ga'],
-    freeTests: 2,
     popularity: 80,
   },
   {
@@ -280,7 +270,6 @@ export const EXAMS = [
     marksPerQ: 2,
     negative: 0.33,
     subjects: ['polity', 'history', 'geo', 'env', 'ethics', 'csat', 'econ', 'ga', 'quant', 'english'],
-    freeTests: 2,
     popularity: 96,
   },
   {
@@ -296,7 +285,6 @@ export const EXAMS = [
     marksPerQ: 2.5,
     negative: 0,
     subjects: ['quant', 'english', 'ga', 'd-gndr'],
-    freeTests: 2,
     popularity: 82,
   },
   {
@@ -312,7 +300,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0.33,
     subjects: ['polity', 'history', 'geo', 'env', 'quant', 'english'],
-    freeTests: 3,
     popularity: 84,
   },
   {
@@ -328,7 +315,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0.33,
     subjects: ['polity', 'history', 'geo', 'env', 'quant', 'english'],
-    freeTests: 3,
     popularity: 81,
   },
   {
@@ -344,7 +330,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0,
     subjects: ['t-pedagogy', 't-dev', 't-psych', 'english', 'ga'],
-    freeTests: 5,
     popularity: 88,
   },
   {
@@ -360,7 +345,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0,
     subjects: ['t-pedagogy', 't-dev', 't-psych', 'english', 'ga'],
-    freeTests: 5,
     popularity: 86,
   },
   {
@@ -376,7 +360,6 @@ export const EXAMS = [
     marksPerQ: 2.5,
     negative: 0,
     subjects: ['quant', 'english', 'ga', 'science'],
-    freeTests: 2,
     popularity: 85,
   },
   {
@@ -392,7 +375,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0.33,
     subjects: ['quant', 'reasoning', 'science', 'english', 'ga'],
-    freeTests: 2,
     popularity: 79,
   },
   {
@@ -408,7 +390,6 @@ export const EXAMS = [
     marksPerQ: 1,
     negative: 0.25,
     subjects: ['quant', 'english', 'ga', 'computer'],
-    freeTests: 3,
     popularity: 83,
   },
   // Directory-only goals. No questions are assigned to these exams.

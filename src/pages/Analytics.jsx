@@ -70,7 +70,7 @@ export default function Analytics() {
             <div className="section-kicker"><span className="kicker-dot" /> {L({ en: 'YOUR PROGRESS', hi: 'आपकी प्रगति' })}</div>
             <h1>{L({ en: 'Every journey starts with a first step.', hi: 'हर यात्रा की शुरुआत एक कदम से होती है।' })}</h1>
             <p>{L({ en: 'Complete your first practice set and your progress will begin to take shape here.', hi: 'अपना पहला अभ्यास सेट पूरा करें और आपकी प्रगति यहाँ दिखाई देने लगेगी।' })}</p>
-            <button className="exam-primary" onClick={() => navigate('/exams?availability=practice')}>{L({ en: 'Explore available practice', hi: 'उपलब्ध अभ्यास देखें' })}<ArrowRight size={16} /></button>
+            <button className="exam-primary" onClick={() => navigate('/exams')}>{L({ en: 'Explore exams', hi: 'परीक्षाएँ देखें' })}<ArrowRight size={16} /></button>
           </div>
           <div className="analytics-empty-art" aria-hidden="true"><span><BarChart3 size={46} strokeWidth={1.5} /></span><i><Sparkles size={20} /></i></div>
         </section>

@@ -6,14 +6,47 @@
   "description": "EXAMEDGE API — auth, exams, papers, attempts, leaderboard (Express + PostgreSQL)",
   "scripts": {
     "start": "node index.js",
-    "seed": "node seed.mjs"
+    "seed": "node seed.mjs",
+    "migrate:ssc-cgl": "node migrate.mjs",
+    "test": "node --test tests/*.test.js",
+    "seed:ssc-cgl-catalog": "node seed.mjs",
+    "migrate:pyq-ai": "node migrate-pyq.mjs",
+    "pyq:import": "node pyq-import.mjs",
+    "pyq:publish": "node pyq-publish.mjs",
+    "ai:generate": "node ai-generate.mjs",
+    "ai:inspect": "node ai-inspect.mjs",
+    "ai:publish": "node ai-publish.mjs",
+    "pyq:seed": "node migrate-pyq.mjs",
+    "pyq:template": "node pyq-template.mjs",
+    "pyq:inspect": "node pyq-inspect.mjs",
+    "pyq:hash": "node pyq-hash.mjs",
+    "pyq:withdraw": "node pyq-withdraw.mjs",
+    "ai:withdraw": "node ai-withdraw.mjs",
+    "migrate:current-affairs": "node migrate-ca.mjs",
+    "ca:seed": "node migrate-ca.mjs",
+    "ca:template": "node ca-template.mjs",
+    "ca:import": "node ca-import.mjs",
+    "ca:inspect": "node ca-inspect.mjs",
+    "ca:review": "node ca-review.mjs",
+    "ca:withdraw": "node ca-withdraw.mjs",
+    "ca:generate": "node ca-generate.mjs",
+    "ca:assemble": "node ca-assemble.mjs",
+    "ca:hash": "node ca-hash.mjs",
+    "ca:reject": "node ca-reject.mjs",
+    "migrate:master": "node migrate-master.mjs",
+    "master:seed": "node migrate-master.mjs",
+    "master:label": "node master-label.mjs"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.21.2",
+    "javascript-lp-solver": "1.0.3",
     "jsonwebtoken": "^9.0.2",
     "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.15"
   }
 }

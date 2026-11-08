@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BarChart3, BookOpen, Calculator, CheckCircle2, Clock3, ClipboardList, Coins, Diamond, FileClock, Flame, GraduationCap, LogOut, Newspaper, Pencil, Settings2, Sparkles, Target, Trophy } from 'lucide-react'
 import { useStore, useAttemptStats, useCurrentStreak } from '../lib/store'
 import { isLoggedIn } from '../lib/api'
@@ -11,10 +11,13 @@ import { useL } from '../lib/i18n'
 import { Card, CardHead, Pill, Button, Stat, Bar, Modal } from '../components/ui'
 import { shortDate } from '../lib/utils'
 
-function AccountCard({ onGoogleSignOut }) {
-  const { state, login, logout } = useStore()
+function AccountCard({ onGoogleSignOut, showBackend }) {
+  const { state, login, logout, registerBackend } = useStore()
   const google = useGoogleAuth()
   const L = useL()
+  const [backendOpen, setBackendOpen] = useState(!!showBackend)
+  const [mode, setMode] = useState('login')
+  const [backendName, setBackendName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [msg, setMsg] = useState(null)
@@ -24,9 +27,10 @@ function AccountCard({ onGoogleSignOut }) {
   const doLogin = async () => {
     setBusy(true); setMsg(null)
     try {
-      const u = await login(email.trim(), password)
+      if (mode === 'register' && password.length < 8) throw new Error('Please use at least 8 characters for your password.')
+      const u = mode === 'register' ? await registerBackend(backendName.trim(), email.trim(), password) : await login(email.trim(), password)
       setPassword('')
-      setMsg({ ok: true, text: L({ en: `Signed in as ${u.name}. Future attempts are sent when the backend is available.`, hi: `${u.name} के रूप में साइन इन हुआ। उपलब्ध होने पर नए प्रयास बैकएंड को भेजे जाएँगे।` }) })
+      setMsg({ ok: true, text: L({ en: `Signed in as ${u.name}. Your practice account is connected.`, hi: `${u.name} के रूप में साइन इन हुआ। आपका अभ्यास खाता जुड़ गया है।` }) })
     } catch (e) {
       setMsg({ ok: false, text: e.message })
     } finally { setBusy(false) }
@@ -48,13 +52,13 @@ function AccountCard({ onGoogleSignOut }) {
             <Button variant="ghost" size="sm" onClick={onGoogleSignOut}>{L({ en: 'Sign out of Google', hi: 'Google से साइन आउट करें' })}</Button>
           </div>
         ) : <GoogleSignInButton />}
-        <p className="google-account-note">{L({ en: 'Google shares your name and email for sign-in. Practice stays on this device after sign-out and does not sync. Anyone using this device can see it.', hi: 'साइन इन के लिए Google आपका नाम और ईमेल साझा करता है। साइन आउट के बाद भी अभ्यास इसी डिवाइस पर रहता है और सिंक नहीं होता। इस डिवाइस का उपयोग करने वाला कोई भी इसे देख सकता है।' })}</p>
+        <p className="google-account-note">{L({ en: 'Google sign-in is separate from your practice account. Older local history stays on this device after sign-out and can be seen by anyone using it.', hi: 'साइन इन के लिए Google आपका नाम और ईमेल साझा करता है। साइन आउट के बाद भी अभ्यास इसी डिवाइस पर रहता है और सिंक नहीं होता। इस डिवाइस का उपयोग करने वाला कोई भी इसे देख सकता है।' })}</p>
       </div>
 
-      <details className="backend-account">
-        <summary>{L({ en: 'Existing email/password backend account', hi: 'मौजूदा ईमेल/पासवर्ड बैकएंड खाता' })}{loggedIn ? ` · ${state.auth.user.email}` : ''}</summary>
+      <details className="backend-account" id="backend-account" open={backendOpen} onToggle={(e) => setBackendOpen(e.currentTarget.open)}>
+        <summary>{L({ en: 'SSC CGL practice account', hi: 'SSC CGL अभ्यास खाता' })}{loggedIn ? ` · ${state.auth.user.email}` : ''}</summary>
         <div className="backend-account-content stack" style={{ gap: 10 }}>
-          <p className="google-account-note">{L({ en: 'This is separate from Google sign-in. A connected backend can receive future attempts.', hi: 'यह Google साइन इन से अलग है। जुड़ा हुआ बैकएंड नए प्रयास प्राप्त कर सकता है।' })}</p>
+          <p className="google-account-note">{L({ en: 'This email/password account is separate from Google sign-in. Reviewed practice availability depends on the connected service.', hi: 'यह ईमेल/पासवर्ड खाता Google साइन इन से अलग है। अभ्यास की उपलब्धता जुड़ी हुई सेवा पर निर्भर करती है।' })}</p>
           {loggedIn ? (
             <div className="row wrap" style={{ gap: 10, alignItems: 'center' }}>
               <Pill tone="ok">{state.auth.user.email}</Pill>
@@ -62,11 +66,13 @@ function AccountCard({ onGoogleSignOut }) {
               <Button variant="ghost" onClick={logout}>{L({ en: 'Sign out of backend', hi: 'बैकएंड से साइन आउट करें' })}</Button>
             </div>
           ) : (
-            <div className="backend-account-fields">
+            <form className="backend-account-fields" onSubmit={(e) => { e.preventDefault(); doLogin() }}>
+              {mode === 'register' && <div><label htmlFor="backend-name">{L({ en: 'Name', hi: 'नाम' })}</label><input id="backend-name" className="input" autoComplete="name" value={backendName} onChange={(e) => setBackendName(e.target.value)} required /></div>}
               <div><label htmlFor="backend-email">{L({ en: 'Email', hi: 'ईमेल' })}</label><input id="backend-email" className="input" type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} /></div>
-              <div><label htmlFor="backend-password">{L({ en: 'Password', hi: 'पासवर्ड' })}</label><input id="backend-password" className="input" type="password" autoComplete="current-password" value={password} onChange={(e) => setPassword(e.target.value)} /></div>
-              <Button onClick={doLogin} disabled={busy || !email || !password}>{busy ? '…' : L({ en: 'Sign in', hi: 'साइन इन' })}</Button>
-            </div>
+              <div><label htmlFor="backend-password">{L({ en: 'Password', hi: 'पासवर्ड' })}</label><input id="backend-password" className="input" type="password" autoComplete={mode === 'register' ? 'new-password' : 'current-password'} value={password} onChange={(e) => setPassword(e.target.value)} /></div>
+              <Button type="submit" disabled={busy || !email || !password || (mode === 'register' && !backendName.trim())}>{busy ? '…' : mode === 'register' ? L({ en: 'Create practice account', hi: 'अभ्यास खाता बनाएं' }) : L({ en: 'Sign in', hi: 'साइन इन' })}</Button>
+              <button type="button" className="cc-text-link" onClick={() => { setMode(mode === 'login' ? 'register' : 'login'); setMsg(null); setPassword('') }}>{mode === 'login' ? 'Create a practice account' : 'Already have an account? Sign in'}</button>
+            </form>
           )}
           {msg && <div role="status" style={{ fontSize: 13, color: msg.ok ? 'var(--ok)' : 'var(--bad)' }}>{msg.text}</div>}
         </div>
@@ -79,6 +85,7 @@ export default function Profile() {
   const { state, updateProfile, logout, logoutToSignIn } = useStore()
   const google = useGoogleAuth()
   const L = useL()
+  useEffect(() => { if (window.location.hash.includes('backend=1')) document.getElementById('backend-account')?.scrollIntoView({ block: 'center' }) }, [])
   const stats = useAttemptStats()
   const streak = useCurrentStreak()
   const [editing, setEditing] = useState(false)
@@ -169,6 +176,7 @@ export default function Profile() {
         </div>
       </section>
 
+      <p className="small muted">{L({ en: 'The stats and history below are saved on this device. For your SSC CGL practice account, open Analytics.', hi: 'नीचे के आँकड़े और इतिहास इस डिवाइस पर सहेजे हैं। SSC CGL अभ्यास खाते के लिए विश्लेषण खोलें।' })}</p>
       <div className="grid g4">
         <Card><Stat icon={<ClipboardList size={20} aria-hidden="true" />} value={stats.attempts} label={L({ en: 'Tests taken', hi: 'टेस्ट' })} /></Card>
         <Card><Stat icon={<CheckCircle2 size={20} aria-hidden="true" />} value={stats.totalCorrect} label={L({ en: 'Correct', hi: 'सही' })} /></Card>
@@ -178,7 +186,7 @@ export default function Profile() {
 
       <div className="grid g-main">
         <div className="stack" style={{ gap: 18 }}>
-          <AccountCard onGoogleSignOut={openLogout} />
+          <AccountCard onGoogleSignOut={openLogout} showBackend={window.location.hash.includes('backend=1')} />
           <Card>
             <CardHead
               title={L({ en: 'Achievements', hi: 'उपलब्धियाँ' })}
@@ -203,7 +211,7 @@ export default function Profile() {
           </Card>
 
           <Card>
-            <CardHead title={L({ en: 'Test history', hi: 'टेस्ट इतिहास' })} />
+            <CardHead title={L({ en: 'Device test history', hi: 'डिवाइस टेस्ट इतिहास' })} sub={L({ en: 'Earlier attempts stored locally', hi: 'पहले के स्थानीय प्रयास' })} />
             <div style={{ overflowX: 'auto' }} tabIndex={0} role="region" aria-label={L({ en: 'Test history', hi: 'टेस्ट इतिहास' })}>
               <table className="table">
                 <thead>
@@ -216,6 +224,7 @@ export default function Profile() {
                   </tr>
                 </thead>
                 <tbody>
+                  {state.attempts.length === 0 && <tr><td colSpan={5} className="muted small">{L({ en: 'No local attempts yet.', hi: 'अभी कोई स्थानीय प्रयास नहीं।' })}</td></tr>}
                   {state.attempts.map((a) => (
                     <tr key={a.id} style={{ cursor: 'pointer' }} onClick={() => navigate(`/result/${a.id}`)}>
                       <td className="bold">{a.title}</td>
@@ -235,7 +244,7 @@ export default function Profile() {
 
         <div className="stack" style={{ gap: 18 }}>
           <Card>
-            <CardHead title={L({ en: 'Target exam', hi: 'लक्ष्य परीक्षा' })} />
+            <CardHead title={L({ en: 'Device target', hi: 'डिवाइस लक्ष्य' })} sub={L({ en: 'For your older local profile', hi: 'आपकी पुरानी स्थानीय प्रोफ़ाइल के लिए' })} />
             {target && (
               <>
                 <div className="row" style={{ gap: 12 }}>
@@ -245,7 +254,7 @@ export default function Profile() {
                   <div>
                     <div className="bold">{target.name}</div>
                     <div className="tiny muted">
-                      {practiceSetCount(target.id) ? `${practiceSetCount(target.id)} ${L({ en: 'practice sets available', hi: 'अभ्यास सेट उपलब्ध' })}` : L({ en: 'Practice not added yet', hi: 'अभ्यास अभी नहीं जोड़ा गया' })}
+                      {target.id === 'ssc-cgl' ? L({ en: 'Check the Mock Test Hub for current availability', hi: 'उपलब्धता के लिए मॉक टेस्ट हब देखें' }) : practiceSetCount(target.id) ? `${practiceSetCount(target.id)} ${L({ en: 'practice sets available', hi: 'अभ्यास सेट उपलब्ध' })}` : L({ en: 'Practice not added yet', hi: 'अभ्यास अभी नहीं जोड़ा गया' })}
                     </div>
                   </div>
                 </div>
@@ -260,10 +269,11 @@ export default function Profile() {
             <CardHead title={L({ en: 'Shortcut', hi: 'शॉर्टकट' })} />
             <div className="stack sm">
               {[
+                [ClipboardList, L({ en: 'Mock Test Hub', hi: 'मॉक टेस्ट हब' }), '/mocks'],
+                [BookOpen, L({ en: 'Subject practice', hi: 'विषय अभ्यास' }), '/practice'],
                 [BarChart3, L({ en: 'Full analytics', hi: 'पूर्ण विश्लेषण' }), '/analytics'],
                 [FileClock, L({ en: 'Previous year papers', hi: 'पिछले वर्ष के पेपर' }), '/pyq'],
                 [Newspaper, L({ en: 'Current affairs', hi: 'समसामयिक घटनाक्रम' }), '/current-affairs'],
-                [BookOpen, L({ en: 'Study material', hi: 'अध्ययन सामग्री' }), '/materials'],
               ].map(([Icon, label, path]) => (
                 <button key={path} className="nav-item profile-shortcut" onClick={() => navigate(path)}>
                   <span className="ico"><Icon size={17} aria-hidden="true" /></span>
@@ -317,10 +327,10 @@ export default function Profile() {
           <label htmlFor="profile-target">{L({ en: 'Target exam', hi: 'लक्ष्य परीक्षा' })}</label>
           <select id="profile-target" className="input" value={examId} onChange={(e) => setExamId(e.target.value)}>
             {CATEGORIES.map((category) => <optgroup key={category.id} label={L({ en: category.name, hi: category.hi })}>
-              {EXAMS.filter((exam) => exam.category === category.id).map((exam) => <option key={exam.id} value={exam.id}>{exam.name}{!practiceSetCount(exam.id) ? ` — ${L({ en: 'info only', hi: 'केवल जानकारी' })}` : ''}</option>)}
+              {EXAMS.filter((exam) => exam.category === category.id).map((exam) => <option key={exam.id} value={exam.id}>{exam.name}{exam.id !== 'ssc-cgl' && !practiceSetCount(exam.id) ? ` — ${L({ en: 'info only', hi: 'केवल जानकारी' })}` : ''}</option>)}
             </optgroup>)}
           </select>
-          <div className="tiny muted" style={{ marginTop: 6 }}>{practiceSetCount(examId) ? L({ en: 'Practice is available for this goal.', hi: 'इस लक्ष्य के लिए अभ्यास उपलब्ध है।' }) : L({ en: 'Practice for this exam has not been added yet.', hi: 'इस परीक्षा के लिए अभ्यास अभी नहीं जोड़ा गया है।' })}</div>
+          <div className="tiny muted" style={{ marginTop: 6 }}>{examId === 'ssc-cgl' ? L({ en: 'Check the Mock Test Hub for reviewed practice availability.', hi: 'समीक्षित अभ्यास की उपलब्धता मॉक टेस्ट हब में देखें।' }) : practiceSetCount(examId) ? L({ en: 'Practice is available for this goal.', hi: 'इस लक्ष्य के लिए अभ्यास उपलब्ध है।' }) : L({ en: 'Practice for this exam has not been added yet.', hi: 'इस परीक्षा के लिए अभ्यास अभी नहीं जोड़ा गया है।' })}</div>
         </div>
         <div className="row" style={{ gap: 10 }}>
           <Button className="block" onClick={() => setEditing(false)}>

@@ -8,10 +8,14 @@ export const pool = new pg.Pool({
   max: 10,
 })
 
+// Idle PostgreSQL connections can drop when a provider sleeps or restarts.
+// Without a listener pg emits an uncaught error and health checks cannot respond.
+pool.on('error', (error) => console.error('Idle database connection failed:', error.message))
+
 export const query = (text, params) => pool.query(text, params)
 
-export async function initSchema() {
-  await query(`
+export async function initSchema(run = query) {
+  await run(`
     CREATE TABLE IF NOT EXISTS users (
       id SERIAL PRIMARY KEY,
       name TEXT NOT NULL,
@@ -25,21 +29,6 @@ export async function initSchema() {
       streak_count INTEGER DEFAULT 0,
       streak_last DATE,
       created_at TIMESTAMPTZ DEFAULT NOW()
-    );
-
-    CREATE TABLE IF NOT EXISTS questions (
-      id TEXT PRIMARY KEY,
-      topic TEXT NOT NULL,
-      subject TEXT NOT NULL,
-      diff TEXT NOT NULL,
-      exams JSONB NOT NULL,
-      q_en TEXT NOT NULL,
-      q_hi TEXT NOT NULL,
-      o_en JSONB NOT NULL,
-      o_hi JSONB NOT NULL,
-      a INTEGER NOT NULL,
-      exp_en TEXT NOT NULL,
-      exp_hi TEXT NOT NULL
     );
 
     CREATE TABLE IF NOT EXISTS exams (
@@ -67,6 +56,5 @@ export async function initSchema() {
 
     CREATE INDEX IF NOT EXISTS idx_attempts_user ON attempts(user_id, created_at DESC);
     CREATE INDEX IF NOT EXISTS idx_attempts_exam ON attempts(exam_id, score DESC);
-    CREATE INDEX IF NOT EXISTS idx_questions_exam ON questions USING GIN (exams);
   `)
 }

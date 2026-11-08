@@ -1,0 +1,448 @@
+{
+  "notice_title": "SSC Combined Graduate Level Examination 2026, Paper I",
+  "source_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+  "source_note": "Tier I English is described broadly in the notice; detailed labels are editorial subdivisions mapped to that scope. Tier II Paper II/III and DEST are outside the requested five-subject schema.",
+  "topics": [
+    {
+      "subject": "Quant",
+      "topic": "Number Systems",
+      "sub_topics": [
+        "Whole numbers",
+        "Decimals",
+        "Fractions",
+        "Relationship between numbers"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.3, 13.11.1.1"
+    },
+    {
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topics": [
+        "Percentages",
+        "Ratio and proportion",
+        "Square roots",
+        "Averages",
+        "Simple interest",
+        "Compound interest",
+        "Profit and loss",
+        "Discount",
+        "Partnership business",
+        "Mixture and alligation",
+        "Time and distance",
+        "Time and work"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.3, 13.11.1.2"
+    },
+    {
+      "subject": "Quant",
+      "topic": "Algebra",
+      "sub_topics": [
+        "School algebra identities",
+        "Elementary surds",
+        "Graphs of linear equations"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.3, 13.11.1.3"
+    },
+    {
+      "subject": "Quant",
+      "topic": "Geometry",
+      "sub_topics": [
+        "Elementary geometric figures",
+        "Triangles and their centres",
+        "Congruence and similarity of triangles",
+        "Circles, chords and tangents"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.3, 13.11.1.4"
+    },
+    {
+      "subject": "Quant",
+      "topic": "Mensuration",
+      "sub_topics": [
+        "Triangle",
+        "Quadrilaterals",
+        "Regular polygons",
+        "Circle",
+        "Right prism",
+        "Right circular cone",
+        "Right circular cylinder",
+        "Sphere",
+        "Hemispheres",
+        "Rectangular parallelepiped",
+        "Regular right pyramid"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.3, 13.11.1.5"
+    },
+    {
+      "subject": "Quant",
+      "topic": "Trigonometry",
+      "sub_topics": [
+        "Trigonometric ratios",
+        "Complementary angles",
+        "Heights and distances",
+        "Standard identities"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.3, 13.11.1.6"
+    },
+    {
+      "subject": "Quant",
+      "topic": "Statistical Charts",
+      "sub_topics": [
+        "Tables and graphs",
+        "Histogram",
+        "Frequency polygon",
+        "Bar diagram",
+        "Pie chart"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.3, 13.11.1.7"
+    },
+    {
+      "subject": "Quant",
+      "topic": "Statistics and Probability",
+      "sub_topics": [
+        "Mean",
+        "Median",
+        "Mode",
+        "Standard deviation",
+        "Simple probability"
+      ],
+      "stages": [
+        "Tier_2"
+      ],
+      "source_sections": "13.11.1.7"
+    },
+    {
+      "subject": "Reasoning",
+      "topic": "Analogy",
+      "sub_topics": [
+        "Semantic analogy",
+        "Symbolic and number analogy",
+        "Figural analogy"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.1, 13.11.2.1"
+    },
+    {
+      "subject": "Reasoning",
+      "topic": "Classification",
+      "sub_topics": [
+        "Semantic classification",
+        "Symbolic and number classification",
+        "Figural classification"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.1, 13.11.2.1"
+    },
+    {
+      "subject": "Reasoning",
+      "topic": "Series",
+      "sub_topics": [
+        "Semantic series",
+        "Number series",
+        "Figural series"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.1, 13.11.2.1"
+    },
+    {
+      "subject": "Reasoning",
+      "topic": "Operations and Coding",
+      "sub_topics": [
+        "Numerical operations",
+        "Symbolic operations",
+        "Coding and decoding",
+        "Word building"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.1, 13.11.2.1"
+    },
+    {
+      "subject": "Reasoning",
+      "topic": "Spatial and Figural Reasoning",
+      "sub_topics": [
+        "Space orientation",
+        "Space visualization",
+        "Punched hole and pattern folding",
+        "Figural pattern completion",
+        "Embedded figures"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.1, 13.11.2.1"
+    },
+    {
+      "subject": "Reasoning",
+      "topic": "Logical Reasoning",
+      "sub_topics": [
+        "Venn diagrams",
+        "Drawing inferences",
+        "Critical thinking",
+        "Problem solving",
+        "Trends"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.1, 13.11.2.1"
+    },
+    {
+      "subject": "Reasoning",
+      "topic": "Intelligence",
+      "sub_topics": [
+        "Emotional intelligence",
+        "Social intelligence"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.1, 13.11.2.1"
+    },
+    {
+      "subject": "Reasoning",
+      "topic": "General Intelligence",
+      "sub_topics": [
+        "Similarities and differences",
+        "Analysis and judgment",
+        "Decision making",
+        "Visual memory",
+        "Discrimination and observation",
+        "Relationship concepts",
+        "Arithmetical reasoning",
+        "Statement conclusion",
+        "Syllogistic reasoning"
+      ],
+      "stages": [
+        "Tier_1"
+      ],
+      "source_sections": "13.10.1"
+    },
+    {
+      "subject": "Reasoning",
+      "topic": "Matching and Indexing",
+      "sub_topics": [
+        "Indexing",
+        "Address matching",
+        "Date and city matching",
+        "Centre and roll number classification",
+        "Letter and number coding and classification"
+      ],
+      "stages": [
+        "Tier_1"
+      ],
+      "source_sections": "13.10.1"
+    },
+    {
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topics": [
+        "Synonyms and homonyms",
+        "Antonyms",
+        "Spellings and misspelt words",
+        "Idioms and phrases",
+        "One word substitution"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.4 (broad English comprehension), 13.11.3.1"
+    },
+    {
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topics": [
+        "Spot the error",
+        "Fill in the blanks",
+        "Sentence improvement",
+        "Active and passive voice",
+        "Direct and indirect narration"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.4 (broad English comprehension), 13.11.3.1"
+    },
+    {
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topics": [
+        "Shuffling of sentence parts",
+        "Shuffling of sentences in a passage"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.4 (broad English comprehension), 13.11.3.1"
+    },
+    {
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topics": [
+        "Cloze passage",
+        "Comprehension passage"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.4 (broad English comprehension), 13.11.3.1"
+    },
+    {
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topics": [
+        "Current events"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.2, 13.11.4.1"
+    },
+    {
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topics": [
+        "History",
+        "Culture",
+        "Geography",
+        "Economic scene",
+        "General policy",
+        "Scientific research"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.2, 13.11.4.1"
+    },
+    {
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topics": [
+        "Scientific aspects of everyday observation and experience"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.2, 13.11.4.1"
+    },
+    {
+      "subject": "General_Awareness",
+      "topic": "Environment and Society",
+      "sub_topics": [
+        "General awareness of the environment and its application to society"
+      ],
+      "stages": [
+        "Tier_1",
+        "Tier_2"
+      ],
+      "source_sections": "13.10.2, 13.11.4.1"
+    },
+    {
+      "subject": "Computer_Knowledge",
+      "topic": "Computer Basics",
+      "sub_topics": [
+        "Computer organization",
+        "Central processing unit",
+        "Input and output devices",
+        "Computer memory and memory organization",
+        "Backup devices",
+        "Ports",
+        "Windows Explorer",
+        "Keyboard shortcuts"
+      ],
+      "stages": [
+        "Tier_2"
+      ],
+      "source_sections": "13.11.5.1"
+    },
+    {
+      "subject": "Computer_Knowledge",
+      "topic": "Software",
+      "sub_topics": [
+        "Windows operating system",
+        "Microsoft Word",
+        "Microsoft Excel",
+        "Microsoft PowerPoint"
+      ],
+      "stages": [
+        "Tier_2"
+      ],
+      "source_sections": "13.11.5.2"
+    },
+    {
+      "subject": "Computer_Knowledge",
+      "topic": "Internet and Email",
+      "sub_topics": [
+        "Web browsing and searching",
+        "Downloading and uploading",
+        "Managing an email account",
+        "E-banking"
+      ],
+      "stages": [
+        "Tier_2"
+      ],
+      "source_sections": "13.11.5.3"
+    },
+    {
+      "subject": "Computer_Knowledge",
+      "topic": "Networking and Cyber Security",
+      "sub_topics": [
+        "Networking devices and protocols",
+        "Network and information security threats",
+        "Preventive measures"
+      ],
+      "stages": [
+        "Tier_2"
+      ],
+      "source_sections": "13.11.5.4"
+    }
+  ]
+}

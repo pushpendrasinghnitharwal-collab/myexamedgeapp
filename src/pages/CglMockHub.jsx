@@ -1,0 +1,30 @@
+import React,{useState} from 'react'
+import {ArrowRight,CheckCircle2,Clock3,Layers3,ListChecks,Play,ShieldCheck} from 'lucide-react'
+import {api} from '../lib/api'
+import {useCglHistory,useCglStage,useResource} from '../lib/cglData'
+import {STAGES,fullSpec,sectionals,sectionSpec} from '../lib/cglModel'
+import {navigate} from '../lib/router'
+import {useStore} from '../lib/store'
+import {Empty,Notice,PageHeader,SectionHeading,Status,usePrepare} from '../components/CglUI'
+import DestLink from '../components/DestLink'
+
+function date(value){return value?new Date(value).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}):'—'}
+export default function CglMockHub(){
+  const {state,updateSettings}=useStore(),[stage]=useCglStage(),[tab,setTab]=useState('full'),{prepare,busy,error,user}=usePrepare()
+  const formats=useResource('master-formats',()=>api.masterFormats()),history=useCglHistory(stage),format=STAGES[stage]
+  const ready=formats.data?.assembler?.ok===true,unavailable=!!formats.error||formats.data?.assembler?.ok===false
+  const mocks=(history.data?.mocks||[]).filter(m=>m.exam_stage===stage&&['Prepared','Active','Submitted'].includes(m.status)).slice(0,6)
+  const buttonText=formats.loading?'Checking service…':unavailable?'Service unavailable':!user?'Sign in to prepare':'Prepare mock'
+  return <div className="cc-page"><PageHeader eyebrow="MOCK TEST HUB" title="Practice with purpose." description={`Full-length and sectional mocks, built for ${format.short} ${format.name}.`}/>
+    <div className="cc-tabs-row"><div className="cc-tabs" role="tablist" aria-label="Mock type"><button role="tab" aria-selected={tab==='full'} onClick={()=>setTab('full')}>Full-length mocks</button><button role="tab" aria-selected={tab==='sectional'} onClick={()=>setTab('sectional')}>Sectional mocks</button></div><span className="cc-stage-caption">{format.short.toUpperCase()} · {format.name.toUpperCase()}</span></div>
+    <div className="cc-timing-choice"><label htmlFor="timing-profile">Timing profile</label><select id="timing-profile" value={state.settings.cglTiming==='official_2026'?'official_2026':'exam_hall_v1'} onChange={e=>updateSettings({cglTiming:e.target.value})}><option value="exam_hall_v1">Exam-hall practice (requested)</option><option value="official_2026">2026 notice-based locks</option></select><small>{state.settings.cglTiming==='official_2026'?'Uses the 2026 subject/module locks.':'Requested free-navigation / section-lock practice; not the 2026 notice timer.'} Applies to newly prepared mocks and drills.</small></div>
+    {unavailable&&<Notice>The practice service is not connected. Formats remain visible; mock availability can be checked when the service is ready.</Notice>}
+    {error&&<Notice>{error}</Notice>}
+    {tab==='full'?<div className="cc-full-mock"><div className="cc-full-mock-copy"><div className="cc-card-overline"><span className="cc-live-dot"/> {format.short.toUpperCase()} FULL-LENGTH MOCK</div><h2>Make every<br/><em>minute count.</em></h2><p>A complete {format.name.toLowerCase()} practice experience, with server-controlled timing and scoring.</p><div className="cc-full-stats"><span><Layers3 size={16}/><b>{format.questions}</b> questions</span><span><Clock3 size={16}/><b>{format.minutes}</b> minutes</span><span><CheckCircle2 size={16}/><b>{format.marks}</b> marking</span></div><button className="cc-light-button" disabled={!ready||busy} onClick={()=>prepare(fullSpec(stage))}>{busy?'Preparing…':buttonText}<ArrowRight size={16}/></button></div><div className="cc-mock-illustration" aria-hidden="true"><span className="cc-mock-ring ring-a"/><span className="cc-mock-ring ring-b"/><div><ListChecks size={45}/><small>{format.short.toUpperCase()}</small><strong>{format.questions}</strong><span>QUESTIONS</span></div></div></div>:
+      <div className="cc-sectional-grid">{sectionals(stage).map(item=><div className="cc-card cc-sectional" key={item.id}><span className={`cc-section-icon ${item.color}`}><Layers3 size={20}/></span><div className="cc-card-overline">{format.short.toUpperCase()} SECTIONAL</div><h2>{item.name}</h2><p>{item.detail}</p><div className="cc-card-meta"><span>{item.count} questions</span><span>•</span><span>{item.minutes} min</span></div><button className="cc-outline-button" disabled={!ready||busy} onClick={()=>prepare(sectionSpec(stage,item.id))}>{busy?'Preparing…':buttonText} <ArrowRight size={15}/></button></div>)}</div>}
+    {stage==='Tier_2'&&<DestLink from="mocks"/>}
+    <div className="cc-info-strip"><ShieldCheck size={18}/><span>Questions are selected from reviewed content. If the exact format cannot be filled, we’ll let you know rather than make up questions.</span></div>
+    <div className="cc-spaced"><SectionHeading eyebrow="YOUR WORK" title="Recent mock sessions" description="Pick up where you left off."/></div>
+    {!user?<Empty icon={Play} title="Your practice starts here" description="Sign in to your practice account to prepare a mock and see your sessions." action={<button className="cc-outline-button" onClick={()=>navigate('/profile?backend=1')}>Sign in to practice <ArrowRight size={15}/></button>}/>:history.loading?<div className="cc-loading">Loading your sessions…</div>:history.error?<Notice>Your mock history is unavailable right now.</Notice>:mocks.length?<div className="cc-session-list">{mocks.map(mock=><button className="cc-session-row" key={mock.id} onClick={()=>navigate(`/session/${mock.id}`)}><span className="cc-session-icon"><ListChecks size={18}/></span><span className="cc-session-name"><strong>{mock.title}</strong><small>{mock.question_count} questions · {date(mock.created_at)}</small></span><Status tone={mock.status==='Submitted'?'green':mock.status==='Active'?'blue':'muted'}>{mock.status==='Submitted'?'Completed':mock.status==='Active'?'In progress':'Prepared'}</Status><ArrowRight size={16}/></button>)}</div>:<Empty icon={Play} title="No sessions yet" description={`Your ${format.short} mocks will show up here once you prepare one.`}/>}
+  </div>
+}

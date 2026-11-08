@@ -3,21 +3,25 @@ import { useRoute } from './lib/router'
 import { useStore } from './lib/store'
 import { useGoogleAuth } from './lib/googleAuth'
 import { canRestoreGoogle, shouldShowWelcome } from './lib/welcome'
-import { Sidebar, TopBar, BottomNav } from './components/shell'
+import { CglSidebar, CglTopBar, CglBottomNav } from './components/CglShell'
 import { ToastProvider } from './components/ui'
 import AppUpdateNotice from './components/AppUpdateNotice'
 
 import Onboarding from './pages/Onboarding'
 import Welcome from './pages/Welcome'
-import Home from './pages/Home'
+import CglDashboard from './pages/CglDashboard'
+import CglMockHub from './pages/CglMockHub'
+import CglPractice from './pages/CglPractice'
+import CglPyqVault from './pages/CglPyqVault'
+import CglCurrentAffairs from './pages/CglCurrentAffairs'
+import CglAnalytics from './pages/CglAnalytics'
+import CglSession from './pages/CglSession'
+import CglDest from './pages/CglDest'
 import Exams from './pages/Exams'
-import PYQLibrary from './pages/PYQLibrary'
 import ExamDetail from './pages/ExamDetail'
 import TestRunner from './pages/TestRunner'
 import Results from './pages/Results'
-import Analytics from './pages/Analytics'
 import Leaderboard from './pages/Leaderboard'
-import CurrentAffairs from './pages/CurrentAffairs'
 import Materials from './pages/Materials'
 import MaterialReader from './pages/MaterialReader'
 import Challenges from './pages/Challenges'
@@ -50,7 +54,14 @@ function Router({ route }) {
 
   if (key === 'onboarding') return <Onboarding />
 
-  // Full-bleed test runner (has its own sticky bar)
+  if (key === 'session') return <CglSession key={parts[1]} id={parts[1]} />
+  if (key === 'dest') {
+    const mockId=params.get('mock')
+    return <CglDest key={`${state.settings.apiBase}:${state.auth?.user?.id||'guest'}`} returnTo={mockId&&/^[1-9]\d{0,17}$/.test(mockId)?`/session/${mockId}`:params.get('from')==='mocks'?'/mocks':'/'} />
+  }
+
+  // Keep historical deep links available without adding them to the focused navigation.
+  // Full-bleed legacy test runner (has its own sticky bar)
   if (key === 'test') {
     return (
       <div className="app">
@@ -64,7 +75,13 @@ function Router({ route }) {
   let page = null
   switch (key) {
     case 'home':
-      page = <Home />
+      page = <CglDashboard />
+      break
+    case 'mocks':
+      page = <CglMockHub />
+      break
+    case 'practice':
+      page = <CglPractice key={route.path} initialSubject={params.get('subject')} initialTopic={params.get('topic')} />
       break
     case 'exams':
       page = <Exams key={route.path} initialCategory={params.get('c') || 'all'} initialQuery={params.get('q') || ''} initialAvailability={params.get('availability') || 'all'} />
@@ -73,19 +90,19 @@ function Router({ route }) {
       page = <ExamDetail examId={parts[1]} initialTab={params.get('tab') || 'overview'} />
       break
     case 'pyq':
-      page = <PYQLibrary selectedExam={params.get('exam')} />
+      page = <CglPyqVault />
       break
     case 'result':
       page = <Results attemptId={parts[1]} />
       break
     case 'analytics':
-      page = <Analytics />
+      page = <CglAnalytics />
       break
     case 'leaderboard':
       page = <Leaderboard />
       break
     case 'current-affairs':
-      page = <CurrentAffairs />
+      page = <CglCurrentAffairs />
       break
     case 'materials':
       page = <Materials />
@@ -109,17 +126,17 @@ function Router({ route }) {
       page = <Settings />
       break
     default:
-      page = <Home />
+      page = <CglDashboard />
   }
 
   return (
-    <div className="app">
-      <Sidebar route={route} streak={state.streak.count} />
-      <div className="main">
-        <TopBar route={route} streak={state.streak.count} xp={state.xp} />
-        <main className="content">{page}</main>
+    <div className="command-app">
+      <CglSidebar route={route} />
+      <div className="cc-main">
+        <CglTopBar route={route} />
+        <main className="cc-content">{page}</main>
       </div>
-      <BottomNav route={route} />
+      <CglBottomNav route={route} />
     </div>
   )
 }

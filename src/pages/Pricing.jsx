@@ -60,7 +60,7 @@ const PLANS = [
 const FAQ = [
   {
     q: { en: 'Is the free plan really free?', hi: 'क्या निःशुल्क योजना वाकई निःशुल्क है?' },
-    a: { en: 'Yes — no card needed. You get 10 full mocks every month, every sectional and topic drill, daily current affairs and the free material library.', hi: 'हाँ — कार्ड की ज़रूरत नहीं। आपको हर महीने 10 फुल मॉक, सभी सेक्शनल और टॉपिक ड्रिल, दैनिक करेंट अफेयर्स और निःशुल्क सामग्री मिलती है।' },
+    a: { en: 'The current question bank is empty while new SSC CGL content is prepared. There are no mocks or quizzes available yet.', hi: 'नया SSC CGL कंटेंट तैयार होने तक प्रश्न बैंक खाली है। अभी मॉक या क्विज़ उपलब्ध नहीं हैं।' },
   },
   {
     q: { en: 'How are the exams different from Testbook or Oliveboard?', hi: 'परीक्षाएँ टेस्टबुक या ऑलिवबोर्ड से कैसे अलग हैं?' },
@@ -72,7 +72,7 @@ const FAQ = [
   },
   {
     q: { en: 'How accurate are the mock papers?', hi: 'मॉक पेपर कितने सटीक हैं?' },
-    a: { en: 'Every paper follows the official latest pattern, marking scheme and negative marking. Previous-year papers are tagged by year and shift so you can verify.', hi: 'हर पेपर नवीनतम आधिकारिक पैटर्न, अंकन योजना और नेगेटिव मार्किंग पर आधारित है। पिछले वर्षों के पेपर वर्ष और शिफ्ट के अनुसार टैग किए गए हैं।' },
+    a: { en: 'No mock papers are currently published. Questions must be sourced and reviewed before publication.', hi: 'अभी कोई मॉक पेपर प्रकाशित नहीं है। प्रकाशन से पहले प्रश्नों के स्रोत और समीक्षा आवश्यक हैं।' },
   },
 ]
 
@@ -99,6 +99,7 @@ export default function Pricing() {
         <Pill tone="success">💚 7-day refund guarantee</Pill>
       </div>
 
+      <p role="status" className="small muted">{L({ en: 'Practice is currently unavailable while the question bank is rebuilt. Plan features below are illustrative, not available mock tests or quizzes.', hi: 'प्रश्न बैंक दोबारा तैयार होने तक अभ्यास उपलब्ध नहीं है। नीचे योजना की सुविधाएँ नमूना हैं; अभी मॉक या क्विज़ उपलब्ध नहीं हैं।' })}</p>
       <div className="grid g3">
         {PLANS.map((pl) => (
           <Card

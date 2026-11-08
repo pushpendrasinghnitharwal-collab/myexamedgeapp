@@ -1,13 +1,13 @@
 {
-  "name": "ExamEdge — Competitive Exam Prep",
+  "name": "ExamEdge — SSC CGL Command Center",
   "short_name": "ExamEdge",
-  "description": "A focused space to practise and track your progress for competitive exams.",
+  "description": "A focused workspace for SSC CGL practice and progress.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
-  "background_color": "#f6f8fe",
-  "theme_color": "#111b3b",
+  "background_color": "#f5f7f4",
+  "theme_color": "#1f6955",
   "categories": [
     "education",
     "productivity"
@@ -46,14 +46,24 @@
   ],
   "shortcuts": [
     {
-      "name": "Explore exams",
-      "short_name": "Exams",
-      "url": "/#/exams"
+      "name": "Mock Test Hub",
+      "short_name": "Mocks",
+      "url": "/#/mocks"
     },
     {
-      "name": "Previous year papers",
+      "name": "Subject practice",
+      "short_name": "Practice",
+      "url": "/#/practice"
+    },
+    {
+      "name": "PYQ Vault",
       "short_name": "PYQ",
       "url": "/#/pyq"
+    },
+    {
+      "name": "Current Affairs",
+      "short_name": "CA",
+      "url": "/#/current-affairs"
     },
     {
       "name": "My analytics",
