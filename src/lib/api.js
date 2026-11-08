@@ -84,6 +84,7 @@ export const api = {
   cglAttempts: () => req('/api/cgl/attempts', { auth: true }),
   cglAttempt: (id) => req(`/api/cgl/attempts/${encodeURIComponent(id)}`, { auth: true }),
   masterFormats: () => req('/api/cgl/master/formats'),
+  practiceStatus: () => req('/api/cgl/practice/status'),
   masterSummary: () => req('/api/cgl/master/summary', { auth: true }),
   masterMocks: (params = {}) => req(`/api/cgl/master/mocks${queryParams(params)}`, { auth: true }),
   masterAttempts: (params = {}) => req(`/api/cgl/attempts/master${queryParams(params)}`, { auth: true }),

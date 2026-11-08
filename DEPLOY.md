@@ -37,7 +37,10 @@ The optional 2021–2025 PYQ/AI vault has a separate additive, empty migration a
 
 The optional 2025–2026 current-affairs engine has a separate additive, empty migration and requires reviewed source evidence; see [Current Affairs & Static GK](docs/ssc-cgl-current-affairs.md). Future periods are not fabricated.
 
-The [Master Mock Assembler and Exam Player](docs/ssc-cgl-master-assembler.md) use additive migrations 005 and 006 (`npm run migrate:master` after 001), with separate PYQ/CA migrations where those sources are wanted. The React command center and player are wired to these APIs. Backend JWT accounts are separate from Firebase. The migrations create no content and are not run automatically; no production database was changed by adding them.
+The [Master Mock Assembler and Exam Player](docs/ssc-cgl-master-assembler.md) use additive migrations 005 and 006 (`npm run migrate:master` after 001), with separate PYQ/CA migrations where those sources are wanted.
+
+An optional, original Tier-I practice pack (100 questions on the verified 2026 pattern, with the DI and cloze sets the editorial profile requires) lives in `server/data/ssc-cgl-2026-tier1-practice/`. It is **not** an SSC paper and is **not** seeded by any migration. Additive migration 007 (`cd server && npm run migrate:practice`) only creates its provenance ledger. Validate with `npm run practice:validate`; import as Draft with `npm run practice:import`; preview locally with `npm run practice:import -- --preview`. Production publication requires a named human review and both `--mode publish --reviewer ... --confirm-human-review`. See [the Tier-I practice pack guide](docs/ssc-cgl-tier1-practice-2026.md). `/api/cgl/practice/status` reports its review state without exposing questions or keys.
+ The React command center and player are wired to these APIs. Backend JWT accounts are separate from Firebase. The migrations create no content and are not run automatically; no production database was changed by adding them.
 
 ### Vercel and ongoing attempts
 

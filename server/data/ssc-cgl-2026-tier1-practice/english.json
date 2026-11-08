@@ -1,0 +1,593 @@
+{
+  "sets": [
+    {
+      "ref": "cloze-2026-t1-01",
+      "set_type": "Cloze_Test",
+      "subject": "English",
+      "passage_en": "Over the past decade, many Indian cities have (1) ______ their public transport systems. Metro networks have grown, yet the last mile remains a (2) ______. Shared autos and feeder buses often (3) ______ the gap, but their timings are unpredictable. A commuter who misses a connection may (4) ______ an hour on the platform. Experts argue that integrating timetables and fares is (5) ______ to making public transport attractive.",
+      "passage_hi": "पिछले एक दशक में कई भारतीय शहरों ने अपनी सार्वजनिक परिवहन व्यवस्थाओं का (1) ______ किया है। मेट्रो नेटवर्क बढ़े हैं, फिर भी अंतिम छोर तक पहुँच एक (2) ______ बनी हुई है। शेयर ऑटो और फीडर बसें अक्सर इस अंतर को (3) ______ करती हैं, पर उनके समय अनिश्चित होते हैं। जो यात्री कनेक्शन चूक जाता है, उसे प्लेटफॉर्म पर एक घंटा (4) ______ पड़ सकता है। विशेषज्ञों का मत है कि समय-सारणी और किराए को एकीकृत करना सार्वजनिक परिवहन को आकर्षक बनाने के लिए (5) ______ है।",
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze passage and items for SSC CGL 2026 Tier-I English Comprehension practice. Not a PYQ. Hindi text is an ExamEdge study translation; the official English Comprehension section is English-only.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "qid": "english-01",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Synonyms and homonyms",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word most similar in meaning to BENEVOLENT.",
+      "text_hi": "BENEVOLENT के अर्थ के सबसे निकट शब्द चुनें।",
+      "options": [{ "en": "Kind", "hi": "दयालु" }, { "en": "Cruel", "hi": "क्रूर" }, { "en": "Wealthy", "hi": "धनवान" }, { "en": "Lazy", "hi": "आलसी" }],
+      "correct": 0,
+      "solution_en": "Benevolent means kind, generous and well-meaning. 'Cruel' is its opposite; 'wealthy' and 'lazy' are unrelated.",
+      "solution_hi": "Benevolent का अर्थ दयालु, उदार और भला चाहने वाला है। 'Cruel' इसका विपरीत है; 'wealthy' और 'lazy' असंबंधित हैं।",
+      "trick_en": "Link 'bene-' with 'benefit/good' and 'volent' with 'wishing' — wishing good for others.",
+      "trick_hi": "'bene-' को 'benefit/भला' और 'volent' को 'चाहना' से जोड़ें — दूसरों का भला चाहने वाला।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/benevolent",
+        "citation": "Original ExamEdge practice question; meaning checked against Merriam-Webster (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-02",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Antonyms",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word most opposite in meaning to SCARCE.",
+      "text_hi": "SCARCE के अर्थ के सबसे विपरीत शब्द चुनें।",
+      "options": [{ "en": "Abundant", "hi": "प्रचुर" }, { "en": "Rare", "hi": "दुर्लभ" }, { "en": "Limited", "hi": "सीमित" }, { "en": "Insufficient", "hi": "अपर्याप्त" }],
+      "correct": 0,
+      "solution_en": "Scarce means insufficient or hard to find. Its opposite is abundant. Rare, limited and insufficient are synonyms or near-synonyms of scarce.",
+      "solution_hi": "Scarce का अर्थ अपर्याप्त या मुश्किल से मिलने वाला है। इसका विपरीत abundant है। Rare, limited और insufficient इसके समानार्थी या निकट-समानार्थी हैं।",
+      "trick_en": "Three options point the same way as the stem; the lone opposite is the answer.",
+      "trick_hi": "तीन विकल्प मूल शब्द की ही दिशा में हैं; अकेला विपरीत विकल्प उत्तर है।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/scarce",
+        "citation": "Original ExamEdge practice question; meaning checked against Merriam-Webster (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-03",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Spellings and misspelt words",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correctly spelt word.",
+      "text_hi": "सही वर्तनी वाला शब्द चुनें।",
+      "options": [{ "en": "Accommodation", "hi": "Accommodation" }, { "en": "Accomodation", "hi": "Accomodation" }, { "en": "Acommodation", "hi": "Acommodation" }, { "en": "Accommodaton", "hi": "Accommodaton" }],
+      "correct": 0,
+      "solution_en": "The correct spelling has double 'c', double 'm' and ends in '-tion': Accommodation.",
+      "solution_hi": "सही वर्तनी में दोहरा 'c', दोहरा 'm' और अंत में '-tion' होता है: Accommodation।",
+      "trick_en": "Remember 'double c, double m' in accommodation.",
+      "trick_hi": "accommodation में 'दो c, दो m' याद रखें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/accommodation",
+        "citation": "Original ExamEdge practice question; spelling checked against Merriam-Webster (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-04",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Idioms and phrases",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the meaning of the idiom 'to let the cat out of the bag'?",
+      "text_hi": "'to let the cat out of the bag' मुहावरे का अर्थ क्या है?",
+      "options": [
+        { "en": "To reveal a secret", "hi": "कोई रहस्य प्रकट करना" },
+        { "en": "To create confusion", "hi": "भ्रम पैदा करना" },
+        { "en": "To escape danger", "hi": "खतरे से बच निकलना" },
+        { "en": "To start a quarrel", "hi": "झगड़ा शुरू करना" }
+      ],
+      "correct": 0,
+      "solution_en": "'To let the cat out of the bag' means to disclose a secret, usually unintentionally.",
+      "solution_hi": "'To let the cat out of the bag' का अर्थ है रहस्य प्रकट कर देना, सामान्यतः अनजाने में।",
+      "trick_en": "Picture a hidden cat escaping — something concealed becomes known.",
+      "trick_hi": "छिपी बिल्ली के बाहर निकलने की कल्पना करें — छिपी बात सामने आ जाती है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/let%20the%20cat%20out%20of%20the%20bag",
+        "citation": "Original ExamEdge practice question; idiom meaning checked against Merriam-Webster (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-05",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "One word substitution",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "One word for 'a person who speaks many languages' is:",
+      "text_hi": "'कई भाषाएँ बोलने वाला व्यक्ति' के लिए एक शब्द है:",
+      "options": [{ "en": "Polyglot", "hi": "Polyglot" }, { "en": "Linguist", "hi": "Linguist" }, { "en": "Bilingual", "hi": "Bilingual" }, { "en": "Translator", "hi": "Translator" }],
+      "correct": 0,
+      "solution_en": "A polyglot speaks many languages. A bilingual speaks two; a linguist studies language; a translator converts text between languages, not necessarily speaking many.",
+      "solution_hi": "Polyglot कई भाषाएँ बोलता है। Bilingual दो भाषाएँ बोलता है; linguist भाषा का अध्ययन करता है; translator भाषाओं के बीच पाठ बदलता है, जरूरी नहीं कि कई भाषाएँ बोले।",
+      "trick_en": "'Poly-' = many, 'glot' = tongue/language.",
+      "trick_hi": "'Poly-' = अनेक, 'glot' = जीभ/भाषा।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/polyglot",
+        "citation": "Original ExamEdge practice question; meaning checked against Merriam-Webster (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-06",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Synonyms and homonyms",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word most similar in meaning to OBDURATE.",
+      "text_hi": "OBDURATE के अर्थ के सबसे निकट शब्द चुनें।",
+      "options": [{ "en": "Stubborn", "hi": "हठी" }, { "en": "Flexible", "hi": "लचीला" }, { "en": "Generous", "hi": "उदार" }, { "en": "Timid", "hi": "डरपोक" }],
+      "correct": 0,
+      "solution_en": "Obdurate means stubbornly refusing to change one's opinion. Flexible is the antonym; generous and timid are unrelated.",
+      "solution_hi": "Obdurate का अर्थ है अपनी राय बदलने से हठपूर्वक इनकार करने वाला। Flexible इसका विलोम है; generous और timid असंबंधित हैं।",
+      "trick_en": "Associate obdurate with 'dura' (hard) — hard-hearted or unyielding in stance.",
+      "trick_hi": "Obdurate को 'dura' (कठोर) से जोड़ें — कठोर या अपने रुख पर अड़ा हुआ।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/obdurate",
+        "citation": "Original ExamEdge practice question; meaning checked against Merriam-Webster (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-07",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Antonyms",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word most opposite in meaning to EPHEMERAL.",
+      "text_hi": "EPHEMERAL के अर्थ के सबसे विपरीत शब्द चुनें।",
+      "options": [{ "en": "Permanent", "hi": "स्थायी" }, { "en": "Brief", "hi": "संक्षिप्त" }, { "en": "Fleeting", "hi": "क्षणिक" }, { "en": "Temporary", "hi": "अस्थायी" }],
+      "correct": 0,
+      "solution_en": "Ephemeral means lasting for a very short time. Permanent is its opposite. Brief, fleeting and temporary are synonyms.",
+      "solution_hi": "Ephemeral का अर्थ बहुत थोड़े समय तक रहने वाला है। Permanent इसका विलोम है। Brief, fleeting और temporary इसके समानार्थी हैं।",
+      "trick_en": "Three options are synonyms of the stem; pick the one that means 'lasting'.",
+      "trick_hi": "तीन विकल्प मूल शब्द के समानार्थी हैं; 'स्थायी रहने वाला' अर्थ वाला चुनें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/ephemeral",
+        "citation": "Original ExamEdge practice question; meaning checked against Merriam-Webster (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-08",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct option: Neither of the answers ______ correct.",
+      "text_hi": "सही विकल्प चुनें: Neither of the answers ______ correct.",
+      "options": [{ "en": "is", "hi": "is" }, { "en": "are", "hi": "are" }, { "en": "were", "hi": "were" }, { "en": "have", "hi": "have" }],
+      "correct": 0,
+      "solution_en": "'Neither of' takes a singular verb in formal standard English because 'neither' is singular. Hence 'Neither of the answers is correct'.",
+      "solution_hi": "औपचारिक मानक अंग्रेज़ी में 'Neither of' के साथ एकवचन क्रिया आती है क्योंकि 'neither' एकवचन है। अतः 'Neither of the answers is correct'।",
+      "trick_en": "Neither/either of + plural noun → singular verb.",
+      "trick_hi": "Neither/either of + बहुवचन संज्ञा → एकवचन क्रिया।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/neither",
+        "citation": "Original ExamEdge practice question on subject-verb agreement; usage checked against standard dictionary guidance (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-09",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct article: He is ______ honest man.",
+      "text_hi": "सही article चुनें: He is ______ honest man.",
+      "options": [{ "en": "a", "hi": "a" }, { "en": "an", "hi": "an" }, { "en": "the", "hi": "the" }, { "en": "No article", "hi": "कोई article नहीं" }],
+      "correct": 1,
+      "solution_en": "'Honest' begins with a vowel sound (/ɒ/), although it begins with the letter 'h'. Therefore 'an' is used: an honest man.",
+      "solution_hi": "'Honest' का उच्चारण स्वर ध्वनि (/ɒ/) से शुरू होता है, भले ही अक्षर 'h' हो। इसलिए 'an' आता है: an honest man।",
+      "trick_en": "Article choice depends on sound, not spelling: an hour, a university.",
+      "trick_hi": "Article का चयन ध्वनि पर होता है, वर्तनी पर नहीं: an hour, a university।",
+      "ideal_time_seconds": 15,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/honest",
+        "citation": "Original ExamEdge practice question on articles; pronunciation guidance checked against Merriam-Webster (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-10",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct option: She has been living here ______ 2010.",
+      "text_hi": "सही विकल्प चुनें: She has been living here ______ 2010.",
+      "options": [{ "en": "since", "hi": "since" }, { "en": "for", "hi": "for" }, { "en": "from", "hi": "from" }, { "en": "at", "hi": "at" }],
+      "correct": 0,
+      "solution_en": "Use 'since' with a point in time (2010) and 'for' with a duration (for 16 years).",
+      "solution_hi": "किसी समय-बिंदु (2010) के साथ 'since' और अवधि (for 16 years) के साथ 'for' प्रयोग होता है।",
+      "trick_en": "Point of time → since; length of time → for.",
+      "trick_hi": "समय-बिंदु → since; समयावधि → for।",
+      "ideal_time_seconds": 15,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/since",
+        "citation": "Original ExamEdge practice question on prepositions of time; usage checked against standard dictionary guidance (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-11",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Spot the error",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Identify the part containing the error: One of the boys / are / absent today. / No error",
+      "text_hi": "त्रुटि वाला भाग पहचानें: One of the boys / are / absent today. / No error",
+      "options": [{ "en": "One of the boys", "hi": "One of the boys" }, { "en": "are", "hi": "are" }, { "en": "absent today.", "hi": "absent today." }, { "en": "No error", "hi": "No error" }],
+      "correct": 1,
+      "solution_en": "'One of the boys' is singular (the subject is 'one'), so the verb must be 'is': 'One of the boys is absent today.' The error is 'are'.",
+      "solution_hi": "'One of the boys' एकवचन है (कर्ता 'one' है), इसलिए क्रिया 'is' होनी चाहिए: 'One of the boys is absent today.' त्रुटि 'are' में है।",
+      "trick_en": "In 'one of the + plural', the verb agrees with 'one', not with the plural noun.",
+      "trick_hi": "'one of the + बहुवचन' में क्रिया 'one' के अनुसार होती है, बहुवचन संज्ञा के अनुसार नहीं।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/one",
+        "citation": "Original ExamEdge practice question on subject-verb agreement; usage checked against standard dictionary guidance (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-12",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Sentence improvement",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the best improvement for the underlined part: He is senior than me.",
+      "text_hi": "रेखांकित भाग के लिए सर्वोत्तम सुधार चुनें: He is senior than me.",
+      "options": [{ "en": "senior than I", "hi": "senior than I" }, { "en": "senior to me", "hi": "senior to me" }, { "en": "more senior to me", "hi": "more senior to me" }, { "en": "No improvement", "hi": "कोई सुधार नहीं" }],
+      "correct": 1,
+      "solution_en": "Latin comparatives such as senior, junior, superior and inferior take 'to', not 'than'. The correct sentence is 'He is senior to me.'",
+      "solution_hi": "Senior, junior, superior और inferior जैसे तुलनात्मक शब्दों के साथ 'to' आता है, 'than' नहीं। सही वाक्य है 'He is senior to me.'",
+      "trick_en": "Memorise the group: senior/junior/superior/inferior/prior + to.",
+      "trick_hi": "समूह याद रखें: senior/junior/superior/inferior/prior + to।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/senior",
+        "citation": "Original ExamEdge practice question on comparatives; usage checked against standard dictionary guidance (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-13",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Active and passive voice",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct passive form: The teacher gave him a book.",
+      "text_hi": "सही passive रूप चुनें: The teacher gave him a book.",
+      "options": [
+        { "en": "He was given a book by the teacher.", "hi": "He was given a book by the teacher." },
+        { "en": "He gave a book by the teacher.", "hi": "He gave a book by the teacher." },
+        { "en": "A book was gave to him by the teacher.", "hi": "A book was gave to him by the teacher." },
+        { "en": "He has given a book by the teacher.", "hi": "He has given a book by the teacher." }
+      ],
+      "correct": 0,
+      "solution_en": "In the passive, the indirect object 'him' can become the subject: 'He was given a book by the teacher.' The verb becomes 'was given' (past participle).",
+      "solution_hi": "Passive में अप्रत्यक्ष कर्म 'him' कर्ता बन सकता है: 'He was given a book by the teacher.' क्रिया 'was given' (past participle) हो जाती है।",
+      "trick_en": "Passive = object + form of be + past participle + by + subject.",
+      "trick_hi": "Passive = कर्म + be का रूप + past participle + by + कर्ता।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/passive",
+        "citation": "Original ExamEdge practice question on active/passive voice; construction checked against standard grammar guidance (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-14",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Direct and indirect narration",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct indirect speech: He said, \"I am busy.\"",
+      "text_hi": "सही indirect speech चुनें: He said, \"I am busy.\"",
+      "options": [
+        { "en": "He said that he was busy.", "hi": "He said that he was busy." },
+        { "en": "He said that I am busy.", "hi": "He said that I am busy." },
+        { "en": "He says that he is busy.", "hi": "He says that he is busy." },
+        { "en": "He said that he has been busy.", "hi": "He said that he has been busy." }
+      ],
+      "correct": 0,
+      "solution_en": "With the reporting verb in the past ('said'), present tense in the reported speech shifts to past: 'am' becomes 'was', and the pronoun 'I' becomes 'he'.",
+      "solution_hi": "Reporting verb भूतकाल ('said') में होने पर reported speech का वर्तमान काल भूतकाल में बदलता है: 'am' से 'was', और सर्वनाम 'I' से 'he'।",
+      "trick_en": "Backshift tense and change the pronoun when the reporting verb is past.",
+      "trick_hi": "Reporting verb भूतकाल हो तो काल पीछे करें और सर्वनाम बदलें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/indirect%20speech",
+        "citation": "Original ExamEdge practice question on narration; backshift checked against standard grammar guidance (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-15",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct preposition: She is good ______ mathematics.",
+      "text_hi": "सही preposition चुनें: She is good ______ mathematics.",
+      "options": [{ "en": "at", "hi": "at" }, { "en": "in", "hi": "in" }, { "en": "on", "hi": "on" }, { "en": "with", "hi": "with" }],
+      "correct": 0,
+      "solution_en": "The standard collocation is 'good at' a subject or skill: good at mathematics. 'Good in' is used for a place or field in some contexts, but 'good at' is the idiomatic choice here.",
+      "solution_hi": "मानक संयोजन 'good at' है, किसी विषय या कौशल के लिए: good at mathematics। कुछ संदर्भों में 'good in' स्थान/क्षेत्र के लिए आता है, पर यहाँ मुहावरेदार चयन 'good at' है।",
+      "trick_en": "Learn collocations as units: good at, interested in, afraid of.",
+      "trick_hi": "संयोजन को इकाई की तरह याद करें: good at, interested in, afraid of।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/good",
+        "citation": "Original ExamEdge practice question on prepositions; collocation checked against standard dictionary guidance (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-16",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct option: By the time we reached the station, the train ______.",
+      "text_hi": "सही विकल्प चुनें: By the time we reached the station, the train ______.",
+      "options": [{ "en": "had left", "hi": "had left" }, { "en": "has left", "hi": "has left" }, { "en": "leaves", "hi": "leaves" }, { "en": "was leaving", "hi": "was leaving" }],
+      "correct": 0,
+      "solution_en": "The train left before another past action (we reached). For the earlier of two past actions, use the past perfect: 'had left'.",
+      "solution_hi": "ट्रेन दूसरी भूतकालीन क्रिया (हम पहुँचे) से पहले जा चुकी थी। दो भूतकालीन क्रियाओं में पहले होने वाली के लिए past perfect 'had left' आता है।",
+      "trick_en": "'By the time + past' signals past perfect for the completed earlier action.",
+      "trick_hi": "'By the time + भूतकाल' पहले पूरी हो चुकी क्रिया के लिए past perfect दर्शाता है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/past%20perfect",
+        "citation": "Original ExamEdge practice question on tenses; usage checked against standard grammar guidance (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-17",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentences in a passage",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Arrange the sentences in the correct order to form a coherent paragraph.\nP. It also helps them manage stress.\nQ. Many schools now teach students to play a musical instrument.\nR. Research suggests that music training improves concentration.\nS. These benefits make music a valuable part of the curriculum.",
+      "text_hi": "सुसंगत अनुच्छेद बनाने के लिए वाक्यों को सही क्रम में रखें।\nP. It also helps them manage stress.\nQ. Many schools now teach students to play a musical instrument.\nR. Research suggests that music training improves concentration.\nS. These benefits make music a valuable part of the curriculum.",
+      "options": [{ "en": "Q R P S", "hi": "Q R P S" }, { "en": "Q P R S", "hi": "Q P R S" }, { "en": "R Q P S", "hi": "R Q P S" }, { "en": "Q S R P", "hi": "Q S R P" }],
+      "correct": 0,
+      "solution_en": "Q introduces the topic (schools teaching music). R gives research evidence about concentration. P adds a second benefit with 'also'; 'It' refers to music training. S concludes with 'These benefits'. The order is Q-R-P-S.",
+      "solution_hi": "Q विषय का परिचय देता है (स्कूलों में संगीत शिक्षण)। R एकाग्रता पर शोध-प्रमाण देता है। P 'also' के साथ दूसरा लाभ जोड़ता है; 'It' संगीत प्रशिक्षण को दर्शाता है। S 'These benefits' के साथ निष्कर्ष देता है। क्रम Q-R-P-S है।",
+      "trick_en": "Find the introductory sentence and the concluding sentence first; then follow pronoun and connector links.",
+      "trick_hi": "पहले प्रारंभिक और अंतिम वाक्य खोजें; फिर सर्वनाम और संयोजक के संकेतों का पालन करें।",
+      "ideal_time_seconds": 50,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge para-jumble for the SSC CGL 2026 Tier-I Sentence Structure syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-18",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentences in a passage",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Arrange the sentences in the correct order.\nP. The proposal was therefore sent back for revision.\nQ. A committee was asked to examine the proposal.\nR. It found several gaps in the cost estimates.\nS. The members agreed that the gaps were serious.",
+      "text_hi": "वाक्यों को सही क्रम में रखें।\nP. The proposal was therefore sent back for revision.\nQ. A committee was asked to examine the proposal.\nR. It found several gaps in the cost estimates.\nS. The members agreed that the gaps were serious.",
+      "options": [{ "en": "Q R S P", "hi": "Q R S P" }, { "en": "Q S R P", "hi": "Q S R P" }, { "en": "Q P S R", "hi": "Q P S R" }, { "en": "R Q S P", "hi": "R Q S P" }],
+      "correct": 0,
+      "solution_en": "Q starts the sequence (committee formed). R states what it found; 'It' refers to the committee. S records the members' agreement on those gaps. P concludes with 'therefore' and the consequence. The order is Q-R-S-P.",
+      "solution_hi": "Q क्रम शुरू करता है (समिति बनाई गई)। R बताता है कि उसने क्या पाया; 'It' समिति को दर्शाता है। S उन कमियों पर सदस्यों की सहमति दर्ज करता है। P 'therefore' के साथ परिणाम देता है। क्रम Q-R-S-P है।",
+      "trick_en": "'It' in R must follow the committee in Q; 'therefore' in P must follow the problem in S.",
+      "trick_hi": "R का 'It' Q की समिति के बाद आएगा; P का 'therefore' S की समस्या के बाद आएगा।",
+      "ideal_time_seconds": 60,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge para-jumble for the SSC CGL 2026 Tier-I Sentence Structure syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-19",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentence parts",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Rearrange the parts to form a correct sentence.\nP. has been delayed\nQ. the meeting\nR. because of heavy rain\nS. which was scheduled for today",
+      "text_hi": "सही वाक्य बनाने के लिए भागों को पुनर्व्यवस्थित करें।\nP. has been delayed\nQ. the meeting\nR. because of heavy rain\nS. which was scheduled for today",
+      "options": [{ "en": "Q S P R", "hi": "Q S P R" }, { "en": "Q P S R", "hi": "Q P S R" }, { "en": "S Q P R", "hi": "S Q P R" }, { "en": "Q S R P", "hi": "Q S R P" }],
+      "correct": 0,
+      "solution_en": "Start with the subject 'the meeting' (Q), add the relative clause 'which was scheduled for today' (S), then the verb 'has been delayed' (P), and finally the reason 'because of heavy rain' (R): The meeting which was scheduled for today has been delayed because of heavy rain.",
+      "solution_hi": "कर्ता 'the meeting' (Q) से शुरू करें, संबंधवाचक उपवाक्य 'which was scheduled for today' (S) जोड़ें, फिर क्रिया 'has been delayed' (P), और अंत में कारण 'because of heavy rain' (R): The meeting which was scheduled for today has been delayed because of heavy rain.",
+      "trick_en": "Keep the subject and its relative clause together before the main verb.",
+      "trick_hi": "मुख्य क्रिया से पहले कर्ता और उसका संबंधवाचक उपवाक्य साथ रखें।",
+      "ideal_time_seconds": 45,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge sentence-part rearrangement for the SSC CGL 2026 Tier-I Sentence Structure syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-20",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentence parts",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the grammatically correct sentence.",
+      "text_hi": "व्याकरण की दृष्टि से सही वाक्य चुनें।",
+      "options": [
+        { "en": "Each of the students have submitted the assignment.", "hi": "Each of the students have submitted the assignment." },
+        { "en": "Each of the students has submitted the assignment.", "hi": "Each of the students has submitted the assignment." },
+        { "en": "Each of the student has submitted the assignment.", "hi": "Each of the student has submitted the assignment." },
+        { "en": "Each of the students have submit the assignment.", "hi": "Each of the students have submit the assignment." }
+      ],
+      "correct": 1,
+      "solution_en": "'Each' is singular, so it takes the singular verb 'has'. The noun after 'of' must be plural: 'each of the students'. Only option 2 satisfies both.",
+      "solution_hi": "'Each' एकवचन है, इसलिए एकवचन क्रिया 'has' आएगी। 'of' के बाद संज्ञा बहुवचन होनी चाहिए: 'each of the students'। केवल विकल्प 2 दोनों शर्तें पूरी करता है।",
+      "trick_en": "Each/every + singular verb; the noun after 'of' stays plural.",
+      "trick_hi": "Each/every + एकवचन क्रिया; 'of' के बाद संज्ञा बहुवचन रहती है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/each",
+        "citation": "Original ExamEdge practice question on sentence correctness; agreement checked against standard dictionary guidance (accessed 2026-11-08). Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-21",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Easy",
+      "question_type": "Passage_Based",
+      "set_ref": "cloze-2026-t1-01",
+      "text_en": "Choose the best word for blank (1).",
+      "text_hi": "रिक्त स्थान (1) के लिए सर्वोत्तम शब्द चुनें।",
+      "options": [{ "en": "expanded", "hi": "expanded" }, { "en": "expansion", "hi": "expansion" }, { "en": "expanding", "hi": "expanding" }, { "en": "expansive", "hi": "expansive" }],
+      "correct": 0,
+      "solution_en": "'Have' is an auxiliary verb and needs a past participle: 'have expanded'. 'Expansion' is a noun, 'expanding' is a present participle, and 'expansive' is an adjective.",
+      "solution_hi": "'Have' सहायक क्रिया है और इसके बाद past participle चाहिए: 'have expanded'। 'Expansion' संज्ञा है, 'expanding' present participle है, और 'expansive' विशेषण है।",
+      "trick_en": "After have/has/had, use the past participle (-ed/-en form), not a noun or adjective.",
+      "trick_hi": "Have/has/had के बाद past participle (-ed/-en रूप) आता है, संज्ञा या विशेषण नहीं।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze item for SSC CGL 2026 Tier-I English Comprehension practice. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-22",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Easy",
+      "question_type": "Passage_Based",
+      "set_ref": "cloze-2026-t1-01",
+      "text_en": "Choose the best word for blank (2).",
+      "text_hi": "रिक्त स्थान (2) के लिए सर्वोत्तम शब्द चुनें।",
+      "options": [{ "en": "bottleneck", "hi": "bottleneck" }, { "en": "bottle", "hi": "bottle" }, { "en": "bottled", "hi": "bottled" }, { "en": "bottling", "hi": "bottling" }],
+      "correct": 0,
+      "solution_en": "A 'bottleneck' is a point of congestion that slows progress. The article 'a' needs a noun, and the context is a transport problem, not a container.",
+      "solution_hi": "'Bottleneck' अवरोध या भीड़ का बिंदु होता है जो प्रगति धीमी करता है। 'A' के बाद संज्ञा चाहिए, और संदर्भ परिवहन समस्या का है, बोतल का नहीं।",
+      "trick_en": "Use context: 'last mile' + transport + congestion points to bottleneck.",
+      "trick_hi": "संदर्भ देखें: 'last mile' + परिवहन + भीड़ 'bottleneck' की ओर संकेत करते हैं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze item for SSC CGL 2026 Tier-I English Comprehension practice. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-23",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "set_ref": "cloze-2026-t1-01",
+      "text_en": "Choose the best word for blank (3).",
+      "text_hi": "रिक्त स्थान (3) के लिए सर्वोत्तम शब्द चुनें।",
+      "options": [{ "en": "bridge", "hi": "bridge" }, { "en": "bridges", "hi": "bridges" }, { "en": "bridged", "hi": "bridged" }, { "en": "bridging", "hi": "bridging" }],
+      "correct": 0,
+      "solution_en": "The plural subject 'Shared autos and feeder buses' takes the base verb 'bridge' in the simple present: 'often bridge the gap'.",
+      "solution_hi": "बहुवचन कर्ता 'Shared autos and feeder buses' के साथ simple present में मूल क्रिया 'bridge' आती है: 'often bridge the gap'।",
+      "trick_en": "'Often' signals a habitual action; plural subject → base form verb.",
+      "trick_hi": "'Often' आदतन क्रिया दर्शाता है; बहुवचन कर्ता → मूल क्रिया।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze item for SSC CGL 2026 Tier-I English Comprehension practice. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-24",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "set_ref": "cloze-2026-t1-01",
+      "text_en": "Choose the best word for blank (4).",
+      "text_hi": "रिक्त स्थान (4) के लिए सर्वोत्तम शब्द चुनें।",
+      "options": [{ "en": "waste", "hi": "waste" }, { "en": "wastes", "hi": "wastes" }, { "en": "wasted", "hi": "wasted" }, { "en": "wasting", "hi": "wasting" }],
+      "correct": 0,
+      "solution_en": "After the modal 'may', the base form of the verb is used: 'may waste an hour'.",
+      "solution_hi": "Modal 'may' के बाद क्रिया का मूल रूप आता है: 'may waste an hour'।",
+      "trick_en": "Modal + base verb, always.",
+      "trick_hi": "Modal + मूल क्रिया, सदैव।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze item for SSC CGL 2026 Tier-I English Comprehension practice. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english-25",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Hard",
+      "question_type": "Passage_Based",
+      "set_ref": "cloze-2026-t1-01",
+      "text_en": "Choose the best word for blank (5).",
+      "text_hi": "रिक्त स्थान (5) के लिए सर्वोत्तम शब्द चुनें।",
+      "options": [{ "en": "essential", "hi": "essential" }, { "en": "essentially", "hi": "essentially" }, { "en": "essence", "hi": "essence" }, { "en": "essentials", "hi": "essentials" }],
+      "correct": 0,
+      "solution_en": "The sentence needs an adjective after 'is' and before 'to making': 'is essential to making'. 'Essentially' is an adverb, 'essence' a noun, and 'essentials' a plural noun.",
+      "solution_hi": "वाक्य में 'is' के बाद और 'to making' से पहले विशेषण चाहिए: 'is essential to making'। 'Essentially' क्रिया-विशेषण, 'essence' संज्ञा, और 'essentials' बहुवचन संज्ञा है।",
+      "trick_en": "After 'is' in this pattern, choose an adjective; '-ly' options are adverbs.",
+      "trick_hi": "इस ढाँचे में 'is' के बाद विशेषण चुनें; '-ly' वाले विकल्प क्रिया-विशेषण हैं।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze item for SSC CGL 2026 Tier-I English Comprehension practice. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ]
+}

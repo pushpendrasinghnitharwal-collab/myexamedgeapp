@@ -35,7 +35,11 @@
     "ca:reject": "node ca-reject.mjs",
     "migrate:master": "node migrate-master.mjs",
     "master:seed": "node migrate-master.mjs",
-    "master:label": "node master-label.mjs"
+    "master:label": "node master-label.mjs",
+    "migrate:practice": "node migrate-practice.mjs",
+    "practice:validate": "node practice-validate.mjs",
+    "practice:import": "node practice-import.mjs",
+    "preview:server": "node dev-preview.mjs"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",

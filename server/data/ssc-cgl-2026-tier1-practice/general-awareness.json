@@ -1,0 +1,580 @@
+{
+  "sets": [],
+  "questions": [
+    {
+      "qid": "ga-01",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "With the successful docking of its SpaDeX satellites in January 2025, India became the fourth country to demonstrate which capability?",
+      "text_hi": "जनवरी 2025 में अपने SpaDeX उपग्रहों के सफल डॉकिंग के साथ, भारत कौन-सी क्षमता प्रदर्शित करने वाला चौथा देश बना?",
+      "options": [
+        { "en": "Human spaceflight", "hi": "मानव अंतरिक्ष उड़ान" },
+        { "en": "Spacecraft rendezvous and docking", "hi": "अंतरिक्ष यान की रेंडेज़वू और डॉकिंग" },
+        { "en": "Lunar sample return", "hi": "चंद्र नमूना वापसी" },
+        { "en": "Reusable rocket landing", "hi": "पुनः प्रयोग योग्य रॉकेट लैंडिंग" }
+      ],
+      "correct": 1,
+      "solution_en": "ISRO's SpaDeX mission docked two small satellites on 16 January 2025. India became the fourth country, after the USA, Russia and China, to demonstrate spacecraft rendezvous and docking.",
+      "solution_hi": "इसरो के SpaDeX मिशन ने 16 जनवरी 2025 को दो छोटे उपग्रहों की डॉकिंग की। भारत अमेरिका, रूस और चीन के बाद अंतरिक्ष यान की रेंडेज़वू और डॉकिंग प्रदर्शित करने वाला चौथा देश बना।",
+      "trick_en": "Link SpaDeX with 'docking', not with human spaceflight (Gaganyaan) or Moon landing (Chandrayaan).",
+      "trick_hi": "SpaDeX को 'डॉकिंग' से जोड़ें, मानव अंतरिक्ष उड़ान (गगनयान) या चंद्र लैंडिंग (चंद्रयान) से नहीं।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.isro.gov.in/",
+        "citation": "ISRO SpaDeX mission update, docking completed 16 January 2025; checked 2026-11-08. Fact current as of that date.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-02",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Who was awarded the Nobel Peace Prize for 2025?",
+      "text_hi": "2025 का नोबेल शांति पुरस्कार किसे दिया गया?",
+      "options": [{ "en": "Maria Corina Machado", "hi": "मारिया कोरिना माचाडो" }, { "en": "Narges Mohammadi", "hi": "नरगिस मोहम्मदी" }, { "en": "Dmitry Muratov", "hi": "दिमित्री मुरातोव" }, { "en": "Ales Bialiatski", "hi": "अलेस बियालियात्स्की" }],
+      "correct": 0,
+      "solution_en": "The Norwegian Nobel Committee awarded the 2025 Nobel Peace Prize to Maria Corina Machado of Venezuela for promoting democratic rights and a peaceful transition to democracy.",
+      "solution_hi": "नॉर्वेजियन नोबेल समिति ने 2025 का नोबेल शांति पुरस्कार वेनेजुएला की मारिया कोरिना माचाडो को लोकतांत्रिक अधिकारों और शांतिपूर्ण लोकतांत्रिक परिवर्तन के लिए दिया।",
+      "trick_en": "Match the year to the laureate: 2023 Narges Mohammadi, 2025 Maria Corina Machado.",
+      "trick_hi": "वर्ष और विजेता मिलाएँ: 2023 नरगिस मोहम्मदी, 2025 मारिया कोरिना माचाडो।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.nobelprize.org/prizes/peace/2025/press-release/",
+        "citation": "NobelPrize.org, announcement of the Nobel Peace Prize 2025 (10 October 2025); checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-03",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The 2026 Winter Olympic Games were held in which country?",
+      "text_hi": "2026 शीतकालीन ओलंपिक खेल किस देश में आयोजित हुए?",
+      "options": [{ "en": "Italy", "hi": "इटली" }, { "en": "France", "hi": "फ्रांस" }, { "en": "Japan", "hi": "जापान" }, { "en": "United States", "hi": "संयुक्त राज्य अमेरिका" }],
+      "correct": 0,
+      "solution_en": "The Milano Cortina 2026 Winter Olympic Games were held in Italy from 6 to 22 February 2026.",
+      "solution_hi": "मिलानो कोर्टिना 2026 शीतकालीन ओलंपिक खेल 6 से 22 फरवरी 2026 तक इटली में आयोजित हुए।",
+      "trick_en": "Milano and Cortina d'Ampezzo are Italian cities; the host country is Italy.",
+      "trick_hi": "मिलानो और कोर्टिना डी'अम्पेज़ो इटली के शहर हैं; मेज़बान देश इटली है।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.olympics.com/en/milano-cortina-2026/olympic-games",
+        "citation": "Olympics.com, Milano Cortina 2026 official Games page (6–22 February 2026); checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-04",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The 2026 FIFA World Cup was jointly hosted by which three countries?",
+      "text_hi": "2026 फीफा विश्व कप किन तीन देशों ने संयुक्त रूप से आयोजित किया?",
+      "options": [
+        { "en": "Canada, Mexico and the United States", "hi": "कनाडा, मेक्सिको और संयुक्त राज्य अमेरिका" },
+        { "en": "Brazil, Argentina and Uruguay", "hi": "ब्राज़ील, अर्जेंटीना और उरुग्वे" },
+        { "en": "Spain, Portugal and Morocco", "hi": "स्पेन, पुर्तगाल और मोरक्को" },
+        { "en": "Japan, South Korea and China", "hi": "जापान, दक्षिण कोरिया और चीन" }
+      ],
+      "correct": 0,
+      "solution_en": "The 2026 FIFA World Cup was hosted by Canada, Mexico and the United States. It was the first edition with 48 teams and three host nations.",
+      "solution_hi": "2026 फीफा विश्व कप कनाडा, मेक्सिको और संयुक्त राज्य अमेरिका में आयोजित हुआ। यह 48 टीमों और तीन मेज़बान देशों वाला पहला संस्करण था।",
+      "trick_en": "Remember 'three hosts, 48 teams' for 2026; Spain–Portugal–Morocco relates to a later edition.",
+      "trick_hi": "2026 के लिए 'तीन मेज़बान, 48 टीमें' याद रखें; स्पेन–पुर्तगाल–मोरक्को बाद के संस्करण से संबंधित है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
+        "citation": "FIFA official 2026 World Cup tournament page; checked 2026-11-08. Only the host/format fact is used.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-05",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The 2026 Commonwealth Games were held in which city?",
+      "text_hi": "2026 राष्ट्रमंडल खेल किस शहर में आयोजित हुए?",
+      "options": [{ "en": "Glasgow", "hi": "ग्लासगो" }, { "en": "Birmingham", "hi": "बर्मिंघम" }, { "en": "Victoria", "hi": "विक्टोरिया" }, { "en": "Durban", "hi": "डरबन" }],
+      "correct": 0,
+      "solution_en": "The 2026 Commonwealth Games were held in Glasgow, Scotland, from 23 July to 2 August 2026.",
+      "solution_hi": "2026 राष्ट्रमंडल खेल 23 जुलाई से 2 अगस्त 2026 तक स्कॉटलैंड के ग्लासगो में आयोजित हुए।",
+      "trick_en": "Glasgow also hosted in 2014; the 2022 edition was in Birmingham.",
+      "trick_hi": "ग्लासगो ने 2014 में भी मेज़बानी की थी; 2022 संस्करण बर्मिंघम में था।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.commonwealthsport.com/commonwealth-games/glasgow-2026",
+        "citation": "Commonwealth Sport, Glasgow 2026 page (23 July–2 August 2026); checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-06",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Who is the Governor of the Reserve Bank of India (as of November 2026)?",
+      "text_hi": "भारतीय रिज़र्व बैंक के गवर्नर कौन हैं (नवंबर 2026 तक)?",
+      "options": [{ "en": "Sanjay Malhotra", "hi": "संजय मल्होत्रा" }, { "en": "Shaktikanta Das", "hi": "शक्तिकांत दास" }, { "en": "Urjit Patel", "hi": "उर्जित पटेल" }, { "en": "Raghuram Rajan", "hi": "रघुराम राजन" }],
+      "correct": 0,
+      "solution_en": "Sanjay Malhotra took charge as the 26th Governor of the RBI on 11 December 2024, succeeding Shaktikanta Das. This is current as of 8 November 2026 and must be re-checked before an exam.",
+      "solution_hi": "संजय मल्होत्रा ने 11 दिसंबर 2024 को शक्तिकांत दास के बाद आरबीआई के 26वें गवर्नर का पदभार संभाला। यह 8 नवंबर 2026 तक की स्थिति है और परीक्षा से पहले इसे फिर जाँचना चाहिए।",
+      "trick_en": "Use a dated current-affairs note; leadership positions change and should never be assumed.",
+      "trick_hi": "तिथि सहित समसामयिक नोट रखें; नेतृत्व पद बदलते हैं और उन्हें अनुमान से नहीं मानना चाहिए।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.rbi.org.in/",
+        "citation": "Reserve Bank of India, Governor's office: Sanjay Malhotra assumed charge 11 December 2024; checked 2026-11-08. Position-based current-affairs fact.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-07",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "History",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Indian National Congress was founded in 1885 by:",
+      "text_hi": "भारतीय राष्ट्रीय कांग्रेस की स्थापना 1885 में किसने की?",
+      "options": [{ "en": "Allan Octavian Hume", "hi": "एलन ऑक्टेवियन ह्यूम" }, { "en": "Dadabhai Naoroji", "hi": "दादाभाई नौरोजी" }, { "en": "W. C. Bonnerjee", "hi": "डब्ल्यू. सी. बनर्जी" }, { "en": "Gopal Krishna Gokhale", "hi": "गोपाल कृष्ण गोखले" }],
+      "correct": 0,
+      "solution_en": "A. O. Hume, a retired British civil servant, founded the Indian National Congress in 1885. W. C. Bonnerjee was its first president.",
+      "solution_hi": "सेवानिवृत्त ब्रिटिश सिविल सेवक ए. ओ. ह्यूम ने 1885 में भारतीय राष्ट्रीय कांग्रेस की स्थापना की। इसके पहले अध्यक्ष डब्ल्यू. सी. बनर्जी थे।",
+      "trick_en": "Separate founder (Hume) from first president (Bonnerjee).",
+      "trick_hi": "संस्थापक (ह्यूम) और पहले अध्यक्ष (बनर्जी) को अलग रखें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.inc.in/en/history/brief-history-of-inc",
+        "citation": "Indian National Congress, brief history; checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-08",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "History",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "At which session did the Indian National Congress adopt the Purna Swaraj resolution?",
+      "text_hi": "भारतीय राष्ट्रीय कांग्रेस ने किस अधिवेशन में पूर्ण स्वराज प्रस्ताव पारित किया?",
+      "options": [{ "en": "Lahore session, 1929", "hi": "लाहौर अधिवेशन, 1929" }, { "en": "Calcutta session, 1928", "hi": "कलकत्ता अधिवेशन, 1928" }, { "en": "Karachi session, 1931", "hi": "कराची अधिवेशन, 1931" }, { "en": "Lucknow session, 1916", "hi": "लखनऊ अधिवेशन, 1916" }],
+      "correct": 0,
+      "solution_en": "The Purna Swaraj (complete independence) resolution was adopted at the Lahore session of the Congress in December 1929, with Jawaharlal Nehru presiding. 26 January 1930 was declared as the first Independence Day.",
+      "solution_hi": "पूर्ण स्वराज (संपूर्ण स्वतंत्रता) प्रस्ताव दिसंबर 1929 के लाहौर अधिवेशन में पारित हुआ, जिसकी अध्यक्षता जवाहरलाल नेहरू ने की। 26 जनवरी 1930 को पहला स्वतंत्रता दिवस घोषित किया गया।",
+      "trick_en": "1929 Lahore → Purna Swaraj; 1931 Karachi → Fundamental Rights resolution.",
+      "trick_hi": "1929 लाहौर → पूर्ण स्वराज; 1931 कराची → मौलिक अधिकार प्रस्ताव।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.inc.in/en/history/brief-history-of-inc",
+        "citation": "Indian National Congress, brief history (Lahore session 1929); checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-09",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "History",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Who was the first Indian Governor-General of independent India?",
+      "text_hi": "स्वतंत्र भारत के पहले भारतीय गवर्नर-जनरल कौन थे?",
+      "options": [{ "en": "C. Rajagopalachari", "hi": "सी. राजगोपालाचारी" }, { "en": "Lord Mountbatten", "hi": "लॉर्ड माउंटबेटन" }, { "en": "Rajendra Prasad", "hi": "राजेंद्र प्रसाद" }, { "en": "Sardar Patel", "hi": "सरदार पटेल" }],
+      "correct": 0,
+      "solution_en": "C. Rajagopalachari was the first Indian and the last Governor-General of India, serving from 1948 to 1950. Lord Mountbatten was the first Governor-General after independence but was not Indian.",
+      "solution_hi": "सी. राजगोपालाचारी भारत के पहले भारतीय और अंतिम गवर्नर-जनरल थे, जिन्होंने 1948 से 1950 तक कार्य किया। स्वतंत्रता के बाद पहले गवर्नर-जनरल लॉर्ड माउंटबेटन थे, पर वे भारतीय नहीं थे।",
+      "trick_en": "Read 'first Indian' carefully; Mountbatten was first after independence, Rajagopalachari first Indian.",
+      "trick_hi": "'पहले भारतीय' ध्यान से पढ़ें; माउंटबेटन स्वतंत्रता के बाद पहले थे, राजगोपालाचारी पहले भारतीय।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.britannica.com/biography/Chakravarti-Rajagopalachari",
+        "citation": "Encyclopaedia Britannica, C. Rajagopalachari (Governor-General 1948–50); checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-10",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Culture",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Bharatanatyam is a classical dance form associated with which state?",
+      "text_hi": "भरतनाट्यम किस राज्य से संबंधित शास्त्रीय नृत्य रूप है?",
+      "options": [{ "en": "Tamil Nadu", "hi": "तमिलनाडु" }, { "en": "Kerala", "hi": "केरल" }, { "en": "Odisha", "hi": "ओडिशा" }, { "en": "Assam", "hi": "असम" }],
+      "correct": 0,
+      "solution_en": "Bharatanatyam originated in Tamil Nadu. Kerala is associated with Kathakali and Mohiniyattam, Odisha with Odissi, and Assam with Sattriya.",
+      "solution_hi": "भरतनाट्यम तमिलनाडु में उत्पन्न हुआ। केरल कथकली और मोहिनीअट्टम से, ओडिशा ओडिसी से, और असम सत्रिया से जुड़ा है।",
+      "trick_en": "Map dance to state as a pair; avoid mixing neighbouring southern forms.",
+      "trick_hi": "नृत्य और राज्य को जोड़ी के रूप में याद रखें; निकटवर्ती दक्षिणी शैलियों को न मिलाएँ।",
+      "ideal_time_seconds": 15,
+      "source": {
+        "url": "https://www.britannica.com/art/bharata-natyam",
+        "citation": "Encyclopaedia Britannica, Bharata Natyam (Tamil Nadu); checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-11",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Culture",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Kathakali, known for its elaborate make-up and costumes, is a classical dance-drama of:",
+      "text_hi": "विस्तृत श्रृंगार और वेशभूषा के लिए प्रसिद्ध कथकली किस राज्य का शास्त्रीय नृत्य-नाट्य है?",
+      "options": [{ "en": "Kerala", "hi": "केरल" }, { "en": "Karnataka", "hi": "कर्नाटक" }, { "en": "Andhra Pradesh", "hi": "आंध्र प्रदेश" }, { "en": "Tamil Nadu", "hi": "तमिलनाडु" }],
+      "correct": 0,
+      "solution_en": "Kathakali is a classical dance-drama from Kerala, characterised by painted faces, large headgear and expressive gestures.",
+      "solution_hi": "कथकली केरल का शास्त्रीय नृत्य-नाट्य है, जो चेहरे पर रंग, बड़ी पगड़ी और भावपूर्ण मुद्राओं के लिए जाना जाता है।",
+      "trick_en": "Kathakali = Kerala; Kuchipudi = Andhra Pradesh; Yakshagana = Karnataka.",
+      "trick_hi": "कथकली = केरल; कुचिपुड़ी = आंध्र प्रदेश; यक्षगान = कर्नाटक।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.britannica.com/art/kathakali",
+        "citation": "Encyclopaedia Britannica, Kathakali (Kerala); checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-12",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Tropic of Cancer passes through how many Indian states?",
+      "text_hi": "कर्क रेखा भारत के कितने राज्यों से गुजरती है?",
+      "options": [{ "en": "6", "hi": "6" }, { "en": "7", "hi": "7" }, { "en": "8", "hi": "8" }, { "en": "9", "hi": "9" }],
+      "correct": 2,
+      "solution_en": "The Tropic of Cancer passes through eight Indian states: Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura and Mizoram.",
+      "solution_hi": "कर्क रेखा भारत के आठ राज्यों से गुजरती है: गुजरात, राजस्थान, मध्य प्रदेश, छत्तीसगढ़, झारखंड, पश्चिम बंगाल, त्रिपुरा और मिज़ोरम।",
+      "trick_en": "Remember the western-to-eastern chain starting Gujarat and ending Mizoram; count is eight.",
+      "trick_hi": "गुजरात से मिज़ोरम तक पश्चिम-से-पूर्व श्रृंखला याद रखें; संख्या आठ है।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.britannica.com/place/Tropic-of-Cancer",
+        "citation": "Encyclopaedia Britannica, Tropic of Cancer (route through India); checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-13",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is the largest freshwater lake in India?",
+      "text_hi": "भारत की सबसे बड़ी मीठे पानी की झील कौन-सी है?",
+      "options": [{ "en": "Wular Lake", "hi": "वुलर झील" }, { "en": "Chilika Lake", "hi": "चिल्का झील" }, { "en": "Sambhar Lake", "hi": "सांभर झील" }, { "en": "Loktak Lake", "hi": "लोकतक झील" }],
+      "correct": 0,
+      "solution_en": "Wular Lake in Jammu and Kashmir is the largest freshwater lake in India. Chilika is a brackish-water lagoon, Sambhar is a salt lake, and Loktak is a freshwater lake but smaller than Wular.",
+      "solution_hi": "जम्मू-कश्मीर की वुलर झील भारत की सबसे बड़ी मीठे पानी की झील है। चिल्का खारे पानी का लैगून, सांभर नमक की झील, और लोकतक मीठे पानी की झील है पर वुलर से छोटी है।",
+      "trick_en": "Separate freshwater (Wular, Loktak) from brackish (Chilika) and salt (Sambhar).",
+      "trick_hi": "मीठे पानी (वुलर, लोकतक) को खारे (चिल्का) और नमक (सांभर) से अलग रखें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.wii.gov.in/",
+        "citation": "Wildlife Institute of India, wetland research on Wular Lake; checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-14",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Zoji La pass connects Srinagar with:",
+      "text_hi": "ज़ोजिला दर्रा श्रीनगर को किससे जोड़ता है?",
+      "options": [{ "en": "Leh", "hi": "लेह" }, { "en": "Shimla", "hi": "शिमला" }, { "en": "Dehradun", "hi": "देहरादून" }, { "en": "Gangtok", "hi": "गंगटोक" }],
+      "correct": 0,
+      "solution_en": "Zoji La lies on the Srinagar–Kargil–Leh route in the Himalayas and connects the Kashmir Valley with Leh (Ladakh). It is one of the highest mountain passes on this route.",
+      "solution_hi": "ज़ोजिला हिमालय में श्रीनगर–कारगिल–लेह मार्ग पर स्थित है और कश्मीर घाटी को लेह (लद्दाख) से जोड़ता है। यह इस मार्ग के सबसे ऊँचे दर्रों में से एक है।",
+      "trick_en": "Pair the pass with its road: Zoji La → Srinagar–Leh; Nathu La → Sikkim–Tibet.",
+      "trick_hi": "दर्रे को उसके मार्ग से जोड़ें: ज़ोजिला → श्रीनगर–लेह; नाथू ला → सिक्किम–तिब्बत।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.britannica.com/place/Zoji-La",
+        "citation": "Encyclopaedia Britannica, Zoji La (Srinagar–Leh route); checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-15",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Economic scene",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "How many members does the Monetary Policy Committee (MPC) of the Reserve Bank of India have?",
+      "text_hi": "भारतीय रिज़र्व बैंक की मौद्रिक नीति समिति (MPC) में कितने सदस्य होते हैं?",
+      "options": [{ "en": "4", "hi": "4" }, { "en": "5", "hi": "5" }, { "en": "6", "hi": "6" }, { "en": "8", "hi": "8" }],
+      "correct": 2,
+      "solution_en": "The MPC has six members: three from the RBI (including the Governor, who chairs it) and three external members appointed by the Central Government. The Governor has a casting vote in case of a tie.",
+      "solution_hi": "MPC में छह सदस्य होते हैं: आरबीआई से तीन (गवर्नर सहित, जो अध्यक्ष होते हैं) और केंद्र सरकार द्वारा नियुक्त तीन बाहरी सदस्य। बराबरी की स्थिति में गवर्नर के पास निर्णायक मत होता है।",
+      "trick_en": "Remember 3 + 3 = 6; the Governor chairs and has the casting vote.",
+      "trick_hi": "3 + 3 = 6 याद रखें; गवर्नर अध्यक्ष होते हैं और निर्णायक मत रखते हैं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.rbi.org.in/",
+        "citation": "Reserve Bank of India, Monetary Policy Committee framework; checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-16",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Economic scene",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "The repo rate is the rate at which:",
+      "text_hi": "रेपो दर वह दर है जिस पर:",
+      "options": [
+        { "en": "The RBI lends short-term funds to banks against government securities", "hi": "आरबीआई सरकारी प्रतिभूतियों के आधार पर बैंकों को अल्पकालिक धन उधार देता है" },
+        { "en": "Banks lend to their most creditworthy customers", "hi": "बैंक अपने सबसे विश्वसनीय ग्राहकों को ऋण देते हैं" },
+        { "en": "The RBI absorbs liquidity from banks", "hi": "आरबीआई बैंकों से तरलता अवशोषित करता है" },
+        { "en": "The government borrows from the public", "hi": "सरकार जनता से उधार लेती है" }
+      ],
+      "correct": 0,
+      "solution_en": "The repo rate is the policy rate at which the RBI lends short-term funds to banks against eligible securities, with an agreement to repurchase them. The rate at which the RBI absorbs liquidity is the reverse repo rate.",
+      "solution_hi": "रेपो दर वह नीतिगत दर है जिस पर आरबीआई पात्र प्रतिभूतियों के आधार पर बैंकों को अल्पकालिक धन उधार देता है, पुनः खरीद के समझौते के साथ। जिस दर पर आरबीआई तरलता अवशोषित करता है वह रिवर्स रेपो दर है।",
+      "trick_en": "Repo = RBI gives funds to banks; reverse repo = RBI takes funds. Do not confuse with bank lending rates.",
+      "trick_hi": "रेपो = आरबीआई बैंकों को धन देता है; रिवर्स रेपो = आरबीआई धन लेता है। बैंकों की ऋण दरों से न मिलाएँ।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.rbi.org.in/",
+        "citation": "Reserve Bank of India, key policy rates and operating framework; checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-17",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "General policy",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Fundamental Duties were added to the Constitution of India by which amendment?",
+      "text_hi": "भारत के संविधान में मौलिक कर्तव्य किस संशोधन द्वारा जोड़े गए?",
+      "options": [{ "en": "42nd Amendment", "hi": "42वाँ संशोधन" }, { "en": "44th Amendment", "hi": "44वाँ संशोधन" }, { "en": "52nd Amendment", "hi": "52वाँ संशोधन" }, { "en": "86th Amendment", "hi": "86वाँ संशोधन" }],
+      "correct": 0,
+      "solution_en": "The 42nd Constitutional Amendment Act, 1976, added Part IVA (Article 51A) containing Fundamental Duties. The 86th Amendment later added the duty of parents/guardians to provide education to children aged 6–14.",
+      "solution_hi": "42वें संविधान संशोधन अधिनियम, 1976 ने भाग IVA (अनुच्छेद 51A) जोड़ा, जिसमें मौलिक कर्तव्य हैं। 86वें संशोधन ने बाद में 6–14 वर्ष के बच्चों को शिक्षा देने का माता-पिता/अभिभावक का कर्तव्य जोड़ा।",
+      "trick_en": "42nd Amendment is associated with Fundamental Duties; 86th added the education duty.",
+      "trick_hi": "42वाँ संशोधन मौलिक कर्तव्यों से जुड़ा है; 86वें ने शिक्षा का कर्तव्य जोड़ा।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://legislative.gov.in/constitution-of-india",
+        "citation": "Legislative Department, Constitution of India (Part IVA, Article 51A; 42nd Amendment 1976); checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-18",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Scientific research",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which ISRO mission successfully landed near the Moon's south pole in August 2023?",
+      "text_hi": "किस इसरो मिशन ने अगस्त 2023 में चंद्रमा के दक्षिणी ध्रुव के निकट सफल लैंडिंग की?",
+      "options": [{ "en": "Chandrayaan-3", "hi": "चंद्रयान-3" }, { "en": "Chandrayaan-2", "hi": "चंद्रयान-2" }, { "en": "Aditya-L1", "hi": "आदित्य-एल1" }, { "en": "Mangalyaan", "hi": "मंगलयान" }],
+      "correct": 0,
+      "solution_en": "Chandrayaan-3's Vikram lander touched down near the lunar south pole on 23 August 2023, making India the first country to land in that region. Aditya-L1 is a solar mission; Mangalyaan was a Mars orbiter.",
+      "solution_hi": "चंद्रयान-3 का विक्रम लैंडर 23 अगस्त 2023 को चंद्रमा के दक्षिणी ध्रुव के निकट उतरा, जिससे भारत उस क्षेत्र में उतरने वाला पहला देश बना। आदित्य-एल1 सौर मिशन है; मंगलयान मंगल कक्षित्र था।",
+      "trick_en": "Chandrayaan = Moon, Mangalyaan = Mars, Aditya-L1 = Sun.",
+      "trick_hi": "चंद्रयान = चंद्रमा, मंगलयान = मंगल, आदित्य-एल1 = सूर्य।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.isro.gov.in/Chandrayaan3.html",
+        "citation": "ISRO, Chandrayaan-3 mission page (landing 23 August 2023); checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-19",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "The SI unit of force is the:",
+      "text_hi": "बल का SI मात्रक क्या है?",
+      "options": [{ "en": "newton", "hi": "न्यूटन" }, { "en": "joule", "hi": "जूल" }, { "en": "watt", "hi": "वाट" }, { "en": "pascal", "hi": "पास्कल" }],
+      "correct": 0,
+      "solution_en": "Force is measured in newtons (N). A joule is a unit of energy, a watt of power and a pascal of pressure.",
+      "solution_hi": "बल को न्यूटन (N) में मापा जाता है। जूल ऊर्जा, वाट शक्ति और पास्कल दाब का मात्रक है।",
+      "trick_en": "1 N = 1 kg·m/s²; match the physical quantity before the unit.",
+      "trick_hi": "1 N = 1 kg·m/s²; मात्रक से पहले भौतिक राशि मिलाएँ।",
+      "ideal_time_seconds": 15,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT Science curriculum reference, SI units; checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-20",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The sky appears blue during the day mainly because of:",
+      "text_hi": "दिन में आकाश नीला दिखाई देने का मुख्य कारण क्या है?",
+      "options": [
+        { "en": "Rayleigh scattering of shorter wavelengths by air molecules", "hi": "वायु अणुओं द्वारा छोटी तरंगदैर्ध्य का रैले प्रकीर्णन" },
+        { "en": "Total internal reflection in the atmosphere", "hi": "वायुमंडल में पूर्ण आंतरिक परावर्तन" },
+        { "en": "Dispersion of light by water droplets", "hi": "जल की बूँदों द्वारा प्रकाश का विक्षेपण" },
+        { "en": "Absorption of blue light by the ground", "hi": "भूमि द्वारा नीले प्रकाश का अवशोषण" }
+      ],
+      "correct": 0,
+      "solution_en": "Air molecules scatter shorter wavelengths (blue) much more strongly than longer wavelengths. This Rayleigh scattering sends blue light from all directions of the sky to our eyes.",
+      "solution_hi": "वायु के अणु लंबी तरंगदैर्ध्य की तुलना में छोटी तरंगदैर्ध्य (नीली) को अधिक प्रबलता से प्रकीर्णित करते हैं। यह रैले प्रकीर्णन आकाश के सभी दिशाओं से नीला प्रकाश हमारी आँखों तक पहुँचाता है।",
+      "trick_en": "Blue scatter → sky; red scatter at sunset → red horizon; water droplets → rainbow.",
+      "trick_hi": "नीला प्रकीर्णन → दिन का आकाश; सूर्यास्त पर लाल प्रकीर्णन → लाल क्षितिज; जल की बूँदें → इंद्रधनुष।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT Science curriculum reference, scattering of light; checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-21",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "The chemical formula of baking soda is:",
+      "text_hi": "बेकिंग सोडा का रासायनिक सूत्र क्या है?",
+      "options": [{ "en": "NaHCO3", "hi": "NaHCO3" }, { "en": "Na2CO3", "hi": "Na2CO3" }, { "en": "NaOH", "hi": "NaOH" }, { "en": "CaCO3", "hi": "CaCO3" }],
+      "correct": 0,
+      "solution_en": "Baking soda is sodium bicarbonate, NaHCO3. Na2CO3 is washing soda, NaOH is caustic soda and CaCO3 is calcium carbonate (limestone/chalk).",
+      "solution_hi": "बेकिंग सोडा सोडियम बाइकार्बोनेट है, NaHCO3। Na2CO3 धोने का सोडा, NaOH कास्टिक सोडा और CaCO3 कैल्शियम कार्बोनेट (चूना पत्थर/खड़िया) है।",
+      "trick_en": "Baking soda has the extra hydrogen: bi-carbonate = HCO3.",
+      "trick_hi": "बेकिंग सोडा में अतिरिक्त हाइड्रोजन है: बाइकार्बोनेट = HCO3।",
+      "ideal_time_seconds": 15,
+      "source": {
+        "url": "https://pubchem.ncbi.nlm.nih.gov/compound/Sodium-bicarbonate",
+        "citation": "PubChem (NIH), Sodium bicarbonate; checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-22",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which gas is most commonly used in fire extinguishers to smother a fire?",
+      "text_hi": "आग बुझाने के लिए अग्निशामक यंत्रों में सबसे सामान्यतः कौन-सी गैस प्रयोग होती है?",
+      "options": [{ "en": "Carbon dioxide", "hi": "कार्बन डाइऑक्साइड" }, { "en": "Oxygen", "hi": "ऑक्सीजन" }, { "en": "Hydrogen", "hi": "हाइड्रोजन" }, { "en": "Methane", "hi": "मीथेन" }],
+      "correct": 0,
+      "solution_en": "Carbon dioxide is used because it does not support combustion and, being denser than air, forms a blanket that cuts off oxygen. Oxygen and hydrogen would worsen or feed a fire.",
+      "solution_hi": "कार्बन डाइऑक्साइड का उपयोग होता है क्योंकि यह दहन में सहायक नहीं है और हवा से भारी होने के कारण चादर बनाकर ऑक्सीजन की पहुँच रोकती है। ऑक्सीजन और हाइड्रोजन आग को बढ़ा देंगे।",
+      "trick_en": "Extinguishers remove heat, oxygen or fuel. CO2 attacks oxygen and is safe on electrical fires.",
+      "trick_hi": "अग्निशामक ऊष्मा, ऑक्सीजन या ईंधन हटाते हैं। CO2 ऑक्सीजन की पहुँच रोकती है और विद्युत आग पर सुरक्षित है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.britannica.com/technology/fire-extinguisher",
+        "citation": "Encyclopaedia Britannica, fire extinguisher (carbon dioxide extinguishers); checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-23",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which vitamin is synthesised in human skin on exposure to sunlight?",
+      "text_hi": "सूर्य के प्रकाश के संपर्क में आने पर मानव त्वचा में कौन-सा विटामिन संश्लेषित होता है?",
+      "options": [{ "en": "Vitamin D", "hi": "विटामिन D" }, { "en": "Vitamin A", "hi": "विटामिन A" }, { "en": "Vitamin C", "hi": "विटामिन C" }, { "en": "Vitamin B12", "hi": "विटामिन B12" }],
+      "correct": 0,
+      "solution_en": "Ultraviolet-B radiation converts 7-dehydrocholesterol in the skin into a precursor of Vitamin D. Vitamin D is therefore called the 'sunshine vitamin'.",
+      "solution_hi": "पराबैंगनी-B विकिरण त्वचा में 7-डीहाइड्रोकॉलेस्टेरॉल को विटामिन D के पूर्ववर्ती में बदलता है। इसलिए विटामिन D को 'सनशाइन विटामिन' कहा जाता है।",
+      "trick_en": "Sunlight → Vitamin D; Vitamin C comes mainly from citrus fruits, not sunlight.",
+      "trick_hi": "सूर्य का प्रकाश → विटामिन D; विटामिन C मुख्यतः खट्टे फलों से, सूर्य से नहीं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ods.od.nih.gov/factsheets/VitaminD-Consumer/",
+        "citation": "NIH Office of Dietary Supplements, Vitamin D fact sheet (skin synthesis from sunlight); checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-24",
+      "subject": "General_Awareness",
+      "topic": "Environment and Society",
+      "sub_topic": "General awareness of the environment and its application to society",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which gas contributes the largest share to human-caused greenhouse warming?",
+      "text_hi": "मानव-जनित ग्रीनहाउस वार्मिंग में सबसे बड़ा योगदान किस गैस का है?",
+      "options": [{ "en": "Carbon dioxide", "hi": "कार्बन डाइऑक्साइड" }, { "en": "Oxygen", "hi": "ऑक्सीजन" }, { "en": "Nitrogen", "hi": "नाइट्रोजन" }, { "en": "Argon", "hi": "आर्गन" }],
+      "correct": 0,
+      "solution_en": "Carbon dioxide is the largest contributor to human-caused greenhouse warming, mainly from burning fossil fuels. Oxygen, nitrogen and argon are not greenhouse gases in the relevant sense.",
+      "solution_hi": "मुख्यतः जीवाश्म ईंधन जलाने से निकलने वाली कार्बन डाइऑक्साइड मानव-जनित ग्रीनहाउस वार्मिंग में सबसे बड़ा योगदान देती है। ऑक्सीजन, नाइट्रोजन और आर्गन इस अर्थ में ग्रीनहाउस गैसें नहीं हैं।",
+      "trick_en": "CO2 is the biggest long-lived driver; methane is more potent per molecule but less abundant.",
+      "trick_hi": "CO2 सबसे बड़ा दीर्घकालिक कारक है; मीथेन प्रति अणु अधिक शक्तिशाली है पर मात्रा कम है।",
+      "ideal_time_seconds": 15,
+      "source": {
+        "url": "https://www.ipcc.ch/",
+        "citation": "IPCC assessment reports, greenhouse gas contributions; checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga-25",
+      "subject": "General_Awareness",
+      "topic": "Environment and Society",
+      "sub_topic": "General awareness of the environment and its application to society",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Under the Ramsar Convention, sites are designated mainly to protect:",
+      "text_hi": "रामसर सम्मेलन के अंतर्गत स्थल मुख्य रूप से किसकी सुरक्षा के लिए नामित किए जाते हैं?",
+      "options": [
+        { "en": "Wetlands of international importance", "hi": "अंतर्राष्ट्रीय महत्व के आर्द्रभूमि" },
+        { "en": "Tropical rainforests", "hi": "उष्णकटिबंधीय वर्षावन" },
+        { "en": "Coral reefs only", "hi": "केवल प्रवाल भित्तियाँ" },
+        { "en": "Desert ecosystems", "hi": "मरुस्थलीय पारितंत्र" }
+      ],
+      "correct": 0,
+      "solution_en": "The Ramsar Convention is an intergovernmental treaty for the conservation and wise use of wetlands of international importance. India is a party and has designated several Ramsar sites.",
+      "solution_hi": "रामसर सम्मेलन अंतर्राष्ट्रीय महत्व की आर्द्रभूमियों के संरक्षण और विवेकपूर्ण उपयोग के लिए एक अंतरसरकारी संधि है। भारत इसका पक्षकार है और उसने कई रामसर स्थल नामित किए हैं।",
+      "trick_en": "Ramsar is about wetlands, not forests or deserts; 'wise use' and 'international importance' are key phrases.",
+      "trick_hi": "रामसर आर्द्रभूमि से संबंधित है, वन या मरुस्थल से नहीं; 'विवेकपूर्ण उपयोग' और 'अंतर्राष्ट्रीय महत्व' मुख्य वाक्यांश हैं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.ramsar.org/",
+        "citation": "Ramsar Convention on Wetlands, official site; checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ]
+}

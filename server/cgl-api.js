@@ -8,6 +8,9 @@ import { MIGRATION_VERSION, MIGRATION_CHECKSUM } from './migration-core.js'
 import { catalogStatus, createCatalogRouter } from './catalog-api.js'
 import { pyqStatus, createPyqRouter } from './pyq-api.js'
 import { caStatus, createCaRouter } from './ca-api.js'
+import { practiceStatus } from './practice-migration.js'
+import { readPracticePackStatus } from './practice-ingest.js'
+import { PRACTICE_PACK_KEY } from './practice-content.js'
 
 const asyncRoute = (handler) => (req, res, next) => Promise.resolve(handler(req, res, next)).catch(next)
 const positiveId = (value) => typeof value === 'string' && /^[1-9][0-9]{0,17}$/.test(value)
@@ -78,6 +81,15 @@ export function createCglRouter({ pool, query, auth, mentorOptions }) {
   router.use(createPyqRouter({ pool, query, auth }))
   router.use(createCaRouter({ pool, query, auth }))
   router.use(createMasterRouter({ pool, query, auth, mentorOptions }))
+  // Content-status metadata only: no questions, keys or solutions. A missing
+  // 007 migration is reported as unavailable rather than as an error so older
+  // deployments keep working and the UI can stay honest.
+  router.get('/practice/status', asyncRoute(async (_req, res) => {
+    const schema = await practiceStatus(query)
+    if (!schema.ok) return res.json({ available: false, schema, code: schema.code })
+    const pack = await readPracticePackStatus(query, PRACTICE_PACK_KEY)
+    res.json({ available: pack.available === true, schema, ...pack })
+  }))
   router.get('/syllabus', asyncRoute(async (req, res) => {
     const stage = req.query.stage ? String(req.query.stage) : null
     const subject = req.query.subject ? String(req.query.subject) : null

@@ -1,0 +1,581 @@
+{
+  "sets": [
+    {
+      "ref": "di-2026-t1-01",
+      "set_type": "Data_Interpretation",
+      "subject": "Quant",
+      "passage_en": "The table shows the number of units sold by two stores, A and B, over four years. Study it and answer the questions that follow.",
+      "passage_hi": "तालिका में चार वर्षों में दो दुकानों A और B द्वारा बेची गई इकाइयों की संख्या दी गई है। इसे पढ़कर आगे के प्रश्नों के उत्तर दीजिए।",
+      "chart_data": {
+        "title_en": "Units sold by two stores (in hundreds)",
+        "title_hi": "दो दुकानों द्वारा बेची गई इकाइयाँ (सैकड़ों में)",
+        "headers": [{ "en": "Year", "hi": "वर्ष" }, { "en": "Store A", "hi": "दुकान A" }, { "en": "Store B", "hi": "दुकान B" }],
+        "rows": [
+          [2021, 120, 150],
+          [2022, 150, 180],
+          [2023, 180, 160],
+          [2024, 210, 200]
+        ]
+      },
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice data set written for the SSC CGL 2026 Tier-I pattern (Statistical Charts, Data Interpretation). Synthetic values; not an SSC data set.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "qid": "quant-01",
+      "subject": "Quant",
+      "topic": "Number Systems",
+      "sub_topic": "Whole numbers",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the unit digit of 7^2026?",
+      "text_hi": "7^2026 का इकाई अंक क्या है?",
+      "options": [{ "en": "1", "hi": "1" }, { "en": "3", "hi": "3" }, { "en": "7", "hi": "7" }, { "en": "9", "hi": "9" }],
+      "correct": 3,
+      "solution_en": "The unit digit of powers of 7 repeats every 4: 7, 9, 3, 1. Since 2026 mod 4 = 2, the unit digit is the same as 7^2 = 49, i.e. 9.",
+      "solution_hi": "7 की घातों का इकाई अंक हर 4 पर दोहराता है: 7, 9, 3, 1। 2026 को 4 से भाग देने पर शेषफल 2 है, इसलिए इकाई अंक 7^2 = 49 के समान, अर्थात 9 होगा।",
+      "trick_en": "For unit digits, divide the exponent by 4 and use the remainder only: remainder 2 means second entry in 7, 9, 3, 1.",
+      "trick_hi": "इकाई अंक के लिए घात को 4 से भाग दें और केवल शेषफल देखें: शेषफल 2 का अर्थ 7, 9, 3, 1 में दूसरा अंक।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on Number Systems for the SSC CGL 2026 Tier-I syllabus. Not a PYQ. Unit-digit cycle verified by computation.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-02",
+      "subject": "Quant",
+      "topic": "Number Systems",
+      "sub_topic": "Relationship between numbers",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the smallest positive integer by which 2520 must be multiplied so that the product becomes a perfect square?",
+      "text_hi": "वह सबसे छोटी धनात्मक पूर्णांक संख्या क्या है जिससे 2520 को गुणा करने पर गुणनफल एक पूर्ण वर्ग बन जाए?",
+      "options": [{ "en": "2", "hi": "2" }, { "en": "7", "hi": "7" }, { "en": "10", "hi": "10" }, { "en": "70", "hi": "70" }],
+      "correct": 3,
+      "solution_en": "2520 = 2^3 × 3^2 × 5 × 7. In a perfect square every prime exponent is even. The odd exponents are 2^3, 5^1 and 7^1, so we must multiply by 2 × 5 × 7 = 70. Then 2520 × 70 = 176400 = 420^2.",
+      "solution_hi": "2520 = 2^3 × 3^2 × 5 × 7। पूर्ण वर्ग में प्रत्येक अभाज्य की घात सम होनी चाहिए। विषम घातें 2^3, 5^1 और 7^1 हैं, इसलिए 2 × 5 × 7 = 70 से गुणा करना होगा। तब 2520 × 70 = 176400 = 420^2।",
+      "trick_en": "Prime-factorise, then multiply all primes whose exponent is odd. Do not multiply by a square factor.",
+      "trick_hi": "अभाज्य गुणनखंड करें और जिन अभाज्यों की घात विषम है, उन्हें गुणा करें। किसी वर्ग गुणक से गुणा न करें।",
+      "ideal_time_seconds": 75,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on Number Systems for the SSC CGL 2026 Tier-I syllabus. Not a PYQ. Factorisation and square root rechecked numerically.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-03",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Percentages",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "A number is first increased by 20% and then the increased number is decreased by 20%. What is the net change?",
+      "text_hi": "किसी संख्या को पहले 20% बढ़ाया जाता है और फिर बढ़ी हुई संख्या को 20% घटाया जाता है। शुद्ध परिवर्तन क्या है?",
+      "options": [{ "en": "No change", "hi": "कोई परिवर्तन नहीं" }, { "en": "4% increase", "hi": "4% वृद्धि" }, { "en": "4% decrease", "hi": "4% कमी" }, { "en": "2% decrease", "hi": "2% कमी" }],
+      "correct": 2,
+      "solution_en": "Take the number as 100. After a 20% increase it becomes 120. A 20% decrease on 120 gives 120 × 0.80 = 96. The net change is 96 − 100 = −4, i.e. a 4% decrease.",
+      "solution_hi": "संख्या को 100 मानें। 20% वृद्धि के बाद यह 120 हो जाती है। 120 पर 20% कमी से 120 × 0.80 = 96 प्राप्त होता है। शुद्ध परिवर्तन 96 − 100 = −4, अर्थात 4% कमी है।",
+      "trick_en": "For +20% then −20%, use the single factor 1.20 × 0.80 = 0.96, which is a 4% decrease.",
+      "trick_hi": "+20% फिर −20% के लिए एकल गुणक 1.20 × 0.80 = 0.96 लगाएँ, जो 4% कमी दर्शाता है।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on Percentages for the SSC CGL 2026 Tier-I syllabus. Not a PYQ. Successive-change factor checked numerically.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-04",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Ratio and proportion",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "If A : B = 3 : 4 and B : C = 8 : 9, then A : C is:",
+      "text_hi": "यदि A : B = 3 : 4 और B : C = 8 : 9 है, तो A : C क्या है?",
+      "options": [{ "en": "2 : 3", "hi": "2 : 3" }, { "en": "3 : 4", "hi": "3 : 4" }, { "en": "8 : 9", "hi": "8 : 9" }, { "en": "4 : 9", "hi": "4 : 9" }],
+      "correct": 0,
+      "solution_en": "Make B common. A : B = 3 : 4 = 6 : 8 and B : C = 8 : 9, so A : B : C = 6 : 8 : 9. Hence A : C = 6 : 9 = 2 : 3.",
+      "solution_hi": "B को समान बनाइए। A : B = 3 : 4 = 6 : 8 और B : C = 8 : 9, इसलिए A : B : C = 6 : 8 : 9। अतः A : C = 6 : 9 = 2 : 3।",
+      "trick_en": "A/C = (A/B) × (B/C) = (3/4) × (8/9) = 2/3.",
+      "trick_hi": "A/C = (A/B) × (B/C) = (3/4) × (8/9) = 2/3।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on Ratio and proportion for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-05",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Averages",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The average of 11 numbers is 36. The average of the first 6 numbers is 34 and the average of the last 6 numbers is 38. What is the 6th number?",
+      "text_hi": "11 संख्याओं का औसत 36 है। पहली 6 संख्याओं का औसत 34 और अंतिम 6 संख्याओं का औसत 38 है। छठी संख्या क्या है?",
+      "options": [{ "en": "32", "hi": "32" }, { "en": "34", "hi": "34" }, { "en": "36", "hi": "36" }, { "en": "38", "hi": "38" }],
+      "correct": 2,
+      "solution_en": "Sum of all 11 numbers = 11 × 36 = 396. Sum of the first 6 = 6 × 34 = 204. Sum of the last 6 = 6 × 38 = 228. Adding the first six and last six counts the 6th number twice: 204 + 228 = 432. Therefore the 6th number = 432 − 396 = 36.",
+      "solution_hi": "सभी 11 संख्याओं का योग = 11 × 36 = 396। पहली 6 का योग = 6 × 34 = 204। अंतिम 6 का योग = 6 × 38 = 228। पहली छह और अंतिम छह जोड़ने पर छठी संख्या दो बार गिनी जाती है: 204 + 228 = 432। अतः छठी संख्या = 432 − 396 = 36।",
+      "trick_en": "The overlap element = (sum of first group + sum of last group) − total sum.",
+      "trick_hi": "उभयनिष्ठ संख्या = (पहले समूह का योग + अंतिम समूह का योग) − कुल योग।",
+      "ideal_time_seconds": 70,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on Averages for the SSC CGL 2026 Tier-I syllabus. Not a PYQ. Recomputed from group sums.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-06",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Profit and loss",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "An article costing ₹400 is marked 25% above the cost price and then sold after a 10% discount on the marked price. What is the profit percentage?",
+      "text_hi": "₹400 में खरीदी गई वस्तु का अंकित मूल्य लागत मूल्य से 25% अधिक रखा जाता है और फिर अंकित मूल्य पर 10% छूट देकर बेचा जाता है। लाभ प्रतिशत क्या है?",
+      "options": [{ "en": "10%", "hi": "10%" }, { "en": "12.5%", "hi": "12.5%" }, { "en": "15%", "hi": "15%" }, { "en": "25%", "hi": "25%" }],
+      "correct": 1,
+      "solution_en": "Marked price = 400 × 1.25 = ₹500. Selling price = 500 × 0.90 = ₹450. Profit = 450 − 400 = ₹50. Profit percentage = 50/400 × 100 = 12.5%.",
+      "solution_hi": "अंकित मूल्य = 400 × 1.25 = ₹500। विक्रय मूल्य = 500 × 0.90 = ₹450। लाभ = 450 − 400 = ₹50। लाभ प्रतिशत = 50/400 × 100 = 12.5%।",
+      "trick_en": "Effective factor = 1.25 × 0.90 = 1.125, so profit is 12.5% of cost.",
+      "trick_hi": "प्रभावी गुणक = 1.25 × 0.90 = 1.125, अतः लागत पर लाभ 12.5% है।",
+      "ideal_time_seconds": 55,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on Profit and loss for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-07",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Compound interest",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the compound interest on ₹8,000 at 10% per annum for 2 years, compounded annually?",
+      "text_hi": "₹8,000 पर 10% वार्षिक दर से 2 वर्ष का चक्रवृद्धि ब्याज क्या होगा, जब ब्याज वार्षिक रूप से संयोजित होता है?",
+      "options": [{ "en": "₹1,600", "hi": "₹1,600" }, { "en": "₹1,680", "hi": "₹1,680" }, { "en": "₹1,760", "hi": "₹1,760" }, { "en": "₹1,800", "hi": "₹1,800" }],
+      "correct": 1,
+      "solution_en": "Amount = 8000 × (1.10)^2 = 8000 × 1.21 = ₹9,680. Compound interest = 9,680 − 8,000 = ₹1,680. (Simple interest for 2 years would be ₹1,600.)",
+      "solution_hi": "मिश्रधन = 8000 × (1.10)^2 = 8000 × 1.21 = ₹9,680। चक्रवृद्धि ब्याज = 9,680 − 8,000 = ₹1,680। (2 वर्ष का साधारण ब्याज ₹1,600 होता।)",
+      "trick_en": "For 2 years, CI − SI = P(r/100)^2 = 8000 × 0.01 = ₹80, so CI = 1600 + 80.",
+      "trick_hi": "2 वर्ष के लिए CI − SI = P(r/100)^2 = 8000 × 0.01 = ₹80, इसलिए CI = 1600 + 80।",
+      "ideal_time_seconds": 60,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on Compound interest for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-08",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Time and work",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "A and B together can complete a piece of work in 12 days. A alone can complete it in 20 days. In how many days can B alone complete the work?",
+      "text_hi": "A और B मिलकर एक काम 12 दिनों में पूरा कर सकते हैं। A अकेला उसे 20 दिनों में पूरा कर सकता है। B अकेला वह काम कितने दिनों में पूरा करेगा?",
+      "options": [{ "en": "24 days", "hi": "24 दिन" }, { "en": "28 days", "hi": "28 दिन" }, { "en": "30 days", "hi": "30 दिन" }, { "en": "32 days", "hi": "32 दिन" }],
+      "correct": 2,
+      "solution_en": "Combined work per day = 1/12. A's work per day = 1/20. B's work per day = 1/12 − 1/20 = (5 − 3)/60 = 2/60 = 1/30. So B alone takes 30 days.",
+      "solution_hi": "मिलकर प्रतिदिन काम = 1/12। A का प्रतिदिन काम = 1/20। B का प्रतिदिन काम = 1/12 − 1/20 = (5 − 3)/60 = 2/60 = 1/30। अतः B अकेला 30 दिन लेगा।",
+      "trick_en": "B's time = (A × combined)/(A − combined) = (20 × 12)/(20 − 12) = 30.",
+      "trick_hi": "B का समय = (A × संयुक्त)/(A − संयुक्त) = (20 × 12)/(20 − 12) = 30।",
+      "ideal_time_seconds": 50,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on Time and work for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-09",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Time and distance",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "A 150 m long train crosses a pole in 9 seconds. How long will it take to cross a 300 m long platform?",
+      "text_hi": "150 मीटर लंबी एक ट्रेन एक खंभे को 9 सेकंड में पार करती है। 300 मीटर लंबे प्लेटफॉर्म को पार करने में उसे कितना समय लगेगा?",
+      "options": [{ "en": "24 seconds", "hi": "24 सेकंड" }, { "en": "27 seconds", "hi": "27 सेकंड" }, { "en": "30 seconds", "hi": "30 सेकंड" }, { "en": "33 seconds", "hi": "33 सेकंड" }],
+      "correct": 1,
+      "solution_en": "Speed = 150/9 = 50/3 m/s. To cross a platform the train covers its own length plus the platform: 150 + 300 = 450 m. Time = 450 ÷ (50/3) = 450 × 3/50 = 27 seconds.",
+      "solution_hi": "चाल = 150/9 = 50/3 मी/से। प्लेटफॉर्म पार करने में ट्रेन अपनी लंबाई और प्लेटफॉर्म की लंबाई का योग तय करती है: 150 + 300 = 450 मी। समय = 450 ÷ (50/3) = 450 × 3/50 = 27 सेकंड।",
+      "trick_en": "Platform time = pole time × (train + platform)/(train) = 9 × 450/150 = 27 s.",
+      "trick_hi": "प्लेटफॉर्म का समय = खंभे का समय × (ट्रेन + प्लेटफॉर्म)/(ट्रेन) = 9 × 450/150 = 27 सेकंड।",
+      "ideal_time_seconds": 55,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on Time and distance for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-10",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Mixture and alligation",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "A 60-litre mixture contains milk and water in the ratio 7 : 3. If 20 litres of the mixture is removed and replaced with 20 litres of water, what is the new ratio of milk to water?",
+      "text_hi": "60 लीटर के मिश्रण में दूध और पानी का अनुपात 7 : 3 है। यदि 20 लीटर मिश्रण निकालकर उसके स्थान पर 20 लीटर पानी डाला जाए, तो दूध और पानी का नया अनुपात क्या होगा?",
+      "options": [{ "en": "7 : 8", "hi": "7 : 8" }, { "en": "3 : 4", "hi": "3 : 4" }, { "en": "14 : 15", "hi": "14 : 15" }, { "en": "4 : 5", "hi": "4 : 5" }],
+      "correct": 0,
+      "solution_en": "Initially milk = 60 × 7/10 = 42 L and water = 18 L. Removing 20 L removes 14 L milk and 6 L water, leaving 28 L milk and 12 L water. Adding 20 L water gives 28 L milk and 32 L water, i.e. 28 : 32 = 7 : 8.",
+      "solution_hi": "शुरू में दूध = 60 × 7/10 = 42 ली और पानी = 18 ली। 20 ली निकालने पर 14 ली दूध और 6 ली पानी निकलता है, शेष 28 ली दूध और 12 ली पानी। 20 ली पानी मिलाने पर 28 ली दूध और 32 ली पानी, अर्थात 28 : 32 = 7 : 8।",
+      "trick_en": "After removing one-third of the mixture, two-thirds of each component remains: milk 42 × 2/3 = 28. Then add all 20 L to water.",
+      "trick_hi": "मिश्रण का एक-तिहाई निकालने पर प्रत्येक घटक का दो-तिहाई बचता है: दूध 42 × 2/3 = 28। फिर पूरे 20 ली पानी में मिलाएँ।",
+      "ideal_time_seconds": 100,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on Mixture and alligation for the SSC CGL 2026 Tier-I syllabus. Not a PYQ. Recomputed component-wise.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-11",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Partnership business",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "A invests ₹40,000 for 12 months and B invests ₹60,000 for 10 months in a business. If the total profit is ₹18,000, what is A's share?",
+      "text_hi": "A किसी व्यवसाय में ₹40,000 का निवेश 12 महीनों के लिए और B ₹60,000 का निवेश 10 महीनों के लिए करता है। यदि कुल लाभ ₹18,000 है, तो A का हिस्सा क्या है?",
+      "options": [{ "en": "₹7,200", "hi": "₹7,200" }, { "en": "₹8,000", "hi": "₹8,000" }, { "en": "₹9,000", "hi": "₹9,000" }, { "en": "₹10,000", "hi": "₹10,000" }],
+      "correct": 1,
+      "solution_en": "Profit shares are proportional to capital × time. A : B = (40,000 × 12) : (60,000 × 10) = 4,80,000 : 6,00,000 = 4 : 5. A's share = 18,000 × 4/9 = ₹8,000.",
+      "solution_hi": "लाभ का हिस्सा पूँजी × समय के अनुपात में होता है। A : B = (40,000 × 12) : (60,000 × 10) = 4,80,000 : 6,00,000 = 4 : 5। A का हिस्सा = 18,000 × 4/9 = ₹8,000।",
+      "trick_en": "Reduce capital-time products before applying the total: 480 : 600 = 4 : 5, then 4 parts of 9.",
+      "trick_hi": "कुल लागू करने से पहले पूँजी-समय गुणनफल को छोटा करें: 480 : 600 = 4 : 5, फिर 9 में से 4 भाग।",
+      "ideal_time_seconds": 80,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on Partnership business for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-12",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Discount",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "The marked price of an item is ₹750. It is sold at two successive discounts of 20% and 10%. What is the selling price?",
+      "text_hi": "किसी वस्तु का अंकित मूल्य ₹750 है। उसे 20% और 10% की दो क्रमिक छूटों पर बेचा जाता है। विक्रय मूल्य क्या है?",
+      "options": [{ "en": "₹525", "hi": "₹525" }, { "en": "₹540", "hi": "₹540" }, { "en": "₹555", "hi": "₹555" }, { "en": "₹570", "hi": "₹570" }],
+      "correct": 1,
+      "solution_en": "After 20% discount: 750 × 0.80 = ₹600. After a further 10% discount: 600 × 0.90 = ₹540. (Adding the discounts to 30% would wrongly give ₹525.)",
+      "solution_hi": "20% छूट के बाद: 750 × 0.80 = ₹600। फिर 10% छूट के बाद: 600 × 0.90 = ₹540। (छूटों को जोड़कर 30% मानने पर गलती से ₹525 आता है।)",
+      "trick_en": "Successive discounts multiply: 0.80 × 0.90 = 0.72, so selling price = 72% of marked price.",
+      "trick_hi": "क्रमिक छूटें गुणा होती हैं: 0.80 × 0.90 = 0.72, अतः विक्रय मूल्य अंकित मूल्य का 72% है।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on Discount for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-13",
+      "subject": "Quant",
+      "topic": "Algebra",
+      "sub_topic": "School algebra identities",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "If x + 1/x = 5, then x^2 + 1/x^2 equals:",
+      "text_hi": "यदि x + 1/x = 5 है, तो x^2 + 1/x^2 का मान क्या है?",
+      "options": [{ "en": "21", "hi": "21" }, { "en": "23", "hi": "23" }, { "en": "25", "hi": "25" }, { "en": "27", "hi": "27" }],
+      "correct": 1,
+      "solution_en": "Square both sides: (x + 1/x)^2 = x^2 + 2 + 1/x^2 = 25. Therefore x^2 + 1/x^2 = 25 − 2 = 23.",
+      "solution_hi": "दोनों पक्षों का वर्ग करें: (x + 1/x)^2 = x^2 + 2 + 1/x^2 = 25। अतः x^2 + 1/x^2 = 25 − 2 = 23।",
+      "trick_en": "Use the identity (x + 1/x)^2 = x^2 + 1/x^2 + 2. Subtract 2 from the square.",
+      "trick_hi": "सर्वसमिका (x + 1/x)^2 = x^2 + 1/x^2 + 2 का उपयोग करें। वर्ग में से 2 घटाएँ।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on School algebra identities for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-14",
+      "subject": "Quant",
+      "topic": "Algebra",
+      "sub_topic": "School algebra identities",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "If a + b + c = 0 and abc ≠ 0, then a^2/(bc) + b^2/(ca) + c^2/(ab) equals:",
+      "text_hi": "यदि a + b + c = 0 और abc ≠ 0 है, तो a^2/(bc) + b^2/(ca) + c^2/(ab) का मान क्या है?",
+      "options": [{ "en": "0", "hi": "0" }, { "en": "1", "hi": "1" }, { "en": "2", "hi": "2" }, { "en": "3", "hi": "3" }],
+      "correct": 3,
+      "solution_en": "When a + b + c = 0, the identity a^3 + b^3 + c^3 = 3abc holds. Divide both sides by abc (valid because abc ≠ 0): a^2/(bc) + b^2/(ca) + c^2/(ab) = 3.",
+      "solution_hi": "जब a + b + c = 0 हो, तो सर्वसमिका a^3 + b^3 + c^3 = 3abc लागू होती है। abc ≠ 0 होने के कारण दोनों पक्षों को abc से भाग दें: a^2/(bc) + b^2/(ca) + c^2/(ab) = 3।",
+      "trick_en": "Multiply the expression by abc to get (a^3 + b^3 + c^3)/(abc) = 3abc/abc = 3.",
+      "trick_hi": "व्यंजक को abc से गुणा करें: (a^3 + b^3 + c^3)/(abc) = 3abc/abc = 3।",
+      "ideal_time_seconds": 70,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on algebraic identities for the SSC CGL 2026 Tier-I syllabus. Not a PYQ. Verified by substitution (a=1, b=2, c=-3).",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-15",
+      "subject": "Quant",
+      "topic": "Geometry",
+      "sub_topic": "Elementary geometric figures",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the measure of each interior angle of a regular hexagon?",
+      "text_hi": "एक समषट्भुज के प्रत्येक अंतःकोण का माप क्या है?",
+      "options": [{ "en": "108°", "hi": "108°" }, { "en": "120°", "hi": "120°" }, { "en": "135°", "hi": "135°" }, { "en": "144°", "hi": "144°" }],
+      "correct": 1,
+      "solution_en": "A hexagon has 6 sides. Sum of interior angles = (6 − 2) × 180° = 720°. In a regular hexagon all angles are equal, so each angle = 720°/6 = 120°.",
+      "solution_hi": "षट्भुज में 6 भुजाएँ होती हैं। अंतःकोणों का योग = (6 − 2) × 180° = 720°। समषट्भुज में सभी कोण समान होते हैं, इसलिए प्रत्येक कोण = 720°/6 = 120°।",
+      "trick_en": "Interior angle of a regular n-gon = 180° − 360°/n. For n = 6 this is 180° − 60° = 120°.",
+      "trick_hi": "सम n-भुज के अंतःकोण = 180° − 360°/n। n = 6 के लिए यह 180° − 60° = 120° है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on elementary geometry for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-16",
+      "subject": "Quant",
+      "topic": "Geometry",
+      "sub_topic": "Triangles and their centres",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The sides of a triangle are 7 cm, 24 cm and 25 cm. What is its area?",
+      "text_hi": "एक त्रिभुज की भुजाएँ 7 सेमी, 24 सेमी और 25 सेमी हैं। उसका क्षेत्रफल क्या है?",
+      "options": [{ "en": "84 cm²", "hi": "84 सेमी²" }, { "en": "168 cm²", "hi": "168 सेमी²" }, { "en": "210 cm²", "hi": "210 सेमी²" }, { "en": "336 cm²", "hi": "336 सेमी²" }],
+      "correct": 0,
+      "solution_en": "Check the Pythagorean relation: 7^2 + 24^2 = 49 + 576 = 625 = 25^2. The triangle is right-angled with legs 7 cm and 24 cm. Area = 1/2 × 7 × 24 = 84 cm².",
+      "solution_hi": "पाइथागोरस संबंध जाँचें: 7^2 + 24^2 = 49 + 576 = 625 = 25^2। त्रिभुज समकोणीय है जिसकी भुजाएँ 7 सेमी और 24 सेमी हैं। क्षेत्रफल = 1/2 × 7 × 24 = 84 सेमी²।",
+      "trick_en": "Recognise the 7-24-25 triplet. The area of a right triangle is half the product of its legs, not the hypotenuse.",
+      "trick_hi": "7-24-25 त्रिक को पहचानें। समकोण त्रिभुज का क्षेत्रफल भुजाओं के गुणनफल का आधा होता है, कर्ण का नहीं।",
+      "ideal_time_seconds": 45,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on triangles for the SSC CGL 2026 Tier-I syllabus. Not a PYQ. Right-angle check recomputed.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-17",
+      "subject": "Quant",
+      "topic": "Geometry",
+      "sub_topic": "Circles, chords and tangents",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "From a point P, 26 cm away from the centre O of a circle of radius 10 cm, a tangent PT is drawn. What is the length of PT?",
+      "text_hi": "10 सेमी त्रिज्या वाले वृत्त के केंद्र O से 26 सेमी दूर स्थित बिंदु P से स्पर्श रेखा PT खींची जाती है। PT की लंबाई क्या है?",
+      "options": [{ "en": "18 cm", "hi": "18 सेमी" }, { "en": "20 cm", "hi": "20 सेमी" }, { "en": "24 cm", "hi": "24 सेमी" }, { "en": "26 cm", "hi": "26 सेमी" }],
+      "correct": 2,
+      "solution_en": "The radius OT is perpendicular to the tangent PT at the point of contact, so triangle OTP is right-angled at T. By Pythagoras, PT^2 = OP^2 − OT^2 = 26^2 − 10^2 = 676 − 100 = 576. Hence PT = 24 cm.",
+      "solution_hi": "स्पर्श बिंदु पर त्रिज्या OT, स्पर्श रेखा PT के लंबवत होती है, इसलिए त्रिभुज OTP, T पर समकोणीय है। पाइथागोरस से, PT^2 = OP^2 − OT^2 = 26^2 − 10^2 = 676 − 100 = 576। अतः PT = 24 सेमी।",
+      "trick_en": "Tangent length = √(OP² − r²). Look for the 10-24-26 scaled 5-12-13 triplet.",
+      "trick_hi": "स्पर्श रेखा की लंबाई = √(OP² − r²)। 10-24-26 में 5-12-13 त्रिक छिपा है।",
+      "ideal_time_seconds": 60,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on circles and tangents for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-18",
+      "subject": "Quant",
+      "topic": "Mensuration",
+      "sub_topic": "Right circular cylinder",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The curved surface area of a right circular cylinder of radius 7 cm and height 10 cm is: (Take π = 22/7)",
+      "text_hi": "7 सेमी त्रिज्या और 10 सेमी ऊँचाई वाले लंब वृत्तीय बेलन का वक्र पृष्ठीय क्षेत्रफल क्या है? (π = 22/7 लें)",
+      "options": [{ "en": "220 cm²", "hi": "220 सेमी²" }, { "en": "440 cm²", "hi": "440 सेमी²" }, { "en": "660 cm²", "hi": "660 सेमी²" }, { "en": "880 cm²", "hi": "880 सेमी²" }],
+      "correct": 1,
+      "solution_en": "Curved surface area = 2πrh = 2 × (22/7) × 7 × 10 = 440 cm². The two circular ends are not part of the curved surface.",
+      "solution_hi": "वक्र पृष्ठीय क्षेत्रफल = 2πrh = 2 × (22/7) × 7 × 10 = 440 सेमी²। दोनों वृत्ताकार सिरे वक्र पृष्ठ में शामिल नहीं हैं।",
+      "trick_en": "Use CSA = 2πrh, not total surface area 2πr(h + r).",
+      "trick_hi": "CSA = 2πrh लगाएँ, कुल पृष्ठीय क्षेत्रफल 2πr(h + r) नहीं।",
+      "ideal_time_seconds": 45,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on mensuration for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-19",
+      "subject": "Quant",
+      "topic": "Mensuration",
+      "sub_topic": "Sphere",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "A solid sphere of radius 6 cm is melted and recast into cones of radius 3 cm and height 4 cm. How many such cones can be made?",
+      "text_hi": "6 सेमी त्रिज्या वाले एक ठोस गोले को पिघलाकर 3 सेमी त्रिज्या और 4 सेमी ऊँचाई वाले शंकु बनाए जाते हैं। ऐसे कितने शंकु बनाए जा सकते हैं?",
+      "options": [{ "en": "12", "hi": "12" }, { "en": "18", "hi": "18" }, { "en": "24", "hi": "24" }, { "en": "36", "hi": "36" }],
+      "correct": 2,
+      "solution_en": "Volume of sphere = (4/3)π(6)^3 = 288π cm³. Volume of one cone = (1/3)π(3)^2(4) = 12π cm³. Number of cones = 288π / 12π = 24.",
+      "solution_hi": "गोले का आयतन = (4/3)π(6)^3 = 288π घन सेमी। एक शंकु का आयतन = (1/3)π(3)^2(4) = 12π घन सेमी। शंकुओं की संख्या = 288π / 12π = 24।",
+      "trick_en": "Equate volumes and cancel π immediately: 288/12 = 24.",
+      "trick_hi": "आयतन बराबर करें और π तुरंत काटें: 288/12 = 24।",
+      "ideal_time_seconds": 75,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on mensuration for the SSC CGL 2026 Tier-I syllabus. Not a PYQ. Volume ratio recomputed.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-20",
+      "subject": "Quant",
+      "topic": "Trigonometry",
+      "sub_topic": "Trigonometric ratios",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "The value of sin 30° + cos 60° is:",
+      "text_hi": "sin 30° + cos 60° का मान क्या है?",
+      "options": [{ "en": "0", "hi": "0" }, { "en": "1/2", "hi": "1/2" }, { "en": "1", "hi": "1" }, { "en": "√3/2", "hi": "√3/2" }],
+      "correct": 2,
+      "solution_en": "sin 30° = 1/2 and cos 60° = 1/2. Their sum is 1/2 + 1/2 = 1.",
+      "solution_hi": "sin 30° = 1/2 और cos 60° = 1/2। इनका योग 1/2 + 1/2 = 1 है।",
+      "trick_en": "sin θ = cos(90° − θ); sin 30° = cos 60° = 1/2.",
+      "trick_hi": "sin θ = cos(90° − θ); sin 30° = cos 60° = 1/2।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on trigonometric ratios for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-21",
+      "subject": "Quant",
+      "topic": "Trigonometry",
+      "sub_topic": "Standard identities",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "If tan θ = 3/4 and θ is acute, then (1 + sin θ)/cos θ equals:",
+      "text_hi": "यदि tan θ = 3/4 और θ न्यून कोण है, तो (1 + sin θ)/cos θ का मान क्या है?",
+      "options": [{ "en": "1", "hi": "1" }, { "en": "3/2", "hi": "3/2" }, { "en": "2", "hi": "2" }, { "en": "5/2", "hi": "5/2" }],
+      "correct": 2,
+      "solution_en": "tan θ = 3/4 gives a 3-4-5 triangle, so sin θ = 3/5 and cos θ = 4/5. Then (1 + sin θ)/cos θ = (1 + 3/5)/(4/5) = (8/5)/(4/5) = 2.",
+      "solution_hi": "tan θ = 3/4 से 3-4-5 त्रिभुज बनता है, इसलिए sin θ = 3/5 और cos θ = 4/5। तब (1 + sin θ)/cos θ = (1 + 3/5)/(4/5) = (8/5)/(4/5) = 2।",
+      "trick_en": "Convert tan to a right triangle first; avoid inventing θ without fixing the sides.",
+      "trick_hi": "पहले tan को समकोण त्रिभुज में बदलें; भुजाएँ तय किए बिना θ न मानें।",
+      "ideal_time_seconds": 50,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on trigonometric identities for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-22",
+      "subject": "Quant",
+      "topic": "Trigonometry",
+      "sub_topic": "Heights and distances",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "From the top of a 60 m high tower, the angles of depression of two cars on the same side of the tower are 45° and 30°. What is the distance between the cars?",
+      "text_hi": "60 मीटर ऊँचे टावर के शिखर से, टावर के एक ही ओर स्थित दो कारों के अवनमन कोण 45° और 30° हैं। कारों के बीच की दूरी क्या है?",
+      "options": [{ "en": "60(√3 − 1) m", "hi": "60(√3 − 1) मी" }, { "en": "60(√3 + 1) m", "hi": "60(√3 + 1) मी" }, { "en": "30(√3 − 1) m", "hi": "30(√3 − 1) मी" }, { "en": "60√3 m", "hi": "60√3 मी" }],
+      "correct": 0,
+      "solution_en": "The angle of depression equals the angle of elevation from the car. For the nearer car, 60/d1 = tan 45° = 1, so d1 = 60 m. For the farther car, 60/d2 = tan 30° = 1/√3, so d2 = 60√3 m. Distance between cars = 60√3 − 60 = 60(√3 − 1) m.",
+      "solution_hi": "अवनमन कोण, कार से उन्नयन कोण के बराबर होता है। निकटवर्ती कार के लिए, 60/d1 = tan 45° = 1, अतः d1 = 60 मी। दूरस्थ कार के लिए, 60/d2 = tan 30° = 1/√3, अतः d2 = 60√3 मी। कारों के बीच दूरी = 60√3 − 60 = 60(√3 − 1) मी।",
+      "trick_en": "Draw both right triangles from the same height; subtract the two horizontal distances instead of adding them.",
+      "trick_hi": "एक ही ऊँचाई से दोनों समकोण त्रिभुज बनाएँ; दोनों क्षैतिज दूरियों को जोड़ने के बजाय घटाएँ।",
+      "ideal_time_seconds": 100,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on heights and distances for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-23",
+      "subject": "Quant",
+      "topic": "Statistical Charts",
+      "sub_topic": "Tables and graphs",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "set_ref": "di-2026-t1-01",
+      "text_en": "What was the average number of units sold by Store A per year over the four years shown?",
+      "text_hi": "दिखाए गए चार वर्षों में दुकान A द्वारा प्रति वर्ष बेची गई इकाइयों का औसत क्या था?",
+      "options": [{ "en": "160", "hi": "160" }, { "en": "165", "hi": "165" }, { "en": "170", "hi": "170" }, { "en": "175", "hi": "175" }],
+      "correct": 1,
+      "solution_en": "Store A sold 120 + 150 + 180 + 210 = 660 units over 4 years. Average = 660/4 = 165 units per year.",
+      "solution_hi": "दुकान A ने 4 वर्षों में 120 + 150 + 180 + 210 = 660 इकाइयाँ बेचीं। औसत = 660/4 = 165 इकाइयाँ प्रति वर्ष।",
+      "trick_en": "Read only Store A's column; do not average both stores.",
+      "trick_hi": "केवल दुकान A का स्तंभ पढ़ें; दोनों दुकानों का औसत न निकालें।",
+      "ideal_time_seconds": 60,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice DI question for the SSC CGL 2026 Tier-I syllabus. Synthetic data; not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-24",
+      "subject": "Quant",
+      "topic": "Statistical Charts",
+      "sub_topic": "Tables and graphs",
+      "difficulty": "Hard",
+      "question_type": "Passage_Based",
+      "set_ref": "di-2026-t1-01",
+      "text_en": "Store A's sales in 2024 were what percent more than Store B's sales in 2021?",
+      "text_hi": "2024 में दुकान A की बिक्री, 2021 में दुकान B की बिक्री से कितने प्रतिशत अधिक थी?",
+      "options": [{ "en": "30%", "hi": "30%" }, { "en": "35%", "hi": "35%" }, { "en": "40%", "hi": "40%" }, { "en": "45%", "hi": "45%" }],
+      "correct": 2,
+      "solution_en": "Store A in 2024 = 210 units. Store B in 2021 = 150 units. Percentage more = (210 − 150)/150 × 100 = 60/150 × 100 = 40%.",
+      "solution_hi": "2024 में दुकान A = 210 इकाइयाँ। 2021 में दुकान B = 150 इकाइयाँ। प्रतिशत अधिक = (210 − 150)/150 × 100 = 60/150 × 100 = 40%।",
+      "trick_en": "The base is Store B's 2021 sales (150), not Store A's 2024 sales. Use the difference over the base.",
+      "trick_hi": "आधार 2021 में दुकान B की बिक्री (150) है, दुकान A की 2024 बिक्री नहीं। अंतर को आधार पर विभाजित करें।",
+      "ideal_time_seconds": 70,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice DI question for the SSC CGL 2026 Tier-I syllabus. Synthetic data; not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant-25",
+      "subject": "Quant",
+      "topic": "Statistical Charts",
+      "sub_topic": "Pie chart",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "A family's monthly expenditure of ₹36,000 is shown in a pie chart. If the sector for food subtends 120° at the centre, how much is spent on food?",
+      "text_hi": "एक परिवार का ₹36,000 का मासिक व्यय पाई चार्ट में दर्शाया गया है। यदि भोजन का क्षेत्र केंद्र पर 120° का कोण बनाता है, तो भोजन पर कितना व्यय होता है?",
+      "options": [{ "en": "₹9,000", "hi": "₹9,000" }, { "en": "₹10,000", "hi": "₹10,000" }, { "en": "₹12,000", "hi": "₹12,000" }, { "en": "₹15,000", "hi": "₹15,000" }],
+      "correct": 2,
+      "solution_en": "A full pie represents 360°. The food sector is 120°/360° = 1/3 of the total. Food expenditure = 36,000 × 1/3 = ₹12,000.",
+      "solution_hi": "पूरा पाई चार्ट 360° दर्शाता है। भोजन का क्षेत्र 120°/360° = 1/3 भाग है। भोजन पर व्यय = 36,000 × 1/3 = ₹12,000।",
+      "trick_en": "Amount = total × (sector angle/360°). Reduce 120/360 to 1/3 before multiplying.",
+      "trick_hi": "राशि = कुल × (क्षेत्र कोण/360°)। गुणा से पहले 120/360 को 1/3 तक घटाएँ।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on pie charts for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ]
+}
