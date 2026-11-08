@@ -1,9 +1,11 @@
-# SSC CGL Tier-I practice pack (2026 pattern, Batches 1–3)
+# SSC CGL Tier-I practice content (2026 pattern, Batches 1–4)
 
 Status: **original practice content, automatically checked, independent human review pending.**
 Nothing in these packs is an SSC previous-year paper (PYQ), an official paper, an official shift or an official answer key.
 
-**Batch 3 update (2026-11-08):** a third independent 100-question pack (`ssc-cgl-2026-tier1-practice-v3`) was added. Total verified practice content is now **300 questions in three full-mock pools**, supporting three independent full mocks and twelve sectional papers. No pack is human-reviewed.
+**Batch 4 update (2026-11-08):** a fourth full-mock pack (`ssc-cgl-2026-tier1-practice-v4`) and a **60-question topic-drill pool** (`ssc-cgl-2026-tier1-practice-drills-v1`) were added. Total verified practice content is now **460 questions**: four independent 100-question full mocks, sixteen sectional papers and a drill pool that powers 15–30 question single-topic drills. No pack is human-reviewed.
+
+**Batch 3 update (2026-11-08):** a third independent 100-question pack (`ssc-cgl-2026-tier1-practice-v3`) was added, taking the total to 300 questions in three pools.
 
 **Batch 2 update (2026-11-08):** a second independent 100-question pack (`ssc-cgl-2026-tier1-practice-v2`) was added, taking the total to 200 questions in two pools.
 
@@ -15,13 +17,23 @@ Nothing in these packs is an SSC previous-year paper (PYQ), an official paper, a
 | Stage | Tier-I only |
 | Target cycle | 2027 preparation |
 | Pattern baseline | Latest verifiable official notice: CGL **2026** (notice dated 21-05-2026) |
-| Pack keys | `ssc-cgl-2026-tier1-practice-v1`, `ssc-cgl-2026-tier1-practice-v2`, `ssc-cgl-2026-tier1-practice-v3` |
-| Content | 300 original questions in three independent packs; each pack has 100 questions, 2 linked sets and 4 subjects × 25 |
+| Pack keys | `…-practice-v1`, `…-practice-v2`, `…-practice-v3`, `…-practice-v4` (full mocks) and `…-practice-drills-v1` (60-question drill pool) |
+| Content | 460 original questions: four 100-question full-mock packs (2 linked sets each) and one 60-question drill pack (15 per subject, no sets) |
 | Provenance | `original_practice`, `is_pyq: false` |
 | Review state | `automated_verified_pending_human_review` |
 | Translation | ExamEdge Hindi/English text, **not** an official SSC translation |
 
 The 2027 CGL notice was not available on 2026-11-08. The 2026 notice is the latest official scheme that could be verified, so these packs are labelled a **2026-pattern baseline for 2027 preparation**. When the 2027 notice is published, re-check the scheme, syllabus, timings and marking before reusing or extending them. No 2027 date, vacancy, cut-off or pattern is invented here.
+
+## Batch 4 addendum
+
+- **Fourth full mock:** `ssc-cgl-2026-tier1-practice-v4`, 100 new questions with the same official Tier-I quotas and 30/50/20 difficulty split. Content hash `75d2fcfab8a04ec310d86516c5371b3510fa1fa1dc14b820acd186ba990fe505`.
+- **Drill pool:** `ssc-cgl-2026-tier1-practice-drills-v1`, `pack_kind: topic_drills`, 60 standalone questions — Quant 15, Reasoning 15, English 15, General Awareness 15. Content hash `6902d899ce2f488bc68c5cacd1bcb5504ce14ea2fc98892db5fb42b36805c847`.
+- **Why a separate kind:** full-mock quotas are fixed at 4 × 25 with DI and cloze sets. A drill pool declares its own `drill_profile` (`by_subject` and `by_topic`) instead, contains no passage sets, and is validated by the same script. It is **not** counted as a full mock.
+- **Connected to the learner flow:** the existing Subject & Topic Practice screen (`/practice`) already prepares `Micro` mocks with a 15–30 question count. With the pool imported, those drills draw from all 460 published items. Verified end-to-end on 2026-11-08: a 15-question "Fundamental Arithmetical Operations" drill returned 15 Quant questions, all on that topic, with no answer key in the launch payload.
+- **Four full mocks verified:** 5 packs, 460 published practice questions, 8 linked sets; four consecutive 100-question mocks delivered 25 distinct questions each with **0 overlap** and `max_score` 200.
+- **Batch 4 facts:** Nobel Peace 2026 (Navi Pillay), International Booker 2026 translator (Lin King, *Taiwan Travelogue*), G20 Miami (14–15 Dec 2026), Asian Games Aichi-Nagoya, FIFA final 19 July 2026, COP31 Antalya (9–20 Nov 2026). Each carries a source and `checked_on: 2026-11-08`.
+- **Status:** all five packs are `automated_verified_pending_human_review`; none is approved or human-reviewed.
 
 ## Batch 3 addendum
 
@@ -171,7 +183,8 @@ The preview imports both packs. It registers its own local accounts. Data disapp
 - The 2027 notification, syllabus and final keys are not available. The 2026 pattern may change.
 - General Awareness current-affairs items are only current as of 2026-11-08.
 - No PYQ or official paper was analysed or reproduced, so this pack makes no evidence-based claim about historical SSC topic frequency, shift difficulty or repeated questions.
-- Topic-specific micro-drills beyond one subject need a much larger reviewed pool; the current 300-question pool supports three full mocks and twelve sectionals, but not deep single-topic drills. A later batch could add topic-focused pools once the existing content has human review.
+- The drill pool improves single-topic coverage, but the minimum drill is 15 questions: narrow topics with fewer than 15 published items still return the honest "cannot fill" message instead of inventing questions. Deeper drills need a bigger reviewed pool.
+- The current 460-question bank supports four full mocks and sixteen sectionals. Human review is still pending, and the 2027 notice is not available.
 - Figures are avoided: spatial/figural items are expressed verbally (direction, folding, shadow) rather than with unverified images. The DI set uses a data table rendered by the existing chart component.
 
 ## Sources

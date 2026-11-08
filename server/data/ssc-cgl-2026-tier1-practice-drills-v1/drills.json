@@ -1,0 +1,2346 @@
+{
+  "pack_key": "ssc-cgl-2026-tier1-practice-drills-v1",
+  "sets": [],
+  "questions": [
+    {
+      "qid": "drill-q-01",
+      "subject": "Quant",
+      "topic": "Number Systems",
+      "sub_topic": "Relationship between numbers",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the LCM of 12, 18 and 24.",
+      "text_hi": "12, 18 और 24 का लघुत्तम समापवर्त्य (LCM) ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "48",
+          "hi": "48"
+        },
+        {
+          "en": "60",
+          "hi": "60"
+        },
+        {
+          "en": "72",
+          "hi": "72"
+        },
+        {
+          "en": "96",
+          "hi": "96"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "LCM = 2³ × 3² = 8 × 9 = 72. Prime factors: 12 = 2²×3, 18 = 2×3², 24 = 2³×3.",
+      "solution_hi": "LCM = 2³ × 3² = 8 × 9 = 72। अभाज्य गुणनखंड: 12 = 2²×3, 18 = 2×3², 24 = 2³×3।",
+      "trick_en": "Take the highest power of every prime that appears.",
+      "trick_hi": "जो भी अभाज्य आए, उसकी सबसे बड़ी घात लें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook (rational numbers, mensuration, geometry), checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-q-02",
+      "subject": "Quant",
+      "topic": "Number Systems",
+      "sub_topic": "Relationship between numbers",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the HCF of 84 and 126.",
+      "text_hi": "84 और 126 का महत्तम समापवर्तक (HCF) ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "14",
+          "hi": "14"
+        },
+        {
+          "en": "21",
+          "hi": "21"
+        },
+        {
+          "en": "42",
+          "hi": "42"
+        },
+        {
+          "en": "63",
+          "hi": "63"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "84 = 2²×3×7 and 126 = 2×3²×7, so HCF = 2×3×7 = 42.",
+      "solution_hi": "84 = 2²×3×7 और 126 = 2×3²×7, इसलिए HCF = 2×3×7 = 42।",
+      "trick_en": "HCF takes the smallest power of each common prime.",
+      "trick_hi": "HCF में प्रत्येक सामान्य अभाज्य की सबसे छोटी घात लें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook (rational numbers, mensuration, geometry), checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-q-03",
+      "subject": "Quant",
+      "topic": "Number Systems",
+      "sub_topic": "Fractions",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which of these fractions is the largest?",
+      "text_hi": "इनमें से कौन-सी भिन्न सबसे बड़ी है?",
+      "options": [
+        {
+          "en": "3/4",
+          "hi": "3/4"
+        },
+        {
+          "en": "5/7",
+          "hi": "5/7"
+        },
+        {
+          "en": "7/9",
+          "hi": "7/9"
+        },
+        {
+          "en": "2/3",
+          "hi": "2/3"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "3/4 = 0.750, 5/7 ≈ 0.714, 7/9 ≈ 0.778, 2/3 ≈ 0.667. The largest is 7/9.",
+      "solution_hi": "3/4 = 0.750, 5/7 ≈ 0.714, 7/9 ≈ 0.778, 2/3 ≈ 0.667। सबसे बड़ी 7/9 है।",
+      "trick_en": "Cross-multiply neighbours instead of converting every fraction.",
+      "trick_hi": "हर भिन्न को दशमलव में बदलने के बजाय पड़ोसी भिन्नों का तिर्यक गुणा करें।",
+      "ideal_time_seconds": 45,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook (rational numbers, mensuration, geometry), checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-q-04",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Percentages",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is 18% of 250?",
+      "text_hi": "250 का 18% कितना है?",
+      "options": [
+        {
+          "en": "35",
+          "hi": "35"
+        },
+        {
+          "en": "40",
+          "hi": "40"
+        },
+        {
+          "en": "45",
+          "hi": "45"
+        },
+        {
+          "en": "50",
+          "hi": "50"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "18% of 250 = 0.18 × 250 = 45.",
+      "solution_hi": "250 का 18% = 0.18 × 250 = 45।",
+      "trick_en": "18% = 10% + 8% = 25 + 20.",
+      "trick_hi": "18% = 10% + 8% = 25 + 20।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook (rational numbers, mensuration, geometry), checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-q-05",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Ratio and proportion",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Two numbers are in the ratio 5 : 7 and their sum is 96. What is the larger number?",
+      "text_hi": "दो संख्याएँ 5 : 7 के अनुपात में हैं और उनका योग 96 है। बड़ी संख्या क्या है?",
+      "options": [
+        {
+          "en": "40",
+          "hi": "40"
+        },
+        {
+          "en": "48",
+          "hi": "48"
+        },
+        {
+          "en": "56",
+          "hi": "56"
+        },
+        {
+          "en": "64",
+          "hi": "64"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Total parts = 5 + 7 = 12, so one part = 96/12 = 8. The larger number is 7 × 8 = 56.",
+      "solution_hi": "कुल भाग = 5 + 7 = 12, इसलिए एक भाग = 96/12 = 8। बड़ी संख्या 7 × 8 = 56 है।",
+      "trick_en": "Find one part first, then multiply by the required ratio term.",
+      "trick_hi": "पहले एक भाग निकालें, फिर आवश्यक अनुपात पद से गुणा करें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook (rational numbers, mensuration, geometry), checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-q-06",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Averages",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The average of 8 numbers is 27. If one number, 20, is removed, what is the average of the remaining numbers?",
+      "text_hi": "8 संख्याओं का औसत 27 है। यदि एक संख्या 20 हटा दी जाए, तो शेष संख्याओं का औसत क्या होगा?",
+      "options": [
+        {
+          "en": "26",
+          "hi": "26"
+        },
+        {
+          "en": "27",
+          "hi": "27"
+        },
+        {
+          "en": "28",
+          "hi": "28"
+        },
+        {
+          "en": "29",
+          "hi": "29"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Total = 8 × 27 = 216. Remaining total = 216 − 20 = 196 over 7 numbers, so average = 196/7 = 28.",
+      "solution_hi": "कुल = 8 × 27 = 216। शेष योग = 216 − 20 = 196, 7 संख्याओं पर, इसलिए औसत = 196/7 = 28।",
+      "trick_en": "New average = (old total − removed value) ÷ new count.",
+      "trick_hi": "नया औसत = (पुराना योग − हटाई गई संख्या) ÷ नई संख्या।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook (rational numbers, mensuration, geometry), checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-q-07",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Simple interest",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the simple interest on ₹8,000 at 6% per annum for 3 years.",
+      "text_hi": "₹8,000 पर 6% वार्षिक दर से 3 वर्ष का साधारण ब्याज ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "₹1,240",
+          "hi": "₹1,240"
+        },
+        {
+          "en": "₹1,440",
+          "hi": "₹1,440"
+        },
+        {
+          "en": "₹1,640",
+          "hi": "₹1,640"
+        },
+        {
+          "en": "₹1,800",
+          "hi": "₹1,800"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "SI = P × R × T / 100 = 8000 × 6 × 3 / 100 = ₹1,440.",
+      "solution_hi": "SI = P × R × T / 100 = 8000 × 6 × 3 / 100 = ₹1,440।",
+      "trick_en": "SI is always calculated on the original principal.",
+      "trick_hi": "साधारण ब्याज सदैव मूलधन पर लगता है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.rbi.org.in/",
+        "citation": "Reserve Bank of India public pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-q-08",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Compound interest",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the compound interest on ₹10,000 at 10% per annum for 2 years.",
+      "text_hi": "₹10,000 पर 10% वार्षिक दर से 2 वर्ष का चक्रवृद्धि ब्याज ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "₹2,000",
+          "hi": "₹2,000"
+        },
+        {
+          "en": "₹2,100",
+          "hi": "₹2,100"
+        },
+        {
+          "en": "₹2,200",
+          "hi": "₹2,200"
+        },
+        {
+          "en": "₹2,310",
+          "hi": "₹2,310"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Amount = 10000 × (1.1)² = ₹12,100, so CI = 12,100 − 10,000 = ₹2,100.",
+      "solution_hi": "मिश्रधन = 10000 × (1.1)² = ₹12,100, इसलिए CI = 12,100 − 10,000 = ₹2,100।",
+      "trick_en": "For two years at 10%, CI = 21% of the principal.",
+      "trick_hi": "दो वर्ष में 10% पर CI = मूलधन का 21%।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://www.rbi.org.in/",
+        "citation": "Reserve Bank of India public pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-q-09",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Profit and loss",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "An article bought for ₹750 is sold for ₹810. Find the profit percentage.",
+      "text_hi": "₹750 में खरीदी गई वस्तु ₹810 में बेची जाती है। लाभ प्रतिशत ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "6%",
+          "hi": "6%"
+        },
+        {
+          "en": "7.5%",
+          "hi": "7.5%"
+        },
+        {
+          "en": "8%",
+          "hi": "8%"
+        },
+        {
+          "en": "10%",
+          "hi": "10%"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Profit = 810 − 750 = ₹60. Profit % = 60/750 × 100 = 8%.",
+      "solution_hi": "लाभ = 810 − 750 = ₹60। लाभ % = 60/750 × 100 = 8%।",
+      "trick_en": "Profit percentage is always on the cost price.",
+      "trick_hi": "लाभ प्रतिशत सदैव क्रय मूल्य पर होता है।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook (rational numbers, mensuration, geometry), checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-q-10",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Time and work",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "A can do a piece of work in 12 days and B in 18 days. Working together, in how many days will they finish the work?",
+      "text_hi": "A एक काम 12 दिनों में और B 18 दिनों में कर सकता है। साथ मिलकर वे काम कितने दिनों में पूरा करेंगे?",
+      "options": [
+        {
+          "en": "6 days",
+          "hi": "6 days"
+        },
+        {
+          "en": "7.2 days",
+          "hi": "7.2 days"
+        },
+        {
+          "en": "7.5 days",
+          "hi": "7.5 days"
+        },
+        {
+          "en": "8 days",
+          "hi": "8 days"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "One day of work = 1/12 + 1/18 = 3/36 + 2/36 = 5/36. Time = 36/5 = 7.2 days.",
+      "solution_hi": "एक दिन का काम = 1/12 + 1/18 = 3/36 + 2/36 = 5/36। समय = 36/5 = 7.2 दिन।",
+      "trick_en": "Combine one-day work, then invert it for total days.",
+      "trick_hi": "एक दिन का काम जोड़ें, फिर कुल दिनों के लिए उलट दें।",
+      "ideal_time_seconds": 50,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook (rational numbers, mensuration, geometry), checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-q-11",
+      "subject": "Quant",
+      "topic": "Algebra",
+      "sub_topic": "School algebra identities",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "If x + 1/x = 4, find x² + 1/x².",
+      "text_hi": "यदि x + 1/x = 4 है, तो x² + 1/x² ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "12",
+          "hi": "12"
+        },
+        {
+          "en": "14",
+          "hi": "14"
+        },
+        {
+          "en": "16",
+          "hi": "16"
+        },
+        {
+          "en": "18",
+          "hi": "18"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "(x + 1/x)² = x² + 2 + 1/x², so 16 = x² + 1/x² + 2, giving x² + 1/x² = 14.",
+      "solution_hi": "(x + 1/x)² = x² + 2 + 1/x², इसलिए 16 = x² + 1/x² + 2, जिससे x² + 1/x² = 14।",
+      "trick_en": "Square the given sum and subtract 2.",
+      "trick_hi": "दिए गए योग का वर्ग करें और 2 घटाएँ।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook (rational numbers, mensuration, geometry), checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-q-12",
+      "subject": "Quant",
+      "topic": "Algebra",
+      "sub_topic": "Graphs of linear equations",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Solve for x: 3x − 7 = 20.",
+      "text_hi": "x के लिए हल करें: 3x − 7 = 20।",
+      "options": [
+        {
+          "en": "7",
+          "hi": "7"
+        },
+        {
+          "en": "8",
+          "hi": "8"
+        },
+        {
+          "en": "9",
+          "hi": "9"
+        },
+        {
+          "en": "11",
+          "hi": "11"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "3x = 20 + 7 = 27, so x = 27/3 = 9.",
+      "solution_hi": "3x = 20 + 7 = 27, इसलिए x = 27/3 = 9।",
+      "trick_en": "Move the constant to the other side, then divide by the coefficient.",
+      "trick_hi": "अचर को दूसरी ओर ले जाएँ, फिर गुणांक से भाग दें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook (rational numbers, mensuration, geometry), checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-q-13",
+      "subject": "Quant",
+      "topic": "Geometry",
+      "sub_topic": "Triangles and their centres",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The angles of a triangle are in the ratio 2 : 3 : 5. Find the largest angle.",
+      "text_hi": "किसी त्रिभुज के कोण 2 : 3 : 5 के अनुपात में हैं। सबसे बड़ा कोण ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "72°",
+          "hi": "72°"
+        },
+        {
+          "en": "80°",
+          "hi": "80°"
+        },
+        {
+          "en": "90°",
+          "hi": "90°"
+        },
+        {
+          "en": "100°",
+          "hi": "100°"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Total parts = 10 and the angle sum is 180°, so one part is 18°. The largest angle = 5 × 18° = 90°.",
+      "solution_hi": "कुल भाग = 10 और कोणों का योग 180°, इसलिए एक भाग 18° है। सबसे बड़ा कोण = 5 × 18° = 90°।",
+      "trick_en": "Angle sum of a triangle is always 180°.",
+      "trick_hi": "त्रिभुज के कोणों का योग सदैव 180° होता है।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook (rational numbers, mensuration, geometry), checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-q-14",
+      "subject": "Quant",
+      "topic": "Geometry",
+      "sub_topic": "Circles, chords and tangents",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "A chord of length 12 cm is drawn in a circle of radius 10 cm. Find its distance from the centre.",
+      "text_hi": "10 cm त्रिज्या वाले वृत्त में 12 cm लंबी जीवा खींची गई है। केंद्र से उसकी दूरी ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "6 cm",
+          "hi": "6 cm"
+        },
+        {
+          "en": "8 cm",
+          "hi": "8 cm"
+        },
+        {
+          "en": "9 cm",
+          "hi": "9 cm"
+        },
+        {
+          "en": "10 cm",
+          "hi": "10 cm"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The perpendicular from the centre bisects the chord, giving a right triangle with hypotenuse 10 and one side 6. Distance = √(10² − 6²) = √64 = 8 cm.",
+      "solution_hi": "केंद्र से लंब जीवा को समद्विभाजित करता है, जिससे 10 कर्ण और 6 भुजा वाला समकोण त्रिभुज बनता है। दूरी = √(10² − 6²) = √64 = 8 cm।",
+      "trick_en": "Half the chord, the radius and the distance form a right triangle.",
+      "trick_hi": "आधी जीवा, त्रिज्या और दूरी समकोण त्रिभुज बनाते हैं।",
+      "ideal_time_seconds": 60,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook (rational numbers, mensuration, geometry), checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-q-15",
+      "subject": "Quant",
+      "topic": "Mensuration",
+      "sub_topic": "Right circular cone",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "A right circular cone has radius 6 cm and height 8 cm. Find its volume (take π = 3.14).",
+      "text_hi": "एक लंब वृत्तीय शंकु की त्रिज्या 6 cm और ऊँचाई 8 cm है। इसका आयतन ज्ञात कीजिए (π = 3.14 लें)।",
+      "options": [
+        {
+          "en": "288.00 cm³",
+          "hi": "288.00 cm³"
+        },
+        {
+          "en": "301.44 cm³",
+          "hi": "301.44 cm³"
+        },
+        {
+          "en": "452.16 cm³",
+          "hi": "452.16 cm³"
+        },
+        {
+          "en": "904.32 cm³",
+          "hi": "904.32 cm³"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "V = (1/3)πr²h = (1/3) × 3.14 × 36 × 8 = 3.14 × 96 = 301.44 cm³.",
+      "solution_hi": "V = (1/3)πr²h = (1/3) × 3.14 × 36 × 8 = 3.14 × 96 = 301.44 cm³।",
+      "trick_en": "A cone is one-third of the cylinder with the same base and height.",
+      "trick_hi": "शंकु समान आधार और ऊँचाई वाले बेलन का एक-तिहाई होता है।",
+      "ideal_time_seconds": 60,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook (rational numbers, mensuration, geometry), checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-01",
+      "subject": "Reasoning",
+      "topic": "Analogy",
+      "sub_topic": "Semantic analogy",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Library : Books :: Museum : ?",
+      "text_hi": "Library : Books :: Museum : ?",
+      "options": [
+        {
+          "en": "Spectators",
+          "hi": "दर्शक"
+        },
+        {
+          "en": "Artefacts",
+          "hi": "कलाकृतियाँ"
+        },
+        {
+          "en": "Building",
+          "hi": "भवन"
+        },
+        {
+          "en": "Tickets",
+          "hi": "टिकट"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "A library stores books; a museum stores artefacts. The relation is place to the things it preserves.",
+      "solution_hi": "पुस्तकालय में किताबें रखी जाती हैं; संग्रहालय में कलाकृतियाँ। संबंध स्थान और उसके संरक्षित पदार्थ का है।",
+      "trick_en": "Name the relation in words before choosing an option.",
+      "trick_hi": "विकल्प चुनने से पहले संबंध को शब्दों में कहें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-02",
+      "subject": "Reasoning",
+      "topic": "Analogy",
+      "sub_topic": "Symbolic and number analogy",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "4 : 64 :: 5 : ?",
+      "text_hi": "4 : 64 :: 5 : ?",
+      "options": [
+        {
+          "en": "25",
+          "hi": "25"
+        },
+        {
+          "en": "75",
+          "hi": "75"
+        },
+        {
+          "en": "100",
+          "hi": "100"
+        },
+        {
+          "en": "125",
+          "hi": "125"
+        }
+      ],
+      "correct": 3,
+      "solution_en": "64 = 4³, so the second term is the cube of the first. 5³ = 125.",
+      "solution_hi": "64 = 4³, इसलिए दूसरा पद पहले का घन है। 5³ = 125।",
+      "trick_en": "Test squares, cubes and squares-plus-one before rejecting a rule.",
+      "trick_hi": "नियम छोड़ने से पहले वर्ग, घन और वर्ग-जमा-एक जाँचें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-03",
+      "subject": "Reasoning",
+      "topic": "Classification",
+      "sub_topic": "Symbolic and number classification",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the odd one out: 121, 144, 169, 180.",
+      "text_hi": "बेमेल संख्या चुनें: 121, 144, 169, 180।",
+      "options": [
+        {
+          "en": "121",
+          "hi": "121"
+        },
+        {
+          "en": "144",
+          "hi": "144"
+        },
+        {
+          "en": "169",
+          "hi": "169"
+        },
+        {
+          "en": "180",
+          "hi": "180"
+        }
+      ],
+      "correct": 3,
+      "solution_en": "121 = 11², 144 = 12² and 169 = 13² are perfect squares; 180 is not.",
+      "solution_hi": "121 = 11², 144 = 12² और 169 = 13² पूर्ण वर्ग हैं; 180 नहीं है।",
+      "trick_en": "Check perfect squares first in a number-classification item.",
+      "trick_hi": "संख्या-वर्गीकरण में पहले पूर्ण वर्ग जाँचें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-04",
+      "subject": "Reasoning",
+      "topic": "Series",
+      "sub_topic": "Number series",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the next term: 3, 8, 15, 24, ?",
+      "text_hi": "अगला पद ज्ञात कीजिए: 3, 8, 15, 24, ?",
+      "options": [
+        {
+          "en": "32",
+          "hi": "32"
+        },
+        {
+          "en": "35",
+          "hi": "35"
+        },
+        {
+          "en": "36",
+          "hi": "36"
+        },
+        {
+          "en": "40",
+          "hi": "40"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Differences are 5, 7, 9; the next difference is 11, so 24 + 11 = 35.",
+      "solution_hi": "अंतर 5, 7, 9 हैं; अगला अंतर 11 है, इसलिए 24 + 11 = 35।",
+      "trick_en": "Write the first differences before guessing a pattern.",
+      "trick_hi": "पैटर्न का अनुमान लगाने से पहले पहले अंतर लिखें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-05",
+      "subject": "Reasoning",
+      "topic": "Series",
+      "sub_topic": "Semantic series",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the next letter: B, D, G, K, ?",
+      "text_hi": "अगला अक्षर ज्ञात कीजिए: B, D, G, K, ?",
+      "options": [
+        {
+          "en": "N",
+          "hi": "N"
+        },
+        {
+          "en": "O",
+          "hi": "O"
+        },
+        {
+          "en": "P",
+          "hi": "P"
+        },
+        {
+          "en": "Q",
+          "hi": "Q"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The gaps are +2, +3, +4 letters, so the next gap is +5: K (11) + 5 = P (16).",
+      "solution_hi": "अंतराल +2, +3, +4 अक्षर हैं, इसलिए अगला अंतराल +5 है: K (11) + 5 = P (16)।",
+      "trick_en": "Convert letters to positions and difference the positions.",
+      "trick_hi": "अक्षरों को स्थानों में बदलें और स्थानों का अंतर निकालें।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-06",
+      "subject": "Reasoning",
+      "topic": "Operations and Coding",
+      "sub_topic": "Coding and decoding",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "If CAT is coded as 3120, how is DOG coded in the same scheme?",
+      "text_hi": "यदि CAT को 3120 में कोडित किया जाता है, तो उसी योजना में DOG कैसे कोडित होगा?",
+      "options": [
+        {
+          "en": "4157",
+          "hi": "4157"
+        },
+        {
+          "en": "4715",
+          "hi": "4715"
+        },
+        {
+          "en": "41507",
+          "hi": "41507"
+        },
+        {
+          "en": "4517",
+          "hi": "4517"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Each letter is replaced by its alphabet position in order: C = 3, A = 1, T = 20 gives 3120. So D = 4, O = 15, G = 7 gives 4157.",
+      "solution_hi": "प्रत्येक अक्षर को क्रम से उसके वर्णमाला स्थान से बदला जाता है: C = 3, A = 1, T = 20 से 3120 बनता है। इसलिए D = 4, O = 15, G = 7 से 4157 बनता है।",
+      "trick_en": "Do not add the positions; concatenate them in letter order.",
+      "trick_hi": "स्थानों को जोड़ें नहीं; अक्षर क्रम में जोड़कर लिखें।",
+      "ideal_time_seconds": 45,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-07",
+      "subject": "Reasoning",
+      "topic": "Operations and Coding",
+      "sub_topic": "Symbolic operations",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "If P means +, Q means −, R means × and S means ÷, find 12 P 6 R 3 S 2.",
+      "text_hi": "यदि P का अर्थ +, Q का अर्थ −, R का अर्थ × और S का अर्थ ÷ है, तो 12 P 6 R 3 S 2 ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "15",
+          "hi": "15"
+        },
+        {
+          "en": "18",
+          "hi": "18"
+        },
+        {
+          "en": "21",
+          "hi": "21"
+        },
+        {
+          "en": "27",
+          "hi": "27"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Replace symbols: 12 + 6 × 3 ÷ 2. By BODMAS, 6 × 3 ÷ 2 = 9, so 12 + 9 = 21.",
+      "solution_hi": "प्रतीक बदलें: 12 + 6 × 3 ÷ 2। BODMAS से 6 × 3 ÷ 2 = 9, इसलिए 12 + 9 = 21।",
+      "trick_en": "Apply BODMAS after replacing symbols, not left to right.",
+      "trick_hi": "प्रतीक बदलने के बाद बाएँ से दाएँ नहीं, BODMAS लगाएँ।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-08",
+      "subject": "Reasoning",
+      "topic": "Spatial and Figural Reasoning",
+      "sub_topic": "Space orientation",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "A man walks 5 km north, turns right and walks 3 km, then turns right and walks 5 km. How far and in which direction is he from the start?",
+      "text_hi": "एक व्यक्ति 5 km उत्तर चलता है, दाएँ मुड़कर 3 km चलता है, फिर दाएँ मुड़कर 5 km चलता है। वह प्रारंभ से कितनी दूर और किस दिशा में है?",
+      "options": [
+        {
+          "en": "3 km east",
+          "hi": "3 km east"
+        },
+        {
+          "en": "3 km west",
+          "hi": "3 km west"
+        },
+        {
+          "en": "5 km east",
+          "hi": "5 km east"
+        },
+        {
+          "en": "5 km south",
+          "hi": "5 km south"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "North 5 and South 5 cancel. The middle leg goes 3 km east, so he is 3 km east of the start.",
+      "solution_hi": "उत्तर 5 और दक्षिण 5 कट जाते हैं। बीच वाला हिस्सा 3 km पूर्व जाता है, इसलिए वह प्रारंभ से 3 km पूर्व में है।",
+      "trick_en": "Draw the path; opposite legs of equal length cancel.",
+      "trick_hi": "रास्ता बनाएँ; बराबर लंबाई की विपरीत भुजाएँ कट जाती हैं।",
+      "ideal_time_seconds": 45,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-09",
+      "subject": "Reasoning",
+      "topic": "Spatial and Figural Reasoning",
+      "sub_topic": "Space visualization",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "A cube painted red on all faces is cut into 27 equal smaller cubes. How many smaller cubes have exactly two painted faces?",
+      "text_hi": "सभी फलकों पर लाल रंगा एक घन 27 बराबर छोटे घनों में काटा जाता है। कितने छोटे घनों के ठीक दो फलक रंगे होंगे?",
+      "options": [
+        {
+          "en": "6",
+          "hi": "6"
+        },
+        {
+          "en": "8",
+          "hi": "8"
+        },
+        {
+          "en": "12",
+          "hi": "12"
+        },
+        {
+          "en": "18",
+          "hi": "18"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "A 3 × 3 × 3 cut has 12 edge cubes, and each edge cube has exactly two painted faces (middle-of-edge position, excluding corners).",
+      "solution_hi": "3 × 3 × 3 कट में 12 किनारे वाले घन होते हैं, और प्रत्येक किनारे वाले घन के ठीक दो फलक रंगे होते हैं (कोनों को छोड़कर)।",
+      "trick_en": "Two-face cubes = 12(n − 2) for an n × n × n cut with n = 3.",
+      "trick_hi": "दो फलक वाले घन = 12(n − 2), जहाँ n = 3।",
+      "ideal_time_seconds": 55,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-10",
+      "subject": "Reasoning",
+      "topic": "Logical Reasoning",
+      "sub_topic": "Drawing inferences",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "All pens are books. All books are tables. Which conclusion definitely follows?",
+      "text_hi": "सभी पेन किताबें हैं। सभी किताबें मेज हैं। कौन-सा निष्कर्ष निश्चित रूप से निकलता है?",
+      "options": [
+        {
+          "en": "All pens are tables",
+          "hi": "All pens are tables"
+        },
+        {
+          "en": "All tables are pens",
+          "hi": "All tables are pens"
+        },
+        {
+          "en": "Some pens are not tables",
+          "hi": "Some pens are not tables"
+        },
+        {
+          "en": "No pen is a table",
+          "hi": "No pen is a table"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Every pen is a book and every book is a table, so every pen is a table.",
+      "solution_hi": "हर पेन किताब है और हर किताब मेज है, इसलिए हर पेन मेज है।",
+      "trick_en": "Chain the two \"all\" statements in the direction they are given.",
+      "trick_hi": "दोनों \"सभी\" कथनों को दी गई दिशा में जोड़ें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-11",
+      "subject": "Reasoning",
+      "topic": "Logical Reasoning",
+      "sub_topic": "Critical thinking",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Whenever it rains, the ground gets wet. The ground is wet. Which statement is logically justified?",
+      "text_hi": "जब भी बारिश होती है, जमीन गीली हो जाती है। जमीन गीली है। कौन-सा कथन तार्किक रूप से उचित है?",
+      "options": [
+        {
+          "en": "It definitely rained",
+          "hi": "It definitely rained"
+        },
+        {
+          "en": "It may have rained, but other causes are possible",
+          "hi": "It may have rained, but other causes are possible"
+        },
+        {
+          "en": "It definitely did not rain",
+          "hi": "It definitely did not rain"
+        },
+        {
+          "en": "The ground cannot dry",
+          "hi": "The ground cannot dry"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Rain guarantees wet ground, but wet ground does not guarantee rain; a sprinkler or spill could also wet it.",
+      "solution_hi": "बारिश से जमीन अवश्य गीली होती है, लेकिन गीली जमीन से बारिश सिद्ध नहीं होती; छिड़काव या गिरावट भी कारण हो सकते हैं।",
+      "trick_en": "Do not reverse a one-way condition.",
+      "trick_hi": "एकतरफा शर्त को उलटा न करें।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-12",
+      "subject": "Reasoning",
+      "topic": "General Intelligence",
+      "sub_topic": "Relationship concepts",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Pointing to a photograph, Ravi said, \"She is the daughter of my mother's only son.\" How is the girl related to Ravi?",
+      "text_hi": "एक तस्वीर की ओर इशारा करते हुए रवि ने कहा, \"वह मेरी माँ के इकलौते बेटे की बेटी है।\" लड़की रवि से कैसे संबंधित है?",
+      "options": [
+        {
+          "en": "Sister",
+          "hi": "Sister"
+        },
+        {
+          "en": "Daughter",
+          "hi": "Daughter"
+        },
+        {
+          "en": "Niece",
+          "hi": "Niece"
+        },
+        {
+          "en": "Cousin",
+          "hi": "Cousin"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Ravi's mother's only son is Ravi himself, so the girl is Ravi's daughter.",
+      "solution_hi": "रवि की माँ का इकलौता बेटा स्वयं रवि है, इसलिए लड़की रवि की बेटी है।",
+      "trick_en": "Resolve \"my mother's only son\" to the speaker when no brother is mentioned.",
+      "trick_hi": "जब भाई का उल्लेख न हो, \"मेरी माँ का इकलौता बेटा\" वक्ता स्वयं होता है।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-13",
+      "subject": "Reasoning",
+      "topic": "General Intelligence",
+      "sub_topic": "Arithmetical reasoning",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "In a class of 40 students, 25 play cricket, 20 play football and 10 play both. How many play neither game?",
+      "text_hi": "40 विद्यार्थियों की कक्षा में 25 क्रिकेट, 20 फुटबॉल और 10 दोनों खेलते हैं। कितने कोई खेल नहीं खेलते?",
+      "options": [
+        {
+          "en": "5",
+          "hi": "5"
+        },
+        {
+          "en": "10",
+          "hi": "10"
+        },
+        {
+          "en": "15",
+          "hi": "15"
+        },
+        {
+          "en": "20",
+          "hi": "20"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Students playing at least one game = 25 + 20 − 10 = 35. Neither = 40 − 35 = 5.",
+      "solution_hi": "कम से कम एक खेल खेलने वाले = 25 + 20 − 10 = 35। कोई नहीं = 40 − 35 = 5।",
+      "trick_en": "Subtract the overlap once before subtracting from the total.",
+      "trick_hi": "कुल से घटाने से पहले overlap एक बार घटाएँ।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-14",
+      "subject": "Reasoning",
+      "topic": "General Intelligence",
+      "sub_topic": "Syllogistic reasoning",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Statements: All chairs are tables. No table is a fan. Conclusions: I. No chair is a fan. II. Some fans are chairs. Which conclusion follows?",
+      "text_hi": "कथन: सभी कुर्सियाँ मेज हैं। कोई मेज पंखा नहीं है। निष्कर्ष: I. कोई कुर्सी पंखा नहीं है। II. कुछ पंखे कुर्सियाँ हैं। कौन-सा निष्कर्ष निकलता है?",
+      "options": [
+        {
+          "en": "Only I follows",
+          "hi": "Only I follows"
+        },
+        {
+          "en": "Only II follows",
+          "hi": "Only II follows"
+        },
+        {
+          "en": "Both follow",
+          "hi": "Both follow"
+        },
+        {
+          "en": "Neither follows",
+          "hi": "Neither follows"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Chairs lie inside tables and tables are disjoint from fans, so chairs are disjoint from fans. Conclusion II contradicts this.",
+      "solution_hi": "कुर्सियाँ मेजों के भीतर हैं और मेजें पंखों से अलग हैं, इसलिए कुर्सियाँ पंखों से भी अलग हैं। निष्कर्ष II इसका विरोध करता है।",
+      "trick_en": "A negative statement combined with an \"all\" statement gives a negative conclusion.",
+      "trick_hi": "नकारात्मक कथन और \"सभी\" कथन मिलकर नकारात्मक निष्कर्ष देते हैं।",
+      "ideal_time_seconds": 45,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-r-15",
+      "subject": "Reasoning",
+      "topic": "Matching and Indexing",
+      "sub_topic": "Address matching",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which address exactly matches \"14 Rose Avenue, Pune 411001\"?",
+      "text_hi": "कौन-सा पता \"14 Rose Avenue, Pune 411001\" से ठीक मेल खाता है?",
+      "options": [
+        {
+          "en": "14 Rose Avenue, Pune 411001",
+          "hi": "14 Rose Avenue, Pune 411001"
+        },
+        {
+          "en": "41 Rose Avenue, Pune 411001",
+          "hi": "41 Rose Avenue, Pune 411001"
+        },
+        {
+          "en": "14 Rose Avenue, Pune 411010",
+          "hi": "14 Rose Avenue, Pune 411010"
+        },
+        {
+          "en": "14 Rose Street, Pune 411001",
+          "hi": "14 Rose Street, Pune 411001"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Only the first option matches the house number, street name, city and PIN code exactly.",
+      "solution_hi": "केवल पहला विकल्प मकान संख्या, सड़क, शहर और पिन कोड सभी में ठीक मेल खाता है।",
+      "trick_en": "Compare number, street and PIN one field at a time.",
+      "trick_hi": "संख्या, सड़क और पिन को एक-एक करके मिलाएँ।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-01",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Synonyms and homonyms",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word closest in meaning to \"abundant\".",
+      "text_hi": "\"abundant\" के अर्थ के सबसे निकट शब्द चुनें।",
+      "options": [
+        {
+          "en": "Scarce",
+          "hi": "Scarce"
+        },
+        {
+          "en": "Plentiful",
+          "hi": "Plentiful"
+        },
+        {
+          "en": "Tiny",
+          "hi": "Tiny"
+        },
+        {
+          "en": "Costly",
+          "hi": "Costly"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Abundant\" means existing in large quantities, so \"plentiful\" is the closest synonym.",
+      "solution_hi": "\"Abundant\" का अर्थ है बड़ी मात्रा में उपलब्ध, इसलिए \"plentiful\" सबसे निकट समानार्थी है।",
+      "trick_en": "Replace the word in a sentence: \"plentiful rainfall\" sounds natural.",
+      "trick_hi": "शब्द को वाक्य में रखकर देखें: \"plentiful rainfall\" स्वाभाविक लगता है।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-02",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Antonyms",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Select the antonym of 'transparent'.",
+      "text_hi": "'transparent' का विलोम चुनें।",
+      "options": [
+        {
+          "en": "Clear",
+          "hi": "Clear"
+        },
+        {
+          "en": "Opaque",
+          "hi": "Opaque"
+        },
+        {
+          "en": "Fragile",
+          "hi": "Fragile"
+        },
+        {
+          "en": "Smooth",
+          "hi": "Smooth"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Transparent\" means allowing light through; \"opaque\" means not allowing light through.",
+      "solution_hi": "\"Transparent\" का अर्थ है प्रकाश जाने देना; \"opaque\" का अर्थ है प्रकाश न जाने देना।",
+      "trick_en": "Pair the word with its everyday opposite: clear window vs opaque wall.",
+      "trick_hi": "शब्द को रोज़ के विपरीत से जोड़ें: पारदर्शी खिड़की बनाम अपारदर्शी दीवार।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-03",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Spellings and misspelt words",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Pick the correctly spelt word meaning 'a place to stay'.",
+      "text_hi": "'ठहरने का स्थान' के अर्थ वाला सही वर्तनी वाला शब्द चुनें।",
+      "options": [
+        {
+          "en": "Accomodation",
+          "hi": "Accomodation"
+        },
+        {
+          "en": "Acommodation",
+          "hi": "Acommodation"
+        },
+        {
+          "en": "Accommodation",
+          "hi": "Accommodation"
+        },
+        {
+          "en": "Accommadation",
+          "hi": "Accommadation"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The correct spelling has double \"c\" and double \"m\": accommodation.",
+      "solution_hi": "सही वर्तनी में दोहरा \"c\" और दोहरा \"m\" है: accommodation।",
+      "trick_en": "Remember: a-cc-o-mm-odation — two c, two m.",
+      "trick_hi": "याद रखें: a-cc-o-mm-odation — दो c, दो m।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-04",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Idioms and phrases",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What does \"to let the cat out of the bag\" mean?",
+      "text_hi": "\"to let the cat out of the bag\" का क्या अर्थ है?",
+      "options": [
+        {
+          "en": "To reveal a secret",
+          "hi": "To reveal a secret"
+        },
+        {
+          "en": "To free an animal",
+          "hi": "To free an animal"
+        },
+        {
+          "en": "To start a quarrel",
+          "hi": "To start a quarrel"
+        },
+        {
+          "en": "To waste money",
+          "hi": "To waste money"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The idiom means to disclose a secret, usually by accident.",
+      "solution_hi": "यह मुहावरा किसी रहस्य को, प्रायः अनजाने में, प्रकट करने का अर्थ देता है।",
+      "trick_en": "Idioms are not literal; learn the fixed meaning.",
+      "trick_hi": "मुहावरे शब्दशः नहीं होते; निश्चित अर्थ याद करें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-05",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "One word substitution",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "One word for \"a person who speaks many languages\":",
+      "text_hi": "\"अनेक भाषाएँ बोलने वाला व्यक्ति\" के लिए एक शब्द:",
+      "options": [
+        {
+          "en": "Linguist",
+          "hi": "Linguist"
+        },
+        {
+          "en": "Polyglot",
+          "hi": "Polyglot"
+        },
+        {
+          "en": "Bilingual",
+          "hi": "Bilingual"
+        },
+        {
+          "en": "Orator",
+          "hi": "Orator"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "A polyglot speaks or uses several languages; a linguist studies language, and a bilingual person knows two.",
+      "solution_hi": "Polyglot कई भाषाएँ बोलता या उपयोग करता है; linguist भाषा का अध्ययन करता है और bilingual दो जानता है।",
+      "trick_en": "Count the languages: bi = two, poly = many.",
+      "trick_hi": "भाषाएँ गिनें: bi = दो, poly = अनेक।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-06",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "One word substitution",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "One word for \"a place where birds are kept\":",
+      "text_hi": "\"वह स्थान जहाँ पक्षी रखे जाते हैं\" के लिए एक शब्द:",
+      "options": [
+        {
+          "en": "Apiary",
+          "hi": "Apiary"
+        },
+        {
+          "en": "Aviary",
+          "hi": "Aviary"
+        },
+        {
+          "en": "Aquarium",
+          "hi": "Aquarium"
+        },
+        {
+          "en": "Kennel",
+          "hi": "Kennel"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "An aviary houses birds; an apiary houses bees; an aquarium houses fish; a kennel houses dogs.",
+      "solution_hi": "Aviary में पक्षी रखे जाते हैं; apiary में मधुमक्खियाँ; aquarium में मछलियाँ; kennel में कुत्ते।",
+      "trick_en": "Link aviary to \"avian\" (bird).",
+      "trick_hi": "Aviary को \"avian\" (पक्षी) से जोड़ें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-07",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Spot the error",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the part with the error: One of my friend (A) / is a doctor (B) / in this hospital (C) / No error (D).",
+      "text_hi": "त्रुटि वाला भाग चुनें: One of my friend (A) / is a doctor (B) / in this hospital (C) / No error (D)।",
+      "options": [
+        {
+          "en": "A",
+          "hi": "A"
+        },
+        {
+          "en": "B",
+          "hi": "B"
+        },
+        {
+          "en": "C",
+          "hi": "C"
+        },
+        {
+          "en": "D",
+          "hi": "D"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "\"One of\" is followed by a plural noun, so it should be \"one of my friends\".",
+      "solution_hi": "\"One of\" के बाद बहुवचन संज्ञा आती है, इसलिए \"one of my friends\" होना चाहिए।",
+      "trick_en": "After \"one of\", use a plural noun but a singular verb.",
+      "trick_hi": "\"One of\" के बाद बहुवचन संज्ञा, पर क्रिया एकवचन।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-08",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "She has been living here ___ 2018.",
+      "text_hi": "वह 2018 ___ यहाँ रह रही है।",
+      "options": [
+        {
+          "en": "for",
+          "hi": "for"
+        },
+        {
+          "en": "since",
+          "hi": "since"
+        },
+        {
+          "en": "from",
+          "hi": "from"
+        },
+        {
+          "en": "by",
+          "hi": "by"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Since\" is used with a point of time, and \"for\" with a duration. 2018 is a point of time.",
+      "solution_hi": "निश्चित समय-बिंदु के साथ \"since\" और अवधि के साथ \"for\" आता है। 2018 एक समय-बिंदु है।",
+      "trick_en": "Point of time → since; length of time → for.",
+      "trick_hi": "समय-बिंदु → since; अवधि → for।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-09",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "If I ___ rich, I would travel the world.",
+      "text_hi": "यदि मैं ___ होता, तो दुनिया घूमता।",
+      "options": [
+        {
+          "en": "am",
+          "hi": "am"
+        },
+        {
+          "en": "was",
+          "hi": "was"
+        },
+        {
+          "en": "were",
+          "hi": "were"
+        },
+        {
+          "en": "will be",
+          "hi": "will be"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "An unreal present condition takes the past subjunctive \"were\" in the if-clause.",
+      "solution_hi": "अवास्तविक वर्तमान शर्त में if-clause में भूतकालिक subjunctive \"were\" आता है।",
+      "trick_en": "\"If I were\" is the standard unreal form, even with I.",
+      "trick_hi": "\"If I were\" मानक अवास्तविक रूप है, \"I\" के साथ भी।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-10",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Active and passive voice",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Change to passive voice: The chef cooked the meal.",
+      "text_hi": "कर्मवाच्य में बदलें: The chef cooked the meal.",
+      "options": [
+        {
+          "en": "The meal was cooked by the chef.",
+          "hi": "The meal was cooked by the chef."
+        },
+        {
+          "en": "The meal is cooked by the chef.",
+          "hi": "The meal is cooked by the chef."
+        },
+        {
+          "en": "The meal cooked the chef.",
+          "hi": "The meal cooked the chef."
+        },
+        {
+          "en": "The chef was cooked by the meal.",
+          "hi": "The chef was cooked by the meal."
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Past simple active \"cooked\" becomes \"was cooked\"; the object \"the meal\" moves to subject position.",
+      "solution_hi": "भूतकाल सकर्मक \"cooked\" का \"was cooked\" होता है; कर्म \"the meal\" कर्ता के स्थान पर आता है।",
+      "trick_en": "Keep the original tense in the passive form.",
+      "trick_hi": "कर्मवाच्य में मूल काल बनाए रखें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-11",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Direct and indirect narration",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct indirect speech: He said, \"I am busy now.\"",
+      "text_hi": "सही अप्रत्यक्ष कथन चुनें: He said, \"I am busy now.\"",
+      "options": [
+        {
+          "en": "He said that he was busy then.",
+          "hi": "He said that he was busy then."
+        },
+        {
+          "en": "He said that he is busy now.",
+          "hi": "He said that he is busy now."
+        },
+        {
+          "en": "He says that he was busy then.",
+          "hi": "He says that he was busy then."
+        },
+        {
+          "en": "He said that I was busy then.",
+          "hi": "He said that I was busy then."
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Present \"am\" shifts to past \"was\", and \"now\" shifts to \"then\".",
+      "solution_hi": "वर्तमान \"am\" का भूतकाल \"was\" और \"now\" का \"then\" हो जाता है।",
+      "trick_en": "Shift tense and time word together.",
+      "trick_hi": "काल और समय-शब्द दोनों बदलें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-12",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentence parts",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Rearrange the parts: P. the children Q. happily R. played S. in the park",
+      "text_hi": "भागों को पुनर्व्यवस्थित करें: P. the children Q. happily R. played S. in the park",
+      "options": [
+        {
+          "en": "P Q R S",
+          "hi": "P Q R S"
+        },
+        {
+          "en": "Q P R S",
+          "hi": "Q P R S"
+        },
+        {
+          "en": "P R Q S",
+          "hi": "P R Q S"
+        },
+        {
+          "en": "P Q S R",
+          "hi": "P Q S R"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Subject \"the children\", adverb \"happily\", verb \"played\", place \"in the park\" gives P Q R S.",
+      "solution_hi": "कर्ता \"the children\", क्रिया विशेषण \"happily\", क्रिया \"played\", स्थान \"in the park\" से P Q R S बनता है।",
+      "trick_en": "Subject → adverb → verb → place.",
+      "trick_hi": "कर्ता → क्रिया विशेषण → क्रिया → स्थान।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-13",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentences in a passage",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Arrange in the correct order: Q. The power went out. S. The room went dark. P. Ravi lit a candle. R. The family gathered around it.",
+      "text_hi": "सही क्रम में व्यवस्थित करें: Q. The power went out. S. The room went dark. P. Ravi lit a candle. R. The family gathered around it.",
+      "options": [
+        {
+          "en": "Q S P R",
+          "hi": "Q S P R"
+        },
+        {
+          "en": "S Q P R",
+          "hi": "S Q P R"
+        },
+        {
+          "en": "Q P S R",
+          "hi": "Q P S R"
+        },
+        {
+          "en": "Q S R P",
+          "hi": "Q S R P"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The power cut (Q) causes darkness (S), then a candle is lit (P), and the family gathers (R): Q S P R.",
+      "solution_hi": "बिजली जाने (Q) से अंधेरा (S) होता है, फिर मोमबत्ती जलती है (P) और परिवार इकट्ठा होता (R): Q S P R।",
+      "trick_en": "Follow cause, effect, action, result.",
+      "trick_hi": "कारण, प्रभाव, क्रिया, परिणाम का क्रम देखें।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-14",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Comprehension passage",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Read the passage and answer: Mangroves are trees that grow along tropical coastlines where fresh water meets the sea. Their tangled roots slow down waves, trap mud and reduce coastal erosion. They also shelter fish and crabs, supporting the livelihoods of fishing communities. Despite these benefits, mangroves are often cleared for shrimp farms and construction, and a large share of the world's mangrove cover has been lost in recent decades. What is the main idea of the passage?",
+      "text_hi": "गद्यांश पढ़कर उत्तर दें: मैंग्रोव ऐसे वृक्ष हैं जो उष्णकटिबंधीय समुद्री तटों पर उगते हैं जहाँ मीठा पानी समुद्र से मिलता है। उनकी उलझी जड़ें लहरों को धीमा करती हैं, कीचड़ रोकती हैं और तटीय कटाव कम करती हैं। वे मछलियों और केकड़ों को आश्रय भी देती हैं, जिससे मछुआरा समुदायों की आजीविका को सहारा मिलता है। इन लाभों के बावजूद, मैंग्रोव को अक्सर झींगा फार्मों और निर्माण के लिए काटा जाता है, और हाल के दशकों में दुनिया का बड़ा हिस्सा मैंग्रोव आवरण खो चुका है। गद्यांश का मुख्य विचार क्या है?",
+      "options": [
+        {
+          "en": "Mangroves benefit coasts and communities, but they are being lost.",
+          "hi": "Mangroves benefit coasts and communities, but they are being lost."
+        },
+        {
+          "en": "Shrimp farming is the only cause of coastal erosion.",
+          "hi": "Shrimp farming is the only cause of coastal erosion."
+        },
+        {
+          "en": "Fish and crabs live only in mangrove forests.",
+          "hi": "Fish and crabs live only in mangrove forests."
+        },
+        {
+          "en": "Mangroves grow best in cold climates.",
+          "hi": "Mangroves grow best in cold climates."
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The passage describes coastal benefits of mangroves and then their loss, so option 1 captures both halves.",
+      "solution_hi": "गद्यांश मैंग्रोव के तटीय लाभ और फिर उनके नुकसान बताता है, इसलिए विकल्प 1 दोनों पक्षों को समेटता है।",
+      "trick_en": "A main-idea answer must cover the whole passage, not one detail.",
+      "trick_hi": "मुख्य विचार उत्तर पूरे गद्यांश को समेटे, एक विवरण को नहीं।",
+      "ideal_time_seconds": 60,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme — Montreal Protocol and climate pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-e-15",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Comprehension passage",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Read the passage and answer: Mangroves are trees that grow along tropical coastlines where fresh water meets the sea. Their tangled roots slow down waves, trap mud and reduce coastal erosion. They also shelter fish and crabs, supporting the livelihoods of fishing communities. Despite these benefits, mangroves are often cleared for shrimp farms and construction, and a large share of the world's mangrove cover has been lost in recent decades. According to the passage, which of these is NOT a benefit of mangroves?",
+      "text_hi": "गद्यांश पढ़कर उत्तर दें: मैंग्रोव ऐसे वृक्ष हैं जो उष्णकटिबंधीय समुद्री तटों पर उगते हैं जहाँ मीठा पानी समुद्र से मिलता है। उनकी उलझी जड़ें लहरों को धीमा करती हैं, कीचड़ रोकती हैं और तटीय कटाव कम करती हैं। वे मछलियों और केकड़ों को आश्रय भी देती हैं, जिससे मछुआरा समुदायों की आजीविका को सहारा मिलता है। इन लाभों के बावजूद, मैंग्रोव को अक्सर झींगा फार्मों और निर्माण के लिए काटा जाता है, और हाल के दशकों में दुनिया का बड़ा हिस्सा मैंग्रोव आवरण खो चुका है। गद्यांश के अनुसार, इनमें से कौन मैंग्रोव का लाभ नहीं है?",
+      "options": [
+        {
+          "en": "Slowing down waves",
+          "hi": "Slowing down waves"
+        },
+        {
+          "en": "Reducing coastal erosion",
+          "hi": "Reducing coastal erosion"
+        },
+        {
+          "en": "Sheltering fish and crabs",
+          "hi": "Sheltering fish and crabs"
+        },
+        {
+          "en": "Increasing shrimp-farm profits",
+          "hi": "Increasing shrimp-farm profits"
+        }
+      ],
+      "correct": 3,
+      "solution_en": "Shrimp farms are mentioned as a cause of mangrove clearance, not as a benefit of mangroves.",
+      "solution_hi": "झींगा फार्म का उल्लेख मैंग्रोव कटाई के कारण के रूप में है, लाभ के रूप में नहीं।",
+      "trick_en": "For NOT questions, eliminate every option the passage supports.",
+      "trick_hi": "NOT प्रश्न में जिन विकल्पों को गद्यांश समर्थन देता है, उन्हें हटाएँ।",
+      "ideal_time_seconds": 50,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme — Montreal Protocol and climate pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-01",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which stadium hosted the final of the ICC Men's T20 World Cup 2026?",
+      "text_hi": "ICC पुरुष T20 विश्व कप 2026 का फाइनल किस स्टेडियम में खेला गया?",
+      "options": [
+        {
+          "en": "Eden Gardens, Kolkata",
+          "hi": "Eden Gardens, Kolkata"
+        },
+        {
+          "en": "Wankhede Stadium, Mumbai",
+          "hi": "Wankhede Stadium, Mumbai"
+        },
+        {
+          "en": "Narendra Modi Stadium, Ahmedabad",
+          "hi": "Narendra Modi Stadium, Ahmedabad"
+        },
+        {
+          "en": "M. Chinnaswamy Stadium, Bengaluru",
+          "hi": "M. Chinnaswamy Stadium, Bengaluru"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "India and Sri Lanka co-hosted the tournament from 7 February to 8 March 2026; the final was played at the Narendra Modi Stadium in Ahmedabad.",
+      "solution_hi": "भारत और श्रीलंका ने 7 फरवरी से 8 मार्च 2026 तक टूर्नामेंट की मेजबानी की; फाइनल अहमदाबाद के नरेंद्र मोदी स्टेडियम में खेला गया।",
+      "trick_en": "Do not confuse the final venue with the other knockout venues.",
+      "trick_hi": "फाइनल स्थल को अन्य नॉकआउट स्थलों से न मिलाएँ।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.icc-cricket.com/tournaments/t20cricketworldcup",
+        "citation": "ICC Men's T20 World Cup 2026 tournament page, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-02",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which country hosted COP31, the 2026 UN climate conference?",
+      "text_hi": "COP31, 2026 का संयुक्त राष्ट्र जलवायु सम्मेलन, किस देश में आयोजित हुआ?",
+      "options": [
+        {
+          "en": "Australia",
+          "hi": "Australia"
+        },
+        {
+          "en": "Türkiye",
+          "hi": "Türkiye"
+        },
+        {
+          "en": "Brazil",
+          "hi": "Brazil"
+        },
+        {
+          "en": "Egypt",
+          "hi": "Egypt"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "COP31 is being held in Antalya, Türkiye, from 9 to 20 November 2026, with Türkiye holding the presidency and Australia leading the negotiations.",
+      "solution_hi": "COP31 9 से 20 नवंबर 2026 तक तुर्किये के अंताल्या में हो रहा है; अध्यक्षता तुर्किये के पास है और वार्ता का नेतृत्व ऑस्ट्रेलिया कर रहा है।",
+      "trick_en": "Separate the host country from the negotiation lead.",
+      "trick_hi": "मेजबान देश और वार्ता नेता को अलग रखें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme — Montreal Protocol and climate pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-03",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Where was the 18th BRICS Summit held on 12–13 September 2026?",
+      "text_hi": "12–13 सितंबर 2026 को 18वाँ BRICS शिखर सम्मेलन कहाँ हुआ?",
+      "options": [
+        {
+          "en": "New Delhi, India",
+          "hi": "New Delhi, India"
+        },
+        {
+          "en": "Johannesburg, South Africa",
+          "hi": "Johannesburg, South Africa"
+        },
+        {
+          "en": "Moscow, Russia",
+          "hi": "Moscow, Russia"
+        },
+        {
+          "en": "Rio de Janeiro, Brazil",
+          "hi": "Rio de Janeiro, Brazil"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "India chaired BRICS in 2026 and hosted the 18th Summit at Bharat Mandapam, New Delhi, on 12–13 September 2026.",
+      "solution_hi": "भारत 2026 में BRICS की अध्यक्षता कर रहा था और 18वाँ शिखर सम्मेलन 12–13 सितंबर 2026 को भारत मंडपम, नई दिल्ली में आयोजित किया।",
+      "trick_en": "2026 chairship and summit host were both India.",
+      "trick_hi": "2026 में अध्यक्षता और शिखर सम्मेलन की मेजबानी दोनों भारत के पास थीं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.brics2026.gov.in/",
+        "citation": "BRICS India 2026 official chairship site, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-04",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is the largest Indian state by area?",
+      "text_hi": "क्षेत्रफल की दृष्टि से भारत का सबसे बड़ा राज्य कौन-सा है?",
+      "options": [
+        {
+          "en": "Madhya Pradesh",
+          "hi": "मध्य प्रदेश"
+        },
+        {
+          "en": "Rajasthan",
+          "hi": "राजस्थान"
+        },
+        {
+          "en": "Maharashtra",
+          "hi": "महाराष्ट्र"
+        },
+        {
+          "en": "Uttar Pradesh",
+          "hi": "उत्तर प्रदेश"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Rajasthan is India's largest state by area (about 3.42 lakh sq km), followed by Madhya Pradesh and Maharashtra.",
+      "solution_hi": "क्षेत्रफल की दृष्टि से राजस्थान भारत का सबसे बड़ा राज्य है (लगभग 3.42 लाख वर्ग किमी), उसके बाद मध्य प्रदेश और महाराष्ट्र।",
+      "trick_en": "Rajasthan is largest by area; Uttar Pradesh is largest by population.",
+      "trick_hi": "क्षेत्रफल में राजस्थान सबसे बड़ा; जनसंख्या में उत्तर प्रदेश।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-05",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Godavari river rises near which place?",
+      "text_hi": "गोदावरी नदी किस स्थान के निकट से निकलती है?",
+      "options": [
+        {
+          "en": "Gangotri",
+          "hi": "Gangotri"
+        },
+        {
+          "en": "Trimbakeshwar",
+          "hi": "Trimbakeshwar"
+        },
+        {
+          "en": "Amarkantak",
+          "hi": "Amarkantak"
+        },
+        {
+          "en": "Mahabaleshwar",
+          "hi": "Mahabaleshwar"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The Godavari rises at Trimbakeshwar in the Nashik district of Maharashtra and flows east into the Bay of Bengal.",
+      "solution_hi": "गोदावरी महाराष्ट्र के नासिक जिले में त्रिंबकेश्वर से निकलती है और पूर्व की ओर बंगाल की खाड़ी में गिरती है।",
+      "trick_en": "Amarkantak is the Narmada source, not the Godavari.",
+      "trick_hi": "अमरकंटक नर्मदा का उद्गम है, गोदावरी का नहीं।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-06",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "General policy",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the maximum strength of the Rajya Sabha provided by the Constitution?",
+      "text_hi": "संविधान द्वारा राज्यसभा की अधिकतम सदस्य संख्या कितनी है?",
+      "options": [
+        {
+          "en": "238",
+          "hi": "238"
+        },
+        {
+          "en": "245",
+          "hi": "245"
+        },
+        {
+          "en": "250",
+          "hi": "250"
+        },
+        {
+          "en": "252",
+          "hi": "252"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Article 80 provides a maximum of 250 members: up to 238 representatives of states and union territories and 12 nominated members.",
+      "solution_hi": "अनुच्छेद 80 में अधिकतम 250 सदस्य हैं: राज्यों और केंद्रशासित प्रदेशों के 238 प्रतिनिधि और 12 मनोनीत सदस्य।",
+      "trick_en": "250 = 238 elected + 12 nominated.",
+      "trick_hi": "250 = 238 निर्वाचित + 12 मनोनीत।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-07",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which Indian state shares the longest border with Bangladesh?",
+      "text_hi": "बांग्लादेश के साथ सबसे लंबी सीमा किस भारतीय राज्य की है?",
+      "options": [
+        {
+          "en": "Assam",
+          "hi": "Assam"
+        },
+        {
+          "en": "West Bengal",
+          "hi": "West Bengal"
+        },
+        {
+          "en": "Tripura",
+          "hi": "Tripura"
+        },
+        {
+          "en": "Meghalaya",
+          "hi": "Meghalaya"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "West Bengal shares about 2,217 km of the roughly 4,096 km India–Bangladesh border, the longest of the five bordering states.",
+      "solution_hi": "पश्चिम बंगाल की भारत-बांग्लादेश सीमा लगभग 2,217 km है, जो पाँच सीमावर्ती राज्यों में सबसे लंबी है।",
+      "trick_en": "West Bengal alone accounts for more than half the border.",
+      "trick_hi": "पश्चिम बंगाल अकेला आधे से अधिक सीमा पर है।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-08",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Nathu La pass connects Sikkim with which country?",
+      "text_hi": "नाथू ला दर्रा सिक्किम को किस देश से जोड़ता है?",
+      "options": [
+        {
+          "en": "Nepal",
+          "hi": "Nepal"
+        },
+        {
+          "en": "Bhutan",
+          "hi": "Bhutan"
+        },
+        {
+          "en": "China",
+          "hi": "China"
+        },
+        {
+          "en": "Myanmar",
+          "hi": "Myanmar"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Nathu La is a Himalayan pass on the Sikkim–Tibet (China) border and an important trade route.",
+      "solution_hi": "नाथू ला सिक्किम–तिब्बत (चीन) सीमा पर हिमालयी दर्रा है और महत्वपूर्ण व्यापार मार्ग है।",
+      "trick_en": "Sikkim borders only Nepal, Bhutan and China; Nathu La goes to China.",
+      "trick_hi": "सिक्किम केवल नेपाल, भूटान और चीन से जुड़ा है; नाथू ला चीन जाता है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-09",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is India's largest freshwater lake?",
+      "text_hi": "भारत की सबसे बड़ी मीठे पानी की झील कौन-सी है?",
+      "options": [
+        {
+          "en": "Chilika Lake",
+          "hi": "Chilika Lake"
+        },
+        {
+          "en": "Wular Lake",
+          "hi": "Wular Lake"
+        },
+        {
+          "en": "Sambhar Lake",
+          "hi": "Sambhar Lake"
+        },
+        {
+          "en": "Loktak Lake",
+          "hi": "Loktak Lake"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Wular Lake in Jammu and Kashmir is India's largest freshwater lake; Chilika and Sambhar are saline or brackish.",
+      "solution_hi": "जम्मू-कश्मीर की वुलर झील भारत की सबसे बड़ी मीठे पानी की झील है; चिलिका और सांभर खारे हैं।",
+      "trick_en": "Chilika is brackish and Sambhar is saline; size alone does not make them freshwater.",
+      "trick_hi": "चिलिका खारी और सांभर लवणीय है; केवल आकार से मीठा पानी तय नहीं होता।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-10",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Tropic of Cancer does NOT pass through which of these states?",
+      "text_hi": "कर्क रेखा इनमें से किस राज्य से होकर नहीं गुजरती?",
+      "options": [
+        {
+          "en": "Gujarat",
+          "hi": "गुजरात"
+        },
+        {
+          "en": "Rajasthan",
+          "hi": "राजस्थान"
+        },
+        {
+          "en": "Kerala",
+          "hi": "केरल"
+        },
+        {
+          "en": "Mizoram",
+          "hi": "मिज़ोरम"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The Tropic of Cancer crosses Gujarat, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand, West Bengal, Tripura and Mizoram. Kerala lies south of it.",
+      "solution_hi": "कर्क रेखा गुजरात, राजस्थान, मध्य प्रदेश, छत्तीसगढ़, झारखंड, पश्चिम बंगाल, त्रिपुरा और मिज़ोरम से गुजरती है। केरल इसके दक्षिण में है।",
+      "trick_en": "Kerala is well south of the Tropic of Cancer.",
+      "trick_hi": "केरल कर्क रेखा से काफी दक्षिण में है।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-11",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Why does ice float on water?",
+      "text_hi": "बर्फ पानी पर क्यों तैरती है?",
+      "options": [
+        {
+          "en": "Ice is heavier than water",
+          "hi": "Ice is heavier than water"
+        },
+        {
+          "en": "Ice is less dense than water",
+          "hi": "Ice is less dense than water"
+        },
+        {
+          "en": "Ice has no mass",
+          "hi": "Ice has no mass"
+        },
+        {
+          "en": "Water pushes ice upwards only in winter",
+          "hi": "Water pushes ice upwards only in winter"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Water expands when it freezes, so ice is less dense than liquid water and floats with about 90% of its volume submerged.",
+      "solution_hi": "पानी जमने पर फैलता है, इसलिए बर्फ द्रव जल से कम घनी है और लगभग 90% आयतन डूबा रहकर तैरती है।",
+      "trick_en": "Floating depends on density, not weight alone.",
+      "trick_hi": "तैरना घनत्व पर निर्भर है, केवल भार पर नहीं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.nios.ac.in/online-course-material.aspx",
+        "citation": "NIOS senior-secondary science and geography course material, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-12",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the SI unit of power?",
+      "text_hi": "शक्ति (power) की SI इकाई क्या है?",
+      "options": [
+        {
+          "en": "Joule",
+          "hi": "Joule"
+        },
+        {
+          "en": "Newton",
+          "hi": "Newton"
+        },
+        {
+          "en": "Watt",
+          "hi": "Watt"
+        },
+        {
+          "en": "Pascal",
+          "hi": "Pascal"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Power is the rate of doing work, and one watt equals one joule per second.",
+      "solution_hi": "शक्ति कार्य करने की दर है, और एक वाट एक जूल प्रति सेकंड के बराबर है।",
+      "trick_en": "Watt = joule/second; joule is energy, not power.",
+      "trick_hi": "वाट = जूल/सेकंड; जूल ऊर्जा है, शक्ति नहीं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.nios.ac.in/online-course-material.aspx",
+        "citation": "NIOS senior-secondary science and geography course material, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-13",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which vitamin does the human skin produce when exposed to sunlight?",
+      "text_hi": "सूर्य के प्रकाश के संपर्क में आने पर मानव त्वचा कौन-सा विटामिन बनाती है?",
+      "options": [
+        {
+          "en": "Vitamin A",
+          "hi": "Vitamin A"
+        },
+        {
+          "en": "Vitamin B12",
+          "hi": "Vitamin B12"
+        },
+        {
+          "en": "Vitamin C",
+          "hi": "Vitamin C"
+        },
+        {
+          "en": "Vitamin D",
+          "hi": "Vitamin D"
+        }
+      ],
+      "correct": 3,
+      "solution_en": "Ultraviolet-B light helps the skin synthesise vitamin D, which supports calcium absorption and bone health.",
+      "solution_hi": "पराबैंगनी-B प्रकाश त्वचा में विटामिन D संश्लेषण में सहायता करता है, जो कैल्शियम अवशोषण और हड्डियों के लिए आवश्यक है।",
+      "trick_en": "Sunlight, bones and calcium point to vitamin D.",
+      "trick_hi": "धूप, हड्डियाँ और कैल्शियम विटामिन D की ओर संकेत करते हैं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.who.int/",
+        "citation": "World Health Organization fact sheets, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-14",
+      "subject": "General_Awareness",
+      "topic": "Environment and Society",
+      "sub_topic": "General awareness of the environment and its application to society",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Montreal Protocol is an international agreement to protect which part of the environment?",
+      "text_hi": "मॉन्ट्रियल प्रोटोकॉल पर्यावरण के किस भाग की रक्षा के लिए अंतरराष्ट्रीय समझौता है?",
+      "options": [
+        {
+          "en": "Ozone layer",
+          "hi": "Ozone layer"
+        },
+        {
+          "en": "Wetlands",
+          "hi": "Wetlands"
+        },
+        {
+          "en": "Rainforests",
+          "hi": "Rainforests"
+        },
+        {
+          "en": "Ocean currents",
+          "hi": "Ocean currents"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Montreal Protocol phases out ozone-depleting substances such as CFCs and has been ratified universally.",
+      "solution_hi": "मॉन्ट्रियल प्रोटोकॉल CFC जैसे ओज़ोन-क्षयकारी पदार्थों को चरणबद्ध रूप से समाप्त करता है और सार्वभौमिक रूप से अनुमोदित है।",
+      "trick_en": "Montreal = ozone; Kyoto = greenhouse gases; Ramsar = wetlands.",
+      "trick_hi": "मॉन्ट्रियल = ओज़ोन; क्योटो = ग्रीनहाउस गैसें; रामसर = आर्द्रभूमि।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme — Montreal Protocol and climate pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "drill-g-15",
+      "subject": "General_Awareness",
+      "topic": "Environment and Society",
+      "sub_topic": "General awareness of the environment and its application to society",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which gas contributes the most to the human-caused greenhouse effect?",
+      "text_hi": "मानवजनित ग्रीनहाउस प्रभाव में सबसे अधिक योगदान किस गैस का है?",
+      "options": [
+        {
+          "en": "Oxygen",
+          "hi": "Oxygen"
+        },
+        {
+          "en": "Nitrogen",
+          "hi": "Nitrogen"
+        },
+        {
+          "en": "Carbon dioxide",
+          "hi": "Carbon dioxide"
+        },
+        {
+          "en": "Argon",
+          "hi": "Argon"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Carbon dioxide is the largest single contributor to anthropogenic warming, mainly from burning fossil fuels and land-use change.",
+      "solution_hi": "कार्बन डाइऑक्साइड मानवजनित ऊष्मीकरण में सबसे बड़ा एकल योगदानकर्ता है, मुख्यतः जीवाश्म ईंधन जलाने और भूमि उपयोग परिवर्तन से।",
+      "trick_en": "Oxygen and nitrogen do not trap heat like CO2 does.",
+      "trick_hi": "ऑक्सीजन और नाइट्रोजन CO2 की तरह ऊष्मा नहीं रोकते।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://climate.nasa.gov/",
+        "citation": "NASA Global Climate Change — greenhouse effect, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ]
+}

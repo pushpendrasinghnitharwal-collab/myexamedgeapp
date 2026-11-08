@@ -1,0 +1,981 @@
+{
+  "pack_key": "ssc-cgl-2026-tier1-practice-v4",
+  "sets": [],
+  "questions": [
+    {
+      "qid": "ga4-01",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Who was awarded the Nobel Peace Prize 2026?",
+      "text_hi": "2026 का नोबेल शांति पुरस्कार किसे दिया गया?",
+      "options": [
+        {
+          "en": "Navanethem \"Navi\" Pillay",
+          "hi": "Navanethem \"Navi\" Pillay"
+        },
+        {
+          "en": "Maria Corina Machado",
+          "hi": "Maria Corina Machado"
+        },
+        {
+          "en": "António Guterres",
+          "hi": "António Guterres"
+        },
+        {
+          "en": "Malala Yousafzai",
+          "hi": "Malala Yousafzai"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Navi Pillay, the South African jurist and former UN High Commissioner for Human Rights, was awarded the 2026 Nobel Peace Prize, announced in Oslo on 9 October 2026. Machado won the 2025 prize.",
+      "solution_hi": "दक्षिण अफ्रीकी न्यायविद् और संयुक्त राष्ट्र मानवाधिकार उच्चायुक्त रहीं नवनेथम \"नवि\" पिल्लै को 2026 का नोबेल शांति पुरस्कार दिया गया, जिसकी घोषणा 9 अक्टूबर 2026 को ओस्लो में हुई। 2025 का पुरस्कार माचादो को मिला था।",
+      "trick_en": "Do not carry last year's laureate forward.",
+      "trick_hi": "पिछले वर्ष के विजेता को इस वर्ष न मानें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://news.un.org/",
+        "citation": "UN News report, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-02",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which translator shared the International Booker Prize 2026 for \"Taiwan Travelogue\"?",
+      "text_hi": "\"Taiwan Travelogue\" के लिए 2026 का अंतरराष्ट्रीय बुकर पुरस्कार किस अनुवादक के साथ साझा किया गया?",
+      "options": [
+        {
+          "en": "Lin King",
+          "hi": "लिन किंग"
+        },
+        {
+          "en": "Jennifer Croft",
+          "hi": "जेनिफर क्रॉफ्ट"
+        },
+        {
+          "en": "Deborah Smith",
+          "hi": "डेबोरा स्मिथ"
+        },
+        {
+          "en": "Antonia Lloyd-Jones",
+          "hi": "एंटोनिया लॉयड-जोन्स"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "\"Taiwan Travelogue\" by Yáng Shuāng-zǐ, translated by Lin King, won the 2026 International Booker Prize, announced on 19 May 2026.",
+      "solution_hi": "यांग शुआंग-ज़ी की \"Taiwan Travelogue\" का अनुवाद लिन किंग ने किया; इसे 19 मई 2026 को 2026 का अंतरराष्ट्रीय बुकर पुरस्कार मिला।",
+      "trick_en": "The International Booker is awarded to the author and translator together.",
+      "trick_hi": "अंतरराष्ट्रीय बुकर लेखक और अनुवादक दोनों को मिलता है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://thebookerprizes.com/the-booker-library/prize-years/international/2026",
+        "citation": "International Booker Prize 2026 page, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-03",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which city will host the G20 Leaders' Summit in December 2026?",
+      "text_hi": "दिसंबर 2026 में G20 नेताओं का शिखर सम्मेलन किस शहर में होगा?",
+      "options": [
+        {
+          "en": "Miami",
+          "hi": "Miami"
+        },
+        {
+          "en": "Rio de Janeiro",
+          "hi": "Rio de Janeiro"
+        },
+        {
+          "en": "Johannesburg",
+          "hi": "Johannesburg"
+        },
+        {
+          "en": "Rome",
+          "hi": "Rome"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The United States holds the 2026 G20 presidency and the Leaders' Summit is scheduled for 14–15 December 2026 at Trump National Doral, Miami.",
+      "solution_hi": "2026 की G20 अध्यक्षता संयुक्त राज्य अमेरिका के पास है और नेताओं का शिखर सम्मेलन 14–15 दिसंबर 2026 को ट्रम्प नेशनल डोरल, मियामी में निर्धारित है।",
+      "trick_en": "Match the presidency year to the host city.",
+      "trick_hi": "अध्यक्षता वर्ष को मेजबान शहर से मिलाएँ।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.g20.org/",
+        "citation": "G20 official site, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-04",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which Japanese city hosted the 20th Asian Games in 2026?",
+      "text_hi": "2026 में 20वें एशियाई खेल किस जापानी शहर में हुए?",
+      "options": [
+        {
+          "en": "Tokyo",
+          "hi": "Tokyo"
+        },
+        {
+          "en": "Aichi-Nagoya",
+          "hi": "Aichi-Nagoya"
+        },
+        {
+          "en": "Osaka",
+          "hi": "Osaka"
+        },
+        {
+          "en": "Hiroshima",
+          "hi": "Hiroshima"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The 20th Asian Games were held in Aichi-Nagoya, Japan, from 19 September to 4 October 2026.",
+      "solution_hi": "20वें एशियाई खेल 19 सितंबर से 4 अक्टूबर 2026 तक जापान के आइची-नागोया में हुए।",
+      "trick_en": "Aichi-Nagoya, not Tokyo, hosted 2026.",
+      "trick_hi": "2026 की मेजबानी आइची-नागोया ने की, टोक्यो ने नहीं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.olympics.com/en/news/asian-games-2026-sports-schedule-la28-watch-live",
+        "citation": "Olympic Council of Asia / Olympics.com Asian Games 2026 page, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-05",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "On which date was the FIFA World Cup 2026 final played?",
+      "text_hi": "FIFA विश्व कप 2026 का फाइनल किस तारीख को खेला गया?",
+      "options": [
+        {
+          "en": "11 June 2026",
+          "hi": "11 June 2026"
+        },
+        {
+          "en": "14 July 2026",
+          "hi": "14 July 2026"
+        },
+        {
+          "en": "19 July 2026",
+          "hi": "19 July 2026"
+        },
+        {
+          "en": "8 March 2026",
+          "hi": "8 March 2026"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The final was played on Sunday, 19 July 2026, at MetLife Stadium, East Rutherford, New Jersey.",
+      "solution_hi": "फाइनल रविवार, 19 जुलाई 2026 को मेटलाइफ स्टेडियम, ईस्ट रदरफोर्ड, न्यू जर्सी में खेला गया।",
+      "trick_en": "The opening match was 11 June; the final was 19 July.",
+      "trick_hi": "उद्घाटन मैच 11 जून और फाइनल 19 जुलाई को था।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
+        "citation": "FIFA World Cup 2026 official tournament page, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-06",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "COP31 is scheduled to run from 9 to 20 November 2026. In which country is it being held?",
+      "text_hi": "COP31 9 से 20 नवंबर 2026 तक निर्धारित है। यह किस देश में हो रहा है?",
+      "options": [
+        {
+          "en": "Australia",
+          "hi": "Australia"
+        },
+        {
+          "en": "Türkiye",
+          "hi": "Türkiye"
+        },
+        {
+          "en": "United Arab Emirates",
+          "hi": "United Arab Emirates"
+        },
+        {
+          "en": "Brazil",
+          "hi": "Brazil"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "COP31 is being held at the Antalya Expo Center in Türkiye, with Türkiye holding the presidency and Australia leading the negotiations.",
+      "solution_hi": "COP31 तुर्किये के अंताल्या एक्सपो सेंटर में हो रहा है; अध्यक्षता तुर्किये के पास है और वार्ता का नेतृत्व ऑस्ट्रेलिया कर रहा है।",
+      "trick_en": "Australia leads negotiations but does not host COP31.",
+      "trick_hi": "ऑस्ट्रेलिया वार्ता का नेतृत्व करता है, मेजबान नहीं है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://unfccc.int/cop31",
+        "citation": "UNFCCC COP31 page, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-07",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which state is known as the 'Land of the Rising Sun' in India?",
+      "text_hi": "भारत में किस राज्य को \"उदयीमान सूर्य का देश\" कहा जाता है?",
+      "options": [
+        {
+          "en": "Arunachal Pradesh",
+          "hi": "अरुणाचल प्रदेश"
+        },
+        {
+          "en": "Nagaland",
+          "hi": "नागालैंड"
+        },
+        {
+          "en": "Mizoram",
+          "hi": "मिज़ोरम"
+        },
+        {
+          "en": "Sikkim",
+          "hi": "सिक्किम"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Arunachal Pradesh is called the Land of the Rising Sun because it receives India's first sunrise.",
+      "solution_hi": "अरुणाचल प्रदेश को उदयीमान सूर्य का देश कहा जाता है क्योंकि वहाँ भारत की पहली सूर्योदय होती है।",
+      "trick_en": "India's easternmost state sees the first sunrise.",
+      "trick_hi": "भारत का सबसे पूर्वी राज्य पहला सूर्योदय देखता है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-08",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which river is known as the \"Dakshin Ganga\"?",
+      "text_hi": "कौन-सी नदी \"दक्षिण गंगा\" कहलाती है?",
+      "options": [
+        {
+          "en": "Krishna",
+          "hi": "Krishna"
+        },
+        {
+          "en": "Godavari",
+          "hi": "Godavari"
+        },
+        {
+          "en": "Kaveri",
+          "hi": "Kaveri"
+        },
+        {
+          "en": "Narmada",
+          "hi": "Narmada"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The Godavari is the longest river of peninsular India and is called the Dakshin Ganga.",
+      "solution_hi": "गोदावरी प्रायद्वीपीय भारत की सबसे लंबी नदी है और दक्षिण गंगा कहलाती है।",
+      "trick_en": "Peninsular India's longest river = Godavari.",
+      "trick_hi": "प्रायद्वीपीय भारत की सबसे लंबी नदी = गोदावरी।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-09",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Economic scene",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which Indian state is the largest producer of tea?",
+      "text_hi": "भारत में चाय का सबसे बड़ा उत्पादक राज्य कौन-सा है?",
+      "options": [
+        {
+          "en": "West Bengal",
+          "hi": "West Bengal"
+        },
+        {
+          "en": "Assam",
+          "hi": "Assam"
+        },
+        {
+          "en": "Tamil Nadu",
+          "hi": "Tamil Nadu"
+        },
+        {
+          "en": "Kerala",
+          "hi": "Kerala"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Assam produces more than half of India's tea, followed by West Bengal.",
+      "solution_hi": "असम भारत की आधे से अधिक चाय पैदा करता है, उसके बाद पश्चिम बंगाल।",
+      "trick_en": "Assam's Brahmaputra valley is the tea belt.",
+      "trick_hi": "असम की ब्रह्मपुत्र घाटी चाय क्षेत्र है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-10",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is India's largest brackish-water lagoon?",
+      "text_hi": "भारत का सबसे बड़ा खारे पानी का लैगून कौन-सा है?",
+      "options": [
+        {
+          "en": "Pulicat Lake",
+          "hi": "Pulicat Lake"
+        },
+        {
+          "en": "Chilika Lake",
+          "hi": "Chilika Lake"
+        },
+        {
+          "en": "Vembanad Lake",
+          "hi": "Vembanad Lake"
+        },
+        {
+          "en": "Sambhar Lake",
+          "hi": "Sambhar Lake"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Chilika Lake in Odisha is India's largest brackish-water lagoon and a major wintering ground for migratory birds.",
+      "solution_hi": "ओडिशा की चिलिका झील भारत का सबसे बड़ा खारे पानी का लैगून है और प्रवासी पक्षियों का प्रमुख शीतकालीन ठिकाना है।",
+      "trick_en": "Chilika is a lagoon, not a freshwater lake.",
+      "trick_hi": "चिलिका लैगून है, मीठे पानी की झील नहीं।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-11",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "General policy",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which Article of the Constitution deals with Fundamental Duties?",
+      "text_hi": "संविधान का कौन-सा अनुच्छेद मूल कर्तव्यों से संबंधित है?",
+      "options": [
+        {
+          "en": "Article 32",
+          "hi": "Article 32"
+        },
+        {
+          "en": "Article 51A",
+          "hi": "Article 51A"
+        },
+        {
+          "en": "Article 44",
+          "hi": "Article 44"
+        },
+        {
+          "en": "Article 21A",
+          "hi": "Article 21A"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Fundamental Duties were added by the 42nd Amendment in 1976 as Article 51A in Part IVA.",
+      "solution_hi": "मूल कर्तव्य 1976 के 42वें संशोधन द्वारा भाग IVA में अनुच्छेद 51A के रूप में जोड़े गए।",
+      "trick_en": "Fundamental Rights start at Article 12; Duties are 51A.",
+      "trick_hi": "मूल अधिकार अनुच्छेद 12 से; कर्तव्य 51A हैं।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-12",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "General policy",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "How many languages are listed in the Eighth Schedule of the Constitution?",
+      "text_hi": "संविधान की आठवीं अनुसूची में कितनी भाषाएँ सूचीबद्ध हैं?",
+      "options": [
+        {
+          "en": "18",
+          "hi": "18"
+        },
+        {
+          "en": "20",
+          "hi": "20"
+        },
+        {
+          "en": "22",
+          "hi": "22"
+        },
+        {
+          "en": "24",
+          "hi": "24"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The Eighth Schedule currently lists 22 languages, from Assamese to Urdu.",
+      "solution_hi": "आठवीं अनुसूची में वर्तमान में असमिया से उर्दू तक 22 भाषाएँ सूचीबद्ध हैं।",
+      "trick_en": "Sindhi, Konkani, Bodo and Dogri were added later; the count is 22.",
+      "trick_hi": "सिंधी, कोंकणी, बोडो और डोगरी बाद में जुड़ीं; कुल 22।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-13",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is the smallest Indian state by area?",
+      "text_hi": "क्षेत्रफल की दृष्टि से सबसे छोटा भारतीय राज्य कौन-सा है?",
+      "options": [
+        {
+          "en": "Sikkim",
+          "hi": "Sikkim"
+        },
+        {
+          "en": "Tripura",
+          "hi": "Tripura"
+        },
+        {
+          "en": "Goa",
+          "hi": "Goa"
+        },
+        {
+          "en": "Nagaland",
+          "hi": "Nagaland"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Goa is the smallest state by area; Sikkim is larger but has the smallest population among states.",
+      "solution_hi": "क्षेत्रफल में गोवा सबसे छोटा राज्य है; सिक्किम उससे बड़ा है पर जनसंख्या में सबसे छोटा राज्य है।",
+      "trick_en": "Do not mix smallest area with smallest population.",
+      "trick_hi": "सबसे छोटा क्षेत्र और सबसे छोटी जनसंख्या न मिलाएँ।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-14",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "History",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which line divided India and Pakistan at the time of Partition?",
+      "text_hi": "विभाजन के समय भारत और पाकिस्तान को किस रेखा ने विभाजित किया?",
+      "options": [
+        {
+          "en": "Durand Line",
+          "hi": "Durand Line"
+        },
+        {
+          "en": "Radcliffe Line",
+          "hi": "Radcliffe Line"
+        },
+        {
+          "en": "McMahon Line",
+          "hi": "McMahon Line"
+        },
+        {
+          "en": "Line of Control",
+          "hi": "Line of Control"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The Radcliffe Line, drawn by Sir Cyril Radcliffe in 1947, became the India–Pakistan border.",
+      "solution_hi": "1947 में सर सिरिल रैडक्लिफ द्वारा खींची गई रैडक्लिफ रेखा भारत–पाकिस्तान सीमा बनी।",
+      "trick_en": "Durand = Afghanistan; McMahon = China; Radcliffe = Pakistan.",
+      "trick_hi": "डूरंड = अफगानिस्तान; मैकमोहन = चीन; रैडक्लिफ = पाकिस्तान।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-15",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which pass connects the Kashmir Valley with Leh?",
+      "text_hi": "कौन-सा दर्रा कश्मीर घाटी को लेह से जोड़ता है?",
+      "options": [
+        {
+          "en": "Zoji La",
+          "hi": "Zoji La"
+        },
+        {
+          "en": "Nathu La",
+          "hi": "Nathu La"
+        },
+        {
+          "en": "Rohtang Pass",
+          "hi": "Rohtang Pass"
+        },
+        {
+          "en": "Shipki La",
+          "hi": "Shipki La"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Zoji La on the Srinagar–Leh highway connects the Kashmir Valley with Ladakh.",
+      "solution_hi": "श्रीनगर–लेह मार्ग पर ज़ोजी ला कश्मीर घाटी को लद्दाख से जोड़ता है।",
+      "trick_en": "Zoji La = Srinagar–Leh; Rohtang = Manali–Lahaul.",
+      "trick_hi": "ज़ोजी ला = श्रीनगर–लेह; रोहतांग = मनाली–लाहौल।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-16",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which Indian city has the largest natural harbour?",
+      "text_hi": "किस भारतीय शहर में सबसे बड़ा प्राकृतिक बंदरगाह है?",
+      "options": [
+        {
+          "en": "Chennai",
+          "hi": "Chennai"
+        },
+        {
+          "en": "Mumbai",
+          "hi": "Mumbai"
+        },
+        {
+          "en": "Kolkata",
+          "hi": "Kolkata"
+        },
+        {
+          "en": "Kochi",
+          "hi": "Kochi"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Mumbai has India's largest natural harbour; Kandla and Jawaharlal Nehru Port are major artificial or tidal ports.",
+      "solution_hi": "मुंबई में भारत का सबसे बड़ा प्राकृतिक बंदरगाह है; कांडला और जवाहरलाल नेहरू बंदरगाह अन्य प्रमुख हैं।",
+      "trick_en": "Natural harbour, not busiest container port.",
+      "trick_hi": "प्राकृतिक बंदरगाह, सबसे व्यस्त कंटेनर बंदरगाह नहीं।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-17",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is India's longest river bridge?",
+      "text_hi": "भारत का सबसे लंबा नदी पुल कौन-सा है?",
+      "options": [
+        {
+          "en": "Bhupen Hazarika Setu (Dhola–Sadiya)",
+          "hi": "Bhupen Hazarika Setu (Dhola–Sadiya)"
+        },
+        {
+          "en": "Mahatma Gandhi Setu",
+          "hi": "Mahatma Gandhi Setu"
+        },
+        {
+          "en": "Bandra–Worli Sea Link",
+          "hi": "Bandra–Worli Sea Link"
+        },
+        {
+          "en": "Vembanad Rail Bridge",
+          "hi": "Vembanad Rail Bridge"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Bhupen Hazarika Setu over the Lohit river in Assam, about 9.15 km long, is India's longest river bridge.",
+      "solution_hi": "असम में लोहित नदी पर भूपेन हजारिका सेतु लगभग 9.15 km लंबा भारत का सबसे लंबा नदी पुल है।",
+      "trick_en": "It connects Dhola and Sadiya in Assam.",
+      "trick_hi": "यह असम में धोला और सादिया को जोड़ता है।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-18",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which state has the highest number of districts in India?",
+      "text_hi": "भारत में सबसे अधिक जिले किस राज्य में हैं?",
+      "options": [
+        {
+          "en": "Madhya Pradesh",
+          "hi": "Madhya Pradesh"
+        },
+        {
+          "en": "Uttar Pradesh",
+          "hi": "Uttar Pradesh"
+        },
+        {
+          "en": "Bihar",
+          "hi": "Bihar"
+        },
+        {
+          "en": "Maharashtra",
+          "hi": "Maharashtra"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Uttar Pradesh has 75 districts, the highest among Indian states.",
+      "solution_hi": "उत्तर प्रदेश में 75 जिले हैं, जो भारतीय राज्यों में सर्वाधिक हैं।",
+      "trick_en": "UP leads in districts; MP is the second-largest state by area.",
+      "trick_hi": "जिलों में उत्तर प्रदेश आगे; क्षेत्रफल में मध्य प्रदेश दूसरा।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-19",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the approximate speed of light in vacuum?",
+      "text_hi": "निर्वात में प्रकाश की चाल लगभग कितनी है?",
+      "options": [
+        {
+          "en": "3 × 10⁶ m/s",
+          "hi": "3 × 10⁶ m/s"
+        },
+        {
+          "en": "3 × 10⁸ m/s",
+          "hi": "3 × 10⁸ m/s"
+        },
+        {
+          "en": "3 × 10¹⁰ m/s",
+          "hi": "3 × 10¹⁰ m/s"
+        },
+        {
+          "en": "3 × 10⁵ m/s",
+          "hi": "3 × 10⁵ m/s"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Light travels at about 299,792,458 m/s, commonly rounded to 3 × 10⁸ m/s.",
+      "solution_hi": "प्रकाश लगभग 299,792,458 m/s चलता है, जिसे सामान्यतः 3 × 10⁸ m/s लिखा जाता है।",
+      "trick_en": "Sound is ~340 m/s; light is about a million times faster.",
+      "trick_hi": "ध्वनि ~340 m/s; प्रकाश लगभग दस लाख गुना तेज़।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.nios.ac.in/online-course-material.aspx",
+        "citation": "NIOS senior-secondary science course material, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-20",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which instrument measures atmospheric pressure?",
+      "text_hi": "वायुमंडलीय दाब किस यंत्र से मापा जाता है?",
+      "options": [
+        {
+          "en": "Thermometer",
+          "hi": "Thermometer"
+        },
+        {
+          "en": "Barometer",
+          "hi": "Barometer"
+        },
+        {
+          "en": "Hygrometer",
+          "hi": "Hygrometer"
+        },
+        {
+          "en": "Anemometer",
+          "hi": "Anemometer"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "A barometer measures atmospheric pressure; a hygrometer measures humidity and an anemometer wind speed.",
+      "solution_hi": "बैरोमीटर वायुमंडलीय दाब मापता है; हाइग्रोमीटर आर्द्रता और एनीमोमीटर हवा की गति।",
+      "trick_en": "Baro- relates to weight/pressure.",
+      "trick_hi": "Baro- का संबंध भार/दाब से है।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.nios.ac.in/online-course-material.aspx",
+        "citation": "NIOS senior-secondary science course material, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-21",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Deficiency of which vitamin causes rickets in children?",
+      "text_hi": "किस विटामिन की कमी से बच्चों में रिकेट्स होता है?",
+      "options": [
+        {
+          "en": "Vitamin A",
+          "hi": "विटामिन A"
+        },
+        {
+          "en": "Vitamin B12",
+          "hi": "विटामिन B12"
+        },
+        {
+          "en": "Vitamin C",
+          "hi": "विटामिन C"
+        },
+        {
+          "en": "Vitamin D",
+          "hi": "विटामिन D"
+        }
+      ],
+      "correct": 3,
+      "solution_en": "Rickets is caused by vitamin D deficiency, which weakens bone mineralisation; sunlight helps the skin make vitamin D.",
+      "solution_hi": "रिकेट्स विटामिन D की कमी से होता है, जिससे हड्डियों का खनिजीकरण कमजोर होता है; धूप से त्वचा विटामिन D बनाती है।",
+      "trick_en": "Bones + calcium absorption → vitamin D.",
+      "trick_hi": "हड्डियाँ + कैल्शियम अवशोषण → विटामिन D।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.who.int/",
+        "citation": "World Health Organization fact sheets, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-22",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which part of the human eye controls the amount of light entering it?",
+      "text_hi": "मानव नेत्र का कौन-सा भाग अंदर जाने वाले प्रकाश की मात्रा नियंत्रित करता है?",
+      "options": [
+        {
+          "en": "Cornea",
+          "hi": "Cornea"
+        },
+        {
+          "en": "Iris",
+          "hi": "Iris"
+        },
+        {
+          "en": "Retina",
+          "hi": "Retina"
+        },
+        {
+          "en": "Lens",
+          "hi": "Lens"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The iris adjusts the pupil size, controlling how much light enters the eye.",
+      "solution_hi": "आइरिस पुतली का आकार समायोजित करती है, जिससे नेत्र में प्रकाश की मात्रा नियंत्रित होती है।",
+      "trick_en": "Iris = diaphragm; pupil = aperture.",
+      "trick_hi": "आइरिस = डायफ्राम; पुतली = द्वारक।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.nios.ac.in/online-course-material.aspx",
+        "citation": "NIOS senior-secondary science course material, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-23",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which gas is commonly used in fire extinguishers?",
+      "text_hi": "अग्निशामक यंत्रों में सामान्यतः कौन-सी गैस प्रयोग होती है?",
+      "options": [
+        {
+          "en": "Oxygen",
+          "hi": "Oxygen"
+        },
+        {
+          "en": "Carbon dioxide",
+          "hi": "Carbon dioxide"
+        },
+        {
+          "en": "Hydrogen",
+          "hi": "Hydrogen"
+        },
+        {
+          "en": "Methane",
+          "hi": "Methane"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Carbon dioxide displaces oxygen and smothers the fire without leaving residue.",
+      "solution_hi": "कार्बन डाइऑक्साइड ऑक्सीजन को हटाकर आग बुझाती है और अवशेष नहीं छोड़ती।",
+      "trick_en": "CO2 does not support combustion.",
+      "trick_hi": "CO2 दहन में सहायक नहीं है।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.nios.ac.in/online-course-material.aspx",
+        "citation": "NIOS senior-secondary science course material, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-24",
+      "subject": "General_Awareness",
+      "topic": "Environment and Society",
+      "sub_topic": "General awareness of the environment and its application to society",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "World Environment Day is observed on which date?",
+      "text_hi": "विश्व पर्यावरण दिवस किस तारीख को मनाया जाता है?",
+      "options": [
+        {
+          "en": "22 April",
+          "hi": "22 April"
+        },
+        {
+          "en": "5 June",
+          "hi": "5 June"
+        },
+        {
+          "en": "21 March",
+          "hi": "21 March"
+        },
+        {
+          "en": "16 September",
+          "hi": "16 September"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "World Environment Day is observed on 5 June; 22 April is Earth Day.",
+      "solution_hi": "विश्व पर्यावरण दिवस 5 जून को मनाया जाता है; 22 अप्रैल पृथ्वी दिवस है।",
+      "trick_en": "5 June = environment; 22 April = Earth Day.",
+      "trick_hi": "5 जून = पर्यावरण; 22 अप्रैल = पृथ्वी दिवस।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga4-25",
+      "subject": "General_Awareness",
+      "topic": "Environment and Society",
+      "sub_topic": "General awareness of the environment and its application to society",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which of these is a renewable source of energy?",
+      "text_hi": "इनमें से कौन-सा नवीकरणीय ऊर्जा स्रोत है?",
+      "options": [
+        {
+          "en": "Coal",
+          "hi": "Coal"
+        },
+        {
+          "en": "Wind",
+          "hi": "Wind"
+        },
+        {
+          "en": "Petroleum",
+          "hi": "Petroleum"
+        },
+        {
+          "en": "Natural gas",
+          "hi": "Natural gas"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Wind is naturally replenished; coal, petroleum and natural gas are finite fossil fuels.",
+      "solution_hi": "पवन प्राकृतिक रूप से पुनः प्राप्त होती है; कोयला, पेट्रोलियम और प्राकृतिक गैस सीमित जीवाश्म ईंधन हैं।",
+      "trick_en": "Fossil fuels are stored solar energy, not renewable on human timescales.",
+      "trick_hi": "जीवाश्म ईंधन मानव समय-मान में नवीकरणीय नहीं हैं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ]
+}

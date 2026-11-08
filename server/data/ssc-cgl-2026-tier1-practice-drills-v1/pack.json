@@ -1,0 +1,76 @@
+{
+  "pack_key": "ssc-cgl-2026-tier1-practice-drills-v1",
+  "pack_version": 1,
+  "pack_kind": "topic_drills",
+  "title": "SSC CGL Tier-I topic-drill pool (Batch 4) — 60 focused questions",
+  "exam": "SSC CGL",
+  "exam_stage": "Tier_1",
+  "target_cycle": 2027,
+  "pattern_baseline": {
+    "notice_title": "Combined Graduate Level Examination, 2026",
+    "notice_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+    "notice_paragraph": "13.8 (Tier-I scheme and syllabus), 13.8.1 (bilingual except English Comprehension), 13.8.2 (negative marking)",
+    "verified_on": "2026-11-08",
+    "target_year_note": "The 2027 CGL notice was not available on 2026-11-08. This drill pool follows the latest verifiable official 2026 Tier-I syllabus and is labelled as a 2026-pattern baseline for 2027 preparation."
+  },
+  "provenance": {
+    "kind": "original_practice",
+    "is_pyq": false,
+    "pyq_statement": "Every question is original ExamEdge practice written to the official 2026 Tier-I syllabus. Nothing here is copied from, reconstructed from, or presented as an SSC previous-year paper, shift or answer key.",
+    "translation": "Hindi text is an ExamEdge translation for study parity, not an official SSC translation. English Comprehension is English-only in the official paper; the Hindi text here is a study aid.",
+    "authoring_note": "Batch 4 drill pool: short, single-concept items intended for 15–30 question micro drills. No DI or cloze sets, because drills must stay intact and topic-focused."
+  },
+  "review": {
+    "status": "automated_verified_pending_human_review",
+    "label": "Practice drills • auto-checked • human review pending",
+    "human_reviewed": false,
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "publish_rule": "Production publication requires a named human reviewer and the attestation flag. The import CLI keeps content in Draft by default and refuses to publish without --reviewer and --confirm-human-review.",
+    "known_limits": [
+      "Automated checks verify structure, declared topic quotas, duplicates, option shape and recomputed quantitative answers. They do not replace subject-expert review.",
+      "No independent human review has been completed for this drill pool yet.",
+      "The 2027 notice is not available; the 2026 notice is the pattern baseline."
+    ]
+  },
+  "coverage_plan": {
+    "purpose": "60 standalone questions spread across the Tier-I syllabus so learners can build 15–30 question single-topic drills in the existing Subject & Topic Practice screen.",
+    "batch": 4,
+    "full_mocks": "This pool is not a full mock and is not counted as one; the 100-question full mocks are Batches 1–4."
+  },
+  "drill_profile": {
+    "total": 60,
+    "by_subject": {
+      "Quant": 15,
+      "Reasoning": 15,
+      "English": 15,
+      "General_Awareness": 15
+    },
+    "by_topic": {
+      "Quant|Number Systems": 3,
+      "Quant|Fundamental Arithmetical Operations": 7,
+      "Quant|Algebra": 2,
+      "Quant|Geometry": 2,
+      "Quant|Mensuration": 1,
+      "Reasoning|Analogy": 2,
+      "Reasoning|Classification": 1,
+      "Reasoning|Series": 2,
+      "Reasoning|Operations and Coding": 2,
+      "Reasoning|Spatial and Figural Reasoning": 2,
+      "Reasoning|Logical Reasoning": 2,
+      "Reasoning|General Intelligence": 3,
+      "Reasoning|Matching and Indexing": 1,
+      "English|Vocabulary": 6,
+      "English|Grammar and Usage": 5,
+      "English|Sentence Structure": 2,
+      "English|Comprehension": 2,
+      "General_Awareness|Current Events": 3,
+      "General_Awareness|India and Neighbouring Countries": 7,
+      "General_Awareness|Everyday Science": 3,
+      "General_Awareness|Environment and Society": 2
+    }
+  },
+  "question_files": [
+    "drills.json"
+  ]
+}

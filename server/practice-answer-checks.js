@@ -123,10 +123,58 @@ export const quantExpectedV3 = {
   'quant3-25': () => (7200 * 90 / 360).toLocaleString('en-IN'),
 }
 
+export const quantExpectedDrills = {
+  'drill-q-01': () => String(72),
+  'drill-q-02': () => String(42),
+  'drill-q-03': () => '7/9',
+  'drill-q-04': () => String(0.18 * 250),
+  'drill-q-05': () => String(7 * (96 / 12)),
+  'drill-q-06': () => String((8 * 27 - 20) / 7),
+  'drill-q-07': () => inr(8000 * 6 * 3 / 100),
+  'drill-q-08': () => inr(10000 * (1.1 ** 2 - 1)),
+  'drill-q-09': () => `${(60 / 750) * 100}%`,
+  'drill-q-10': () => `${36 / 5} days`,
+  'drill-q-11': () => String(4 ** 2 - 2),
+  'drill-q-12': () => String((20 + 7) / 3),
+  'drill-q-13': () => `${(180 / 10) * 5}°`,
+  'drill-q-14': () => `${Math.sqrt(10 ** 2 - 6 ** 2)} cm`,
+  'drill-q-15': () => `${(3.14 * 36 * 8 / 3).toFixed(2)} cm³`,
+}
+
+export const quantExpectedV4 = {
+  'quant4-01': () => String([7, 9, 3, 1][105 % 4 === 0 ? 3 : (105 % 4) - 1]),
+  'quant4-02': () => String(3),
+  'quant4-03': () => String(0.35 * 240),
+  'quant4-04': () => String(12 / (4 - 3) * (3 + 4)),
+  'quant4-05': () => String((11 * 30 - 40 + 18) / 11),
+  'quant4-06': () => inr(900 * 100 / (5 * 3)),
+  'quant4-07': () => inr(5000 * (1.2 ** 2 - 1)),
+  'quant4-08': () => inr(966 * 100 / 115),
+  'quant4-09': () => inr(2500 * 0.9 * 0.8),
+  'quant4-10': () => `${Math.round(1 / (1 / 20 + 1 / 30))} days`,
+  'quant4-11': () => `${120 / 1.5} km/h`,
+  'quant4-12': () => `${(30 / 0.6) - 40} litres`,
+  'quant4-13': () => String(4 ** 2 + 2 * 21),
+  'quant4-14': () => String(5),
+  'quant4-15': () => `${((5 - 2) * 180) / 5}°`,
+  'quant4-16': () => 'Right-angled',
+  'quant4-17': () => '5√2 cm',
+  'quant4-18': () => `${4 * (22 / 7) * 49} cm²`,
+  'quant4-19': () => `${6 * 7 ** 2} cm²`,
+  'quant4-20': () => String(Math.sin(Math.PI / 3) * Math.cos(Math.PI / 6) + Math.cos(Math.PI / 3) * Math.sin(Math.PI / 6)),
+  'quant4-21': () => '3/5',
+  'quant4-22': () => `15√3 m`,
+  'quant4-23': () => String(210 + 200),
+  'quant4-24': () => ratio(660, 670),
+  'quant4-25': () => (5400 * 120 / 360).toLocaleString('en-IN'),
+}
+
 const quantExpectations = {
   'ssc-cgl-2026-tier1-practice-v1': quantExpected,
   'ssc-cgl-2026-tier1-practice-v2': quantExpectedV2,
   'ssc-cgl-2026-tier1-practice-v3': quantExpectedV3,
+  'ssc-cgl-2026-tier1-practice-drills-v1': quantExpectedDrills,
+  'ssc-cgl-2026-tier1-practice-v4': quantExpectedV4,
 }
 
 // Sanity checks of the arithmetic used above, so a typo in a check cannot

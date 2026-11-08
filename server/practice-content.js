@@ -7,6 +7,8 @@ export const PRACTICE_PACKS = {
   'ssc-cgl-2026-tier1-practice-v1': new URL('./data/ssc-cgl-2026-tier1-practice/', import.meta.url),
   'ssc-cgl-2026-tier1-practice-v2': new URL('./data/ssc-cgl-2026-tier1-practice-v2/', import.meta.url),
   'ssc-cgl-2026-tier1-practice-v3': new URL('./data/ssc-cgl-2026-tier1-practice-v3/', import.meta.url),
+  'ssc-cgl-2026-tier1-practice-drills-v1': new URL('./data/ssc-cgl-2026-tier1-practice-drills-v1/', import.meta.url),
+  'ssc-cgl-2026-tier1-practice-v4': new URL('./data/ssc-cgl-2026-tier1-practice-v4/', import.meta.url),
 }
 export const PRACTICE_PACK_KEY = 'ssc-cgl-2026-tier1-practice-v1'
 export const PRACTICE_PACK_KEYS = Object.keys(PRACTICE_PACKS)
@@ -63,7 +65,15 @@ export async function validatePracticePack(content) {
   if (pack.review?.human_reviewed !== false && pack.review?.status !== 'human_reviewed') fail('This pack must not claim human review until it actually happened')
   if (pack.review?.status === 'human_reviewed' && !text(pack.review?.reviewed_by)) fail('A human-reviewed pack needs a named reviewer')
 
-  if (questions.length !== 100) fail('A Tier-I full-mock pack must contain exactly 100 questions', questions.length)
+  const packKind = pack.pack_kind || 'full_mock'
+  const drill = packKind === 'topic_drills'
+  if (!['full_mock', 'topic_drills'].includes(packKind)) fail('Unsupported pack kind', packKind)
+  if (drill && pack.drill_profile?.total !== 60) fail('A topic-drill pack must declare exactly 60 questions', pack.drill_profile?.total)
+  const expectedQuestions = drill ? 60 : 100
+  if (questions.length !== expectedQuestions) {
+    fail(drill ? 'A Tier-I topic-drill pack must contain exactly 60 questions' : 'A Tier-I full-mock pack must contain exactly 100 questions', questions.length)
+  }
+  if (drill && sets.length) fail('A topic-drill pack must not contain passage sets', sets.length)
 
   const qidSeen = new Set()
   const textSeen = new Map()
@@ -73,7 +83,7 @@ export async function validatePracticePack(content) {
   const setChildren = new Map()
   const setsByRef = new Map(sets.map(set => [set.ref, set]))
 
-  for (const set of sets) {
+  for (const set of (drill ? [] : sets)) {
     if (!text(set.ref)) fail('Set without ref')
     if (setsByRef.get(set.ref) !== set) fail('Duplicate set ref', set.ref)
     if (!Object.hasOwn(requiredSetTypes, set.set_type)) fail('Unsupported set type', set.set_type)
@@ -121,7 +131,9 @@ export async function validatePracticePack(content) {
     if (textSeen.has(fingerprint)) fail('Duplicate question text', `${qid} duplicates ${textSeen.get(fingerprint)}`)
     else textSeen.set(fingerprint, qid)
 
-    if (question.set_ref) {
+    if (drill && (question.set_ref || question.question_type === 'Passage_Based')) {
+      fail('Topic-drill questions must be standalone Standard_MCQ items', qid)
+    } else if (question.set_ref) {
       const set = setsByRef.get(question.set_ref)
       if (!set) fail('Unknown set_ref', `${qid} ${question.set_ref}`)
       else {
@@ -139,30 +151,47 @@ export async function validatePracticePack(content) {
     byDifficulty[question.difficulty] = (byDifficulty[question.difficulty] || 0) + 1
   }
 
-  for (const subject of SUBJECT_ORDER) {
-    if (bySubject[subject] !== 25) fail(`${subject} must have exactly 25 questions`, bySubject[subject] ?? 0)
-  }
-  for (const [subject, topics] of Object.entries(TIER1_EDITORIAL_TOPICS)) {
-    for (const [topic, count] of Object.entries(topics)) {
-      const actual = byTopic[`${subject}|${topic}`] || 0
-      if (actual !== count) fail(`Topic quota mismatch for ${subject} / ${topic}`, `expected ${count}, found ${actual}`)
+  if (drill) {
+    const profile = pack.drill_profile || {}
+    for (const [subject, count] of Object.entries(profile.by_subject || {})) {
+      const actual = bySubject[subject] || 0
+      if (actual !== count) fail(`Drill subject quota mismatch for ${subject}`, `expected ${count}, found ${actual}`)
     }
-  }
-  for (const [difficulty, count] of Object.entries(TIER1_DIFFICULTY)) {
-    if (byDifficulty[difficulty] !== count) fail(`Difficulty quota mismatch for ${difficulty}`, `expected ${count}, found ${byDifficulty[difficulty] ?? 0}`)
-  }
-  if (Object.keys(byTopic).length !== Object.values(TIER1_EDITORIAL_TOPICS).reduce((total, topics) => total + Object.keys(topics).length, 0)) {
-    fail('Pack contains topics outside the official Tier-I editorial profile')
-  }
+    for (const [key, count] of Object.entries(profile.by_topic || {})) {
+      const actual = byTopic[key] || 0
+      if (actual !== count) fail(`Drill topic quota mismatch for ${key}`, `expected ${count}, found ${actual}`)
+    }
+    if (!Object.keys(profile.by_subject || {}).length || !Object.keys(profile.by_topic || {}).length) {
+      fail('A topic-drill pack must declare by_subject and by_topic quotas')
+    }
+    if (Object.keys(bySubject).length !== Object.keys(profile.by_subject || {}).length) fail('Drill pack contains subjects outside its declared profile')
+    if (Object.keys(byTopic).length !== Object.keys(profile.by_topic || {}).length) fail('Drill pack contains topics outside its declared profile')
+  } else {
+    for (const subject of SUBJECT_ORDER) {
+      if (bySubject[subject] !== 25) fail(`${subject} must have exactly 25 questions`, bySubject[subject] ?? 0)
+    }
+    for (const [subject, topics] of Object.entries(TIER1_EDITORIAL_TOPICS)) {
+      for (const [topic, count] of Object.entries(topics)) {
+        const actual = byTopic[`${subject}|${topic}`] || 0
+        if (actual !== count) fail(`Topic quota mismatch for ${subject} / ${topic}`, `expected ${count}, found ${actual}`)
+      }
+    }
+    for (const [difficulty, count] of Object.entries(TIER1_DIFFICULTY)) {
+      if (byDifficulty[difficulty] !== count) fail(`Difficulty quota mismatch for ${difficulty}`, `expected ${count}, found ${byDifficulty[difficulty] ?? 0}`)
+    }
+    if (Object.keys(byTopic).length !== Object.values(TIER1_EDITORIAL_TOPICS).reduce((total, topics) => total + Object.keys(topics).length, 0)) {
+      fail('Pack contains topics outside the official Tier-I editorial profile')
+    }
 
-  for (const set of sets) {
-    const required = requiredSetTypes[set.set_type]
-    const actual = setChildren.get(set.ref) || 0
-    if (actual !== required) fail(`Set ${set.ref} must contain ${required} questions`, actual)
-  }
-  for (const [setType, expected] of Object.entries(TIER1_EDITORIAL_SETS)) {
-    const actualQuestions = questions.filter(question => setsByRef.get(question.set_ref)?.set_type === setType).length
-    if (actualQuestions !== expected) fail(`Editorial set quota mismatch for ${setType}`, `expected ${expected}, found ${actualQuestions}`)
+    for (const set of sets) {
+      const required = requiredSetTypes[set.set_type]
+      const actual = setChildren.get(set.ref) || 0
+      if (actual !== required) fail(`Set ${set.ref} must contain ${required} questions`, actual)
+    }
+    for (const [setType, expected] of Object.entries(TIER1_EDITORIAL_SETS)) {
+      const actualQuestions = questions.filter(question => setsByRef.get(question.set_ref)?.set_type === setType).length
+      if (actualQuestions !== expected) fail(`Editorial set quota mismatch for ${setType}`, `expected ${expected}, found ${actualQuestions}`)
+    }
   }
 
   const syllabus = await tier1Syllabus()
@@ -180,6 +209,7 @@ export async function validatePracticePack(content) {
   if (sources.size < 10) warnings.push(`Only ${sources.size} distinct source URLs; factual items should cite specific sources`)
 
   const stats = {
+    kind: packKind,
     questions: questions.length,
     sets: sets.length,
     by_subject: bySubject,

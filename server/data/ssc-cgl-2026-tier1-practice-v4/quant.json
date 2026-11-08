@@ -1,0 +1,1027 @@
+{
+  "pack_key": "ssc-cgl-2026-tier1-practice-v4",
+  "sets": [
+    {
+      "ref": "di-2026-t1-04",
+      "set_type": "Data_Interpretation",
+      "subject": "Quant",
+      "passage_en": "The table gives the number of units produced by two factories, A and B, from 2021 to 2024. Read the table and answer the two questions.",
+      "passage_hi": "तालिका 2021 से 2024 तक दो कारखानों A और B द्वारा उत्पादित इकाइयों की संख्या दर्शाती है। तालिका पढ़कर दोनों प्रश्नों के उत्तर दें।",
+      "chart_data": {
+        "type": "table",
+        "caption": "Units produced by two factories (2021–2024)",
+        "columns": [
+          "Year",
+          "Factory A",
+          "Factory B"
+        ],
+        "rows": [
+          [
+            "2021",
+            120,
+            140
+          ],
+          [
+            "2022",
+            150,
+            160
+          ],
+          [
+            "2023",
+            180,
+            170
+          ],
+          [
+            "2024",
+            210,
+            200
+          ]
+        ]
+      },
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "Synthetic production table written for ExamEdge practice; not official SSC data.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "qid": "quant4-01",
+      "subject": "Quant",
+      "topic": "Number Systems",
+      "sub_topic": "Relationship between numbers",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the unit digit of 7^105?",
+      "text_hi": "7^105 का इकाई अंक क्या है?",
+      "options": [
+        {
+          "en": "1",
+          "hi": "1"
+        },
+        {
+          "en": "3",
+          "hi": "3"
+        },
+        {
+          "en": "7",
+          "hi": "7"
+        },
+        {
+          "en": "9",
+          "hi": "9"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The unit digits of powers of 7 repeat as 7, 9, 3, 1. Since 105 ÷ 4 leaves remainder 1, the unit digit is 7.",
+      "solution_hi": "7 की घातों का इकाई अंक 7, 9, 3, 1 के क्रम में दोहराता है। 105 ÷ 4 का शेषफल 1 है, इसलिए इकाई अंक 7 है।",
+      "trick_en": "Divide the exponent by 4 and use the remainder position.",
+      "trick_hi": "घात को 4 से भाग दें और शेषफल के स्थान का अंक लें।",
+      "ideal_time_seconds": 45,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-02",
+      "subject": "Quant",
+      "topic": "Number Systems",
+      "sub_topic": "Relationship between numbers",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the smallest number by which 300 must be multiplied to make it a perfect square?",
+      "text_hi": "300 को पूर्ण वर्ग बनाने के लिए उसे किस सबसे छोटी संख्या से गुणा करना होगा?",
+      "options": [
+        {
+          "en": "2",
+          "hi": "2"
+        },
+        {
+          "en": "3",
+          "hi": "3"
+        },
+        {
+          "en": "5",
+          "hi": "5"
+        },
+        {
+          "en": "6",
+          "hi": "6"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "300 = 2² × 3 × 5². Only the prime 3 has an odd power, so multiplying by 3 gives 900 = 30².",
+      "solution_hi": "300 = 2² × 3 × 5²। केवल अभाज्य 3 की घात विषम है, इसलिए 3 से गुणा करने पर 900 = 30² बनता है।",
+      "trick_en": "Pair every prime factor; unpaired primes must be supplied.",
+      "trick_hi": "हर अभाज्य के जोड़े बनाएँ; बिना जोड़े वाले अभाज्य गुणा करें।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-03",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Percentages",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is 35% of 240?",
+      "text_hi": "240 का 35% कितना है?",
+      "options": [
+        {
+          "en": "74",
+          "hi": "74"
+        },
+        {
+          "en": "78",
+          "hi": "78"
+        },
+        {
+          "en": "84",
+          "hi": "84"
+        },
+        {
+          "en": "88",
+          "hi": "88"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "35% of 240 = 0.35 × 240 = 84.",
+      "solution_hi": "240 का 35% = 0.35 × 240 = 84।",
+      "trick_en": "35% = 25% + 10% = 60 + 24.",
+      "trick_hi": "35% = 25% + 10% = 60 + 24।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-04",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Ratio and proportion",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Two numbers are in the ratio 3 : 4 and their difference is 12. Find their sum.",
+      "text_hi": "दो संख्याएँ 3 : 4 के अनुपात में हैं और उनका अंतर 12 है। उनका योग ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "72",
+          "hi": "72"
+        },
+        {
+          "en": "84",
+          "hi": "84"
+        },
+        {
+          "en": "96",
+          "hi": "96"
+        },
+        {
+          "en": "108",
+          "hi": "108"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "One part = 12 ÷ (4 − 3) = 12. The numbers are 36 and 48, so the sum is 84.",
+      "solution_hi": "एक भाग = 12 ÷ (4 − 3) = 12। संख्याएँ 36 और 48 हैं, इसलिए योग 84 है।",
+      "trick_en": "Divide the difference by the difference of ratio terms.",
+      "trick_hi": "अंतर को अनुपात पदों के अंतर से भाग दें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-05",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Averages",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "The average of 11 numbers is 30. If the number 40 is replaced by 18, what is the new average?",
+      "text_hi": "11 संख्याओं का औसत 30 है। यदि संख्या 40 को 18 से बदल दिया जाए, तो नया औसत क्या होगा?",
+      "options": [
+        {
+          "en": "26",
+          "hi": "26"
+        },
+        {
+          "en": "27",
+          "hi": "27"
+        },
+        {
+          "en": "28",
+          "hi": "28"
+        },
+        {
+          "en": "29",
+          "hi": "29"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Old total = 330. New total = 330 − 40 + 18 = 308, so the new average = 308/11 = 28.",
+      "solution_hi": "पुराना योग = 330। नया योग = 330 − 40 + 18 = 308, इसलिए नया औसत = 308/11 = 28।",
+      "trick_en": "Adjust the total by the change, then divide by the same count.",
+      "trick_hi": "कुल में परिवर्तन जोड़ें, फिर उसी संख्या से भाग दें।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-06",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Simple interest",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What sum gives ₹900 as simple interest at 5% per annum in 3 years?",
+      "text_hi": "कौन-सी राशि पर 5% वार्षिक दर से 3 वर्ष में ₹900 साधारण ब्याज मिलेगा?",
+      "options": [
+        {
+          "en": "₹5,000",
+          "hi": "₹5,000"
+        },
+        {
+          "en": "₹6,000",
+          "hi": "₹6,000"
+        },
+        {
+          "en": "₹6,500",
+          "hi": "₹6,500"
+        },
+        {
+          "en": "₹7,500",
+          "hi": "₹7,500"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "P = SI × 100 / (R × T) = 900 × 100 / (5 × 3) = ₹6,000.",
+      "solution_hi": "P = SI × 100 / (R × T) = 900 × 100 / (5 × 3) = ₹6,000।",
+      "trick_en": "Rearrange SI = PRT/100 to solve for P.",
+      "trick_hi": "SI = PRT/100 को P के लिए पुनर्व्यवस्थित करें।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-07",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Compound interest",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the compound interest on ₹5,000 at 20% per annum for 2 years.",
+      "text_hi": "₹5,000 पर 20% वार्षिक दर से 2 वर्ष का चक्रवृद्धि ब्याज ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "₹2,000",
+          "hi": "₹2,000"
+        },
+        {
+          "en": "₹2,100",
+          "hi": "₹2,100"
+        },
+        {
+          "en": "₹2,200",
+          "hi": "₹2,200"
+        },
+        {
+          "en": "₹2,400",
+          "hi": "₹2,400"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Amount = 5000 × 1.2² = 5000 × 1.44 = ₹7,200, so CI = ₹2,200.",
+      "solution_hi": "मिश्रधन = 5000 × 1.2² = 5000 × 1.44 = ₹7,200, इसलिए CI = ₹2,200।",
+      "trick_en": "Square the growth factor for two years.",
+      "trick_hi": "दो वर्षों के लिए वृद्धि गुणक का वर्ग करें।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-08",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Profit and loss",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "An article is sold for ₹966 at a profit of 15%. Find its cost price.",
+      "text_hi": "एक वस्तु 15% लाभ पर ₹966 में बेची जाती है। उसका क्रय मूल्य ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "₹820",
+          "hi": "₹820"
+        },
+        {
+          "en": "₹840",
+          "hi": "₹840"
+        },
+        {
+          "en": "₹860",
+          "hi": "₹860"
+        },
+        {
+          "en": "₹880",
+          "hi": "₹880"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "CP = SP × 100 / 115 = 966 × 100 / 115 = ₹840.",
+      "solution_hi": "CP = SP × 100 / 115 = 966 × 100 / 115 = ₹840।",
+      "trick_en": "Divide the selling price by 1 + profit%.",
+      "trick_hi": "विक्रय मूल्य को 1 + लाभ% से भाग दें।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-09",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Discount",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Successive discounts of 10% and 20% are given on ₹2,500. Find the final price.",
+      "text_hi": "₹2,500 पर 10% और 20% की क्रमिक छूट दी जाती है। अंतिम मूल्य ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "₹1,700",
+          "hi": "₹1,700"
+        },
+        {
+          "en": "₹1,750",
+          "hi": "₹1,750"
+        },
+        {
+          "en": "₹1,800",
+          "hi": "₹1,800"
+        },
+        {
+          "en": "₹1,850",
+          "hi": "₹1,850"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Final price = 2500 × 0.9 × 0.8 = ₹1,800.",
+      "solution_hi": "अंतिम मूल्य = 2500 × 0.9 × 0.8 = ₹1,800।",
+      "trick_en": "Multiply the successive factors; never add the two discounts.",
+      "trick_hi": "क्रमिक गुणकों को गुणा करें; दोनों छूट कभी न जोड़ें।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-10",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Time and work",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "A can finish a work in 20 days and B in 30 days. How long will they take together?",
+      "text_hi": "A एक काम 20 दिनों में और B 30 दिनों में पूरा कर सकता है। साथ मिलकर कितने दिन लेंगे?",
+      "options": [
+        {
+          "en": "10 days",
+          "hi": "10 days"
+        },
+        {
+          "en": "12 days",
+          "hi": "12 days"
+        },
+        {
+          "en": "15 days",
+          "hi": "15 days"
+        },
+        {
+          "en": "18 days",
+          "hi": "18 days"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "One day = 1/20 + 1/30 = 5/60 = 1/12, so they finish in 12 days.",
+      "solution_hi": "एक दिन = 1/20 + 1/30 = 5/60 = 1/12, इसलिए 12 दिन में पूरा होगा।",
+      "trick_en": "Add one-day work and invert.",
+      "trick_hi": "एक दिन का काम जोड़कर उलट दें।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-11",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Time and distance",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "A car covers 120 km in 1.5 hours. What is its average speed?",
+      "text_hi": "एक कार 1.5 घंटे में 120 km तय करती है। उसकी औसत चाल क्या है?",
+      "options": [
+        {
+          "en": "60 km/h",
+          "hi": "60 km/h"
+        },
+        {
+          "en": "70 km/h",
+          "hi": "70 km/h"
+        },
+        {
+          "en": "80 km/h",
+          "hi": "80 km/h"
+        },
+        {
+          "en": "90 km/h",
+          "hi": "90 km/h"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Speed = distance/time = 120/1.5 = 80 km/h.",
+      "solution_hi": "चाल = दूरी/समय = 120/1.5 = 80 km/h।",
+      "trick_en": "Divide distance by time, not the other way round.",
+      "trick_hi": "दूरी को समय से भाग दें, उलटा नहीं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-12",
+      "subject": "Quant",
+      "topic": "Fundamental Arithmetical Operations",
+      "sub_topic": "Mixture and alligation",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "A 40-litre mixture has milk and water in the ratio 3 : 1. How much water must be added to make the milk share 60%?",
+      "text_hi": "40 लीटर मिश्रण में दूध और पानी 3 : 1 के अनुपात में हैं। दूध का हिस्सा 60% बनाने के लिए कितना पानी मिलाना होगा?",
+      "options": [
+        {
+          "en": "5 litres",
+          "hi": "5 litres"
+        },
+        {
+          "en": "10 litres",
+          "hi": "10 litres"
+        },
+        {
+          "en": "15 litres",
+          "hi": "15 litres"
+        },
+        {
+          "en": "20 litres",
+          "hi": "20 litres"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Milk = 30 L and water = 10 L. For milk to be 60%, total must be 30/0.6 = 50 L, so 10 L of water must be added.",
+      "solution_hi": "दूध = 30 लीटर और पानी = 10 लीटर। दूध 60% होने के लिए कुल 30/0.6 = 50 लीटर होना चाहिए, इसलिए 10 लीटर पानी मिलाना होगा।",
+      "trick_en": "Milk stays fixed; scale the total, then find the water added.",
+      "trick_hi": "दूध स्थिर रहता है; कुल बढ़ाएँ, फिर जोड़ा गया पानी निकालें।",
+      "ideal_time_seconds": 60,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-13",
+      "subject": "Quant",
+      "topic": "Algebra",
+      "sub_topic": "School algebra identities",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "If a − b = 4 and ab = 21, find a² + b².",
+      "text_hi": "यदि a − b = 4 और ab = 21 है, तो a² + b² ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "50",
+          "hi": "50"
+        },
+        {
+          "en": "54",
+          "hi": "54"
+        },
+        {
+          "en": "58",
+          "hi": "58"
+        },
+        {
+          "en": "62",
+          "hi": "62"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "(a − b)² = a² − 2ab + b², so 16 = a² + b² − 42, giving a² + b² = 58.",
+      "solution_hi": "(a − b)² = a² − 2ab + b², इसलिए 16 = a² + b² − 42, जिससे a² + b² = 58।",
+      "trick_en": "Square the difference and add twice the product.",
+      "trick_hi": "अंतर का वर्ग करें और गुणनफल का दुगुना जोड़ें।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-14",
+      "subject": "Quant",
+      "topic": "Algebra",
+      "sub_topic": "Graphs of linear equations",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the sum of the roots of x² − 5x + 6 = 0?",
+      "text_hi": "x² − 5x + 6 = 0 के मूलों का योग क्या है?",
+      "options": [
+        {
+          "en": "1",
+          "hi": "1"
+        },
+        {
+          "en": "5",
+          "hi": "5"
+        },
+        {
+          "en": "6",
+          "hi": "6"
+        },
+        {
+          "en": "11",
+          "hi": "11"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "For ax² + bx + c = 0 the sum of roots is −b/a = 5. (The roots are 2 and 3.)",
+      "solution_hi": "ax² + bx + c = 0 में मूलों का योग −b/a = 5 है। (मूल 2 और 3 हैं।)",
+      "trick_en": "Sum of roots = −b/a; product = c/a.",
+      "trick_hi": "मूलों का योग = −b/a; गुणनफल = c/a।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-15",
+      "subject": "Quant",
+      "topic": "Geometry",
+      "sub_topic": "Elementary geometric figures",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the measure of each interior angle of a regular pentagon?",
+      "text_hi": "सम पंचभुज के प्रत्येक आंतरिक कोण का मान क्या है?",
+      "options": [
+        {
+          "en": "100°",
+          "hi": "100°"
+        },
+        {
+          "en": "108°",
+          "hi": "108°"
+        },
+        {
+          "en": "110°",
+          "hi": "110°"
+        },
+        {
+          "en": "120°",
+          "hi": "120°"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Sum of interior angles = (5 − 2) × 180° = 540°, so each angle = 540°/5 = 108°.",
+      "solution_hi": "आंतरिक कोणों का योग = (5 − 2) × 180° = 540°, इसलिए प्रत्येक कोण = 540°/5 = 108°।",
+      "trick_en": "Interior sum = (n − 2) × 180°.",
+      "trick_hi": "आंतरिक योग = (n − 2) × 180°।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-16",
+      "subject": "Quant",
+      "topic": "Geometry",
+      "sub_topic": "Congruence and similarity of triangles",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "A triangle has sides 7 cm, 24 cm and 25 cm. What type of triangle is it?",
+      "text_hi": "एक त्रिभुज की भुजाएँ 7 cm, 24 cm और 25 cm हैं। यह किस प्रकार का त्रिभुज है?",
+      "options": [
+        {
+          "en": "Acute-angled",
+          "hi": "Acute-angled"
+        },
+        {
+          "en": "Right-angled",
+          "hi": "Right-angled"
+        },
+        {
+          "en": "Obtuse-angled",
+          "hi": "Obtuse-angled"
+        },
+        {
+          "en": "Equilateral",
+          "hi": "Equilateral"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "7² + 24² = 49 + 576 = 625 = 25², so the triangle satisfies Pythagoras and is right-angled.",
+      "solution_hi": "7² + 24² = 49 + 576 = 625 = 25², इसलिए त्रिभुज पाइथागोरस प्रमेय संतुष्ट करता है और समकोणीय है।",
+      "trick_en": "Check whether the square of the longest side equals the sum of the other squares.",
+      "trick_hi": "जाँचें कि सबसे बड़ी भुजा का वर्ग अन्य दो के वर्गों के योग के बराबर है या नहीं।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-17",
+      "subject": "Quant",
+      "topic": "Geometry",
+      "sub_topic": "Circles, chords and tangents",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Two tangents drawn from an external point to a circle of radius 5 cm are perpendicular to each other. Find the distance of the point from the centre.",
+      "text_hi": "5 cm त्रिज्या वाले वृत्त के बाहरी बिंदु से खींची गई दो स्पर्श रेखाएँ परस्पर लंब हैं। बिंदु की केंद्र से दूरी ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "5 cm",
+          "hi": "5 cm"
+        },
+        {
+          "en": "5√2 cm",
+          "hi": "5√2 cm"
+        },
+        {
+          "en": "10 cm",
+          "hi": "10 cm"
+        },
+        {
+          "en": "5√3 cm",
+          "hi": "5√3 cm"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The radii to the tangent points form a square with the two tangents, so the distance is the diagonal r√2 = 5√2 cm.",
+      "solution_hi": "स्पर्श बिंदुओं तक की त्रिज्याएँ दोनों स्पर्श रेखाओं के साथ वर्ग बनाती हैं, इसलिए दूरी विकर्ण r√2 = 5√2 cm है।",
+      "trick_en": "Perpendicular tangents imply a square OAPB.",
+      "trick_hi": "लंब स्पर्श रेखाएँ वर्ग OAPB बनाती हैं।",
+      "ideal_time_seconds": 55,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-18",
+      "subject": "Quant",
+      "topic": "Mensuration",
+      "sub_topic": "Sphere",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the surface area of a sphere of radius 7 cm (take π = 22/7).",
+      "text_hi": "7 cm त्रिज्या वाले गोले का पृष्ठीय क्षेत्रफल ज्ञात कीजिए (π = 22/7 लें)।",
+      "options": [
+        {
+          "en": "154 cm²",
+          "hi": "154 cm²"
+        },
+        {
+          "en": "308 cm²",
+          "hi": "308 cm²"
+        },
+        {
+          "en": "616 cm²",
+          "hi": "616 cm²"
+        },
+        {
+          "en": "1,232 cm²",
+          "hi": "1,232 cm²"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Surface area = 4πr² = 4 × (22/7) × 49 = 616 cm².",
+      "solution_hi": "पृष्ठीय क्षेत्रफल = 4πr² = 4 × (22/7) × 49 = 616 cm²।",
+      "trick_en": "Sphere surface = 4πr²; the curved area of a hemisphere is only 2πr².",
+      "trick_hi": "गोले का पृष्ठ = 4πr²; अर्धगोले का वक्र पृष्ठ केवल 2πr²।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-19",
+      "subject": "Quant",
+      "topic": "Mensuration",
+      "sub_topic": "Rectangular parallelepiped",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "The volume of a cube is 343 cm³. Find its total surface area.",
+      "text_hi": "एक घन का आयतन 343 cm³ है। उसका कुल पृष्ठीय क्षेत्रफल ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "294 cm²",
+          "hi": "294 cm²"
+        },
+        {
+          "en": "343 cm²",
+          "hi": "343 cm²"
+        },
+        {
+          "en": "392 cm²",
+          "hi": "392 cm²"
+        },
+        {
+          "en": "441 cm²",
+          "hi": "441 cm²"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Side = ∛343 = 7 cm. Total surface area = 6 × 7² = 294 cm².",
+      "solution_hi": "भुजा = ∛343 = 7 cm। कुल पृष्ठीय क्षेत्रफल = 6 × 7² = 294 cm²।",
+      "trick_en": "Take the cube root first, then apply 6a².",
+      "trick_hi": "पहले घनमूल लें, फिर 6a² लगाएँ।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-20",
+      "subject": "Quant",
+      "topic": "Trigonometry",
+      "sub_topic": "Complementary angles",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Evaluate sin 60° cos 30° + cos 60° sin 30°.",
+      "text_hi": "sin 60° cos 30° + cos 60° sin 30° का मान ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "1/2",
+          "hi": "1/2"
+        },
+        {
+          "en": "√3/2",
+          "hi": "√3/2"
+        },
+        {
+          "en": "1",
+          "hi": "1"
+        },
+        {
+          "en": "0",
+          "hi": "0"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "This is sin(60° + 30°) = sin 90° = 1.",
+      "solution_hi": "यह sin(60° + 30°) = sin 90° = 1 है।",
+      "trick_en": "Recognise the sin(A + B) expansion.",
+      "trick_hi": "sin(A + B) के प्रसार को पहचानें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-21",
+      "subject": "Quant",
+      "topic": "Trigonometry",
+      "sub_topic": "Trigonometric ratios",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "If tan θ = 3/4, what is sin θ (θ acute)?",
+      "text_hi": "यदि tan θ = 3/4 है, तो sin θ (θ न्यून कोण) क्या है?",
+      "options": [
+        {
+          "en": "3/5",
+          "hi": "3/5"
+        },
+        {
+          "en": "4/5",
+          "hi": "4/5"
+        },
+        {
+          "en": "5/3",
+          "hi": "5/3"
+        },
+        {
+          "en": "5/4",
+          "hi": "5/4"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "With opposite 3 and adjacent 4, the hypotenuse is 5, so sin θ = 3/5.",
+      "solution_hi": "सम्मुख 3 और संलग्न 4 लेने पर कर्ण 5 है, इसलिए sin θ = 3/5।",
+      "trick_en": "Build a 3-4-5 triangle from tan θ.",
+      "trick_hi": "tan θ से 3-4-5 त्रिभुज बनाएँ।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-22",
+      "subject": "Quant",
+      "topic": "Trigonometry",
+      "sub_topic": "Heights and distances",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "The angle of elevation of the top of a tower from a point 45 m away on level ground is 30°. Find the height of the tower.",
+      "text_hi": "समतल भूमि पर 45 m दूर एक बिंदु से मीनार के शिखर का उन्नयन कोण 30° है। मीनार की ऊँचाई ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "15 m",
+          "hi": "15 m"
+        },
+        {
+          "en": "15√3 m",
+          "hi": "15√3 m"
+        },
+        {
+          "en": "45√3 m",
+          "hi": "45√3 m"
+        },
+        {
+          "en": "90 m",
+          "hi": "90 m"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "tan 30° = h/45, so h = 45 × (1/√3) = 15√3 m.",
+      "solution_hi": "tan 30° = h/45, इसलिए h = 45 × (1/√3) = 15√3 m।",
+      "trick_en": "Height = distance × tan(elevation).",
+      "trick_hi": "ऊँचाई = दूरी × tan(उन्नयन कोण)।",
+      "ideal_time_seconds": 55,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "quant4-23",
+      "subject": "Quant",
+      "topic": "Statistical Charts",
+      "sub_topic": "Tables and graphs",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "The table shows units produced by two factories. What was the total production in 2024?",
+      "text_hi": "तालिका दो कारखानों का उत्पादन दर्शाती है। 2024 में कुल उत्पादन कितना था?",
+      "options": [
+        {
+          "en": "380",
+          "hi": "380"
+        },
+        {
+          "en": "390",
+          "hi": "390"
+        },
+        {
+          "en": "410",
+          "hi": "410"
+        },
+        {
+          "en": "420",
+          "hi": "420"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "In 2024, factory A produced 210 units and factory B produced 200 units, so the total is 410.",
+      "solution_hi": "2024 में कारखाना A ने 210 इकाई और कारखाना B ने 200 इकाई उत्पादन किया, इसलिए कुल 410 है।",
+      "trick_en": "Read the 2024 column and add both factories.",
+      "trick_hi": "2024 का स्तंभ पढ़ें और दोनों कारखाने जोड़ें।",
+      "ideal_time_seconds": 45,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "di-2026-t1-04"
+    },
+    {
+      "qid": "quant4-24",
+      "subject": "Quant",
+      "topic": "Statistical Charts",
+      "sub_topic": "Tables and graphs",
+      "difficulty": "Hard",
+      "question_type": "Passage_Based",
+      "text_en": "Using the same table, what is the ratio of total production of A to that of B over the four years?",
+      "text_hi": "उसी तालिका से, चार वर्षों में A के कुल उत्पादन का B के कुल उत्पादन से अनुपात क्या है?",
+      "options": [
+        {
+          "en": "11 : 12",
+          "hi": "11 : 12"
+        },
+        {
+          "en": "33 : 34",
+          "hi": "33 : 34"
+        },
+        {
+          "en": "66 : 67",
+          "hi": "66 : 67"
+        },
+        {
+          "en": "67 : 66",
+          "hi": "67 : 66"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "A total = 120 + 150 + 180 + 210 = 660. B total = 140 + 160 + 170 + 200 = 670. Ratio = 66 : 67.",
+      "solution_hi": "A का कुल = 120 + 150 + 180 + 210 = 660। B का कुल = 140 + 160 + 170 + 200 = 670। अनुपात = 66 : 67।",
+      "trick_en": "Total each column separately, then simplify by 10.",
+      "trick_hi": "प्रत्येक स्तंभ अलग जोड़ें, फिर 10 से सरल करें।",
+      "ideal_time_seconds": 60,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "di-2026-t1-04"
+    },
+    {
+      "qid": "quant4-25",
+      "subject": "Quant",
+      "topic": "Statistical Charts",
+      "sub_topic": "Pie chart",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "In a pie chart of 5,400 students, one sector has a central angle of 120°. How many students does it represent?",
+      "text_hi": "5,400 विद्यार्थियों के पाई चार्ट में एक क्षेत्र का केंद्रीय कोण 120° है। यह कितने विद्यार्थियों को दर्शाता है?",
+      "options": [
+        {
+          "en": "1,200",
+          "hi": "1,200"
+        },
+        {
+          "en": "1,500",
+          "hi": "1,500"
+        },
+        {
+          "en": "1,800",
+          "hi": "1,800"
+        },
+        {
+          "en": "2,000",
+          "hi": "2,000"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Students = 5400 × 120/360 = 5400/3 = 1,800.",
+      "solution_hi": "विद्यार्थी = 5400 × 120/360 = 5400/3 = 1,800।",
+      "trick_en": "Convert the angle to a fraction of 360°.",
+      "trick_hi": "कोण को 360° के भाग में बदलें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ncert.nic.in/textbook.php",
+        "citation": "NCERT mathematics textbook, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ]
+}

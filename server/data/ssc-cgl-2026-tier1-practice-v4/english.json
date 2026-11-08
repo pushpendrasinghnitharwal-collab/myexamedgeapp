@@ -1,0 +1,999 @@
+{
+  "pack_key": "ssc-cgl-2026-tier1-practice-v4",
+  "sets": [
+    {
+      "ref": "cloze-2026-t1-04",
+      "set_type": "Cloze_Test",
+      "subject": "English",
+      "passage_en": "Urban trees do much more than decorate a city. Their leaves _____ (1) _____ shade that lowers street temperatures. They also _____ (2) _____ dust and pollutants from the air, which _____ (3) _____ respiratory health. During heavy rain, roots _____ (4) _____ water into the ground and reduce flooding. For these reasons, city planners now treat trees as _____ (5) _____ infrastructure rather than a luxury.",
+      "passage_hi": "शहरी पेड़ शहर को सजाने से कहीं अधिक करते हैं। उनकी पत्तियाँ ऐसी छाया _____ (1) _____ करती हैं जो सड़क का तापमान कम करती है। वे हवा से धूल और प्रदूषक भी _____ (2) _____ करते हैं, जिससे श्वसन स्वास्थ्य _____ (3) _____ होता है। तेज़ बारिश में जड़ें पानी को ज़मीन में _____ (4) _____ करती हैं और बाढ़ कम करती हैं। इन कारणों से शहर के योजनाकार अब पेड़ों को विलासिता नहीं, बल्कि _____ (5) _____ अवसंरचना मानते हैं।",
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "Original ExamEdge cloze passage on urban trees and heat; not an SSC passage.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "qid": "english4-01",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Synonyms and homonyms",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word closest in meaning to \"benevolent\".",
+      "text_hi": "\"benevolent\" के अर्थ के सबसे निकट शब्द चुनें।",
+      "options": [
+        {
+          "en": "Cruel",
+          "hi": "Cruel"
+        },
+        {
+          "en": "Kind",
+          "hi": "Kind"
+        },
+        {
+          "en": "Wealthy",
+          "hi": "Wealthy"
+        },
+        {
+          "en": "Strict",
+          "hi": "Strict"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Benevolent\" means kind and wishing to do good, so \"kind\" is the closest synonym.",
+      "solution_hi": "\"Benevolent\" का अर्थ है दयालु और भला चाहने वाला, इसलिए \"kind\" सबसे निकट समानार्थी है।",
+      "trick_en": "Link benevolent to \"benefit\" — wishing good for others.",
+      "trick_hi": "Benevolent को \"benefit\" से जोड़ें — दूसरों का भला चाहना।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-02",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Antonyms",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word most opposite in meaning to \"expand\".",
+      "text_hi": "\"expand\" के अर्थ के सबसे विपरीत शब्द चुनें।",
+      "options": [
+        {
+          "en": "Grow",
+          "hi": "Grow"
+        },
+        {
+          "en": "Contract",
+          "hi": "Contract"
+        },
+        {
+          "en": "Stretch",
+          "hi": "Stretch"
+        },
+        {
+          "en": "Spread",
+          "hi": "Spread"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Expand\" means to become larger; \"contract\" means to become smaller.",
+      "solution_hi": "\"Expand\" का अर्थ है बड़ा होना; \"contract\" का अर्थ है छोटा होना।",
+      "trick_en": "Pair the word with its physical opposite: balloon expands, metal contracts.",
+      "trick_hi": "भौतिक विपरीत से जोड़ें: गुब्बारा फैलता, धातु सिकुड़ती है।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-03",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Spellings and misspelt words",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct spelling of the noun meaning 'an event that happens'.",
+      "text_hi": "'घटित होने वाली घटना' के अर्थ वाले संज्ञा शब्द की सही वर्तनी चुनें।",
+      "options": [
+        {
+          "en": "Occurence",
+          "hi": "Occurence"
+        },
+        {
+          "en": "Occurrence",
+          "hi": "Occurrence"
+        },
+        {
+          "en": "Ocurrence",
+          "hi": "Ocurrence"
+        },
+        {
+          "en": "Occurrance",
+          "hi": "Occurrance"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Occurrence\" has double \"c\", double \"r\" and ends in \"-ence\".",
+      "solution_hi": "\"Occurrence\" में दोहरा \"c\", दोहरा \"r\" और अंत में \"-ence\" है।",
+      "trick_en": "Remember: o-cc-u-rr-ence.",
+      "trick_hi": "याद रखें: o-cc-u-rr-ence।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-04",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Idioms and phrases",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What does \"once in a blue moon\" mean?",
+      "text_hi": "\"once in a blue moon\" का क्या अर्थ है?",
+      "options": [
+        {
+          "en": "Very rarely",
+          "hi": "Very rarely"
+        },
+        {
+          "en": "Every night",
+          "hi": "Every night"
+        },
+        {
+          "en": "Very quickly",
+          "hi": "Very quickly"
+        },
+        {
+          "en": "At midnight",
+          "hi": "At midnight"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The idiom means something that happens very rarely.",
+      "solution_hi": "यह मुहावरा उस बात के लिए है जो बहुत कम होती है।",
+      "trick_en": "Think of the rarity of a blue moon.",
+      "trick_hi": "नीले चाँद की दुर्लभता सोचें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-05",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "One word substitution",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "One word for \"a person who loves and collects books\":",
+      "text_hi": "\"पुस्तकों से प्रेम करने और संग्रह करने वाले व्यक्ति\" के लिए एक शब्द:",
+      "options": [
+        {
+          "en": "Bibliophile",
+          "hi": "Bibliophile"
+        },
+        {
+          "en": "Bibliographer",
+          "hi": "Bibliographer"
+        },
+        {
+          "en": "Philatelist",
+          "hi": "Philatelist"
+        },
+        {
+          "en": "Numismatist",
+          "hi": "Numismatist"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "A bibliophile loves books; a philatelist collects stamps and a numismatist collects coins.",
+      "solution_hi": "Bibliophile को किताबों से प्रेम होता है; philatelist टिकट और numismatist सिक्के संग्रह करता है।",
+      "trick_en": "Biblio- means book.",
+      "trick_hi": "Biblio- का अर्थ पुस्तक है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-06",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "One word substitution",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "One word for \"an abnormal fear of water\":",
+      "text_hi": "\"पानी के प्रति असामान्य भय\" के लिए एक शब्द:",
+      "options": [
+        {
+          "en": "Hydrophobia",
+          "hi": "Hydrophobia"
+        },
+        {
+          "en": "Claustrophobia",
+          "hi": "Claustrophobia"
+        },
+        {
+          "en": "Acrophobia",
+          "hi": "Acrophobia"
+        },
+        {
+          "en": "Xenophobia",
+          "hi": "Xenophobia"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Hydrophobia is fear of water; claustrophobia is fear of closed spaces, acrophobia of heights and xenophobia of strangers.",
+      "solution_hi": "Hydrophobia पानी का भय है; claustrophobia बंद स्थान, acrophobia ऊँचाई और xenophobia अजनबियों का भय है।",
+      "trick_en": "Hydro = water; phobia = fear.",
+      "trick_hi": "Hydro = पानी; phobia = भय।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-07",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Synonyms and homonyms",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word closest in meaning to \"candid\".",
+      "text_hi": "\"candid\" के अर्थ के सबसे निकट शब्द चुनें।",
+      "options": [
+        {
+          "en": "Frank",
+          "hi": "Frank"
+        },
+        {
+          "en": "Cautious",
+          "hi": "Cautious"
+        },
+        {
+          "en": "Formal",
+          "hi": "Formal"
+        },
+        {
+          "en": "Doubtful",
+          "hi": "Doubtful"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "\"Candid\" means honest and direct, so \"frank\" fits best.",
+      "solution_hi": "\"Candid\" का अर्थ है ईमानदार और स्पष्ट, इसलिए \"frank\" सबसे उपयुक्त है।",
+      "trick_en": "A candid answer is a frank answer.",
+      "trick_hi": "Candid उत्तर का अर्थ स्पष्ट और सच्चा उत्तर है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-08",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Spot the error",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the error: Each of the boys (A) / have submitted (B) / their assignments (C) / No error (D).",
+      "text_hi": "त्रुटि चुनें: Each of the boys (A) / have submitted (B) / their assignments (C) / No error (D)।",
+      "options": [
+        {
+          "en": "A",
+          "hi": "A"
+        },
+        {
+          "en": "B",
+          "hi": "B"
+        },
+        {
+          "en": "C",
+          "hi": "C"
+        },
+        {
+          "en": "D",
+          "hi": "D"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Each\" is singular, so the verb should be \"has submitted\", not \"have submitted\".",
+      "solution_hi": "\"Each\" एकवचन है, इसलिए क्रिया \"has submitted\" होनी चाहिए, \"have submitted\" नहीं।",
+      "trick_en": "Words like each, every and either take a singular verb.",
+      "trick_hi": "each, every, either के साथ एकवचन क्रिया आती है।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-09",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Spot the error",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the error: He is senior (A) / than me (B) / by five years (C) / No error (D).",
+      "text_hi": "त्रुटि चुनें: He is senior (A) / than me (B) / by five years (C) / No error (D)।",
+      "options": [
+        {
+          "en": "A",
+          "hi": "A"
+        },
+        {
+          "en": "B",
+          "hi": "B"
+        },
+        {
+          "en": "C",
+          "hi": "C"
+        },
+        {
+          "en": "D",
+          "hi": "D"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Latin comparatives such as senior, junior, superior and inferior take \"to\", not \"than\": \"senior to me\".",
+      "solution_hi": "senior, junior, superior, inferior जैसे तुलनात्मक शब्दों के साथ \"than\" नहीं, \"to\" आता है: \"senior to me\"।",
+      "trick_en": "Senior/junior/superior/inferior always take \"to\".",
+      "trick_hi": "Senior/junior/superior/inferior के साथ सदैव \"to\"।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-10",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "She is very good ___ mathematics.",
+      "text_hi": "वह गणित में बहुत अच्छी है। (रिक्त स्थान भरें)",
+      "options": [
+        {
+          "en": "in",
+          "hi": "in"
+        },
+        {
+          "en": "at",
+          "hi": "at"
+        },
+        {
+          "en": "on",
+          "hi": "on"
+        },
+        {
+          "en": "with",
+          "hi": "with"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The correct collocation is \"good at\" a subject or skill.",
+      "solution_hi": "सही संयोजन \"good at\" है, किसी विषय या कौशल के लिए।",
+      "trick_en": "Good at skills; good for health.",
+      "trick_hi": "कौशल के लिए good at; स्वास्थ्य के लिए good for।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-11",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "It took me ___ hour to finish the report.",
+      "text_hi": "रिपोर्ट पूरी करने में मुझे ___ घंटा लगा।",
+      "options": [
+        {
+          "en": "a",
+          "hi": "a"
+        },
+        {
+          "en": "an",
+          "hi": "an"
+        },
+        {
+          "en": "the",
+          "hi": "the"
+        },
+        {
+          "en": "no article",
+          "hi": "no article"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Hour\" begins with a vowel sound, so the indefinite article is \"an\".",
+      "solution_hi": "\"Hour\" का उच्चारण स्वर से शुरू होता है, इसलिए अनिश्चित उपपद \"an\" आता है।",
+      "trick_en": "Choose the article by sound, not by the first letter.",
+      "trick_hi": "उपपद पहले अक्षर से नहीं, उच्चारण से चुनें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-12",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "He ___ in this company since 2019.",
+      "text_hi": "वह 2019 से इस कंपनी में ___ है।",
+      "options": [
+        {
+          "en": "works",
+          "hi": "works"
+        },
+        {
+          "en": "worked",
+          "hi": "worked"
+        },
+        {
+          "en": "has been working",
+          "hi": "has been working"
+        },
+        {
+          "en": "will work",
+          "hi": "will work"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "\"Since 2019\" marks an action continuing to the present, which needs the present perfect continuous.",
+      "solution_hi": "\"Since 2019\" वर्तमान तक जारी क्रिया दर्शाता है, जिसके लिए present perfect continuous आता है।",
+      "trick_en": "Since/for with an ongoing action → has/have been + -ing.",
+      "trick_hi": "since/for के साथ जारी क्रिया → has/have been + -ing।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-13",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Sentence improvement",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the best improvement: The committee will discuss about the proposal tomorrow.",
+      "text_hi": "सर्वोत्तम सुधार चुनें: The committee will discuss about the proposal tomorrow.",
+      "options": [
+        {
+          "en": "discuss about",
+          "hi": "discuss about"
+        },
+        {
+          "en": "discuss",
+          "hi": "discuss"
+        },
+        {
+          "en": "discuss on",
+          "hi": "discuss on"
+        },
+        {
+          "en": "discuss over",
+          "hi": "discuss over"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Discuss\" is a transitive verb and takes a direct object; \"about\" is unnecessary.",
+      "solution_hi": "\"Discuss\" सकर्मक क्रिया है और सीधे कर्म लेती है; \"about\" अनावश्यक है।",
+      "trick_en": "Do not add a preposition after discuss, resemble or reach.",
+      "trick_hi": "discuss, resemble, reach के बाद उपसर्ग न जोड़ें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-14",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Active and passive voice",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Change to passive voice: They are building a new bridge.",
+      "text_hi": "कर्मवाच्य में बदलें: They are building a new bridge.",
+      "options": [
+        {
+          "en": "A new bridge is built.",
+          "hi": "A new bridge is built."
+        },
+        {
+          "en": "A new bridge is being built.",
+          "hi": "A new bridge is being built."
+        },
+        {
+          "en": "A new bridge was being built.",
+          "hi": "A new bridge was being built."
+        },
+        {
+          "en": "A new bridge has built.",
+          "hi": "A new bridge has built."
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Present continuous passive is \"is/are being + past participle\": a new bridge is being built.",
+      "solution_hi": "वर्तमान अपूर्ण कर्मवाच्य \"is/are being + past participle\" है: a new bridge is being built।",
+      "trick_en": "Continuous passive always includes \"being\".",
+      "trick_hi": "अपूर्ण कर्मवाच्य में सदैव \"being\" आता है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-15",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Direct and indirect narration",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct indirect speech: She said, \"Where do you live?\"",
+      "text_hi": "सही अप्रत्यक्ष कथन चुनें: She said, \"Where do you live?\"",
+      "options": [
+        {
+          "en": "She asked where did I live.",
+          "hi": "She asked where did I live."
+        },
+        {
+          "en": "She asked where I lived.",
+          "hi": "She asked where I lived."
+        },
+        {
+          "en": "She asked where do I live.",
+          "hi": "She asked where do I live."
+        },
+        {
+          "en": "She said where I lived.",
+          "hi": "She said where I lived."
+        }
+      ],
+      "correct": 1,
+      "solution_en": "A reported wh-question uses statement order with a shifted tense: \"She asked where I lived.\"",
+      "solution_hi": "अप्रत्यक्ष wh-प्रश्न में कथन क्रम और बदला हुआ काल आता है: \"She asked where I lived.\"",
+      "trick_en": "In reported questions, do not keep the question word order.",
+      "trick_hi": "अप्रत्यक्ष प्रश्न में प्रश्नवाचक शब्द-क्रम न रखें।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-16",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Active and passive voice",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct passive form of \"Someone has stolen my bag.\"",
+      "text_hi": "\"Someone has stolen my bag.\" का सही कर्मवाच्य रूप चुनें।",
+      "options": [
+        {
+          "en": "My bag has stolen.",
+          "hi": "My bag has stolen."
+        },
+        {
+          "en": "My bag has been stolen.",
+          "hi": "My bag has been stolen."
+        },
+        {
+          "en": "My bag was stolen by someone has.",
+          "hi": "My bag was stolen by someone has."
+        },
+        {
+          "en": "My bag is being stolen.",
+          "hi": "My bag is being stolen."
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Present perfect passive is \"has/have been + past participle\": my bag has been stolen.",
+      "solution_hi": "वर्तमान पूर्ण कर्मवाच्य \"has/have been + past participle\" है: my bag has been stolen।",
+      "trick_en": "Perfect passive = has/have been + V3.",
+      "trick_hi": "पूर्ण कर्मवाच्य = has/have been + V3।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-17",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentence parts",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Rearrange: P. the scientist Q. patiently R. recorded S. the readings",
+      "text_hi": "पुनर्व्यवस्थित करें: P. the scientist Q. patiently R. recorded S. the readings",
+      "options": [
+        {
+          "en": "P Q R S",
+          "hi": "P Q R S"
+        },
+        {
+          "en": "P R Q S",
+          "hi": "P R Q S"
+        },
+        {
+          "en": "Q P R S",
+          "hi": "Q P R S"
+        },
+        {
+          "en": "P Q S R",
+          "hi": "P Q S R"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Subject \"the scientist\", adverb \"patiently\", verb \"recorded\", object \"the readings\" gives P Q R S.",
+      "solution_hi": "कर्ता \"the scientist\", क्रिया विशेषण \"patiently\", क्रिया \"recorded\", कर्म \"the readings\" से P Q R S बनता है।",
+      "trick_en": "Subject → adverb → verb → object.",
+      "trick_hi": "कर्ता → क्रिया विशेषण → क्रिया → कर्म।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-18",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentence parts",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Rearrange: P. although it was raining Q. the match R. continued S. without a break",
+      "text_hi": "पुनर्व्यवस्थित करें: P. although it was raining Q. the match R. continued S. without a break",
+      "options": [
+        {
+          "en": "P Q R S",
+          "hi": "P Q R S"
+        },
+        {
+          "en": "Q P R S",
+          "hi": "Q P R S"
+        },
+        {
+          "en": "P R Q S",
+          "hi": "P R Q S"
+        },
+        {
+          "en": "Q R P S",
+          "hi": "Q R P S"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The concessive clause \"although it was raining\" comes first, then subject, verb and adverbial: P Q R S.",
+      "solution_hi": "रियायती उपवाक्य \"although it was raining\" पहले, फिर कर्ता, क्रिया और क्रिया विशेषण: P Q R S।",
+      "trick_en": "A clause beginning with although/because generally fronts the sentence.",
+      "trick_hi": "although/because वाला उपवाक्य सामान्यतः वाक्य के आरंभ में आता है।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-19",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentences in a passage",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Arrange: S. The village had no bridge. Q. During the monsoon the river rose. P. Children could not reach school. R. The panchayat finally built a footbridge.",
+      "text_hi": "व्यवस्थित करें: S. The village had no bridge. Q. During the monsoon the river rose. P. Children could not reach school. R. The panchayat finally built a footbridge.",
+      "options": [
+        {
+          "en": "S Q P R",
+          "hi": "S Q P R"
+        },
+        {
+          "en": "Q S P R",
+          "hi": "Q S P R"
+        },
+        {
+          "en": "S P Q R",
+          "hi": "S P Q R"
+        },
+        {
+          "en": "Q P S R",
+          "hi": "Q P S R"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The missing bridge (S) is the setting, the rising river (Q) creates the problem, school absence (P) is the effect and the footbridge (R) is the solution: S Q P R.",
+      "solution_hi": "पुल न होना (S) पृष्ठभूमि है, नदी का बढ़ना (Q) समस्या, स्कूल न जा पाना (P) प्रभाव और पैदल पुल (R) समाधान: S Q P R।",
+      "trick_en": "Setting → problem → effect → solution.",
+      "trick_hi": "पृष्ठभूमि → समस्या → प्रभाव → समाधान।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-20",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentences in a passage",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Arrange: P. The results were announced. Q. She had prepared for months. R. Her name was on the list. S. She celebrated with her family.",
+      "text_hi": "व्यवस्थित करें: P. The results were announced. Q. She had prepared for months. R. Her name was on the list. S. She celebrated with her family.",
+      "options": [
+        {
+          "en": "Q P R S",
+          "hi": "Q P R S"
+        },
+        {
+          "en": "P Q R S",
+          "hi": "P Q R S"
+        },
+        {
+          "en": "Q R P S",
+          "hi": "Q R P S"
+        },
+        {
+          "en": "P R Q S",
+          "hi": "P R Q S"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Preparation (Q) precedes the announcement (P), followed by the result (R) and celebration (S): Q P R S.",
+      "solution_hi": "तैयारी (Q) पहले, फिर घोषणा (P), परिणाम (R) और उत्सव (S): Q P R S।",
+      "trick_en": "Flashback preparation comes before the main event.",
+      "trick_hi": "पूर्व तैयारी मुख्य घटना से पहले आती है।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english4-21",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Choose the most appropriate word for blank (1).",
+      "text_hi": "रिक्त स्थान (1) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "provide",
+          "hi": "provide"
+        },
+        {
+          "en": "refuse",
+          "hi": "refuse"
+        },
+        {
+          "en": "remove",
+          "hi": "remove"
+        },
+        {
+          "en": "delay",
+          "hi": "delay"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Leaves provide shade; the other verbs do not collocate with shade here.",
+      "solution_hi": "पत्तियाँ छाया प्रदान करती हैं; अन्य क्रियाएँ यहाँ छाया के साथ उपयुक्त नहीं हैं।",
+      "trick_en": "Read the whole sentence; the surrounding words decide the collocation.",
+      "trick_hi": "पूरा वाक्य पढ़ें; आसपास के शब्द संयोजन तय करते हैं।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-04"
+    },
+    {
+      "qid": "english4-22",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Choose the most appropriate word for blank (2).",
+      "text_hi": "रिक्त स्थान (2) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "produce",
+          "hi": "produce"
+        },
+        {
+          "en": "absorb",
+          "hi": "absorb"
+        },
+        {
+          "en": "ignore",
+          "hi": "ignore"
+        },
+        {
+          "en": "release",
+          "hi": "release"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Trees absorb dust and pollutants from the air.",
+      "solution_hi": "पेड़ हवा से धूल और प्रदूषक सोखते हैं।",
+      "trick_en": "Read the whole sentence; the surrounding words decide the collocation.",
+      "trick_hi": "पूरा वाक्य पढ़ें; आसपास के शब्द संयोजन तय करते हैं।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-04"
+    },
+    {
+      "qid": "english4-23",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Choose the most appropriate word for blank (3).",
+      "text_hi": "रिक्त स्थान (3) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "improve",
+          "hi": "improve"
+        },
+        {
+          "en": "harm",
+          "hi": "harm"
+        },
+        {
+          "en": "delay",
+          "hi": "delay"
+        },
+        {
+          "en": "measure",
+          "hi": "measure"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Cleaner air improves respiratory health.",
+      "solution_hi": "स्वच्छ हवा श्वसन स्वास्थ्य को बेहतर करती है।",
+      "trick_en": "Read the whole sentence; the surrounding words decide the collocation.",
+      "trick_hi": "पूरा वाक्य पढ़ें; आसपास के शब्द संयोजन तय करते हैं।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-04"
+    },
+    {
+      "qid": "english4-24",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Choose the most appropriate word for blank (4).",
+      "text_hi": "रिक्त स्थान (4) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "block",
+          "hi": "block"
+        },
+        {
+          "en": "direct",
+          "hi": "direct"
+        },
+        {
+          "en": "evaporate",
+          "hi": "evaporate"
+        },
+        {
+          "en": "pollute",
+          "hi": "pollute"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Roots direct rainwater into the ground, reducing surface flooding.",
+      "solution_hi": "जड़ें वर्षा जल को ज़मीन में भेजती हैं, जिससे सतही बाढ़ कम होती है।",
+      "trick_en": "Read the whole sentence; the surrounding words decide the collocation.",
+      "trick_hi": "पूरा वाक्य पढ़ें; आसपास के शब्द संयोजन तय करते हैं।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-04"
+    },
+    {
+      "qid": "english4-25",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Choose the most appropriate word for blank (5).",
+      "text_hi": "रिक्त स्थान (5) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "temporary",
+          "hi": "temporary"
+        },
+        {
+          "en": "optional",
+          "hi": "optional"
+        },
+        {
+          "en": "essential",
+          "hi": "essential"
+        },
+        {
+          "en": "fragile",
+          "hi": "fragile"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The contrast with \"luxury\" calls for \"essential infrastructure\".",
+      "solution_hi": "\"विलासिता\" के विपरीत \"essential infrastructure\" उपयुक्त है।",
+      "trick_en": "Read the whole sentence; the surrounding words decide the collocation.",
+      "trick_hi": "पूरा वाक्य पढ़ें; आसपास के शब्द संयोजन तय करते हैं।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-04"
+    }
+  ]
+}
