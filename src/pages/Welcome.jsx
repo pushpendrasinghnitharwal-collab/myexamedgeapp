@@ -28,7 +28,7 @@ export default function Welcome() {
           <p>{L({ en: 'A thoughtful space to practise, build your routine and see how far you have come.', hi: 'अभ्यास करें, अपनी दिनचर्या बनाएँ और अपनी प्रगति देखें।' })}</p>
           <div className="welcome-art" role="presentation" />
           <div className="welcome-features">
-            <div><span><BookOpen size={18} aria-hidden="true" /></span><p><strong>{L({ en: 'Practise your way', hi: 'अपने तरीके से अभ्यास' })}</strong><small>{L({ en: 'Explore available practice sets', hi: 'उपलब्ध अभ्यास सेट खोजें' })}</small></p></div>
+            <div><span><BookOpen size={18} aria-hidden="true" /></span><p><strong>{L({ en: 'Practise your way', hi: 'अपने तरीके से अभ्यास' })}</strong><small>{L({ en: 'New SSC CGL practice is being prepared', hi: 'नया SSC CGL अभ्यास तैयार हो रहा है' })}</small></p></div>
             <div><span><ChartNoAxesCombined size={18} aria-hidden="true" /></span><p><strong>{L({ en: 'See your progress', hi: 'अपनी प्रगति देखें' })}</strong><small>{L({ en: 'Every little step counts', hi: 'हर छोटा कदम मायने रखता है' })}</small></p></div>
           </div>
         </section>

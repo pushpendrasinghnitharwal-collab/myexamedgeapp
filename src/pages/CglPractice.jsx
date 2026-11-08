@@ -1,0 +1,26 @@
+import React,{useEffect,useMemo,useState} from 'react'
+import {ArrowRight,BookOpen,BrainCircuit,ChevronRight,Layers3,Target} from 'lucide-react'
+import {api} from '../lib/api'
+import {useCglStage,useResource} from '../lib/cglData'
+import {stageSubjects,STAGES,syllabusOptions} from '../lib/cglModel'
+import {Notice,PageHeader,usePrepare} from '../components/CglUI'
+
+export default function CglPractice({initialSubject,initialTopic}){
+  const [stage]=useCglStage(),subjects=stageSubjects(stage),[subject,setSubject]=useState(initialSubject||'Quant'),[topic,setTopic]=useState(initialTopic||''),[subtopic,setSubtopic]=useState(''),[count,setCount]=useState(20),[difficulty,setDifficulty]=useState('')
+  const syllabus=useResource('canonical-syllabus',()=>api.cglSyllabus()),formats=useResource('master-formats',()=>api.masterFormats()),{prepare,busy,error,user}=usePrepare()
+  useEffect(()=>{if(!subjects.some(s=>s.code===subject)){setSubject('Quant');setTopic('');setSubtopic('')}if(stage==='Tier_1'&&difficulty==='Mains_Level')setDifficulty('')},[stage])
+  const topics=useMemo(()=>syllabusOptions(syllabus.data?.mappings,stage,subject),[syllabus.data,stage,subject]),children=topics.find(t=>t.topic===topic)?.subtopics||[]
+  useEffect(()=>{if(syllabus.data&&topic&&!topics.some(t=>t.topic===topic)){setTopic('');setSubtopic('')}},[stage,subject,syllabus.data])
+  const ready=formats.data?.assembler?.ok===true
+  function submit(e){e.preventDefault();const spec={category:'Micro',stage,subject,count};if(topic)spec.topic=topic;if(subtopic)spec.sub_topic=subtopic;if(difficulty)spec.difficulty=difficulty;prepare(spec)}
+  return <div className="cc-page"><PageHeader eyebrow="SUBJECT & TOPIC PRACTICE" title="Get better, one topic at a time." description={`Build a focused ${STAGES[stage].short} drill around what matters to you.`}/>
+    <div className="cc-subject-grid">{subjects.map(s=><button className={`cc-subject-card ${subject===s.code?'is-active':''}`} key={s.code} onClick={()=>{setSubject(s.code);setTopic('');setSubtopic('')}}><span className={`cc-subject-icon ${s.color}`}>{s.initial}</span><span><strong>{s.short}</strong><small>{s.code==='Computer_Knowledge'?'Qualifying module':'Subject practice'}</small></span><ChevronRight size={16}/></button>)}</div>
+    <div className="cc-practice-layout"><form className="cc-card cc-drill-form" onSubmit={submit}><div className="cc-card-heading"><div><div className="cc-eyebrow">MAKE IT YOURS</div><h2>Build your practice drill</h2><p>Choose a subject, then narrow your focus.</p></div><span className="cc-heading-icon"><Target size={19}/></span></div>
+      {syllabus.error&&<Notice>Topic options are unavailable while the practice service is disconnected. Your saved progress is safe.</Notice>}
+      {error&&<Notice>{error}</Notice>}
+      <div className="cc-form-grid"><label><span>Subject</span><select value={subject} onChange={e=>{setSubject(e.target.value);setTopic('');setSubtopic('')}}>{subjects.map(s=><option key={s.code} value={s.code}>{s.name}</option>)}</select></label><label><span>Topic <small>optional</small></span><select value={topic} disabled={!syllabus.data} onChange={e=>{setTopic(e.target.value);setSubtopic('')}}><option value="">All topics</option>{topics.map(t=><option key={t.topic} value={t.topic}>{t.topic}</option>)}</select></label><label><span>Sub-topic <small>optional</small></span><select value={subtopic} disabled={!topic||!syllabus.data} onChange={e=>setSubtopic(e.target.value)}><option value="">All sub-topics</option>{children.map(t=><option key={t}>{t}</option>)}</select></label><label><span>Questions</span><select value={count} onChange={e=>setCount(Number(e.target.value))}>{Array.from({length:16},(_,i)=>i+15).map(n=><option key={n} value={n}>{n} questions</option>)}</select></label></div>
+      <div className="cc-difficulty"><span>Difficulty <small>optional</small></span><div className="cc-pills">{[{value:'',name:'All levels'},{value:'Easy',name:'Easy'},{value:'Medium',name:'Medium'},{value:'Hard',name:'Hard'},...(stage==='Tier_2'?[{value:'Mains_Level',name:'Mains level'}]:[])].map(d=><button type="button" key={d.value} className={difficulty===d.value?'is-active':''} aria-pressed={difficulty===d.value} onClick={()=>setDifficulty(d.value)}>{d.name}</button>)}</div></div>
+      <div className="cc-form-footer"><div><strong>{count} questions</strong><span>Untimed · {STAGES[stage].marks} marking</span></div><button className="cc-primary-button" disabled={!ready||busy} type="submit">{busy?'Preparing…':formats.loading?'Checking service…':!ready?'Service unavailable':!user?'Sign in to prepare':'Prepare drill'} <ArrowRight size={16}/></button></div>
+    </form><aside className="cc-practice-aside"><div className="cc-tip-icon"><BrainCircuit size={23}/></div><div className="cc-eyebrow">A SMARTER WAY TO PRACTISE</div><h2>Small sessions.<br/>Steady progress.</h2><p>Focus on one area at a time. Your radar becomes more useful as you answer questions.</p><div className="cc-tip-list"><span><BookOpen size={16}/> 15–30 questions per drill</span><span><Layers3 size={16}/> Passage sets stay together</span><span><Target size={16}/> Unseen questions come first</span><span><BrainCircuit size={16}/> AI Mentor unlocks after submission</span></div></aside></div>
+  </div>
+}

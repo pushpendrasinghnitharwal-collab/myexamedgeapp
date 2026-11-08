@@ -4,6 +4,8 @@ import bcrypt from 'bcryptjs'
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
 import { query, initSchema, pool } from './db.js'
+import { cglHealth, createCglRouter } from './cgl-api.js'
+import { validateRegistration } from './auth-validation.js'
 
 dotenv.config()
 
@@ -47,70 +49,53 @@ function auth(req, res, next) {
   }
 }
 
-// deterministic PRNG (same algorithm as the frontend)
-function mulberry32(seed) {
-  let a = seed >>> 0
-  return function () {
-    a |= 0
-    a = (a + 0x6d2b79f5) | 0
-    let t = Math.imul(a ^ (a >>> 15), 1 | a)
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
-  }
-}
-function hashString(str) {
-  let h = 2166136261
-  for (let i = 0; i < str.length; i++) {
-    h ^= str.charCodeAt(i)
-    h = Math.imul(h, 16777619)
-  }
-  return h >>> 0
-}
-function shuffleWith(list, rand) {
-  const arr = list.slice()
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(rand() * (i + 1))
-    ;[arr[i], arr[j]] = [arr[j], arr[i]]
-  }
-  return arr
-}
-
-// ── health ───────────────────────────────────────────────
+// Health reports the schema state without exposing connection details. Migration is
+// explicit; server boot never drops learner data or silently resets the bank.
 app.get('/api/health', async (_req, res) => {
   try {
-    const { rows } = await query('SELECT COUNT(*)::int AS c FROM questions')
-    res.json({ ok: true, questions: rows[0].c, time: new Date().toISOString() })
-  } catch (e) {
-    res.status(500).json({ ok: false, error: e.message })
+    const result = await cglHealth(query)
+    res.status(result.ok ? 200 : 503).json({ ...result, time: new Date().toISOString() })
+  } catch (error) {
+    console.error('Health check failed:', error.message)
+    res.status(503).json({ ok: false, code: 'DATABASE_UNAVAILABLE' })
   }
 })
+app.use('/api/cgl', createCglRouter({ pool, query, auth }))
 
 // ── auth ─────────────────────────────────────────────────
 app.post('/api/auth/register', async (req, res) => {
-  const { name, email, password, targetExam } = req.body || {}
-  if (!name || !email || !password) return res.status(400).json({ error: 'name, email and password are required' })
-  const hash = await bcrypt.hash(password, 10)
+  if (!JWT_SECRET) return res.status(503).json({ error: 'Practice sign-in is not configured' })
+  const { name, email, password, targetExam, error } = validateRegistration(req.body)
+  if (error) return res.status(400).json({ error })
   try {
+    const hash = await bcrypt.hash(password, 10)
     const { rows } = await query(
       `INSERT INTO users (name, email, password_hash, target_exam) VALUES ($1,$2,$3,$4)
        RETURNING *`,
-      [name.trim(), email.trim().toLowerCase(), hash, targetExam || null]
+      [name, email, hash, targetExam]
     )
     const u = rows[0]
     res.status(201).json({ token: sign(u), user: publicUser(u) })
   } catch (e) {
     if (e.code === '23505') return res.status(409).json({ error: 'Email already registered' })
-    res.status(500).json({ error: e.message })
+    console.error('Registration failed:', e.message)
+    res.status(500).json({ error: 'Registration is unavailable' })
   }
 })
 
 app.post('/api/auth/login', async (req, res) => {
+  if (!JWT_SECRET) return res.status(503).json({ error: 'Practice sign-in is not configured' })
   const { email, password } = req.body || {}
-  const { rows } = await query('SELECT * FROM users WHERE email = $1', [String(email || '').trim().toLowerCase()])
-  const u = rows[0]
-  if (!u || !(await bcrypt.compare(password || '', u.password_hash)))
-    return res.status(401).json({ error: 'Invalid email or password' })
-  res.json({ token: sign(u), user: publicUser(u) })
+  try {
+    const { rows } = await query('SELECT * FROM users WHERE email = $1', [String(email || '').trim().toLowerCase()])
+    const u = rows[0]
+    if (!u || !(await bcrypt.compare(typeof password === 'string' ? password : '', u.password_hash)))
+      return res.status(401).json({ error: 'Invalid email or password' })
+    res.json({ token: sign(u), user: publicUser(u) })
+  } catch (error) {
+    console.error('Sign-in failed:', error.message)
+    res.status(503).json({ error: 'Practice sign-in is unavailable' })
+  }
 })
 
 app.get('/api/me', auth, async (req, res) => {
@@ -138,140 +123,14 @@ app.get('/api/exams', async (_req, res) => {
   res.json({ exams: rows.map((r) => r.data) })
 })
 
-// ── paper generation (server-side, same blueprint as frontend) ──
-app.get('/api/paper', async (req, res) => {
-  const examId = String(req.query.examId || '')
-  const count = Math.min(100, Math.max(5, parseInt(req.query.count || '25', 10)))
-  const seed = parseInt(req.query.seed || '1', 10)
-  const topic = req.query.topic ? String(req.query.topic) : null
-
-  const { rows: examRows } = await query('SELECT data FROM exams WHERE id = $1', [examId])
-  if (!examRows[0]) return res.status(404).json({ error: 'Exam not found' })
-  const exam = examRows[0].data
-
-  let sql = `SELECT id, topic, subject, diff, q_en, q_hi, o_en, o_hi FROM questions WHERE exams ? $1`
-  const params = [examId]
-  if (topic) {
-    sql += ' AND topic = $2'
-    params.push(topic)
-  }
-  const { rows } = await query(sql, params)
-
-  const rand = mulberry32(hashString(examId + ':' + seed))
-  const bySubject = {}
-  rows.forEach((q) => (bySubject[q.subject] = bySubject[q.subject] || []).push(q))
-  const subjectOrder = (exam.subjects || []).filter((s) => bySubject[s]?.length)
-  const extra = Object.keys(bySubject).filter((s) => !(exam.subjects || []).includes(s))
-  const pools = [...subjectOrder, ...extra].map((s) => shuffleWith(bySubject[s], rand))
-
-  const picked = []
-  let guard = 0
-  while (picked.length < count && guard < count * 40) {
-    guard++
-    let progressed = false
-    for (const pool of pools) {
-      if (picked.length >= count) break
-      if (pool.length) {
-        picked.push(pool.pop())
-        progressed = true
-      }
-    }
-    if (!progressed) break
-  }
-  const paper = shuffleWith(picked, rand).map((q) => ({
-    id: q.id,
-    topic: q.topic,
-    subject: q.subject,
-    diff: q.diff,
-    q: { en: q.q_en, hi: q.q_hi },
-    o: q.o_en.map((en, i) => ({ en, hi: q.o_hi[i] })),
-  }))
-  res.json({ examId, seed, count: paper.length, questions: paper })
-})
-
-// ── submit attempt ───────────────────────────────────────
-app.post('/api/attempts', auth, async (req, res) => {
-  const { examId, testId, mode, answers, timeTaken } = req.body || {}
-  if (!examId || !Array.isArray(answers)) return res.status(400).json({ error: 'examId and answers[] required' })
-
-  const ids = answers.map((a) => a.id)
-  const { rows } = await query(
-    `SELECT id, a, exp_en, exp_hi, topic, subject FROM questions WHERE id = ANY($1)`,
-    [ids]
-  )
-  const byId = Object.fromEntries(rows.map((q) => [q.id, q]))
-
-  let correct = 0, wrong = 0, skipped = 0, score = 0
-  const maxScore = answers.length * 4
-  const graded = answers.map((a) => {
-    const q = byId[a.id]
-    if (!q) return { id: a.id, ok: false, correctAnswer: null }
-    if (a.choice == null || a.choice === '') skipped++
-    else if (a.choice === q.a) { correct++; score += 4 }
-    else { wrong++; score -= 1 }
-    return {
-      id: a.id,
-      choice: a.choice ?? null,
-      ok: a.choice === q.a,
-      correctAnswer: q.a,
-      topic: q.topic,
-      subject: q.subject,
-      exp: { en: q.exp_en, hi: q.exp_hi },
-    }
-  })
-  const total = answers.length
-  const accuracy = total ? Math.round((correct / total) * 1000) / 10 : 0
-
-  const { rows: ins } = await query(
-    `INSERT INTO attempts (user_id, exam_id, test_id, mode, total, correct, wrong, skipped, score, max_score, accuracy, time_taken, answers)
-     VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13) RETURNING *`,
-    [req.userId, examId, testId || 'custom', mode || 'mock', total, correct, wrong, skipped, score, maxScore, accuracy, timeTaken || 0, JSON.stringify(graded)]
-  )
-  const att = ins[0]
-
-  // update user xp / coins / streak
-  const today = new Date().toISOString().slice(0, 10)
-  await query(
-    `UPDATE users SET
-       xp = xp + $2,
-       coins = coins + $3,
-       streak_count = CASE
-         WHEN streak_last = ($4::date - interval '1 day') THEN streak_count + 1
-         WHEN streak_last = $4::date THEN streak_count
-         ELSE 1 END,
-       streak_last = $4::date
-     WHERE id = $1`,
-    [req.userId, Math.round(score * 2 + correct * 3), Math.round(correct * 0.6), today]
-  )
-
-  // all-India rank for this exam by average accuracy (min 3 attempts)
-  const { rows: rankRows } = await query(
-    `SELECT user_id, COUNT(*)::int AS n, AVG(accuracy)::numeric AS avg_acc FROM attempts
-     WHERE exam_id = $1 GROUP BY user_id HAVING COUNT(*) >= 1 ORDER BY avg_acc DESC, SUM(score) DESC`,
-    [examId]
-  )
-  const rank = rankRows.findIndex((r) => r.user_id === req.userId) + 1
-
-  res.status(201).json({
-    attempt: {
-      id: att.id,
-      examId: att.exam_id,
-      testId: att.test_id,
-      mode: att.mode,
-      total: att.total,
-      correct: att.correct,
-      wrong: att.wrong,
-      skipped: att.skipped,
-      score: Number(att.score),
-      maxScore: Number(att.max_score),
-      accuracy: Number(att.accuracy),
-      timeTaken: att.time_taken,
-      createdAt: att.created_at,
-      rank,
-    },
-    graded,
-  })
-})
+// Retired legacy paper/grade APIs must not read the dropped question schema or
+// silently apply the old non-SSC scoring rules. Historical attempt reads remain.
+app.get('/api/paper', (_req, res) => res.status(410).json({
+  error: 'The legacy question bank has been retired. Use /api/cgl/mock-tests.', code: 'LEGACY_BANK_RETIRED',
+}))
+app.post('/api/attempts', auth, (_req, res) => res.status(410).json({
+  error: 'Legacy submission is retired. Use /api/cgl/attempts for a published SSC CGL mock.', code: 'LEGACY_BANK_RETIRED',
+}))
 
 app.get('/api/attempts', auth, async (req, res) => {
   const examId = req.query.examId ? String(req.query.examId) : null

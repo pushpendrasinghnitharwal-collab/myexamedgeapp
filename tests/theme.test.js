@@ -51,11 +51,12 @@ test('installed app chrome matches the refreshed interface', async () => {
   const [manifestText, html, css] = await Promise.all([
     readFile('public/manifest.webmanifest', 'utf8'),
     readFile('index.html', 'utf8'),
-    readFile('src/refresh.css', 'utf8'),
+    readFile('src/command-center.css', 'utf8'),
   ])
   const manifest = JSON.parse(manifestText)
-  const light = rule(css, ":root,\nhtml[data-theme='light']")
-  assert.equal(manifest.background_color, color(light, '--bg'))
+  const shell = rule(css, '.command-app,.cc-runner')
+  assert.equal(manifest.background_color, color(shell, '--cc-bg'))
   assert.ok(html.includes(`<meta name="theme-color" content="${manifest.theme_color}"`))
-  assert.ok(rule(css, ".ee-sidebar, html[data-theme='light'] .ee-sidebar").includes(manifest.theme_color))
+  assert.ok(rule(css, '.cc-brand-mark,.cc-mobile-mark,.cc-runner-brand>span').includes(manifest.theme_color))
+  assert.deepEqual(manifest.shortcuts.map(s => s.url), ['/#/mocks','/#/practice','/#/pyq','/#/current-affairs','/#/analytics'])
 })

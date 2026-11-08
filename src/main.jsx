@@ -18,6 +18,7 @@ import './catalog.css'
 import './studio.css'
 import './auth.css'
 import './finale.css'
+import './command-center.css'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>

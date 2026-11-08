@@ -1,0 +1,47 @@
+# Tier II DEST practice and post-submission AI Mentor
+
+Both features are additive. DEST is a **separate device-only practice**, not an MCQ module and not part of merit, Computer qualification, streaks, or backend attempt history. The mentor uses the existing submitted master review for mocks and Micro drills; nothing is revealed through the active player. No new migrations or content seeding are needed.
+
+## DEST simulator
+
+The dashboard, Tier II mock hub, and submitted full Tier II review link to the simulator. The two passages are original fictional English practice prose, **not SSC/TCS passages or PYQs**. Each has exactly 2,000 printable ASCII characters, including spaces and punctuation. A character is not necessarily one physical key depression: Shift, corrections, and browser/keyboard behavior differ.
+
+* The standard timer is 15 minutes, starts immediately, and submits at zero. The 2026 notice allows eligible candidates an extra five minutes; this simulator currently only provides the standard duration. It is not the TCS iON test environment.
+* During a running page view, the countdown uses the larger of wall-clock and monotonic elapsed time and never increases. On a same-tab reload, the stored deadline and last remaining value resume it; time away still counts. This is a client-side practice clock, not tamper-proof or a server-certified examination timer, and cannot guarantee recovery after closing the tab or manipulating the system clock.
+* `sessionStorage` holds the active text/counters/deadline and the latest result for recovery in that browser tab, scoped to the backend account when signed in (or `guest`). It is not sent to the server and is cleared when the tab's session storage is cleared. **Reset device data** clears these DEST entries in the current tab. Category is screen-only. There is no cloud DEST history.
+* Paste, drop, cut, undo/redo shortcuts, spellchecking, capitalization assistance and autocorrection are blocked/requested off where browsers and keyboards permit; browser/IME restrictions are not foolproof. Corrections and Backspace are allowed. Optional positional highlighting is helpful but may shift after an insertion or omission; the final score uses word alignment instead.
+* The browser tracks printable text/Enter keydowns, Backspace and Delete. Total displayed key depressions are their sum; modifiers and navigation keys are excluded. Gross WPM = text keydowns ÷ 5 ÷ elapsed minutes, including characters later corrected but excluding Backspace/Delete. On some mobile/IME keyboards keydown events are incomplete, so counts and WPM may be incomplete. The final character count is a separate metric, and very short attempts can inflate WPM.
+
+### Practice scoring and qualifying comparisons
+
+The simulation aligns whole words, preferring fewer full word edits, then half mistakes. It approximates omissions, additions, substitutions, spelling and incomplete words as full mistakes; case, punctuation, spacing and adjacent word transpositions as half mistakes. Untyped remainder counts as omitted. It is a heuristic: tricky sequences, mixed formatting, multiple adjacent edits, paragraph indentation and transcription details may differ from a human SSC evaluator. Extra errors can make the estimate exceed 100%.
+
+**Practice error percentage** = `(full mistakes + half mistakes / 2) / reference words in the entire passage × 100`. Comparisons use the unrounded value even though the display is rounded to two decimals. SSC's published [evaluation guidelines](https://ssc.gov.in/api/attachment/uploads/masterData/ScriptEvaluation/evaluation-dest-tt%201-169635-.pdf) list mistake categories but do not specify a complete automated alignment/denominator algorithm. This deliberately disclosed formula and the badges are **not an official error percentage, qualification, cutoff, or selection decision**.
+
+The [2026 notice](https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf) gives the normal maximum error standard of UR 20%, OBC/EWS 25%, and all other categories 30%. Higher standards are set for specified posts. The [2025 CGL FRTA result](https://ssc.gov.in/api/attachment/uploads/masterData/Results/Write%20up_FTRA%20CGLE%20Exam%202025_08042026.pdf) recorded a **historical** higher-standard cutoff of 5% for UR, 7% for OBC/EWS/SC/ST/ESM, and 10% for OH/HH/VH/PwD-Others. These are not universal 2026 higher cutoffs. The category selector is a simplified practice comparison; exemptions, horizontal categories, specific posts and actual eligibility depend on SSC rules and results.
+
+## AI Mentor setup
+
+The separate learner-facing adapter talks to an operator-configured HTTPS OpenAI-compatible `POST /chat/completions` provider. It is independent of the offline editorial generation models and uses a short, plain-text response. Configure these **on the Node backend only**, using the deployment platform's secret environment configuration:
+
+```text
+MENTOR_BASE_URL=https://api.openai.com/v1   # optional default
+MENTOR_API_KEY=                             # server secret, never a VITE_ variable
+MENTOR_MODEL=                               # model supporting chat completions and max_tokens
+MENTOR_TIMEOUT_MS=20000                     # optional, 1000–60000
+MENTOR_ALLOW_BANK=false                     # explicit opt-in, see below
+```
+
+The endpoint is unavailable with a clear message when the model/key or URL/timeout is missing or invalid; the app and submitted review continue to work. No credentials are embedded in the frontend or written to the database. The configured provider's terms, retention and data-processing arrangements must be evaluated by the operator before enabling it. This repository does not provision an AI account or deploy configuration.
+
+### Source rights and privacy
+
+* The button appears in submitted reviews, including Micro practice drills. Undelivered, withdrawn and void content cannot be sent; active/prepared/other users' sessions are rejected server-side. A question with insufficient context or too much text also fails closed. The browser never supplies question text, choice, answer keys or solutions to the endpoint: they come from `reviewMasterMock` and the saved item. Correct, incorrect and skipped responses are handled without inventing a wrong choice.
+* PYQ and AI-derived questions require the parent paper to remain published with **both** derivative and external-processing permission. CA requires its question/event and any fixed CA mock to remain published, and both event and static sources to allow derivatives and external processing. These flags are rechecked before the provider call.
+* Bank items have no per-item external-processing flag. They are **denied by default**. Set `MENTOR_ALLOW_BANK=true` only after an operator explicitly verifies that **all** currently and subsequently published Bank question, passage and solution content has permission for the configured provider. The setting does not override PYQ or CA restrictions.
+* Before every AI request, the drawer discloses that the question, passage, options, available structured chart data, learner selection, reviewed key/solutions and any optional custom doubt will be sent to the configured provider. Users should not include personal details. The server does not persist or log prompts/responses; the open drawer holds conversation display only, and each request is independent. Provider retention is governed by that provider. Responses are unreviewed AI guidance, can be wrong, and must be checked against the reviewed solution. The text-only adapter flags unviewable images or oversized charts instead of claiming to see them.
+* "Is topic ke aur PYQ dikhao" performs a **local database lookup**, without invoking the AI provider. Only matching-topic, same-stage, published PYQ papers that permit derivatives are returned, excluding void questions and the current source question. Results link to their actual source papers; when no match is published it explicitly says so. It does not synthesize PYQs or their answer keys.
+* API: `POST /api/cgl/attempts/master/:id/mentor` requires the owner's JWT and a submitted mock. Its bounded JSON accepts only `position` (1–300), `intent` (`trick`, `eliminate`, `step`, `pyq`, or `custom`), `language` (`en`/`hi`), and a custom-only `message` of at most 500 characters. Responses are private/no-store. The provider has a 24,000-character context bound, 1,800-character answer bound and response-size/timeout checks. Share locks on the submitted mock and current published source prevent withdrawal/account deletion racing the external request; locks are released on completion, failure, timeout or disconnect.
+* Each API process limits to 8 requests per account per minute, 60 globally per minute, at most one concurrent request per account and four concurrent requests total. These are in-memory, **per-instance** protections; a multi-replica deployment needs shared rate/cost limiting at its gateway. Server timeouts and connection-pool capacity should account for the short-lived source locks while an external request is in flight.
+
+Regression tests use only fictional, isolated database fixtures and stubbed providers. They cover ownership, submission state, no active answer leak, permissions, withdrawals, related-PYQ provenance, bounds, limits, timer recovery and scoring. They do not create or modify production records.

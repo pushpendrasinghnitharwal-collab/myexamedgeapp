@@ -1,8 +1,8 @@
 import { CATEGORIES, EXAMS } from '../data/exams.js'
 import { TEST_CATALOGUE } from './tests.js'
 
-// Availability is derived from actual generated sets, never from a catalogue
-// label or a popularity score. The daily drill is a duplicate of mixed practice.
+// Availability is derived from actual published sets, never from a catalogue
+// label or a popularity score. The local catalogue is currently empty.
 const visibleTypes = new Set(['preview', 'sectional', 'topic'])
 export const practiceSetCount = (examId) =>
   (TEST_CATALOGUE[examId] || []).filter((test) => visibleTypes.has(test.type)).length

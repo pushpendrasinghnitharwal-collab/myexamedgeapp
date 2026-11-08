@@ -1,93 +1,46 @@
-# 🚀 EXAMEDGE — Free Deployment Guide
+# ExamEdge deployment and the SSC CGL reset
 
-For Google sign-in on the existing Vercel app, see [the Firebase setup guide](docs/google-sign-in.md). It is independent of the optional Express backend described below and does not sync local progress.
+The existing Vercel deployment serves the React PWA; the Express/PostgreSQL backend is **separate and optional**. Google sign-in is unchanged and does not sync local progress. See [Google sign-in setup](docs/google-sign-in.md) and [the CGL database reference](docs/ssc-cgl-database.md).
 
-Deploy the full stack **100% free**: PWA frontend + Express API + PostgreSQL.
+## Before using an existing database
 
-## Stack
+**The migration deletes the legacy question and mock-definition tables.** It does not delete `users`, `exams`, or historical `attempts`. Old attempt summaries remain, but deleted question details cannot be reconstructed. The browser's local attempts, bookmarks and notes are not cleared.
 
-| Layer | Service | Free tier |
-|-------|---------|-----------|
-| Frontend (React PWA) | **Vercel** (or Cloudflare Pages) | Unlimited bandwidth, auto HTTPS + CDN |
-| Backend (Express API) | **Render** | 750 hrs/mo free web service (sleeps after 15 min idle) |
-| Database | **Neon** (serverless Postgres) | 0.5 GB storage, pauses when idle, wakes instantly |
+1. Verify the database target and take a restorable backup using your provider's tooling (for example, `pg_dump`), storing it securely **outside this repository**. Test the restore. Pause application writes during the reset.
+2. Set the existing `DATABASE_URL` in the backend's secure environment; do not commit it or paste it into chat. Use a role with permission to create tables/functions and drop the listed legacy tables.
+3. Install backend dependencies, then explicitly opt into the one-time reset:
 
----
+   ```bash
+   cd server
+   npm ci
+   npm run migrate:ssc-cgl -- --reset-legacy-bank
+   npm run seed
+   ```
 
-## Step 0 — Push to GitHub
+   `seed` applies the **additive** official 2026 catalog and is also available as `npm run seed:ssc-cgl-catalog`. It does not insert questions or mocks and never performs the legacy reset itself. The reset migration and the separate catalog seed are transactional, guarded, checksum-verified, and idempotent; subsequent runs do not erase the new bank. It never uses `CASCADE` to remove unknown dependencies. If an unexpected foreign key blocks a drop, the transaction rolls back; investigate rather than forcing it.
+4. Start or redeploy the existing Express service, with the existing `DATABASE_URL` and `JWT_SECRET` unchanged. No migration is run automatically on startup.
+5. On the **Express service's** origin, request `/api/health` or `/api/cgl/health`. Immediately after a fresh migration, expect `ok: true`, `clean: true`, zero questions/sets/mock tests/CGL attempts, 311 canonical syllabus mappings and two empty full-paper blueprints. After the seed, `catalog.ok` should also be `true` (five subjects, 80 topic groups and 281 subtopics); before it, only the new catalog endpoints report 503. Historical attempts are not included in the `user_attempts` count. A later legitimate question or attempt makes `clean` false but leaves `ok` true. Missing/outdated schemas report HTTP 503. A static Vercel frontend may have no API route at all: a Vercel 404 does not verify the database.
 
-```bash
-git init && git add -A && git commit -m "EXAMEDGE v1"
-# create a repo on github.com, then:
-git remote add origin https://github.com/YOU/examedge.git
-git push -u origin main
-```
+The two initial blueprints cover the SSC CGL 2026 Tier-I paper and common Tier-II Paper I. Subject timers and category minimums follow the 2026 notice; topic-level question counts are not prescribed and are returned as null. They are definitions, not published mock records. No question, passage set, or mock is seeded or claimed to be an official paper. The frontend includes an interactive practice player, but shows honest empty/pending states until a reviewed bank is published and connected.
 
-## Step 1 — Database: Neon (free Postgres)
+## Add the catalog to an existing CGL database
 
-1. Go to [neon.tech](https://neon.tech) → Sign up → **New Project** (name: `examedge`).
-2. Copy the **connection string** (looks like `postgres://user:pass@ep-xxx.region.aws.neon.tech/neondb?sslmode=require`).
-3. Load schema + seed data (from your local machine):
+If 001 is already applied and its checksum is valid, **do not repeat a legacy reset**. After confirming `DATABASE_URL` and taking a backup, run `cd server && npm run seed:ssc-cgl-catalog`. This additive command applies 002 and seeds the 2026 blueprints/tree in one transaction. It refuses conflicting existing official templates rather than changing them. Check `catalog.ok` on the Express health endpoint and see the [API reference](docs/ssc-cgl-database.md). No production database is changed until an operator runs this command.
 
-```bash
-# schema is created automatically by the API on boot (initSchema),
-# so you only need to seed questions/exams:
-cd server
-DATABASE_URL="<your-neon-connection-string>" npm run seed
-```
+## Frontend deployment
 
-## Step 2 — Backend: Render (free API)
+Use the existing Vercel project/settings and `npm run build`. Configure the existing optional `VITE_API_URL` only if a separate API has actually been deployed; the Firebase settings are described in the sign-in guide. Do not clear site storage to update the PWA: saved learner data stays on the device. The new service worker removes old cached main bundles containing the retired question bank, while retaining older lazy assets for already-open tabs where possible. Old open tabs and external caches cannot be remotely erased; after the update is applied, newly loaded app code no longer contains the old bank.
 
-1. [render.com](https://render.com) → Sign up → **New + → Web Service** → connect your GitHub repo.
-2. Settings:
-   - **Root Directory:** `server`
-   - **Build Command:** `npm install`
-   - **Start Command:** `npm start`
-   - **Instance type:** Free
-3. Environment variables:
-   - `DATABASE_URL` = your Neon connection string
-   - `JWT_SECRET` = any long random string
-   - `PORT` = `4000` (Render also sets PORT automatically — our code respects it)
-4. Deploy → your API lives at `https://examedge-api.onrender.com`
-5. Verify: `curl https://examedge-api.onrender.com/api/health` → `{"ok":true,"questions":399,...}`
+For local development, `npm ci`, `npm run test`, and `npm run build` run from the repository root. To run the optional API, install its dependencies with `cd server && npm ci`; after installing root dependencies, `npm test` in `server` also runs the isolated HTTP API tests. Then set the required backend environment variables securely and start it with `npm start`. Vite's existing `/api` development proxy targets the local backend.
 
-**Keep it warm (optional):** free cron at [cron-job.org](https://cron-job.org) pinging
-`https://examedge-api.onrender.com/api/health` every 10 minutes.
+The optional 2021–2025 PYQ/AI vault has a separate additive, empty migration and requires licensed, reviewed source material. See [PYQ & AI engine](docs/ssc-cgl-pyq-ai.md); it is not applied or populated on server startup.
 
-## Step 3 — Frontend: Vercel (free PWA)
+The optional 2025–2026 current-affairs engine has a separate additive, empty migration and requires reviewed source evidence; see [Current Affairs & Static GK](docs/ssc-cgl-current-affairs.md). Future periods are not fabricated.
 
-1. [vercel.com](https://vercel.com) → Sign up → **Add New → Project** → import your GitHub repo.
-2. Framework preset: **Vite** (auto-detected). Root directory: `/` (default).
-3. **Environment variable:**
-   - `VITE_API_URL` = `https://examedge-api.onrender.com`
-4. Deploy → your app lives at `https://examedge.vercel.app`
+The [Master Mock Assembler and Exam Player](docs/ssc-cgl-master-assembler.md) use additive migrations 005 and 006 (`npm run migrate:master` after 001), with separate PYQ/CA migrations where those sources are wanted. The React command center and player are wired to these APIs. Backend JWT accounts are separate from Firebase. The migrations create no content and are not run automatically; no production database was changed by adding them.
 
-The app automatically calls `${VITE_API_URL}/api/...` in production and `/api` (dev proxy) locally.
+### Vercel and ongoing attempts
 
-## Step 4 — Test the deployed app
+Vercel serves the static frontend only. Deploy the Express service and PostgreSQL separately (or configure a same-origin proxy), apply the required migrations after a backup, and verify the backend health endpoint before setting `VITE_API_URL` to the public HTTPS API origin in Vercel and rebuilding the frontend. `VITE_API_URL` is public configuration, not a secret; keep `DATABASE_URL` and `JWT_SECRET` on the backend. Allow the Vercel origin in the backend's CORS policy. See the [Command Center guide](docs/ssc-cgl-command-center.md) for content and account prerequisites.
 
-1. Open your deployment URL (the current app is `https://myexamedgeapp-um97.vercel.app/`). With Google configured, a new browser sees Google sign-in only; existing saved profiles remain available. See `docs/google-sign-in.md` for setup.
-2. Choose an exam and try an existing practice set. Progress stays on that device and Google sign-in does not sync it. With an existing backend account, sign in from Profile to send future attempts to the API when it is available.
-3. The existing practice and sample resources are unverified. Exam-wise PYQ papers, five-year research and full-length mocks have not yet been added; the legacy leaderboard is simulated.
-4. Install as PWA: browser menu → "Install EXAMEDGE" (works on Android/desktop Chrome).
-
----
-
-## 🔁 Updating
-
-Just `git push` — Vercel and Render auto-redeploy. Re-seed the DB only when the question bank changes:
-
-```bash
-cd server && DATABASE_URL="<neon-string>" npm run seed
-```
-
-## ⚠️ Free-tier gotchas
-
-- **Render sleeps after 15 min idle** → first API call takes ~20–30s. The app already falls back to local mode if the API is unreachable, and shows real data once it wakes.
-- **Neon pauses when idle** → wakes automatically on first query (adds ~1s).
-- **CORS** is already open (`cors()` in the API), so the Vercel domain can call the Render API.
-- Never commit `.env` — secrets live only in Render/Vercel dashboards. (`.env` is in `.gitignore` below.)
-
-## 💰 Later, when earning
-
-Move API+DB to a single **$5/mo VPS** (Hetzner/Contabo) or Railway paid plan — no sleep, full control, real domain.
+Player progress is saved to both the backend and the current origin's local storage. Vercel preview domains and the production domain have separate local storage; only server-synced progress follows the practice account between them. A refresh can restore local pending edits on the same origin, but edits not received before a server-enforced section deadline cannot be accepted retroactively. The player warns about unsynced changes.

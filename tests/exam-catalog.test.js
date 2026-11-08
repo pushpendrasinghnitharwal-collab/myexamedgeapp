@@ -1,7 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { CATEGORIES, EXAMS, examById, officialSourceForExam } from '../src/data/exams.js'
-import { QUESTIONS, questionsForExam } from '../src/data/questions.js'
+import { QUESTIONS } from '../src/data/questions.js'
 import { TEST_CATALOGUE } from '../src/lib/tests.js'
 import { filterExams, hasPractice, latestTargetAttempt, practiceExamCount, practiceSetCount } from '../src/lib/examCatalog.js'
 
@@ -37,8 +37,7 @@ test('directory-only goals never borrow or invent questions or tests', () => {
     assert.deepEqual(exam.subjects, [])
     assert.equal(exam.duration, undefined)
     assert.equal(exam.marksPerQ, undefined)
-    assert.equal(QUESTIONS.some((question) => question.exams.includes(id)), false, `${id} has no retagged questions`)
-    assert.deepEqual(questionsForExam(exam), [])
+    assert.equal(QUESTIONS.length, 0, `${id} has no retagged questions`)
     assert.deepEqual(TEST_CATALOGUE[id], [])
     assert.equal(practiceSetCount(id), 0)
     assert.equal(hasPractice(id), false)
@@ -57,7 +56,7 @@ test('availability, aliases, bilingual search and categories filter real catalog
   assert.ok(practice.every((exam) => hasPractice(exam.id)))
   assert.ok(info.every((exam) => !hasPractice(exam.id)))
   const stateInfo = filterExams({ category: 'state', availability: 'info' })
-  assert.deepEqual(stateInfo.map((exam) => exam.id), ['rpsc-ras', 'rajasthan-cet-graduation', 'rajasthan-cet-senior-secondary'])
+  assert.deepEqual(stateInfo.map((exam) => exam.id), ['upstate-psc', 'bpsc-psc', 'rpsc-ras', 'rajasthan-cet-graduation', 'rajasthan-cet-senior-secondary'])
   assert.deepEqual(filterExams({ query: 'there-is-no-such-exam' }), [])
 })
 

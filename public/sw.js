@@ -1,4 +1,4 @@
-const CACHE = 'examedge-v12'
+const CACHE = 'examedge-v15'
 const CORE = [
   '/', '/index.html', '/manifest.webmanifest', '/icon.svg?v=2',
   '/icon-192.png', '/icon-512.png', '/icon-maskable-512.png', '/icon-maskable.svg?v=2', '/apple-touch-icon.png',
@@ -19,7 +19,17 @@ self.addEventListener('activate', (e) => {
       // An already-open page can still need lazy, fingerprinted files from its
       // original release. Keep the two previous shells until a later upgrade.
       const previous = keys.filter((key) => key.startsWith('examedge-') && key !== CACHE).slice(-2)
-      return Promise.all(keys.filter((key) => key.startsWith('examedge-') && key !== CACHE && !previous.includes(key)).map((key) => caches.delete(key)))
+      return Promise.all([
+        ...keys.filter((key) => key.startsWith('examedge-') && key !== CACHE && !previous.includes(key)).map((key) => caches.delete(key)),
+        // Versions through v12 bundled the retired question bank in main-*.js.
+        // Remove those cached bundles while keeping old lazy chunks for open tabs.
+        ...previous.filter((key) => /^examedge-v(?:[1-9]|1[0-2])$/.test(key)).map(async (key) => {
+          const cache = await caches.open(key)
+          const requests = await cache.keys()
+          await Promise.all(requests.filter((request) => /^\/assets\/main-[^/]+\.js$/.test(new URL(request.url).pathname))
+            .map((request) => cache.delete(request, { ignoreVary: true })))
+        }),
+      ])
     }).then(() => self.clients.claim())
   )
 })

@@ -139,11 +139,11 @@ export const MATERIALS = [
       {
         h: { en: 'Inside this issue', hi: 'इस अंक में' },
         rows: [
-          ['National', 'Policy round-up — 6 key decisions explained'],
-          ['International', 'BRICS expansion & Quad critical minerals'],
-          ['Economy', 'MPC hold, forex reserves, MSHI scheme'],
-          ['One-liners', '40 exam-ready facts with mnemonics'],
-          ['Quiz', '30 MCQs with answer key at page 58'],
+          ['National', 'Preview only — no verified stories added'],
+          ['International', 'Preview only — no verified stories added'],
+          ['Economy', 'Preview only — no verified stories added'],
+          ['One-liners', 'Not added yet'],
+          ['Quiz', 'Not added yet'],
         ],
       },
     ],

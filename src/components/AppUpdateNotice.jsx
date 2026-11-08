@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { RefreshCw, X } from 'lucide-react'
 import { useL } from '../lib/i18n'
+import { isTestRoute } from '../lib/updateRoute'
 
 // Never reload automatically: a learner might be in the middle of a test.
 export default function AppUpdateNotice({ route }) {
   const [updateReady, setUpdateReady] = useState(false)
   const L = useL()
-  const path = route.split('?')[0]
-  const inTest = path === '/test' || path.startsWith('/test/')
+  const inTest = isTestRoute(route)
 
   useEffect(() => {
     if (!('serviceWorker' in navigator)) return undefined
