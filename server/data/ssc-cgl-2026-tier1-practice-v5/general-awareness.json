@@ -1,0 +1,981 @@
+{
+  "pack_key": "ssc-cgl-2026-tier1-practice-v5",
+  "sets": [],
+  "questions": [
+    {
+      "qid": "ga5-01",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "On which dates was the 18th BRICS Summit held in New Delhi in 2026?",
+      "text_hi": "2026 में नई दिल्ली में 18वाँ BRICS शिखर सम्मेलन किन तारीखों में हुआ?",
+      "options": [
+        {
+          "en": "12–13 September 2026",
+          "hi": "12–13 September 2026"
+        },
+        {
+          "en": "1–2 October 2026",
+          "hi": "1–2 October 2026"
+        },
+        {
+          "en": "9–10 August 2026",
+          "hi": "9–10 August 2026"
+        },
+        {
+          "en": "14–15 December 2026",
+          "hi": "14–15 December 2026"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "India hosted the 18th BRICS Summit at Bharat Mandapam, New Delhi, on 12–13 September 2026.",
+      "solution_hi": "भारत ने 18वाँ BRICS शिखर सम्मेलन 12–13 सितंबर 2026 को भारत मंडपम, नई दिल्ली में आयोजित किया।",
+      "trick_en": "BRICS dates are in September; the G20 summit is in December.",
+      "trick_hi": "BRICS सितंबर में; G20 शिखर सम्मेलन दिसंबर में।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.brics2026.gov.in/",
+        "citation": "BRICS India 2026 official chairship site, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-02",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the official motto of the 2026 Asian Games?",
+      "text_hi": "2026 एशियाई खेलों का आधिकारिक ध्यान वाक्य क्या है?",
+      "options": [
+        {
+          "en": "Imagine One Asia",
+          "hi": "Imagine One Asia"
+        },
+        {
+          "en": "Together We Rise",
+          "hi": "Together We Rise"
+        },
+        {
+          "en": "One Continent, One Dream",
+          "hi": "One Continent, One Dream"
+        },
+        {
+          "en": "Beyond the Games",
+          "hi": "Beyond the Games"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The official motto of the 20th Asian Games, Aichi-Nagoya 2026, is \"Imagine One Asia\".",
+      "solution_hi": "20वें एशियाई खेल, आइची-नागोया 2026 का आधिकारिक ध्यान वाक्य \"Imagine One Asia\" है।",
+      "trick_en": "Motto ≠ host city; remember the phrase separately.",
+      "trick_hi": "ध्यान वाक्य और मेजबान शहर अलग याद रखें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.olympics.com/en/news/asian-games-2026-sports-schedule-la28-watch-live",
+        "citation": "Olympic Council of Asia / Olympics.com Asian Games 2026 page, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-03",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which country holds the G20 presidency for 2026?",
+      "text_hi": "2026 के लिए G20 की अध्यक्षता किस देश के पास है?",
+      "options": [
+        {
+          "en": "Brazil",
+          "hi": "Brazil"
+        },
+        {
+          "en": "South Africa",
+          "hi": "South Africa"
+        },
+        {
+          "en": "United States",
+          "hi": "United States"
+        },
+        {
+          "en": "India",
+          "hi": "India"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The United States holds the 2026 G20 presidency and hosts the Leaders' Summit in Miami on 14–15 December 2026.",
+      "solution_hi": "2026 की G20 अध्यक्षता संयुक्त राज्य अमेरिका के पास है और शिखर सम्मेलन 14–15 दिसंबर 2026 को मियामी में है।",
+      "trick_en": "2024 Brazil, 2025 South Africa, 2026 United States.",
+      "trick_hi": "2024 ब्राज़ील, 2025 दक्षिण अफ्रीका, 2026 अमेरिका।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.g20.org/",
+        "citation": "G20 official site, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-04",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Where was the opening match of the FIFA World Cup 2026 played?",
+      "text_hi": "FIFA विश्व कप 2026 का उद्घाटन मैच कहाँ खेला गया?",
+      "options": [
+        {
+          "en": "Estadio Azteca, Mexico City",
+          "hi": "Estadio Azteca, Mexico City"
+        },
+        {
+          "en": "MetLife Stadium, New Jersey",
+          "hi": "MetLife Stadium, New Jersey"
+        },
+        {
+          "en": "SoFi Stadium, Los Angeles",
+          "hi": "SoFi Stadium, Los Angeles"
+        },
+        {
+          "en": "BMO Field, Toronto",
+          "hi": "BMO Field, Toronto"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The opening match was played at Estadio Azteca in Mexico City on 11 June 2026.",
+      "solution_hi": "उद्घाटन मैच 11 जून 2026 को मेक्सिको सिटी के एस्टाडियो अज़्टेका में खेला गया।",
+      "trick_en": "Opening at Azteca; final at MetLife.",
+      "trick_hi": "उद्घाटन अज़्टेका में; फाइनल मेटलाइफ में।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026",
+        "citation": "FIFA World Cup 2026 official tournament page, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-05",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "On which date was the 2026 Nobel Peace Prize announced?",
+      "text_hi": "2026 का नोबेल शांति पुरस्कार किस तारीख को घोषित हुआ?",
+      "options": [
+        {
+          "en": "9 October 2026",
+          "hi": "9 October 2026"
+        },
+        {
+          "en": "10 December 2026",
+          "hi": "10 December 2026"
+        },
+        {
+          "en": "1 November 2026",
+          "hi": "1 November 2026"
+        },
+        {
+          "en": "21 September 2026",
+          "hi": "21 September 2026"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Norwegian Nobel Committee announced the 2026 Peace Prize in Oslo on 9 October 2026; the award ceremony is on 10 December.",
+      "solution_hi": "नॉर्वेजियन नोबेल समिति ने 9 अक्टूबर 2026 को ओस्लो में 2026 का शांति पुरस्कार घोषित किया; समारोह 10 दिसंबर को होता है।",
+      "trick_en": "Announcement in October; ceremony on 10 December.",
+      "trick_hi": "घोषणा अक्टूबर में; समारोह 10 दिसंबर को।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://news.un.org/",
+        "citation": "UN News report, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-06",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "COP31 runs from 9 to 20 November 2026. Which country holds its presidency?",
+      "text_hi": "COP31 9 से 20 नवंबर 2026 तक है। इसकी अध्यक्षता किस देश के पास है?",
+      "options": [
+        {
+          "en": "Australia",
+          "hi": "Australia"
+        },
+        {
+          "en": "Türkiye",
+          "hi": "Türkiye"
+        },
+        {
+          "en": "Brazil",
+          "hi": "Brazil"
+        },
+        {
+          "en": "Egypt",
+          "hi": "Egypt"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Türkiye holds the COP31 presidency and hosts the conference in Antalya; Australia leads the negotiations.",
+      "solution_hi": "COP31 की अध्यक्षता तुर्किये के पास है और सम्मेलन अंताल्या में है; वार्ता का नेतृत्व ऑस्ट्रेलिया करता है।",
+      "trick_en": "Presidency ≠ negotiation lead.",
+      "trick_hi": "अध्यक्षता और वार्ता नेतृत्व अलग हैं।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://unfccc.int/cop31",
+        "citation": "UNFCCC COP31 page, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-07",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which Indian state has the largest area under forest cover?",
+      "text_hi": "भारत में सबसे अधिक वन क्षेत्र किस राज्य में है?",
+      "options": [
+        {
+          "en": "Madhya Pradesh",
+          "hi": "Madhya Pradesh"
+        },
+        {
+          "en": "Arunachal Pradesh",
+          "hi": "Arunachal Pradesh"
+        },
+        {
+          "en": "Chhattisgarh",
+          "hi": "Chhattisgarh"
+        },
+        {
+          "en": "Odisha",
+          "hi": "Odisha"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Madhya Pradesh has the largest forest area by size; Mizoram has the highest forest percentage of its area.",
+      "solution_hi": "क्षेत्रफल में मध्य प्रदेश का वन क्षेत्र सबसे बड़ा है; मिज़ोरम में अपने क्षेत्र का सबसे अधिक प्रतिशत वन है।",
+      "trick_en": "Largest area ≠ highest percentage.",
+      "trick_hi": "सबसे बड़ा क्षेत्र ≠ सबसे अधिक प्रतिशत।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-08",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is the longest river of India?",
+      "text_hi": "भारत की सबसे लंबी नदी कौन-सी है?",
+      "options": [
+        {
+          "en": "Godavari",
+          "hi": "Godavari"
+        },
+        {
+          "en": "Ganga",
+          "hi": "Ganga"
+        },
+        {
+          "en": "Brahmaputra",
+          "hi": "Brahmaputra"
+        },
+        {
+          "en": "Yamuna",
+          "hi": "Yamuna"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The Ganga is India's longest river within the country, followed by the Godavari among peninsular rivers.",
+      "solution_hi": "भारत के भीतर गंगा सबसे लंबी नदी है, प्रायद्वीपीय नदियों में गोदावरी उसके बाद आती है।",
+      "trick_en": "Ganga is longest; Godavari is the longest peninsular river.",
+      "trick_hi": "गंगा सबसे लंबी; गोदावरी सबसे लंबी प्रायद्वीपीय।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-09",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which state is known as the \"Spice Garden of India\"?",
+      "text_hi": "किस राज्य को \"भारत का मसाला उद्यान\" कहा जाता है?",
+      "options": [
+        {
+          "en": "Kerala",
+          "hi": "Kerala"
+        },
+        {
+          "en": "Karnataka",
+          "hi": "Karnataka"
+        },
+        {
+          "en": "Tamil Nadu",
+          "hi": "Tamil Nadu"
+        },
+        {
+          "en": "Andhra Pradesh",
+          "hi": "Andhra Pradesh"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Kerala is called the Spice Garden of India because of its historic spice trade.",
+      "solution_hi": "ऐतिहासिक मसाला व्यापार के कारण केरल को भारत का मसाला उद्यान कहा जाता है।",
+      "trick_en": "Cardamom, pepper and cloves point to Kerala.",
+      "trick_hi": "इलायची, काली मिर्च और लौंग केरल की ओर संकेत करते हैं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-10",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is the largest desert in India?",
+      "text_hi": "भारत का सबसे बड़ा रेगिस्तान कौन-सा है?",
+      "options": [
+        {
+          "en": "Thar Desert",
+          "hi": "Thar Desert"
+        },
+        {
+          "en": "Rann of Kutch",
+          "hi": "Rann of Kutch"
+        },
+        {
+          "en": "Ladakh Desert",
+          "hi": "Ladakh Desert"
+        },
+        {
+          "en": "Deccan Plateau",
+          "hi": "Deccan Plateau"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Thar Desert in Rajasthan is India's largest desert.",
+      "solution_hi": "राजस्थान का थार रेगिस्तान भारत का सबसे बड़ा रेगिस्तान है।",
+      "trick_en": "Thar covers much of western Rajasthan.",
+      "trick_hi": "थार पश्चिमी राजस्थान के बड़े हिस्से में फैला है।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-11",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is the highest waterfall in India?",
+      "text_hi": "भारत का सबसे ऊँचा जलप्रपात कौन-सा है?",
+      "options": [
+        {
+          "en": "Kunchikal Falls",
+          "hi": "Kunchikal Falls"
+        },
+        {
+          "en": "Jog Falls",
+          "hi": "Jog Falls"
+        },
+        {
+          "en": "Dudhsagar Falls",
+          "hi": "Dudhsagar Falls"
+        },
+        {
+          "en": "Nohkalikai Falls",
+          "hi": "Nohkalikai Falls"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Kunchikal Falls in Karnataka, on the Varahi river, is generally listed as India's highest waterfall.",
+      "solution_hi": "कर्नाटक में वराही नदी पर कुंचिकल जलप्रपात को भारत का सबसे ऊँचा जलप्रपात माना जाता है।",
+      "trick_en": "Kunchikal (Karnataka) is taller than Jog.",
+      "trick_hi": "कुंचिकल (कर्नाटक) जोग से ऊँचा है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-12",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "General policy",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Directive Principles of State Policy are contained in which Part of the Constitution?",
+      "text_hi": "राज्य के नीति निर्देशक तत्व संविधान के किस भाग में हैं?",
+      "options": [
+        {
+          "en": "Part III",
+          "hi": "Part III"
+        },
+        {
+          "en": "Part IV",
+          "hi": "Part IV"
+        },
+        {
+          "en": "Part IVA",
+          "hi": "Part IVA"
+        },
+        {
+          "en": "Part V",
+          "hi": "Part V"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Directive Principles are in Part IV, Articles 36–51. Part IVA contains Fundamental Duties.",
+      "solution_hi": "नीति निर्देशक तत्व भाग IV, अनुच्छेद 36–51 में हैं। भाग IVA में मूल कर्तव्य हैं।",
+      "trick_en": "Rights = Part III; DPSP = Part IV; Duties = IVA.",
+      "trick_hi": "अधिकार = भाग III; DPSP = भाग IV; कर्तव्य = IVA।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-13",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Economic scene",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is India's largest public sector bank?",
+      "text_hi": "भारत का सबसे बड़ा सार्वजनिक क्षेत्र का बैंक कौन-सा है?",
+      "options": [
+        {
+          "en": "Punjab National Bank",
+          "hi": "Punjab National Bank"
+        },
+        {
+          "en": "State Bank of India",
+          "hi": "State Bank of India"
+        },
+        {
+          "en": "Bank of Baroda",
+          "hi": "Bank of Baroda"
+        },
+        {
+          "en": "Canara Bank",
+          "hi": "Canara Bank"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "State Bank of India is the largest public sector bank by assets and branches.",
+      "solution_hi": "परिसंपत्ति और शाखाओं के आधार पर भारतीय स्टेट बैंक सबसे बड़ा सार्वजनिक बैंक है।",
+      "trick_en": "SBI is the largest; PNB is also large but smaller.",
+      "trick_hi": "SBI सबसे बड़ा; PNB भी बड़ा पर छोटा।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.rbi.org.in/",
+        "citation": "Reserve Bank of India public pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-14",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "History",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which line separates India from China?",
+      "text_hi": "भारत और चीन को कौन-सी रेखा अलग करती है?",
+      "options": [
+        {
+          "en": "Radcliffe Line",
+          "hi": "Radcliffe Line"
+        },
+        {
+          "en": "McMahon Line",
+          "hi": "McMahon Line"
+        },
+        {
+          "en": "Durand Line",
+          "hi": "Durand Line"
+        },
+        {
+          "en": "Line of Control",
+          "hi": "Line of Control"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The McMahon Line marks the India–China boundary in the eastern sector.",
+      "solution_hi": "मैकमोहन रेखा पूर्वी क्षेत्र में भारत–चीन सीमा निर्धारित करती है।",
+      "trick_en": "Radcliffe = Pakistan; Durand = Afghanistan.",
+      "trick_hi": "रैडक्लिफ = पाकिस्तान; डूरंड = अफगानिस्तान।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-15",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is the largest union territory of India by area?",
+      "text_hi": "क्षेत्रफल की दृष्टि से भारत का सबसे बड़ा केंद्रशासित प्रदेश कौन-सा है?",
+      "options": [
+        {
+          "en": "Jammu and Kashmir",
+          "hi": "Jammu and Kashmir"
+        },
+        {
+          "en": "Ladakh",
+          "hi": "Ladakh"
+        },
+        {
+          "en": "Delhi",
+          "hi": "Delhi"
+        },
+        {
+          "en": "Andaman and Nicobar Islands",
+          "hi": "Andaman and Nicobar Islands"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Ladakh is the largest union territory by area after its creation in 2019.",
+      "solution_hi": "2019 में गठन के बाद लद्दाख क्षेत्रफल में सबसे बड़ा केंद्रशासित प्रदेश है।",
+      "trick_en": "Ladakh is larger than Jammu and Kashmir.",
+      "trick_hi": "लद्दाख जम्मू-कश्मीर से बड़ा है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-16",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is the southernmost state of India?",
+      "text_hi": "भारत का सबसे दक्षिणी राज्य कौन-सा है?",
+      "options": [
+        {
+          "en": "Kerala",
+          "hi": "Kerala"
+        },
+        {
+          "en": "Tamil Nadu",
+          "hi": "Tamil Nadu"
+        },
+        {
+          "en": "Karnataka",
+          "hi": "Karnataka"
+        },
+        {
+          "en": "Andhra Pradesh",
+          "hi": "Andhra Pradesh"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Tamil Nadu is the southernmost state; Kanyakumari lies at its southern tip. Indira Point is the southernmost point of India.",
+      "solution_hi": "तमिलनाडु सबसे दक्षिणी राज्य है; कन्याकुमारी उसका दक्षिणी सिरा है। इंदिरा पॉइंट भारत का सबसे दक्षिणी बिंदु है।",
+      "trick_en": "Southernmost state ≠ southernmost point.",
+      "trick_hi": "सबसे दक्षिणी राज्य ≠ सबसे दक्षिणी बिंदु।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-17",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is the longest tributary of the Ganga?",
+      "text_hi": "गंगा की सबसे लंबी सहायक नदी कौन-सी है?",
+      "options": [
+        {
+          "en": "Yamuna",
+          "hi": "Yamuna"
+        },
+        {
+          "en": "Ghaghara",
+          "hi": "Ghaghara"
+        },
+        {
+          "en": "Gandak",
+          "hi": "Gandak"
+        },
+        {
+          "en": "Kosi",
+          "hi": "Kosi"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Yamuna is the longest tributary of the Ganga.",
+      "solution_hi": "यमुना गंगा की सबसे लंबी सहायक नदी है।",
+      "trick_en": "Yamuna rises from Yamunotri.",
+      "trick_hi": "यमुना यमुनोत्री से निकलती है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-18",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "General policy",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which state has the largest number of Lok Sabha seats?",
+      "text_hi": "लोकसभा की सबसे अधिक सीटें किस राज्य के पास हैं?",
+      "options": [
+        {
+          "en": "Maharashtra",
+          "hi": "Maharashtra"
+        },
+        {
+          "en": "Uttar Pradesh",
+          "hi": "Uttar Pradesh"
+        },
+        {
+          "en": "West Bengal",
+          "hi": "West Bengal"
+        },
+        {
+          "en": "Bihar",
+          "hi": "Bihar"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Uttar Pradesh has 80 Lok Sabha seats, the highest of any state.",
+      "solution_hi": "उत्तर प्रदेश के पास 80 लोकसभा सीटें हैं, जो किसी भी राज्य में सर्वाधिक हैं।",
+      "trick_en": "UP 80; Maharashtra and Bihar follow.",
+      "trick_hi": "UP 80; उसके बाद महाराष्ट्र और बिहार।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India — states, geography and institutions, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-19",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which gas do plants absorb from the air during photosynthesis?",
+      "text_hi": "प्रकाश संश्लेषण में पौधे हवा से कौन-सी गैस लेते हैं?",
+      "options": [
+        {
+          "en": "Oxygen",
+          "hi": "Oxygen"
+        },
+        {
+          "en": "Carbon dioxide",
+          "hi": "Carbon dioxide"
+        },
+        {
+          "en": "Nitrogen",
+          "hi": "Nitrogen"
+        },
+        {
+          "en": "Hydrogen",
+          "hi": "Hydrogen"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Plants take in carbon dioxide and release oxygen during photosynthesis.",
+      "solution_hi": "प्रकाश संश्लेषण में पौधे कार्बन डाइऑक्साइड लेते और ऑक्सीजन छोड़ते हैं।",
+      "trick_en": "CO2 in, O2 out.",
+      "trick_hi": "CO2 अंदर, O2 बाहर।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.nios.ac.in/online-course-material.aspx",
+        "citation": "NIOS senior-secondary science course material, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-20",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the SI unit of force?",
+      "text_hi": "बल की SI इकाई क्या है?",
+      "options": [
+        {
+          "en": "Joule",
+          "hi": "Joule"
+        },
+        {
+          "en": "Newton",
+          "hi": "Newton"
+        },
+        {
+          "en": "Pascal",
+          "hi": "Pascal"
+        },
+        {
+          "en": "Watt",
+          "hi": "Watt"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Force is measured in newtons (N); one newton accelerates 1 kg at 1 m/s².",
+      "solution_hi": "बल न्यूटन (N) में मापा जाता है; एक न्यूटन 1 kg को 1 m/s² त्वरण देता है।",
+      "trick_en": "Force = mass × acceleration, so kg·m/s² = newton.",
+      "trick_hi": "बल = द्रव्यमान × त्वरण, इसलिए kg·m/s² = न्यूटन।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.nios.ac.in/online-course-material.aspx",
+        "citation": "NIOS senior-secondary science course material, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-21",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which blood group is called the universal recipient?",
+      "text_hi": "किस रक्त समूह को सार्वत्रिक ग्राही कहा जाता है?",
+      "options": [
+        {
+          "en": "A positive",
+          "hi": "A पॉजिटिव"
+        },
+        {
+          "en": "AB positive",
+          "hi": "AB पॉजिटिव"
+        },
+        {
+          "en": "O negative",
+          "hi": "O नेगेटिव"
+        },
+        {
+          "en": "B negative",
+          "hi": "B नेगेटिव"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "AB positive blood has no anti-A or anti-B antibodies, so it can receive red cells from any group.",
+      "solution_hi": "AB पॉजिटिव रक्त में anti-A या anti-B प्रतिरक्षी नहीं होते, इसलिए यह किसी भी समूह से लाल कोशिकाएँ ले सकता है।",
+      "trick_en": "Universal donor is O negative; universal recipient is AB positive.",
+      "trick_hi": "सार्वत्रिक दाता O नेगेटिव; सार्वत्रिक ग्राही AB पॉजिटिव।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.who.int/",
+        "citation": "World Health Organization fact sheets, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-22",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Deficiency of which vitamin affects blood clotting?",
+      "text_hi": "किस विटामिन की कमी रक्त के थक्के बनने को प्रभावित करती है?",
+      "options": [
+        {
+          "en": "Vitamin A",
+          "hi": "Vitamin A"
+        },
+        {
+          "en": "Vitamin C",
+          "hi": "Vitamin C"
+        },
+        {
+          "en": "Vitamin D",
+          "hi": "Vitamin D"
+        },
+        {
+          "en": "Vitamin K",
+          "hi": "Vitamin K"
+        }
+      ],
+      "correct": 3,
+      "solution_en": "Vitamin K is needed for the synthesis of clotting factors in the liver.",
+      "solution_hi": "विटामिन K यकृत में थक्का बनाने वाले कारकों के संश्लेषण के लिए आवश्यक है।",
+      "trick_en": "K for clotting (koagulation).",
+      "trick_hi": "K थक्के (koagulation) के लिए।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.who.int/",
+        "citation": "World Health Organization fact sheets, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-23",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Why does a straw appear bent at the surface of water?",
+      "text_hi": "पानी की सतह पर स्ट्रॉ मुड़ा हुआ क्यों दिखता है?",
+      "options": [
+        {
+          "en": "Reflection",
+          "hi": "Reflection"
+        },
+        {
+          "en": "Refraction",
+          "hi": "Refraction"
+        },
+        {
+          "en": "Diffraction",
+          "hi": "Diffraction"
+        },
+        {
+          "en": "Dispersion",
+          "hi": "Dispersion"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Light bends as it passes from water to air because of refraction, making the straw appear displaced.",
+      "solution_hi": "पानी से हवा में जाते समय प्रकाश अपवर्तन के कारण मुड़ता है, जिससे स्ट्रॉ विस्थापित दिखता है।",
+      "trick_en": "Bending at a boundary = refraction.",
+      "trick_hi": "सीमा पर मुड़ना = अपवर्तन।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.nios.ac.in/online-course-material.aspx",
+        "citation": "NIOS senior-secondary science course material, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-24",
+      "subject": "General_Awareness",
+      "topic": "Environment and Society",
+      "sub_topic": "General awareness of the environment and its application to society",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Earth Day is observed on which date?",
+      "text_hi": "पृथ्वी दिवस किस तारीख को मनाया जाता है?",
+      "options": [
+        {
+          "en": "22 April",
+          "hi": "22 April"
+        },
+        {
+          "en": "5 June",
+          "hi": "5 June"
+        },
+        {
+          "en": "21 March",
+          "hi": "21 March"
+        },
+        {
+          "en": "11 July",
+          "hi": "11 July"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Earth Day is observed on 22 April; World Environment Day is on 5 June.",
+      "solution_hi": "पृथ्वी दिवस 22 अप्रैल को; विश्व पर्यावरण दिवस 5 जून को।",
+      "trick_en": "22 April = Earth Day.",
+      "trick_hi": "22 अप्रैल = पृथ्वी दिवस।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga5-25",
+      "subject": "General_Awareness",
+      "topic": "Environment and Society",
+      "sub_topic": "General awareness of the environment and its application to society",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Ramsar Convention is associated with the protection of which ecosystems?",
+      "text_hi": "रामसर संधि किन पारिस्थितिक तंत्रों की रक्षा से संबंधित है?",
+      "options": [
+        {
+          "en": "Wetlands",
+          "hi": "Wetlands"
+        },
+        {
+          "en": "Coral reefs",
+          "hi": "Coral reefs"
+        },
+        {
+          "en": "Grasslands",
+          "hi": "Grasslands"
+        },
+        {
+          "en": "Mangroves only",
+          "hi": "Mangroves only"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Ramsar Convention is an intergovernmental treaty for the conservation and wise use of wetlands.",
+      "solution_hi": "रामसर संधि आर्द्रभूमियों के संरक्षण और विवेकपूर्ण उपयोग के लिए अंतरसरकारी संधि है।",
+      "trick_en": "Ramsar = wetlands; Montreal = ozone.",
+      "trick_hi": "रामसर = आर्द्रभूमि; मॉन्ट्रियल = ओज़ोन।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ]
+}

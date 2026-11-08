@@ -1,0 +1,981 @@
+{
+  "pack_key": "ssc-cgl-2026-tier1-practice-v5",
+  "sets": [],
+  "questions": [
+    {
+      "qid": "reasoning5-01",
+      "subject": "Reasoning",
+      "topic": "Analogy",
+      "sub_topic": "Semantic analogy",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Doctor : Patient :: Lawyer : ?",
+      "text_hi": "Doctor : Patient :: Lawyer : ?",
+      "options": [
+        {
+          "en": "Court",
+          "hi": "Court"
+        },
+        {
+          "en": "Client",
+          "hi": "Client"
+        },
+        {
+          "en": "Law",
+          "hi": "Law"
+        },
+        {
+          "en": "Judge",
+          "hi": "Judge"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "A doctor serves a patient; a lawyer serves a client.",
+      "solution_hi": "डॉक्टर रोगी की सेवा करता है; वकील मुवक्किल की।",
+      "trick_en": "The second word is the person served.",
+      "trick_hi": "दूसरा शब्द सेवा प्राप्त व्यक्ति है।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-02",
+      "subject": "Reasoning",
+      "topic": "Analogy",
+      "sub_topic": "Symbolic and number analogy",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "9 : 81 :: 11 : ?",
+      "text_hi": "9 : 81 :: 11 : ?",
+      "options": [
+        {
+          "en": "101",
+          "hi": "101"
+        },
+        {
+          "en": "111",
+          "hi": "111"
+        },
+        {
+          "en": "121",
+          "hi": "121"
+        },
+        {
+          "en": "131",
+          "hi": "131"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "81 = 9², so 11² = 121.",
+      "solution_hi": "81 = 9², इसलिए 11² = 121।",
+      "trick_en": "Square the first number.",
+      "trick_hi": "पहली संख्या का वर्ग करें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-03",
+      "subject": "Reasoning",
+      "topic": "Analogy",
+      "sub_topic": "Semantic analogy",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "BDF : CEG :: HJL : ?",
+      "text_hi": "BDF : CEG :: HJL : ?",
+      "options": [
+        {
+          "en": "IKM",
+          "hi": "IKM"
+        },
+        {
+          "en": "IJM",
+          "hi": "IJM"
+        },
+        {
+          "en": "JKM",
+          "hi": "JKM"
+        },
+        {
+          "en": "IKN",
+          "hi": "IKN"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Each letter of CEG is two ahead of BDF. So HJL becomes IKM.",
+      "solution_hi": "CEG का हर अक्षर BDF से दो आगे है। इसलिए HJL से IKM बनता है।",
+      "trick_en": "Shift every letter by the same +2 step.",
+      "trick_hi": "हर अक्षर को समान +2 कदम खिसकाएँ।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-04",
+      "subject": "Reasoning",
+      "topic": "Classification",
+      "sub_topic": "Semantic classification",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the odd one out: Rectangle, Square, Rhombus, Triangle.",
+      "text_hi": "बेमेल चुनें: Rectangle, Square, Rhombus, Triangle।",
+      "options": [
+        {
+          "en": "Rectangle",
+          "hi": "Rectangle"
+        },
+        {
+          "en": "Square",
+          "hi": "Square"
+        },
+        {
+          "en": "Rhombus",
+          "hi": "Rhombus"
+        },
+        {
+          "en": "Triangle",
+          "hi": "Triangle"
+        }
+      ],
+      "correct": 3,
+      "solution_en": "The first three are quadrilaterals; a triangle has three sides.",
+      "solution_hi": "पहले तीन चतुर्भुज हैं; त्रिभुज की तीन भुजाएँ होती हैं।",
+      "trick_en": "Count the sides.",
+      "trick_hi": "भुजाएँ गिनें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-05",
+      "subject": "Reasoning",
+      "topic": "Classification",
+      "sub_topic": "Symbolic and number classification",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the odd one out: 9, 15, 21, 26.",
+      "text_hi": "बेमेल संख्या चुनें: 9, 15, 21, 26।",
+      "options": [
+        {
+          "en": "9",
+          "hi": "9"
+        },
+        {
+          "en": "15",
+          "hi": "15"
+        },
+        {
+          "en": "21",
+          "hi": "21"
+        },
+        {
+          "en": "26",
+          "hi": "26"
+        }
+      ],
+      "correct": 3,
+      "solution_en": "9, 15 and 21 are multiples of 3; 26 is not.",
+      "solution_hi": "9, 15 और 21 तीन के गुणज हैं; 26 नहीं है।",
+      "trick_en": "Test divisibility by 3.",
+      "trick_hi": "3 से विभाज्यता जाँचें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-06",
+      "subject": "Reasoning",
+      "topic": "Series",
+      "sub_topic": "Number series",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the next term: 4, 9, 16, 25, ?",
+      "text_hi": "अगला पद ज्ञात कीजिए: 4, 9, 16, 25, ?",
+      "options": [
+        {
+          "en": "30",
+          "hi": "30"
+        },
+        {
+          "en": "32",
+          "hi": "32"
+        },
+        {
+          "en": "36",
+          "hi": "36"
+        },
+        {
+          "en": "40",
+          "hi": "40"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The terms are 2², 3², 4², 5², so the next is 6² = 36.",
+      "solution_hi": "पद 2², 3², 4², 5² हैं, इसलिए अगला 6² = 36 है।",
+      "trick_en": "Check perfect squares before differences.",
+      "trick_hi": "अंतर से पहले पूर्ण वर्ग जाँचें।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-07",
+      "subject": "Reasoning",
+      "topic": "Series",
+      "sub_topic": "Number series",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the next term: 3, 9, 27, 81, ?",
+      "text_hi": "अगला पद ज्ञात कीजिए: 3, 9, 27, 81, ?",
+      "options": [
+        {
+          "en": "162",
+          "hi": "162"
+        },
+        {
+          "en": "213",
+          "hi": "213"
+        },
+        {
+          "en": "243",
+          "hi": "243"
+        },
+        {
+          "en": "324",
+          "hi": "324"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Each term is multiplied by 3, so the next is 81 × 3 = 243.",
+      "solution_hi": "प्रत्येक पद 3 से गुणा होता है, इसलिए अगला 81 × 3 = 243 है।",
+      "trick_en": "Check a constant multiplier.",
+      "trick_hi": "स्थिर गुणक जाँचें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-08",
+      "subject": "Reasoning",
+      "topic": "Series",
+      "sub_topic": "Semantic series",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the next letter: Z, X, V, T, ?",
+      "text_hi": "अगला अक्षर ज्ञात कीजिए: Z, X, V, T, ?",
+      "options": [
+        {
+          "en": "Q",
+          "hi": "Q"
+        },
+        {
+          "en": "R",
+          "hi": "R"
+        },
+        {
+          "en": "S",
+          "hi": "S"
+        },
+        {
+          "en": "U",
+          "hi": "U"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Letters move two places backwards: Z(26), X(24), V(22), T(20), so next is R(18).",
+      "solution_hi": "अक्षर दो स्थान पीछे: Z(26), X(24), V(22), T(20), इसलिए अगला R(18)।",
+      "trick_en": "Convert to positions and subtract 2.",
+      "trick_hi": "स्थानों में बदलकर 2 घटाएँ।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-09",
+      "subject": "Reasoning",
+      "topic": "Operations and Coding",
+      "sub_topic": "Numerical operations",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "If 4 * 2 = 18, where * means a² + b, what is 6 * 3?",
+      "text_hi": "यदि 4 * 2 = 18 है, जहाँ * का अर्थ a² + b है, तो 6 * 3 क्या है?",
+      "options": [
+        {
+          "en": "33",
+          "hi": "33"
+        },
+        {
+          "en": "36",
+          "hi": "36"
+        },
+        {
+          "en": "39",
+          "hi": "39"
+        },
+        {
+          "en": "42",
+          "hi": "42"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "6² + 3 = 36 + 3 = 39.",
+      "solution_hi": "6² + 3 = 36 + 3 = 39।",
+      "trick_en": "Verify the rule on the given example.",
+      "trick_hi": "दिए उदाहरण पर नियम जाँचें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-10",
+      "subject": "Reasoning",
+      "topic": "Operations and Coding",
+      "sub_topic": "Coding and decoding",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "If LIGHT is coded as MJHIU, how is DARK coded?",
+      "text_hi": "यदि LIGHT को MJHIU लिखा जाता है, तो DARK कैसे लिखा जाएगा?",
+      "options": [
+        {
+          "en": "EBSL",
+          "hi": "EBSL"
+        },
+        {
+          "en": "EBSK",
+          "hi": "EBSK"
+        },
+        {
+          "en": "ECSL",
+          "hi": "ECSL"
+        },
+        {
+          "en": "DBSL",
+          "hi": "DBSL"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Each letter moves one place forward: D→E, A→B, R→S, K→L gives EBSL.",
+      "solution_hi": "हर अक्षर एक स्थान आगे: D→E, A→B, R→S, K→L से EBSL बनता है।",
+      "trick_en": "Shift every letter by +1.",
+      "trick_hi": "हर अक्षर +1 खिसकाएँ।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-11",
+      "subject": "Reasoning",
+      "topic": "Operations and Coding",
+      "sub_topic": "Word building",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which word can be formed using the letters of MOUNTAIN (each letter used only as often as it appears)?",
+      "text_hi": "MOUNTAIN के अक्षरों से (हर अक्षर उतनी ही बार) कौन-सा शब्द बन सकता है?",
+      "options": [
+        {
+          "en": "MOTION",
+          "hi": "MOTION"
+        },
+        {
+          "en": "NATION",
+          "hi": "NATION"
+        },
+        {
+          "en": "AMOUNT",
+          "hi": "AMOUNT"
+        },
+        {
+          "en": "ACTION",
+          "hi": "ACTION"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "AMOUNT needs A, M, O, U, N, T, all present once. MOTION needs two O, NATION needs two N and ACTION needs C, none available.",
+      "solution_hi": "AMOUNT में A, M, O, U, N, T चाहिए, सभी एक-एक बार हैं। MOTION में दो O, NATION में दो N और ACTION में C चाहिए, जो नहीं हैं।",
+      "trick_en": "Count repeated letters carefully.",
+      "trick_hi": "दोहराए अक्षर ध्यान से गिनें।",
+      "ideal_time_seconds": 45,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-12",
+      "subject": "Reasoning",
+      "topic": "Spatial and Figural Reasoning",
+      "sub_topic": "Space orientation",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "A person facing south-west turns 90° clockwise. Which direction is he facing now?",
+      "text_hi": "दक्षिण-पश्चिम की ओर मुख व्यक्ति 90° दक्षिणावर्त घूमता है। अब किस दिशा में मुख करेगा?",
+      "options": [
+        {
+          "en": "North-West",
+          "hi": "North-West"
+        },
+        {
+          "en": "South-East",
+          "hi": "South-East"
+        },
+        {
+          "en": "North-East",
+          "hi": "North-East"
+        },
+        {
+          "en": "West",
+          "hi": "West"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "A 90° clockwise turn from south-west gives north-west.",
+      "solution_hi": "दक्षिण-पश्चिम से 90° दक्षिणावर्त घूमने पर उत्तर-पश्चिम मिलता है।",
+      "trick_en": "Rotate the compass 90° clockwise.",
+      "trick_hi": "कंपास को 90° दक्षिणावर्त घुमाएँ।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-13",
+      "subject": "Reasoning",
+      "topic": "Spatial and Figural Reasoning",
+      "sub_topic": "Space visualization",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "A 5 × 5 × 5 cube painted on all faces is cut into unit cubes. How many have exactly one painted face?",
+      "text_hi": "5 × 5 × 5 रंगे घन को इकाई घनों में काटा जाता है। कितने घनों का ठीक एक फलक रंगा है?",
+      "options": [
+        {
+          "en": "36",
+          "hi": "36"
+        },
+        {
+          "en": "48",
+          "hi": "48"
+        },
+        {
+          "en": "54",
+          "hi": "54"
+        },
+        {
+          "en": "64",
+          "hi": "64"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "Each face contributes (5 − 2)² = 9 interior squares, and there are 6 faces: 6 × 9 = 54.",
+      "solution_hi": "प्रत्येक फलक पर (5 − 2)² = 9 भीतरी वर्ग, 6 फलक: 6 × 9 = 54।",
+      "trick_en": "One-face cubes = 6(n − 2)².",
+      "trick_hi": "एक फलक वाले = 6(n − 2)²।",
+      "ideal_time_seconds": 50,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-14",
+      "subject": "Reasoning",
+      "topic": "Spatial and Figural Reasoning",
+      "sub_topic": "Figural pattern completion",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "A clock shows 5:15. What does its mirror image show?",
+      "text_hi": "घड़ी 5:15 दिखाती है। दर्पण छवि क्या दिखाएगी?",
+      "options": [
+        {
+          "en": "6:45",
+          "hi": "6:45"
+        },
+        {
+          "en": "7:15",
+          "hi": "7:15"
+        },
+        {
+          "en": "6:15",
+          "hi": "6:15"
+        },
+        {
+          "en": "7:45",
+          "hi": "7:45"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Mirror time = 11:60 − 5:15 = 6:45.",
+      "solution_hi": "दर्पण समय = 11:60 − 5:15 = 6:45।",
+      "trick_en": "Use 11:60 − given time.",
+      "trick_hi": "11:60 − दिया समय लें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-15",
+      "subject": "Reasoning",
+      "topic": "Logical Reasoning",
+      "sub_topic": "Venn diagrams",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "All roses are flowers. Some flowers fade quickly. Which conclusion definitely follows?",
+      "text_hi": "सभी गुलाब फूल हैं। कुछ फूल जल्दी मुरझाते हैं। कौन-सा निष्कर्ष निश्चित है?",
+      "options": [
+        {
+          "en": "All roses fade quickly",
+          "hi": "All roses fade quickly"
+        },
+        {
+          "en": "Some roses fade quickly",
+          "hi": "Some roses fade quickly"
+        },
+        {
+          "en": "No definite conclusion about roses fading",
+          "hi": "No definite conclusion about roses fading"
+        },
+        {
+          "en": "No flower is a rose",
+          "hi": "No flower is a rose"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The fading flowers may or may not include roses, so no definite conclusion about roses follows.",
+      "solution_hi": "मुरझाने वाले फूलों में गुलाब हों या न हों, गुलाब के बारे में निश्चित निष्कर्ष नहीं निकलता।",
+      "trick_en": "\"Some B are C\" says nothing definite about a subset of B.",
+      "trick_hi": "\"कुछ B, C हैं\" B के उपसमुच्चय के बारे में निश्चित कुछ नहीं कहता।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-16",
+      "subject": "Reasoning",
+      "topic": "Logical Reasoning",
+      "sub_topic": "Drawing inferences",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "If it rains, the match is cancelled. The match was not cancelled. What follows?",
+      "text_hi": "यदि बारिश होती है, तो मैच रद्द होता है। मैच रद्द नहीं हुआ। क्या निकलता है?",
+      "options": [
+        {
+          "en": "It did not rain",
+          "hi": "It did not rain"
+        },
+        {
+          "en": "It rained",
+          "hi": "It rained"
+        },
+        {
+          "en": "The match was postponed",
+          "hi": "The match was postponed"
+        },
+        {
+          "en": "It will rain tomorrow",
+          "hi": "It will rain tomorrow"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "This is modus tollens: not-cancelled implies not-rain.",
+      "solution_hi": "यह मॉडस टॉलेंस है: रद्द न होना बारिश न होने को दर्शाता है।",
+      "trick_en": "Contrapositive: no cancellation → no rain.",
+      "trick_hi": "Contrapositive: रद्द नहीं → बारिश नहीं।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-17",
+      "subject": "Reasoning",
+      "topic": "Logical Reasoning",
+      "sub_topic": "Problem solving",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "In a row of 25 students, A is 12th from the left and B is 9th from the right. How many students are between A and B?",
+      "text_hi": "25 विद्यार्थियों की पंक्ति में A बाएँ से 12वाँ और B दाएँ से 9वाँ है। A और B के बीच कितने हैं?",
+      "options": [
+        {
+          "en": "3",
+          "hi": "3"
+        },
+        {
+          "en": "4",
+          "hi": "4"
+        },
+        {
+          "en": "5",
+          "hi": "5"
+        },
+        {
+          "en": "6",
+          "hi": "6"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "B is 25 − 9 + 1 = 17th from the left. Students between = 17 − 12 − 1 = 4.",
+      "solution_hi": "B बाएँ से 25 − 9 + 1 = 17वाँ है। बीच में = 17 − 12 − 1 = 4।",
+      "trick_en": "Convert both positions to the same side.",
+      "trick_hi": "दोनों स्थितियाँ एक ही ओर से निकालें।",
+      "ideal_time_seconds": 45,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-18",
+      "subject": "Reasoning",
+      "topic": "Intelligence",
+      "sub_topic": "Social intelligence",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "A new colleague is quiet in team meetings. What is the most socially intelligent first step?",
+      "text_hi": "नया सहकर्मी टीम बैठकों में चुप रहता है। सबसे सामाजिक रूप से बुद्धिमान पहला कदम क्या है?",
+      "options": [
+        {
+          "en": "Assume they are not interested",
+          "hi": "Assume they are not interested"
+        },
+        {
+          "en": "Ask them privately what would help them participate",
+          "hi": "Ask them privately what would help them participate"
+        },
+        {
+          "en": "Publicly ask them to speak more",
+          "hi": "Publicly ask them to speak more"
+        },
+        {
+          "en": "Report them to the manager",
+          "hi": "Report them to the manager"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "A private, supportive conversation addresses the cause without pressure or embarrassment.",
+      "solution_hi": "निजी और सहायक बातचीत बिना दबाव या शर्मिंदगी के कारण समझती है।",
+      "trick_en": "Choose the option that invites, not accuses.",
+      "trick_hi": "आरोप नहीं, आमंत्रण वाला विकल्प चुनें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-19",
+      "subject": "Reasoning",
+      "topic": "General Intelligence",
+      "sub_topic": "Relationship concepts",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "X is Y's father's sister. How is X related to Y?",
+      "text_hi": "X, Y के पिता की बहन है। X, Y से कैसे संबंधित है?",
+      "options": [
+        {
+          "en": "Mother",
+          "hi": "Mother"
+        },
+        {
+          "en": "Aunt",
+          "hi": "Aunt"
+        },
+        {
+          "en": "Sister",
+          "hi": "Sister"
+        },
+        {
+          "en": "Grandmother",
+          "hi": "Grandmother"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The father's sister is the aunt.",
+      "solution_hi": "पिता की बहन बुआ/ताई होती है।",
+      "trick_en": "A father's sister = aunt.",
+      "trick_hi": "पिता की बहन = बुआ।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-20",
+      "subject": "Reasoning",
+      "topic": "General Intelligence",
+      "sub_topic": "Arithmetical reasoning",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "If 1 January 2025 is a Wednesday, what day is 1 January 2026?",
+      "text_hi": "यदि 1 जनवरी 2025 बुधवार है, तो 1 जनवरी 2026 कौन-सा दिन है?",
+      "options": [
+        {
+          "en": "Wednesday",
+          "hi": "Wednesday"
+        },
+        {
+          "en": "Thursday",
+          "hi": "Thursday"
+        },
+        {
+          "en": "Friday",
+          "hi": "Friday"
+        },
+        {
+          "en": "Saturday",
+          "hi": "Saturday"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "2025 is not a leap year, so 365 days shift the day by 1: Thursday.",
+      "solution_hi": "2025 लीप वर्ष नहीं है, 365 दिन से एक दिन आगे: गुरुवार।",
+      "trick_en": "Add 1 day for a non-leap year, 2 for a leap year.",
+      "trick_hi": "सामान्य वर्ष में 1 दिन, लीप वर्ष में 2 दिन जोड़ें।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-21",
+      "subject": "Reasoning",
+      "topic": "General Intelligence",
+      "sub_topic": "Analysis and judgment",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "A mother is three times as old as her daughter. After 8 years she will be twice as old. Find the daughter's present age.",
+      "text_hi": "माँ की आयु बेटी की तीन गुनी है। 8 वर्ष बाद वह दुगुनी होगी। बेटी की वर्तमान आयु ज्ञात कीजिए।",
+      "options": [
+        {
+          "en": "6 years",
+          "hi": "6 years"
+        },
+        {
+          "en": "8 years",
+          "hi": "8 years"
+        },
+        {
+          "en": "10 years",
+          "hi": "10 years"
+        },
+        {
+          "en": "12 years",
+          "hi": "12 years"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "3x + 8 = 2(x + 8) gives x = 8.",
+      "solution_hi": "3x + 8 = 2(x + 8) से x = 8।",
+      "trick_en": "Add 8 to both ages before doubling.",
+      "trick_hi": "दुगुना करने से पहले दोनों में 8 जोड़ें।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-22",
+      "subject": "Reasoning",
+      "topic": "Matching and Indexing",
+      "sub_topic": "Indexing",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "In a city index, Bhubaneswar is 05, Patna 06 and Raipur 07. Which code belongs to Patna?",
+      "text_hi": "किसी शहर सूची में भुवनेश्वर 05, पटना 06 और रायपुर 07 है। पटना का कौन-सा कोड है?",
+      "options": [
+        {
+          "en": "05",
+          "hi": "05"
+        },
+        {
+          "en": "06",
+          "hi": "06"
+        },
+        {
+          "en": "07",
+          "hi": "07"
+        },
+        {
+          "en": "08",
+          "hi": "08"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The index lists Patna as 06, so the matching code is 06.",
+      "solution_hi": "सूची में पटना 06 है, इसलिए सही कोड 06 है।",
+      "trick_en": "Match the city to its listed code before checking options.",
+      "trick_hi": "विकल्प जाँचने से पहले शहर का कोड सूची में देखें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-23",
+      "subject": "Reasoning",
+      "topic": "General Intelligence",
+      "sub_topic": "Syllogistic reasoning",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Statements: All pens are red. Some red things are boxes. Conclusions: I. Some pens are boxes. II. Some boxes are red. Which follows?",
+      "text_hi": "कथन: सभी पेन लाल हैं। कुछ लाल वस्तुएँ डिब्बे हैं। निष्कर्ष: I. कुछ पेन डिब्बे हैं। II. कुछ डिब्बे लाल हैं। कौन निकलता है?",
+      "options": [
+        {
+          "en": "Only I",
+          "hi": "Only I"
+        },
+        {
+          "en": "Only II",
+          "hi": "Only II"
+        },
+        {
+          "en": "Both",
+          "hi": "Both"
+        },
+        {
+          "en": "Neither",
+          "hi": "Neither"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Some red things are boxes\" converts to \"some boxes are red\", so II follows. The boxes may not be pens, so I does not.",
+      "solution_hi": "\"कुछ लाल वस्तुएँ डिब्बे हैं\" से \"कुछ डिब्बे लाल हैं\" निकलता है, इसलिए II सही। डिब्बे पेन न हों, इसलिए I नहीं।",
+      "trick_en": "\"Some A are B\" is reversible into \"some B are A\".",
+      "trick_hi": "\"कुछ A, B हैं\" को \"कुछ B, A हैं\" किया जा सकता है।",
+      "ideal_time_seconds": 45,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-24",
+      "subject": "Reasoning",
+      "topic": "Matching and Indexing",
+      "sub_topic": "Centre and roll number classification",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Roll numbers 201–250 belong to Centre C. Which centre does roll number 233 belong to?",
+      "text_hi": "रोल नंबर 201–250 केंद्र C के हैं। रोल नंबर 233 किस केंद्र का है?",
+      "options": [
+        {
+          "en": "Centre A",
+          "hi": "Centre A"
+        },
+        {
+          "en": "Centre B",
+          "hi": "Centre B"
+        },
+        {
+          "en": "Centre C",
+          "hi": "Centre C"
+        },
+        {
+          "en": "Centre D",
+          "hi": "Centre D"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "233 lies between 201 and 250, so it belongs to Centre C.",
+      "solution_hi": "233, 201 और 250 के बीच है, इसलिए केंद्र C का है।",
+      "trick_en": "Check the range before answering.",
+      "trick_hi": "उत्तर से पहले परास जाँचें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "reasoning5-25",
+      "subject": "Reasoning",
+      "topic": "Matching and Indexing",
+      "sub_topic": "Date and city matching",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which pair is correctly matched?",
+      "text_hi": "कौन-सा युग्म सही मिलान है?",
+      "options": [
+        {
+          "en": "26 January : Independence Day",
+          "hi": "26 January : Independence Day"
+        },
+        {
+          "en": "15 August : Republic Day",
+          "hi": "15 August : Republic Day"
+        },
+        {
+          "en": "5 September : Teachers' Day",
+          "hi": "5 September : Teachers' Day"
+        },
+        {
+          "en": "2 October : Children's Day",
+          "hi": "2 October : Children's Day"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "5 September is Teachers' Day. 26 January is Republic Day, 15 August is Independence Day and 14 November is Children's Day.",
+      "solution_hi": "5 सितंबर शिक्षक दिवस है। 26 जनवरी गणतंत्र दिवस, 15 अगस्त स्वतंत्रता दिवस और 14 नवंबर बाल दिवस है।",
+      "trick_en": "Fix national days by date.",
+      "trick_hi": "राष्ट्रीय दिवस तारीख से याद रखें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ]
+}

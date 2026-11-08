@@ -1,7 +1,9 @@
-# SSC CGL Tier-I practice content (2026 pattern, Batches 1–4)
+# SSC CGL Tier-I practice content (2026 pattern, Batches 1–5)
 
 Status: **original practice content, automatically checked, independent human review pending.**
 Nothing in these packs is an SSC previous-year paper (PYQ), an official paper, an official shift or an official answer key.
+
+**Batch 5 update (2026-11-08):** a fifth full-mock pack (`ssc-cgl-2026-tier1-practice-v5`) was added. Total verified practice content is now **560 questions**: five independent 100-question full mocks, twenty sectional papers and the 60-question drill pool. No pack is human-reviewed.
 
 **Batch 4 update (2026-11-08):** a fourth full-mock pack (`ssc-cgl-2026-tier1-practice-v4`) and a **60-question topic-drill pool** (`ssc-cgl-2026-tier1-practice-drills-v1`) were added. Total verified practice content is now **460 questions**: four independent 100-question full mocks, sixteen sectional papers and a drill pool that powers 15–30 question single-topic drills. No pack is human-reviewed.
 
@@ -17,13 +19,21 @@ Nothing in these packs is an SSC previous-year paper (PYQ), an official paper, a
 | Stage | Tier-I only |
 | Target cycle | 2027 preparation |
 | Pattern baseline | Latest verifiable official notice: CGL **2026** (notice dated 21-05-2026) |
-| Pack keys | `…-practice-v1`, `…-practice-v2`, `…-practice-v3`, `…-practice-v4` (full mocks) and `…-practice-drills-v1` (60-question drill pool) |
-| Content | 460 original questions: four 100-question full-mock packs (2 linked sets each) and one 60-question drill pack (15 per subject, no sets) |
+| Pack keys | `…-practice-v1` … `…-practice-v5` (full mocks) and `…-practice-drills-v1` (60-question drill pool) |
+| Content | 560 original questions: five 100-question full-mock packs (2 linked sets each) and one 60-question drill pack (15 per subject, no sets) |
 | Provenance | `original_practice`, `is_pyq: false` |
 | Review state | `automated_verified_pending_human_review` |
 | Translation | ExamEdge Hindi/English text, **not** an official SSC translation |
 
 The 2027 CGL notice was not available on 2026-11-08. The 2026 notice is the latest official scheme that could be verified, so these packs are labelled a **2026-pattern baseline for 2027 preparation**. When the 2027 notice is published, re-check the scheme, syllabus, timings and marking before reusing or extending them. No 2027 date, vacancy, cut-off or pattern is invented here.
+
+## Batch 5 addendum
+
+- **Fifth full mock:** `ssc-cgl-2026-tier1-practice-v5`, 100 new questions with the official Tier-I quotas and the 30/50/20 difficulty split. Content hash `f3cbf6bb4e23a6daf78fcec037e7f75e719f2c62a50330afbf47e7e638ebb6b7`.
+- **New linked sets:** a production table for 2020–2023 (`di-2026-t1-05`, two factories) and a five-blank cloze on household water conservation (`cloze-2026-t1-05`).
+- **Five full mocks verified:** 6 packs, 560 published practice questions, 10 linked sets; five consecutive 100-question mocks delivered 25 distinct questions each with **0 overlap**, `reused_questions: 0` and `max_score` 200.
+- **Batch 5 facts:** BRICS Summit dates (12–13 Sep 2026), Asian Games motto, G20 presidency (United States; Miami summit), FIFA opener (Estadio Azteca, 11 Jun 2026), Nobel Peace announcement date (9 Oct 2026) and COP31 presidency (Türkiye, Antalya). Each carries a source and `checked_on: 2026-11-08`.
+- **Status:** all six packs are `automated_verified_pending_human_review`; none is approved or human-reviewed.
 
 ## Batch 4 addendum
 
@@ -184,7 +194,7 @@ The preview imports both packs. It registers its own local accounts. Data disapp
 - General Awareness current-affairs items are only current as of 2026-11-08.
 - No PYQ or official paper was analysed or reproduced, so this pack makes no evidence-based claim about historical SSC topic frequency, shift difficulty or repeated questions.
 - The drill pool improves single-topic coverage, but the minimum drill is 15 questions: narrow topics with fewer than 15 published items still return the honest "cannot fill" message instead of inventing questions. Deeper drills need a bigger reviewed pool.
-- The current 460-question bank supports four full mocks and sixteen sectionals. Human review is still pending, and the 2027 notice is not available.
+- The current 560-question bank supports five full mocks and twenty sectionals. Human review is still pending, and the 2027 notice is not available.
 - Figures are avoided: spatial/figural items are expressed verbally (direction, folding, shadow) rather than with unverified images. The DI set uses a data table rendered by the existing chart component.
 
 ## Sources

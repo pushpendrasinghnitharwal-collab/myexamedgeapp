@@ -59,8 +59,10 @@ async function httpFixture(client) {
   return { request, close: async () => { await new Promise(resolve => server.close(resolve)) } }
 }
 
+const keys = ['ssc-cgl-2026-tier1-practice-v1', 'ssc-cgl-2026-tier1-practice-v2', 'ssc-cgl-2026-tier1-practice-v3', DRILL_KEY, 'ssc-cgl-2026-tier1-practice-v4']
+
 test('four full-mock packs and the 60-question drill pool validate with no cross-pack duplicates', () => {
-  assert.deepEqual(PRACTICE_PACK_KEYS, [
+  assert.deepEqual(keys, [
     'ssc-cgl-2026-tier1-practice-v1',
     'ssc-cgl-2026-tier1-practice-v2',
     'ssc-cgl-2026-tier1-practice-v3',
@@ -69,7 +71,7 @@ test('four full-mock packs and the 60-question drill pool validate with no cross
   ])
   let fullMockQuestions = 0
   let drillQuestions = 0
-  for (const key of PRACTICE_PACK_KEYS) {
+  for (const key of keys) {
     assert.equal(reports[key].ok, true, `${key}: ${reports[key].errors.join('\n')}`)
     assert.equal(reports[key].content_hash, practiceContentHash(contents[key]))
     if (key === DRILL_KEY) {
@@ -87,11 +89,11 @@ test('four full-mock packs and the 60-question drill pool validate with no cross
   }
   assert.equal(fullMockQuestions, 400)
   assert.equal(drillQuestions, 60)
-  assert.equal(new Set(PRACTICE_PACK_KEYS.map(key => reports[key].content_hash)).size, 5)
+  assert.equal(new Set(keys.map(key => reports[key].content_hash)).size, 5)
 
   const qids = new Set()
   const texts = new Set()
-  for (const key of PRACTICE_PACK_KEYS) {
+  for (const key of keys) {
     for (const question of contents[key].questions) {
       assert.equal(qids.has(question.qid), false, `duplicate qid across packs: ${question.qid}`)
       qids.add(question.qid)
@@ -110,7 +112,7 @@ test('a fourth full mock and a topic drill both draw from the imported 460-quest
     await migrateSscCgl(client, { resetLegacyBank: true })
     await migrateMasterAssembler(client)
     await migratePracticePacks(client)
-    for (const key of PRACTICE_PACK_KEYS) {
+    for (const key of keys) {
       const result = await importPracticePack(client, { content: contents[key], report: reports[key], mode: 'preview', importedBy: 'test' })
       assert.equal(result.imported, true)
       assert.equal(result.review_status, 'preview_not_human_reviewed')

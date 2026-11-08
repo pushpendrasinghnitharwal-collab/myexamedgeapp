@@ -9,6 +9,7 @@ export const PRACTICE_PACKS = {
   'ssc-cgl-2026-tier1-practice-v3': new URL('./data/ssc-cgl-2026-tier1-practice-v3/', import.meta.url),
   'ssc-cgl-2026-tier1-practice-drills-v1': new URL('./data/ssc-cgl-2026-tier1-practice-drills-v1/', import.meta.url),
   'ssc-cgl-2026-tier1-practice-v4': new URL('./data/ssc-cgl-2026-tier1-practice-v4/', import.meta.url),
+  'ssc-cgl-2026-tier1-practice-v5': new URL('./data/ssc-cgl-2026-tier1-practice-v5/', import.meta.url),
 }
 export const PRACTICE_PACK_KEY = 'ssc-cgl-2026-tier1-practice-v1'
 export const PRACTICE_PACK_KEYS = Object.keys(PRACTICE_PACKS)

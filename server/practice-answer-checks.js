@@ -169,12 +169,41 @@ export const quantExpectedV4 = {
   'quant4-25': () => (5400 * 120 / 360).toLocaleString('en-IN'),
 }
 
+export const quantExpectedV5 = {
+  'quant5-01': () => String([3, 9, 7, 1][2026 % 4 === 0 ? 3 : (2026 % 4) - 1]),
+  'quant5-02': () => String(60),
+  'quant5-03': () => String(640 / 8),
+  'quant5-04': () => String((10 / 2) * (7 + 9)),
+  'quant5-05': () => String((9 * 36 - 52) / 8),
+  'quant5-06': () => inr(7500 * 4 * 5 / 100),
+  'quant5-07': () => inr(8000 * (1.05 ** 2 - 1)),
+  'quant5-08': () => inr(1134 * 100 / 108),
+  'quant5-09': () => inr(2000 * 0.75 * 0.8),
+  'quant5-10': () => `${72 / 5} days`,
+  'quant5-11': () => `${150 / (72 * 5 / 18)} seconds`,
+  'quant5-12': () => '53⅓%',
+  'quant5-13': () => String(5 ** 2 - 2),
+  'quant5-14': () => String(4 - 3),
+  'quant5-15': () => `${360 / 6}°`,
+  'quant5-16': () => `${(9 * 12) / 2} cm²`,
+  'quant5-17': () => `${Math.sqrt(10 ** 2 - 8 ** 2)} cm`,
+  'quant5-18': () => `${2 * (22 / 7) * 5 * 14} cm²`,
+  'quant5-19': () => `${15 * 8} cm²`,
+  'quant5-20': () => String(Math.cos(Math.PI / 3) + Math.sin(Math.PI / 6)),
+  'quant5-21': () => '12/13',
+  'quant5-22': () => '60√3 m',
+  'quant5-23': () => String(320 + 260),
+  'quant5-24': () => `${((320 - 200) / 200) * 100}%`,
+  'quant5-25': () => (3600 * 90 / 360).toLocaleString('en-IN'),
+}
+
 const quantExpectations = {
   'ssc-cgl-2026-tier1-practice-v1': quantExpected,
   'ssc-cgl-2026-tier1-practice-v2': quantExpectedV2,
   'ssc-cgl-2026-tier1-practice-v3': quantExpectedV3,
   'ssc-cgl-2026-tier1-practice-drills-v1': quantExpectedDrills,
   'ssc-cgl-2026-tier1-practice-v4': quantExpectedV4,
+  'ssc-cgl-2026-tier1-practice-v5': quantExpectedV5,
 }
 
 // Sanity checks of the arithmetic used above, so a typo in a check cannot

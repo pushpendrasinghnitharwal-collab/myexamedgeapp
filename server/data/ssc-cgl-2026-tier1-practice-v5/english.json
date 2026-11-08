@@ -1,0 +1,999 @@
+{
+  "pack_key": "ssc-cgl-2026-tier1-practice-v5",
+  "sets": [
+    {
+      "ref": "cloze-2026-t1-05",
+      "set_type": "Cloze_Test",
+      "subject": "English",
+      "passage_en": "Saving water begins at home. A leaking tap _____ (1) _____ several litres a day, so repairing it quickly matters. Taking shorter showers also _____ (2) _____ water use. In the kitchen, washing vegetables in a bowl instead of under a running tap _____ (3) _____ wastage. Outdoors, watering plants early in the morning reduces _____ (4) _____ loss. These small habits, practised together, _____ (5) _____ a real difference.",
+      "passage_hi": "पानी बचाना घर से शुरू होता है। टपकता नल एक दिन में कई लीटर पानी _____ (1) _____ है, इसलिए उसे जल्दी ठीक करना ज़रूरी है। छोटी शॉवर भी पानी का उपयोग _____ (2) _____ करती है। रसोई में सब्ज़ियाँ बहते नल के नीचे के बजाय बाटी में धोने से बर्बादी _____ (3) _____ होती है। बाहर पौधों को सुबह पानी देने से वाष्पन हानि _____ (4) _____ होती है। ये छोटी आदतें मिलकर वास्तविक अंतर _____ (5) _____ करती हैं।",
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "Original ExamEdge cloze passage on household water conservation; not an SSC passage.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "qid": "english5-01",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Synonyms and homonyms",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word closest in meaning to \"diligent\".",
+      "text_hi": "\"diligent\" के अर्थ के सबसे निकट शब्द चुनें।",
+      "options": [
+        {
+          "en": "Lazy",
+          "hi": "Lazy"
+        },
+        {
+          "en": "Hardworking",
+          "hi": "Hardworking"
+        },
+        {
+          "en": "Careless",
+          "hi": "Careless"
+        },
+        {
+          "en": "Late",
+          "hi": "Late"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Diligent\" means showing steady, careful effort, so \"hardworking\" fits.",
+      "solution_hi": "\"Diligent\" का अर्थ है निरंतर और सावधान प्रयास, इसलिए \"hardworking\" उपयुक्त है।",
+      "trick_en": "Diligent work is steady work.",
+      "trick_hi": "Diligent कार्य निरंतर कार्य है।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-02",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Antonyms",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word most opposite in meaning to \"victory\".",
+      "text_hi": "\"victory\" के अर्थ के सबसे विपरीत शब्द चुनें।",
+      "options": [
+        {
+          "en": "Success",
+          "hi": "Success"
+        },
+        {
+          "en": "Defeat",
+          "hi": "Defeat"
+        },
+        {
+          "en": "Battle",
+          "hi": "Battle"
+        },
+        {
+          "en": "Prize",
+          "hi": "Prize"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Victory is a win; defeat is a loss.",
+      "solution_hi": "Victory जीत है; defeat हार।",
+      "trick_en": "Pair win with loss.",
+      "trick_hi": "जीत को हार से जोड़ें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-03",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Spellings and misspelt words",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which spelling is correct for the word meaning 'required'?",
+      "text_hi": "'आवश्यक' के अर्थ वाले शब्द की सही वर्तनी कौन-सी है?",
+      "options": [
+        {
+          "en": "Neccessary",
+          "hi": "Neccessary"
+        },
+        {
+          "en": "Necessary",
+          "hi": "Necessary"
+        },
+        {
+          "en": "Necesary",
+          "hi": "Necesary"
+        },
+        {
+          "en": "Necessery",
+          "hi": "Necessery"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Necessary\" has one \"c\" and double \"s\": n-e-c-e-s-s-a-r-y.",
+      "solution_hi": "\"Necessary\" में एक \"c\" और दोहरा \"s\": n-e-c-e-s-s-a-r-y।",
+      "trick_en": "Remember: one collar (c), two sleeves (ss).",
+      "trick_hi": "याद रखें: एक कॉलर (c), दो आस्तीन (ss)।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-04",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Idioms and phrases",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "What does \"to burn the midnight oil\" mean?",
+      "text_hi": "\"to burn the midnight oil\" का क्या अर्थ है?",
+      "options": [
+        {
+          "en": "To study or work late at night",
+          "hi": "To study or work late at night"
+        },
+        {
+          "en": "To waste electricity",
+          "hi": "To waste electricity"
+        },
+        {
+          "en": "To start a fire",
+          "hi": "To start a fire"
+        },
+        {
+          "en": "To sleep early",
+          "hi": "To sleep early"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The idiom means to work or study late into the night.",
+      "solution_hi": "यह मुहावरा रात देर तक काम या अध्ययन करने का अर्थ देता है।",
+      "trick_en": "Think of an oil lamp used at night.",
+      "trick_hi": "रात में जलने वाले तेल के दीये को सोचें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-05",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "One word substitution",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "One word for \"a place where coins are made\":",
+      "text_hi": "\"जहाँ सिक्के बनाए जाते हैं\" के लिए एक शब्द:",
+      "options": [
+        {
+          "en": "Mint",
+          "hi": "Mint"
+        },
+        {
+          "en": "Vault",
+          "hi": "Vault"
+        },
+        {
+          "en": "Bank",
+          "hi": "Bank"
+        },
+        {
+          "en": "Foundry",
+          "hi": "Foundry"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "A mint manufactures coins; a foundry casts metal.",
+      "solution_hi": "Mint में सिक्के बनते हैं; foundry में धातु ढाली जाती है।",
+      "trick_en": "Mint = coin factory.",
+      "trick_hi": "Mint = सिक्का कारखाना।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-06",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "One word substitution",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "One word for \"a doctor who treats children\":",
+      "text_hi": "\"बच्चों का इलाज करने वाला डॉक्टर\" के लिए एक शब्द:",
+      "options": [
+        {
+          "en": "Paediatrician",
+          "hi": "Paediatrician"
+        },
+        {
+          "en": "Dermatologist",
+          "hi": "Dermatologist"
+        },
+        {
+          "en": "Cardiologist",
+          "hi": "Cardiologist"
+        },
+        {
+          "en": "Orthopaedist",
+          "hi": "Orthopaedist"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "A paediatrician treats children; a dermatologist treats skin.",
+      "solution_hi": "Paediatrician बच्चों का इलाज करता है; dermatologist त्वचा का।",
+      "trick_en": "Paed- relates to children.",
+      "trick_hi": "Paed- बच्चों से संबंधित है।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-07",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Synonyms and homonyms",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word closest in meaning to \"obsolete\".",
+      "text_hi": "\"obsolete\" के अर्थ के सबसे निकट शब्द चुनें।",
+      "options": [
+        {
+          "en": "Modern",
+          "hi": "Modern"
+        },
+        {
+          "en": "Outdated",
+          "hi": "Outdated"
+        },
+        {
+          "en": "Useful",
+          "hi": "Useful"
+        },
+        {
+          "en": "Expensive",
+          "hi": "Expensive"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Obsolete\" means no longer in use or out of date.",
+      "solution_hi": "\"Obsolete\" का अर्थ है अब प्रयोग में नहीं या पुराना।",
+      "trick_en": "Obsolete technology is replaced by newer technology.",
+      "trick_hi": "Obsolete तकनीक नई तकनीक से बदल जाती है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.merriam-webster.com/dictionary/",
+        "citation": "Merriam-Webster dictionary sense check, 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-08",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Spot the error",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the error: The news (A) / are good (B) / today (C) / No error (D).",
+      "text_hi": "त्रुटि चुनें: The news (A) / are good (B) / today (C) / No error (D)।",
+      "options": [
+        {
+          "en": "A",
+          "hi": "A"
+        },
+        {
+          "en": "B",
+          "hi": "B"
+        },
+        {
+          "en": "C",
+          "hi": "C"
+        },
+        {
+          "en": "D",
+          "hi": "D"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"News\" is an uncountable noun that takes a singular verb, so it should be \"is good\".",
+      "solution_hi": "\"News\" अगणनीय संज्ञा है और एकवचन क्रिया लेती है, इसलिए \"is good\" होना चाहिए।",
+      "trick_en": "News, mathematics and physics look plural but take singular verbs.",
+      "trick_hi": "News, mathematics, physics बहुवचन जैसे दिखते हैं पर एकवचन क्रिया लेते हैं।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-09",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Spot the error",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Find the error: She prefers (A) / coffee than tea (B) / in the morning (C) / No error (D).",
+      "text_hi": "त्रुटि चुनें: She prefers (A) / coffee than tea (B) / in the morning (C) / No error (D)।",
+      "options": [
+        {
+          "en": "A",
+          "hi": "A"
+        },
+        {
+          "en": "B",
+          "hi": "B"
+        },
+        {
+          "en": "C",
+          "hi": "C"
+        },
+        {
+          "en": "D",
+          "hi": "D"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The verb \"prefer\" takes \"to\", not \"than\": she prefers coffee to tea.",
+      "solution_hi": "\"Prefer\" के साथ \"than\" नहीं, \"to\" आता है: she prefers coffee to tea।",
+      "trick_en": "Prefer A to B; superior to, senior to.",
+      "trick_hi": "Prefer A to B; superior to, senior to।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-10",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "She is married ___ my cousin.",
+      "text_hi": "वह मेरे चचेरे भाई से विवाहित है। (रिक्त स्थान भरें)",
+      "options": [
+        {
+          "en": "with",
+          "hi": "with"
+        },
+        {
+          "en": "to",
+          "hi": "to"
+        },
+        {
+          "en": "for",
+          "hi": "for"
+        },
+        {
+          "en": "by",
+          "hi": "by"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The correct collocation is \"married to\" someone.",
+      "solution_hi": "सही संयोजन \"married to\" है।",
+      "trick_en": "Married to a person; married in a ceremony.",
+      "trick_hi": "व्यक्ति के साथ married to; समारोह में married in।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-11",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Neither of the answers ___ correct.",
+      "text_hi": "दोनों उत्तरों में से कोई भी सही नहीं है। (रिक्त स्थान भरें)",
+      "options": [
+        {
+          "en": "are",
+          "hi": "are"
+        },
+        {
+          "en": "is",
+          "hi": "is"
+        },
+        {
+          "en": "were",
+          "hi": "were"
+        },
+        {
+          "en": "have been",
+          "hi": "have been"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Neither of\" takes a singular verb, so \"is\" is correct.",
+      "solution_hi": "\"Neither of\" एकवचन क्रिया लेता है, इसलिए \"is\" सही है।",
+      "trick_en": "Neither/either of + plural noun + singular verb.",
+      "trick_hi": "Neither/either of + बहुवचन संज्ञा + एकवचन क्रिया।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-12",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "By the time we reached the hall, the film ___.",
+      "text_hi": "जब तक हम हॉल पहुँचे, फिल्म ___ चुकी थी।",
+      "options": [
+        {
+          "en": "starts",
+          "hi": "starts"
+        },
+        {
+          "en": "started",
+          "hi": "started"
+        },
+        {
+          "en": "had started",
+          "hi": "had started"
+        },
+        {
+          "en": "has started",
+          "hi": "has started"
+        }
+      ],
+      "correct": 2,
+      "solution_en": "The earlier of two past actions takes the past perfect: had started.",
+      "solution_hi": "दो भूतकालिक क्रियाओं में पहली के लिए past perfect आता है: had started।",
+      "trick_en": "By the time + past → past perfect for the earlier action.",
+      "trick_hi": "By the time + भूतकाल → पहली क्रिया के लिए past perfect।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-13",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Sentence improvement",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the best improvement: Please return back my book tomorrow.",
+      "text_hi": "सर्वोत्तम सुधार चुनें: Please return back my book tomorrow.",
+      "options": [
+        {
+          "en": "return back",
+          "hi": "return back"
+        },
+        {
+          "en": "return",
+          "hi": "return"
+        },
+        {
+          "en": "return again",
+          "hi": "return again"
+        },
+        {
+          "en": "return backwards",
+          "hi": "return backwards"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"Return\" already means to give back, so \"back\" is redundant.",
+      "solution_hi": "\"Return\" का अर्थ पहले से वापस देना है, इसलिए \"back\" अनावश्यक है।",
+      "trick_en": "Avoid return back, reverse back and revert back.",
+      "trick_hi": "return back, reverse back, revert back से बचें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-14",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Active and passive voice",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Change to passive voice: The teacher is explaining the lesson.",
+      "text_hi": "कर्मवाच्य में बदलें: The teacher is explaining the lesson.",
+      "options": [
+        {
+          "en": "The lesson is explained by the teacher.",
+          "hi": "The lesson is explained by the teacher."
+        },
+        {
+          "en": "The lesson is being explained by the teacher.",
+          "hi": "The lesson is being explained by the teacher."
+        },
+        {
+          "en": "The lesson was being explained by the teacher.",
+          "hi": "The lesson was being explained by the teacher."
+        },
+        {
+          "en": "The lesson has been explained by the teacher.",
+          "hi": "The lesson has been explained by the teacher."
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Present continuous passive is \"is/are being + past participle\".",
+      "solution_hi": "वर्तमान अपूर्ण कर्मवाच्य \"is/are being + past participle\" है।",
+      "trick_en": "Continuous passive needs \"being\".",
+      "trick_hi": "अपूर्ण कर्मवाच्य में \"being\" आवश्यक।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-15",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Direct and indirect narration",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct indirect speech: He said, \"Please help me.\"",
+      "text_hi": "सही अप्रत्यक्ष कथन चुनें: He said, \"Please help me.\"",
+      "options": [
+        {
+          "en": "He said to help me.",
+          "hi": "He said to help me."
+        },
+        {
+          "en": "He requested me to help him.",
+          "hi": "He requested me to help him."
+        },
+        {
+          "en": "He said that I helped him.",
+          "hi": "He said that I helped him."
+        },
+        {
+          "en": "He asked that he help me.",
+          "hi": "He asked that he help me."
+        }
+      ],
+      "correct": 1,
+      "solution_en": "A request with \"please\" becomes \"requested + object + to + verb\": he requested me to help him.",
+      "solution_hi": "\"Please\" वाला अनुरोध \"requested + कर्म + to + क्रिया\" बनता है: he requested me to help him।",
+      "trick_en": "Requests use requested/advised/ordered + to + verb.",
+      "trick_hi": "अनुरोध में requested/advised/ordered + to + क्रिया।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-16",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Sentence improvement",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the best improvement: She is one of the best movie I have seen.",
+      "text_hi": "सर्वोत्तम सुधार चुनें: She is one of the best movie I have seen.",
+      "options": [
+        {
+          "en": "movie",
+          "hi": "movie"
+        },
+        {
+          "en": "movies",
+          "hi": "movies"
+        },
+        {
+          "en": "movy",
+          "hi": "movy"
+        },
+        {
+          "en": "the movie",
+          "hi": "the movie"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "\"One of the best\" is followed by a plural noun: one of the best movies.",
+      "solution_hi": "\"One of the best\" के बाद बहुवचन संज्ञा आती है: one of the best movies।",
+      "trick_en": "One of the + plural noun + singular verb.",
+      "trick_hi": "One of the + बहुवचन संज्ञा + एकवचन क्रिया।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-17",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentence parts",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Rearrange: P. the farmer Q. early R. left S. for the market",
+      "text_hi": "पुनर्व्यवस्थित करें: P. the farmer Q. early R. left S. for the market",
+      "options": [
+        {
+          "en": "P Q R S",
+          "hi": "P Q R S"
+        },
+        {
+          "en": "P R Q S",
+          "hi": "P R Q S"
+        },
+        {
+          "en": "Q P R S",
+          "hi": "Q P R S"
+        },
+        {
+          "en": "P Q S R",
+          "hi": "P Q S R"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Subject, adverb, verb, place phrase gives P Q R S.",
+      "solution_hi": "कर्ता, क्रिया विशेषण, क्रिया, स्थान वाक्यांश से P Q R S बनता है।",
+      "trick_en": "Subject → adverb → verb → place.",
+      "trick_hi": "कर्ता → क्रिया विशेषण → क्रिया → स्थान।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-18",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentence parts",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Rearrange: P. if you practise daily Q. you will R. improve S. your accuracy",
+      "text_hi": "पुनर्व्यवस्थित करें: P. if you practise daily Q. you will R. improve S. your accuracy",
+      "options": [
+        {
+          "en": "P Q R S",
+          "hi": "P Q R S"
+        },
+        {
+          "en": "Q P R S",
+          "hi": "Q P R S"
+        },
+        {
+          "en": "P R Q S",
+          "hi": "P R Q S"
+        },
+        {
+          "en": "Q R P S",
+          "hi": "Q R P S"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The condition comes first, then subject, auxiliary, verb and object: P Q R S.",
+      "solution_hi": "शर्त पहले, फिर कर्ता, सहायक क्रिया, क्रिया और कर्म: P Q R S।",
+      "trick_en": "If-clause first, main clause second.",
+      "trick_hi": "if-उपवाक्य पहले, मुख्य उपवाक्य बाद में।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-19",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentences in a passage",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Arrange: R. The shop was closed. S. We reached the market. P. We waited outside. Q. The owner finally arrived.",
+      "text_hi": "व्यवस्थित करें: R. The shop was closed. S. We reached the market. P. We waited outside. Q. The owner finally arrived.",
+      "options": [
+        {
+          "en": "S R P Q",
+          "hi": "S R P Q"
+        },
+        {
+          "en": "R S P Q",
+          "hi": "R S P Q"
+        },
+        {
+          "en": "S P R Q",
+          "hi": "S P R Q"
+        },
+        {
+          "en": "R P S Q",
+          "hi": "R P S Q"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Arrival (S), closed shop (R), waiting (P), arrival of owner (Q): S R P Q.",
+      "solution_hi": "पहुँचना (S), दुकान बंद (R), प्रतीक्षा (P), मालिक का आना (Q): S R P Q।",
+      "trick_en": "Chronological order of events.",
+      "trick_hi": "घटनाओं का कालक्रम।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-20",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentences in a passage",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Arrange: P. The seed grew into a sapling. Q. A child planted a seed. R. Years later it became a large tree. S. She watered it every day.",
+      "text_hi": "व्यवस्थित करें: P. The seed grew into a sapling. Q. A child planted a seed. R. Years later it became a large tree. S. She watered it every day.",
+      "options": [
+        {
+          "en": "Q S P R",
+          "hi": "Q S P R"
+        },
+        {
+          "en": "Q P S R",
+          "hi": "Q P S R"
+        },
+        {
+          "en": "S Q P R",
+          "hi": "S Q P R"
+        },
+        {
+          "en": "P Q S R",
+          "hi": "P Q S R"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Planting (Q), daily watering (S), sapling (P), large tree (R): Q S P R.",
+      "solution_hi": "बीज बोना (Q), प्रतिदिन पानी (S), पौधा (P), बड़ा वृक्ष (R): Q S P R।",
+      "trick_en": "Start with the first action, not the result.",
+      "trick_hi": "परिणाम नहीं, पहली क्रिया से शुरू करें।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice question on the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english5-21",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Water-saving passage: choose the most appropriate word for blank (1).",
+      "text_hi": "जल-संरक्षण गद्यांश: रिक्त स्थान (1) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "saves",
+          "hi": "saves"
+        },
+        {
+          "en": "wastes",
+          "hi": "wastes"
+        },
+        {
+          "en": "cleans",
+          "hi": "cleans"
+        },
+        {
+          "en": "stores",
+          "hi": "stores"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "A leaking tap wastes several litres a day.",
+      "solution_hi": "टपकता नल प्रतिदिन कई लीटर बर्बाद करता है।",
+      "trick_en": "Check subject-verb agreement and the sentence meaning.",
+      "trick_hi": "कर्ता-क्रिया सामंजस्य और वाक्य अर्थ जाँचें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-05"
+    },
+    {
+      "qid": "english5-22",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Water-saving passage: choose the most appropriate word for blank (2).",
+      "text_hi": "जल-संरक्षण गद्यांश: रिक्त स्थान (2) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "increases",
+          "hi": "increases"
+        },
+        {
+          "en": "reduces",
+          "hi": "reduces"
+        },
+        {
+          "en": "measures",
+          "hi": "measures"
+        },
+        {
+          "en": "doubles",
+          "hi": "doubles"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Shorter showers reduce water use.",
+      "solution_hi": "छोटे शॉवर पानी का उपयोग कम करते हैं।",
+      "trick_en": "Check subject-verb agreement and the sentence meaning.",
+      "trick_hi": "कर्ता-क्रिया सामंजस्य और वाक्य अर्थ जाँचें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-05"
+    },
+    {
+      "qid": "english5-23",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Water-saving passage: choose the most appropriate word for blank (3).",
+      "text_hi": "जल-संरक्षण गद्यांश: रिक्त स्थान (3) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "causes",
+          "hi": "causes"
+        },
+        {
+          "en": "prevents",
+          "hi": "prevents"
+        },
+        {
+          "en": "increases",
+          "hi": "increases"
+        },
+        {
+          "en": "repeats",
+          "hi": "repeats"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "Washing in a bowl prevents wastage.",
+      "solution_hi": "बाटी में धोने से बर्बादी रुकती है।",
+      "trick_en": "Check subject-verb agreement and the sentence meaning.",
+      "trick_hi": "कर्ता-क्रिया सामंजस्य और वाक्य अर्थ जाँचें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-05"
+    },
+    {
+      "qid": "english5-24",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Water-saving passage: choose the most appropriate word for blank (4).",
+      "text_hi": "जल-संरक्षण गद्यांश: रिक्त स्थान (4) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "evaporation",
+          "hi": "evaporation"
+        },
+        {
+          "en": "pollution",
+          "hi": "pollution"
+        },
+        {
+          "en": "pressure",
+          "hi": "pressure"
+        },
+        {
+          "en": "filtration",
+          "hi": "filtration"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Morning watering reduces evaporation loss.",
+      "solution_hi": "सुबह पानी देने से वाष्पन हानि कम होती है।",
+      "trick_en": "Check subject-verb agreement and the sentence meaning.",
+      "trick_hi": "कर्ता-क्रिया सामंजस्य और वाक्य अर्थ जाँचें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-05"
+    },
+    {
+      "qid": "english5-25",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "text_en": "Water-saving passage: choose the most appropriate word for blank (5).",
+      "text_hi": "जल-संरक्षण गद्यांश: रिक्त स्थान (5) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "makes",
+          "hi": "makes"
+        },
+        {
+          "en": "make",
+          "hi": "make"
+        },
+        {
+          "en": "made",
+          "hi": "made"
+        },
+        {
+          "en": "making",
+          "hi": "making"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The plural subject \"habits\" takes \"make\".",
+      "solution_hi": "बहुवचन कर्ता \"habits\" के साथ \"make\" आता है।",
+      "trick_en": "Check subject-verb agreement and the sentence meaning.",
+      "trick_hi": "कर्ता-क्रिया सामंजस्य और वाक्य अर्थ जाँचें।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.unep.org/",
+        "citation": "UN Environment Programme pages, checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      },
+      "set_ref": "cloze-2026-t1-05"
+    }
+  ]
+}
