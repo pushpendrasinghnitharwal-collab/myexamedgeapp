@@ -67,6 +67,39 @@ export const quantExpected = {
   'quant-25': () => inr(36000 * 120 / 360),
 }
 
+export const quantExpectedV2 = {
+  'quant2-01': () => String(BigInt(9) ** BigInt(2027) % BigInt(10)),
+  'quant2-02': () => String([5, 25, 125].reduce((total, divisor) => total + Math.floor(100 / divisor), 0)),
+  'quant2-03': () => `${((1.1 * 1.2 - 1) * 100).toFixed(0)}%`,
+  'quant2-04': () => ratio(5 * 14, 7 * 15),
+  'quant2-05': () => Math.sqrt(1.44).toFixed(1),
+  'quant2-06': () => String(15 + 1),
+  'quant2-07': () => inr(15000 * 6 * 3 / 100),
+  'quant2-08': () => inr(20000 * (1.05 ** 2 - 1)),
+  'quant2-09': () => `${((700 - 625) / 625) * 100}%`,
+  'quant2-10': () => inr(2400 * 0.9 * 0.95),
+  'quant2-11': () => inr(22000 * (25000 * 12) / (25000 * 12 + 40000 * 9)),
+  'quant2-12': () => ratio(40, 40),
+  'quant2-13': () => String(3 ** 2 + 2),
+  'quant2-14': () => `2√3`,
+  'quant2-15': () => `${180 * 5 / 12}°`,
+  'quant2-16': () => `${Math.sqrt(13 ** 2 - 12 ** 2)} cm`,
+  'quant2-17': () => `${81 * (16 / 9) ** 2} cm²`,
+  'quant2-18': () => `${Math.round(2 * (22 / 7) * 14 * 5)} cm²`,
+  'quant2-19': () => `${9 * (15 + 9)}π cm²`,
+  'quant2-20': () => String(Math.sin(Math.PI / 4) * Math.cos(Math.PI / 4) + Math.cos(Math.PI / 4) * Math.sin(Math.PI / 4)),
+  'quant2-21': () => '17/13',
+  'quant2-22': () => `15√3 m`,
+  'quant2-23': () => `${(100 + 125 + 150 + 180 + 225) / 5} thousand units`,
+  'quant2-24': () => `${((180 - 150) / 150) * 100}%`,
+  'quant2-25': () => (5400 * 120 / 360).toLocaleString('en-IN'),
+}
+
+const quantExpectations = {
+  'ssc-cgl-2026-tier1-practice-v1': quantExpected,
+  'ssc-cgl-2026-tier1-practice-v2': quantExpectedV2,
+}
+
 // Sanity checks of the arithmetic used above, so a typo in a check cannot
 // silently agree with a typo in the content.
 export function verifyCheckArithmetic() {
@@ -78,13 +111,23 @@ export function verifyCheckArithmetic() {
   if (Math.abs((1 / 12 - 1 / 20) - 1 / 30) > 1e-12) problems.push('work-rate arithmetic changed')
   if (Math.round((40000 * 12) / (40000 * 12 + 60000 * 10) * 18000) !== 8000) problems.push('profit share is not 8000')
   if (Math.round((120 + 150 + 180 + 210) / 4) !== 165) problems.push('DI average is not 165')
+  if ([5, 25, 125].reduce((total, divisor) => total + Math.floor(100 / divisor), 0) !== 24) problems.push('100! trailing-zero count is not 24')
+  if (Math.abs(2400 * 0.9 * 0.95 - 2052) > 1e-9) problems.push('successive-discount total is not 2052')
+  if (Math.round(22000 * 300000 / 660000) !== 10000) problems.push('partnership share is not 10000')
+  if (Math.abs(45 / Math.sqrt(3) - 15 * Math.sqrt(3)) > 1e-9) problems.push('30-degree height is not 15sqrt3')
+  if (81 * (16 / 9) ** 2 !== 256) problems.push('similar-triangle area is not 256')
+  if (5400 * 120 / 360 !== 1800) problems.push('pie-chart count is not 1800')
+  if (Math.abs((Math.sqrt(75) - Math.sqrt(27)) - 2 * Math.sqrt(3)) > 1e-12) problems.push('surd difference is not 2sqrt3')
+  if ((4 - 2) ** 3 !== 8) problems.push('unpainted cube count is not 8')
   return problems
 }
 
-export function checkQuantAnswers(questions) {
+export function checkQuantAnswers(questions, packKey = 'ssc-cgl-2026-tier1-practice-v1') {
   const mismatches = []
+  const expectedForPack = quantExpectations[packKey]
+  if (!expectedForPack) return [{ problem: `No quantitative answer checks registered for pack ${packKey}` }]
   const byId = new Map(questions.map(q => [q.qid, q]))
-  for (const [qid, compute] of Object.entries(quantExpected)) {
+  for (const [qid, compute] of Object.entries(expectedForPack)) {
     const question = byId.get(qid)
     if (!question) { mismatches.push({ qid, problem: 'missing question' }); continue }
     const expected = compute()
@@ -94,7 +137,7 @@ export function checkQuantAnswers(questions) {
     if (duplicates !== 1) mismatches.push({ qid, problem: 'expected answer is not the only matching option' })
   }
   const quantCount = questions.filter(q => q.subject === 'Quant').length
-  if (quantCount !== Object.keys(quantExpected).length) {
+  if (quantCount !== Object.keys(expectedForPack).length) {
     mismatches.push({ problem: `quant question count ${quantCount} has no 1:1 answer check` })
   }
   return mismatches

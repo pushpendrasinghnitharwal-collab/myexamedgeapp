@@ -1,0 +1,51 @@
+{
+  "pack_key": "ssc-cgl-2026-tier1-practice-v2",
+  "pack_version": 2,
+  "title": "SSC CGL Tier-I 2026 pattern — original practice pack (Batch 2)",
+  "exam": "SSC CGL",
+  "exam_stage": "Tier_1",
+  "target_cycle": 2027,
+  "pattern_baseline": {
+    "notice_title": "Combined Graduate Level Examination, 2026",
+    "notice_url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+    "notice_paragraph": "13.8 (Tier-I scheme), 13.8.1 (bilingual except English Comprehension), 13.8.2 (negative marking)",
+    "verified_on": "2026-11-08",
+    "target_year_note": "The 2027 CGL notice was not available on 2026-11-08. This pack follows the latest verifiable official 2026 Tier-I scheme and is labelled as a 2026-pattern baseline for 2027 preparation. It must be re-checked when the 2027 notice is published."
+  },
+  "provenance": {
+    "kind": "original_practice",
+    "is_pyq": false,
+    "pyq_statement": "Every question is original ExamEdge practice written to the official 2026 Tier-I syllabus and pattern. No question is copied from, reconstructed from, or presented as an SSC previous-year paper, official paper, shift or final answer key.",
+    "translation": "English and Hindi question/option text is provided for app parity. The Hindi text is an ExamEdge translation, not an official SSC translation. The notice states that Tier-I questions are set in English and Hindi except English Comprehension; the English Comprehension Hindi text here is a study aid only.",
+    "authoring_note": "Batch 2 is a second, independent 100-question pool. Quantitative answers are recomputed from independent expressions; factual items cite a source and an as-of date."
+  },
+  "review": {
+    "status": "automated_verified_pending_human_review",
+    "label": "Practice • auto-checked • human review pending",
+    "human_reviewed": false,
+    "reviewed_by": null,
+    "reviewed_on": null,
+    "publish_rule": "Production publication requires a named human reviewer and the attestation flag. The import CLI keeps content in Draft by default and refuses to publish without --reviewer and --confirm-human-review.",
+    "known_limits": [
+      "Automated checks verify structure, quotas, duplicates, option shape and recomputed quantitative answers. They do not replace subject-expert review of language, ambiguity, difficulty or factual framing.",
+      "No independent human review has been completed for this pack yet.",
+      "The 2027 official notice and its final answer keys are not available; nothing here is an official paper or key."
+    ]
+  },
+  "coverage_plan": {
+    "full_mock": "One additional complete Tier-I mock: 100 questions, 4 subjects x 25, +2 correct, -0.5 wrong, 60 minutes with four 15-minute subject locks, 200 screening marks.",
+    "practice_sets": "Together with Batch 1, this gives two independent full-mock pools and eight sectional papers. Topic-specific drills still need a larger reviewed pool.",
+    "batch": 2
+  },
+  "difficulty_target": {
+    "Easy": 30,
+    "Medium": 50,
+    "Hard": 20
+  },
+  "question_files": [
+    "quant.json",
+    "reasoning.json",
+    "english.json",
+    "general-awareness.json"
+  ]
+}

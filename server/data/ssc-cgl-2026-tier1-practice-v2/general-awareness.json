@@ -1,0 +1,980 @@
+{
+  "sets": [],
+  "questions": [
+    {
+      "qid": "ga2-01",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Who was awarded the Nobel Peace Prize for 2026?",
+      "text_hi": "2026 का नोबेल शांति पुरस्कार किसे दिया गया?",
+      "options": [
+        {
+          "en": "Navanethem 'Navi' Pillay",
+          "hi": "नवनेथम 'नवी' पिल्लै"
+        },
+        {
+          "en": "Maria Corina Machado",
+          "hi": "मारिया कोरिना माचाडो"
+        },
+        {
+          "en": "Narges Mohammadi",
+          "hi": "नर्गेस मोहम्मदी"
+        },
+        {
+          "en": "Juan Manuel Santos",
+          "hi": "जुआन मैनुअल सैंटोस"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Norwegian Nobel Committee awarded the 2026 Nobel Peace Prize to Navanethem 'Navi' Pillay for her efforts to promote peace and international law. Maria Corina Machado was the 2025 laureate.",
+      "solution_hi": "नॉर्वे की नोबेल समिति ने 2026 का नोबेल शांति पुरस्कार नवनेथम 'नवी' पिल्लै को शांति और अंतरराष्ट्रीय कानून को बढ़ावा देने के प्रयासों के लिए दिया। मारिया कोरिना माचाडो 2025 की विजेता थीं।",
+      "trick_en": "Do not confuse the 2025 and 2026 laureates; this question is specifically about 2026.",
+      "trick_hi": "2025 और 2026 के विजेताओं में भ्रम न करें; यह प्रश्न विशेष रूप से 2026 का है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.nobelprize.org/prizes/peace/2026/press-release/",
+        "citation": "NobelPrize.org official press release, 'The Nobel Peace Prize for 2026', 9 October 2026. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-02",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "The 2026 Asian Games were held in which country?",
+      "text_hi": "2026 का एशियाई खेल किस देश में आयोजित हुआ?",
+      "options": [
+        {
+          "en": "Japan",
+          "hi": "जापान"
+        },
+        {
+          "en": "China",
+          "hi": "चीन"
+        },
+        {
+          "en": "South Korea",
+          "hi": "दक्षिण कोरिया"
+        },
+        {
+          "en": "India",
+          "hi": "भारत"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The 20th Asian Games were held in Aichi-Nagoya, Japan, from 19 September to 4 October 2026.",
+      "solution_hi": "20वें एशियाई खेल 19 सितंबर से 4 अक्टूबर 2026 तक जापान के आइची-नागोया में आयोजित हुए।",
+      "trick_en": "Aichi-Nagoya is in Japan; do not confuse it with the 2022 Hangzhou Games in China.",
+      "trick_hi": "आइची-नागोया जापान में है; इसे चीन के 2022 हांगझोउ खेलों से न मिलाएँ।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.olympics.com/en/news/asian-games-2026-sports-list",
+        "citation": "Olympics.com, 'Asian Games 2026 sports list', updated 1 October 2026: 19 September–4 October 2026, Aichi-Nagoya, Japan. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-03",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "The 2026 G20 Leaders' Summit is scheduled to be held in which city?",
+      "text_hi": "2026 का G20 नेताओं का शिखर सम्मेलन किस शहर में होना निर्धारित है?",
+      "options": [
+        {
+          "en": "Miami",
+          "hi": "मियामी"
+        },
+        {
+          "en": "New Delhi",
+          "hi": "नई दिल्ली"
+        },
+        {
+          "en": "Johannesburg",
+          "hi": "जोहान्सबर्ग"
+        },
+        {
+          "en": "Rio de Janeiro",
+          "hi": "रियो डी जनेरियो"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The 2026 G20 Summit is scheduled for 14–15 December 2026 in Miami, United States. New Delhi hosted the 2023 summit, Johannesburg the 2025 summit and Rio de Janeiro the 2024 summit.",
+      "solution_hi": "2026 का G20 शिखर सम्मेलन 14–15 दिसंबर 2026 को अमेरिका के मियामी में निर्धारित है। नई दिल्ली ने 2023, जोहान्सबर्ग ने 2025 और रियो डी जनेरियो ने 2024 का सम्मेलन आयोजित किया था।",
+      "trick_en": "The 2026 summit is in the United States (Miami), not in the 2023 host city New Delhi.",
+      "trick_hi": "2026 का सम्मेलन अमेरिका (मियामी) में है, 2023 के मेजबान शहर नई दिल्ली में नहीं।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://www.aninews.in/news/world/us/trump-confirms-us-to-host-2026-g20-summit-in-miami20250906122650/",
+        "citation": "ANI, 'Trump confirms US to host 2026 G20 Summit in Miami', 6 September 2025; summit dates 14–15 December 2026. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-04",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The 18th BRICS Summit in 2026 was hosted by India in which city?",
+      "text_hi": "2026 के 18वें BRICS शिखर सम्मेलन की मेजबानी भारत ने किस शहर में की?",
+      "options": [
+        {
+          "en": "New Delhi",
+          "hi": "नई दिल्ली"
+        },
+        {
+          "en": "Mumbai",
+          "hi": "मुंबई"
+        },
+        {
+          "en": "Bengaluru",
+          "hi": "बेंगलुरु"
+        },
+        {
+          "en": "Kazan",
+          "hi": "कज़ान"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "India hosted the 18th BRICS Summit at Bharat Mandapam, New Delhi, on 12–13 September 2026 under its 2026 BRICS chairship.",
+      "solution_hi": "भारत ने अपनी 2026 BRICS अध्यक्षता के तहत 12–13 सितंबर 2026 को भारत मंडपम, नई दिल्ली में 18वें BRICS शिखर सम्मेलन की मेजबानी की।",
+      "trick_en": "Kazan hosted the 2024 BRICS Summit; the 2026 one was in New Delhi.",
+      "trick_hi": "कज़ान ने 2024 का BRICS शिखर सम्मेलन आयोजित किया था; 2026 का नई दिल्ली में था।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.brics2026.gov.in/",
+        "citation": "BRICS India 2026 official website (Government of India): India's 2026 chairship and New Delhi summit. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-05",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "COP31, the 2026 UN Climate Change Conference, will be hosted by which country?",
+      "text_hi": "COP31, 2026 का संयुक्त राष्ट्र जलवायु परिवर्तन सम्मेलन, किस देश की मेजबानी में होगा?",
+      "options": [
+        {
+          "en": "Türkiye",
+          "hi": "तुर्किये"
+        },
+        {
+          "en": "Brazil",
+          "hi": "ब्राजील"
+        },
+        {
+          "en": "United Arab Emirates",
+          "hi": "संयुक्त अरब अमीरात"
+        },
+        {
+          "en": "Egypt",
+          "hi": "मिस्र"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "COP31 will be held in Antalya, Türkiye, from 9 to 20 November 2026. Brazil hosted COP30 in Belém in 2025.",
+      "solution_hi": "COP31 9 से 20 नवंबर 2026 तक तुर्किये के अंताल्या में होगा। ब्राजील ने 2025 में बेलेम में COP30 की मेजबानी की थी।",
+      "trick_en": "COP30 was in Brazil (2025); COP31 is in Türkiye (2026). Do not carry the previous host forward.",
+      "trick_hi": "COP30 ब्राजील (2025) में था; COP31 तुर्किये (2026) में है। पिछले मेजबान को आगे न ले जाएँ।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://climate-diplomacy.org/events/2026-un-climate-change-conference-unfccc-cop-31",
+        "citation": "Climate Diplomacy, '2026 UN Climate Change Conference (UNFCCC COP 31)': Antalya, Türkiye, 9–20 November 2026. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-06",
+      "subject": "General_Awareness",
+      "topic": "Current Events",
+      "sub_topic": "Current events",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which work won the International Booker Prize 2026?",
+      "text_hi": "2026 का इंटरनेशनल बुकर पुरस्कार किस कृति को मिला?",
+      "options": [
+        {
+          "en": "Taiwan Travelogue",
+          "hi": "ताइवान ट्रैवलॉग"
+        },
+        {
+          "en": "The Witch",
+          "hi": "द विच"
+        },
+        {
+          "en": "She Who Remains",
+          "hi": "शी हू रिमेंस"
+        },
+        {
+          "en": "The Director",
+          "hi": "द डायरेक्टर"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Taiwan Travelogue by Yáng Shuāng-zǐ, translated by Lin King, won the International Booker Prize 2026.",
+      "solution_hi": "यांग शुआंग-ज़ी की Taiwan Travelogue, जिसका अनुवाद लिन किंग ने किया, ने 2026 का इंटरनेशनल बुकर पुरस्कार जीता।",
+      "trick_en": "Distinguish the International Booker (translated fiction) from the Booker Prize (English-language fiction).",
+      "trick_hi": "इंटरनेशनल बुकर (अनूदित कथा) और बुकर पुरस्कार (अंग्रेज़ी कथा) में अंतर करें।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://thebookerprizes.com/the-booker-library/prize-years/international/2026",
+        "citation": "The Booker Prizes official 2026 International Booker page: winner Taiwan Travelogue by Yáng Shuāng-zǐ, translated by Lin King. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-07",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is the highest mountain peak located entirely within India?",
+      "text_hi": "पूरी तरह भारत के भीतर स्थित सबसे ऊँची पर्वत चोटी कौन-सी है?",
+      "options": [
+        {
+          "en": "Nanda Devi",
+          "hi": "नंदा देवी"
+        },
+        {
+          "en": "Kangchenjunga",
+          "hi": "कंचनजंगा"
+        },
+        {
+          "en": "K2",
+          "hi": "K2"
+        },
+        {
+          "en": "Anamudi",
+          "hi": "अनामुडी"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Kangchenjunga lies on the India–Nepal border and K2 lies in Pakistan-administered territory. Nanda Devi, in Uttarakhand, is the highest peak wholly within India.",
+      "solution_hi": "कंचनजंगा भारत–नेपाल सीमा पर और K2 पाकिस्तान-प्रशासित क्षेत्र में है। उत्तराखंड की नंदा देवी पूरी तरह भारत के भीतर सबसे ऊँची चोटी है।",
+      "trick_en": "The words 'entirely within India' exclude Kangchenjunga and K2, which are on borders or disputed territory.",
+      "trick_hi": "'पूरी तरह भारत के भीतर' शब्द कंचनजंगा और K2 को बाहर कर देते हैं, जो सीमा या विवादित क्षेत्र में हैं।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, geography reference; Nanda Devi (7,816 m) is the highest peak entirely within India. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-08",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which is the longest river flowing within India?",
+      "text_hi": "भारत के भीतर बहने वाली सबसे लंबी नदी कौन-सी है?",
+      "options": [
+        {
+          "en": "Ganga",
+          "hi": "गंगा"
+        },
+        {
+          "en": "Godavari",
+          "hi": "गोदावरी"
+        },
+        {
+          "en": "Yamuna",
+          "hi": "यमुना"
+        },
+        {
+          "en": "Brahmaputra",
+          "hi": "ब्रह्मपुत्र"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Ganga is the longest river within India (about 2,525 km). The Godavari is the longest river of peninsular India.",
+      "solution_hi": "गंगा भारत के भीतर सबसे लंबी नदी है (लगभग 2,525 किमी)। गोदावरी प्रायद्वीपीय भारत की सबसे लंबी नदी है।",
+      "trick_en": "Read 'within India': the Brahmaputra is longer overall but most of its course is outside India.",
+      "trick_hi": "'भारत के भीतर' पढ़ें: ब्रह्मपुत्र कुल मिलाकर लंबी है, परंतु उसका अधिकांश मार्ग भारत से बाहर है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, rivers and geography reference. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-09",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which Indian state has the longest coastline?",
+      "text_hi": "किस भारतीय राज्य की तटरेखा सबसे लंबी है?",
+      "options": [
+        {
+          "en": "Gujarat",
+          "hi": "गुजरात"
+        },
+        {
+          "en": "Tamil Nadu",
+          "hi": "तमिलनाडु"
+        },
+        {
+          "en": "Andhra Pradesh",
+          "hi": "आंध्र प्रदेश"
+        },
+        {
+          "en": "Maharashtra",
+          "hi": "महाराष्ट्र"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Gujarat has the longest coastline among Indian states, at roughly 1,600 km.",
+      "solution_hi": "भारतीय राज्यों में गुजरात की तटरेखा सबसे लंबी है, लगभग 1,600 किमी।",
+      "trick_en": "Remember Gujarat's long Kathiawar coast; Tamil Nadu is second, not first.",
+      "trick_hi": "गुजरात के लंबे काठियावाड़ तट को याद रखें; तमिलनाडु दूसरे स्थान पर है, पहले पर नहीं।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, states and coastline reference. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-10",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which Indian state shares its border with the largest number of other states?",
+      "text_hi": "कौन-सा भारतीय राज्य सबसे अधिक राज्यों की सीमा से लगता है?",
+      "options": [
+        {
+          "en": "Uttar Pradesh",
+          "hi": "उत्तर प्रदेश"
+        },
+        {
+          "en": "Madhya Pradesh",
+          "hi": "मध्य प्रदेश"
+        },
+        {
+          "en": "Rajasthan",
+          "hi": "राजस्थान"
+        },
+        {
+          "en": "Assam",
+          "hi": "असम"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Uttar Pradesh borders eight states: Uttarakhand, Himachal Pradesh, Haryana, Rajasthan, Madhya Pradesh, Chhattisgarh, Jharkhand and Bihar.",
+      "solution_hi": "उत्तर प्रदेश आठ राज्यों की सीमा से लगता है: उत्तराखंड, हिमाचल प्रदेश, हरियाणा, राजस्थान, मध्य प्रदेश, छत्तीसगढ़, झारखंड और बिहार।",
+      "trick_en": "Count the neighbours on a map; Madhya Pradesh is the largest state by area among these but does not border the most states.",
+      "trick_hi": "मानचित्र पर पड़ोसी गिनें; इनमें मध्य प्रदेश क्षेत्रफल में सबसे बड़ा है, परंतु सबसे अधिक राज्यों से नहीं लगता।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, state boundaries reference. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-11",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Culture",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Sattriya is a classical dance form associated with which Indian state?",
+      "text_hi": "सत्रीया किस भारतीय राज्य का शास्त्रीय नृत्य रूप है?",
+      "options": [
+        {
+          "en": "Assam",
+          "hi": "असम"
+        },
+        {
+          "en": "Odisha",
+          "hi": "ओडिशा"
+        },
+        {
+          "en": "Kerala",
+          "hi": "केरल"
+        },
+        {
+          "en": "Manipur",
+          "hi": "मणिपुर"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Sattriya originated in the Vaishnava satras (monasteries) of Assam and is one of India's eight classical dance forms.",
+      "solution_hi": "सत्रीया असम के वैष्णव सत्रों (मठों) से उत्पन्न हुआ और भारत के आठ शास्त्रीय नृत्य रूपों में से एक है।",
+      "trick_en": "Link the name to the Assamese 'satra' monastic tradition.",
+      "trick_hi": "नाम को असमिया 'सत्र' मठ परंपरा से जोड़ें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.indiaculture.gov.in/",
+        "citation": "Ministry of Culture, Government of India, classical dance reference. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-12",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "History",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Battle of Plassey was fought in which year?",
+      "text_hi": "प्लासी का युद्ध किस वर्ष लड़ा गया?",
+      "options": [
+        {
+          "en": "1757",
+          "hi": "1757"
+        },
+        {
+          "en": "1764",
+          "hi": "1764"
+        },
+        {
+          "en": "1857",
+          "hi": "1857"
+        },
+        {
+          "en": "1707",
+          "hi": "1707"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Battle of Plassey was fought in 1757 between the British East India Company under Robert Clive and Nawab Siraj-ud-Daulah of Bengal.",
+      "solution_hi": "प्लासी का युद्ध 1757 में रॉबर्ट क्लाइव के नेतृत्व वाली ब्रिटिश ईस्ट इंडिया कंपनी और बंगाल के नवाब सिराज-उद-दौला के बीच लड़ा गया।",
+      "trick_en": "Do not confuse Plassey (1757) with Buxar (1764) or the Revolt of 1857.",
+      "trick_hi": "प्लासी (1757) को बक्सर (1764) या 1857 के विद्रोह से न मिलाएँ।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, modern Indian history reference. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-13",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "History",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Who was the first President of India?",
+      "text_hi": "भारत के पहले राष्ट्रपति कौन थे?",
+      "options": [
+        {
+          "en": "Dr. Rajendra Prasad",
+          "hi": "डॉ. राजेंद्र प्रसाद"
+        },
+        {
+          "en": "Dr. S. Radhakrishnan",
+          "hi": "डॉ. एस. राधाकृष्णन"
+        },
+        {
+          "en": "Dr. Zakir Husain",
+          "hi": "डॉ. जाकिर हुसैन"
+        },
+        {
+          "en": "Jawaharlal Nehru",
+          "hi": "जवाहरलाल नेहरू"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Dr. Rajendra Prasad served as the first President of India from 1950 to 1962. Dr. S. Radhakrishnan was the second President.",
+      "solution_hi": "डॉ. राजेंद्र प्रसाद 1950 से 1962 तक भारत के पहले राष्ट्रपति रहे। डॉ. एस. राधाकृष्णन दूसरे राष्ट्रपति थे।",
+      "trick_en": "Nehru was the first Prime Minister, not the first President.",
+      "trick_hi": "नेहरू पहले प्रधानमंत्री थे, पहले राष्ट्रपति नहीं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, Presidents of India reference. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-14",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Dhola-Sadiya bridge, one of India's longest river bridges, crosses which river?",
+      "text_hi": "भारत के सबसे लंबे नदी पुलों में से एक ढोला-सदिया पुल किस नदी पर बना है?",
+      "options": [
+        {
+          "en": "Lohit",
+          "hi": "लोहित"
+        },
+        {
+          "en": "Ganga",
+          "hi": "गंगा"
+        },
+        {
+          "en": "Narmada",
+          "hi": "नर्मदा"
+        },
+        {
+          "en": "Krishna",
+          "hi": "कृष्णा"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Dhola-Sadiya bridge spans the Lohit River, a tributary of the Brahmaputra, connecting Assam and Arunachal Pradesh.",
+      "solution_hi": "ढोला-सदिया पुल ब्रह्मपुत्र की सहायक लोहित नदी पर बना है और असम को अरुणाचल प्रदेश से जोड़ता है।",
+      "trick_en": "The bridge is in the Northeast; associate it with the Lohit, not the Ganga or Narmada.",
+      "trick_hi": "यह पुल पूर्वोत्तर में है; इसे गंगा या नर्मदा नहीं, लोहित से जोड़ें।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, infrastructure and northeast geography reference. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-15",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What is the capital of Meghalaya?",
+      "text_hi": "मेघालय की राजधानी क्या है?",
+      "options": [
+        {
+          "en": "Shillong",
+          "hi": "शिलांग"
+        },
+        {
+          "en": "Imphal",
+          "hi": "इंफाल"
+        },
+        {
+          "en": "Aizawl",
+          "hi": "आइजोल"
+        },
+        {
+          "en": "Kohima",
+          "hi": "कोहिमा"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Shillong is the capital of Meghalaya. Imphal is the capital of Manipur, Aizawl of Mizoram and Kohima of Nagaland.",
+      "solution_hi": "शिलांग मेघालय की राजधानी है। इंफाल मणिपुर की, आइजोल मिजोरम की और कोहिमा नागालैंड की राजधानी है।",
+      "trick_en": "Group the northeast capitals by state to avoid swapping Shillong and Kohima.",
+      "trick_hi": "शिलांग और कोहिमा में भ्रम से बचने के लिए पूर्वोत्तर राजधानियों को राज्य के अनुसार समूहित करें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.india.gov.in/",
+        "citation": "National Portal of India, states and capitals reference. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-16",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "Geography",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "According to the India Meteorological Department, the normal onset date of the southwest monsoon over Kerala is:",
+      "text_hi": "भारत मौसम विज्ञान विभाग के अनुसार, केरल में दक्षिण-पश्चिम मानसून के आगमन की सामान्य तिथि क्या है?",
+      "options": [
+        {
+          "en": "1 June",
+          "hi": "1 जून"
+        },
+        {
+          "en": "15 May",
+          "hi": "15 मई"
+        },
+        {
+          "en": "15 June",
+          "hi": "15 जून"
+        },
+        {
+          "en": "1 July",
+          "hi": "1 जुलाई"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The IMD's normal date for the southwest monsoon onset over Kerala is 1 June.",
+      "solution_hi": "IMD के अनुसार केरल में दक्षिण-पश्चिम मानसून के आगमन की सामान्य तिथि 1 जून है।",
+      "trick_en": "Remember 'June 1, Kerala' as the standard monsoon-onset fact.",
+      "trick_hi": "'1 जून, केरल' को मानसून आगमन का मानक तथ्य याद रखें।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://mausam.imd.gov.in/",
+        "citation": "India Meteorological Department, monsoon onset reference: normal onset over Kerala is 1 June. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-17",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "General policy",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The McMahon Line is the boundary between India and which country in the eastern sector?",
+      "text_hi": "मैकमोहन रेखा पूर्वी क्षेत्र में भारत और किस देश के बीच सीमा है?",
+      "options": [
+        {
+          "en": "China",
+          "hi": "चीन"
+        },
+        {
+          "en": "Pakistan",
+          "hi": "पाकिस्तान"
+        },
+        {
+          "en": "Nepal",
+          "hi": "नेपाल"
+        },
+        {
+          "en": "Myanmar",
+          "hi": "म्यांमार"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The McMahon Line runs along the India–China boundary in Arunachal Pradesh and was drawn at the 1914 Simla Convention.",
+      "solution_hi": "मैकमोहन रेखा अरुणाचल प्रदेश में भारत–चीन सीमा के साथ चलती है और 1914 के शिमला सम्मेलन में खींची गई थी।",
+      "trick_en": "Eastern sector = China (McMahon Line); western sector = Pakistan (Radcliffe Line).",
+      "trick_hi": "पूर्वी क्षेत्र = चीन (मैकमोहन रेखा); पश्चिमी क्षेत्र = पाकिस्तान (रेडक्लिफ रेखा)।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://www.mea.gov.in/",
+        "citation": "Ministry of External Affairs, India-China boundary reference. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-18",
+      "subject": "General_Awareness",
+      "topic": "India and Neighbouring Countries",
+      "sub_topic": "General policy",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Tenth Schedule of the Constitution of India deals with:",
+      "text_hi": "भारत के संविधान की दसवीं अनुसूची किससे संबंधित है?",
+      "options": [
+        {
+          "en": "Anti-defection",
+          "hi": "दल-बदल विरोधी कानून"
+        },
+        {
+          "en": "Official languages",
+          "hi": "राजभाषाएँ"
+        },
+        {
+          "en": "Scheduled and tribal areas",
+          "hi": "अनुसूचित और जनजातीय क्षेत्र"
+        },
+        {
+          "en": "Emergency provisions",
+          "hi": "आपातकालीन प्रावधान"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Tenth Schedule contains the anti-defection provisions. The Eighth Schedule lists official languages, the Fifth Schedule covers scheduled areas and the emergency provisions are in Part XVIII.",
+      "solution_hi": "दसवीं अनुसूची में दल-बदल विरोधी प्रावधान हैं। आठवीं अनुसूची में राजभाषाएँ, पाँचवीं अनुसूची में अनुसूचित क्षेत्र और आपातकालीन प्रावधान भाग XVIII में हैं।",
+      "trick_en": "Link the schedule number to its subject: Tenth = anti-defection, Eighth = languages.",
+      "trick_hi": "अनुसूची संख्या को विषय से जोड़ें: दसवीं = दल-बदल विरोधी, आठवीं = भाषाएँ।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://legislative.gov.in/constitution-of-india/",
+        "citation": "Legislative Department, Government of India, Constitution of India (Tenth Schedule). Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-19",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "The SI unit of electric current is the:",
+      "text_hi": "विद्युत धारा का SI मात्रक क्या है?",
+      "options": [
+        {
+          "en": "Ampere",
+          "hi": "एम्पियर"
+        },
+        {
+          "en": "Volt",
+          "hi": "वोल्ट"
+        },
+        {
+          "en": "Ohm",
+          "hi": "ओम"
+        },
+        {
+          "en": "Watt",
+          "hi": "वाट"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Electric current is measured in amperes (A). Volt measures potential difference, ohm resistance and watt power.",
+      "solution_hi": "विद्युत धारा एम्पियर (A) में मापी जाती है। वोल्ट विभवांतर, ओम प्रतिरोध और वाट शक्ति का मात्रक है।",
+      "trick_en": "Use the formula V = IR: volt = ampere × ohm, so ampere is the current unit.",
+      "trick_hi": "सूत्र V = IR का प्रयोग करें: वोल्ट = एम्पियर × ओम, इसलिए एम्पियर धारा का मात्रक है।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.bipm.org/en/measurement-units/si-units",
+        "citation": "BIPM, SI units reference: ampere is the SI unit of electric current. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-20",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Which liquid is used in a traditional clinical thermometer?",
+      "text_hi": "पारंपरिक क्लिनिकल थर्मामीटर में कौन-सा द्रव प्रयोग होता है?",
+      "options": [
+        {
+          "en": "Mercury",
+          "hi": "पारा"
+        },
+        {
+          "en": "Alcohol",
+          "hi": "अल्कोहल"
+        },
+        {
+          "en": "Water",
+          "hi": "पानी"
+        },
+        {
+          "en": "Glycerine",
+          "hi": "ग्लिसरीन"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "A traditional clinical thermometer uses mercury, which expands uniformly with temperature. Digital thermometers use electronic sensors instead.",
+      "solution_hi": "पारंपरिक क्लिनिकल थर्मामीटर में पारा प्रयोग होता है, जो तापमान के साथ एकसमान रूप से फैलता है। डिजिटल थर्मामीटर में इलेक्ट्रॉनिक सेंसर होते हैं।",
+      "trick_en": "The word 'traditional' points to mercury; modern digital thermometers do not use it.",
+      "trick_hi": "'पारंपरिक' शब्द पारे की ओर संकेत करता है; आधुनिक डिजिटल थर्मामीटर में पारा नहीं होता।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.who.int/",
+        "citation": "World Health Organization, mercury-in-thermometers reference. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-21",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Deficiency of which vitamin causes scurvy?",
+      "text_hi": "किस विटामिन की कमी से स्कर्वी होता है?",
+      "options": [
+        {
+          "en": "Vitamin C",
+          "hi": "विटामिन C"
+        },
+        {
+          "en": "Vitamin A",
+          "hi": "विटामिन A"
+        },
+        {
+          "en": "Vitamin D",
+          "hi": "विटामिन D"
+        },
+        {
+          "en": "Vitamin B1",
+          "hi": "विटामिन B1"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Vitamin C (ascorbic acid) deficiency causes scurvy, with bleeding gums and poor wound healing. Vitamin A deficiency causes night blindness, D causes rickets and B1 causes beriberi.",
+      "solution_hi": "विटामिन C (एस्कॉर्बिक अम्ल) की कमी से स्कर्वी होता है, जिसमें मसूड़ों से खून आना और घाव देर से भरना शामिल है। विटामिन A की कमी से रतौंधी, D से रिकेट्स और B1 से बेरीबेरी होता है।",
+      "trick_en": "Scurvy = C; rickets = D; beriberi = B1; night blindness = A.",
+      "trick_hi": "स्कर्वी = C; रिकेट्स = D; बेरीबेरी = B1; रतौंधी = A।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.who.int/",
+        "citation": "World Health Organization, vitamin deficiency reference. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-22",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Red blood cells are produced mainly in the:",
+      "text_hi": "लाल रक्त कोशिकाएँ मुख्य रूप से कहाँ बनती हैं?",
+      "options": [
+        {
+          "en": "Bone marrow",
+          "hi": "अस्थि मज्जा"
+        },
+        {
+          "en": "Liver",
+          "hi": "यकृत"
+        },
+        {
+          "en": "Spleen",
+          "hi": "प्लीहा"
+        },
+        {
+          "en": "Kidney",
+          "hi": "गुर्दा"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "In adults, red blood cells are produced mainly in the red bone marrow of bones such as the sternum and pelvis.",
+      "solution_hi": "वयस्कों में लाल रक्त कोशिकाएँ मुख्य रूप से उरोस्थि और श्रोणि जैसी हड्डियों के लाल अस्थि मज्जा में बनती हैं।",
+      "trick_en": "Bone marrow is the blood-cell factory; the liver and spleen have other roles in adults.",
+      "trick_hi": "अस्थि मज्जा रक्त कोशिकाओं का कारखाना है; वयस्कों में यकृत और प्लीहा की भूमिका भिन्न है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK541119/",
+        "citation": "NCBI Bookshelf, hematopoiesis reference: red blood cells are produced in bone marrow. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-23",
+      "subject": "General_Awareness",
+      "topic": "Everyday Science",
+      "sub_topic": "Scientific aspects of everyday observation and experience",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Sound cannot travel through:",
+      "text_hi": "ध्वनि किसके माध्यम से यात्रा नहीं कर सकती?",
+      "options": [
+        {
+          "en": "Vacuum",
+          "hi": "निर्वात"
+        },
+        {
+          "en": "Steel",
+          "hi": "इस्पात"
+        },
+        {
+          "en": "Water",
+          "hi": "पानी"
+        },
+        {
+          "en": "Air",
+          "hi": "हवा"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Sound is a mechanical wave and needs a material medium. A vacuum has no particles, so sound cannot travel through it.",
+      "solution_hi": "ध्वनि एक यांत्रिक तरंग है और उसे भौतिक माध्यम चाहिए। निर्वात में कण नहीं होते, इसलिए ध्वनि उससे यात्रा नहीं कर सकती।",
+      "trick_en": "Mechanical waves need a medium; light can travel through vacuum, sound cannot.",
+      "trick_hi": "यांत्रिक तरंगों को माध्यम चाहिए; प्रकाश निर्वात से यात्रा कर सकता है, ध्वनि नहीं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.britannica.com/science/sound-physics",
+        "citation": "Encyclopaedia Britannica, sound as a mechanical wave requiring a medium. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-24",
+      "subject": "General_Awareness",
+      "topic": "Environment and Society",
+      "sub_topic": "General awareness of the environment and its application to society",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Chipko movement is primarily associated with the conservation of:",
+      "text_hi": "चिपको आंदोलन मुख्य रूप से किसके संरक्षण से जुड़ा है?",
+      "options": [
+        {
+          "en": "Forests",
+          "hi": "वन"
+        },
+        {
+          "en": "Rivers",
+          "hi": "नदियाँ"
+        },
+        {
+          "en": "Wildlife",
+          "hi": "वन्यजीव"
+        },
+        {
+          "en": "Soil",
+          "hi": "मिट्टी"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Chipko movement, especially in Uttarakhand in the 1970s, involved villagers hugging trees to prevent felling and is associated with forest conservation.",
+      "solution_hi": "चिपको आंदोलन, विशेषकर 1970 के दशक में उत्तराखंड में, ग्रामीणों द्वारा पेड़ों को गले लगाकर कटाई रोकने से जुड़ा था और यह वन संरक्षण का प्रतीक है।",
+      "trick_en": "Chipko means 'to embrace'; people embraced trees to protect forests.",
+      "trick_hi": "चिपको का अर्थ 'गले लगाना' है; लोगों ने वनों की रक्षा के लिए पेड़ों को गले लगाया।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://www.wwfindia.org/",
+        "citation": "WWF-India, Chipko movement and forest conservation reference. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "ga2-25",
+      "subject": "General_Awareness",
+      "topic": "Environment and Society",
+      "sub_topic": "General awareness of the environment and its application to society",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "The Montreal Protocol is an international agreement mainly aimed at protecting the:",
+      "text_hi": "मॉन्ट्रियल प्रोटोकॉल मुख्य रूप से किसकी सुरक्षा के लिए अंतरराष्ट्रीय समझौता है?",
+      "options": [
+        {
+          "en": "Ozone layer",
+          "hi": "ओजोन परत"
+        },
+        {
+          "en": "Greenhouse gas balance",
+          "hi": "ग्रीनहाउस गैस संतुलन"
+        },
+        {
+          "en": "Biodiversity",
+          "hi": "जैव विविधता"
+        },
+        {
+          "en": "Wetlands",
+          "hi": "आर्द्रभूमि"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The Montreal Protocol phases out ozone-depleting substances such as CFCs to protect the ozone layer. The Kyoto Protocol and Paris Agreement address greenhouse gases; the Ramsar Convention covers wetlands.",
+      "solution_hi": "मॉन्ट्रियल प्रोटोकॉल ओजोन परत की रक्षा के लिए CFC जैसे ओजोन-क्षयकारी पदार्थों को चरणबद्ध रूप से समाप्त करता है। क्योटो प्रोटोकॉल और पेरिस समझौता ग्रीनहाउस गैसों से संबंधित हैं; रामसर कन्वेंशन आर्द्रभूमियों के लिए है।",
+      "trick_en": "Montreal = ozone; Kyoto/Paris = climate; Ramsar = wetlands.",
+      "trick_hi": "मॉन्ट्रियल = ओजोन; क्योटो/पेरिस = जलवायु; रामसर = आर्द्रभूमि।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ozone.unep.org/",
+        "citation": "UNEP Ozone Secretariat, Montreal Protocol reference. Checked 2026-11-08.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ]
+}

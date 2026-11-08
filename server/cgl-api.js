@@ -10,7 +10,7 @@ import { pyqStatus, createPyqRouter } from './pyq-api.js'
 import { caStatus, createCaRouter } from './ca-api.js'
 import { practiceStatus } from './practice-migration.js'
 import { readPracticePackStatus } from './practice-ingest.js'
-import { PRACTICE_PACK_KEY } from './practice-content.js'
+import { PRACTICE_PACK_KEYS } from './practice-content.js'
 
 const asyncRoute = (handler) => (req, res, next) => Promise.resolve(handler(req, res, next)).catch(next)
 const positiveId = (value) => typeof value === 'string' && /^[1-9][0-9]{0,17}$/.test(value)
@@ -87,8 +87,21 @@ export function createCglRouter({ pool, query, auth, mentorOptions }) {
   router.get('/practice/status', asyncRoute(async (_req, res) => {
     const schema = await practiceStatus(query)
     if (!schema.ok) return res.json({ available: false, schema, code: schema.code })
-    const pack = await readPracticePackStatus(query, PRACTICE_PACK_KEY)
-    res.json({ available: pack.available === true, schema, ...pack })
+    const packs = []
+    for (const packKey of PRACTICE_PACK_KEYS) packs.push(await readPracticePackStatus(query, packKey))
+    const availablePacks = packs.filter(pack => pack.available === true)
+    if (!availablePacks.length) return res.json({ available: false, schema, packs })
+    const reviewers = [...new Set(availablePacks.map(pack => pack.reviewer).filter(Boolean))]
+    res.json({
+      available: true,
+      schema,
+      packs: availablePacks,
+      total_questions: availablePacks.reduce((total, pack) => total + (pack.questions || 0), 0),
+      published_questions: availablePacks.reduce((total, pack) => total + (pack.published_questions || 0), 0),
+      pending_review: availablePacks.some(pack => !pack.human_reviewed),
+      human_reviewed: availablePacks.every(pack => pack.human_reviewed),
+      reviewer: reviewers.join('; '),
+    })
   }))
   router.get('/syllabus', asyncRoute(async (req, res) => {
     const stage = req.query.stage ? String(req.query.stage) : null

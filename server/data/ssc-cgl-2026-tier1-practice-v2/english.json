@@ -1,0 +1,998 @@
+{
+  "sets": [
+    {
+      "ref": "cloze-2026-t1-02",
+      "set_type": "Cloze_Test",
+      "subject": "English",
+      "passage_en": "Digital payments have changed the way people (1) ______ money. Instead of carrying cash, many people now use mobile apps to pay for goods and services. This shift has made transactions faster and more convenient, but it has also (2) ______ new risks. Fraudsters can trick users into sharing passwords or one-time codes. Experts therefore advise people to (3) ______ their accounts regularly and never share confidential details. Banks, too, must (4) ______ strong security systems. With careful use, digital payments can be both convenient and (5) ______.",
+      "passage_hi": "डिजिटल भुगतान ने लोगों के पैसे (1) ______ करने का तरीका बदल दिया है। नकदी ले जाने के बजाय अब कई लोग सामान और सेवाओं के भुगतान के लिए मोबाइल ऐप का उपयोग करते हैं। इस बदलाव ने लेन-देन को तेज और अधिक सुविधाजनक बनाया है, लेकिन इसने नए जोखिम भी (2) ______ किए हैं। धोखेबाज उपयोगकर्ताओं को पासवर्ड या वन-टाइम कोड साझा करने के लिए फुसला सकते हैं। इसलिए विशेषज्ञ लोगों को सलाह देते हैं कि वे अपने खातों की नियमित रूप से (3) ______ करें और गोपनीय विवरण कभी साझा न करें। बैंकों को भी मजबूत सुरक्षा प्रणालियाँ (4) ______ चाहिए। सावधानी से उपयोग करने पर डिजिटल भुगतान सुविधाजनक और (5) ______ दोनों हो सकते हैं।",
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze passage written for the SSC CGL 2026 Tier-I English Comprehension syllabus. Not a PYQ or an SSC passage. Hindi is an ExamEdge study translation; the official English Comprehension section is English-only.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "qid": "english2-01",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Synonyms and homonyms",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word most similar in meaning to PRUDENT.",
+      "text_hi": "PRUDENT के अर्थ के सबसे निकट शब्द चुनें।",
+      "options": [
+        {
+          "en": "Wise",
+          "hi": "बुद्धिमान"
+        },
+        {
+          "en": "Reckless",
+          "hi": "लापरवाह"
+        },
+        {
+          "en": "Hasty",
+          "hi": "जल्दबाज"
+        },
+        {
+          "en": "Careless",
+          "hi": "बेपरवाह"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Prudent means showing good judgment and care for the future, so 'wise' is the closest synonym.",
+      "solution_hi": "Prudent का अर्थ है भविष्य के प्रति सोच-समझकर निर्णय लेना, इसलिए 'wise' सबसे निकट समानार्थी है।",
+      "trick_en": "The other three options are negative traits that contrast with being careful.",
+      "trick_hi": "अन्य तीन विकल्प सावधानी के विपरीत नकारात्मक गुण हैं।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice vocabulary question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-02",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Antonyms",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word most opposite in meaning to HOSTILE.",
+      "text_hi": "HOSTILE के अर्थ के सबसे विपरीत शब्द चुनें।",
+      "options": [
+        {
+          "en": "Friendly",
+          "hi": "मैत्रीपूर्ण"
+        },
+        {
+          "en": "Aggressive",
+          "hi": "आक्रामक"
+        },
+        {
+          "en": "Bitter",
+          "hi": "कटु"
+        },
+        {
+          "en": "Unfriendly",
+          "hi": "अमित्र"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Hostile means unfriendly or opposed, so its opposite is friendly. The other options are synonyms or near-synonyms of hostile.",
+      "solution_hi": "Hostile का अर्थ है अमित्र या विरोधी, इसलिए इसका विपरीत friendly है। अन्य विकल्प hostile के समानार्थी या निकट समानार्थी हैं।",
+      "trick_en": "For antonyms, first identify the meaning of the given word, then eliminate options that repeat that meaning.",
+      "trick_hi": "विलोम के लिए पहले दिए शब्द का अर्थ पहचानें, फिर वही अर्थ दोहराने वाले विकल्प हटाएँ।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice antonym question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-03",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Spellings and misspelt words",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Select the word with the correct spelling.",
+      "text_hi": "सही वर्तनी वाला शब्द चुनें।",
+      "options": [
+        {
+          "en": "ocassion",
+          "hi": "ocassion"
+        },
+        {
+          "en": "occasion",
+          "hi": "occasion"
+        },
+        {
+          "en": "occassion",
+          "hi": "occassion"
+        },
+        {
+          "en": "ocasion",
+          "hi": "ocasion"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The correct spelling is 'occasion': double c and single s.",
+      "solution_hi": "सही वर्तनी 'occasion' है: दो c और एक s।",
+      "trick_en": "Remember the pattern 'cc' + 'asion'; the word has one s in the middle.",
+      "trick_hi": "पैटर्न याद रखें 'cc' + 'asion'; शब्द के बीच में एक s है।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice spelling question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-04",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Idioms and phrases",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "What does the idiom 'once in a blue moon' mean?",
+      "text_hi": "'once in a blue moon' मुहावरे का अर्थ क्या है?",
+      "options": [
+        {
+          "en": "Very rarely",
+          "hi": "बहुत कम"
+        },
+        {
+          "en": "Very often",
+          "hi": "बहुत बार"
+        },
+        {
+          "en": "At night only",
+          "hi": "केवल रात में"
+        },
+        {
+          "en": "Suddenly",
+          "hi": "अचानक"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "'Once in a blue moon' means something happens very rarely, not literally at night.",
+      "solution_hi": "'Once in a blue moon' का अर्थ है कोई घटना बहुत कम होती है, शाब्दिक रूप से रात में नहीं।",
+      "trick_en": "Idioms are figurative; do not translate the individual words literally.",
+      "trick_hi": "मुहावरे लाक्षणिक होते हैं; अलग-अलग शब्दों का शाब्दिक अनुवाद न करें।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice idiom question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-05",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "One word substitution",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "One word for 'a place where birds are kept' is:",
+      "text_hi": "'वह स्थान जहाँ पक्षी रखे जाते हैं' के लिए एक शब्द है:",
+      "options": [
+        {
+          "en": "Aviary",
+          "hi": "पक्षीशाला"
+        },
+        {
+          "en": "Aquarium",
+          "hi": "जलजीवशाला"
+        },
+        {
+          "en": "Apiary",
+          "hi": "मधुमक्खीशाला"
+        },
+        {
+          "en": "Granary",
+          "hi": "अन्नागार"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "An aviary is a place where birds are kept. An aquarium is for fish, an apiary for bees and a granary for grain.",
+      "solution_hi": "Aviary वह स्थान है जहाँ पक्षी रखे जाते हैं। Aquarium मछलियों, apiary मधुमक्खियों और granary अनाज के लिए होता है।",
+      "trick_en": "Link the root: 'avis' means bird, 'aqua' means water, and 'apis' means bee.",
+      "trick_hi": "मूल शब्द से जोड़ें: 'avis' का अर्थ पक्षी, 'aqua' का अर्थ जल और 'apis' का अर्थ मधुमक्खी है।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice one-word-substitution question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-06",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Synonyms and homonyms",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word most similar in meaning to ABUNDANT.",
+      "text_hi": "ABUNDANT के अर्थ के सबसे निकट शब्द चुनें।",
+      "options": [
+        {
+          "en": "Plentiful",
+          "hi": "भरपूर"
+        },
+        {
+          "en": "Scarce",
+          "hi": "दुर्लभ"
+        },
+        {
+          "en": "Tiny",
+          "hi": "छोटा"
+        },
+        {
+          "en": "Weak",
+          "hi": "कमजोर"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Abundant means existing in large quantities, so 'plentiful' is the closest synonym. 'Scarce' is its opposite.",
+      "solution_hi": "Abundant का अर्थ है बड़ी मात्रा में उपलब्ध, इसलिए 'plentiful' सबसे निकट समानार्थी है। 'Scarce' इसका विलोम है।",
+      "trick_en": "Do not confuse abundance with size or strength; it refers to quantity.",
+      "trick_hi": "बहुतायत को आकार या ताकत से न मिलाएँ; यह मात्रा से संबंधित है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice vocabulary question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-07",
+      "subject": "English",
+      "topic": "Vocabulary",
+      "sub_topic": "Antonyms",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the word most opposite in meaning to TRANSPARENT.",
+      "text_hi": "TRANSPARENT के अर्थ के सबसे विपरीत शब्द चुनें।",
+      "options": [
+        {
+          "en": "Opaque",
+          "hi": "अपारदर्शी"
+        },
+        {
+          "en": "Clear",
+          "hi": "स्पष्ट"
+        },
+        {
+          "en": "Visible",
+          "hi": "दृश्यमान"
+        },
+        {
+          "en": "Obvious",
+          "hi": "प्रत्यक्ष"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Transparent means allowing light through so that objects can be seen clearly; opaque means not allowing light through. The other options are near-synonyms of transparent.",
+      "solution_hi": "Transparent का अर्थ है प्रकाश को गुजरने देना जिससे वस्तुएँ स्पष्ट दिखें; opaque का अर्थ है प्रकाश को गुजरने न देना। अन्य विकल्प transparent के निकट समानार्थी हैं।",
+      "trick_en": "In antonym questions, eliminate options that mean the same as the given word.",
+      "trick_hi": "विलोम प्रश्नों में वे विकल्प हटाएँ जिनका अर्थ दिए शब्द के समान है।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice antonym question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-08",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct option: The news ______ shocking.",
+      "text_hi": "सही विकल्प चुनें: The news ______ shocking.",
+      "options": [
+        {
+          "en": "is",
+          "hi": "is"
+        },
+        {
+          "en": "are",
+          "hi": "are"
+        },
+        {
+          "en": "were",
+          "hi": "were"
+        },
+        {
+          "en": "have",
+          "hi": "have"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "'News' is an uncountable singular noun, so it takes the singular verb 'is'.",
+      "solution_hi": "'News' एक अगणनीय एकवचन संज्ञा है, इसलिए इसके साथ एकवचन क्रिया 'is' आती है।",
+      "trick_en": "Words like news, mathematics and physics end in -s but are singular.",
+      "trick_hi": "news, mathematics और physics जैसे शब्द -s पर समाप्त होते हैं, परंतु एकवचन हैं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice grammar question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-09",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct article: He is ______ MBA graduate.",
+      "text_hi": "सही आर्टिकल चुनें: He is ______ MBA graduate.",
+      "options": [
+        {
+          "en": "a",
+          "hi": "a"
+        },
+        {
+          "en": "an",
+          "hi": "an"
+        },
+        {
+          "en": "the",
+          "hi": "the"
+        },
+        {
+          "en": "no article",
+          "hi": "कोई आर्टिकल नहीं"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "'MBA' begins with the vowel sound /em/, so 'an' is used before it, not 'a'.",
+      "solution_hi": "'MBA' का उच्चारण स्वर ध्वनि /em/ से शुरू होता है, इसलिए इससे पहले 'an' आता है, 'a' नहीं।",
+      "trick_en": "Articles depend on sound, not spelling: an MBA, a university, an hour.",
+      "trick_hi": "आर्टिकल उच्चारण पर निर्भर करता है, वर्तनी पर नहीं: an MBA, a university, an hour।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice article question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-10",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Easy",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct preposition: She is married ______ a doctor.",
+      "text_hi": "सही पूर्वसर्ग चुनें: She is married ______ a doctor.",
+      "options": [
+        {
+          "en": "with",
+          "hi": "with"
+        },
+        {
+          "en": "to",
+          "hi": "to"
+        },
+        {
+          "en": "for",
+          "hi": "for"
+        },
+        {
+          "en": "by",
+          "hi": "by"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "The standard expression is 'married to someone'. 'Married with' is used for having a spouse and children, not for the spouse alone.",
+      "solution_hi": "'Married with' का प्रयोग संतान होने के संदर्भ में होता है, केवल जीवनसाथी के लिए नहीं।",
+      "trick_en": "Learn fixed collocations: married to, good at, afraid of, depend on.",
+      "trick_hi": "स्थिर संयोजन याद रखें: married to, good at, afraid of, depend on।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice preposition question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-11",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Spot the error",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Identify the part containing the error: Each of the girls / have / a bag. / No error",
+      "text_hi": "त्रुटि वाला भाग पहचानें: Each of the girls / have / a bag. / No error",
+      "options": [
+        {
+          "en": "Each of the girls",
+          "hi": "Each of the girls"
+        },
+        {
+          "en": "have",
+          "hi": "have"
+        },
+        {
+          "en": "a bag.",
+          "hi": "a bag."
+        },
+        {
+          "en": "No error",
+          "hi": "कोई त्रुटि नहीं"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "'Each' is singular, so it takes the singular verb 'has'. The correct sentence is 'Each of the girls has a bag.'",
+      "solution_hi": "'Each' एकवचन है, इसलिए इसके साथ एकवचन क्रिया 'has' आती है। सही वाक्य है 'Each of the girls has a bag.'",
+      "trick_en": "Subjects beginning with each, every, either or neither are singular, even when followed by 'of the plural'.",
+      "trick_hi": "each, every, either या neither से शुरू होने वाले कर्ता एकवचन होते हैं, भले ही उनके बाद 'of the plural' हो।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice error-spotting question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-12",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct option: If I ______ known, I would have come.",
+      "text_hi": "सही विकल्प चुनें: If I ______ known, I would have come.",
+      "options": [
+        {
+          "en": "have",
+          "hi": "have"
+        },
+        {
+          "en": "had",
+          "hi": "had"
+        },
+        {
+          "en": "has",
+          "hi": "has"
+        },
+        {
+          "en": "would",
+          "hi": "would"
+        }
+      ],
+      "correct": 1,
+      "solution_en": "This is a third conditional: 'If + past perfect, would have + past participle'. The correct form is 'If I had known, I would have come.'",
+      "solution_hi": "यह तृतीय शर्तवाचक वाक्य है: 'If + past perfect, would have + past participle'। सही रूप है 'If I had known, I would have come.'",
+      "trick_en": "Look at the second clause first: 'would have come' signals a past unreal condition, so use 'had'.",
+      "trick_hi": "पहले दूसरा उपवाक्य देखें: 'would have come' भूतकाल की अवास्तविक शर्त दर्शाता है, इसलिए 'had' आएगा।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice conditional-sentence question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-13",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Sentence improvement",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the best improvement: He is one of the best player in the team.",
+      "text_hi": "सर्वोत्तम सुधार चुनें: He is one of the best player in the team.",
+      "options": [
+        {
+          "en": "best players",
+          "hi": "best players"
+        },
+        {
+          "en": "best player",
+          "hi": "best player"
+        },
+        {
+          "en": "better player",
+          "hi": "better player"
+        },
+        {
+          "en": "most best player",
+          "hi": "most best player"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "After 'one of the' we need a plural noun: 'one of the best players'. The original 'player' is singular and incorrect here.",
+      "solution_hi": "'one of the' के बाद बहुवचन संज्ञा आती है: 'one of the best players'। मूल वाक्य में 'player' एकवचन है, जो यहाँ गलत है।",
+      "trick_en": "'One of the' is always followed by a plural noun, even though the subject 'one' is singular.",
+      "trick_hi": "'One of the' के बाद सदैव बहुवचन संज्ञा आती है, भले ही कर्ता 'one' एकवचन हो।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice sentence-improvement question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-14",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Active and passive voice",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct passive form: They are building a new bridge.",
+      "text_hi": "सही कर्मवाच्य रूप चुनें: They are building a new bridge.",
+      "options": [
+        {
+          "en": "A new bridge is being built by them.",
+          "hi": "A new bridge is being built by them."
+        },
+        {
+          "en": "A new bridge is built by them.",
+          "hi": "A new bridge is built by them."
+        },
+        {
+          "en": "A new bridge was being built by them.",
+          "hi": "A new bridge was being built by them."
+        },
+        {
+          "en": "A new bridge has been built by them.",
+          "hi": "A new bridge has been built by them."
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The present continuous active 'are building' becomes 'is being built' in the passive; the object 'a new bridge' becomes the subject.",
+      "solution_hi": "वर्तमान अपूर्ण काल का 'are building' कर्मवाच्य में 'is being built' होता है; कर्म 'a new bridge' कर्ता बन जाता है।",
+      "trick_en": "Keep the tense: present continuous → is/are + being + past participle.",
+      "trick_hi": "काल न बदलें: present continuous → is/are + being + past participle।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice voice question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-15",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Direct and indirect narration",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct indirect speech: She said, 'I am reading a book now.'",
+      "text_hi": "सही अप्रत्यक्ष कथन चुनें: She said, 'I am reading a book now.'",
+      "options": [
+        {
+          "en": "She said that she was reading a book then.",
+          "hi": "She said that she was reading a book then."
+        },
+        {
+          "en": "She said that I am reading a book now.",
+          "hi": "She said that I am reading a book now."
+        },
+        {
+          "en": "She says that she is reading a book now.",
+          "hi": "She says that she is reading a book now."
+        },
+        {
+          "en": "She said that she has read a book then.",
+          "hi": "She said that she has read a book then."
+        }
+      ],
+      "correct": 0,
+      "solution_en": "In reported speech after 'said', present continuous 'am reading' shifts to past continuous 'was reading', and 'now' shifts to 'then'.",
+      "solution_hi": "'Said' के बाद अप्रत्यक्ष कथन में present continuous 'am reading' past continuous 'was reading' हो जाता है और 'now' का 'then' हो जाता है।",
+      "trick_en": "Change three things together: tense, pronoun and time word.",
+      "trick_hi": "तीन चीजें साथ बदलें: काल, सर्वनाम और समयवाचक शब्द।",
+      "ideal_time_seconds": 35,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice narration question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-16",
+      "subject": "English",
+      "topic": "Grammar and Usage",
+      "sub_topic": "Fill in the blanks",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Choose the correct option: Hardly had I reached the station ______ the train left.",
+      "text_hi": "सही विकल्प चुनें: Hardly had I reached the station ______ the train left.",
+      "options": [
+        {
+          "en": "when",
+          "hi": "when"
+        },
+        {
+          "en": "than",
+          "hi": "than"
+        },
+        {
+          "en": "then",
+          "hi": "then"
+        },
+        {
+          "en": "that",
+          "hi": "that"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "'Hardly ... when' is the correct fixed pair. 'Hardly had I reached the station when the train left.'",
+      "solution_hi": "'Hardly ... when' सही स्थिर जोड़ी है। 'Hardly had I reached the station when the train left.'",
+      "trick_en": "Remember the pairs: hardly/scarcely ... when, no sooner ... than.",
+      "trick_hi": "जोड़ियाँ याद रखें: hardly/scarcely ... when, no sooner ... than।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice grammar question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-17",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentence parts",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Rearrange the parts to form a correct sentence: P. the exam / Q. she studied hard / R. so that / S. she could pass",
+      "text_hi": "सही वाक्य बनाने के लिए भागों को व्यवस्थित करें: P. the exam / Q. she studied hard / R. so that / S. she could pass",
+      "options": [
+        {
+          "en": "Q R S P",
+          "hi": "Q R S P"
+        },
+        {
+          "en": "Q S P R",
+          "hi": "Q S P R"
+        },
+        {
+          "en": "R Q S P",
+          "hi": "R Q S P"
+        },
+        {
+          "en": "P Q R S",
+          "hi": "P Q R S"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The sentence is: 'She studied hard so that she could pass the exam.' That is Q R S P.",
+      "solution_hi": "वाक्य है: 'She studied hard so that she could pass the exam.' अर्थात Q R S P।",
+      "trick_en": "Find the subject-verb opener (Q) and the purpose connector 'so that' (R).",
+      "trick_hi": "कर्ता-क्रिया वाला शुरुआती भाग (Q) और उद्देश्य जोड़ने वाला 'so that' (R) खोजें।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice sentence-rearrangement question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-18",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentence parts",
+      "difficulty": "Medium",
+      "question_type": "Standard_MCQ",
+      "text_en": "Rearrange the parts to form a correct sentence: P. before breakfast / Q. goes for a walk / R. my grandfather / S. every day",
+      "text_hi": "सही वाक्य बनाने के लिए भागों को व्यवस्थित करें: P. before breakfast / Q. goes for a walk / R. my grandfather / S. every day",
+      "options": [
+        {
+          "en": "R Q S P",
+          "hi": "R Q S P"
+        },
+        {
+          "en": "R Q P S",
+          "hi": "R Q P S"
+        },
+        {
+          "en": "Q R S P",
+          "hi": "Q R S P"
+        },
+        {
+          "en": "R S P Q",
+          "hi": "R S P Q"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The sentence is: 'My grandfather goes for a walk every day before breakfast.' That is R Q S P.",
+      "solution_hi": "वाक्य है: 'My grandfather goes for a walk every day before breakfast.' अर्थात R Q S P।",
+      "trick_en": "Start with the subject R; frequency ('every day') normally comes before the specific time phrase ('before breakfast').",
+      "trick_hi": "कर्ता R से शुरू करें; आवृत्ति ('every day') सामान्यतः विशिष्ट समय वाक्यांश ('before breakfast') से पहले आती है।",
+      "ideal_time_seconds": 40,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice sentence-rearrangement question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-19",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentences in a passage",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Arrange the sentences in the correct order: Q. Online learning has become popular. S. It offers flexibility. P. However, it requires self-discipline. R. Students must manage their time well.",
+      "text_hi": "वाक्यों को सही क्रम में व्यवस्थित करें: Q. Online learning has become popular. S. It offers flexibility. P. However, it requires self-discipline. R. Students must manage their time well.",
+      "options": [
+        {
+          "en": "Q S P R",
+          "hi": "Q S P R"
+        },
+        {
+          "en": "Q P S R",
+          "hi": "Q P S R"
+        },
+        {
+          "en": "S Q P R",
+          "hi": "S Q P R"
+        },
+        {
+          "en": "Q S R P",
+          "hi": "Q S R P"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Q introduces the topic, S gives a benefit, P introduces the contrast with 'However', and R follows logically from self-discipline. The order is Q S P R.",
+      "solution_hi": "Q विषय प्रस्तुत करता है, S लाभ बताता है, P 'However' से विरोध जोड़ता है, और R आत्म-अनुशासन से तार्किक रूप से जुड़ता है। क्रम Q S P R है।",
+      "trick_en": "Use discourse markers: 'However' (P) must come after a positive point, and R explains P.",
+      "trick_hi": "संयोजक शब्द देखें: 'However' (P) किसी सकारात्मक बात के बाद आएगा, और R, P को समझाता है।",
+      "ideal_time_seconds": 50,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice paragraph-ordering question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-20",
+      "subject": "English",
+      "topic": "Sentence Structure",
+      "sub_topic": "Shuffling of sentences in a passage",
+      "difficulty": "Hard",
+      "question_type": "Standard_MCQ",
+      "text_en": "Arrange the sentences in the correct order: Q. The city plans to build a new park. R. Residents have welcomed the proposal. P. The park will include a lake and a playground. S. Construction is expected to begin next year.",
+      "text_hi": "वाक्यों को सही क्रम में व्यवस्थित करें: Q. The city plans to build a new park. R. Residents have welcomed the proposal. P. The park will include a lake and a playground. S. Construction is expected to begin next year.",
+      "options": [
+        {
+          "en": "Q R P S",
+          "hi": "Q R P S"
+        },
+        {
+          "en": "Q P R S",
+          "hi": "Q P R S"
+        },
+        {
+          "en": "R Q P S",
+          "hi": "R Q P S"
+        },
+        {
+          "en": "Q S P R",
+          "hi": "Q S P R"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "Q announces the plan, R gives the public response, P describes the park's features, and S gives the timeline. The order is Q R P S.",
+      "solution_hi": "Q योजना की घोषणा करता है, R जनता की प्रतिक्रिया बताता है, P पार्क की विशेषताएँ बताता है, और S समय-सीमा देता है। क्रम Q R P S है।",
+      "trick_en": "Follow the timeline: plan → reaction → details → construction schedule.",
+      "trick_hi": "समय-क्रम अपनाएँ: योजना → प्रतिक्रिया → विवरण → निर्माण कार्यक्रम।",
+      "ideal_time_seconds": 50,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge practice paragraph-ordering question for the SSC CGL 2026 Tier-I syllabus. Not a PYQ.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-21",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "set_ref": "cloze-2026-t1-02",
+      "text_en": "Select the most appropriate word for blank (1).",
+      "text_hi": "रिक्त स्थान (1) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "spend",
+          "hi": "spend"
+        },
+        {
+          "en": "spends",
+          "hi": "spends"
+        },
+        {
+          "en": "spending",
+          "hi": "spending"
+        },
+        {
+          "en": "spent",
+          "hi": "spent"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The subject 'people' is plural, and after 'the way people ... money' the base verb is needed: people spend money.",
+      "solution_hi": "कर्ता 'people' बहुवचन है, और 'the way people ... money' के बाद मूल क्रिया आती है: people spend money।",
+      "trick_en": "Find the subject of the blank: 'people' is plural, so use the plural/base form, not 'spends'.",
+      "trick_hi": "रिक्त स्थान का कर्ता खोजें: 'people' बहुवचन है, इसलिए 'spends' नहीं, मूल रूप आएगा।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze question on digital payments for the SSC CGL 2026 Tier-I English Comprehension syllabus. Not a PYQ or SSC passage.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-22",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Easy",
+      "question_type": "Passage_Based",
+      "set_ref": "cloze-2026-t1-02",
+      "text_en": "Select the most appropriate word for blank (2).",
+      "text_hi": "रिक्त स्थान (2) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "created",
+          "hi": "created"
+        },
+        {
+          "en": "create",
+          "hi": "create"
+        },
+        {
+          "en": "creating",
+          "hi": "creating"
+        },
+        {
+          "en": "creates",
+          "hi": "creates"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The auxiliary 'has' is already present in 'it has also ...', so the past participle 'created' is required.",
+      "solution_hi": "'it has also ...' में सहायक क्रिया 'has' पहले से है, इसलिए past participle 'created' आएगा।",
+      "trick_en": "After has/have/had, use the past participle (V3), not the base form.",
+      "trick_hi": "has/have/had के बाद past participle (V3) आता है, मूल रूप नहीं।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze question on digital payments for the SSC CGL 2026 Tier-I English Comprehension syllabus. Not a PYQ or SSC passage.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-23",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "set_ref": "cloze-2026-t1-02",
+      "text_en": "Select the most appropriate word for blank (3).",
+      "text_hi": "रिक्त स्थान (3) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "check",
+          "hi": "check"
+        },
+        {
+          "en": "checks",
+          "hi": "checks"
+        },
+        {
+          "en": "checking",
+          "hi": "checking"
+        },
+        {
+          "en": "checked",
+          "hi": "checked"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "After 'to' in 'advise people to ...', the base form of the verb is required: to check.",
+      "solution_hi": "'advise people to ...' में 'to' के बाद क्रिया का मूल रूप आता है: to check।",
+      "trick_en": "The infinitive marker 'to' is followed by the base verb, not by -s or -ing.",
+      "trick_hi": "infinitive चिह्न 'to' के बाद मूल क्रिया आती है, -s या -ing नहीं।",
+      "ideal_time_seconds": 25,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze question on digital payments for the SSC CGL 2026 Tier-I English Comprehension syllabus. Not a PYQ or SSC passage.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-24",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Easy",
+      "question_type": "Passage_Based",
+      "set_ref": "cloze-2026-t1-02",
+      "text_en": "Select the most appropriate word for blank (4).",
+      "text_hi": "रिक्त स्थान (4) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "maintain",
+          "hi": "maintain"
+        },
+        {
+          "en": "maintains",
+          "hi": "maintains"
+        },
+        {
+          "en": "maintaining",
+          "hi": "maintaining"
+        },
+        {
+          "en": "maintained",
+          "hi": "maintained"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "After the modal 'must', the base form of the verb is used: must maintain.",
+      "solution_hi": "modal 'must' के बाद क्रिया का मूल रूप आता है: must maintain।",
+      "trick_en": "Modals (must, should, can, will) are always followed by the base verb.",
+      "trick_hi": "modal (must, should, can, will) के बाद सदैव मूल क्रिया आती है।",
+      "ideal_time_seconds": 20,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze question on digital payments for the SSC CGL 2026 Tier-I English Comprehension syllabus. Not a PYQ or SSC passage.",
+        "checked_on": "2026-11-08"
+      }
+    },
+    {
+      "qid": "english2-25",
+      "subject": "English",
+      "topic": "Comprehension",
+      "sub_topic": "Cloze passage",
+      "difficulty": "Medium",
+      "question_type": "Passage_Based",
+      "set_ref": "cloze-2026-t1-02",
+      "text_en": "Select the most appropriate word for blank (5).",
+      "text_hi": "रिक्त स्थान (5) के लिए सर्वाधिक उपयुक्त शब्द चुनें।",
+      "options": [
+        {
+          "en": "secure",
+          "hi": "secure"
+        },
+        {
+          "en": "securely",
+          "hi": "securely"
+        },
+        {
+          "en": "security",
+          "hi": "security"
+        },
+        {
+          "en": "secured",
+          "hi": "secured"
+        }
+      ],
+      "correct": 0,
+      "solution_en": "The blank follows 'convenient and' and must be an adjective parallel to 'convenient'. 'Secure' is the adjective; 'securely' is an adverb and 'security' is a noun.",
+      "solution_hi": "रिक्त स्थान 'convenient and' के बाद है और 'convenient' के समान विशेषण चाहिए। 'Secure' विशेषण है; 'securely' क्रिया-विशेषण और 'security' संज्ञा है।",
+      "trick_en": "Check parallelism: convenient (adjective) and secure (adjective).",
+      "trick_hi": "समानांतरता जाँचें: convenient (विशेषण) और secure (विशेषण)।",
+      "ideal_time_seconds": 30,
+      "source": {
+        "url": "https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf",
+        "citation": "Original ExamEdge cloze question on digital payments for the SSC CGL 2026 Tier-I English Comprehension syllabus. Not a PYQ or SSC passage.",
+        "checked_on": "2026-11-08"
+      }
+    }
+  ]
+}

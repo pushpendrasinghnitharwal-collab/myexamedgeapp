@@ -1,7 +1,9 @@
-# SSC CGL Tier-I practice pack (2026 pattern, Batch 1)
+# SSC CGL Tier-I practice pack (2026 pattern, Batches 1–2)
 
 Status: **original practice content, automatically checked, independent human review pending.**
-Nothing in this pack is an SSC previous-year paper (PYQ), an official paper, an official shift or an official answer key.
+Nothing in these packs is an SSC previous-year paper (PYQ), an official paper, an official shift or an official answer key.
+
+**Batch 2 update (2026-11-08):** a second independent 100-question pack (`ssc-cgl-2026-tier1-practice-v2`) was added. Total verified practice content is now **200 questions in two full-mock pools**, supporting two independent full mocks and eight sectional papers. Both packs remain **not human-reviewed**.
 
 ## Scope
 
@@ -11,13 +13,21 @@ Nothing in this pack is an SSC previous-year paper (PYQ), an official paper, an 
 | Stage | Tier-I only |
 | Target cycle | 2027 preparation |
 | Pattern baseline | Latest verifiable official notice: CGL **2026** (notice dated 21-05-2026) |
-| Pack key | `ssc-cgl-2026-tier1-practice-v1` |
-| Content | 100 original questions, 2 linked sets, 4 subjects × 25 |
+| Pack keys | `ssc-cgl-2026-tier1-practice-v1`, `ssc-cgl-2026-tier1-practice-v2` |
+| Content | 200 original questions in two independent packs; each pack has 100 questions, 2 linked sets and 4 subjects × 25 |
 | Provenance | `original_practice`, `is_pyq: false` |
 | Review state | `automated_verified_pending_human_review` |
 | Translation | ExamEdge Hindi/English text, **not** an official SSC translation |
 
-The 2027 CGL notice was not available on 2026-11-08. The 2026 notice is the latest official scheme that could be verified, so this pack is labelled a **2026-pattern baseline for 2027 preparation**. When the 2027 notice is published, re-check the scheme, syllabus, timings and marking before reusing or extending this pack. No 2027 date, vacancy, cut-off or pattern is invented here.
+The 2027 CGL notice was not available on 2026-11-08. The 2026 notice is the latest official scheme that could be verified, so these packs are labelled a **2026-pattern baseline for 2027 preparation**. When the 2027 notice is published, re-check the scheme, syllabus, timings and marking before reusing or extending them. No 2027 date, vacancy, cut-off or pattern is invented here.
+
+## Batch 2 addendum
+
+- **Second pool:** 100 new questions, no cross-pack duplicate question text, same official Tier-I quotas and 30/50/20 difficulty split.
+- **Two full mocks:** each 100-question pack can assemble one complete full mock. A second attempt for the same learner avoids questions already delivered in the first attempt (verified in `server/tests/practice-content-v2.test.js`).
+- **Eight sectionals:** four 25-question sectional papers per pack, subject to existing reservations; a learner with an active full mock may need to cancel/submit it before a sectional can draw from the same pool.
+- **Batch 2 facts:** General Awareness adds 2026 Nobel Peace (Navi Pillay), Aichi-Nagoya Asian Games, G20 Miami (upcoming December 2026), BRICS New Delhi, COP31 Türkiye and the International Booker 2026. Each item carries a source and `checked_on: 2026-11-08`.
+- **Status:** both packs are `automated_verified_pending_human_review`; neither is approved, published as reviewed, or claimed to be an official paper.
 
 ## Official pattern verified
 
@@ -53,9 +63,9 @@ If authentic, rights-cleared papers with final keys are later supplied, they mus
 
 ## What was added
 
-All 100 questions are bilingual (English + Hindi) with four options, a correct option, a step-by-step solution, a short exam trick/common-mistake note, an ideal time and a source citation.
+Each pack contains 100 bilingual (English + Hindi) questions with four options, a correct option, a step-by-step solution, a short exam trick/common-mistake note, an ideal time and a source citation.
 
-| Subject | Topic split in the full mock |
+| Subject | Topic split in each full mock (identical quotas in both packs) |
 | --- | --- |
 | Quant (25) | Number Systems 2; Fundamental Arithmetical Operations 10; Algebra 2; Geometry 3; Mensuration 2; Trigonometry 3; Statistical Charts 3 (a 2-question DI set + 1 standalone pie-chart item) |
 | Reasoning (25) | Analogy 3; Classification 2; Series 3; Operations and Coding 3; Spatial and Figural Reasoning 3; Logical Reasoning 3; Intelligence 1; General Intelligence 4; Matching and Indexing 3 |
@@ -78,21 +88,21 @@ Three import modes exist:
 
    ```bash
    cd server
-   npm run practice:validate
-   npm run practice:import            # or: --mode draft
+   npm run practice:validate -- --all
+   npm run practice:import -- --all   # or: --mode draft
    ```
 
 2. **Preview (local/demo only)** — content is technically served but labelled `preview_not_human_reviewed`, with the reviewer marker `PREVIEW BUILD — automated checks only; NOT human reviewed`. The mock hub shows a visible pending-review notice. Do not use this mode on a production learner service.
 
    ```bash
-   npm run practice:import -- --preview
+   npm run practice:import -- --all --preview
    ```
 
-3. **Human-reviewed publication** — only after a named person has actually reviewed all 100 questions, translations, solutions and factual sources. The CLI refuses to publish without both flags:
+3. **Human-reviewed publication** — only after a named person has actually reviewed all 100 questions in that pack, translations, solutions and factual sources. The CLI refuses to publish without both flags:
 
    ```bash
-   npm run practice:import -- --mode publish --reviewer "Reviewer name" \
-     --reviewed-on 2026-11-20 --confirm-human-review
+   npm run practice:import -- --pack ssc-cgl-2026-tier1-practice-v2 --mode publish \
+     --reviewer "Reviewer name" --reviewed-on 2026-11-20 --confirm-human-review
    ```
 
    This records `review_status = human_reviewed`, the reviewer name and the review date. It is an attestation by the operator, not an automated proof of review.
@@ -118,7 +128,8 @@ cd .. && npm run build
 
 `server/tests/practice-content.test.js` additionally proves, in a disposable PGlite database:
 
-- 100 questions assemble into an exact Tier-I full mock (4 × 25, every topic quota, 30/50/20 difficulty, intact 2-question DI and 5-question cloze sets), with 900-second module locks and 3600 seconds total.
+- Each 100-question pack assembles into an exact Tier-I full mock (4 × 25, every topic quota, 30/50/20 difficulty, intact 2-question DI and 5-question cloze sets), with 900-second module locks and 3600 seconds total.
+- With both packs imported, a learner's second full mock avoids the questions delivered in the first attempt, and a second learner can still receive a complete 100-question mock.
 - Active payloads leak no `correct_option_index`, solution, answer status or review fields.
 - Review is unavailable before submission.
 - A sectional submission scores +2 / −0.5 correctly (3 correct + 2 wrong = 5/50, 20 skipped), and keys/solutions appear afterwards.
@@ -133,7 +144,7 @@ cd server && npm run preview:server     # http://0.0.0.0:4000
 cd .. && npm run dev                    # Vite proxies /api to :4000
 ```
 
-The preview registers its own local accounts. Data disappears when the process stops. It reads no production database, sends no learner data anywhere, and labels the content as preview / not human reviewed.
+The preview imports both packs. It registers its own local accounts. Data disappears when the process stops. It reads no production database, sends no learner data anywhere, and labels the content as preview / not human reviewed.
 
 ## Deployment and backend status (2026-11-08)
 
@@ -148,7 +159,7 @@ The preview registers its own local accounts. Data disappears when the process s
 - The 2027 notification, syllabus and final keys are not available. The 2026 pattern may change.
 - General Awareness current-affairs items are only current as of 2026-11-08.
 - No PYQ or official paper was analysed or reproduced, so this pack makes no evidence-based claim about historical SSC topic frequency, shift difficulty or repeated questions.
-- Topic-specific micro-drills beyond one subject need a much larger 2027-reviewed pool; this batch targets one full mock plus the four sectional papers and subject drills the existing engine can build.
+- Topic-specific micro-drills beyond one subject need a much larger 2027-reviewed pool; the current 200-question pool supports two full mocks and eight sectionals, but not deep single-topic drills. Batch 3 should add topic-focused pools after human review.
 - Figures are avoided: spatial/figural items are expressed verbally (direction, folding, shadow) rather than with unverified images. The DI set uses a data table rendered by the existing chart component.
 
 ## Sources
@@ -156,5 +167,6 @@ The preview registers its own local accounts. Data disappears when the process s
 - [SSC CGL 2026 official notice](https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Notice_of_adv_cgl_2026.pdf) — scheme, subject counts, timers, marking, language rule.
 - [SSC examination calendar](https://ssc.gov.in/for-candidates/examination-calendar) — check the current cycle.
 - [SSC normalisation procedure notice (June 2025)](https://ssc.gov.in/api/attachment/uploads/masterData/NoticeBoards/Normalization_procedure_for_SSC_exams_from_June_2025.pdf) — referenced by the app's optional simulation; not used for this pack.
-- Current-affairs checks (as of 2026-11-08): [Nobel Peace Prize 2025](https://www.nobelprize.org/prizes/peace/2025/press-release/), [Milano Cortina 2026](https://www.olympics.com/en/milano-cortina-2026/olympic-games), [FIFA World Cup 2026](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026), [Glasgow 2026 Commonwealth Games](https://www.commonwealthsport.com/commonwealth-games/glasgow-2026), [ISRO](https://www.isro.gov.in/), [RBI](https://www.rbi.org.in/).
+- Current-affairs checks for Batch 1 (as of 2026-11-08): [Nobel Peace Prize 2025](https://www.nobelprize.org/prizes/peace/2025/press-release/), [Milano Cortina 2026](https://www.olympics.com/en/milano-cortina-2026/olympic-games), [FIFA World Cup 2026](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026), [Glasgow 2026 Commonwealth Games](https://www.commonwealthsport.com/commonwealth-games/glasgow-2026), [ISRO](https://www.isro.gov.in/), [RBI](https://www.rbi.org.in/).
+- Current-affairs checks for Batch 2 (as of 2026-11-08): [Nobel Peace Prize 2026](https://www.nobelprize.org/prizes/peace/2026/press-release/), [UN News on Navi Pillay](https://news.un.org/en/story/2026/10/1168558), [Asian Games 2026 — Olympics.com](https://www.olympics.com/en/news/asian-games-2026-sports-schedule-la28-watch-live), [G20 US presidency 2026](https://www.g20.org/), [BRICS India 2026](https://www.brics2026.gov.in/), [COP31 Antalya](https://climate-diplomacy.org/events/2026-un-climate-change-conference-unfccc-cop-31), [International Booker Prize 2026](https://thebookerprizes.com/the-booker-library/prize-years/international/2026).
 - Static-GK and science references are listed per question in the pack's `source.url` and `source.citation`.

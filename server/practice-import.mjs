@@ -1,5 +1,5 @@
 import { pool } from './db.js'
-import { readPracticePack, validatePracticePack, formatValidation } from './practice-content.js'
+import { PRACTICE_PACKS, PRACTICE_PACK_KEYS, PRACTICE_PACK_KEY, readPracticePack, validatePracticePack, formatValidation } from './practice-content.js'
 import { migratePracticePacks } from './practice-migration.js'
 import { importPracticePack } from './practice-ingest.js'
 
@@ -42,32 +42,50 @@ if (!process.env.DATABASE_URL) {
   process.exit(1)
 }
 
-let client
-try {
-  const content = await readPracticePack()
+const requestedPack = arg('pack')
+if (requestedPack && !Object.hasOwn(PRACTICE_PACKS, requestedPack)) {
+  console.error(`Unknown pack: ${requestedPack}`)
+  console.error(`Available packs: ${PRACTICE_PACK_KEYS.join(', ')}`)
+  process.exit(1)
+}
+const packKeys = flag('all') ? PRACTICE_PACK_KEYS : [requestedPack || PRACTICE_PACK_KEY]
+
+// Validate every requested pack before touching the database, so a bad second
+// pack cannot leave a half-finished multi-pack import.
+const prepared = []
+for (const packKey of packKeys) {
+  const content = await readPracticePack({ dir: PRACTICE_PACKS[packKey] })
   const report = await validatePracticePack(content)
   if (!report.ok) {
+    console.error(`\n=== ${packKey} ===`)
     console.error(formatValidation(report))
     console.error('Nothing was imported.')
     process.exit(1)
   }
+  prepared.push({ packKey, content, report })
+}
 
+let client
+try {
   if (mode === 'draft') console.log('Draft import: questions remain unavailable to the mock engine until a human review is recorded.')
   if (mode === 'preview') console.log('PREVIEW import: content is labelled as automatically checked and NOT human reviewed. Do not use this on a production learner service.')
   if (mode === 'publish') console.log(`Human-reviewed publication requested for reviewer: ${reviewer}. Only proceed if that review genuinely happened.`)
 
   client = await pool.connect()
   console.log(JSON.stringify(await migratePracticePacks(client)))
-  const result = await importPracticePack(client, {
-    content,
-    report,
-    mode,
-    reviewer,
-    reviewedAt,
-    importedBy,
-    notes,
-  })
-  console.log(JSON.stringify(result, null, 2))
+  for (const { packKey, content, report } of prepared) {
+    const result = await importPracticePack(client, {
+      content,
+      report,
+      mode,
+      reviewer,
+      reviewedAt,
+      importedBy,
+      notes,
+    })
+    console.log(`\n=== ${packKey} ===`)
+    console.log(JSON.stringify(result, null, 2))
+  }
 } catch (error) {
   console.error(`Practice import failed; the transaction was rolled back: ${error.message}`)
   if (error.details) console.error(JSON.stringify(error.details, null, 2))

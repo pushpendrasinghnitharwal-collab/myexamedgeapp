@@ -3,8 +3,13 @@ import { readFile } from 'node:fs/promises'
 import { TIER1_DIFFICULTY, TIER1_EDITORIAL_SETS, TIER1_EDITORIAL_TOPICS } from './master-formats.js'
 import { checkQuantAnswers, verifyCheckArithmetic } from './practice-answer-checks.js'
 
-export const PRACTICE_DIR = new URL('./data/ssc-cgl-2026-tier1-practice/', import.meta.url)
+export const PRACTICE_PACKS = {
+  'ssc-cgl-2026-tier1-practice-v1': new URL('./data/ssc-cgl-2026-tier1-practice/', import.meta.url),
+  'ssc-cgl-2026-tier1-practice-v2': new URL('./data/ssc-cgl-2026-tier1-practice-v2/', import.meta.url),
+}
 export const PRACTICE_PACK_KEY = 'ssc-cgl-2026-tier1-practice-v1'
+export const PRACTICE_PACK_KEYS = Object.keys(PRACTICE_PACKS)
+export const PRACTICE_DIR = PRACTICE_PACKS[PRACTICE_PACK_KEY]
 export const SUBJECT_ORDER = ['Reasoning', 'General_Awareness', 'Quant', 'English']
 
 const text = value => typeof value === 'string' && value.trim().length > 0
@@ -48,7 +53,7 @@ export async function validatePracticePack(content) {
   const warnings = []
   const fail = (message, detail) => errors.push(detail === undefined ? message : `${message}: ${detail}`)
 
-  if (pack.pack_key !== PRACTICE_PACK_KEY) fail('Unexpected pack key', pack.pack_key)
+  if (!Object.hasOwn(PRACTICE_PACKS, pack.pack_key)) fail('Unexpected pack key', pack.pack_key)
   if (!text(pack.title)) fail('Pack title is required')
   if (pack.exam !== 'SSC CGL' || pack.exam_stage !== 'Tier_1') fail('Pack must target SSC CGL Tier-I')
   if (pack.provenance?.is_pyq !== false || pack.provenance?.kind !== 'original_practice') fail('Pack must be explicitly marked original practice, not PYQ')
@@ -166,7 +171,7 @@ export async function validatePracticePack(content) {
     }
   }
 
-  const quantProblems = checkQuantAnswers(questions)
+  const quantProblems = checkQuantAnswers(questions, pack.pack_key)
   for (const problem of quantProblems) fail('Quantitative answer check failed', JSON.stringify(problem))
   for (const problem of verifyCheckArithmetic()) fail('Answer-check arithmetic is inconsistent', problem)
 

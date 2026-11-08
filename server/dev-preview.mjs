@@ -11,7 +11,7 @@ import { seedOfficialCatalog } from './official-catalog.js'
 import { migrateMasterAssembler } from './master-migration.js'
 import { migratePracticePacks } from './practice-migration.js'
 import { importPracticePack, PREVIEW_REVIEWER } from './practice-ingest.js'
-import { readPracticePack, validatePracticePack } from './practice-content.js'
+import { PRACTICE_PACKS, PRACTICE_PACK_KEYS, readPracticePack, validatePracticePack } from './practice-content.js'
 
 // LOCAL PREVIEW ONLY.
 // A disposable in-memory PGlite database makes the real backend, master-mock
@@ -63,21 +63,25 @@ await seedOfficialCatalog(client)
 await migrateMasterAssembler(client)
 await migratePracticePacks(client)
 
-const content = await readPracticePack()
-const report = await validatePracticePack(content)
-if (!report.ok) {
-  console.error('Preview content failed validation; refusing to serve it.')
-  console.error(report.errors.join('\n'))
-  process.exit(1)
+const importedPacks = []
+for (const packKey of PRACTICE_PACK_KEYS) {
+  const content = await readPracticePack({ dir: PRACTICE_PACKS[packKey] })
+  const report = await validatePracticePack(content)
+  if (!report.ok) {
+    console.error(`Preview content ${packKey} failed validation; refusing to serve it.`)
+    console.error(report.errors.join('\n'))
+    process.exit(1)
+  }
+  const imported = await importPracticePack(client, {
+    content,
+    report,
+    mode: 'preview',
+    importedBy: 'dev-preview',
+    notes: 'Disposable local preview. Not human reviewed.',
+  })
+  importedPacks.push({ pack_key: packKey, ...imported })
+  console.log(`preview: ${packKey}`, imported.review_status, `${imported.questions} questions`)
 }
-const imported = await importPracticePack(client, {
-  content,
-  report,
-  mode: 'preview',
-  importedBy: 'dev-preview',
-  notes: 'Disposable local preview. Not human reviewed.',
-})
-console.log('preview: practice pack', imported.review_status, `${imported.questions} questions`)
 
 const app = express()
 app.use(cors())
@@ -105,7 +109,9 @@ function auth(req, res, next) {
 app.get('/api/preview/info', (_req, res) => res.json({
   preview: true,
   database: 'in-memory PGlite (disposable)',
-  practice_content: imported.review_status,
+  practice_content: 'preview_not_human_reviewed',
+  total_questions: importedPacks.reduce((total, pack) => total + (pack.questions || 0), 0),
+  packs: importedPacks.map(pack => ({ pack_key: pack.pack_key, questions: pack.questions, review_status: pack.review_status })),
   practice_label: 'Original ExamEdge practice — automatically checked, human review pending',
   reviewer_marker: PREVIEW_REVIEWER,
 }))
